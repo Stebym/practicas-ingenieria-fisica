@@ -4,7 +4,9 @@ PORTAL & BOT DE RASTREO DE PRÁCTICAS - INGENIERÍA FÍSICA (UNAL MEDELLÍN)
 Autor: Jimmy Stebym Rosero Barrera
 Descripción: Rastreador integral de convocatorias y vacantes para pregrado.
 Clasifica en tiempo real por ramas de física aplicada, identifica vacantes
-exclusivas para físicos y convocatorias próximas a cerrar (< 5 días).
+exclusivas para físicos, convocatorias próximas a cerrar (< 5 días) y genera
+la nube explicativa de responsabilidades para cada vacante.
+(Sin emojis en la interfaz salvo el átomo superior)
 =============================================================================
 """
 
@@ -107,17 +109,14 @@ def scrape_linkedin_query(query, location="Medellin, Antioquia, Colombia"):
         return []
 
 def classify_job(job, config_ramas):
-    """Clasifica la vacante, evalúa si es exclusiva de física y si está próxima a cerrar"""
+    """Clasifica la vacante, evalúa afinidad, genera la nube explicativa de responsabilidades"""
     text_to_analyze = f"{job['titulo']} {job.get('empresa', '')}".lower()
     
-    # 1. Comprobar si pide explícitamente física o perfil directo de físico
     es_exclusiva_fisica = False
     terminos_fisica = ["físic", "fisic", "metrolog", "cuantic", "cuántic", "espectroscop", "difracci", "nanotecn"]
     if any(t in text_to_analyze for t in terminos_fisica):
         es_exclusiva_fisica = True
 
-    # 2. Comprobar si es próxima a finalizar (< 5 días o reciente con alta demanda)
-    # En portales, las vacantes con fechas recientes o con tags de "urgente" se marcan
     es_cierre_inminente = False
     pub_lower = job.get("fecha_publicacion", "").lower()
     if any(k in pub_lower for k in ["hora", "horas", "1 día", "2 días", "3 días", "4 días", "5 días", "hace 1", "hace 2"]):
@@ -127,6 +126,8 @@ def classify_job(job, config_ramas):
         
     ramas_coincidentes = []
     max_score = 0
+    mision_especifica = ""
+    tareas_especificas = ""
     
     for rama_key, data in config_ramas.get("ramas", {}).items():
         score = 0
@@ -144,12 +145,13 @@ def classify_job(job, config_ramas):
             ramas_coincidentes.append({
                 "clave": rama_key,
                 "nombre": data["nombre"],
-                "icono": data["icono"],
                 "color": data["color"],
                 "score": score
             })
             if score > max_score:
                 max_score = score
+                mision_especifica = data.get("mision_tipica", "")
+                tareas_especificas = data.get("actividades_clave", "")
                 
     ramas_coincidentes.sort(key=lambda x: x["score"], reverse=True)
     
@@ -157,35 +159,36 @@ def classify_job(job, config_ramas):
         ramas_coincidentes.append({
             "clave": "general",
             "nombre": "Ingeniería General / Operaciones",
-            "icono": "⚙️",
             "color": "#64748b",
             "score": 1
         })
         afinidad = "General"
+        mision_especifica = f"Apoyo en el área de ingeniería y operaciones técnicas en {job.get('empresa', 'la compañía')}."
+        tareas_especificas = "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
     elif es_exclusiva_fisica:
-        afinidad = "🎯 Exclusiva Física"
+        afinidad = "Exclusiva Física"
     elif max_score >= 4:
-        afinidad = "Alta (Especialidad)"
+        afinidad = "Alta Especialidad"
     else:
         afinidad = "Media"
         
     job["ramas"] = ramas_coincidentes
     job["rama_principal"] = ramas_coincidentes[0]["nombre"]
-    job["icono_principal"] = ramas_coincidentes[0]["icono"]
     job["color_principal"] = ramas_coincidentes[0]["color"]
     job["clave_principal"] = ramas_coincidentes[0]["clave"]
     job["afinidad"] = afinidad
     job["es_exclusiva_fisica"] = es_exclusiva_fisica
     job["es_cierre_inminente"] = es_cierre_inminente
+    job["mision"] = mision_especifica
+    job["tareas"] = tareas_especificas
     
     return job
 
 def build_full_html(vacantes, config_ramas):
-    """Genera el HTML semántico con diseño de laboratorio y autoría de Jimmy Rosero"""
+    """Genera el HTML semántico con diseño de laboratorio y sin emojis (salvo el átomo superior)"""
     fecha_actualizacion = datetime.now().strftime("%d/%m/%Y %I:%M %p")
     vacantes_json_str = json.dumps(vacantes, ensure_ascii=False)
     
-    # Conteo de exclusivas y cierres inminentes
     total_exclusivas = sum(1 for v in vacantes if v.get("es_exclusiva_fisica"))
     total_inminentes = sum(1 for v in vacantes if v.get("es_cierre_inminente"))
     
@@ -197,333 +200,7 @@ def build_full_html(vacantes, config_ramas):
   <title>Prácticas de Ingeniería Física • Medellín y Antioquia | Jimmy Rosero</title>
   <meta name="description" content="Portal automatizado de convocatorias y prácticas para estudiantes de Ingeniería Física en Medellín y Antioquia. Creado por Jimmy Stebym Rosero Barrera.">
   <meta name="author" content="Jimmy Stebym Rosero Barrera">
-  
-  <!-- Enlace a Hoja de Estilos Externa (Recomendado según estándares web) -->
   <link rel="stylesheet" href="estilos.css">
-  
-  <!-- Estilos embebidos de respaldo para portabilidad total -->
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700&family=Syne:wght@700;800&display=swap');
-    :root {{
-      --bg-deep: #07090e;
-      --bg-surface: #0e131f;
-      --bg-surface-elevated: #161d2f;
-      --bg-chip: #1f293d;
-      --border-subtle: rgba(255, 255, 255, 0.08);
-      --border-technical: #2a364f;
-      --accent-cyan: #00e5ff;
-      --accent-amber: #ffb703;
-      --accent-emerald: #06d6a0;
-      --accent-crimson: #ef476f;
-      --font-display: 'Syne', sans-serif;
-      --font-body: 'Outfit', sans-serif;
-      --font-mono: 'JetBrains Mono', monospace;
-      --text-main: #f1f5f9;
-      --text-muted: #94a3b8;
-    }}
-    * {{ box-sizing: border-box; margin: 0; padding: 0; }}
-    body {{
-      font-family: var(--font-body);
-      background-color: var(--bg-deep);
-      color: var(--text-main);
-      min-height: 100vh;
-      line-height: 1.6;
-      background-image: 
-        linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
-      background-size: 32px 32px;
-      background-attachment: fixed;
-    }}
-    header.site-header {{
-      background: rgba(7, 9, 14, 0.94);
-      backdrop-filter: blur(16px);
-      border-bottom: 1px solid var(--border-technical);
-      position: sticky;
-      top: 0;
-      z-index: 200;
-      padding: 18px 28px;
-    }}
-    .header-container {{
-      max-width: 1360px;
-      margin: 0 auto;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 16px;
-    }}
-    .branding {{ display: flex; align-items: center; gap: 16px; }}
-    .brand-symbol {{
-      width: 50px;
-      height: 50px;
-      background: linear-gradient(135deg, #0e131f, #1e293b);
-      border: 1px solid var(--accent-cyan);
-      border-radius: 12px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 26px;
-      box-shadow: 0 0 20px rgba(0, 229, 255, 0.2);
-    }}
-    .brand-text h1 {{
-      font-family: var(--font-display);
-      font-size: 1.45rem;
-      font-weight: 800;
-      color: #fff;
-    }}
-    .brand-text p.subtitle {{
-      font-size: 0.85rem;
-      color: var(--text-muted);
-      font-family: var(--font-mono);
-    }}
-    .creator-tag {{
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      margin-top: 5px;
-      background: rgba(0, 229, 255, 0.1);
-      border: 1px solid rgba(0, 229, 255, 0.3);
-      color: var(--accent-cyan);
-      font-size: 0.8rem;
-      font-family: var(--font-mono);
-      padding: 3px 12px;
-      border-radius: 6px;
-    }}
-    .creator-tag strong {{ color: #ffffff; }}
-    .header-meta {{
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      background: var(--bg-surface);
-      border: 1px solid var(--border-technical);
-      padding: 8px 16px;
-      border-radius: 10px;
-      font-family: var(--font-mono);
-      font-size: 0.82rem;
-    }}
-    main.main-content {{
-      max-width: 1360px;
-      margin: 30px auto;
-      padding: 0 24px;
-    }}
-    section.manifesto-box {{
-      background: linear-gradient(135deg, #0e131f, #161d2f);
-      border: 1px solid var(--border-technical);
-      border-left: 4px solid var(--accent-cyan);
-      border-radius: 14px;
-      padding: 24px 28px;
-      margin-bottom: 26px;
-    }}
-    section.manifesto-box h2 {{
-      font-family: var(--font-display);
-      font-size: 1.45rem;
-      margin-bottom: 8px;
-      color: #fff;
-    }}
-    section.manifesto-box p {{
-      color: var(--text-muted);
-      font-size: 0.95rem;
-    }}
-    nav.tabs-nav {{
-      display: flex;
-      gap: 10px;
-      margin-bottom: 24px;
-      border-bottom: 1px solid var(--border-technical);
-      padding-bottom: 10px;
-      flex-wrap: wrap;
-    }}
-    button.tab-link {{
-      background: transparent;
-      border: none;
-      font-family: var(--font-mono);
-      font-size: 0.88rem;
-      font-weight: 600;
-      color: var(--text-muted);
-      padding: 10px 18px;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: all 0.2s ease;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }}
-    button.tab-link:hover {{ background: var(--bg-surface); color: #fff; }}
-    button.tab-link.active {{
-      background: var(--bg-surface-elevated);
-      color: var(--accent-cyan);
-      border: 1px solid var(--border-technical);
-    }}
-    button.tab-link.urgent {{ color: var(--accent-crimson); }}
-    button.tab-link.urgent.active {{
-      background: rgba(239, 71, 111, 0.15);
-      border-color: rgba(239, 71, 111, 0.4);
-    }}
-    button.tab-link.exclusive {{ color: var(--accent-amber); }}
-    button.tab-link.exclusive.active {{
-      background: rgba(255, 183, 3, 0.15);
-      border-color: rgba(255, 183, 3, 0.4);
-    }}
-    input.search-bar {{
-      width: 100%;
-      background: var(--bg-surface);
-      border: 1px solid var(--border-technical);
-      border-radius: 10px;
-      padding: 14px 20px;
-      color: #fff;
-      font-size: 0.95rem;
-      outline: none;
-      margin-bottom: 14px;
-      transition: border-color 0.2s;
-    }}
-    input.search-bar:focus {{
-      border-color: var(--accent-cyan);
-    }}
-    div.branch-pills {{
-      display: flex;
-      gap: 8px;
-      flex-wrap: wrap;
-      margin-bottom: 24px;
-    }}
-    button.branch-pill {{
-      background: var(--bg-surface);
-      border: 1px solid var(--border-subtle);
-      color: var(--text-muted);
-      font-family: var(--font-mono);
-      font-size: 0.78rem;
-      padding: 6px 14px;
-      border-radius: 6px;
-      cursor: pointer;
-      transition: all 0.2s ease;
-    }}
-    button.branch-pill.active {{
-      background: rgba(0, 229, 255, 0.15);
-      border-color: var(--accent-cyan);
-      color: var(--accent-cyan);
-      font-weight: 700;
-    }}
-    section.jobs-grid {{
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
-      gap: 20px;
-    }}
-    article.job-card {{
-      background: var(--bg-surface);
-      border: 1px solid var(--border-subtle);
-      border-radius: 12px;
-      padding: 22px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      transition: transform 0.2s, border-color 0.2s;
-    }}
-    article.job-card:hover {{
-      transform: translateY(-3px);
-      border-color: var(--accent-cyan);
-      background: var(--bg-surface-elevated);
-    }}
-    article.job-card.urgent {{
-      border-left: 4px solid var(--accent-crimson);
-    }}
-    article.job-card.exclusive {{
-      border-left: 4px solid var(--accent-amber);
-    }}
-    header.job-card-header {{
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      margin-bottom: 12px;
-    }}
-    span.affinity-badge {{
-      font-family: var(--font-mono);
-      font-size: 0.72rem;
-      font-weight: 700;
-      padding: 3px 8px;
-      border-radius: 4px;
-    }}
-    time.job-date {{
-      font-family: var(--font-mono);
-      font-size: 0.72rem;
-      color: var(--text-muted);
-    }}
-    h3.job-title {{
-      font-family: var(--font-display);
-      font-size: 1.15rem;
-      font-weight: 700;
-      color: #fff;
-      margin-bottom: 6px;
-    }}
-    div.job-company {{
-      color: var(--accent-cyan);
-      font-weight: 600;
-      font-size: 0.92rem;
-      margin-bottom: 10px;
-    }}
-    div.job-specs {{
-      font-size: 0.85rem;
-      color: var(--text-muted);
-      display: flex;
-      flex-direction: column;
-      gap: 4px;
-      margin-bottom: 14px;
-    }}
-    div.job-tags {{
-      display: flex;
-      gap: 6px;
-      flex-wrap: wrap;
-      margin-bottom: 18px;
-    }}
-    span.job-tag {{
-      background: var(--bg-chip);
-      font-family: var(--font-mono);
-      font-size: 0.72rem;
-      padding: 3px 8px;
-      border-radius: 4px;
-      color: #cbd5e1;
-    }}
-    a.apply-link {{
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 100%;
-      background: #0284c7;
-      color: #fff;
-      text-decoration: none;
-      font-family: var(--font-mono);
-      font-size: 0.85rem;
-      font-weight: 700;
-      padding: 10px 16px;
-      border-radius: 8px;
-      transition: background 0.2s;
-    }}
-    a.apply-link:hover {{
-      background: var(--accent-cyan);
-      color: #07090e;
-    }}
-    article.editorial-card {{
-      background: var(--bg-surface);
-      border: 1px solid var(--border-technical);
-      border-radius: 14px;
-      padding: 26px;
-      margin-bottom: 20px;
-    }}
-    footer.site-footer {{
-      text-align: center;
-      margin-top: 60px;
-      padding: 30px 20px;
-      border-top: 1px solid var(--border-subtle);
-      font-family: var(--font-mono);
-      font-size: 0.86rem;
-    }}
-    footer.site-footer p.institution {{
-      color: var(--text-main);
-      font-weight: 600;
-      margin-bottom: 6px;
-    }}
-    footer.site-footer p.schedule-note {{
-      color: var(--accent-amber);
-      font-size: 0.82rem;
-    }}
-  </style>
 </head>
 <body>
 
@@ -531,12 +208,12 @@ def build_full_html(vacantes, config_ramas):
   <header class="site-header">
     <div class="header-container">
       <div class="branding">
-        <div class="brand-symbol">⚛️</div>
+        <div class="brand-symbol">⚛</div>
         <div class="brand-text">
           <h1>Prácticas de Ingeniería Física</h1>
           <p class="subtitle">Medellín y Antioquia • Convocatorias & Directorio de I+D</p>
           <div class="creator-tag">
-            👨‍🔬 Creado por <strong>Jimmy Stebym Rosero Barrera</strong>
+            Creado por <strong>Jimmy Stebym Rosero Barrera</strong>
           </div>
         </div>
       </div>
@@ -553,41 +230,41 @@ def build_full_html(vacantes, config_ramas):
   <main class="main-content">
 
     <section class="manifesto-box">
-      <h2>🚀 Ecosistema de Prácticas para Ingenieros Físicos</h2>
+      <h2>Ecosistema de Prácticas para Ingenieros Físicos</h2>
       <p>
         Plataforma automatizada diseñada por <strong>Jimmy Stebym Rosero Barrera</strong> para rastrear convocatorias industriales y de I+D en Medellín y el Valle de Aburrá, clasificadas por áreas clave de la carrera: Sistemas de Potencia, Automatización (PLC), Ciencia de Materiales, Óptica/Fotónica, Simulación Numérica, Física Médica y Deep Tech.
       </p>
     </section>
 
-    <!-- NAVEGACIÓN POR PESTAÑAS -->
+    <!-- NAVEGACIÓN POR PESTAÑAS (SIN EMOJIS) -->
     <nav class="tabs-nav" aria-label="Secciones de prácticas">
       <button class="tab-link active" onclick="switchMainTab('todas', this)">
-        💼 Todas las Vacantes ({len(vacantes)})
+        Todas las Vacantes ({len(vacantes)})
       </button>
       <button class="tab-link exclusive" onclick="switchMainTab('exclusivas', this)">
-        🎯 Exclusivas: Piden Físico / Ing. Físico ({total_exclusivas})
+        Exclusivas: Piden Físico / Ing. Físico ({total_exclusivas})
       </button>
       <button class="tab-link urgent" onclick="switchMainTab('inminentes', this)">
-        ⏳ Próximas a Finalizar (&lt; 5 Días) ({total_inminentes})
+        Próximas a Finalizar (&lt; 5 Días) ({total_inminentes})
       </button>
       <button class="tab-link" onclick="switchMainTab('consejos', this)">
-        📝 Guía & Tips de Hoja de Vida
+        Guía & Tips de Hoja de Vida
       </button>
     </nav>
 
     <!-- CONTENEDOR DE FILTROS Y BÚSQUEDA -->
     <div id="filterControls">
-      <input type="text" id="searchInput" class="search-bar" placeholder="🔍 Buscar por cargo, empresa, tecnología (ej. PLC, Solar, Python, Difracción, Transformadores)..." onkeyup="handleFilter()">
+      <input type="text" id="searchInput" class="search-bar" placeholder="Buscar por cargo, empresa, tecnología (ej. PLC, Solar, Python, Difracción, Transformadores)..." onkeyup="handleFilter()">
       
       <div class="branch-pills" id="pillsContainer">
-        <button class="branch-pill active" onclick="handlePill('TODOS', this)">🌐 Todas las ramas</button>
-        <button class="branch-pill" onclick="handlePill('Energía, Potencia y Renovables', this)">⚡ Energía y Potencia</button>
-        <button class="branch-pill" onclick="handlePill('Automatización, Instrumentación y Control', this)">🎛️ Automatización & Control</button>
-        <button class="branch-pill" onclick="handlePill('Materiales, Nanotecnología y Ensayos', this)">🔬 Materiales & Nano</button>
-        <button class="branch-pill" onclick="handlePill('Óptica, Fotónica y Visión Artificial', this)">👁️ Óptica & Visión</button>
-        <button class="branch-pill" onclick="handlePill('Simulación, Datos, IA y Cuántica', this)">📊 Datos, IA & Cuántica</button>
-        <button class="branch-pill" onclick="handlePill('Física Médica, Radiaciones y Bioingeniería', this)">🏥 Física Médica</button>
-        <button class="branch-pill" onclick="handlePill('I+D, Innovación y Deep Tech', this)">💡 I+D & Deep Tech</button>
+        <button class="branch-pill active" onclick="handlePill('TODOS', this)">Todas las ramas</button>
+        <button class="branch-pill" onclick="handlePill('Energía, Potencia y Renovables', this)">Energía y Potencia</button>
+        <button class="branch-pill" onclick="handlePill('Automatización, Instrumentación y Control', this)">Automatización & Control</button>
+        <button class="branch-pill" onclick="handlePill('Materiales, Nanotecnología y Ensayos', this)">Materiales & Nano</button>
+        <button class="branch-pill" onclick="handlePill('Óptica, Fotónica y Visión Artificial', this)">Óptica & Visión</button>
+        <button class="branch-pill" onclick="handlePill('Simulación, Datos, IA y Cuántica', this)">Datos, IA & Cuántica</button>
+        <button class="branch-pill" onclick="handlePill('Física Médica, Radiaciones y Bioingeniería', this)">Física Médica</button>
+        <button class="branch-pill" onclick="handlePill('I+D, Innovación y Deep Tech', this)">I+D & Deep Tech</button>
       </div>
     </div>
 
@@ -599,14 +276,14 @@ def build_full_html(vacantes, config_ramas):
     <!-- PESTAÑA: GUÍA Y TIPS -->
     <section id="guideContainer" style="display: none;">
       <article class="editorial-card">
-        <h3>🎯 Cómo defender el perfil de Ingeniería Física ante Recursos Humanos</h3>
+        <h3>Cómo defender el perfil de Ingeniería Física ante Recursos Humanos</h3>
         <p>A menudo el reclutador de RRHH no conoce a fondo el pénsum de Ingeniería Física. Si dices solo <em>"Soy estudiante de Física"</em>, asumirán que solo haces teoría en tablero. Tu perfil debe destacar como <strong>Ingeniero Físico orientado a soluciones prácticas de alta tecnología</strong>:</p>
         <ul>
           <li><strong>Destaca tus habilidades duras en el encabezado del CV:</strong> Instrumentación industrial, adquisición de datos (DAQ), automatización con PLC, modelado numérico (Python/MATLAB), caracterización de materiales (DRX/SEM) o análisis de datos.</li>
-          <li><strong>Si la oferta dice "Ing. Electrónico, Mecatrónico, Materiales o afines":</strong> ¡Postúlate sin dudar! En tu carta o resumen escribe: <em>"Estudiante de Ingeniería Física con énfasis en sistemas de potencia / automatización / modelado computacional..."</em></li>
+          <li><strong>Si la oferta dice "Ing. Electrónico, Mecatrónico, Materiales o afines":</strong> Postúlate sin dudar. En tu carta o resumen escribe: <em>"Estudiante de Ingeniería Física con énfasis en sistemas de potencia / automatización / modelado computacional..."</em></li>
           <li><strong>Menciona montajes y software de laboratorio:</strong> Experiencia con TIA Portal, Proteus, COMSOL Multiphysics, osciloscopios o protocolos de comunicación (Modbus/MQTT).</li>
         </ul>
-        <h4 style="color: #fff; margin-bottom: 8px; font-family: var(--font-display);">📅 Calendario de Convocatorias Masivas en Medellín:</h4>
+        <h4 style="color: #fff; margin-bottom: 8px; font-family: var(--font-display);">Calendario de Convocatorias Masivas en Medellín:</h4>
         <p>• <strong>Semestre 1 (Prácticas enero a junio):</strong> Convocatorias abren entre <strong>septiembre y noviembre</strong>.<br>
         • <strong>Semestre 2 (Prácticas julio a diciembre):</strong> Convocatorias abren entre <strong>marzo y mayo</strong>.</p>
       </article>
@@ -640,15 +317,15 @@ def build_full_html(vacantes, config_ramas):
         if (j.es_cierre_inminente) card.classList.add('urgent');
         if (j.es_exclusiva_fisica) card.classList.add('exclusive');
         
-        const tagsHtml = j.ramas.map(r => `<span class="job-tag" style="border-left: 2px solid ${{r.color}}">${{r.icono}} ${{r.nombre}}</span>`).join('');
+        const tagsHtml = j.ramas.map(r => `<span class="job-tag" style="border-left: 2px solid ${{r.color}}">${{r.nombre}}</span>`).join('');
         
         let badgeColor = j.color_principal;
-        let badgeText = `${{j.icono_principal}} ${{j.afinidad}}`;
+        let badgeText = j.afinidad.toUpperCase();
         if (j.es_cierre_inminente) {{
-          badgeText = '⏳ CIERRE INMINENTE (&lt; 5 DÍAS)';
+          badgeText = 'CIERRE INMINENTE (< 5 DIAS)';
           badgeColor = '#ef476f';
         }} else if (j.es_exclusiva_fisica) {{
-          badgeText = '🎯 EXCLUSIVA FÍSICA';
+          badgeText = 'EXCLUSIVA FISICA';
           badgeColor = '#ffb703';
         }}
         
@@ -661,15 +338,24 @@ def build_full_html(vacantes, config_ramas):
               <time class="job-date">${{j.fecha_publicacion}}</time>
             </header>
             <h3 class="job-title">${{j.titulo}}</h3>
-            <div class="job-company">🏢 ${{j.empresa}}</div>
+            <div class="job-company">${{j.empresa}}</div>
             <div class="job-specs">
-              <span>📍 ${{j.ubicacion}}</span>
-              <span>🔗 Portal: ${{j.fuente}}</span>
+              <span>Ubicación: ${{j.ubicacion}}</span>
+              <span>Portal: ${{j.fuente}}</span>
             </div>
+
+            <!-- NUBE EXPLICATIVA (DE QUÉ SE TRATA & QUÉ TOCA HACER) -->
+            <div class="job-cloud">
+              <div class="cloud-mision">${{j.mision}}</div>
+              <div class="cloud-tasks">
+                <strong>¿Qué te tocará hacer?:</strong> ${{j.tareas}}
+              </div>
+            </div>
+
             <div class="job-tags">${{tagsHtml}}</div>
           </div>
           <footer class="job-card-footer">
-            <a href="${{j.url}}" target="_blank" class="apply-link" rel="noopener noreferrer">Postularme a la Oferta ↗</a>
+            <a href="${{j.url}}" target="_blank" class="apply-link" rel="noopener noreferrer">Postularme a la Oferta</a>
           </footer>
         `;
         container.appendChild(card);
@@ -680,18 +366,17 @@ def build_full_html(vacantes, config_ramas):
       const query = document.getElementById('searchInput').value.toLowerCase();
       
       const filtered = allJobs.filter(j => {{
-        // Filtro por pestaña
         if (currentTab === 'exclusivas' && !j.es_exclusiva_fisica) return false;
         if (currentTab === 'inminentes' && !j.es_cierre_inminente) return false;
         
-        // Filtro por píldora de rama
         const matchesBranch = (currentBranch === 'TODOS') || j.ramas.some(r => r.nombre === currentBranch);
         if (!matchesBranch) return false;
         
-        // Búsqueda en texto
         const matchesText = j.titulo.toLowerCase().includes(query) ||
                             j.empresa.toLowerCase().includes(query) ||
                             j.ubicacion.toLowerCase().includes(query) ||
+                            j.mision.toLowerCase().includes(query) ||
+                            j.tareas.toLowerCase().includes(query) ||
                             j.ramas.some(r => r.nombre.toLowerCase().includes(query));
         return matchesText;
       }});
@@ -727,7 +412,6 @@ def build_full_html(vacantes, config_ramas):
       }}
     }}
 
-    // Render inicial
     renderJobs(allJobs);
   </script>
 </body>
@@ -741,7 +425,7 @@ def build_full_html(vacantes, config_ramas):
 
 def export_csv(vacantes):
     """Exporta las vacantes a un archivo CSV compatible con Excel"""
-    fieldnames = ["titulo", "empresa", "ubicacion", "rama_principal", "afinidad", "es_exclusiva_fisica", "es_cierre_inminente", "fecha_publicacion", "fuente", "url"]
+    fieldnames = ["titulo", "empresa", "ubicacion", "rama_principal", "afinidad", "es_exclusiva_fisica", "es_cierre_inminente", "mision", "tareas", "fecha_publicacion", "fuente", "url"]
     with open(OUTPUT_CSV, "w", newline="", encoding="utf-8-sig") as f:
         writer = csv.DictWriter(f, fieldnames=fieldnames)
         writer.writeheader()
@@ -754,6 +438,8 @@ def export_csv(vacantes):
                 "afinidad": v["afinidad"],
                 "es_exclusiva_fisica": v.get("es_exclusiva_fisica", False),
                 "es_cierre_inminente": v.get("es_cierre_inminente", False),
+                "mision": v.get("mision", ""),
+                "tareas": v.get("tareas", ""),
                 "fecha_publicacion": v["fecha_publicacion"],
                 "fuente": v["fuente"],
                 "url": v["url"]
@@ -762,15 +448,15 @@ def export_csv(vacantes):
 
 def main():
     print("="*70)
-    print(" ⚛️  BOT DE RASTREO INTEGRAL - PRÁCTICAS DE INGENIERÍA FÍSICA")
-    print("    Medellín, Valle de Aburrá & Antioquia • Autor: Jimmy Rosero")
+    print(" [ATOM] BOT DE RASTREO INTEGRAL - PRÁCTICAS DE INGENIERÍA FÍSICA")
+    print("        Medellín, Valle de Aburrá & Antioquia • Autor: Jimmy Rosero")
     print("="*70)
     
     config_ramas = load_json(CONFIG_RAMAS_PATH)
     all_raw_jobs = []
     seen_urls = set()
     
-    print(f"[*] Rastreando en vivo {len(SEARCH_QUERIES)} categorías (startups, pymes, laboratorios y multinacionales)...")
+    print(f"[*] Rastreando en vivo {len(SEARCH_QUERIES)} categorías...")
     for q in SEARCH_QUERIES:
         print(f" -> Buscando: '{q}'...")
         jobs = scrape_linkedin_query(q)
@@ -784,7 +470,7 @@ def main():
         time.sleep(0.8)
         
     print(f"\n[*] Total de vacantes únicas recolectadas: {len(all_raw_jobs)}")
-    print("[*] Clasificando por áreas de física aplicada, exclusivas y urgencia...")
+    print("[*] Generando nubes explicativas de responsabilidades y clasificación...")
     
     classified_jobs = []
     for j in all_raw_jobs:

@@ -2,14 +2,13 @@
    ESTILOS CSS - PORTAL DE PRÁCTICAS INGENIERÍA FÍSICA
    Autor: Jimmy Stebym Rosero Barrera
    Institución: Universidad Nacional de Colombia (UNAL Sede Medellín)
-   Enfoque: Diseño distintivo de laboratorio técnico / Blueprint científico
-   (Sin estéticas genéricas "AI slop" ni degradados morados sobre blanco)
+   Estética: Laboratorio Técnico / Blueprint Científico
+   (Sin emojis en la interfaz salvo el átomo superior)
    ========================================================================== */
 
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700&family=Syne:wght@700;800&display=swap');
 
 :root {
-  /* Paleta Técnica de Laboratorio de Física */
   --bg-deep: #07090e;
   --bg-surface: #0e131f;
   --bg-surface-elevated: #161d2f;
@@ -19,14 +18,12 @@
   --border-strong: rgba(255, 255, 255, 0.16);
   --border-technical: #2a364f;
 
-  /* Acentos de Física Aplicada */
-  --accent-cyan: #00e5ff;       /* Láser de argón / Cuántica */
-  --accent-amber: #ffb703;      /* Filamento / Potencia */
-  --accent-emerald: #06d6a0;    /* Fluorescencia / Sensores */
-  --accent-crimson: #ef476f;    /* Advertencia / Cierre inminente */
-  --accent-violet: #8338ec;     /* Fotónica / Óptica */
+  --accent-cyan: #00e5ff;       /* Láser / Cuántica */
+  --accent-amber: #ffb703;      /* Potencia / Energía */
+  --accent-emerald: #06d6a0;    /* Sensores / Materiales */
+  --accent-crimson: #ef476f;    /* Cierre inminente */
+  --accent-violet: #8338ec;     /* Fotónica */
 
-  /* Tipografías con Carácter */
   --font-display: 'Syne', sans-serif;
   --font-body: 'Outfit', -apple-system, sans-serif;
   --font-mono: 'JetBrains Mono', monospace;
@@ -36,7 +33,6 @@
   --text-dim: #64748b;
 }
 
-/* Reset y Base */
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -49,26 +45,22 @@ body {
   color: var(--text-main);
   min-height: 100vh;
   line-height: 1.6;
-  /* Retícula sutil milimétrica de papel de laboratorio en CSS puro */
   background-image: 
     linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-    radial-gradient(circle at 10% 20%, rgba(0, 229, 255, 0.05) 0%, transparent 40%),
-    radial-gradient(circle at 90% 80%, rgba(255, 183, 3, 0.04) 0%, transparent 40%);
-  background-size: 32px 32px, 32px 32px, 100% 100%, 100% 100%;
-  background-position: 0 0, 0 0, 0 0, 0 0;
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 32px 32px;
   background-attachment: fixed;
 }
 
-/* Encabezado Superior (Header Semántico) */
+/* Header */
 header.site-header {
-  background: rgba(7, 9, 14, 0.92);
+  background: rgba(7, 9, 14, 0.94);
   backdrop-filter: blur(16px);
-  border-bottom: 1px solid var(--border-subtle);
+  border-bottom: 1px solid var(--border-technical);
   position: sticky;
   top: 0;
   z-index: 200;
-  padding: 16px 28px;
+  padding: 18px 28px;
 }
 
 .header-container {
@@ -78,7 +70,7 @@ header.site-header {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 16px;
 }
 
 .branding {
@@ -88,46 +80,45 @@ header.site-header {
 }
 
 .brand-symbol {
-  width: 48px;
-  height: 48px;
-  background: linear-gradient(135deg, #0e131f, #1a233a);
-  border: 1px solid var(--border-technical);
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, #0e131f, #1e293b);
+  border: 1px solid var(--accent-cyan);
   border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 26px;
-  box-shadow: 0 0 15px rgba(0, 229, 255, 0.15);
+  font-size: 28px;
+  box-shadow: 0 0 20px rgba(0, 229, 255, 0.2);
+  color: var(--accent-cyan);
 }
 
 .brand-text h1 {
   font-family: var(--font-display);
   font-size: 1.45rem;
   font-weight: 800;
+  color: #fff;
   letter-spacing: -0.5px;
-  color: #ffffff;
 }
 
 .brand-text p.subtitle {
   font-size: 0.85rem;
   color: var(--text-muted);
   font-family: var(--font-mono);
-  margin-top: 2px;
 }
 
 .creator-tag {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  margin-top: 6px;
+  gap: 6px;
+  margin-top: 5px;
   background: rgba(0, 229, 255, 0.08);
   border: 1px solid rgba(0, 229, 255, 0.25);
   color: var(--accent-cyan);
-  font-size: 0.78rem;
+  font-size: 0.8rem;
   font-family: var(--font-mono);
   padding: 3px 12px;
   border-radius: 6px;
-  font-weight: 600;
 }
 
 .creator-tag strong {
@@ -138,68 +129,50 @@ header.site-header {
 .header-meta {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 14px;
   background: var(--bg-surface);
   border: 1px solid var(--border-technical);
-  padding: 8px 18px;
+  padding: 8px 16px;
   border-radius: 10px;
   font-family: var(--font-mono);
   font-size: 0.82rem;
 }
 
-.header-meta .live-indicator {
-  display: inline-block;
-  width: 8px;
-  height: 8px;
-  background-color: var(--accent-emerald);
-  border-radius: 50%;
-  box-shadow: 0 0 8px var(--accent-emerald);
-  animation: pulse 2s infinite;
-}
-
-@keyframes pulse {
-  0% { transform: scale(0.95); opacity: 0.8; }
-  50% { transform: scale(1.2); opacity: 1; }
-  100% { transform: scale(0.95); opacity: 0.8; }
-}
-
-/* Contenedor Principal */
+/* Main Layout */
 main.main-content {
   max-width: 1360px;
   margin: 30px auto;
   padding: 0 24px;
 }
 
-/* Banner de Manifiesto */
 section.manifesto-box {
-  background: linear-gradient(135deg, rgba(14, 19, 31, 0.95), rgba(22, 29, 47, 0.75));
+  background: linear-gradient(135deg, #0e131f, #161d2f);
   border: 1px solid var(--border-technical);
   border-left: 4px solid var(--accent-cyan);
   border-radius: 14px;
-  padding: 26px 30px;
-  margin-bottom: 28px;
+  padding: 24px 28px;
+  margin-bottom: 26px;
 }
 
 section.manifesto-box h2 {
   font-family: var(--font-display);
-  font-size: 1.55rem;
-  color: #fff;
+  font-size: 1.45rem;
   margin-bottom: 8px;
+  color: #fff;
 }
 
 section.manifesto-box p {
   color: var(--text-muted);
   font-size: 0.95rem;
-  max-width: 1000px;
 }
 
-/* Pestañas de Navegación (Tabs Semánticos) */
+/* Tabs */
 nav.tabs-nav {
   display: flex;
-  gap: 8px;
+  gap: 10px;
   margin-bottom: 24px;
   border-bottom: 1px solid var(--border-technical);
-  padding-bottom: 8px;
+  padding-bottom: 10px;
   flex-wrap: wrap;
 }
 
@@ -214,9 +187,6 @@ button.tab-link {
   border-radius: 8px;
   cursor: pointer;
   transition: all 0.2s ease;
-  display: flex;
-  align-items: center;
-  gap: 8px;
 }
 
 button.tab-link:hover {
@@ -233,29 +203,32 @@ button.tab-link.active {
 button.tab-link.urgent {
   color: var(--accent-crimson);
 }
+
 button.tab-link.urgent.active {
-  background: rgba(239, 71, 111, 0.12);
-  border-color: rgba(239, 71, 111, 0.3);
+  background: rgba(239, 71, 111, 0.15);
+  border-color: rgba(239, 71, 111, 0.4);
 }
 
-/* Barra de Búsqueda y Píldoras */
-div.filters-wrapper {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-  margin-bottom: 26px;
+button.tab-link.exclusive {
+  color: var(--accent-amber);
 }
 
+button.tab-link.exclusive.active {
+  background: rgba(255, 183, 3, 0.15);
+  border-color: rgba(255, 183, 3, 0.4);
+}
+
+/* Search and Pills */
 input.search-bar {
   width: 100%;
   background: var(--bg-surface);
   border: 1px solid var(--border-technical);
   border-radius: 10px;
   padding: 14px 20px;
-  color: #ffffff;
-  font-family: var(--font-body);
+  color: #fff;
   font-size: 0.95rem;
   outline: none;
+  margin-bottom: 14px;
   transition: border-color 0.2s;
 }
 
@@ -268,6 +241,7 @@ div.branch-pills {
   display: flex;
   gap: 8px;
   flex-wrap: wrap;
+  margin-bottom: 24px;
 }
 
 button.branch-pill {
@@ -280,9 +254,6 @@ button.branch-pill {
   border-radius: 6px;
   cursor: pointer;
   transition: all 0.2s ease;
-  display: flex;
-  align-items: center;
-  gap: 6px;
 }
 
 button.branch-pill:hover {
@@ -291,17 +262,17 @@ button.branch-pill:hover {
 }
 
 button.branch-pill.active {
-  background: rgba(0, 229, 255, 0.12);
+  background: rgba(0, 229, 255, 0.15);
   border-color: var(--accent-cyan);
   color: var(--accent-cyan);
   font-weight: 700;
 }
 
-/* Grilla de Artículos / Tarjetas Semánticas */
+/* Jobs Grid */
 section.jobs-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
-  gap: 20px;
+  gap: 22px;
 }
 
 article.job-card {
@@ -313,22 +284,29 @@ article.job-card {
   flex-direction: column;
   justify-content: space-between;
   position: relative;
-  transition: all 0.25s ease;
+  transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
 }
 
 article.job-card:hover {
-  border-color: var(--border-technical);
   transform: translateY(-3px);
+  border-color: var(--accent-cyan);
   background: var(--bg-surface-elevated);
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.45);
+}
+
+article.job-card.urgent {
+  border-left: 4px solid var(--accent-crimson);
+}
+
+article.job-card.exclusive {
+  border-left: 4px solid var(--accent-amber);
 }
 
 header.job-card-header {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  margin-bottom: 12px;
-  gap: 12px;
+  margin-bottom: 10px;
 }
 
 span.affinity-badge {
@@ -344,14 +322,14 @@ span.affinity-badge {
 time.job-date {
   font-family: var(--font-mono);
   font-size: 0.72rem;
-  color: var(--text-dim);
+  color: var(--text-muted);
 }
 
 h3.job-title {
   font-family: var(--font-display);
   font-size: 1.15rem;
   font-weight: 700;
-  color: #ffffff;
+  color: #fff;
   margin-bottom: 6px;
   line-height: 1.35;
 }
@@ -360,7 +338,7 @@ div.job-company {
   color: var(--accent-cyan);
   font-weight: 600;
   font-size: 0.92rem;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
 div.job-specs {
@@ -368,25 +346,76 @@ div.job-specs {
   color: var(--text-muted);
   display: flex;
   flex-direction: column;
-  gap: 4px;
-  margin-bottom: 16px;
+  gap: 3px;
+  margin-bottom: 12px;
+}
+
+/* ==========================================================================
+   LA "NUBE" EXPLICATIVA FLOTANTE (HOVER CLOUD / TOOLTIP INTERACTIVO)
+   Muestra de qué se trata la convocatoria y qué le tocará hacer al practicante
+   ========================================================================== */
+.job-cloud {
+  background: #090e1a;
+  border: 1px solid var(--border-technical);
+  border-radius: 8px;
+  padding: 12px 14px;
+  margin-bottom: 14px;
+  font-size: 0.82rem;
+  line-height: 1.5;
+  transition: all 0.25s ease;
+  position: relative;
+}
+
+/* Indicador sutil de nube / inspección */
+.job-cloud::before {
+  content: "DESCRIPCION & MISIONES:";
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: var(--accent-cyan);
+  margin-bottom: 4px;
+  letter-spacing: 0.5px;
+}
+
+.job-cloud .cloud-mision {
+  color: #e2e8f0;
+  margin-bottom: 6px;
+}
+
+.job-cloud .cloud-tasks {
+  color: #94a3b8;
+  font-size: 0.78rem;
+  border-top: 1px dashed var(--border-subtle);
+  padding-top: 6px;
+}
+
+.job-cloud .cloud-tasks strong {
+  color: var(--accent-amber);
+}
+
+/* Efecto al pasar el cursor sobre la tarjeta: resalta la nube con brillo */
+article.job-card:hover .job-cloud {
+  border-color: rgba(0, 229, 255, 0.4);
+  background: #0d1424;
+  box-shadow: 0 4px 15px rgba(0, 229, 255, 0.08);
 }
 
 div.job-tags {
   display: flex;
   gap: 6px;
   flex-wrap: wrap;
-  margin-bottom: 18px;
+  margin-bottom: 16px;
 }
 
 span.job-tag {
   background: var(--bg-chip);
-  border: 1px solid var(--border-subtle);
   font-family: var(--font-mono);
   font-size: 0.72rem;
   padding: 3px 8px;
   border-radius: 4px;
-  color: var(--text-muted);
+  color: #cbd5e1;
+  border: 1px solid var(--border-subtle);
 }
 
 footer.job-card-footer {
@@ -399,7 +428,7 @@ a.apply-link {
   justify-content: center;
   width: 100%;
   background: #0284c7;
-  color: #ffffff;
+  color: #fff;
   text-decoration: none;
   font-family: var(--font-mono);
   font-size: 0.85rem;
@@ -407,31 +436,20 @@ a.apply-link {
   padding: 10px 16px;
   border-radius: 8px;
   transition: all 0.2s ease;
-  letter-spacing: 0.3px;
 }
 
 a.apply-link:hover {
   background: var(--accent-cyan);
   color: #07090e;
-  box-shadow: 0 0 15px rgba(0, 229, 255, 0.4);
+  box-shadow: 0 0 15px rgba(0, 229, 255, 0.35);
 }
 
-/* Tarjetas de Cierre Inminente */
-article.urgent-card {
-  border-left: 4px solid var(--accent-crimson);
-}
-
-/* Tarjetas Exclusivas de Física */
-article.physics-exclusive {
-  border-left: 4px solid var(--accent-amber);
-}
-
-/* Tarjetas de Contenido Editorial / Guía */
+/* Guía Editorial */
 article.editorial-card {
   background: var(--bg-surface);
   border: 1px solid var(--border-technical);
   border-radius: 14px;
-  padding: 28px;
+  padding: 26px;
   margin-bottom: 20px;
 }
 
@@ -453,24 +471,23 @@ article.editorial-card li {
   margin-bottom: 8px;
 }
 
-/* Pie de Página Semántico */
+/* Footer */
 footer.site-footer {
   text-align: center;
   margin-top: 60px;
   padding: 30px 20px;
   border-top: 1px solid var(--border-subtle);
-  color: var(--text-dim);
-  font-size: 0.86rem;
   font-family: var(--font-mono);
+  font-size: 0.86rem;
 }
 
 footer.site-footer p.institution {
-  color: var(--text-muted);
-  font-weight: 500;
+  color: var(--text-main);
+  font-weight: 600;
   margin-bottom: 6px;
 }
 
 footer.site-footer p.schedule-note {
   color: var(--accent-amber);
-  font-size: 0.8rem;
+  font-size: 0.82rem;
 }

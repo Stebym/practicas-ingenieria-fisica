@@ -2,7 +2,7 @@
   "ramas": {
     "energia_potencia": {
       "nombre": "Energía, Potencia y Renovables",
-      "icono": "⚡",
+      "icono": "",
       "color": "#f59e0b",
       "palabras_clave": [
         "energia solar", "fotovoltaic", "solar", "subestacion", "transformador",
@@ -11,11 +11,13 @@
         "mercado de energia", "flujos de potencia"
       ],
       "carreras_mencionadas": ["ingenieria electrica", "ingenieria fisica", "ingenieria de energia", "electronica"],
-      "empresas_referencia": ["ISA", "XM", "EPM", "Celsia", "Intercolombia", "Erco Energia", "Sunita", "CIDET"]
+      "empresas_referencia": ["ISA", "XM", "EPM", "Celsia", "Intercolombia", "Erco Energia", "Sunita", "CIDET"],
+      "mision_tipica": "Modelado de flujos eléctricos, dimensionamiento de sistemas fotovoltaicos, pruebas de aislamiento en transformadores y análisis de calidad de potencia.",
+      "actividades_clave": "Simulación en software de potencia, levantamiento de diagramas unifilares, telemetría y apoyo en auditorías energéticas."
     },
     "automatizacion_instrumentacion": {
       "nombre": "Automatización, Instrumentación y Control",
-      "icono": "🎛️",
+      "icono": "",
       "color": "#3b82f6",
       "palabras_clave": [
         "plc", "scada", "instrumentacion", "sensores", "control de procesos",
@@ -24,11 +26,13 @@
         "sensores industriales", "redes industriales"
       ],
       "carreras_mencionadas": ["ingenieria fisica", "ingenieria electronica", "ingenieria mecatronica", "control"],
-      "empresas_referencia": ["Haceb", "Corona", "Grupo Argos", "Sofasa", "Enka", "Nutresa", "Siemens", "Schneider"]
+      "empresas_referencia": ["Haceb", "Corona", "Grupo Argos", "Sofasa", "Enka", "Nutresa", "Siemens", "Schneider"],
+      "mision_tipica": "Programación y comisionamiento de autómatas programables (PLC), calibración de lazos de control y telemetría de variables físicas de planta.",
+      "actividades_clave": "Configuración en TIA Portal / Rockwell, diseño de interfaces HMI, cableado de sensores (4-20mA, 0-10V) y protocolos industriales Modbus."
     },
     "materiales_nanotecnologia": {
       "nombre": "Materiales, Nanotecnología y Ensayos",
-      "icono": "🔬",
+      "icono": "",
       "color": "#10b981",
       "palabras_clave": [
         "materiales", "nanotecnologia", "caracterizacion", "difraccion", "drx",
@@ -37,11 +41,13 @@
         "laboratorio de ensayos", "propiedades termicas"
       ],
       "carreras_mencionadas": ["ingenieria fisica", "ingenieria de materiales", "quimica", "ingenieria mecanica"],
-      "empresas_referencia": ["Sumicol / Corona", "Cementos Argos (Centro Innovacion)", "Enka", "Invesa", "Andercol"]
+      "empresas_referencia": ["Sumicol / Corona", "Cementos Argos (Centro Innovacion)", "Enka", "Invesa", "Andercol"],
+      "mision_tipica": "Ensayos de caracterización microestructural, pruebas de tracción/dureza y control de calidad de formulaciones cerámicas y poliméricas.",
+      "actividades_clave": "Preparación de probetas, difractometría de rayos X (DRX), microscopía electrónica (SEM) y elaboración de reportes de conformidad técnica."
     },
     "optica_fotonica": {
       "nombre": "Óptica, Fotónica y Visión Artificial",
-      "icono": "👁️",
+      "icono": "",
       "color": "#8b5cf6",
       "palabras_clave": [
         "optica", "fotonica", "laser", "fibra optica", "vision artificial",
@@ -49,11 +55,13 @@
         "sensores opticos", "camaras industriales", "iluminacion", "guias de onda"
       ],
       "carreras_mencionadas": ["ingenieria fisica", "ingenieria electronica", "sistemas"],
-      "empresas_referencia": ["Centros de I+D", "Empresas de inspeccion automatizada", "Ruta N Startups", "Opticas industriales"]
+      "empresas_referencia": ["Centros de I+D", "Empresas de inspeccion automatizada", "Ruta N Startups", "Opticas industriales"],
+      "mision_tipica": "Diseño y calibración de sistemas de inspección visual automatizada en línea de producción y caracterización espectroscópica.",
+      "actividades_clave": "Algoritmos con OpenCV / Python, ajuste de cámaras industriales, iluminación estroboscópica y alineación de fuentes láser."
     },
     "simulacion_datos_cuantica": {
       "nombre": "Simulación, Datos, IA y Cuántica",
-      "icono": "📊",
+      "icono": "",
       "color": "#ec4899",
       "palabras_clave": [
         "modelado numerico", "simulacion", "python", "ciencia de datos", "data science",
@@ -62,11 +70,13 @@
         "modelos estocasticos"
       ],
       "carreras_mencionadas": ["ingenieria fisica", "matematicas", "estadistica", "ingenieria de sistemas", "fisica"],
-      "empresas_referencia": ["Bancolombia", "Grupo Sura", "Proteccion", "Ruta N", "Interacpedia", "Tuya", "Globant"]
+      "empresas_referencia": ["Bancolombia", "Grupo Sura", "Proteccion", "Ruta N", "Interacpedia", "Tuya", "Globant"],
+      "mision_tipica": "Modelamiento matemático de sistemas dinámicos, algoritmos predictivos, simulaciones numéricas y optimización estocástica.",
+      "actividades_clave": "Programación en Python (NumPy, SciPy, Pandas), simulaciones por elementos finitos, entrenamiento de modelos de Machine Learning y visualización técnica."
     },
     "fisica_medica_bio": {
       "nombre": "Física Médica, Radiaciones y Bioingeniería",
-      "icono": "🏥",
+      "icono": "",
       "color": "#ef4444",
       "palabras_clave": [
         "fisica medica", "radiaciones", "radioterapia", "dosimetria", "resonancia magnetica",
@@ -74,11 +84,13 @@
         "equipos biomedicos", "calibracion de equipos medicos"
       ],
       "carreras_mencionadas": ["ingenieria fisica", "fisica", "bioingenieria", "ingenieria biomedica"],
-      "empresas_referencia": ["Hospital San Vicente Fundacion", "Clinica Las Americas", "Instituto de Cancerologia", "Clinica Medellin"]
+      "empresas_referencia": ["Hospital San Vicente Fundacion", "Clinica Las Americas", "Instituto de Cancerologia", "Clinica Medellin"],
+      "mision_tipica": "Control de calidad de equipos de radioterapia y radiodiagnóstico, cálculo dosimétrico y protocolos de protección radiológica.",
+      "actividades_clave": "Calibración de cámaras de ionización en aceleradores lineales, verificación de planes de tratamiento y aseguramiento metrológico."
     },
     "id_deeptech": {
       "nombre": "I+D, Innovación y Deep Tech",
-      "icono": "💡",
+      "icono": "",
       "color": "#6366f1",
       "palabras_clave": [
         "investigacion y desarrollo", "i+d", "r&d", "desarrollo tecnologico",
@@ -86,7 +98,9 @@
         "patentes", "diseno experimental"
       ],
       "carreras_mencionadas": ["ingenieria fisica", "ingenierias afines"],
-      "empresas_referencia": ["CIDET", "CTA", "Tecnova", "Ruta N", "Centros de Innovacion Empresarial"]
+      "empresas_referencia": ["CIDET", "CTA", "Tecnova", "Ruta N", "Centros de Innovacion Empresarial"],
+      "mision_tipica": "Diseño de experimentos, pruebas de concepto, validación de prototipos funcionales y formulación técnica de proyectos.",
+      "actividades_clave": "Construcción de prototipos de laboratorio, búsqueda en bases de patentes, análisis de viabilidad técnica y redacción de artículos o informes."
     }
   }
 }

@@ -10,18 +10,18 @@
       {
         "clave": "automatizacion_instrumentacion",
         "nombre": "Automatización, Instrumentación y Control",
-        "icono": "🎛️",
         "color": "#3b82f6",
         "score": 2
       }
     ],
     "rama_principal": "Automatización, Instrumentación y Control",
-    "icono_principal": "🎛️",
     "color_principal": "#3b82f6",
     "clave_principal": "automatizacion_instrumentacion",
-    "afinidad": "🎯 Exclusiva Física",
+    "afinidad": "Exclusiva Física",
     "es_exclusiva_fisica": true,
-    "es_cierre_inminente": true
+    "es_cierre_inminente": true,
+    "mision": "Programación y comisionamiento de autómatas programables (PLC), calibración de lazos de control y telemetría de variables físicas de planta.",
+    "tareas": "Configuración en TIA Portal / Rockwell, diseño de interfaces HMI, cableado de sensores (4-20mA, 0-10V) y protocolos industriales Modbus."
   },
   {
     "titulo": "Medellín Internship Pipeline – January 2027",
@@ -34,18 +34,18 @@
       {
         "clave": "general",
         "nombre": "Ingeniería General / Operaciones",
-        "icono": "⚙️",
         "color": "#64748b",
         "score": 1
       }
     ],
     "rama_principal": "Ingeniería General / Operaciones",
-    "icono_principal": "⚙️",
     "color_principal": "#64748b",
     "clave_principal": "general",
     "afinidad": "General",
     "es_exclusiva_fisica": false,
-    "es_cierre_inminente": true
+    "es_cierre_inminente": true,
+    "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Procter &amp; Gamble.",
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
   },
   {
     "titulo": "Intern Developer",
@@ -58,18 +58,18 @@
       {
         "clave": "general",
         "nombre": "Ingeniería General / Operaciones",
-        "icono": "⚙️",
         "color": "#64748b",
         "score": 1
       }
     ],
     "rama_principal": "Ingeniería General / Operaciones",
-    "icono_principal": "⚙️",
     "color_principal": "#64748b",
     "clave_principal": "general",
     "afinidad": "General",
     "es_exclusiva_fisica": false,
-    "es_cierre_inminente": true
+    "es_cierre_inminente": true,
+    "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Rockwell Automation.",
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
   },
   {
     "titulo": "Practicantes 2027 Medellin",
@@ -82,18 +82,18 @@
       {
         "clave": "general",
         "nombre": "Ingeniería General / Operaciones",
-        "icono": "⚙️",
         "color": "#64748b",
         "score": 1
       }
     ],
     "rama_principal": "Ingeniería General / Operaciones",
-    "icono_principal": "⚙️",
     "color_principal": "#64748b",
     "clave_principal": "general",
     "afinidad": "General",
     "es_exclusiva_fisica": false,
-    "es_cierre_inminente": true
+    "es_cierre_inminente": true,
+    "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Essity.",
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
   },
   {
     "titulo": "Aprendiz Tecnico",
@@ -106,18 +106,18 @@
       {
         "clave": "general",
         "nombre": "Ingeniería General / Operaciones",
-        "icono": "⚙️",
         "color": "#64748b",
         "score": 1
       }
     ],
     "rama_principal": "Ingeniería General / Operaciones",
-    "icono_principal": "⚙️",
     "color_principal": "#64748b",
     "clave_principal": "general",
     "afinidad": "General",
     "es_exclusiva_fisica": false,
-    "es_cierre_inminente": true
+    "es_cierre_inminente": true,
+    "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Otis Elevator Co..",
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
   },
   {
     "titulo": "Pasante de recursos humanos",
@@ -130,18 +130,18 @@
       {
         "clave": "general",
         "nombre": "Ingeniería General / Operaciones",
-        "icono": "⚙️",
         "color": "#64748b",
         "score": 1
       }
     ],
     "rama_principal": "Ingeniería General / Operaciones",
-    "icono_principal": "⚙️",
     "color_principal": "#64748b",
     "clave_principal": "general",
     "afinidad": "General",
     "es_exclusiva_fisica": false,
-    "es_cierre_inminente": true
+    "es_cierre_inminente": true,
+    "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Secap Ltda.",
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
   },
   {
     "titulo": "Practicante profesional Talent",
@@ -154,18 +154,18 @@
       {
         "clave": "general",
         "nombre": "Ingeniería General / Operaciones",
-        "icono": "⚙️",
         "color": "#64748b",
         "score": 1
       }
     ],
     "rama_principal": "Ingeniería General / Operaciones",
-    "icono_principal": "⚙️",
     "color_principal": "#64748b",
     "clave_principal": "general",
     "afinidad": "General",
     "es_exclusiva_fisica": false,
-    "es_cierre_inminente": false
+    "es_cierre_inminente": false,
+    "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Solenis.",
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
   },
   {
     "titulo": "Bolsa empleo compañía Solenis",
@@ -178,18 +178,18 @@
       {
         "clave": "general",
         "nombre": "Ingeniería General / Operaciones",
-        "icono": "⚙️",
         "color": "#64748b",
         "score": 1
       }
     ],
     "rama_principal": "Ingeniería General / Operaciones",
-    "icono_principal": "⚙️",
     "color_principal": "#64748b",
     "clave_principal": "general",
     "afinidad": "General",
     "es_exclusiva_fisica": false,
-    "es_cierre_inminente": true
+    "es_cierre_inminente": true,
+    "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Solenis.",
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
   },
   {
     "titulo": "Búsqueda Candidatos: Estudiantes SENA Finanzas-Contabilidad",
@@ -202,18 +202,18 @@
       {
         "clave": "general",
         "nombre": "Ingeniería General / Operaciones",
-        "icono": "⚙️",
         "color": "#64748b",
         "score": 1
       }
     ],
     "rama_principal": "Ingeniería General / Operaciones",
-    "icono_principal": "⚙️",
     "color_principal": "#64748b",
     "clave_principal": "general",
     "afinidad": "General",
     "es_exclusiva_fisica": false,
-    "es_cierre_inminente": true
+    "es_cierre_inminente": true,
+    "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Accenture Colombia.",
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
   },
   {
     "titulo": "Accounting Analyst | Medellín, Colombia (On-site)",
@@ -226,18 +226,18 @@
       {
         "clave": "general",
         "nombre": "Ingeniería General / Operaciones",
-        "icono": "⚙️",
         "color": "#64748b",
         "score": 1
       }
     ],
     "rama_principal": "Ingeniería General / Operaciones",
-    "icono_principal": "⚙️",
     "color_principal": "#64748b",
     "clave_principal": "general",
     "afinidad": "General",
     "es_exclusiva_fisica": false,
-    "es_cierre_inminente": false
+    "es_cierre_inminente": false,
+    "mision": "Apoyo en el área de ingeniería y operaciones técnicas en CarbonBetter.",
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
   },
   {
     "titulo": "Infrastructure Intern",
@@ -250,18 +250,18 @@
       {
         "clave": "general",
         "nombre": "Ingeniería General / Operaciones",
-        "icono": "⚙️",
         "color": "#64748b",
         "score": 1
       }
     ],
     "rama_principal": "Ingeniería General / Operaciones",
-    "icono_principal": "⚙️",
     "color_principal": "#64748b",
     "clave_principal": "general",
     "afinidad": "General",
     "es_exclusiva_fisica": false,
-    "es_cierre_inminente": true
+    "es_cierre_inminente": true,
+    "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Viamericas Corporation.",
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
   },
   {
     "titulo": "Aprio Colombia Talent Community",
@@ -274,18 +274,18 @@
       {
         "clave": "general",
         "nombre": "Ingeniería General / Operaciones",
-        "icono": "⚙️",
         "color": "#64748b",
         "score": 1
       }
     ],
     "rama_principal": "Ingeniería General / Operaciones",
-    "icono_principal": "⚙️",
     "color_principal": "#64748b",
     "clave_principal": "general",
     "afinidad": "General",
     "es_exclusiva_fisica": false,
-    "es_cierre_inminente": true
+    "es_cierre_inminente": true,
+    "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Aprio.",
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
   },
   {
     "titulo": "Aprio Colombia - Service Desk Analyst",
@@ -298,18 +298,18 @@
       {
         "clave": "general",
         "nombre": "Ingeniería General / Operaciones",
-        "icono": "⚙️",
         "color": "#64748b",
         "score": 1
       }
     ],
     "rama_principal": "Ingeniería General / Operaciones",
-    "icono_principal": "⚙️",
     "color_principal": "#64748b",
     "clave_principal": "general",
     "afinidad": "General",
     "es_exclusiva_fisica": false,
-    "es_cierre_inminente": true
+    "es_cierre_inminente": true,
+    "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Aprio.",
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
   },
   {
     "titulo": "QA Automatizador- IA",
@@ -322,18 +322,18 @@
       {
         "clave": "general",
         "nombre": "Ingeniería General / Operaciones",
-        "icono": "⚙️",
         "color": "#64748b",
         "score": 1
       }
     ],
     "rama_principal": "Ingeniería General / Operaciones",
-    "icono_principal": "⚙️",
     "color_principal": "#64748b",
     "clave_principal": "general",
     "afinidad": "General",
     "es_exclusiva_fisica": false,
-    "es_cierre_inminente": true
+    "es_cierre_inminente": true,
+    "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Accenture Colombia.",
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
   },
   {
     "titulo": "App Automation Eng Analyst",
@@ -346,18 +346,18 @@
       {
         "clave": "general",
         "nombre": "Ingeniería General / Operaciones",
-        "icono": "⚙️",
         "color": "#64748b",
         "score": 1
       }
     ],
     "rama_principal": "Ingeniería General / Operaciones",
-    "icono_principal": "⚙️",
     "color_principal": "#64748b",
     "clave_principal": "general",
     "afinidad": "General",
     "es_exclusiva_fisica": false,
-    "es_cierre_inminente": true
+    "es_cierre_inminente": true,
+    "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Accenture Colombia.",
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
   },
   {
     "titulo": "Senior Controls &amp; Automation Designer",
@@ -370,18 +370,18 @@
       {
         "clave": "general",
         "nombre": "Ingeniería General / Operaciones",
-        "icono": "⚙️",
         "color": "#64748b",
         "score": 1
       }
     ],
     "rama_principal": "Ingeniería General / Operaciones",
-    "icono_principal": "⚙️",
     "color_principal": "#64748b",
     "clave_principal": "general",
     "afinidad": "General",
     "es_exclusiva_fisica": false,
-    "es_cierre_inminente": true
+    "es_cierre_inminente": true,
+    "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Hatch.",
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
   },
   {
     "titulo": "AI Engineer",
@@ -394,18 +394,18 @@
       {
         "clave": "general",
         "nombre": "Ingeniería General / Operaciones",
-        "icono": "⚙️",
         "color": "#64748b",
         "score": 1
       }
     ],
     "rama_principal": "Ingeniería General / Operaciones",
-    "icono_principal": "⚙️",
     "color_principal": "#64748b",
     "clave_principal": "general",
     "afinidad": "General",
     "es_exclusiva_fisica": false,
-    "es_cierre_inminente": true
+    "es_cierre_inminente": true,
+    "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Rockwell Automation.",
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
   },
   {
     "titulo": "Estudiante para Práctica - Medellin",
@@ -418,18 +418,18 @@
       {
         "clave": "general",
         "nombre": "Ingeniería General / Operaciones",
-        "icono": "⚙️",
         "color": "#64748b",
         "score": 1
       }
     ],
     "rama_principal": "Ingeniería General / Operaciones",
-    "icono_principal": "⚙️",
     "color_principal": "#64748b",
     "clave_principal": "general",
     "afinidad": "General",
     "es_exclusiva_fisica": false,
-    "es_cierre_inminente": true
+    "es_cierre_inminente": true,
+    "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Unisys.",
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
   },
   {
     "titulo": "1954 - Desarrollador Full Stack – Automatización e IA",
@@ -442,18 +442,18 @@
       {
         "clave": "general",
         "nombre": "Ingeniería General / Operaciones",
-        "icono": "⚙️",
         "color": "#64748b",
         "score": 1
       }
     ],
     "rama_principal": "Ingeniería General / Operaciones",
-    "icono_principal": "⚙️",
     "color_principal": "#64748b",
     "clave_principal": "general",
     "afinidad": "General",
     "es_exclusiva_fisica": false,
-    "es_cierre_inminente": true
+    "es_cierre_inminente": true,
+    "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Softgic.",
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
   },
   {
     "titulo": "Compliance Transaction Analyst",
@@ -466,18 +466,18 @@
       {
         "clave": "general",
         "nombre": "Ingeniería General / Operaciones",
-        "icono": "⚙️",
         "color": "#64748b",
         "score": 1
       }
     ],
     "rama_principal": "Ingeniería General / Operaciones",
-    "icono_principal": "⚙️",
     "color_principal": "#64748b",
     "clave_principal": "general",
     "afinidad": "General",
     "es_exclusiva_fisica": false,
-    "es_cierre_inminente": true
+    "es_cierre_inminente": true,
+    "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Viamericas Corporation.",
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
   },
   {
     "titulo": "Compliance Transaction Monitor",
@@ -490,18 +490,18 @@
       {
         "clave": "general",
         "nombre": "Ingeniería General / Operaciones",
-        "icono": "⚙️",
         "color": "#64748b",
         "score": 1
       }
     ],
     "rama_principal": "Ingeniería General / Operaciones",
-    "icono_principal": "⚙️",
     "color_principal": "#64748b",
     "clave_principal": "general",
     "afinidad": "General",
     "es_exclusiva_fisica": false,
-    "es_cierre_inminente": true
+    "es_cierre_inminente": true,
+    "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Viamericas Corporation.",
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
   },
   {
     "titulo": "Profesional con experiencia en operaciones de juegos de azar",
@@ -514,18 +514,18 @@
       {
         "clave": "general",
         "nombre": "Ingeniería General / Operaciones",
-        "icono": "⚙️",
         "color": "#64748b",
         "score": 1
       }
     ],
     "rama_principal": "Ingeniería General / Operaciones",
-    "icono_principal": "⚙️",
     "color_principal": "#64748b",
     "clave_principal": "general",
     "afinidad": "General",
     "es_exclusiva_fisica": false,
-    "es_cierre_inminente": true
+    "es_cierre_inminente": true,
+    "mision": "Apoyo en el área de ingeniería y operaciones técnicas en ICONTEC.",
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
   },
   {
     "titulo": "Practicantes de finanzas- Medellín",
@@ -538,18 +538,18 @@
       {
         "clave": "general",
         "nombre": "Ingeniería General / Operaciones",
-        "icono": "⚙️",
         "color": "#64748b",
         "score": 1
       }
     ],
     "rama_principal": "Ingeniería General / Operaciones",
-    "icono_principal": "⚙️",
     "color_principal": "#64748b",
     "clave_principal": "general",
     "afinidad": "General",
     "es_exclusiva_fisica": false,
-    "es_cierre_inminente": false
+    "es_cierre_inminente": false,
+    "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Accenture Colombia.",
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
   },
   {
     "titulo": "Record to Report Associate",
@@ -562,18 +562,18 @@
       {
         "clave": "general",
         "nombre": "Ingeniería General / Operaciones",
-        "icono": "⚙️",
         "color": "#64748b",
         "score": 1
       }
     ],
     "rama_principal": "Ingeniería General / Operaciones",
-    "icono_principal": "⚙️",
     "color_principal": "#64748b",
     "clave_principal": "general",
     "afinidad": "General",
     "es_exclusiva_fisica": false,
-    "es_cierre_inminente": true
+    "es_cierre_inminente": true,
+    "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Accenture Colombia.",
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
   },
   {
     "titulo": "Auxiliar administrativa y contable",
@@ -586,18 +586,18 @@
       {
         "clave": "general",
         "nombre": "Ingeniería General / Operaciones",
-        "icono": "⚙️",
         "color": "#64748b",
         "score": 1
       }
     ],
     "rama_principal": "Ingeniería General / Operaciones",
-    "icono_principal": "⚙️",
     "color_principal": "#64748b",
     "clave_principal": "general",
     "afinidad": "General",
     "es_exclusiva_fisica": false,
-    "es_cierre_inminente": true
+    "es_cierre_inminente": true,
+    "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Preasesorías Empresariales.",
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
   },
   {
     "titulo": "Tecnico de Calidad",
@@ -610,42 +610,42 @@
       {
         "clave": "general",
         "nombre": "Ingeniería General / Operaciones",
-        "icono": "⚙️",
         "color": "#64748b",
         "score": 1
       }
     ],
     "rama_principal": "Ingeniería General / Operaciones",
-    "icono_principal": "⚙️",
     "color_principal": "#64748b",
     "clave_principal": "general",
     "afinidad": "General",
     "es_exclusiva_fisica": false,
-    "es_cierre_inminente": false
+    "es_cierre_inminente": false,
+    "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Solenis.",
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
   },
   {
     "titulo": "Ejecutivo de Ventas - MEDELLIN",
     "empresa": "Plansevig Planej., Seguranca E Vigilancia S/C Ltda",
     "ubicacion": "Medellin, Antioquia, Colombia",
     "url": "https://co.linkedin.com/jobs/view/ejecutivo-de-ventas-medellin-at-plansevig-planej-seguranca-e-vigilancia-s-c-ltda-4481511674",
-    "fecha_publicacion": "Hace 6 horas",
+    "fecha_publicacion": "Hace 7 horas",
     "fuente": "LinkedIn Jobs",
     "ramas": [
       {
         "clave": "general",
         "nombre": "Ingeniería General / Operaciones",
-        "icono": "⚙️",
         "color": "#64748b",
         "score": 1
       }
     ],
     "rama_principal": "Ingeniería General / Operaciones",
-    "icono_principal": "⚙️",
     "color_principal": "#64748b",
     "clave_principal": "general",
     "afinidad": "General",
     "es_exclusiva_fisica": false,
-    "es_cierre_inminente": true
+    "es_cierre_inminente": true,
+    "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Plansevig Planej., Seguranca E Vigilancia S/C Ltda.",
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
   },
   {
     "titulo": "Banco de Talento para Personas con Discapacidad | Colombia",
@@ -658,42 +658,66 @@
       {
         "clave": "general",
         "nombre": "Ingeniería General / Operaciones",
-        "icono": "⚙️",
         "color": "#64748b",
         "score": 1
       }
     ],
     "rama_principal": "Ingeniería General / Operaciones",
-    "icono_principal": "⚙️",
     "color_principal": "#64748b",
     "clave_principal": "general",
     "afinidad": "General",
     "es_exclusiva_fisica": false,
-    "es_cierre_inminente": true
+    "es_cierre_inminente": true,
+    "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Procter &amp; Gamble.",
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
   },
   {
     "titulo": "Agente de Compras - Procurement Processor (Portugues Obligatorio) Analyst",
     "empresa": "Accenture Colombia",
     "ubicacion": "Medellin, Antioquia, Colombia",
     "url": "https://co.linkedin.com/jobs/view/agente-de-compras-procurement-processor-portugues-obligatorio-analyst-at-accenture-colombia-4480424604",
-    "fecha_publicacion": "Hace 3 horas",
+    "fecha_publicacion": "Hace 4 horas",
     "fuente": "LinkedIn Jobs",
     "ramas": [
       {
         "clave": "general",
         "nombre": "Ingeniería General / Operaciones",
-        "icono": "⚙️",
         "color": "#64748b",
         "score": 1
       }
     ],
     "rama_principal": "Ingeniería General / Operaciones",
-    "icono_principal": "⚙️",
     "color_principal": "#64748b",
     "clave_principal": "general",
     "afinidad": "General",
     "es_exclusiva_fisica": false,
-    "es_cierre_inminente": true
+    "es_cierre_inminente": true,
+    "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Accenture Colombia.",
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
+  },
+  {
+    "titulo": "Fonoaudiólogo, Terapeuta Ocupacional y Nutricionista",
+    "empresa": "Health &amp; Life IPS",
+    "ubicacion": "Quibdó, Chocó, Colombia",
+    "url": "https://co.linkedin.com/jobs/view/fonoaudi%C3%B3logo-terapeuta-ocupacional-y-nutricionista-at-health-life-ips-4477891354",
+    "fecha_publicacion": "Hace 1 semana",
+    "fuente": "LinkedIn Jobs",
+    "ramas": [
+      {
+        "clave": "general",
+        "nombre": "Ingeniería General / Operaciones",
+        "color": "#64748b",
+        "score": 1
+      }
+    ],
+    "rama_principal": "Ingeniería General / Operaciones",
+    "color_principal": "#64748b",
+    "clave_principal": "general",
+    "afinidad": "General",
+    "es_exclusiva_fisica": false,
+    "es_cierre_inminente": true,
+    "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Health &amp; Life IPS.",
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
   },
   {
     "titulo": "Agente de Compras - Procurement Processor (Portugues Deseable) Analyst (CL11)/Associate (CL12)",
@@ -706,90 +730,18 @@
       {
         "clave": "general",
         "nombre": "Ingeniería General / Operaciones",
-        "icono": "⚙️",
         "color": "#64748b",
         "score": 1
       }
     ],
     "rama_principal": "Ingeniería General / Operaciones",
-    "icono_principal": "⚙️",
     "color_principal": "#64748b",
     "clave_principal": "general",
     "afinidad": "General",
     "es_exclusiva_fisica": false,
-    "es_cierre_inminente": true
-  },
-  {
-    "titulo": "Técnico en electrónica y mantenimiento",
-    "empresa": "Compurent  | Renting Tecnológico",
-    "ubicacion": "Medellin, Antioquia, Colombia",
-    "url": "https://co.linkedin.com/jobs/view/t%C3%A9cnico-en-electr%C3%B3nica-y-mantenimiento-at-compurent-renting-tecnol%C3%B3gico-4469487630",
-    "fecha_publicacion": "Hace 3 semanas",
-    "fuente": "LinkedIn Jobs",
-    "ramas": [
-      {
-        "clave": "general",
-        "nombre": "Ingeniería General / Operaciones",
-        "icono": "⚙️",
-        "color": "#64748b",
-        "score": 1
-      }
-    ],
-    "rama_principal": "Ingeniería General / Operaciones",
-    "icono_principal": "⚙️",
-    "color_principal": "#64748b",
-    "clave_principal": "general",
-    "afinidad": "General",
-    "es_exclusiva_fisica": false,
-    "es_cierre_inminente": false
-  },
-  {
-    "titulo": "Operario Empaque",
-    "empresa": "Procter &amp; Gamble",
-    "ubicacion": "Medellin, Antioquia, Colombia",
-    "url": "https://co.linkedin.com/jobs/view/operario-empaque-at-procter-gamble-4454664751",
-    "fecha_publicacion": "Hace 1 mes",
-    "fuente": "LinkedIn Jobs",
-    "ramas": [
-      {
-        "clave": "general",
-        "nombre": "Ingeniería General / Operaciones",
-        "icono": "⚙️",
-        "color": "#64748b",
-        "score": 1
-      }
-    ],
-    "rama_principal": "Ingeniería General / Operaciones",
-    "icono_principal": "⚙️",
-    "color_principal": "#64748b",
-    "clave_principal": "general",
-    "afinidad": "General",
-    "es_exclusiva_fisica": false,
-    "es_cierre_inminente": true
-  },
-  {
-    "titulo": "Se Requiere Electricista Automotriz Senior En Medellín",
-    "empresa": "CONTE",
-    "ubicacion": "Medellin, Antioquia, Colombia",
-    "url": "https://co.linkedin.com/jobs/view/se-requiere-electricista-automotriz-senior-en-medell%C3%ADn-at-conte-4472810035",
-    "fecha_publicacion": "Hace 2 semanas",
-    "fuente": "LinkedIn Jobs",
-    "ramas": [
-      {
-        "clave": "general",
-        "nombre": "Ingeniería General / Operaciones",
-        "icono": "⚙️",
-        "color": "#64748b",
-        "score": 1
-      }
-    ],
-    "rama_principal": "Ingeniería General / Operaciones",
-    "icono_principal": "⚙️",
-    "color_principal": "#64748b",
-    "clave_principal": "general",
-    "afinidad": "General",
-    "es_exclusiva_fisica": false,
-    "es_cierre_inminente": true
+    "es_cierre_inminente": true,
+    "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Accenture Colombia.",
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
   },
   {
     "titulo": "Junior Data Analytics / R+D - Remote Work | REF#281452",
@@ -802,18 +754,18 @@
       {
         "clave": "general",
         "nombre": "Ingeniería General / Operaciones",
-        "icono": "⚙️",
         "color": "#64748b",
         "score": 1
       }
     ],
     "rama_principal": "Ingeniería General / Operaciones",
-    "icono_principal": "⚙️",
     "color_principal": "#64748b",
     "clave_principal": "general",
     "afinidad": "General",
     "es_exclusiva_fisica": false,
-    "es_cierre_inminente": true
+    "es_cierre_inminente": true,
+    "mision": "Apoyo en el área de ingeniería y operaciones técnicas en BairesDev.",
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
   },
   {
     "titulo": "Sales Support Analyst / Analista de soporte de ventas",
@@ -826,18 +778,18 @@
       {
         "clave": "general",
         "nombre": "Ingeniería General / Operaciones",
-        "icono": "⚙️",
         "color": "#64748b",
         "score": 1
       }
     ],
     "rama_principal": "Ingeniería General / Operaciones",
-    "icono_principal": "⚙️",
     "color_principal": "#64748b",
     "clave_principal": "general",
     "afinidad": "General",
     "es_exclusiva_fisica": false,
-    "es_cierre_inminente": false
+    "es_cierre_inminente": false,
+    "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Essity.",
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
   },
   {
     "titulo": "Data Management and BI Senior Executive, GOC",
@@ -850,18 +802,18 @@
       {
         "clave": "general",
         "nombre": "Ingeniería General / Operaciones",
-        "icono": "⚙️",
         "color": "#64748b",
         "score": 1
       }
     ],
     "rama_principal": "Ingeniería General / Operaciones",
-    "icono_principal": "⚙️",
     "color_principal": "#64748b",
     "clave_principal": "general",
     "afinidad": "General",
     "es_exclusiva_fisica": false,
-    "es_cierre_inminente": false
+    "es_cierre_inminente": false,
+    "mision": "Apoyo en el área de ingeniería y operaciones técnicas en WPP Media.",
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
   },
   {
     "titulo": "Advanced Analytics Senior Executive, GOC",
@@ -874,18 +826,18 @@
       {
         "clave": "general",
         "nombre": "Ingeniería General / Operaciones",
-        "icono": "⚙️",
         "color": "#64748b",
         "score": 1
       }
     ],
     "rama_principal": "Ingeniería General / Operaciones",
-    "icono_principal": "⚙️",
     "color_principal": "#64748b",
     "clave_principal": "general",
     "afinidad": "General",
     "es_exclusiva_fisica": false,
-    "es_cierre_inminente": true
+    "es_cierre_inminente": true,
+    "mision": "Apoyo en el área de ingeniería y operaciones técnicas en WPP Media.",
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
   },
   {
     "titulo": "Programa de Prácticas – Operations (Administración, Finanzas y Economía)",
@@ -898,18 +850,18 @@
       {
         "clave": "general",
         "nombre": "Ingeniería General / Operaciones",
-        "icono": "⚙️",
         "color": "#64748b",
         "score": 1
       }
     ],
     "rama_principal": "Ingeniería General / Operaciones",
-    "icono_principal": "⚙️",
     "color_principal": "#64748b",
     "clave_principal": "general",
     "afinidad": "General",
     "es_exclusiva_fisica": false,
-    "es_cierre_inminente": true
+    "es_cierre_inminente": true,
+    "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Accenture Colombia.",
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
   },
   {
     "titulo": "Especialista Bi",
@@ -922,18 +874,18 @@
       {
         "clave": "general",
         "nombre": "Ingeniería General / Operaciones",
-        "icono": "⚙️",
         "color": "#64748b",
         "score": 1
       }
     ],
     "rama_principal": "Ingeniería General / Operaciones",
-    "icono_principal": "⚙️",
     "color_principal": "#64748b",
     "clave_principal": "general",
     "afinidad": "General",
     "es_exclusiva_fisica": false,
-    "es_cierre_inminente": true
+    "es_cierre_inminente": true,
+    "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Millicom (Tigo).",
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
   },
   {
     "titulo": "Ingeniero(a) de Analítica",
@@ -946,18 +898,18 @@
       {
         "clave": "general",
         "nombre": "Ingeniería General / Operaciones",
-        "icono": "⚙️",
         "color": "#64748b",
         "score": 1
       }
     ],
     "rama_principal": "Ingeniería General / Operaciones",
-    "icono_principal": "⚙️",
     "color_principal": "#64748b",
     "clave_principal": "general",
     "afinidad": "General",
     "es_exclusiva_fisica": false,
-    "es_cierre_inminente": false
+    "es_cierre_inminente": false,
+    "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Iluma Alliance.",
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
   },
   {
     "titulo": "QA Salesforce",
@@ -970,18 +922,18 @@
       {
         "clave": "general",
         "nombre": "Ingeniería General / Operaciones",
-        "icono": "⚙️",
         "color": "#64748b",
         "score": 1
       }
     ],
     "rama_principal": "Ingeniería General / Operaciones",
-    "icono_principal": "⚙️",
     "color_principal": "#64748b",
     "clave_principal": "general",
     "afinidad": "General",
     "es_exclusiva_fisica": false,
-    "es_cierre_inminente": true
+    "es_cierre_inminente": true,
+    "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Accenture Colombia.",
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
   },
   {
     "titulo": "Vendor Quality Surveillance Coordinator",
@@ -994,18 +946,18 @@
       {
         "clave": "general",
         "nombre": "Ingeniería General / Operaciones",
-        "icono": "⚙️",
         "color": "#64748b",
         "score": 1
       }
     ],
     "rama_principal": "Ingeniería General / Operaciones",
-    "icono_principal": "⚙️",
     "color_principal": "#64748b",
     "clave_principal": "general",
     "afinidad": "General",
     "es_exclusiva_fisica": false,
-    "es_cierre_inminente": true
+    "es_cierre_inminente": true,
+    "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Hatch.",
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
   },
   {
     "titulo": "Quality Assurance Analyst",
@@ -1018,18 +970,18 @@
       {
         "clave": "general",
         "nombre": "Ingeniería General / Operaciones",
-        "icono": "⚙️",
         "color": "#64748b",
         "score": 1
       }
     ],
     "rama_principal": "Ingeniería General / Operaciones",
-    "icono_principal": "⚙️",
     "color_principal": "#64748b",
     "clave_principal": "general",
     "afinidad": "General",
     "es_exclusiva_fisica": false,
-    "es_cierre_inminente": true
+    "es_cierre_inminente": true,
+    "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Viamericas Corporation.",
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
   },
   {
     "titulo": "Técnicos de campo a nivel nacional",
@@ -1042,18 +994,18 @@
       {
         "clave": "general",
         "nombre": "Ingeniería General / Operaciones",
-        "icono": "⚙️",
         "color": "#64748b",
         "score": 1
       }
     ],
     "rama_principal": "Ingeniería General / Operaciones",
-    "icono_principal": "⚙️",
     "color_principal": "#64748b",
     "clave_principal": "general",
     "afinidad": "General",
     "es_exclusiva_fisica": false,
-    "es_cierre_inminente": false
+    "es_cierre_inminente": false,
+    "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Solenis.",
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
   },
   {
     "titulo": "METROLOGO DE SURTIDORES - MEDELLIN",
@@ -1066,42 +1018,18 @@
       {
         "clave": "general",
         "nombre": "Ingeniería General / Operaciones",
-        "icono": "⚙️",
         "color": "#64748b",
         "score": 1
       }
     ],
     "rama_principal": "Ingeniería General / Operaciones",
-    "icono_principal": "⚙️",
     "color_principal": "#64748b",
     "clave_principal": "general",
     "afinidad": "General",
     "es_exclusiva_fisica": true,
-    "es_cierre_inminente": true
-  },
-  {
-    "titulo": "Ayudante de laboratorio",
-    "empresa": "Outsourcing de Talento y Empleo Combarranquilla",
-    "ubicacion": "Ciudad Bolívar, Antioquia, Colombia",
-    "url": "https://co.linkedin.com/jobs/view/ayudante-de-laboratorio-at-outsourcing-de-talento-y-empleo-combarranquilla-4479096856",
-    "fecha_publicacion": "Hace 6 días",
-    "fuente": "LinkedIn Jobs",
-    "ramas": [
-      {
-        "clave": "general",
-        "nombre": "Ingeniería General / Operaciones",
-        "icono": "⚙️",
-        "color": "#64748b",
-        "score": 1
-      }
-    ],
-    "rama_principal": "Ingeniería General / Operaciones",
-    "icono_principal": "⚙️",
-    "color_principal": "#64748b",
-    "clave_principal": "general",
-    "afinidad": "General",
-    "es_exclusiva_fisica": false,
-    "es_cierre_inminente": false
+    "es_cierre_inminente": true,
+    "mision": "Apoyo en el área de ingeniería y operaciones técnicas en ICONTEC.",
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
   },
   {
     "titulo": "TECNICO DE CAMPO",
@@ -1114,18 +1042,18 @@
       {
         "clave": "general",
         "nombre": "Ingeniería General / Operaciones",
-        "icono": "⚙️",
         "color": "#64748b",
         "score": 1
       }
     ],
     "rama_principal": "Ingeniería General / Operaciones",
-    "icono_principal": "⚙️",
     "color_principal": "#64748b",
     "clave_principal": "general",
     "afinidad": "General",
     "es_exclusiva_fisica": false,
-    "es_cierre_inminente": true
+    "es_cierre_inminente": true,
+    "mision": "Apoyo en el área de ingeniería y operaciones técnicas en AGQ Labs España.",
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
   },
   {
     "titulo": "Agente de Compras - Procurement Processor (Portugues Deseable) Analyst (CL11)/Associate (CL12)",
@@ -1138,18 +1066,42 @@
       {
         "clave": "general",
         "nombre": "Ingeniería General / Operaciones",
-        "icono": "⚙️",
         "color": "#64748b",
         "score": 1
       }
     ],
     "rama_principal": "Ingeniería General / Operaciones",
-    "icono_principal": "⚙️",
     "color_principal": "#64748b",
     "clave_principal": "general",
     "afinidad": "General",
     "es_exclusiva_fisica": false,
-    "es_cierre_inminente": true
+    "es_cierre_inminente": true,
+    "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Accenture Colombia.",
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
+  },
+  {
+    "titulo": "Ayudante de laboratorio",
+    "empresa": "Outsourcing de Talento y Empleo Combarranquilla",
+    "ubicacion": "Ciudad Bolívar, Antioquia, Colombia",
+    "url": "https://co.linkedin.com/jobs/view/ayudante-de-laboratorio-at-outsourcing-de-talento-y-empleo-combarranquilla-4479096856",
+    "fecha_publicacion": "Hace 6 días",
+    "fuente": "LinkedIn Jobs",
+    "ramas": [
+      {
+        "clave": "general",
+        "nombre": "Ingeniería General / Operaciones",
+        "color": "#64748b",
+        "score": 1
+      }
+    ],
+    "rama_principal": "Ingeniería General / Operaciones",
+    "color_principal": "#64748b",
+    "clave_principal": "general",
+    "afinidad": "General",
+    "es_exclusiva_fisica": false,
+    "es_cierre_inminente": false,
+    "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Outsourcing de Talento y Empleo Combarranquilla.",
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
   },
   {
     "titulo": "Operador de Planta",
@@ -1162,18 +1114,18 @@
       {
         "clave": "general",
         "nombre": "Ingeniería General / Operaciones",
-        "icono": "⚙️",
         "color": "#64748b",
         "score": 1
       }
     ],
     "rama_principal": "Ingeniería General / Operaciones",
-    "icono_principal": "⚙️",
     "color_principal": "#64748b",
     "clave_principal": "general",
     "afinidad": "General",
     "es_exclusiva_fisica": false,
-    "es_cierre_inminente": false
+    "es_cierre_inminente": false,
+    "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Solenis.",
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
   },
   {
     "titulo": "Programa Mujer STEM en Solenis",
@@ -1186,18 +1138,18 @@
       {
         "clave": "general",
         "nombre": "Ingeniería General / Operaciones",
-        "icono": "⚙️",
         "color": "#64748b",
         "score": 1
       }
     ],
     "rama_principal": "Ingeniería General / Operaciones",
-    "icono_principal": "⚙️",
     "color_principal": "#64748b",
     "clave_principal": "general",
     "afinidad": "General",
     "es_exclusiva_fisica": false,
-    "es_cierre_inminente": false
+    "es_cierre_inminente": false,
+    "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Solenis.",
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
   },
   {
     "titulo": "Prácticas profesionales - Recursos humanos",
@@ -1210,18 +1162,18 @@
       {
         "clave": "general",
         "nombre": "Ingeniería General / Operaciones",
-        "icono": "⚙️",
         "color": "#64748b",
         "score": 1
       }
     ],
     "rama_principal": "Ingeniería General / Operaciones",
-    "icono_principal": "⚙️",
     "color_principal": "#64748b",
     "clave_principal": "general",
     "afinidad": "General",
     "es_exclusiva_fisica": false,
-    "es_cierre_inminente": true
+    "es_cierre_inminente": true,
+    "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Accenture Colombia.",
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
   },
   {
     "titulo": "Programa Woman STEM",
@@ -1234,66 +1186,66 @@
       {
         "clave": "general",
         "nombre": "Ingeniería General / Operaciones",
-        "icono": "⚙️",
         "color": "#64748b",
         "score": 1
       }
     ],
     "rama_principal": "Ingeniería General / Operaciones",
-    "icono_principal": "⚙️",
     "color_principal": "#64748b",
     "clave_principal": "general",
     "afinidad": "General",
     "es_exclusiva_fisica": false,
-    "es_cierre_inminente": true
+    "es_cierre_inminente": true,
+    "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Solenis.",
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
   },
   {
-    "titulo": "Mobile Application Developer",
-    "empresa": "WiTI",
-    "ubicacion": "Beté, Chocó, Colombia",
-    "url": "https://co.linkedin.com/jobs/view/mobile-application-developer-at-witi-4198714581",
-    "fecha_publicacion": "Hace 1 año",
-    "fuente": "LinkedIn Jobs",
-    "ramas": [
-      {
-        "clave": "general",
-        "nombre": "Ingeniería General / Operaciones",
-        "icono": "⚙️",
-        "color": "#64748b",
-        "score": 1
-      }
-    ],
-    "rama_principal": "Ingeniería General / Operaciones",
-    "icono_principal": "⚙️",
-    "color_principal": "#64748b",
-    "clave_principal": "general",
-    "afinidad": "General",
-    "es_exclusiva_fisica": false,
-    "es_cierre_inminente": true
-  },
-  {
-    "titulo": "Practicante de Asesoría Comercial en Turismo",
-    "empresa": "Quiero Viajar 360",
+    "titulo": "Operador de Planta",
+    "empresa": "Solenis",
     "ubicacion": "Medellin, Antioquia, Colombia",
-    "url": "https://co.linkedin.com/jobs/view/practicante-de-asesor%C3%ADa-comercial-en-turismo-at-quiero-viajar-360-4461676936",
-    "fecha_publicacion": "Hace 1 mes",
+    "url": "https://co.linkedin.com/jobs/view/operador-de-planta-at-solenis-4469777638",
+    "fecha_publicacion": "Hace 3 semanas",
     "fuente": "LinkedIn Jobs",
     "ramas": [
       {
         "clave": "general",
         "nombre": "Ingeniería General / Operaciones",
-        "icono": "⚙️",
         "color": "#64748b",
         "score": 1
       }
     ],
     "rama_principal": "Ingeniería General / Operaciones",
-    "icono_principal": "⚙️",
     "color_principal": "#64748b",
     "clave_principal": "general",
     "afinidad": "General",
     "es_exclusiva_fisica": false,
-    "es_cierre_inminente": true
+    "es_cierre_inminente": false,
+    "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Solenis.",
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
+  },
+  {
+    "titulo": "Técnico en electrónica y mantenimiento",
+    "empresa": "Compurent  | Renting Tecnológico",
+    "ubicacion": "Medellin, Antioquia, Colombia",
+    "url": "https://co.linkedin.com/jobs/view/t%C3%A9cnico-en-electr%C3%B3nica-y-mantenimiento-at-compurent-renting-tecnol%C3%B3gico-4469487630",
+    "fecha_publicacion": "Hace 3 semanas",
+    "fuente": "LinkedIn Jobs",
+    "ramas": [
+      {
+        "clave": "general",
+        "nombre": "Ingeniería General / Operaciones",
+        "color": "#64748b",
+        "score": 1
+      }
+    ],
+    "rama_principal": "Ingeniería General / Operaciones",
+    "color_principal": "#64748b",
+    "clave_principal": "general",
+    "afinidad": "General",
+    "es_exclusiva_fisica": false,
+    "es_cierre_inminente": false,
+    "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Compurent  | Renting Tecnológico.",
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
   },
   {
     "titulo": "Búsqueda Candidatos SENA Tecnología",
@@ -1306,18 +1258,18 @@
       {
         "clave": "general",
         "nombre": "Ingeniería General / Operaciones",
-        "icono": "⚙️",
         "color": "#64748b",
         "score": 1
       }
     ],
     "rama_principal": "Ingeniería General / Operaciones",
-    "icono_principal": "⚙️",
     "color_principal": "#64748b",
     "clave_principal": "general",
     "afinidad": "General",
     "es_exclusiva_fisica": false,
-    "es_cierre_inminente": true
+    "es_cierre_inminente": true,
+    "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Accenture Colombia.",
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
   },
   {
     "titulo": "Desarrollador Python Junior - Trabajo Remoto | REF#280792",
@@ -1330,18 +1282,18 @@
       {
         "clave": "simulacion_datos_cuantica",
         "nombre": "Simulación, Datos, IA y Cuántica",
-        "icono": "📊",
         "color": "#ec4899",
         "score": 2
       }
     ],
     "rama_principal": "Simulación, Datos, IA y Cuántica",
-    "icono_principal": "📊",
     "color_principal": "#ec4899",
     "clave_principal": "simulacion_datos_cuantica",
     "afinidad": "Media",
     "es_exclusiva_fisica": false,
-    "es_cierre_inminente": true
+    "es_cierre_inminente": true,
+    "mision": "Modelamiento matemático de sistemas dinámicos, algoritmos predictivos, simulaciones numéricas y optimización estocástica.",
+    "tareas": "Programación en Python (NumPy, SciPy, Pandas), simulaciones por elementos finitos, entrenamiento de modelos de Machine Learning y visualización técnica."
   },
   {
     "titulo": "Junior Android &amp; Kotlin Developer - Remote Work | REF#281827",
@@ -1354,41 +1306,17 @@
       {
         "clave": "general",
         "nombre": "Ingeniería General / Operaciones",
-        "icono": "⚙️",
         "color": "#64748b",
         "score": 1
       }
     ],
     "rama_principal": "Ingeniería General / Operaciones",
-    "icono_principal": "⚙️",
     "color_principal": "#64748b",
     "clave_principal": "general",
     "afinidad": "General",
     "es_exclusiva_fisica": false,
-    "es_cierre_inminente": true
-  },
-  {
-    "titulo": "Junior Fullstack React &amp; Node Developer - Remote Work | REF#281820",
-    "empresa": "BairesDev",
-    "ubicacion": "Medellin, Antioquia, Colombia",
-    "url": "https://co.linkedin.com/jobs/view/junior-fullstack-react-node-developer-remote-work-ref%23281820-at-bairesdev-4140303010",
-    "fecha_publicacion": "Hace 1 año",
-    "fuente": "LinkedIn Jobs",
-    "ramas": [
-      {
-        "clave": "general",
-        "nombre": "Ingeniería General / Operaciones",
-        "icono": "⚙️",
-        "color": "#64748b",
-        "score": 1
-      }
-    ],
-    "rama_principal": "Ingeniería General / Operaciones",
-    "icono_principal": "⚙️",
-    "color_principal": "#64748b",
-    "clave_principal": "general",
-    "afinidad": "General",
-    "es_exclusiva_fisica": false,
-    "es_cierre_inminente": true
+    "es_cierre_inminente": true,
+    "mision": "Apoyo en el área de ingeniería y operaciones técnicas en BairesDev.",
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
   }
 ]

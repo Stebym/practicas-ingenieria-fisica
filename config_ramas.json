@@ -1,106 +1,169 @@
 {
   "ramas": {
+    "mujeres_stem": {
+      "nombre": "Mujeres en STEM / Ingeniería",
+      "icono": "",
+      "color": "#ec4899",
+      "prioridad_bonus": 100,
+      "palabras_clave": [
+        "mujeres", "mujer", "women", "women in tech", "women in engineering",
+        "mujeres en tecnologia", "mujeres en ingenieria", "femenin", "stem",
+        "semillero femenino", "diversidad e inclusion"
+      ],
+      "carreras_mencionadas": ["ingenieria fisica", "todas las ingenierias"],
+      "empresas_referencia": ["Bancolombia", "Procter & Gamble", "Accenture", "ISA", "Siemens", "Globant", "Schneider"],
+      "mision_tipica": "Programa especializado para potenciar el talento de mujeres ingenieras en áreas científicas, tecnológicas y de liderazgo industrial.",
+      "actividades_clave": "Desarrollo de proyectos de innovación tecnológica, mentoría con líderes de ingeniería, rotación técnica y vinculación directa."
+    },
+    "simulaciones_datos_ia": {
+      "nombre": "Análisis de Datos, IA y Simulaciones",
+      "icono": "",
+      "color": "#06b6d4",
+      "prioridad_bonus": 60,
+      "palabras_clave": [
+        "datos", "data", "analitica", "analytics", "ia", "ai", "machine learning",
+        "python", "simulacion", "simulaciones", "modelado", "metodos numericos",
+        "computacional", "prompt engineering", "inteligencia artificial", "algoritmos",
+        "estadistica", "investigacion de operaciones", "sql", "power bi", "matlab"
+      ],
+      "carreras_mencionadas": ["ingenieria fisica", "matematicas", "sistemas", "estadistica", "fisica"],
+      "empresas_referencia": ["Bancolombia", "Sura", "Proteccion", "XM", "Ruta N", "Mercado Libre", "Globant", "Tuya"],
+      "mision_tipica": "Modelamiento matemático, pipelines de datos, simulación numérica de procesos y entrenamiento de algoritmos predictivos e IA.",
+      "actividades_clave": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables."
+    },
+    "electronica_digital_iot": {
+      "nombre": "Electrónica Digital, Microcontroladores e IoT",
+      "icono": "",
+      "color": "#3b82f6",
+      "prioridad_bonus": 55,
+      "palabras_clave": [
+        "digital", "microcontrolador", "microcontroladores", "iot", "i2c", "spi",
+        "uart", "embebido", "embedded", "firmware", "fpga", "arduino", "esp32",
+        "stm32", "taller v", "redes de sensores", "hardware", "c++", "c language"
+      ],
+      "carreras_mencionadas": ["ingenieria fisica", "ingenieria electronica", "ingenieria mecatronica"],
+      "empresas_referencia": ["Rockwell Automation", "Haceb", "Sofasa", "Ruta N", "Startups IoT", "Schneider Electric"],
+      "mision_tipica": "Desarrollo de sistemas embebidos, firmware en C/C++, comunicación por buses I2C/SPI y redes de sensores industriales IoT.",
+      "actividades_clave": "Programación de microcontroladores, adquisición y filtrado digital de señales, depuración con analizador lógico y pruebas de hardware."
+    },
+    "electronica_analoga_circuitos": {
+      "nombre": "Electrónica Análoga y Circuitos",
+      "icono": "",
+      "color": "#8b5cf6",
+      "prioridad_bonus": 50,
+      "palabras_clave": [
+        "analoga", "análoga", "circuitos", "taller iv", "taller iii", "electromagnetico",
+        "amplificador", "amplificadores", "filtro", "opamp", "fuente", "pcb",
+        "dispositivos electromagneticos", "semiconductores", "proteus", "orcad", "kicad"
+      ],
+      "carreras_mencionadas": ["ingenieria fisica", "ingenieria electronica"],
+      "empresas_referencia": ["Haceb", "Corona", "Schneider", "Siemens", "Laboratorios de Electronica"],
+      "mision_tipica": "Diseño, simulación y montaje de etapas de acondicionamiento de señal, circuitos magnéticos y placas de circuito impreso (PCB).",
+      "actividades_clave": "Simulación en Proteus/SPICE, pruebas con osciloscopio y generador de señales, cálculo de componentes pasivos/activos y diseño de PCB."
+    },
+    "instrumentacion_metrologia": {
+      "nombre": "Instrumentación y Metrología Industrial",
+      "icono": "",
+      "color": "#10b981",
+      "prioridad_bonus": 55,
+      "palabras_clave": [
+        "instrumentacion", "instrumentación", "metrologia", "metrología", "calibracion",
+        "calibración", "sensores", "transductores", "daq", "labview", "instrumentacion virtual",
+        "incertidumbre", "medicion", "medición", "gum", "iso 17025", "onac", "plc", "scada"
+      ],
+      "carreras_mencionadas": ["ingenieria fisica", "ingenieria electronica", "ingenieria de control"],
+      "empresas_referencia": ["CIDET", "Haceb", "Corona", "Grupo Argos", "Laboratorios de Calibracion", "Sofasa"],
+      "mision_tipica": "Calibración de instrumentos de medición de variables físicas, cálculo de incertidumbre y programación de sistemas DAQ/LabVIEW.",
+      "actividades_clave": "Levantamiento de curvas de calibración, programación en LabVIEW, enlace con autómatas PLC y aseguramiento metrológico ISO 17025."
+    },
+    "diseno_mecanico_cad": {
+      "nombre": "Diseño Mecánico y Dibujo Técnico",
+      "icono": "",
+      "color": "#f97316",
+      "palabras_clave": [
+        "diseno mecanico", "diseño mecanico", "dibujo tecnico", "dibujo para ingenieria",
+        "taller ii", "taller i", "cad", "solidworks", "inventor", "autocad",
+        "tolerancias", "mecanismos", "resistencia de materiales", "elementos finitos", "ansys"
+      ],
+      "carreras_mencionadas": ["ingenieria fisica", "ingenieria mecanica", "ingenieria de diseno"],
+      "empresas_referencia": ["Sofasa", "Haceb", "Industrias Metalmecanicas", "Talleres de Prototipado"],
+      "mision_tipica": "Modelado CAD 3D de piezas y componentes mecánicos para montajes de laboratorio e instrumentación industrial.",
+      "actividades_clave": "Planos técnicos con tolerancias dimensionales y geométricas (GD&T), simulación de esfuerzos por elementos finitos y prototipado 3D."
+    },
+    "cuantica_estado_solido": {
+      "nombre": "Cuántica, Estado Sólido y Nuevas Tecnologías",
+      "icono": "",
+      "color": "#6366f1",
+      "prioridad_bonus": 60,
+      "palabras_clave": [
+        "cuantica", "cuántica", "quantum", "computacion cuantica", "estado solido",
+        "semiconductor", "semiconductores", "nanomateriales", "fisica moderna",
+        "superconductores", "algoritmos cuanticos", "qiskit"
+      ],
+      "carreras_mencionadas": ["ingenieria fisica", "fisica"],
+      "empresas_referencia": ["Bancolombia Quantum Lab", "Centros de Investigacion", "Ruta N", "IBM Quantum Partners"],
+      "mision_tipica": "Investigación aplicada en algoritmos cuánticos de optimización y estudio de propiedades cuánticas y electrónicas de materiales.",
+      "actividades_clave": "Simulación con librerías cuánticas (Qiskit/PennyLane), análisis espectral de estados y formulación de casos de uso tecnológico."
+    },
+    "radiaciones_fisica_medica": {
+      "nombre": "Física de Radiaciones y Física Médica",
+      "icono": "",
+      "color": "#ef4444",
+      "prioridad_bonus": 55,
+      "palabras_clave": [
+        "radiaciones", "radiacion", "radiación", "fisica medica", "física médica",
+        "nuclear", "dosimetria", "dosimetría", "radioterapia", "rayos x",
+        "blindaje", "proteccion radiologica", "aceleradores", "medicina nuclear", "resonancia"
+      ],
+      "carreras_mencionadas": ["ingenieria fisica", "fisica", "bioingenieria", "biomedica"],
+      "empresas_referencia": ["Hospital San Vicente", "Instituto de Cancerologia", "Clinica Las Americas", "Servicios de Radiodiagnostico"],
+      "mision_tipica": "Dosimetría clínica, control de calidad radiológico, calibración de detectores y cálculo de blindajes para fuentes ionizantes.",
+      "actividades_clave": "Medición con cámaras de ionización, verificación de dosis en fantomas, protocolos de seguridad radiológica y metrología nuclear."
+    },
+    "optica_vision_artificial": {
+      "nombre": "Óptica, Fotónica y Visión Artificial",
+      "icono": "",
+      "color": "#a855f7",
+      "prioridad_bonus": 50,
+      "palabras_clave": [
+        "optica", "óptica", "fotonica", "fotónica", "laser", "láser", "fibra optica",
+        "vision artificial", "visión artificial", "opencv", "espectroscopia",
+        "interferometria", "sensores opticos", "ondas", "camaras industriales"
+      ],
+      "carreras_mencionadas": ["ingenieria fisica", "ingenieria electronica", "sistemas"],
+      "empresas_referencia": ["Sofasa", "Ruta N", "Laboratorios de Optica", "Empresas de Inspeccion Automatica"],
+      "mision_tipica": "Desarrollo de algoritmos de inspección óptica por visión artificial y caracterización de sistemas fotónicos y láser.",
+      "actividades_clave": "Procesamiento de imágenes en Python/OpenCV, calibración de lentes y sensores CMOS/CCD y pruebas espectrofotométricas."
+    },
+    "materiales_nanotecnologia": {
+      "nombre": "Ciencia de Materiales y Nanotecnología",
+      "icono": "",
+      "color": "#14b8a6",
+      "prioridad_bonus": 50,
+      "palabras_clave": [
+        "materiales", "nanotecnologia", "nanotecnología", "caracterizacion", "difraccion",
+        "drx", "microscopia", "sem", "ensayos mecanicos", "polimeros", "ceramicos",
+        "corrosion", "metalurgia", "traccion", "dureza"
+      ],
+      "carreras_mencionadas": ["ingenieria fisica", "ingenieria de materiales", "quimica", "mecanica"],
+      "empresas_referencia": ["Sumicol / Corona", "Cementos Argos", "Enka", "Invesa", "Andercol"],
+      "mision_tipica": "Ensayos de caracterización físico-química y microestructural para control de calidad y desarrollo de nuevos materiales.",
+      "actividades_clave": "Operación de difractómetro de rayos X (DRX), microscopio electrónico (SEM), ensayos de tensión/impacto y análisis térmico (DSC/TGA)."
+    },
     "energia_potencia": {
       "nombre": "Energía, Potencia y Renovables",
       "icono": "",
-      "color": "#f59e0b",
+      "color": "#eab308",
+      "prioridad_bonus": 45,
       "palabras_clave": [
         "energia solar", "fotovoltaic", "solar", "subestacion", "transformador",
         "redes electricas", "potencia", "bess", "bateria", "almacenamiento de energia",
-        "transmision", "distribucion electrica", "calidad de la energia", "eficiencia energetica",
-        "mercado de energia", "flujos de potencia"
+        "transmision", "distribucion electrica", "calidad de la energia", "flujos de potencia"
       ],
-      "carreras_mencionadas": ["ingenieria electrica", "ingenieria fisica", "ingenieria de energia", "electronica"],
+      "carreras_mencionadas": ["ingenieria electrica", "ingenieria fisica", "ingenieria de energia"],
       "empresas_referencia": ["ISA", "XM", "EPM", "Celsia", "Intercolombia", "Erco Energia", "Sunita", "CIDET"],
-      "mision_tipica": "Modelado de flujos eléctricos, dimensionamiento de sistemas fotovoltaicos, pruebas de aislamiento en transformadores y análisis de calidad de potencia.",
-      "actividades_clave": "Simulación en software de potencia, levantamiento de diagramas unifilares, telemetría y apoyo en auditorías energéticas."
-    },
-    "automatizacion_instrumentacion": {
-      "nombre": "Automatización, Instrumentación y Control",
-      "icono": "",
-      "color": "#3b82f6",
-      "palabras_clave": [
-        "plc", "scada", "instrumentacion", "sensores", "control de procesos",
-        "adquisicion de datos", "daq", "labview", "metrologia", "calibracion",
-        "automatizacion industrial", "iot", "arduino", "esp32", "microcontroladores",
-        "sensores industriales", "redes industriales"
-      ],
-      "carreras_mencionadas": ["ingenieria fisica", "ingenieria electronica", "ingenieria mecatronica", "control"],
-      "empresas_referencia": ["Haceb", "Corona", "Grupo Argos", "Sofasa", "Enka", "Nutresa", "Siemens", "Schneider"],
-      "mision_tipica": "Programación y comisionamiento de autómatas programables (PLC), calibración de lazos de control y telemetría de variables físicas de planta.",
-      "actividades_clave": "Configuración en TIA Portal / Rockwell, diseño de interfaces HMI, cableado de sensores (4-20mA, 0-10V) y protocolos industriales Modbus."
-    },
-    "materiales_nanotecnologia": {
-      "nombre": "Materiales, Nanotecnología y Ensayos",
-      "icono": "",
-      "color": "#10b981",
-      "palabras_clave": [
-        "materiales", "nanotecnologia", "caracterizacion", "difraccion", "drx",
-        "microscopia", "sem", "ensayos mecanicos", "polimeros", "ceramicos",
-        "control de calidad", "revestimientos", "corrosion", "metalurgia",
-        "laboratorio de ensayos", "propiedades termicas"
-      ],
-      "carreras_mencionadas": ["ingenieria fisica", "ingenieria de materiales", "quimica", "ingenieria mecanica"],
-      "empresas_referencia": ["Sumicol / Corona", "Cementos Argos (Centro Innovacion)", "Enka", "Invesa", "Andercol"],
-      "mision_tipica": "Ensayos de caracterización microestructural, pruebas de tracción/dureza y control de calidad de formulaciones cerámicas y poliméricas.",
-      "actividades_clave": "Preparación de probetas, difractometría de rayos X (DRX), microscopía electrónica (SEM) y elaboración de reportes de conformidad técnica."
-    },
-    "optica_fotonica": {
-      "nombre": "Óptica, Fotónica y Visión Artificial",
-      "icono": "",
-      "color": "#8b5cf6",
-      "palabras_clave": [
-        "optica", "fotonica", "laser", "fibra optica", "vision artificial",
-        "procesamiento de imagenes", "opencv", "espectroscopia", "interferometria",
-        "sensores opticos", "camaras industriales", "iluminacion", "guias de onda"
-      ],
-      "carreras_mencionadas": ["ingenieria fisica", "ingenieria electronica", "sistemas"],
-      "empresas_referencia": ["Centros de I+D", "Empresas de inspeccion automatizada", "Ruta N Startups", "Opticas industriales"],
-      "mision_tipica": "Diseño y calibración de sistemas de inspección visual automatizada en línea de producción y caracterización espectroscópica.",
-      "actividades_clave": "Algoritmos con OpenCV / Python, ajuste de cámaras industriales, iluminación estroboscópica y alineación de fuentes láser."
-    },
-    "simulacion_datos_cuantica": {
-      "nombre": "Simulación, Datos, IA y Cuántica",
-      "icono": "",
-      "color": "#ec4899",
-      "palabras_clave": [
-        "modelado numerico", "simulacion", "python", "ciencia de datos", "data science",
-        "machine learning", "algoritmos", "analitica avanzada", "matlab", "comsol",
-        "elementos finitos", "ansys", "computacion cuantica", "optimizacion matematica",
-        "modelos estocasticos"
-      ],
-      "carreras_mencionadas": ["ingenieria fisica", "matematicas", "estadistica", "ingenieria de sistemas", "fisica"],
-      "empresas_referencia": ["Bancolombia", "Grupo Sura", "Proteccion", "Ruta N", "Interacpedia", "Tuya", "Globant"],
-      "mision_tipica": "Modelamiento matemático de sistemas dinámicos, algoritmos predictivos, simulaciones numéricas y optimización estocástica.",
-      "actividades_clave": "Programación en Python (NumPy, SciPy, Pandas), simulaciones por elementos finitos, entrenamiento de modelos de Machine Learning y visualización técnica."
-    },
-    "fisica_medica_bio": {
-      "nombre": "Física Médica, Radiaciones y Bioingeniería",
-      "icono": "",
-      "color": "#ef4444",
-      "palabras_clave": [
-        "fisica medica", "radiaciones", "radioterapia", "dosimetria", "resonancia magnetica",
-        "rayos x", "proteccion radiologica", "medicina nuclear", "aceleradores lineales",
-        "equipos biomedicos", "calibracion de equipos medicos"
-      ],
-      "carreras_mencionadas": ["ingenieria fisica", "fisica", "bioingenieria", "ingenieria biomedica"],
-      "empresas_referencia": ["Hospital San Vicente Fundacion", "Clinica Las Americas", "Instituto de Cancerologia", "Clinica Medellin"],
-      "mision_tipica": "Control de calidad de equipos de radioterapia y radiodiagnóstico, cálculo dosimétrico y protocolos de protección radiológica.",
-      "actividades_clave": "Calibración de cámaras de ionización en aceleradores lineales, verificación de planes de tratamiento y aseguramiento metrológico."
-    },
-    "id_deeptech": {
-      "nombre": "I+D, Innovación y Deep Tech",
-      "icono": "",
-      "color": "#6366f1",
-      "palabras_clave": [
-        "investigacion y desarrollo", "i+d", "r&d", "desarrollo tecnologico",
-        "prototipado", "innovacion", "deep tech", "transferencia tecnologica",
-        "patentes", "diseno experimental"
-      ],
-      "carreras_mencionadas": ["ingenieria fisica", "ingenierias afines"],
-      "empresas_referencia": ["CIDET", "CTA", "Tecnova", "Ruta N", "Centros de Innovacion Empresarial"],
-      "mision_tipica": "Diseño de experimentos, pruebas de concepto, validación de prototipos funcionales y formulación técnica de proyectos.",
-      "actividades_clave": "Construcción de prototipos de laboratorio, búsqueda en bases de patentes, análisis de viabilidad técnica y redacción de artículos o informes."
+      "mision_tipica": "Estudios eléctricos de redes de potencia, dimensionamiento fotovoltaico y monitoreo térmico de transformadores y subestaciones.",
+      "actividades_clave": "Simulación de flujos de carga, curvas de envejecimiento de aislamiento según norma IEEE, telemetría y calidad de onda."
     }
   }
 }

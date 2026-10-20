@@ -1,75 +1,41 @@
-# 🎓 Guía Estratégica de Prácticas para Ingenieros Físicos (UNAL Medellín)
+# Guía Estratégica de Prácticas para Ingenieros Físicos (UNAL Medellín)
+**Autor:** Jimmy Stebym Rosero Barrera
 
-Esta guía fue elaborada para que tú y tus compañeros de **Ingeniería Física** sepan cómo presentar y defender su perfil profesional ante las empresas del Valle de Aburrá, Antioquia y a nivel nacional.
-
----
-
-## 💡 El Secreto: Cómo superar el filtro de Recursos Humanos
-
-El principal obstáculo de un ingeniero físico no es su capacidad técnica, sino que los psicólogos y reclutadores de RRHH a menudo desconocen el alcance de la carrera.
-
-### Regla de Oro:
-> Si una vacante dice:
-> **"Se busca estudiante de Ingeniería Electrónica, Mecatrónica, de Materiales, Sistemas o carreras afines"**
-> 👉 **¡TÚ ERES ESA CARRERA AFÍN!**
-
-### Cómo adaptar tu Hoja de Vida (CV):
-1. **Titular Profesional Personalizado:**
-   * En lugar de poner solo *"Estudiante de Ingeniería Física"*, pon:
-     * *Opción Energía:* `Ingeniero Físico en Formación | Sistemas de Potencia, Energías Renovables y Calidad Eléctrica`
-     * *Opción Control:* `Ingeniero Físico en Formación | Automatización, Instrumentación Industrial (PLC) y Adquisición de Datos`
-     * *Opción Datos:* `Ingeniero Físico en Formación | Modelamiento Numérico, Machine Learning y Analítica Avanzada`
-     * *Opción Materiales:* `Ingeniero Físico en Formación | Ciencia de Materiales, Caracterización (DRX/SEM) y Ensayos de Laboratorio`
-
-2. **Sección de Habilidades Clave (Keywords para filtros ATS):**
-   * **Software y Programación:** Python (NumPy, SciPy, Pandas), MATLAB, C/C++, LabVIEW, TIA Portal (Siemens), COMSOL Multiphysics, Proteus, OrCAD.
-   * **Hardware e Instrumentación:** PLCs, sensores industriales, microcontroladores (Arduino, ESP32), adquisición de señales, osciloscopios, protocolos de comunicación industrial (Modbus, MQTT).
-   * **Metrología y Laboratorio:** Calibración de instrumentos, incertidumbre de medida (GUM), control de calidad, ensayos mecánicos y térmicos.
+Esta guía está diseñada para traducir las asignaturas reales de nuestro pénsum en la **Universidad Nacional de Colombia Sede Medellín** al lenguaje de valor que busca la industria y los departamentos de Recursos Humanos.
 
 ---
 
-## 🏢 Mapa de Empresas Clave en Medellín por Rama
+## 1. Traductor: Del Pénsum UNAL al Perfil Profesional
 
-### 1. ⚡ Energía, Potencia y Renovables
-* **Empresas:** EPM, ISA / Intercolombia, XM (Operador del SIN), Celsia, Erco Energía, Sunita, CIDET.
-* **Qué buscan:** Estudios de flujo de carga, calidad de la onda, envejecimiento y monitoreo térmico de transformadores, dimensionamiento solar fotovoltaico y almacenamiento con baterías (BESS).
+Los reclutadores de talento a menudo no comprenden el alcance del título "Ingeniero Físico". La clave está en formular tus destrezas a partir de las materias cursadas:
 
-### 2. 🎛️ Automatización, Instrumentación y Control
-* **Empresas:** Haceb, Corona, Grupo Argos, Sofasa (Renault), Enka, Grupo Nutresa, Siemens, Schneider Electric.
-* **Qué buscan:** Programación de PLCs, integración de sensores, control de procesos térmicos y de presión, telemetría y mantenimiento predictivo.
-
-### 3. 🔬 Materiales, Nanotecnología y Ensayos
-* **Empresas:** Sumicol (Corona), Centro de Innovación Argos (en EAFIT), Invesa, Andercol, Enka de Colombia.
-* **Qué buscan:** Caracterización estructural de polímeros, cerámicos y metales, difracción de rayos X (DRX), microscopía electrónica (SEM), control reológico.
-
-### 4. 📊 Simulación, Datos, IA y Computación Cuántica
-* **Empresas:** Bancolombia (Quantum & Analytics Lab), Grupo Sura, Protección, Tuya, startups de Ruta N.
-* **Qué buscan:** Modelos estocásticos, algoritmos de optimización, machine learning, simulaciones de Monte Carlo y análisis cuantitativo de riesgos.
-
-### 5. 👁️ Óptica, Fotónica y Visión Artificial
-* **Empresas:** Sofasa, industrias de manufactura con inspección automatizada en línea, centros de I+D de Ruta N.
-* **Qué buscan:** Cámaras industriales, algoritmos de OpenCV para detección de defectos superficiales, alineación láser y metrología óptica.
-
-### 6. 🏥 Física Médica y Radiaciones
-* **Empresas:** Hospital San Vicente Fundación, Instituto de Cancerología, Clínica Las Américas Auna, Clínica Medellín.
-* **Qué buscan:** Calibración de aceleradores lineales en radioterapia, dosimetría clínica, control de calidad en tomografía y resonancia magnética.
-
----
-
-## 📅 Calendario de Convocatorias en Medellín
-
-| Para iniciar práctica en | Fechas en que abren convocatorias | Empresas que abren en esa época |
+| Asignatura UNAL Cursada | Cómo venderla en tu Hoja de Vida (Habilidades Industriales) | Cargos / Roles a los que Aplicar |
 | :--- | :--- | :--- |
-| **Segundo Semestre (Julio - Diciembre)** | **Marzo a Mayo** *(Pico en Abril)* | Bancolombia, EPM, ISA, Nutresa, Haceb, Argos, Corona |
-| **Primer Semestre (Enero - Junio)** | **Septiembre a Noviembre** *(Pico en Octubre)* | Todas las multinacionales y grupos empresariales de Antioquia |
+| **Taller V: Electrónica Digital y Microcontroladores** | Desarrollo de sistemas embebidos, arquitectura de microcontroladores (STM32, ESP32, Arduino), buses de comunicación industrial (**I2C, SPI, UART**), IoT y lógica digital. | Practicante de Hardware, Firmware, IoT, Electrónica Digital |
+| **Taller IV: Electrónica Análoga** | Diseño y simulación de circuitos discretos e integrados, amplificadores operacionales (OpAmps), filtrado analógico, fuentes reguladas y diseño de PCBs en Proteus/KiCad. | Practicante de Electrónica, Pruebas de Circuitos, Ensayos |
+| **Taller II: Diseño Mecánico & Taller I: Dibujo Técnico** | Modelado CAD 3D, dibujo técnico normalizado, tolerancias geométricas y dimensionales (GD&T), simulación de esfuerzos mecánicos y prototipado. | Practicante de Diseño Mecánico, CAD, Prototipado 3D |
+| **Taller III: Circuitos y Dispositivos Electromagnéticos** | Diseño y modelado de bobinas, transformadores, análisis de pérdidas magnéticas y compatibilidad electromagnética (EMC). | Practicante de Sistemas de Potencia, Subestaciones, Motores |
+| **Instrumentación Virtual & Metrología Industrial** | Adquisición de señales en tiempo real (DAQ), programación en **LabVIEW**, instrumentación de planta, cálculo de incertidumbre de medición (Guía GUM) y aseguramiento de calidad (ISO 17025). | Practicante de Calibración, Metrología, Automatización, Calidad |
+| **Mecánica Cuántica & Estado Sólido** | Fundamentos cuánticos, física de semiconductores, propiedades de transporte electrónico y algoritmos cuánticos (Qiskit). | Practicante de Investigación Cuántica, Materiales Avanzados |
+| **Física de Radiaciones & Instrumentación Nuclear** | Detección de radiaciones ionizantes, dosimetría clínica, cálculo de blindajes y seguridad radiológica en aceleradores lineales y medicina nuclear. | Practicante de Física Médica, Protección Radiológica |
+| **Simulaciones, Métodos Numéricos & Física Computacional** | Modelamiento numérico de sistemas físicos, algoritmos en **Python (NumPy, SciPy, Pandas)**, MATLAB, elementos finitos y dinámica molecular. | Practicante de Simulación, Modelado Numérico, I+D |
+| **Cátedra de Prompt Engineering & IA** | Arquitectura de modelos de lenguaje (LLMs), optimización de prompts, pipelines de IA generativa y automatización de procesos. | Practicante de Inteligencia Artificial, Data Science |
+| **Visión Artificial & Óptica** | Procesamiento digital de imágenes con **OpenCV**, inspección visual automatizada en línea de ensamble, láseres e interferometría. | Practicante de Visión Artificial, Fotónica, Control Óptico |
 
 ---
 
-## 🚀 Cómo usar el Bot con tus compañeros
+## 2. Prioridad de Búsqueda: ¿Por qué este orden?
 
-1. Abre el archivo **`dashboard_practicas.html`** en cualquier navegador (Google Chrome, Edge, Firefox).
-2. Puedes compartirles el archivo `dashboard_practicas.html` por WhatsApp, correo o Teams: **funciona sin necesidad de internet ni servidores**, todo está incluido en el mismo archivo.
-3. Para refrescar y buscar nuevas ofertas en vivo, simplemente abre la terminal y ejecuta:
-   ```bash
-   python D:\Practicas_Ingenieria_Fisica\bot_practicas.py
-   ```
+En nuestro portal automatizado las vacantes se ordenan bajo este criterio:
+1. **Convocatorias para Mujeres en STEM:** Programas de diversidad e impulso al talento femenino en ingeniería (Bancolombia, P&G, Siemens, ISA, etc.) aparecen en la cúspide para brindar máxima visibilidad a nuestras compañeras de carrera.
+2. **Vacantes Técnicas del Pénsum:** Ofertas que buscan explícitamente Análisis de Datos/IA, Electrónica Digital, Análoga, Cuántica, Radiaciones, I2C/IoT, CAD o Instrumentación aparecen de inmediato.
+3. **Exclusivas de Física:** Oportunidades donde el perfil solicita expresamente físicos o laboratorios de metrología y física aplicada.
+4. **Ingeniería General:** Operaciones y logística técnica.
+
+---
+
+## 3. Contactos y Enlaces Clave en Medellín
+* **Sistemas de Potencia y Energía:** ISA, XM, EPM, Celsia, CIDET.
+* **Manufactura y Automatización:** Haceb, Grupo Corona, Sofasa (Renault), Cementos Argos, Enka.
+* **Analítica, Datos y Cuántica:** Bancolombia (Analytics & Quantum Lab), Grupo Sura, Protección, Ruta N.
+* **Física Médica y Radiaciones:** Hospital San Vicente Fundación, Instituto de Cancerología, Clínica Las Américas Auna.

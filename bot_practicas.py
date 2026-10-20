@@ -3,10 +3,12 @@
 PORTAL & BOT DE RASTREO DE PRÁCTICAS - INGENIERÍA FÍSICA (UNAL MEDELLÍN)
 Autor: Jimmy Stebym Rosero Barrera
 Descripción: Rastreador integral de convocatorias y vacantes para pregrado.
-Clasifica en tiempo real por ramas de física aplicada, identifica vacantes
-exclusivas para físicos, convocatorias próximas a cerrar (< 5 días) y genera
-la nube explicativa de responsabilidades para cada vacante.
-(Sin emojis en la interfaz salvo el átomo superior)
+Prioriza automáticamente según el pénsum real de Ingeniería Física UNAL:
+IA, Electrónica Digital (Taller V, I2C, IoT), Electrónica Análoga (Taller IV),
+Radiaciones, Cuántica, Diseño Mecánico (Taller II), Dibujo Técnico (Taller I),
+Instrumentación Virtual, Metrología, Óptica/Visión y Análisis de Datos.
+Prioridad máxima a programas de Mujeres en STEM y exclusivas para físicos.
+(Cero emojis en la interfaz salvo el átomo superior)
 =============================================================================
 """
 
@@ -35,33 +37,40 @@ HEADERS = {
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 CONFIG_RAMAS_PATH = os.path.join(BASE_DIR, "config_ramas.json")
-EMPRESAS_PATH = os.path.join(BASE_DIR, "empresas_antioquia.json")
 OUTPUT_HTML = os.path.join(BASE_DIR, "dashboard_practicas.html")
 OUTPUT_INDEX = os.path.join(BASE_DIR, "index.html")
 OUTPUT_CSV = os.path.join(BASE_DIR, "vacantes_practicas.csv")
 OUTPUT_JSON = os.path.join(BASE_DIR, "vacantes_practicas.json")
 
-# Consultas masivas para rastrear desde startups pequeñas hasta multinacionales
+# Consultas masivas cubriendo todas las materias y destrezas del pénsum UNAL
 SEARCH_QUERIES = [
     "practicante ingenieria",
-    "practicante fisica",
-    "practicante fisico",
-    "practicante energia",
-    "practicante potencia",
-    "practicante automatizacion",
-    "practicante control",
-    "practicante sensores",
-    "practicante electronica",
+    "practicante mujeres stem",
     "practicante datos",
-    "practicante calidad",
+    "practicante ia",
+    "practicante python",
+    "practicante analitica",
+    "practicante iot",
+    "practicante electronica digital",
+    "practicante embebidos",
+    "practicante electronica analoga",
+    "practicante circuitos",
+    "practicante instrumentacion",
     "practicante metrologia",
+    "practicante diseno mecanico",
+    "practicante cad solidworks",
+    "practicante cuantica",
+    "practicante radiaciones",
+    "practicante fisica medica",
+    "practicante optica",
+    "practicante vision artificial",
     "practicante materiales",
     "practicante nanotecnologia",
-    "practicante optica",
-    "practicante investigacion",
-    "practicante laboratorio",
-    "practicante i+d",
-    "intern engineering"
+    "practicante energia solar",
+    "practicante potencia transformadores",
+    "practicante fisico",
+    "practicante investigacion i+d",
+    "intern engineering medellin"
 ]
 
 def load_json(filepath):
@@ -108,99 +117,137 @@ def scrape_linkedin_query(query, location="Medellin, Antioquia, Colombia"):
     except Exception as e:
         return []
 
-def classify_job(job, config_ramas):
-    """Clasifica la vacante, evalúa afinidad, genera la nube explicativa de responsabilidades"""
+def classify_and_score_job(job, config_ramas):
+    """Calcula el Score de Afinididad con el Pénsum UNAL y detecta programas prioritarios"""
     text_to_analyze = f"{job['titulo']} {job.get('empresa', '')}".lower()
     
+    # 1. Detección de programas exclusivos para mujeres en STEM
+    es_mujeres_stem = False
+    terminos_mujeres = ["mujer", "mujeres", "women", "women in tech", "femenin", "stem", "chicas en tecnologia"]
+    if any(t in text_to_analyze for t in terminos_mujeres):
+        es_mujeres_stem = True
+
+    # 2. Detección de vacantes exclusivas de física o perfil puro
     es_exclusiva_fisica = False
-    terminos_fisica = ["físic", "fisic", "metrolog", "cuantic", "cuántic", "espectroscop", "difracci", "nanotecn"]
+    terminos_fisica = ["físic", "fisic", "metrolog", "cuantic", "cuántic", "espectroscop", "difracci", "radiaci", "dosimetr", "nanotecn"]
     if any(t in text_to_analyze for t in terminos_fisica):
         es_exclusiva_fisica = True
 
+    # 3. Detección de cierre inminente
     es_cierre_inminente = False
     pub_lower = job.get("fecha_publicacion", "").lower()
     if any(k in pub_lower for k in ["hora", "horas", "1 día", "2 días", "3 días", "4 días", "5 días", "hace 1", "hace 2"]):
         es_cierre_inminente = True
-    elif "urgente" in text_to_analyze or "internship pipeline" in text_to_analyze:
+    elif "urgente" in text_to_analyze or "pipeline" in text_to_analyze:
         es_cierre_inminente = True
-        
+
+    # Ponderación según Pénsum UNAL
+    total_score = 0
+    if es_mujeres_stem:
+        total_score += 150 # Máxima prioridad de visualización
+    if es_exclusiva_fisica:
+        total_score += 80
+
     ramas_coincidentes = []
-    max_score = 0
+    max_rama_score = 0
     mision_especifica = ""
     tareas_especificas = ""
-    
+
     for rama_key, data in config_ramas.get("ramas", {}).items():
         score = 0
         palabras = data.get("palabras_clave", [])
         for p in palabras:
             if p in text_to_analyze:
-                score += 2
+                score += 3
         
         empresas_ref = [e.lower() for e in data.get("empresas_referencia", [])]
         for e in empresas_ref:
             if e in text_to_analyze:
-                score += 3
-                
+                score += 4
+
+        bonus = data.get("prioridad_bonus", 20)
         if score > 0:
+            score += bonus
             ramas_coincidentes.append({
                 "clave": rama_key,
                 "nombre": data["nombre"],
                 "color": data["color"],
                 "score": score
             })
-            if score > max_score:
-                max_score = score
+            if score > max_rama_score:
+                max_rama_score = score
                 mision_especifica = data.get("mision_tipica", "")
                 tareas_especificas = data.get("actividades_clave", "")
-                
+
+    total_score += max_rama_score
+
     ramas_coincidentes.sort(key=lambda x: x["score"], reverse=True)
-    
+
     if not ramas_coincidentes:
         ramas_coincidentes.append({
             "clave": "general",
             "nombre": "Ingeniería General / Operaciones",
             "color": "#64748b",
-            "score": 1
+            "score": 5
         })
         afinidad = "General"
         mision_especifica = f"Apoyo en el área de ingeniería y operaciones técnicas en {job.get('empresa', 'la compañía')}."
         tareas_especificas = "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
+    elif es_mujeres_stem:
+        afinidad = "Mujeres en STEM"
     elif es_exclusiva_fisica:
         afinidad = "Exclusiva Física"
-    elif max_score >= 4:
-        afinidad = "Alta Especialidad"
+    elif max_rama_score >= 60:
+        afinidad = "Alta Afinidad Pénsum"
     else:
-        afinidad = "Media"
-        
+        afinidad = "Afinidad Media"
+
     job["ramas"] = ramas_coincidentes
     job["rama_principal"] = ramas_coincidentes[0]["nombre"]
     job["color_principal"] = ramas_coincidentes[0]["color"]
     job["clave_principal"] = ramas_coincidentes[0]["clave"]
     job["afinidad"] = afinidad
+    job["es_mujeres_stem"] = es_mujeres_stem
     job["es_exclusiva_fisica"] = es_exclusiva_fisica
     job["es_cierre_inminente"] = es_cierre_inminente
+    job["score_pensum"] = total_score
     job["mision"] = mision_especifica
     job["tareas"] = tareas_especificas
-    
+
     return job
 
 def build_full_html(vacantes, config_ramas):
-    """Genera el HTML semántico con diseño de laboratorio y sin emojis (salvo el átomo superior)"""
+    """Genera el HTML semántico ordenado por Score de Pénsum UNAL, sin emojis salvo el átomo superior"""
     fecha_actualizacion = datetime.now().strftime("%d/%m/%Y %I:%M %p")
     vacantes_json_str = json.dumps(vacantes, ensure_ascii=False)
-    
+
+    total_mujeres = sum(1 for v in vacantes if v.get("es_mujeres_stem"))
     total_exclusivas = sum(1 for v in vacantes if v.get("es_exclusiva_fisica"))
     total_inminentes = sum(1 for v in vacantes if v.get("es_cierre_inminente"))
-    
+
     html = f"""<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Prácticas de Ingeniería Física • Medellín y Antioquia | Jimmy Rosero</title>
-  <meta name="description" content="Portal automatizado de convocatorias y prácticas para estudiantes de Ingeniería Física en Medellín y Antioquia. Creado por Jimmy Stebym Rosero Barrera.">
+  <title>Prácticas de Ingeniería Física • UNAL Medellín | Jimmy Rosero</title>
+  <meta name="description" content="Portal de convocatorias prioritarias para estudiantes de Ingeniería Física de la Universidad Nacional de Colombia Sede Medellín. Creado por Jimmy Stebym Rosero Barrera.">
   <meta name="author" content="Jimmy Stebym Rosero Barrera">
   <link rel="stylesheet" href="estilos.css">
+  <style>
+    /* Estilos específicos para la prioridad de Mujeres en STEM */
+    article.job-card.women-stem {{
+      border-left: 4px solid #ec4899;
+      background: linear-gradient(135deg, rgba(236, 72, 153, 0.05) 0%, rgba(14, 19, 31, 1) 100%);
+    }}
+    button.tab-link.women {{
+      color: #ec4899;
+    }}
+    button.tab-link.women.active {{
+      background: rgba(236, 72, 153, 0.15);
+      border-color: rgba(236, 72, 153, 0.4);
+    }}
+  </style>
 </head>
 <body>
 
@@ -220,6 +267,8 @@ def build_full_html(vacantes, config_ramas):
       <div class="header-meta">
         <div>Vacantes activas: <strong style="color: var(--accent-cyan);">{len(vacantes)}</strong></div>
         <div>•</div>
+        <div>Mujeres STEM: <strong style="color: #ec4899;">{total_mujeres}</strong></div>
+        <div>•</div>
         <div>Exclusivas Física: <strong style="color: var(--accent-amber);">{total_exclusivas}</strong></div>
         <div>•</div>
         <div>Próximas a cerrar: <strong style="color: var(--accent-crimson);">{total_inminentes}</strong></div>
@@ -230,9 +279,9 @@ def build_full_html(vacantes, config_ramas):
   <main class="main-content">
 
     <section class="manifesto-box">
-      <h2>Ecosistema de Prácticas para Ingenieros Físicos</h2>
+      <h2>Ecosistema de Prácticas para Ingenieros Físicos (UNAL Medellín)</h2>
       <p>
-        Plataforma automatizada diseñada por <strong>Jimmy Stebym Rosero Barrera</strong> para rastrear convocatorias industriales y de I+D en Medellín y el Valle de Aburrá, clasificadas por áreas clave de la carrera: Sistemas de Potencia, Automatización (PLC), Ciencia de Materiales, Óptica/Fotónica, Simulación Numérica, Física Médica y Deep Tech.
+        Plataforma automatizada diseñada por <strong>Jimmy Stebym Rosero Barrera</strong>. El algoritmo prioriza en los primeros lugares las convocatorias alineadas con las materias clave de nuestra carrera: <strong>Análisis de Datos & IA, Electrónica Digital (Taller V / Microcontroladores / I2C / IoT), Electrónica Análoga (Taller IV), Física de Radiaciones, Mecánica Cuántica, Diseño Mecánico (Taller II), Dibujo Técnico (Taller I), Instrumentación Virtual y Metrología</strong>, otorgando máxima prioridad a convocatorias de <strong>Mujeres en STEM</strong>.
       </p>
     </section>
 
@@ -240,6 +289,9 @@ def build_full_html(vacantes, config_ramas):
     <nav class="tabs-nav" aria-label="Secciones de prácticas">
       <button class="tab-link active" onclick="switchMainTab('todas', this)">
         Todas las Vacantes ({len(vacantes)})
+      </button>
+      <button class="tab-link women" onclick="switchMainTab('mujeres', this)">
+        Mujeres en STEM ({total_mujeres})
       </button>
       <button class="tab-link exclusive" onclick="switchMainTab('exclusivas', this)">
         Exclusivas: Piden Físico / Ing. Físico ({total_exclusivas})
@@ -254,17 +306,21 @@ def build_full_html(vacantes, config_ramas):
 
     <!-- CONTENEDOR DE FILTROS Y BÚSQUEDA -->
     <div id="filterControls">
-      <input type="text" id="searchInput" class="search-bar" placeholder="Buscar por cargo, empresa, tecnología (ej. PLC, Solar, Python, Difracción, Transformadores)..." onkeyup="handleFilter()">
+      <input type="text" id="searchInput" class="search-bar" placeholder="Buscar por materia, software o tecnología (ej. I2C, Python, Taller V, CAD, PLC, Cuántica, Radiaciones)..." onkeyup="handleFilter()">
       
       <div class="branch-pills" id="pillsContainer">
         <button class="branch-pill active" onclick="handlePill('TODOS', this)">Todas las ramas</button>
-        <button class="branch-pill" onclick="handlePill('Energía, Potencia y Renovables', this)">Energía y Potencia</button>
-        <button class="branch-pill" onclick="handlePill('Automatización, Instrumentación y Control', this)">Automatización & Control</button>
-        <button class="branch-pill" onclick="handlePill('Materiales, Nanotecnología y Ensayos', this)">Materiales & Nano</button>
-        <button class="branch-pill" onclick="handlePill('Óptica, Fotónica y Visión Artificial', this)">Óptica & Visión</button>
-        <button class="branch-pill" onclick="handlePill('Simulación, Datos, IA y Cuántica', this)">Datos, IA & Cuántica</button>
-        <button class="branch-pill" onclick="handlePill('Física Médica, Radiaciones y Bioingeniería', this)">Física Médica</button>
-        <button class="branch-pill" onclick="handlePill('I+D, Innovación y Deep Tech', this)">I+D & Deep Tech</button>
+        <button class="branch-pill" onclick="handlePill('Mujeres en STEM / Ingeniería', this)">Mujeres en STEM</button>
+        <button class="branch-pill" onclick="handlePill('Análisis de Datos, IA y Simulaciones', this)">Datos, IA & Simulaciones</button>
+        <button class="branch-pill" onclick="handlePill('Electrónica Digital, Microcontroladores e IoT', this)">Electrónica Digital & IoT (I2C)</button>
+        <button class="branch-pill" onclick="handlePill('Electrónica Análoga y Circuitos', this)">Electrónica Análoga</button>
+        <button class="branch-pill" onclick="handlePill('Instrumentación y Metrología Industrial', this)">Instrumentación & Metrología</button>
+        <button class="branch-pill" onclick="handlePill('Diseño Mecánico y Dibujo Técnico', this)">Diseño Mecánico & CAD</button>
+        <button class="branch-pill" onclick="handlePill('Cuántica, Estado Sólido y Nuevas Tecnologías', this)">Cuántica & Estado Sólido</button>
+        <button class="branch-pill" onclick="handlePill('Física de Radiaciones y Física Médica', this)">Radiaciones & Física Médica</button>
+        <button class="branch-pill" onclick="handlePill('Óptica, Fotónica y Visión Artificial', this)">Óptica & Visión Artificial</button>
+        <button class="branch-pill" onclick="handlePill('Ciencia de Materiales y Nanotecnología', this)">Materiales & Nanotecnología</button>
+        <button class="branch-pill" onclick="handlePill('Energía, Potencia y Renovables', this)">Energía & Potencia</button>
       </div>
     </div>
 
@@ -279,9 +335,9 @@ def build_full_html(vacantes, config_ramas):
         <h3>Cómo defender el perfil de Ingeniería Física ante Recursos Humanos</h3>
         <p>A menudo el reclutador de RRHH no conoce a fondo el pénsum de Ingeniería Física. Si dices solo <em>"Soy estudiante de Física"</em>, asumirán que solo haces teoría en tablero. Tu perfil debe destacar como <strong>Ingeniero Físico orientado a soluciones prácticas de alta tecnología</strong>:</p>
         <ul>
-          <li><strong>Destaca tus habilidades duras en el encabezado del CV:</strong> Instrumentación industrial, adquisición de datos (DAQ), automatización con PLC, modelado numérico (Python/MATLAB), caracterización de materiales (DRX/SEM) o análisis de datos.</li>
-          <li><strong>Si la oferta dice "Ing. Electrónico, Mecatrónico, Materiales o afines":</strong> Postúlate sin dudar. En tu carta o resumen escribe: <em>"Estudiante de Ingeniería Física con énfasis en sistemas de potencia / automatización / modelado computacional..."</em></li>
-          <li><strong>Menciona montajes y software de laboratorio:</strong> Experiencia con TIA Portal, Proteus, COMSOL Multiphysics, osciloscopios o protocolos de comunicación (Modbus/MQTT).</li>
+          <li><strong>Destaca tus habilidades duras en el encabezado del CV:</strong> Instrumentación industrial, adquisición de datos (DAQ), buses de comunicación (I2C/SPI), microcontroladores, automatización, modelado numérico (Python/MATLAB), caracterización de materiales (DRX/SEM) o análisis de datos.</li>
+          <li><strong>Si la oferta dice "Ing. Electrónico, Mecatrónico, Materiales o afines":</strong> Postúlate sin dudar. En tu carta o resumen escribe: <em>"Estudiante de Ingeniería Física con énfasis en sistemas de potencia / automatización / electrónica digital / análisis de datos..."</em></li>
+          <li><strong>Menciona tus proyectos de taller de la UNAL:</strong> Taller I (Dibujo técnico CAD), Taller II (Diseño mecánico), Taller III (Circuitos electromagnéticos), Taller IV (Electrónica análoga) y Taller V (Electrónica digital y microcontroladores).</li>
         </ul>
         <h4 style="color: #fff; margin-bottom: 8px; font-family: var(--font-display);">Calendario de Convocatorias Masivas en Medellín:</h4>
         <p>• <strong>Semestre 1 (Prácticas enero a junio):</strong> Convocatorias abren entre <strong>septiembre y noviembre</strong>.<br>
@@ -314,6 +370,7 @@ def build_full_html(vacantes, config_ramas):
       list.forEach(j => {{
         const card = document.createElement('article');
         card.className = 'job-card';
+        if (j.es_mujeres_stem) card.classList.add('women-stem');
         if (j.es_cierre_inminente) card.classList.add('urgent');
         if (j.es_exclusiva_fisica) card.classList.add('exclusive');
         
@@ -321,7 +378,10 @@ def build_full_html(vacantes, config_ramas):
         
         let badgeColor = j.color_principal;
         let badgeText = j.afinidad.toUpperCase();
-        if (j.es_cierre_inminente) {{
+        if (j.es_mujeres_stem) {{
+          badgeText = 'MUJERES EN STEM';
+          badgeColor = '#ec4899';
+        }} else if (j.es_cierre_inminente) {{
           badgeText = 'CIERRE INMINENTE (< 5 DIAS)';
           badgeColor = '#ef476f';
         }} else if (j.es_exclusiva_fisica) {{
@@ -366,6 +426,7 @@ def build_full_html(vacantes, config_ramas):
       const query = document.getElementById('searchInput').value.toLowerCase();
       
       const filtered = allJobs.filter(j => {{
+        if (currentTab === 'mujeres' && !j.es_mujeres_stem) return false;
         if (currentTab === 'exclusivas' && !j.es_exclusiva_fisica) return false;
         if (currentTab === 'inminentes' && !j.es_cierre_inminente) return false;
         
@@ -424,8 +485,8 @@ def build_full_html(vacantes, config_ramas):
     print(f" [✓] Archivos HTML generados: {OUTPUT_HTML} y {OUTPUT_INDEX}")
 
 def export_csv(vacantes):
-    """Exporta las vacantes a un archivo CSV compatible con Excel"""
-    fieldnames = ["titulo", "empresa", "ubicacion", "rama_principal", "afinidad", "es_exclusiva_fisica", "es_cierre_inminente", "mision", "tareas", "fecha_publicacion", "fuente", "url"]
+    """Exporta las vacantes ordenadas a CSV para Excel"""
+    fieldnames = ["titulo", "empresa", "ubicacion", "rama_principal", "afinidad", "score_pensum", "es_mujeres_stem", "es_exclusiva_fisica", "es_cierre_inminente", "mision", "tareas", "fecha_publicacion", "fuente", "url"]
     with open(OUTPUT_CSV, "w", newline="", encoding="utf-8-sig") as f:
         writer = csv.DictWriter(f, fieldnames=fieldnames)
         writer.writeheader()
@@ -436,6 +497,8 @@ def export_csv(vacantes):
                 "ubicacion": v["ubicacion"],
                 "rama_principal": v["rama_principal"],
                 "afinidad": v["afinidad"],
+                "score_pensum": v.get("score_pensum", 0),
+                "es_mujeres_stem": v.get("es_mujeres_stem", False),
                 "es_exclusiva_fisica": v.get("es_exclusiva_fisica", False),
                 "es_cierre_inminente": v.get("es_cierre_inminente", False),
                 "mision": v.get("mision", ""),
@@ -456,7 +519,7 @@ def main():
     all_raw_jobs = []
     seen_urls = set()
     
-    print(f"[*] Rastreando en vivo {len(SEARCH_QUERIES)} categorías...")
+    print(f"[*] Rastreando en vivo {len(SEARCH_QUERIES)} categorías del pénsum UNAL...")
     for q in SEARCH_QUERIES:
         print(f" -> Buscando: '{q}'...")
         jobs = scrape_linkedin_query(q)
@@ -470,12 +533,15 @@ def main():
         time.sleep(0.8)
         
     print(f"\n[*] Total de vacantes únicas recolectadas: {len(all_raw_jobs)}")
-    print("[*] Generando nubes explicativas de responsabilidades y clasificación...")
+    print("[*] Clasificando y ordenando por afinidad al pénsum UNAL...")
     
     classified_jobs = []
     for j in all_raw_jobs:
-        classified_jobs.append(classify_job(j, config_ramas))
+        classified_jobs.append(classify_and_score_job(j, config_ramas))
         
+    # Ordenar estrictamente: Mujeres STEM y habilidades clave del pénsum DE PRIMERAS
+    classified_jobs.sort(key=lambda x: x.get("score_pensum", 0), reverse=True)
+    
     with open(OUTPUT_JSON, "w", encoding="utf-8") as f:
         json.dump(classified_jobs, f, ensure_ascii=False, indent=2)
     print(f" [✓] Datos JSON guardados en: {OUTPUT_JSON}")

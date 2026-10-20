@@ -15,8 +15,9 @@ import json
 import csv
 import re
 import time
+from html import unescape
 from datetime import datetime
-from urllib.parse import quote
+from urllib.parse import quote, unquote, urlparse
 import requests
 
 # Asegurar codificación UTF-8 en terminal de Windows
@@ -66,7 +67,22 @@ SEARCH_QUERIES = [
     "practicante fisico",
     "practicante investigacion i+d",
     "practicante mujeres stem",
-    "intern engineering medellin"
+    "intern engineering medellin",
+    "practicante ingenieria minera",
+    "practicante ingenieria de procesos mineria",
+    "practicante laboratorio minerales",
+    "practicante metalurgia materiales",
+    "practicante instrumentacion minera",
+    "practicante automatizacion mineria",
+    "practicante analisis de datos mineria",
+    "Antioquia Gold ingeniero practicante",
+    "Antioquia Gold ingenieria Medellin",
+    "practicante ingenieria Antioquia",
+    "estudiante ingenieria fisica Medellin",
+    "site:magneto365.com practicante ingenieria Medellin",
+    "site:computrabajo.com.co practicante ingenieria Medellin",
+    "site:elempleo.com/co practicante ingenieria Medellin",
+    "site:co.computrabajo.com practicante mineria Antioquia"
 ]
 
 def load_json(filepath):
@@ -111,6 +127,42 @@ def scrape_linkedin_query(query, location="Medellin, Antioquia, Colombia"):
                 })
         return results
     except Exception as e:
+        return []
+
+def scrape_web_query(query):
+    """Busca resultados web públicos (incluye portales y páginas corporativas indexadas)."""
+    url = f"https://html.duckduckgo.com/html/?q={quote(query + ' Medellín Antioquia empleo práctica') }"
+    try:
+        response = requests.get(url, headers=HEADERS, timeout=15)
+        if response.status_code != 200:
+            return []
+        results = []
+        links = re.findall(r'class="result__a"[^>]*href="([^"]+)"[^>]*>(.*?)</a>', response.text, re.DOTALL)
+        snippets = re.findall(r'class="result__snippet"[^>]*>(.*?)</', response.text, re.DOTALL)
+        for index, (link, raw_title) in enumerate(links):
+            if "uddg=" in link:
+                link = re.search(r'[?&]uddg=([^&]+)', link).group(1)
+                link = unquote(link)
+            title = re.sub(r'<[^>]+>', ' ', unescape(raw_title))
+            title = re.sub(r'\s+', ' ', title).strip()
+            raw_snippet = snippets[index] if index < len(snippets) else ""
+            snippet = re.sub(r'<[^>]+>', ' ', unescape(raw_snippet))
+            snippet = re.sub(r'\s+', ' ', snippet).strip()
+            if not re.search(r'practic|práctic|estudian|ingenier|vacante|empleo|aprendiz|talento|convocatoria', f"{title} {snippet}", re.IGNORECASE):
+                continue
+            if title and link.startswith("http"):
+                company_match = re.search(r'"([^"]+)"', query)
+                results.append({
+                    "titulo": title,
+                    "empresa": company_match.group(1) if company_match else "Por identificar",
+                    "ubicacion": "Medellín / Antioquia (verificar en la oferta)",
+                    "url": link,
+                    "fecha_publicacion": "Resultado web; verificar vigencia",
+                    "fuente": f"Búsqueda web · {urlparse(link).netloc}",
+                    "resumen_fuente": snippet
+                })
+        return results
+    except Exception:
         return []
 
 def classify_and_score_job(job, config_ramas):
@@ -204,8 +256,10 @@ def classify_and_score_job(job, config_ramas):
     job["es_exclusiva_fisica"] = es_exclusiva_fisica
     job["es_cierre_inminente"] = es_cierre_inminente
     job["score_pensum"] = total_score
-    job["mision"] = mision_especifica if mision_especifica else f"Desarrollo de proyectos técnicos y operativos en {job.get('empresa', 'la empresa')}."
+    job["mision"] = job.get("resumen_fuente") or mision_especifica or f"Desarrollo de proyectos técnicos y operativos en {job.get('empresa', 'la empresa')}."
     job["tareas"] = tareas_especificas if tareas_especificas else "Apoyo en mediciones, modelado técnico, análisis de datos y reporte de resultados."
+    if job.get("resumen_fuente"):
+        job["tareas"] = "Resumen de búsqueda web. Abre la publicación original para confirmar funciones, requisitos y vigencia."
 
     return job
 
@@ -223,6 +277,15 @@ def build_full_html(vacantes, config_ramas):
   <title>Prácticas de Ingeniería Física • UNAL Medellín | Jimmy Rosero</title>
   <meta name="description" content="Portal de convocatorias prioritarias para estudiantes de Ingeniería Física de la Universidad Nacional de Colombia Sede Medellín. Creado por Jimmy Stebym Rosero Barrera.">
   <meta name="author" content="Jimmy Stebym Rosero Barrera">
+  <meta name="color-scheme" content="light dark">
+  <script>
+    try {{
+      const storedTheme = localStorage.getItem('ipf-theme');
+      const savedTheme = storedTheme === 'dark' || storedTheme === 'light' ? storedTheme : null;
+      const preferredTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      document.documentElement.dataset.theme = savedTheme || preferredTheme;
+    }} catch {{ document.documentElement.dataset.theme = 'light'; }}
+  </script>
   <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
@@ -246,6 +309,9 @@ def build_full_html(vacantes, config_ramas):
         <div>Exclusivas Física: <strong style="color: var(--accent-amber);">{total_exclusivas}</strong></div>
         <div>•</div>
         <div>Próximas a cerrar: <strong style="color: var(--accent-crimson);">{total_inminentes}</strong></div>
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Cambiar a modo oscuro" aria-pressed="false">
+          <span class="theme-toggle-icon" aria-hidden="true">◐</span><span class="theme-toggle-label">Modo oscuro</span>
+        </button>
       </div>
     </div>
   </header>
@@ -364,7 +430,7 @@ def build_full_html(vacantes, config_ramas):
               <div class="header-right">
                 <time class="job-date">${{j.fecha_publicacion}}</time>
                 <div class="info-trigger" tabindex="0">
-                  <span class="info-icon" title="Pasa el mouse para ver misiones">i</span>
+                  <span class="info-icon" title="Pasa el cursor sobre la convocatoria para ver su misión">+</span>
                   <div class="floating-cloud">
                     <div class="cloud-title">Misión & Contexto</div>
                     <div class="cloud-body">${{j.mision}}</div>
@@ -442,6 +508,21 @@ def build_full_html(vacantes, config_ramas):
       }}
     }}
 
+    function setTheme(theme) {{
+      document.documentElement.dataset.theme = theme;
+      try {{ localStorage.setItem('ipf-theme', theme); }} catch {{}}
+      const toggle = document.getElementById('themeToggle');
+      const isDark = theme === 'dark';
+      toggle.setAttribute('aria-pressed', String(isDark));
+      toggle.setAttribute('aria-label', isDark ? 'Cambiar a modo claro' : 'Cambiar a modo oscuro');
+      toggle.querySelector('.theme-toggle-label').textContent = isDark ? 'Modo claro' : 'Modo oscuro';
+      toggle.querySelector('.theme-toggle-icon').textContent = isDark ? '☼' : '◐';
+    }}
+
+    document.getElementById('themeToggle').addEventListener('click', () => {{
+      setTheme(document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark');
+    }});
+    setTheme(document.documentElement.dataset.theme || 'light');
     renderJobs(allJobs);
   </script>
 </body>
@@ -487,10 +568,11 @@ def main():
     all_raw_jobs = []
     seen_urls = set()
     
-    print(f"[*] Rastreando en vivo {len(SEARCH_QUERIES)} categorías del pénsum UNAL...")
+    print(f"[*] Rastreando LinkedIn y búsqueda web para {len(SEARCH_QUERIES)} categorías del pénsum UNAL...")
     for q in SEARCH_QUERIES:
         print(f" -> Buscando: '{q}'...")
         jobs = scrape_linkedin_query(q)
+        jobs.extend(scrape_web_query(q))
         added = 0
         for j in jobs:
             if j["url"] not in seen_urls:
@@ -499,6 +581,19 @@ def main():
                 added += 1
         print(f"    Encontradas {len(jobs)} ofertas (+{added} nuevas)")
         time.sleep(0.8)
+
+    # Descubre convocatorias publicadas en sitios corporativos indexados, no solo en portales.
+    company_directory = load_json(os.path.join(BASE_DIR, "empresas_antioquia.json"))
+    company_names = [item.get("empresa", "") for item in company_directory if item.get("empresa")]
+    company_names.extend(["Antioquia Gold", "Mineros S.A.", "Atico Mining", "Zijin-Continental Gold"])
+    company_queries = [f'"{name}" (practicante OR prácticas OR estudiante OR ingeniero) empleo Antioquia' for name in company_names]
+    print(f"[*] Revisando búsquedas de vacantes en {len(company_queries)} empresas de Antioquia...")
+    for q in company_queries:
+        for j in scrape_web_query(q):
+            if j["url"] not in seen_urls:
+                seen_urls.add(j["url"])
+                all_raw_jobs.append(j)
+        time.sleep(0.5)
         
     print(f"\n[*] Total de vacantes únicas recolectadas: {len(all_raw_jobs)}")
     print("[*] Clasificando y ordenando por afinidad al pénsum UNAL...")

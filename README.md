@@ -25,7 +25,7 @@ Rastrea en tiempo real vacantes en empresas industriales, centros de I+D, hospit
 Este proyecto fue construido aplicando estándares profesionales de **Desarrollo Web**:
 * **HTML5 100% Semántico:** Uso riguroso de `<header>`, `<nav>`, `<main>`, `<section>`, `<article>`, `<time>` y `<footer>` para máxima extractabilidad, accesibilidad y compatibilidad con rastreadores de IA.
 * **Separación de Responsabilidades:** Hoja de estilos externa e independiente (`estilos.css`) vinculada mediante `<link rel="stylesheet">`.
-* **Identidad Visual de Laboratorio:** Tipografía técnica con carácter (`Syne`, `JetBrains Mono` y `Outfit`), paleta de laboratorio (obsidiana, cian cuántico, ámbar y esmeralda) con retícula milimétrica en CSS puro.
+* **Identidad Visual de Laboratorio:** Tipografía técnica (`Syne`, `JetBrains Mono` y `Outfit`), paleta clara de papel, verde mineral y acentos de laboratorio. Las descripciones se despliegan al pasar el cursor por una convocatoria y también al navegar con teclado.
 * **Cero Plantillas Genéricas:** Se eliminaron las estéticas predecibles de IA (degradados morados sobre blanco, fuentes del sistema sobreusadas y tarjetas flotantes genéricas).
 
 ---
@@ -37,7 +37,8 @@ Este proyecto fue construido aplicando estándares profesionales de **Desarrollo
 ---
 
 ## 🚀 Arquitectura y Automatización
-* `bot_practicas.py`: Motor de rastreo y clasificación en Python.
+* `bot_practicas.py`: Motor de rastreo y clasificación en Python. Combina LinkedIn con búsquedas web públicas de ofertas indexadas en portales de empleo y páginas de empresas. Consulta también nombres del directorio `empresas_antioquia.json`, además de focos mineros como Antioquia Gold.
+* `empresas_antioquia.json`: Directorio de empresas y sectores para ampliar la búsqueda a empleadores locales.
 * `estilos.css`: Sistema de diseño visual y responsivo.
 * `index.html`: Dashboard interactivo con buscador en vivo y filtros por pestañas:
   * **💼 Todas las Vacantes**
@@ -45,3 +46,6 @@ Este proyecto fue construido aplicando estándares profesionales de **Desarrollo
   * **⏳ Próximas a Finalizar (< 5 Días)**
   * **📝 Guía & Tips para la Hoja de Vida**
 * `.github/workflows/auto_update.yml`: Flujo de GitHub Actions que ejecuta el bot automáticamente todos los días en la nube y despliega los resultados a GitHub Pages sin requerir servidores de pago ni computadores encendidos.
+
+### Cobertura de fuentes
+La búsqueda web puede encontrar páginas públicas que los buscadores tengan indexadas, incluidos resultados de Magneto, Computrabajo/Pandapé, elempleo y sitios corporativos. No garantiza cubrir todo Internet: algunos portales requieren iniciar sesión, bloquean rastreadores o publican vacantes que aún no están indexadas. Las fechas y el estado de cada resultado se deben confirmar en la publicación original; los resúmenes web se distinguen de las misiones inferidas por área.

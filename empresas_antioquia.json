@@ -1,5 +1,15 @@
 [
   {
+    "empresa": "Antioquia Gold Ltd.",
+    "ubicacion": "Medellín y Nordeste antioqueño",
+    "ramas": ["Instrumentación y Metrología Industrial", "Materiales, Nanotecnología y Ensayos", "Energía, Potencia y Renovables", "Análisis de Datos, IA y Simulaciones"],
+    "perfil_buscado": "Operaciones mineras, mantenimiento electromecánico, instrumentación, laboratorio de minerales, metalurgia, análisis de datos y procesos.",
+    "portal_practicas": "https://antioquiagold.pandape.computrabajo.com/",
+    "plataforma": "Pandapé / Computrabajo, LinkedIn y Servicio Público de Empleo",
+    "modalidad": "Validar en cada convocatoria",
+    "temporada_convocatoria": "Convocatorias según necesidad"
+  },
+  {
     "empresa": "Empresas Públicas de Medellín (EPM)",
     "ubicacion": "Medellín, Antioquia",
     "ramas": ["Energía, Potencia y Renovables", "Automatización, Instrumentación y Control", "I+D, Innovación y Deep Tech"],

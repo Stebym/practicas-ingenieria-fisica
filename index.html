@@ -6,6 +6,15 @@
   <title>Prácticas de Ingeniería Física • UNAL Medellín | Jimmy Rosero</title>
   <meta name="description" content="Portal de convocatorias prioritarias para estudiantes de Ingeniería Física de la Universidad Nacional de Colombia Sede Medellín. Creado por Jimmy Stebym Rosero Barrera.">
   <meta name="author" content="Jimmy Stebym Rosero Barrera">
+  <meta name="color-scheme" content="light dark">
+  <script>
+    try {
+      const storedTheme = localStorage.getItem('ipf-theme');
+      const savedTheme = storedTheme === 'dark' || storedTheme === 'light' ? storedTheme : null;
+      const preferredTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      document.documentElement.dataset.theme = savedTheme || preferredTheme;
+    } catch { document.documentElement.dataset.theme = 'light'; }
+  </script>
   <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
@@ -29,6 +38,9 @@
         <div>Exclusivas Física: <strong style="color: var(--accent-amber);">2</strong></div>
         <div>•</div>
         <div>Próximas a cerrar: <strong style="color: var(--accent-crimson);">49</strong></div>
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Cambiar a modo oscuro" aria-pressed="false">
+          <span class="theme-toggle-icon" aria-hidden="true">◐</span><span class="theme-toggle-label">Modo oscuro</span>
+        </button>
       </div>
     </div>
   </header>
@@ -147,7 +159,7 @@
               <div class="header-right">
                 <time class="job-date">${j.fecha_publicacion}</time>
                 <div class="info-trigger" tabindex="0">
-                  <span class="info-icon" title="Pasa el mouse para ver misiones">i</span>
+                  <span class="info-icon" title="Pasa el cursor sobre la convocatoria para ver su misión">+</span>
                   <div class="floating-cloud">
                     <div class="cloud-title">Misión & Contexto</div>
                     <div class="cloud-body">${j.mision}</div>
@@ -225,6 +237,21 @@
       }
     }
 
+    function setTheme(theme) {
+      document.documentElement.dataset.theme = theme;
+      try { localStorage.setItem('ipf-theme', theme); } catch {}
+      const toggle = document.getElementById('themeToggle');
+      const isDark = theme === 'dark';
+      toggle.setAttribute('aria-pressed', String(isDark));
+      toggle.setAttribute('aria-label', isDark ? 'Cambiar a modo claro' : 'Cambiar a modo oscuro');
+      toggle.querySelector('.theme-toggle-label').textContent = isDark ? 'Modo claro' : 'Modo oscuro';
+      toggle.querySelector('.theme-toggle-icon').textContent = isDark ? '☼' : '◐';
+    }
+
+    document.getElementById('themeToggle').addEventListener('click', () => {
+      setTheme(document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark');
+    });
+    setTheme(document.documentElement.dataset.theme || 'light');
     renderJobs(allJobs);
   </script>
 </body>

@@ -1,57 +1,5 @@
 [
   {
-    "titulo": "Programa Mujer STEM en Solenis",
-    "empresa": "Solenis",
-    "ubicacion": "Medellin, Antioquia, Colombia",
-    "url": "https://co.linkedin.com/jobs/view/programa-mujer-stem-en-solenis-at-solenis-4398641773",
-    "fecha_publicacion": "Hace 6 meses",
-    "fuente": "LinkedIn Jobs",
-    "ramas": [
-      {
-        "clave": "mujeres_stem",
-        "nombre": "Mujeres en STEM / Ingeniería",
-        "color": "#ec4899",
-        "score": 106
-      }
-    ],
-    "rama_principal": "Mujeres en STEM / Ingeniería",
-    "color_principal": "#ec4899",
-    "clave_principal": "mujeres_stem",
-    "afinidad": "Mujeres en STEM",
-    "es_mujeres_stem": true,
-    "es_exclusiva_fisica": false,
-    "es_cierre_inminente": false,
-    "score_pensum": 256,
-    "mision": "Programa especializado para potenciar el talento de mujeres ingenieras en áreas científicas, tecnológicas y de liderazgo industrial.",
-    "tareas": "Desarrollo de proyectos de innovación tecnológica, mentoría con líderes de ingeniería, rotación técnica y vinculación directa."
-  },
-  {
-    "titulo": "Programa Woman STEM",
-    "empresa": "Solenis",
-    "ubicacion": "Medellin, Antioquia, Colombia",
-    "url": "https://co.linkedin.com/jobs/view/programa-woman-stem-at-solenis-4331741683",
-    "fecha_publicacion": "Hace 11 meses",
-    "fuente": "LinkedIn Jobs",
-    "ramas": [
-      {
-        "clave": "mujeres_stem",
-        "nombre": "Mujeres en STEM / Ingeniería",
-        "color": "#ec4899",
-        "score": 103
-      }
-    ],
-    "rama_principal": "Mujeres en STEM / Ingeniería",
-    "color_principal": "#ec4899",
-    "clave_principal": "mujeres_stem",
-    "afinidad": "Mujeres en STEM",
-    "es_mujeres_stem": true,
-    "es_exclusiva_fisica": false,
-    "es_cierre_inminente": true,
-    "score_pensum": 253,
-    "mision": "Programa especializado para potenciar el talento de mujeres ingenieras en áreas científicas, tecnológicas y de liderazgo industrial.",
-    "tareas": "Desarrollo de proyectos de innovación tecnológica, mentoría con líderes de ingeniería, rotación técnica y vinculación directa."
-  },
-  {
     "titulo": "BIM/CAD Systems Implementation Specialist",
     "empresa": "Hatch",
     "ubicacion": "Medellin, Antioquia, Colombia",
@@ -59,12 +7,6 @@
     "fecha_publicacion": "Hace 2 semanas",
     "fuente": "LinkedIn Jobs",
     "ramas": [
-      {
-        "clave": "mujeres_stem",
-        "nombre": "Mujeres en STEM / Ingeniería",
-        "color": "#ec4899",
-        "score": 103
-      },
       {
         "clave": "simulaciones_datos_ia",
         "nombre": "Análisis de Datos, IA y Simulaciones",
@@ -78,16 +20,65 @@
         "score": 23
       }
     ],
-    "rama_principal": "Mujeres en STEM / Ingeniería",
-    "color_principal": "#ec4899",
-    "clave_principal": "mujeres_stem",
-    "afinidad": "Mujeres en STEM",
-    "es_mujeres_stem": true,
+    "rama_principal": "Análisis de Datos, IA y Simulaciones",
+    "color_principal": "#06b6d4",
+    "clave_principal": "simulaciones_datos_ia",
+    "afinidad": "Alta Afinidad Pénsum",
     "es_exclusiva_fisica": false,
     "es_cierre_inminente": true,
-    "score_pensum": 253,
-    "mision": "Programa especializado para potenciar el talento de mujeres ingenieras en áreas científicas, tecnológicas y de liderazgo industrial.",
-    "tareas": "Desarrollo de proyectos de innovación tecnológica, mentoría con líderes de ingeniería, rotación técnica y vinculación directa."
+    "score_pensum": 223,
+    "mision": "Modelamiento matemático, pipelines de datos, simulación numérica de procesos y entrenamiento de algoritmos predictivos e IA.",
+    "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables."
+  },
+  {
+    "titulo": "Programa Mujer STEM en Solenis",
+    "empresa": "Solenis",
+    "ubicacion": "Medellin, Antioquia, Colombia",
+    "url": "https://co.linkedin.com/jobs/view/programa-mujer-stem-en-solenis-at-solenis-4398641773",
+    "fecha_publicacion": "Hace 6 meses",
+    "fuente": "LinkedIn Jobs",
+    "ramas": [
+      {
+        "clave": "general",
+        "nombre": "Ingeniería General / Operaciones",
+        "color": "#64748b",
+        "score": 5
+      }
+    ],
+    "rama_principal": "Ingeniería General / Operaciones",
+    "color_principal": "#64748b",
+    "clave_principal": "general",
+    "afinidad": "General",
+    "es_exclusiva_fisica": false,
+    "es_cierre_inminente": false,
+    "score_pensum": 160,
+    "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Solenis.",
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
+  },
+  {
+    "titulo": "Programa Woman STEM",
+    "empresa": "Solenis",
+    "ubicacion": "Medellin, Antioquia, Colombia",
+    "url": "https://co.linkedin.com/jobs/view/programa-woman-stem-at-solenis-4331741683",
+    "fecha_publicacion": "Hace 11 meses",
+    "fuente": "LinkedIn Jobs",
+    "ramas": [
+      {
+        "clave": "general",
+        "nombre": "Ingeniería General / Operaciones",
+        "color": "#64748b",
+        "score": 5
+      }
+    ],
+    "rama_principal": "Ingeniería General / Operaciones",
+    "color_principal": "#64748b",
+    "clave_principal": "general",
+    "afinidad": "General",
+    "es_exclusiva_fisica": false,
+    "es_cierre_inminente": true,
+    "score_pensum": 160,
+    "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Solenis.",
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
   },
   {
     "titulo": "AUXILIAR DE METROLOGIA - MEDELLIN",
@@ -114,300 +105,11 @@
     "color_principal": "#06b6d4",
     "clave_principal": "simulaciones_datos_ia",
     "afinidad": "Exclusiva Física",
-    "es_mujeres_stem": false,
     "es_exclusiva_fisica": true,
     "es_cierre_inminente": true,
-    "score_pensum": 143,
+    "score_pensum": 148,
     "mision": "Modelamiento matemático, pipelines de datos, simulación numérica de procesos y entrenamiento de algoritmos predictivos e IA.",
     "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables."
-  },
-  {
-    "titulo": "Búsqueda Candidatos SENA Tecnología",
-    "empresa": "Accenture Colombia",
-    "ubicacion": "Medellin, Antioquia, Colombia",
-    "url": "https://co.linkedin.com/jobs/view/b%C3%BAsqueda-candidatos-sena-tecnolog%C3%ADa-at-accenture-colombia-4476256438",
-    "fecha_publicacion": "Hace 1 semana",
-    "fuente": "LinkedIn Jobs",
-    "ramas": [
-      {
-        "clave": "mujeres_stem",
-        "nombre": "Mujeres en STEM / Ingeniería",
-        "color": "#ec4899",
-        "score": 104
-      },
-      {
-        "clave": "simulaciones_datos_ia",
-        "nombre": "Análisis de Datos, IA y Simulaciones",
-        "color": "#06b6d4",
-        "score": 66
-      }
-    ],
-    "rama_principal": "Mujeres en STEM / Ingeniería",
-    "color_principal": "#ec4899",
-    "clave_principal": "mujeres_stem",
-    "afinidad": "Alta Afinidad Pénsum",
-    "es_mujeres_stem": false,
-    "es_exclusiva_fisica": false,
-    "es_cierre_inminente": true,
-    "score_pensum": 104,
-    "mision": "Programa especializado para potenciar el talento de mujeres ingenieras en áreas científicas, tecnológicas y de liderazgo industrial.",
-    "tareas": "Desarrollo de proyectos de innovación tecnológica, mentoría con líderes de ingeniería, rotación técnica y vinculación directa."
-  },
-  {
-    "titulo": "Programa de Prácticas – Operations (Administración, Finanzas y Economía)",
-    "empresa": "Accenture Colombia",
-    "ubicacion": "Medellin, Antioquia, Colombia",
-    "url": "https://co.linkedin.com/jobs/view/programa-de-pr%C3%A1cticas-%E2%80%93-operations-administraci%C3%B3n-finanzas-y-econom%C3%ADa-at-accenture-colombia-4457664113",
-    "fecha_publicacion": "Hace 1 mes",
-    "fuente": "LinkedIn Jobs",
-    "ramas": [
-      {
-        "clave": "mujeres_stem",
-        "nombre": "Mujeres en STEM / Ingeniería",
-        "color": "#ec4899",
-        "score": 104
-      },
-      {
-        "clave": "simulaciones_datos_ia",
-        "nombre": "Análisis de Datos, IA y Simulaciones",
-        "color": "#06b6d4",
-        "score": 63
-      }
-    ],
-    "rama_principal": "Mujeres en STEM / Ingeniería",
-    "color_principal": "#ec4899",
-    "clave_principal": "mujeres_stem",
-    "afinidad": "Alta Afinidad Pénsum",
-    "es_mujeres_stem": false,
-    "es_exclusiva_fisica": false,
-    "es_cierre_inminente": true,
-    "score_pensum": 104,
-    "mision": "Programa especializado para potenciar el talento de mujeres ingenieras en áreas científicas, tecnológicas y de liderazgo industrial.",
-    "tareas": "Desarrollo de proyectos de innovación tecnológica, mentoría con líderes de ingeniería, rotación técnica y vinculación directa."
-  },
-  {
-    "titulo": "Practicantes de finanzas- Medellín",
-    "empresa": "Accenture Colombia",
-    "ubicacion": "Medellin, Antioquia, Colombia",
-    "url": "https://co.linkedin.com/jobs/view/practicantes-de-finanzas-medell%C3%ADn-at-accenture-colombia-4468177314",
-    "fecha_publicacion": "Hace 4 semanas",
-    "fuente": "LinkedIn Jobs",
-    "ramas": [
-      {
-        "clave": "mujeres_stem",
-        "nombre": "Mujeres en STEM / Ingeniería",
-        "color": "#ec4899",
-        "score": 104
-      },
-      {
-        "clave": "simulaciones_datos_ia",
-        "nombre": "Análisis de Datos, IA y Simulaciones",
-        "color": "#06b6d4",
-        "score": 63
-      }
-    ],
-    "rama_principal": "Mujeres en STEM / Ingeniería",
-    "color_principal": "#ec4899",
-    "clave_principal": "mujeres_stem",
-    "afinidad": "Alta Afinidad Pénsum",
-    "es_mujeres_stem": false,
-    "es_exclusiva_fisica": false,
-    "es_cierre_inminente": false,
-    "score_pensum": 104,
-    "mision": "Programa especializado para potenciar el talento de mujeres ingenieras en áreas científicas, tecnológicas y de liderazgo industrial.",
-    "tareas": "Desarrollo de proyectos de innovación tecnológica, mentoría con líderes de ingeniería, rotación técnica y vinculación directa."
-  },
-  {
-    "titulo": "Búsqueda Candidatos: Estudiantes SENA Finanzas-Contabilidad",
-    "empresa": "Accenture Colombia",
-    "ubicacion": "Medellin, Antioquia, Colombia",
-    "url": "https://co.linkedin.com/jobs/view/b%C3%BAsqueda-candidatos-estudiantes-sena-finanzas-contabilidad-at-accenture-colombia-4377600731",
-    "fecha_publicacion": "Hace 1 mes",
-    "fuente": "LinkedIn Jobs",
-    "ramas": [
-      {
-        "clave": "mujeres_stem",
-        "nombre": "Mujeres en STEM / Ingeniería",
-        "color": "#ec4899",
-        "score": 104
-      },
-      {
-        "clave": "simulaciones_datos_ia",
-        "nombre": "Análisis de Datos, IA y Simulaciones",
-        "color": "#06b6d4",
-        "score": 66
-      }
-    ],
-    "rama_principal": "Mujeres en STEM / Ingeniería",
-    "color_principal": "#ec4899",
-    "clave_principal": "mujeres_stem",
-    "afinidad": "Alta Afinidad Pénsum",
-    "es_mujeres_stem": false,
-    "es_exclusiva_fisica": false,
-    "es_cierre_inminente": true,
-    "score_pensum": 104,
-    "mision": "Programa especializado para potenciar el talento de mujeres ingenieras en áreas científicas, tecnológicas y de liderazgo industrial.",
-    "tareas": "Desarrollo de proyectos de innovación tecnológica, mentoría con líderes de ingeniería, rotación técnica y vinculación directa."
-  },
-  {
-    "titulo": "QA Automatizador- IA",
-    "empresa": "Accenture Colombia",
-    "ubicacion": "Medellin, Antioquia, Colombia",
-    "url": "https://co.linkedin.com/jobs/view/qa-automatizador-ia-at-accenture-colombia-4459435209",
-    "fecha_publicacion": "Hace 1 mes",
-    "fuente": "LinkedIn Jobs",
-    "ramas": [
-      {
-        "clave": "mujeres_stem",
-        "nombre": "Mujeres en STEM / Ingeniería",
-        "color": "#ec4899",
-        "score": 104
-      },
-      {
-        "clave": "simulaciones_datos_ia",
-        "nombre": "Análisis de Datos, IA y Simulaciones",
-        "color": "#06b6d4",
-        "score": 63
-      }
-    ],
-    "rama_principal": "Mujeres en STEM / Ingeniería",
-    "color_principal": "#ec4899",
-    "clave_principal": "mujeres_stem",
-    "afinidad": "Alta Afinidad Pénsum",
-    "es_mujeres_stem": false,
-    "es_exclusiva_fisica": false,
-    "es_cierre_inminente": true,
-    "score_pensum": 104,
-    "mision": "Programa especializado para potenciar el talento de mujeres ingenieras en áreas científicas, tecnológicas y de liderazgo industrial.",
-    "tareas": "Desarrollo de proyectos de innovación tecnológica, mentoría con líderes de ingeniería, rotación técnica y vinculación directa."
-  },
-  {
-    "titulo": "QA Automatizador (SDET)",
-    "empresa": "Accenture Colombia",
-    "ubicacion": "Medellin, Antioquia, Colombia",
-    "url": "https://co.linkedin.com/jobs/view/qa-automatizador-sdet-at-accenture-colombia-4472842048",
-    "fecha_publicacion": "Hace 2 semanas",
-    "fuente": "LinkedIn Jobs",
-    "ramas": [
-      {
-        "clave": "mujeres_stem",
-        "nombre": "Mujeres en STEM / Ingeniería",
-        "color": "#ec4899",
-        "score": 104
-      },
-      {
-        "clave": "simulaciones_datos_ia",
-        "nombre": "Análisis de Datos, IA y Simulaciones",
-        "color": "#06b6d4",
-        "score": 63
-      }
-    ],
-    "rama_principal": "Mujeres en STEM / Ingeniería",
-    "color_principal": "#ec4899",
-    "clave_principal": "mujeres_stem",
-    "afinidad": "Alta Afinidad Pénsum",
-    "es_mujeres_stem": false,
-    "es_exclusiva_fisica": false,
-    "es_cierre_inminente": true,
-    "score_pensum": 104,
-    "mision": "Programa especializado para potenciar el talento de mujeres ingenieras en áreas científicas, tecnológicas y de liderazgo industrial.",
-    "tareas": "Desarrollo de proyectos de innovación tecnológica, mentoría con líderes de ingeniería, rotación técnica y vinculación directa."
-  },
-  {
-    "titulo": "Prácticas profesionales - Recursos humanos",
-    "empresa": "Accenture Colombia",
-    "ubicacion": "Medellin, Antioquia, Colombia",
-    "url": "https://co.linkedin.com/jobs/view/pr%C3%A1cticas-profesionales-recursos-humanos-at-accenture-colombia-4456097377",
-    "fecha_publicacion": "Hace 1 mes",
-    "fuente": "LinkedIn Jobs",
-    "ramas": [
-      {
-        "clave": "mujeres_stem",
-        "nombre": "Mujeres en STEM / Ingeniería",
-        "color": "#ec4899",
-        "score": 104
-      },
-      {
-        "clave": "simulaciones_datos_ia",
-        "nombre": "Análisis de Datos, IA y Simulaciones",
-        "color": "#06b6d4",
-        "score": 63
-      }
-    ],
-    "rama_principal": "Mujeres en STEM / Ingeniería",
-    "color_principal": "#ec4899",
-    "clave_principal": "mujeres_stem",
-    "afinidad": "Alta Afinidad Pénsum",
-    "es_mujeres_stem": false,
-    "es_exclusiva_fisica": false,
-    "es_cierre_inminente": true,
-    "score_pensum": 104,
-    "mision": "Programa especializado para potenciar el talento de mujeres ingenieras en áreas científicas, tecnológicas y de liderazgo industrial.",
-    "tareas": "Desarrollo de proyectos de innovación tecnológica, mentoría con líderes de ingeniería, rotación técnica y vinculación directa."
-  },
-  {
-    "titulo": "Agente de Compras - Procurement Processor (Portugues Obligatorio) Analyst",
-    "empresa": "Accenture Colombia",
-    "ubicacion": "Medellin, Antioquia, Colombia",
-    "url": "https://co.linkedin.com/jobs/view/agente-de-compras-procurement-processor-portugues-obligatorio-analyst-at-accenture-colombia-4480424604",
-    "fecha_publicacion": "Hace 4 horas",
-    "fuente": "LinkedIn Jobs",
-    "ramas": [
-      {
-        "clave": "mujeres_stem",
-        "nombre": "Mujeres en STEM / Ingeniería",
-        "color": "#ec4899",
-        "score": 104
-      },
-      {
-        "clave": "simulaciones_datos_ia",
-        "nombre": "Análisis de Datos, IA y Simulaciones",
-        "color": "#06b6d4",
-        "score": 63
-      }
-    ],
-    "rama_principal": "Mujeres en STEM / Ingeniería",
-    "color_principal": "#ec4899",
-    "clave_principal": "mujeres_stem",
-    "afinidad": "Alta Afinidad Pénsum",
-    "es_mujeres_stem": false,
-    "es_exclusiva_fisica": false,
-    "es_cierre_inminente": true,
-    "score_pensum": 104,
-    "mision": "Programa especializado para potenciar el talento de mujeres ingenieras en áreas científicas, tecnológicas y de liderazgo industrial.",
-    "tareas": "Desarrollo de proyectos de innovación tecnológica, mentoría con líderes de ingeniería, rotación técnica y vinculación directa."
-  },
-  {
-    "titulo": "Agente de Compras - Procurement Processor (Portugues Deseable) Analyst (CL11)/Associate (CL12)",
-    "empresa": "Accenture Colombia",
-    "ubicacion": "Medellin, Antioquia, Colombia",
-    "url": "https://co.linkedin.com/jobs/view/agente-de-compras-procurement-processor-portugues-deseable-analyst-cl11-associate-cl12-at-accenture-colombia-4472359651",
-    "fecha_publicacion": "Hace 2 semanas",
-    "fuente": "LinkedIn Jobs",
-    "ramas": [
-      {
-        "clave": "mujeres_stem",
-        "nombre": "Mujeres en STEM / Ingeniería",
-        "color": "#ec4899",
-        "score": 104
-      },
-      {
-        "clave": "simulaciones_datos_ia",
-        "nombre": "Análisis de Datos, IA y Simulaciones",
-        "color": "#06b6d4",
-        "score": 63
-      }
-    ],
-    "rama_principal": "Mujeres en STEM / Ingeniería",
-    "color_principal": "#ec4899",
-    "clave_principal": "mujeres_stem",
-    "afinidad": "Alta Afinidad Pénsum",
-    "es_mujeres_stem": false,
-    "es_exclusiva_fisica": false,
-    "es_cierre_inminente": true,
-    "score_pensum": 104,
-    "mision": "Programa especializado para potenciar el talento de mujeres ingenieras en áreas científicas, tecnológicas y de liderazgo industrial.",
-    "tareas": "Desarrollo de proyectos de innovación tecnológica, mentoría con líderes de ingeniería, rotación técnica y vinculación directa."
   },
   {
     "titulo": "METROLOGO DE SURTIDORES - MEDELLIN",
@@ -428,10 +130,9 @@
     "color_principal": "#64748b",
     "clave_principal": "general",
     "afinidad": "General",
-    "es_mujeres_stem": false,
     "es_exclusiva_fisica": true,
     "es_cierre_inminente": true,
-    "score_pensum": 80,
+    "score_pensum": 85,
     "mision": "Apoyo en el área de ingeniería y operaciones técnicas en ICONTEC.",
     "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
   },
@@ -454,10 +155,34 @@
     "color_principal": "#06b6d4",
     "clave_principal": "simulaciones_datos_ia",
     "afinidad": "Alta Afinidad Pénsum",
-    "es_mujeres_stem": false,
     "es_exclusiva_fisica": false,
     "es_cierre_inminente": true,
     "score_pensum": 69,
+    "mision": "Modelamiento matemático, pipelines de datos, simulación numérica de procesos y entrenamiento de algoritmos predictivos e IA.",
+    "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables."
+  },
+  {
+    "titulo": "Búsqueda Candidatos SENA Tecnología",
+    "empresa": "Accenture Colombia",
+    "ubicacion": "Medellin, Antioquia, Colombia",
+    "url": "https://co.linkedin.com/jobs/view/b%C3%BAsqueda-candidatos-sena-tecnolog%C3%ADa-at-accenture-colombia-4476256438",
+    "fecha_publicacion": "Hace 1 semana",
+    "fuente": "LinkedIn Jobs",
+    "ramas": [
+      {
+        "clave": "simulaciones_datos_ia",
+        "nombre": "Análisis de Datos, IA y Simulaciones",
+        "color": "#06b6d4",
+        "score": 66
+      }
+    ],
+    "rama_principal": "Análisis de Datos, IA y Simulaciones",
+    "color_principal": "#06b6d4",
+    "clave_principal": "simulaciones_datos_ia",
+    "afinidad": "Alta Afinidad Pénsum",
+    "es_exclusiva_fisica": false,
+    "es_cierre_inminente": true,
+    "score_pensum": 66,
     "mision": "Modelamiento matemático, pipelines de datos, simulación numérica de procesos y entrenamiento de algoritmos predictivos e IA.",
     "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables."
   },
@@ -480,59 +205,6 @@
     "color_principal": "#06b6d4",
     "clave_principal": "simulaciones_datos_ia",
     "afinidad": "Alta Afinidad Pénsum",
-    "es_mujeres_stem": false,
-    "es_exclusiva_fisica": false,
-    "es_cierre_inminente": true,
-    "score_pensum": 66,
-    "mision": "Modelamiento matemático, pipelines de datos, simulación numérica de procesos y entrenamiento de algoritmos predictivos e IA.",
-    "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables."
-  },
-  {
-    "titulo": "Data Management and BI Senior Executive, GOC",
-    "empresa": "WPP Media",
-    "ubicacion": "Medellin, Antioquia, Colombia",
-    "url": "https://co.linkedin.com/jobs/view/data-management-and-bi-senior-executive-goc-at-wpp-media-4463046799",
-    "fecha_publicacion": "Hace 3 semanas",
-    "fuente": "LinkedIn Jobs",
-    "ramas": [
-      {
-        "clave": "simulaciones_datos_ia",
-        "nombre": "Análisis de Datos, IA y Simulaciones",
-        "color": "#06b6d4",
-        "score": 66
-      }
-    ],
-    "rama_principal": "Análisis de Datos, IA y Simulaciones",
-    "color_principal": "#06b6d4",
-    "clave_principal": "simulaciones_datos_ia",
-    "afinidad": "Alta Afinidad Pénsum",
-    "es_mujeres_stem": false,
-    "es_exclusiva_fisica": false,
-    "es_cierre_inminente": false,
-    "score_pensum": 66,
-    "mision": "Modelamiento matemático, pipelines de datos, simulación numérica de procesos y entrenamiento de algoritmos predictivos e IA.",
-    "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables."
-  },
-  {
-    "titulo": "Advanced Analytics Senior Executive, GOC",
-    "empresa": "WPP Media",
-    "ubicacion": "Medellin, Antioquia, Colombia",
-    "url": "https://co.linkedin.com/jobs/view/advanced-analytics-senior-executive-goc-at-wpp-media-4435960328",
-    "fecha_publicacion": "Hace 2 meses",
-    "fuente": "LinkedIn Jobs",
-    "ramas": [
-      {
-        "clave": "simulaciones_datos_ia",
-        "nombre": "Análisis de Datos, IA y Simulaciones",
-        "color": "#06b6d4",
-        "score": 66
-      }
-    ],
-    "rama_principal": "Análisis de Datos, IA y Simulaciones",
-    "color_principal": "#06b6d4",
-    "clave_principal": "simulaciones_datos_ia",
-    "afinidad": "Alta Afinidad Pénsum",
-    "es_mujeres_stem": false,
     "es_exclusiva_fisica": false,
     "es_cierre_inminente": true,
     "score_pensum": 66,
@@ -558,7 +230,6 @@
     "color_principal": "#06b6d4",
     "clave_principal": "simulaciones_datos_ia",
     "afinidad": "Alta Afinidad Pénsum",
-    "es_mujeres_stem": false,
     "es_exclusiva_fisica": false,
     "es_cierre_inminente": true,
     "score_pensum": 66,
@@ -570,7 +241,7 @@
     "empresa": "WPP Media",
     "ubicacion": "Medellin, Antioquia, Colombia",
     "url": "https://co.linkedin.com/jobs/view/associate-insights-analytics-goc-at-wpp-media-4478630549",
-    "fecha_publicacion": "Hace 8 horas",
+    "fecha_publicacion": "Hace 9 horas",
     "fuente": "LinkedIn Jobs",
     "ramas": [
       {
@@ -584,7 +255,56 @@
     "color_principal": "#06b6d4",
     "clave_principal": "simulaciones_datos_ia",
     "afinidad": "Alta Afinidad Pénsum",
-    "es_mujeres_stem": false,
+    "es_exclusiva_fisica": false,
+    "es_cierre_inminente": true,
+    "score_pensum": 66,
+    "mision": "Modelamiento matemático, pipelines de datos, simulación numérica de procesos y entrenamiento de algoritmos predictivos e IA.",
+    "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables."
+  },
+  {
+    "titulo": "Advanced Analytics Senior Executive, GOC",
+    "empresa": "WPP Media",
+    "ubicacion": "Medellin, Antioquia, Colombia",
+    "url": "https://co.linkedin.com/jobs/view/advanced-analytics-senior-executive-goc-at-wpp-media-4435960328",
+    "fecha_publicacion": "Hace 2 meses",
+    "fuente": "LinkedIn Jobs",
+    "ramas": [
+      {
+        "clave": "simulaciones_datos_ia",
+        "nombre": "Análisis de Datos, IA y Simulaciones",
+        "color": "#06b6d4",
+        "score": 66
+      }
+    ],
+    "rama_principal": "Análisis de Datos, IA y Simulaciones",
+    "color_principal": "#06b6d4",
+    "clave_principal": "simulaciones_datos_ia",
+    "afinidad": "Alta Afinidad Pénsum",
+    "es_exclusiva_fisica": false,
+    "es_cierre_inminente": true,
+    "score_pensum": 66,
+    "mision": "Modelamiento matemático, pipelines de datos, simulación numérica de procesos y entrenamiento de algoritmos predictivos e IA.",
+    "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables."
+  },
+  {
+    "titulo": "Búsqueda Candidatos: Estudiantes SENA Finanzas-Contabilidad",
+    "empresa": "Accenture Colombia",
+    "ubicacion": "Medellin, Antioquia, Colombia",
+    "url": "https://co.linkedin.com/jobs/view/b%C3%BAsqueda-candidatos-estudiantes-sena-finanzas-contabilidad-at-accenture-colombia-4377600731",
+    "fecha_publicacion": "Hace 1 mes",
+    "fuente": "LinkedIn Jobs",
+    "ramas": [
+      {
+        "clave": "simulaciones_datos_ia",
+        "nombre": "Análisis de Datos, IA y Simulaciones",
+        "color": "#06b6d4",
+        "score": 66
+      }
+    ],
+    "rama_principal": "Análisis de Datos, IA y Simulaciones",
+    "color_principal": "#06b6d4",
+    "clave_principal": "simulaciones_datos_ia",
+    "afinidad": "Alta Afinidad Pénsum",
     "es_exclusiva_fisica": false,
     "es_cierre_inminente": true,
     "score_pensum": 66,
@@ -610,7 +330,6 @@
     "color_principal": "#06b6d4",
     "clave_principal": "simulaciones_datos_ia",
     "afinidad": "Alta Afinidad Pénsum",
-    "es_mujeres_stem": false,
     "es_exclusiva_fisica": false,
     "es_cierre_inminente": true,
     "score_pensum": 63,
@@ -636,7 +355,31 @@
     "color_principal": "#06b6d4",
     "clave_principal": "simulaciones_datos_ia",
     "afinidad": "Alta Afinidad Pénsum",
-    "es_mujeres_stem": false,
+    "es_exclusiva_fisica": false,
+    "es_cierre_inminente": true,
+    "score_pensum": 63,
+    "mision": "Modelamiento matemático, pipelines de datos, simulación numérica de procesos y entrenamiento de algoritmos predictivos e IA.",
+    "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables."
+  },
+  {
+    "titulo": "Programa de Prácticas – Operations (Administración, Finanzas y Economía)",
+    "empresa": "Accenture Colombia",
+    "ubicacion": "Medellin, Antioquia, Colombia",
+    "url": "https://co.linkedin.com/jobs/view/programa-de-pr%C3%A1cticas-%E2%80%93-operations-administraci%C3%B3n-finanzas-y-econom%C3%ADa-at-accenture-colombia-4457664113",
+    "fecha_publicacion": "Hace 1 mes",
+    "fuente": "LinkedIn Jobs",
+    "ramas": [
+      {
+        "clave": "simulaciones_datos_ia",
+        "nombre": "Análisis de Datos, IA y Simulaciones",
+        "color": "#06b6d4",
+        "score": 63
+      }
+    ],
+    "rama_principal": "Análisis de Datos, IA y Simulaciones",
+    "color_principal": "#06b6d4",
+    "clave_principal": "simulaciones_datos_ia",
+    "afinidad": "Alta Afinidad Pénsum",
     "es_exclusiva_fisica": false,
     "es_cierre_inminente": true,
     "score_pensum": 63,
@@ -662,7 +405,6 @@
     "color_principal": "#06b6d4",
     "clave_principal": "simulaciones_datos_ia",
     "afinidad": "Alta Afinidad Pénsum",
-    "es_mujeres_stem": false,
     "es_exclusiva_fisica": false,
     "es_cierre_inminente": true,
     "score_pensum": 63,
@@ -670,10 +412,35 @@
     "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables."
   },
   {
-    "titulo": "Epic Radiant &amp; Mammography Analyst",
-    "empresa": "InterScripts, Inc.",
+    "titulo": "Practicantes de finanzas- Medellín",
+    "empresa": "Accenture Colombia",
     "ubicacion": "Medellin, Antioquia, Colombia",
-    "url": "https://co.linkedin.com/jobs/view/epic-radiant-mammography-analyst-at-interscripts-inc-4461386446",
+    "url": "https://co.linkedin.com/jobs/view/practicantes-de-finanzas-medell%C3%ADn-at-accenture-colombia-4468177314",
+    "fecha_publicacion": "Hace 4 semanas",
+    "fuente": "LinkedIn Jobs",
+    "ramas": [
+      {
+        "clave": "simulaciones_datos_ia",
+        "nombre": "Análisis de Datos, IA y Simulaciones",
+        "color": "#06b6d4",
+        "score": 63
+      }
+    ],
+    "rama_principal": "Análisis de Datos, IA y Simulaciones",
+    "color_principal": "#06b6d4",
+    "clave_principal": "simulaciones_datos_ia",
+    "afinidad": "Alta Afinidad Pénsum",
+    "es_exclusiva_fisica": false,
+    "es_cierre_inminente": false,
+    "score_pensum": 63,
+    "mision": "Modelamiento matemático, pipelines de datos, simulación numérica de procesos y entrenamiento de algoritmos predictivos e IA.",
+    "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables."
+  },
+  {
+    "titulo": "Prácticas profesionales - Recursos humanos",
+    "empresa": "Accenture Colombia",
+    "ubicacion": "Medellin, Antioquia, Colombia",
+    "url": "https://co.linkedin.com/jobs/view/pr%C3%A1cticas-profesionales-recursos-humanos-at-accenture-colombia-4456097377",
     "fecha_publicacion": "Hace 1 mes",
     "fuente": "LinkedIn Jobs",
     "ramas": [
@@ -688,7 +455,6 @@
     "color_principal": "#06b6d4",
     "clave_principal": "simulaciones_datos_ia",
     "afinidad": "Alta Afinidad Pénsum",
-    "es_mujeres_stem": false,
     "es_exclusiva_fisica": false,
     "es_cierre_inminente": true,
     "score_pensum": 63,
@@ -696,11 +462,11 @@
     "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables."
   },
   {
-    "titulo": "Consultor de Educación al Paciente - Licencia de Maternidad - Medellín",
-    "empresa": "Convatec",
+    "titulo": "Practicante de Asesoría Comercial en Turismo",
+    "empresa": "Quiero Viajar 360",
     "ubicacion": "Medellin, Antioquia, Colombia",
-    "url": "https://co.linkedin.com/jobs/view/consultor-de-educaci%C3%B3n-al-paciente-licencia-de-maternidad-medell%C3%ADn-at-convatec-4479760079",
-    "fecha_publicacion": "Hace 5 días",
+    "url": "https://co.linkedin.com/jobs/view/practicante-de-asesor%C3%ADa-comercial-en-turismo-at-quiero-viajar-360-4461676936",
+    "fecha_publicacion": "Hace 1 mes",
     "fuente": "LinkedIn Jobs",
     "ramas": [
       {
@@ -714,113 +480,8 @@
     "color_principal": "#06b6d4",
     "clave_principal": "simulaciones_datos_ia",
     "afinidad": "Alta Afinidad Pénsum",
-    "es_mujeres_stem": false,
     "es_exclusiva_fisica": false,
     "es_cierre_inminente": true,
-    "score_pensum": 63,
-    "mision": "Modelamiento matemático, pipelines de datos, simulación numérica de procesos y entrenamiento de algoritmos predictivos e IA.",
-    "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables."
-  },
-  {
-    "titulo": "Banco de Talento para Personas con Discapacidad | Colombia",
-    "empresa": "Procter &amp; Gamble",
-    "ubicacion": "Medellin, Antioquia, Colombia",
-    "url": "https://co.linkedin.com/jobs/view/banco-de-talento-para-personas-con-discapacidad-colombia-at-procter-gamble-4459559647",
-    "fecha_publicacion": "Hace 5 días",
-    "fuente": "LinkedIn Jobs",
-    "ramas": [
-      {
-        "clave": "simulaciones_datos_ia",
-        "nombre": "Análisis de Datos, IA y Simulaciones",
-        "color": "#06b6d4",
-        "score": 63
-      }
-    ],
-    "rama_principal": "Análisis de Datos, IA y Simulaciones",
-    "color_principal": "#06b6d4",
-    "clave_principal": "simulaciones_datos_ia",
-    "afinidad": "Alta Afinidad Pénsum",
-    "es_mujeres_stem": false,
-    "es_exclusiva_fisica": false,
-    "es_cierre_inminente": true,
-    "score_pensum": 63,
-    "mision": "Modelamiento matemático, pipelines de datos, simulación numérica de procesos y entrenamiento de algoritmos predictivos e IA.",
-    "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables."
-  },
-  {
-    "titulo": "ESPECIALISTA DE SOPORTE CLÍNICO",
-    "empresa": "Abbott",
-    "ubicacion": "Medellin, Antioquia, Colombia",
-    "url": "https://co.linkedin.com/jobs/view/especialista-de-soporte-cl%C3%ADnico-at-abbott-4480157997",
-    "fecha_publicacion": "Hace 4 días",
-    "fuente": "LinkedIn Jobs",
-    "ramas": [
-      {
-        "clave": "simulaciones_datos_ia",
-        "nombre": "Análisis de Datos, IA y Simulaciones",
-        "color": "#06b6d4",
-        "score": 63
-      }
-    ],
-    "rama_principal": "Análisis de Datos, IA y Simulaciones",
-    "color_principal": "#06b6d4",
-    "clave_principal": "simulaciones_datos_ia",
-    "afinidad": "Alta Afinidad Pénsum",
-    "es_mujeres_stem": false,
-    "es_exclusiva_fisica": false,
-    "es_cierre_inminente": true,
-    "score_pensum": 63,
-    "mision": "Modelamiento matemático, pipelines de datos, simulación numérica de procesos y entrenamiento de algoritmos predictivos e IA.",
-    "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables."
-  },
-  {
-    "titulo": "Especialista Bi",
-    "empresa": "Millicom (Tigo)",
-    "ubicacion": "Medellin, Antioquia, Colombia",
-    "url": "https://co.linkedin.com/jobs/view/especialista-bi-at-millicom-tigo-4480179958",
-    "fecha_publicacion": "Hace 4 días",
-    "fuente": "LinkedIn Jobs",
-    "ramas": [
-      {
-        "clave": "simulaciones_datos_ia",
-        "nombre": "Análisis de Datos, IA y Simulaciones",
-        "color": "#06b6d4",
-        "score": 63
-      }
-    ],
-    "rama_principal": "Análisis de Datos, IA y Simulaciones",
-    "color_principal": "#06b6d4",
-    "clave_principal": "simulaciones_datos_ia",
-    "afinidad": "Alta Afinidad Pénsum",
-    "es_mujeres_stem": false,
-    "es_exclusiva_fisica": false,
-    "es_cierre_inminente": true,
-    "score_pensum": 63,
-    "mision": "Modelamiento matemático, pipelines de datos, simulación numérica de procesos y entrenamiento de algoritmos predictivos e IA.",
-    "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables."
-  },
-  {
-    "titulo": "Ingeniero(a) de Analítica",
-    "empresa": "Iluma Alliance",
-    "ubicacion": "Medellin, Antioquia, Colombia",
-    "url": "https://co.linkedin.com/jobs/view/ingeniero-a-de-anal%C3%ADtica-at-iluma-alliance-4432419723",
-    "fecha_publicacion": "Hace 3 meses",
-    "fuente": "LinkedIn Jobs",
-    "ramas": [
-      {
-        "clave": "simulaciones_datos_ia",
-        "nombre": "Análisis de Datos, IA y Simulaciones",
-        "color": "#06b6d4",
-        "score": 63
-      }
-    ],
-    "rama_principal": "Análisis de Datos, IA y Simulaciones",
-    "color_principal": "#06b6d4",
-    "clave_principal": "simulaciones_datos_ia",
-    "afinidad": "Alta Afinidad Pénsum",
-    "es_mujeres_stem": false,
-    "es_exclusiva_fisica": false,
-    "es_cierre_inminente": false,
     "score_pensum": 63,
     "mision": "Modelamiento matemático, pipelines de datos, simulación numérica de procesos y entrenamiento de algoritmos predictivos e IA.",
     "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables."
@@ -850,7 +511,6 @@
     "color_principal": "#06b6d4",
     "clave_principal": "simulaciones_datos_ia",
     "afinidad": "Alta Afinidad Pénsum",
-    "es_mujeres_stem": false,
     "es_exclusiva_fisica": false,
     "es_cierre_inminente": false,
     "score_pensum": 63,
@@ -876,7 +536,6 @@
     "color_principal": "#06b6d4",
     "clave_principal": "simulaciones_datos_ia",
     "afinidad": "Alta Afinidad Pénsum",
-    "es_mujeres_stem": false,
     "es_exclusiva_fisica": false,
     "es_cierre_inminente": true,
     "score_pensum": 63,
@@ -902,7 +561,6 @@
     "color_principal": "#06b6d4",
     "clave_principal": "simulaciones_datos_ia",
     "afinidad": "Alta Afinidad Pénsum",
-    "es_mujeres_stem": false,
     "es_exclusiva_fisica": false,
     "es_cierre_inminente": false,
     "score_pensum": 63,
@@ -928,7 +586,6 @@
     "color_principal": "#06b6d4",
     "clave_principal": "simulaciones_datos_ia",
     "afinidad": "Alta Afinidad Pénsum",
-    "es_mujeres_stem": false,
     "es_exclusiva_fisica": false,
     "es_cierre_inminente": true,
     "score_pensum": 63,
@@ -936,10 +593,10 @@
     "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables."
   },
   {
-    "titulo": "Operario de Producción",
-    "empresa": "Preasesorías Empresariales",
+    "titulo": "QA Automatizador- IA",
+    "empresa": "Accenture Colombia",
     "ubicacion": "Medellin, Antioquia, Colombia",
-    "url": "https://co.linkedin.com/jobs/view/operario-de-producci%C3%B3n-at-preasesor%C3%ADas-empresariales-4461686868",
+    "url": "https://co.linkedin.com/jobs/view/qa-automatizador-ia-at-accenture-colombia-4459435209",
     "fecha_publicacion": "Hace 1 mes",
     "fuente": "LinkedIn Jobs",
     "ramas": [
@@ -954,7 +611,131 @@
     "color_principal": "#06b6d4",
     "clave_principal": "simulaciones_datos_ia",
     "afinidad": "Alta Afinidad Pénsum",
-    "es_mujeres_stem": false,
+    "es_exclusiva_fisica": false,
+    "es_cierre_inminente": true,
+    "score_pensum": 63,
+    "mision": "Modelamiento matemático, pipelines de datos, simulación numérica de procesos y entrenamiento de algoritmos predictivos e IA.",
+    "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables."
+  },
+  {
+    "titulo": "QA Automatizador (SDET)",
+    "empresa": "Accenture Colombia",
+    "ubicacion": "Medellin, Antioquia, Colombia",
+    "url": "https://co.linkedin.com/jobs/view/qa-automatizador-sdet-at-accenture-colombia-4472842048",
+    "fecha_publicacion": "Hace 2 semanas",
+    "fuente": "LinkedIn Jobs",
+    "ramas": [
+      {
+        "clave": "simulaciones_datos_ia",
+        "nombre": "Análisis de Datos, IA y Simulaciones",
+        "color": "#06b6d4",
+        "score": 63
+      }
+    ],
+    "rama_principal": "Análisis de Datos, IA y Simulaciones",
+    "color_principal": "#06b6d4",
+    "clave_principal": "simulaciones_datos_ia",
+    "afinidad": "Alta Afinidad Pénsum",
+    "es_exclusiva_fisica": false,
+    "es_cierre_inminente": true,
+    "score_pensum": 63,
+    "mision": "Modelamiento matemático, pipelines de datos, simulación numérica de procesos y entrenamiento de algoritmos predictivos e IA.",
+    "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables."
+  },
+  {
+    "titulo": "ESPECIALISTA DE SOPORTE CLÍNICO",
+    "empresa": "Abbott",
+    "ubicacion": "Medellin, Antioquia, Colombia",
+    "url": "https://co.linkedin.com/jobs/view/especialista-de-soporte-cl%C3%ADnico-at-abbott-4480157997",
+    "fecha_publicacion": "Hace 4 días",
+    "fuente": "LinkedIn Jobs",
+    "ramas": [
+      {
+        "clave": "simulaciones_datos_ia",
+        "nombre": "Análisis de Datos, IA y Simulaciones",
+        "color": "#06b6d4",
+        "score": 63
+      }
+    ],
+    "rama_principal": "Análisis de Datos, IA y Simulaciones",
+    "color_principal": "#06b6d4",
+    "clave_principal": "simulaciones_datos_ia",
+    "afinidad": "Alta Afinidad Pénsum",
+    "es_exclusiva_fisica": false,
+    "es_cierre_inminente": true,
+    "score_pensum": 63,
+    "mision": "Modelamiento matemático, pipelines de datos, simulación numérica de procesos y entrenamiento de algoritmos predictivos e IA.",
+    "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables."
+  },
+  {
+    "titulo": "Consultor de Educación al Paciente - Licencia de Maternidad - Medellín",
+    "empresa": "Convatec",
+    "ubicacion": "Medellin, Antioquia, Colombia",
+    "url": "https://co.linkedin.com/jobs/view/consultor-de-educaci%C3%B3n-al-paciente-licencia-de-maternidad-medell%C3%ADn-at-convatec-4479760079",
+    "fecha_publicacion": "Hace 5 días",
+    "fuente": "LinkedIn Jobs",
+    "ramas": [
+      {
+        "clave": "simulaciones_datos_ia",
+        "nombre": "Análisis de Datos, IA y Simulaciones",
+        "color": "#06b6d4",
+        "score": 63
+      }
+    ],
+    "rama_principal": "Análisis de Datos, IA y Simulaciones",
+    "color_principal": "#06b6d4",
+    "clave_principal": "simulaciones_datos_ia",
+    "afinidad": "Alta Afinidad Pénsum",
+    "es_exclusiva_fisica": false,
+    "es_cierre_inminente": true,
+    "score_pensum": 63,
+    "mision": "Modelamiento matemático, pipelines de datos, simulación numérica de procesos y entrenamiento de algoritmos predictivos e IA.",
+    "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables."
+  },
+  {
+    "titulo": "Agente de Compras - Procurement Processor (Portugues Obligatorio) Analyst",
+    "empresa": "Accenture Colombia",
+    "ubicacion": "Medellin, Antioquia, Colombia",
+    "url": "https://co.linkedin.com/jobs/view/agente-de-compras-procurement-processor-portugues-obligatorio-analyst-at-accenture-colombia-4480424604",
+    "fecha_publicacion": "Hace 5 horas",
+    "fuente": "LinkedIn Jobs",
+    "ramas": [
+      {
+        "clave": "simulaciones_datos_ia",
+        "nombre": "Análisis de Datos, IA y Simulaciones",
+        "color": "#06b6d4",
+        "score": 63
+      }
+    ],
+    "rama_principal": "Análisis de Datos, IA y Simulaciones",
+    "color_principal": "#06b6d4",
+    "clave_principal": "simulaciones_datos_ia",
+    "afinidad": "Alta Afinidad Pénsum",
+    "es_exclusiva_fisica": false,
+    "es_cierre_inminente": true,
+    "score_pensum": 63,
+    "mision": "Modelamiento matemático, pipelines de datos, simulación numérica de procesos y entrenamiento de algoritmos predictivos e IA.",
+    "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables."
+  },
+  {
+    "titulo": "Agente de Compras - Procurement Processor (Portugues Deseable) Analyst (CL11)/Associate (CL12)",
+    "empresa": "Accenture Colombia",
+    "ubicacion": "Medellin, Antioquia, Colombia",
+    "url": "https://co.linkedin.com/jobs/view/agente-de-compras-procurement-processor-portugues-deseable-analyst-cl11-associate-cl12-at-accenture-colombia-4472359651",
+    "fecha_publicacion": "Hace 2 semanas",
+    "fuente": "LinkedIn Jobs",
+    "ramas": [
+      {
+        "clave": "simulaciones_datos_ia",
+        "nombre": "Análisis de Datos, IA y Simulaciones",
+        "color": "#06b6d4",
+        "score": 63
+      }
+    ],
+    "rama_principal": "Análisis de Datos, IA y Simulaciones",
+    "color_principal": "#06b6d4",
+    "clave_principal": "simulaciones_datos_ia",
+    "afinidad": "Alta Afinidad Pénsum",
     "es_exclusiva_fisica": false,
     "es_cierre_inminente": true,
     "score_pensum": 63,
@@ -980,9 +761,33 @@
     "color_principal": "#06b6d4",
     "clave_principal": "simulaciones_datos_ia",
     "afinidad": "Alta Afinidad Pénsum",
-    "es_mujeres_stem": false,
     "es_exclusiva_fisica": false,
     "es_cierre_inminente": false,
+    "score_pensum": 63,
+    "mision": "Modelamiento matemático, pipelines de datos, simulación numérica de procesos y entrenamiento de algoritmos predictivos e IA.",
+    "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables."
+  },
+  {
+    "titulo": "Banco de Talento para Personas con Discapacidad | Colombia",
+    "empresa": "Procter &amp; Gamble",
+    "ubicacion": "Medellin, Antioquia, Colombia",
+    "url": "https://co.linkedin.com/jobs/view/banco-de-talento-para-personas-con-discapacidad-colombia-at-procter-gamble-4459559647",
+    "fecha_publicacion": "Hace 5 días",
+    "fuente": "LinkedIn Jobs",
+    "ramas": [
+      {
+        "clave": "simulaciones_datos_ia",
+        "nombre": "Análisis de Datos, IA y Simulaciones",
+        "color": "#06b6d4",
+        "score": 63
+      }
+    ],
+    "rama_principal": "Análisis de Datos, IA y Simulaciones",
+    "color_principal": "#06b6d4",
+    "clave_principal": "simulaciones_datos_ia",
+    "afinidad": "Alta Afinidad Pénsum",
+    "es_exclusiva_fisica": false,
+    "es_cierre_inminente": true,
     "score_pensum": 63,
     "mision": "Modelamiento matemático, pipelines de datos, simulación numérica de procesos y entrenamiento de algoritmos predictivos e IA.",
     "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables."
@@ -1006,7 +811,6 @@
     "color_principal": "#06b6d4",
     "clave_principal": "simulaciones_datos_ia",
     "afinidad": "Alta Afinidad Pénsum",
-    "es_mujeres_stem": false,
     "es_exclusiva_fisica": false,
     "es_cierre_inminente": true,
     "score_pensum": 63,
@@ -1018,7 +822,7 @@
     "empresa": "INSPYR Solutions",
     "ubicacion": "Medellin, Antioquia, Colombia",
     "url": "https://co.linkedin.com/jobs/view/entraid-support-at-inspyr-solutions-4480271297",
-    "fecha_publicacion": "Hace 14 horas",
+    "fecha_publicacion": "Hace 15 horas",
     "fuente": "LinkedIn Jobs",
     "ramas": [
       {
@@ -1032,7 +836,56 @@
     "color_principal": "#06b6d4",
     "clave_principal": "simulaciones_datos_ia",
     "afinidad": "Alta Afinidad Pénsum",
-    "es_mujeres_stem": false,
+    "es_exclusiva_fisica": false,
+    "es_cierre_inminente": true,
+    "score_pensum": 63,
+    "mision": "Modelamiento matemático, pipelines de datos, simulación numérica de procesos y entrenamiento de algoritmos predictivos e IA.",
+    "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables."
+  },
+  {
+    "titulo": "Operario de Producción",
+    "empresa": "Preasesorías Empresariales",
+    "ubicacion": "Medellin, Antioquia, Colombia",
+    "url": "https://co.linkedin.com/jobs/view/operario-de-producci%C3%B3n-at-preasesor%C3%ADas-empresariales-4461686868",
+    "fecha_publicacion": "Hace 1 mes",
+    "fuente": "LinkedIn Jobs",
+    "ramas": [
+      {
+        "clave": "simulaciones_datos_ia",
+        "nombre": "Análisis de Datos, IA y Simulaciones",
+        "color": "#06b6d4",
+        "score": 63
+      }
+    ],
+    "rama_principal": "Análisis de Datos, IA y Simulaciones",
+    "color_principal": "#06b6d4",
+    "clave_principal": "simulaciones_datos_ia",
+    "afinidad": "Alta Afinidad Pénsum",
+    "es_exclusiva_fisica": false,
+    "es_cierre_inminente": true,
+    "score_pensum": 63,
+    "mision": "Modelamiento matemático, pipelines de datos, simulación numérica de procesos y entrenamiento de algoritmos predictivos e IA.",
+    "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables."
+  },
+  {
+    "titulo": "Epic Radiant &amp; Mammography Analyst",
+    "empresa": "InterScripts, Inc.",
+    "ubicacion": "Medellin, Antioquia, Colombia",
+    "url": "https://co.linkedin.com/jobs/view/epic-radiant-mammography-analyst-at-interscripts-inc-4461386446",
+    "fecha_publicacion": "Hace 1 mes",
+    "fuente": "LinkedIn Jobs",
+    "ramas": [
+      {
+        "clave": "simulaciones_datos_ia",
+        "nombre": "Análisis de Datos, IA y Simulaciones",
+        "color": "#06b6d4",
+        "score": 63
+      }
+    ],
+    "rama_principal": "Análisis de Datos, IA y Simulaciones",
+    "color_principal": "#06b6d4",
+    "clave_principal": "simulaciones_datos_ia",
+    "afinidad": "Alta Afinidad Pénsum",
     "es_exclusiva_fisica": false,
     "es_cierre_inminente": true,
     "score_pensum": 63,
@@ -1064,7 +917,6 @@
     "color_principal": "#06b6d4",
     "clave_principal": "simulaciones_datos_ia",
     "afinidad": "Alta Afinidad Pénsum",
-    "es_mujeres_stem": false,
     "es_exclusiva_fisica": false,
     "es_cierre_inminente": true,
     "score_pensum": 63,
@@ -1089,8 +941,7 @@
     "rama_principal": "Electrónica Digital, Microcontroladores e IoT",
     "color_principal": "#3b82f6",
     "clave_principal": "electronica_digital_iot",
-    "afinidad": "Afinidad Media",
-    "es_mujeres_stem": false,
+    "afinidad": "Alta Afinidad Pénsum",
     "es_exclusiva_fisica": false,
     "es_cierre_inminente": true,
     "score_pensum": 59,
@@ -1116,7 +967,6 @@
     "color_principal": "#64748b",
     "clave_principal": "general",
     "afinidad": "General",
-    "es_mujeres_stem": false,
     "es_exclusiva_fisica": false,
     "es_cierre_inminente": true,
     "score_pensum": 0,
@@ -1142,7 +992,6 @@
     "color_principal": "#64748b",
     "clave_principal": "general",
     "afinidad": "General",
-    "es_mujeres_stem": false,
     "es_exclusiva_fisica": false,
     "es_cierre_inminente": true,
     "score_pensum": 0,
@@ -1168,7 +1017,6 @@
     "color_principal": "#64748b",
     "clave_principal": "general",
     "afinidad": "General",
-    "es_mujeres_stem": false,
     "es_exclusiva_fisica": false,
     "es_cierre_inminente": true,
     "score_pensum": 0,
@@ -1176,37 +1024,11 @@
     "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
   },
   {
-    "titulo": "Mobile Application Developer",
-    "empresa": "WiTI",
-    "ubicacion": "Beté, Chocó, Colombia",
-    "url": "https://co.linkedin.com/jobs/view/mobile-application-developer-at-witi-4198714581",
-    "fecha_publicacion": "Hace 1 año",
-    "fuente": "LinkedIn Jobs",
-    "ramas": [
-      {
-        "clave": "general",
-        "nombre": "Ingeniería General / Operaciones",
-        "color": "#64748b",
-        "score": 5
-      }
-    ],
-    "rama_principal": "Ingeniería General / Operaciones",
-    "color_principal": "#64748b",
-    "clave_principal": "general",
-    "afinidad": "General",
-    "es_mujeres_stem": false,
-    "es_exclusiva_fisica": false,
-    "es_cierre_inminente": true,
-    "score_pensum": 0,
-    "mision": "Apoyo en el área de ingeniería y operaciones técnicas en WiTI.",
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
-  },
-  {
-    "titulo": "Sales Support Analyst / Analista de soporte de ventas",
-    "empresa": "Essity",
+    "titulo": "Pasante de recursos humanos",
+    "empresa": "Secap Ltda",
     "ubicacion": "Medellin, Antioquia, Colombia",
-    "url": "https://co.linkedin.com/jobs/view/sales-support-analyst-analista-de-soporte-de-ventas-at-essity-4476494535",
-    "fecha_publicacion": "Hace 6 días",
+    "url": "https://co.linkedin.com/jobs/view/pasante-de-recursos-humanos-at-secap-ltda-4463672076",
+    "fecha_publicacion": "Hace 1 mes",
     "fuente": "LinkedIn Jobs",
     "ramas": [
       {
@@ -1220,11 +1042,10 @@
     "color_principal": "#64748b",
     "clave_principal": "general",
     "afinidad": "General",
-    "es_mujeres_stem": false,
     "es_exclusiva_fisica": false,
-    "es_cierre_inminente": false,
+    "es_cierre_inminente": true,
     "score_pensum": 0,
-    "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Essity.",
+    "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Secap Ltda.",
     "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
   },
   {
@@ -1246,11 +1067,35 @@
     "color_principal": "#64748b",
     "clave_principal": "general",
     "afinidad": "General",
-    "es_mujeres_stem": false,
     "es_exclusiva_fisica": false,
     "es_cierre_inminente": false,
     "score_pensum": 0,
     "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Solenis.",
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
+  },
+  {
+    "titulo": "Sales Support Analyst / Analista de soporte de ventas",
+    "empresa": "Essity",
+    "ubicacion": "Medellin, Antioquia, Colombia",
+    "url": "https://co.linkedin.com/jobs/view/sales-support-analyst-analista-de-soporte-de-ventas-at-essity-4476494535",
+    "fecha_publicacion": "Hace 6 días",
+    "fuente": "LinkedIn Jobs",
+    "ramas": [
+      {
+        "clave": "general",
+        "nombre": "Ingeniería General / Operaciones",
+        "color": "#64748b",
+        "score": 5
+      }
+    ],
+    "rama_principal": "Ingeniería General / Operaciones",
+    "color_principal": "#64748b",
+    "clave_principal": "general",
+    "afinidad": "General",
+    "es_exclusiva_fisica": false,
+    "es_cierre_inminente": false,
+    "score_pensum": 0,
+    "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Essity.",
     "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
   },
   {
@@ -1272,11 +1117,35 @@
     "color_principal": "#64748b",
     "clave_principal": "general",
     "afinidad": "General",
-    "es_mujeres_stem": false,
     "es_exclusiva_fisica": false,
     "es_cierre_inminente": false,
     "score_pensum": 0,
     "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Compurent  | Renting Tecnológico.",
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
+  },
+  {
+    "titulo": "Ayudante de laboratorio",
+    "empresa": "Outsourcing de Talento y Empleo Combarranquilla",
+    "ubicacion": "Ciudad Bolívar, Antioquia, Colombia",
+    "url": "https://co.linkedin.com/jobs/view/ayudante-de-laboratorio-at-outsourcing-de-talento-y-empleo-combarranquilla-4479096856",
+    "fecha_publicacion": "Hace 6 días",
+    "fuente": "LinkedIn Jobs",
+    "ramas": [
+      {
+        "clave": "general",
+        "nombre": "Ingeniería General / Operaciones",
+        "color": "#64748b",
+        "score": 5
+      }
+    ],
+    "rama_principal": "Ingeniería General / Operaciones",
+    "color_principal": "#64748b",
+    "clave_principal": "general",
+    "afinidad": "General",
+    "es_exclusiva_fisica": false,
+    "es_cierre_inminente": false,
+    "score_pensum": 0,
+    "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Outsourcing de Talento y Empleo Combarranquilla.",
     "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
   },
   {
@@ -1298,7 +1167,6 @@
     "color_principal": "#64748b",
     "clave_principal": "general",
     "afinidad": "General",
-    "es_mujeres_stem": false,
     "es_exclusiva_fisica": false,
     "es_cierre_inminente": true,
     "score_pensum": 0,
@@ -1324,89 +1192,10 @@
     "color_principal": "#64748b",
     "clave_principal": "general",
     "afinidad": "General",
-    "es_mujeres_stem": false,
     "es_exclusiva_fisica": false,
     "es_cierre_inminente": true,
     "score_pensum": 0,
     "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Millicom (Tigo).",
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
-  },
-  {
-    "titulo": "Ayudante de laboratorio",
-    "empresa": "Outsourcing de Talento y Empleo Combarranquilla",
-    "ubicacion": "Ciudad Bolívar, Antioquia, Colombia",
-    "url": "https://co.linkedin.com/jobs/view/ayudante-de-laboratorio-at-outsourcing-de-talento-y-empleo-combarranquilla-4479096856",
-    "fecha_publicacion": "Hace 6 días",
-    "fuente": "LinkedIn Jobs",
-    "ramas": [
-      {
-        "clave": "general",
-        "nombre": "Ingeniería General / Operaciones",
-        "color": "#64748b",
-        "score": 5
-      }
-    ],
-    "rama_principal": "Ingeniería General / Operaciones",
-    "color_principal": "#64748b",
-    "clave_principal": "general",
-    "afinidad": "General",
-    "es_mujeres_stem": false,
-    "es_exclusiva_fisica": false,
-    "es_cierre_inminente": false,
-    "score_pensum": 0,
-    "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Outsourcing de Talento y Empleo Combarranquilla.",
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
-  },
-  {
-    "titulo": "Tecnico de Calidad",
-    "empresa": "Solenis",
-    "ubicacion": "Medellin, Antioquia, Colombia",
-    "url": "https://co.linkedin.com/jobs/view/tecnico-de-calidad-at-solenis-4469786063",
-    "fecha_publicacion": "Hace 3 semanas",
-    "fuente": "LinkedIn Jobs",
-    "ramas": [
-      {
-        "clave": "general",
-        "nombre": "Ingeniería General / Operaciones",
-        "color": "#64748b",
-        "score": 5
-      }
-    ],
-    "rama_principal": "Ingeniería General / Operaciones",
-    "color_principal": "#64748b",
-    "clave_principal": "general",
-    "afinidad": "General",
-    "es_mujeres_stem": false,
-    "es_exclusiva_fisica": false,
-    "es_cierre_inminente": false,
-    "score_pensum": 0,
-    "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Solenis.",
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
-  },
-  {
-    "titulo": "TECNICO DE CAMPO",
-    "empresa": "AGQ Labs España",
-    "ubicacion": "Medellin, Antioquia, Colombia",
-    "url": "https://co.linkedin.com/jobs/view/tecnico-de-campo-at-agq-labs-espa%C3%B1a-4451486651",
-    "fecha_publicacion": "Hace 2 meses",
-    "fuente": "LinkedIn Jobs",
-    "ramas": [
-      {
-        "clave": "general",
-        "nombre": "Ingeniería General / Operaciones",
-        "color": "#64748b",
-        "score": 5
-      }
-    ],
-    "rama_principal": "Ingeniería General / Operaciones",
-    "color_principal": "#64748b",
-    "clave_principal": "general",
-    "afinidad": "General",
-    "es_mujeres_stem": false,
-    "es_exclusiva_fisica": false,
-    "es_cierre_inminente": true,
-    "score_pensum": 0,
-    "mision": "Apoyo en el área de ingeniería y operaciones técnicas en AGQ Labs España.",
     "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
   },
   {
@@ -1428,137 +1217,6 @@
     "color_principal": "#64748b",
     "clave_principal": "general",
     "afinidad": "General",
-    "es_mujeres_stem": false,
-    "es_exclusiva_fisica": false,
-    "es_cierre_inminente": false,
-    "score_pensum": 0,
-    "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Solenis.",
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
-  },
-  {
-    "titulo": "Senior Mechanical Designer",
-    "empresa": "Hatch",
-    "ubicacion": "Medellin, Antioquia, Colombia",
-    "url": "https://co.linkedin.com/jobs/view/senior-mechanical-designer-at-hatch-4436868511",
-    "fecha_publicacion": "Hace 2 semanas",
-    "fuente": "LinkedIn Jobs",
-    "ramas": [
-      {
-        "clave": "general",
-        "nombre": "Ingeniería General / Operaciones",
-        "color": "#64748b",
-        "score": 5
-      }
-    ],
-    "rama_principal": "Ingeniería General / Operaciones",
-    "color_principal": "#64748b",
-    "clave_principal": "general",
-    "afinidad": "General",
-    "es_mujeres_stem": false,
-    "es_exclusiva_fisica": false,
-    "es_cierre_inminente": true,
-    "score_pensum": 0,
-    "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Hatch.",
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
-  },
-  {
-    "titulo": "Structural Designer",
-    "empresa": "Hatch",
-    "ubicacion": "Medellin, Antioquia, Colombia",
-    "url": "https://co.linkedin.com/jobs/view/structural-designer-at-hatch-4451910473",
-    "fecha_publicacion": "Hace 5 días",
-    "fuente": "LinkedIn Jobs",
-    "ramas": [
-      {
-        "clave": "general",
-        "nombre": "Ingeniería General / Operaciones",
-        "color": "#64748b",
-        "score": 5
-      }
-    ],
-    "rama_principal": "Ingeniería General / Operaciones",
-    "color_principal": "#64748b",
-    "clave_principal": "general",
-    "afinidad": "General",
-    "es_mujeres_stem": false,
-    "es_exclusiva_fisica": false,
-    "es_cierre_inminente": true,
-    "score_pensum": 0,
-    "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Hatch.",
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
-  },
-  {
-    "titulo": "Delineante de Arquitectura",
-    "empresa": "Hatch",
-    "ubicacion": "Medellin, Antioquia, Colombia",
-    "url": "https://co.linkedin.com/jobs/view/delineante-de-arquitectura-at-hatch-4378448995",
-    "fecha_publicacion": "Hace 2 semanas",
-    "fuente": "LinkedIn Jobs",
-    "ramas": [
-      {
-        "clave": "general",
-        "nombre": "Ingeniería General / Operaciones",
-        "color": "#64748b",
-        "score": 5
-      }
-    ],
-    "rama_principal": "Ingeniería General / Operaciones",
-    "color_principal": "#64748b",
-    "clave_principal": "general",
-    "afinidad": "General",
-    "es_mujeres_stem": false,
-    "es_exclusiva_fisica": false,
-    "es_cierre_inminente": true,
-    "score_pensum": 0,
-    "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Hatch.",
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
-  },
-  {
-    "titulo": "Pasante de recursos humanos",
-    "empresa": "Secap Ltda",
-    "ubicacion": "Medellin, Antioquia, Colombia",
-    "url": "https://co.linkedin.com/jobs/view/pasante-de-recursos-humanos-at-secap-ltda-4463672076",
-    "fecha_publicacion": "Hace 1 mes",
-    "fuente": "LinkedIn Jobs",
-    "ramas": [
-      {
-        "clave": "general",
-        "nombre": "Ingeniería General / Operaciones",
-        "color": "#64748b",
-        "score": 5
-      }
-    ],
-    "rama_principal": "Ingeniería General / Operaciones",
-    "color_principal": "#64748b",
-    "clave_principal": "general",
-    "afinidad": "General",
-    "es_mujeres_stem": false,
-    "es_exclusiva_fisica": false,
-    "es_cierre_inminente": true,
-    "score_pensum": 0,
-    "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Secap Ltda.",
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
-  },
-  {
-    "titulo": "Operador de Planta",
-    "empresa": "Solenis",
-    "ubicacion": "Medellin, Antioquia, Colombia",
-    "url": "https://co.linkedin.com/jobs/view/operador-de-planta-at-solenis-4469771759",
-    "fecha_publicacion": "Hace 3 semanas",
-    "fuente": "LinkedIn Jobs",
-    "ramas": [
-      {
-        "clave": "general",
-        "nombre": "Ingeniería General / Operaciones",
-        "color": "#64748b",
-        "score": 5
-      }
-    ],
-    "rama_principal": "Ingeniería General / Operaciones",
-    "color_principal": "#64748b",
-    "clave_principal": "general",
-    "afinidad": "General",
-    "es_mujeres_stem": false,
     "es_exclusiva_fisica": false,
     "es_cierre_inminente": false,
     "score_pensum": 0,
@@ -1584,9 +1242,208 @@
     "color_principal": "#64748b",
     "clave_principal": "general",
     "afinidad": "General",
-    "es_mujeres_stem": false,
     "es_exclusiva_fisica": false,
     "es_cierre_inminente": true,
+    "score_pensum": 0,
+    "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Solenis.",
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
+  },
+  {
+    "titulo": "Operario Empaque",
+    "empresa": "Procter &amp; Gamble",
+    "ubicacion": "Medellin, Antioquia, Colombia",
+    "url": "https://co.linkedin.com/jobs/view/operario-empaque-at-procter-gamble-4454664751",
+    "fecha_publicacion": "Hace 1 mes",
+    "fuente": "LinkedIn Jobs",
+    "ramas": [
+      {
+        "clave": "general",
+        "nombre": "Ingeniería General / Operaciones",
+        "color": "#64748b",
+        "score": 5
+      }
+    ],
+    "rama_principal": "Ingeniería General / Operaciones",
+    "color_principal": "#64748b",
+    "clave_principal": "general",
+    "afinidad": "General",
+    "es_exclusiva_fisica": false,
+    "es_cierre_inminente": true,
+    "score_pensum": 0,
+    "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Procter &amp; Gamble.",
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
+  },
+  {
+    "titulo": "Tecnico de Calidad",
+    "empresa": "Solenis",
+    "ubicacion": "Medellin, Antioquia, Colombia",
+    "url": "https://co.linkedin.com/jobs/view/tecnico-de-calidad-at-solenis-4469786063",
+    "fecha_publicacion": "Hace 3 semanas",
+    "fuente": "LinkedIn Jobs",
+    "ramas": [
+      {
+        "clave": "general",
+        "nombre": "Ingeniería General / Operaciones",
+        "color": "#64748b",
+        "score": 5
+      }
+    ],
+    "rama_principal": "Ingeniería General / Operaciones",
+    "color_principal": "#64748b",
+    "clave_principal": "general",
+    "afinidad": "General",
+    "es_exclusiva_fisica": false,
+    "es_cierre_inminente": false,
+    "score_pensum": 0,
+    "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Solenis.",
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
+  },
+  {
+    "titulo": "TECNICO DE CAMPO",
+    "empresa": "AGQ Labs España",
+    "ubicacion": "Medellin, Antioquia, Colombia",
+    "url": "https://co.linkedin.com/jobs/view/tecnico-de-campo-at-agq-labs-espa%C3%B1a-4451486651",
+    "fecha_publicacion": "Hace 2 meses",
+    "fuente": "LinkedIn Jobs",
+    "ramas": [
+      {
+        "clave": "general",
+        "nombre": "Ingeniería General / Operaciones",
+        "color": "#64748b",
+        "score": 5
+      }
+    ],
+    "rama_principal": "Ingeniería General / Operaciones",
+    "color_principal": "#64748b",
+    "clave_principal": "general",
+    "afinidad": "General",
+    "es_exclusiva_fisica": false,
+    "es_cierre_inminente": true,
+    "score_pensum": 0,
+    "mision": "Apoyo en el área de ingeniería y operaciones técnicas en AGQ Labs España.",
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
+  },
+  {
+    "titulo": "Delineante de Arquitectura",
+    "empresa": "Hatch",
+    "ubicacion": "Medellin, Antioquia, Colombia",
+    "url": "https://co.linkedin.com/jobs/view/delineante-de-arquitectura-at-hatch-4378448995",
+    "fecha_publicacion": "Hace 2 semanas",
+    "fuente": "LinkedIn Jobs",
+    "ramas": [
+      {
+        "clave": "general",
+        "nombre": "Ingeniería General / Operaciones",
+        "color": "#64748b",
+        "score": 5
+      }
+    ],
+    "rama_principal": "Ingeniería General / Operaciones",
+    "color_principal": "#64748b",
+    "clave_principal": "general",
+    "afinidad": "General",
+    "es_exclusiva_fisica": false,
+    "es_cierre_inminente": true,
+    "score_pensum": 0,
+    "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Hatch.",
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
+  },
+  {
+    "titulo": "Structural Designer",
+    "empresa": "Hatch",
+    "ubicacion": "Medellin, Antioquia, Colombia",
+    "url": "https://co.linkedin.com/jobs/view/structural-designer-at-hatch-4451910473",
+    "fecha_publicacion": "Hace 5 días",
+    "fuente": "LinkedIn Jobs",
+    "ramas": [
+      {
+        "clave": "general",
+        "nombre": "Ingeniería General / Operaciones",
+        "color": "#64748b",
+        "score": 5
+      }
+    ],
+    "rama_principal": "Ingeniería General / Operaciones",
+    "color_principal": "#64748b",
+    "clave_principal": "general",
+    "afinidad": "General",
+    "es_exclusiva_fisica": false,
+    "es_cierre_inminente": true,
+    "score_pensum": 0,
+    "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Hatch.",
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
+  },
+  {
+    "titulo": "Senior Mechanical Designer",
+    "empresa": "Hatch",
+    "ubicacion": "Medellin, Antioquia, Colombia",
+    "url": "https://co.linkedin.com/jobs/view/senior-mechanical-designer-at-hatch-4436868511",
+    "fecha_publicacion": "Hace 2 semanas",
+    "fuente": "LinkedIn Jobs",
+    "ramas": [
+      {
+        "clave": "general",
+        "nombre": "Ingeniería General / Operaciones",
+        "color": "#64748b",
+        "score": 5
+      }
+    ],
+    "rama_principal": "Ingeniería General / Operaciones",
+    "color_principal": "#64748b",
+    "clave_principal": "general",
+    "afinidad": "General",
+    "es_exclusiva_fisica": false,
+    "es_cierre_inminente": true,
+    "score_pensum": 0,
+    "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Hatch.",
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
+  },
+  {
+    "titulo": "Mobile Application Developer",
+    "empresa": "WiTI",
+    "ubicacion": "Beté, Chocó, Colombia",
+    "url": "https://co.linkedin.com/jobs/view/mobile-application-developer-at-witi-4198714581",
+    "fecha_publicacion": "Hace 1 año",
+    "fuente": "LinkedIn Jobs",
+    "ramas": [
+      {
+        "clave": "general",
+        "nombre": "Ingeniería General / Operaciones",
+        "color": "#64748b",
+        "score": 5
+      }
+    ],
+    "rama_principal": "Ingeniería General / Operaciones",
+    "color_principal": "#64748b",
+    "clave_principal": "general",
+    "afinidad": "General",
+    "es_exclusiva_fisica": false,
+    "es_cierre_inminente": true,
+    "score_pensum": 0,
+    "mision": "Apoyo en el área de ingeniería y operaciones técnicas en WiTI.",
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
+  },
+  {
+    "titulo": "Operador de Planta",
+    "empresa": "Solenis",
+    "ubicacion": "Medellin, Antioquia, Colombia",
+    "url": "https://co.linkedin.com/jobs/view/operador-de-planta-at-solenis-4469771759",
+    "fecha_publicacion": "Hace 3 semanas",
+    "fuente": "LinkedIn Jobs",
+    "ramas": [
+      {
+        "clave": "general",
+        "nombre": "Ingeniería General / Operaciones",
+        "color": "#64748b",
+        "score": 5
+      }
+    ],
+    "rama_principal": "Ingeniería General / Operaciones",
+    "color_principal": "#64748b",
+    "clave_principal": "general",
+    "afinidad": "General",
+    "es_exclusiva_fisica": false,
+    "es_cierre_inminente": false,
     "score_pensum": 0,
     "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Solenis.",
     "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
@@ -1610,7 +1467,6 @@
     "color_principal": "#64748b",
     "clave_principal": "general",
     "afinidad": "General",
-    "es_mujeres_stem": false,
     "es_exclusiva_fisica": false,
     "es_cierre_inminente": true,
     "score_pensum": 0,
@@ -1636,7 +1492,6 @@
     "color_principal": "#64748b",
     "clave_principal": "general",
     "afinidad": "General",
-    "es_mujeres_stem": false,
     "es_exclusiva_fisica": false,
     "es_cierre_inminente": true,
     "score_pensum": 0,
@@ -1662,7 +1517,6 @@
     "color_principal": "#64748b",
     "clave_principal": "general",
     "afinidad": "General",
-    "es_mujeres_stem": false,
     "es_exclusiva_fisica": false,
     "es_cierre_inminente": true,
     "score_pensum": 0,
@@ -1688,37 +1542,10 @@
     "color_principal": "#64748b",
     "clave_principal": "general",
     "afinidad": "General",
-    "es_mujeres_stem": false,
     "es_exclusiva_fisica": false,
     "es_cierre_inminente": true,
     "score_pensum": 0,
     "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Hatch.",
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
-  },
-  {
-    "titulo": "Operario Empaque",
-    "empresa": "Procter &amp; Gamble",
-    "ubicacion": "Medellin, Antioquia, Colombia",
-    "url": "https://co.linkedin.com/jobs/view/operario-empaque-at-procter-gamble-4454664751",
-    "fecha_publicacion": "Hace 1 mes",
-    "fuente": "LinkedIn Jobs",
-    "ramas": [
-      {
-        "clave": "general",
-        "nombre": "Ingeniería General / Operaciones",
-        "color": "#64748b",
-        "score": 5
-      }
-    ],
-    "rama_principal": "Ingeniería General / Operaciones",
-    "color_principal": "#64748b",
-    "clave_principal": "general",
-    "afinidad": "General",
-    "es_mujeres_stem": false,
-    "es_exclusiva_fisica": false,
-    "es_cierre_inminente": true,
-    "score_pensum": 0,
-    "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Procter &amp; Gamble.",
     "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
   }
 ]

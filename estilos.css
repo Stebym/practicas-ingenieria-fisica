@@ -305,8 +305,9 @@ article.job-card.exclusive {
 header.job-card-header {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
-  margin-bottom: 10px;
+  align-items: center;
+  margin-bottom: 12px;
+  position: relative;
 }
 
 span.affinity-badge {
@@ -319,10 +320,129 @@ span.affinity-badge {
   text-transform: uppercase;
 }
 
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
 time.job-date {
   font-family: var(--font-mono);
   font-size: 0.72rem;
   color: var(--text-muted);
+}
+
+/* ==========================================================================
+   EL BOTÓN/ÍCONO DE INFORMACIÓN [i] Y LA NUBE FLOTANTE (HOVER POPOVER)
+   Aparece ÚNICAMENTE cuando pasas el ratón sobre el ícono [i]
+   ========================================================================== */
+.info-trigger {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.info-icon {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--bg-chip);
+  border: 1px solid var(--border-technical);
+  color: var(--accent-cyan);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  user-select: none;
+}
+
+.info-trigger:hover .info-icon,
+.info-trigger:focus .info-icon {
+  background: var(--accent-cyan);
+  color: #07090e;
+  border-color: var(--accent-cyan);
+  box-shadow: 0 0 10px rgba(0, 229, 255, 0.5);
+  transform: scale(1.1);
+}
+
+/* La nube flotante real (Tooltip) */
+.floating-cloud {
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 0;
+  width: 320px;
+  background: #090e1a;
+  border: 1px solid var(--accent-cyan);
+  border-radius: 10px;
+  padding: 14px 16px;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.85), 0 0 15px rgba(0, 229, 255, 0.15);
+  z-index: 500;
+  font-size: 0.82rem;
+  line-height: 1.5;
+  text-align: left;
+  
+  /* Oculta por defecto: no está fija */
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(8px) scale(0.96);
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
+}
+
+/* Flechita superior de la nube que apunta al icono */
+.floating-cloud::before {
+  content: "";
+  position: absolute;
+  top: -6px;
+  right: 7px;
+  width: 10px;
+  height: 10px;
+  background: #090e1a;
+  border-top: 1px solid var(--accent-cyan);
+  border-left: 1px solid var(--accent-cyan);
+  transform: rotate(45deg);
+}
+
+/* Solo se muestra al pasar el ratón por encima del icono [i] */
+.info-trigger:hover .floating-cloud,
+.info-trigger:focus-within .floating-cloud {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateY(0) scale(1);
+}
+
+.cloud-title {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--accent-cyan);
+  letter-spacing: 0.5px;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+}
+
+.cloud-body {
+  color: #e2e8f0;
+  margin-bottom: 8px;
+}
+
+.cloud-tasks-section {
+  border-top: 1px dashed var(--border-subtle);
+  padding-top: 8px;
+  color: #94a3b8;
+  font-size: 0.78rem;
+}
+
+.cloud-tasks-section strong {
+  color: var(--accent-amber);
+  display: block;
+  margin-bottom: 2px;
 }
 
 h3.job-title {
@@ -347,58 +467,7 @@ div.job-specs {
   display: flex;
   flex-direction: column;
   gap: 3px;
-  margin-bottom: 12px;
-}
-
-/* ==========================================================================
-   LA "NUBE" EXPLICATIVA FLOTANTE (HOVER CLOUD / TOOLTIP INTERACTIVO)
-   Muestra de qué se trata la convocatoria y qué le tocará hacer al practicante
-   ========================================================================== */
-.job-cloud {
-  background: #090e1a;
-  border: 1px solid var(--border-technical);
-  border-radius: 8px;
-  padding: 12px 14px;
   margin-bottom: 14px;
-  font-size: 0.82rem;
-  line-height: 1.5;
-  transition: all 0.25s ease;
-  position: relative;
-}
-
-/* Indicador sutil de nube / inspección */
-.job-cloud::before {
-  content: "DESCRIPCION & MISIONES:";
-  display: block;
-  font-family: var(--font-mono);
-  font-size: 0.68rem;
-  font-weight: 700;
-  color: var(--accent-cyan);
-  margin-bottom: 4px;
-  letter-spacing: 0.5px;
-}
-
-.job-cloud .cloud-mision {
-  color: #e2e8f0;
-  margin-bottom: 6px;
-}
-
-.job-cloud .cloud-tasks {
-  color: #94a3b8;
-  font-size: 0.78rem;
-  border-top: 1px dashed var(--border-subtle);
-  padding-top: 6px;
-}
-
-.job-cloud .cloud-tasks strong {
-  color: var(--accent-amber);
-}
-
-/* Efecto al pasar el cursor sobre la tarjeta: resalta la nube con brillo */
-article.job-card:hover .job-cloud {
-  border-color: rgba(0, 229, 255, 0.4);
-  background: #0d1424;
-  box-shadow: 0 4px 15px rgba(0, 229, 255, 0.08);
 }
 
 div.job-tags {

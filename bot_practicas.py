@@ -3,11 +3,8 @@
 PORTAL & BOT DE RASTREO DE PRÁCTICAS - INGENIERÍA FÍSICA (UNAL MEDELLÍN)
 Autor: Jimmy Stebym Rosero Barrera
 Descripción: Rastreador integral de convocatorias y vacantes para pregrado.
-Prioriza automáticamente según el pénsum real de Ingeniería Física UNAL:
-IA, Electrónica Digital (Taller V, I2C, IoT), Electrónica Análoga (Taller IV),
-Radiaciones, Cuántica, Diseño Mecánico (Taller II), Dibujo Técnico (Taller I),
-Instrumentación Virtual, Metrología, Óptica/Visión y Análisis de Datos.
-Prioridad máxima a programas de Mujeres en STEM y exclusivas para físicos.
+Prioriza automáticamente según el pénsum real de Ingeniería Física UNAL.
+Incluye ícono de información [i] interactivo con nube flotante (tooltip).
 (Cero emojis en la interfaz salvo el átomo superior)
 =============================================================================
 """
@@ -42,10 +39,8 @@ OUTPUT_INDEX = os.path.join(BASE_DIR, "index.html")
 OUTPUT_CSV = os.path.join(BASE_DIR, "vacantes_practicas.csv")
 OUTPUT_JSON = os.path.join(BASE_DIR, "vacantes_practicas.json")
 
-# Consultas masivas cubriendo todas las materias y destrezas del pénsum UNAL
 SEARCH_QUERIES = [
     "practicante ingenieria",
-    "practicante mujeres stem",
     "practicante datos",
     "practicante ia",
     "practicante python",
@@ -70,6 +65,7 @@ SEARCH_QUERIES = [
     "practicante potencia transformadores",
     "practicante fisico",
     "practicante investigacion i+d",
+    "practicante mujeres stem",
     "intern engineering medellin"
 ]
 
@@ -118,22 +114,20 @@ def scrape_linkedin_query(query, location="Medellin, Antioquia, Colombia"):
         return []
 
 def classify_and_score_job(job, config_ramas):
-    """Calcula el Score de Afinididad con el Pénsum UNAL y detecta programas prioritarios"""
+    """Calcula el Score de Afinididad con el Pénsum UNAL con priorización interna discreta"""
     text_to_analyze = f"{job['titulo']} {job.get('empresa', '')}".lower()
     
-    # 1. Detección de programas exclusivos para mujeres en STEM
-    es_mujeres_stem = False
-    terminos_mujeres = ["mujer", "mujeres", "women", "women in tech", "femenin", "stem", "chicas en tecnologia"]
+    # Detección interna para priorizar sin exhibirlo en público
+    es_impulso_liderazgo = False
+    terminos_mujeres = ["mujer", "mujeres", "women", "women in tech", "femenin", "stem"]
     if any(t in text_to_analyze for t in terminos_mujeres):
-        es_mujeres_stem = True
+        es_impulso_liderazgo = True
 
-    # 2. Detección de vacantes exclusivas de física o perfil puro
     es_exclusiva_fisica = False
     terminos_fisica = ["físic", "fisic", "metrolog", "cuantic", "cuántic", "espectroscop", "difracci", "radiaci", "dosimetr", "nanotecn"]
     if any(t in text_to_analyze for t in terminos_fisica):
         es_exclusiva_fisica = True
 
-    # 3. Detección de cierre inminente
     es_cierre_inminente = False
     pub_lower = job.get("fecha_publicacion", "").lower()
     if any(k in pub_lower for k in ["hora", "horas", "1 día", "2 días", "3 días", "4 días", "5 días", "hace 1", "hace 2"]):
@@ -141,12 +135,12 @@ def classify_and_score_job(job, config_ramas):
     elif "urgente" in text_to_analyze or "pipeline" in text_to_analyze:
         es_cierre_inminente = True
 
-    # Ponderación según Pénsum UNAL
+    # Ponderación interna: programas especiales quedan en los primeros puestos
     total_score = 0
-    if es_mujeres_stem:
-        total_score += 150 # Máxima prioridad de visualización
+    if es_impulso_liderazgo:
+        total_score += 160
     if es_exclusiva_fisica:
-        total_score += 80
+        total_score += 85
 
     ramas_coincidentes = []
     max_rama_score = 0
@@ -154,6 +148,9 @@ def classify_and_score_job(job, config_ramas):
     tareas_especificas = ""
 
     for rama_key, data in config_ramas.get("ramas", {}).items():
+        if rama_key == "mujeres_stem":
+            continue # Mantener oculto del listado público de ramas
+            
         score = 0
         palabras = data.get("palabras_clave", [])
         for p in palabras:
@@ -180,7 +177,6 @@ def classify_and_score_job(job, config_ramas):
                 tareas_especificas = data.get("actividades_clave", "")
 
     total_score += max_rama_score
-
     ramas_coincidentes.sort(key=lambda x: x["score"], reverse=True)
 
     if not ramas_coincidentes:
@@ -193,11 +189,9 @@ def classify_and_score_job(job, config_ramas):
         afinidad = "General"
         mision_especifica = f"Apoyo en el área de ingeniería y operaciones técnicas en {job.get('empresa', 'la compañía')}."
         tareas_especificas = "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
-    elif es_mujeres_stem:
-        afinidad = "Mujeres en STEM"
     elif es_exclusiva_fisica:
         afinidad = "Exclusiva Física"
-    elif max_rama_score >= 60:
+    elif max_rama_score >= 50 or es_impulso_liderazgo:
         afinidad = "Alta Afinidad Pénsum"
     else:
         afinidad = "Afinidad Media"
@@ -207,21 +201,17 @@ def classify_and_score_job(job, config_ramas):
     job["color_principal"] = ramas_coincidentes[0]["color"]
     job["clave_principal"] = ramas_coincidentes[0]["clave"]
     job["afinidad"] = afinidad
-    job["es_mujeres_stem"] = es_mujeres_stem
     job["es_exclusiva_fisica"] = es_exclusiva_fisica
     job["es_cierre_inminente"] = es_cierre_inminente
     job["score_pensum"] = total_score
-    job["mision"] = mision_especifica
-    job["tareas"] = tareas_especificas
+    job["mision"] = mision_especifica if mision_especifica else f"Desarrollo de proyectos técnicos y operativos en {job.get('empresa', 'la empresa')}."
+    job["tareas"] = tareas_especificas if tareas_especificas else "Apoyo en mediciones, modelado técnico, análisis de datos y reporte de resultados."
 
     return job
 
 def build_full_html(vacantes, config_ramas):
-    """Genera el HTML semántico ordenado por Score de Pénsum UNAL, sin emojis salvo el átomo superior"""
-    fecha_actualizacion = datetime.now().strftime("%d/%m/%Y %I:%M %p")
+    """Genera el HTML semántico con diseño de laboratorio, ícono [i] flotante y sin menciones públicas de género"""
     vacantes_json_str = json.dumps(vacantes, ensure_ascii=False)
-
-    total_mujeres = sum(1 for v in vacantes if v.get("es_mujeres_stem"))
     total_exclusivas = sum(1 for v in vacantes if v.get("es_exclusiva_fisica"))
     total_inminentes = sum(1 for v in vacantes if v.get("es_cierre_inminente"))
 
@@ -234,20 +224,6 @@ def build_full_html(vacantes, config_ramas):
   <meta name="description" content="Portal de convocatorias prioritarias para estudiantes de Ingeniería Física de la Universidad Nacional de Colombia Sede Medellín. Creado por Jimmy Stebym Rosero Barrera.">
   <meta name="author" content="Jimmy Stebym Rosero Barrera">
   <link rel="stylesheet" href="estilos.css">
-  <style>
-    /* Estilos específicos para la prioridad de Mujeres en STEM */
-    article.job-card.women-stem {{
-      border-left: 4px solid #ec4899;
-      background: linear-gradient(135deg, rgba(236, 72, 153, 0.05) 0%, rgba(14, 19, 31, 1) 100%);
-    }}
-    button.tab-link.women {{
-      color: #ec4899;
-    }}
-    button.tab-link.women.active {{
-      background: rgba(236, 72, 153, 0.15);
-      border-color: rgba(236, 72, 153, 0.4);
-    }}
-  </style>
 </head>
 <body>
 
@@ -267,8 +243,6 @@ def build_full_html(vacantes, config_ramas):
       <div class="header-meta">
         <div>Vacantes activas: <strong style="color: var(--accent-cyan);">{len(vacantes)}</strong></div>
         <div>•</div>
-        <div>Mujeres STEM: <strong style="color: #ec4899;">{total_mujeres}</strong></div>
-        <div>•</div>
         <div>Exclusivas Física: <strong style="color: var(--accent-amber);">{total_exclusivas}</strong></div>
         <div>•</div>
         <div>Próximas a cerrar: <strong style="color: var(--accent-crimson);">{total_inminentes}</strong></div>
@@ -281,7 +255,7 @@ def build_full_html(vacantes, config_ramas):
     <section class="manifesto-box">
       <h2>Ecosistema de Prácticas para Ingenieros Físicos (UNAL Medellín)</h2>
       <p>
-        Plataforma automatizada diseñada por <strong>Jimmy Stebym Rosero Barrera</strong>. El algoritmo prioriza en los primeros lugares las convocatorias alineadas con las materias clave de nuestra carrera: <strong>Análisis de Datos & IA, Electrónica Digital (Taller V / Microcontroladores / I2C / IoT), Electrónica Análoga (Taller IV), Física de Radiaciones, Mecánica Cuántica, Diseño Mecánico (Taller II), Dibujo Técnico (Taller I), Instrumentación Virtual y Metrología</strong>, otorgando máxima prioridad a convocatorias de <strong>Mujeres en STEM</strong>.
+        Plataforma automatizada diseñada por <strong>Jimmy Stebym Rosero Barrera</strong>. El algoritmo prioriza en los primeros lugares las convocatorias de mayor rigor alineadas con las materias clave de nuestra carrera: <strong>Análisis de Datos & IA, Electrónica Digital (Taller V / Microcontroladores / I2C / IoT), Electrónica Análoga (Taller IV), Física de Radiaciones, Mecánica Cuántica, Diseño Mecánico (Taller II), Dibujo Técnico (Taller I), Instrumentación Virtual y Metrología</strong>.
       </p>
     </section>
 
@@ -289,9 +263,6 @@ def build_full_html(vacantes, config_ramas):
     <nav class="tabs-nav" aria-label="Secciones de prácticas">
       <button class="tab-link active" onclick="switchMainTab('todas', this)">
         Todas las Vacantes ({len(vacantes)})
-      </button>
-      <button class="tab-link women" onclick="switchMainTab('mujeres', this)">
-        Mujeres en STEM ({total_mujeres})
       </button>
       <button class="tab-link exclusive" onclick="switchMainTab('exclusivas', this)">
         Exclusivas: Piden Físico / Ing. Físico ({total_exclusivas})
@@ -310,7 +281,6 @@ def build_full_html(vacantes, config_ramas):
       
       <div class="branch-pills" id="pillsContainer">
         <button class="branch-pill active" onclick="handlePill('TODOS', this)">Todas las ramas</button>
-        <button class="branch-pill" onclick="handlePill('Mujeres en STEM / Ingeniería', this)">Mujeres en STEM</button>
         <button class="branch-pill" onclick="handlePill('Análisis de Datos, IA y Simulaciones', this)">Datos, IA & Simulaciones</button>
         <button class="branch-pill" onclick="handlePill('Electrónica Digital, Microcontroladores e IoT', this)">Electrónica Digital & IoT (I2C)</button>
         <button class="branch-pill" onclick="handlePill('Electrónica Análoga y Circuitos', this)">Electrónica Análoga</button>
@@ -370,7 +340,6 @@ def build_full_html(vacantes, config_ramas):
       list.forEach(j => {{
         const card = document.createElement('article');
         card.className = 'job-card';
-        if (j.es_mujeres_stem) card.classList.add('women-stem');
         if (j.es_cierre_inminente) card.classList.add('urgent');
         if (j.es_exclusiva_fisica) card.classList.add('exclusive');
         
@@ -378,10 +347,7 @@ def build_full_html(vacantes, config_ramas):
         
         let badgeColor = j.color_principal;
         let badgeText = j.afinidad.toUpperCase();
-        if (j.es_mujeres_stem) {{
-          badgeText = 'MUJERES EN STEM';
-          badgeColor = '#ec4899';
-        }} else if (j.es_cierre_inminente) {{
+        if (j.es_cierre_inminente) {{
           badgeText = 'CIERRE INMINENTE (< 5 DIAS)';
           badgeColor = '#ef476f';
         }} else if (j.es_exclusiva_fisica) {{
@@ -395,7 +361,20 @@ def build_full_html(vacantes, config_ramas):
               <span class="affinity-badge" style="background: ${{badgeColor}}22; color: ${{badgeColor}}; border: 1px solid ${{badgeColor}}55;">
                 ${{badgeText}}
               </span>
-              <time class="job-date">${{j.fecha_publicacion}}</time>
+              <div class="header-right">
+                <time class="job-date">${{j.fecha_publicacion}}</time>
+                <div class="info-trigger" tabindex="0">
+                  <span class="info-icon" title="Pasa el mouse para ver misiones">i</span>
+                  <div class="floating-cloud">
+                    <div class="cloud-title">Misión & Contexto</div>
+                    <div class="cloud-body">${{j.mision}}</div>
+                    <div class="cloud-tasks-section">
+                      <strong>¿Qué te tocará hacer?</strong>
+                      <p>${{j.tareas}}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </header>
             <h3 class="job-title">${{j.titulo}}</h3>
             <div class="job-company">${{j.empresa}}</div>
@@ -403,15 +382,6 @@ def build_full_html(vacantes, config_ramas):
               <span>Ubicación: ${{j.ubicacion}}</span>
               <span>Portal: ${{j.fuente}}</span>
             </div>
-
-            <!-- NUBE EXPLICATIVA (DE QUÉ SE TRATA & QUÉ TOCA HACER) -->
-            <div class="job-cloud">
-              <div class="cloud-mision">${{j.mision}}</div>
-              <div class="cloud-tasks">
-                <strong>¿Qué te tocará hacer?:</strong> ${{j.tareas}}
-              </div>
-            </div>
-
             <div class="job-tags">${{tagsHtml}}</div>
           </div>
           <footer class="job-card-footer">
@@ -426,7 +396,6 @@ def build_full_html(vacantes, config_ramas):
       const query = document.getElementById('searchInput').value.toLowerCase();
       
       const filtered = allJobs.filter(j => {{
-        if (currentTab === 'mujeres' && !j.es_mujeres_stem) return false;
         if (currentTab === 'exclusivas' && !j.es_exclusiva_fisica) return false;
         if (currentTab === 'inminentes' && !j.es_cierre_inminente) return false;
         
@@ -486,7 +455,7 @@ def build_full_html(vacantes, config_ramas):
 
 def export_csv(vacantes):
     """Exporta las vacantes ordenadas a CSV para Excel"""
-    fieldnames = ["titulo", "empresa", "ubicacion", "rama_principal", "afinidad", "score_pensum", "es_mujeres_stem", "es_exclusiva_fisica", "es_cierre_inminente", "mision", "tareas", "fecha_publicacion", "fuente", "url"]
+    fieldnames = ["titulo", "empresa", "ubicacion", "rama_principal", "afinidad", "score_pensum", "es_exclusiva_fisica", "es_cierre_inminente", "mision", "tareas", "fecha_publicacion", "fuente", "url"]
     with open(OUTPUT_CSV, "w", newline="", encoding="utf-8-sig") as f:
         writer = csv.DictWriter(f, fieldnames=fieldnames)
         writer.writeheader()
@@ -498,7 +467,6 @@ def export_csv(vacantes):
                 "rama_principal": v["rama_principal"],
                 "afinidad": v["afinidad"],
                 "score_pensum": v.get("score_pensum", 0),
-                "es_mujeres_stem": v.get("es_mujeres_stem", False),
                 "es_exclusiva_fisica": v.get("es_exclusiva_fisica", False),
                 "es_cierre_inminente": v.get("es_cierre_inminente", False),
                 "mision": v.get("mision", ""),
@@ -539,7 +507,7 @@ def main():
     for j in all_raw_jobs:
         classified_jobs.append(classify_and_score_job(j, config_ramas))
         
-    # Ordenar estrictamente: Mujeres STEM y habilidades clave del pénsum DE PRIMERAS
+    # Ordenar por Score de Afinidad del Pénsum
     classified_jobs.sort(key=lambda x: x.get("score_pensum", 0), reverse=True)
     
     with open(OUTPUT_JSON, "w", encoding="utf-8") as f:

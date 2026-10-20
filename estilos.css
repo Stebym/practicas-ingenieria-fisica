@@ -1,0 +1,476 @@
+/* ==========================================================================
+   ESTILOS CSS - PORTAL DE PRÁCTICAS INGENIERÍA FÍSICA
+   Autor: Jimmy Stebym Rosero Barrera
+   Institución: Universidad Nacional de Colombia (UNAL Sede Medellín)
+   Enfoque: Diseño distintivo de laboratorio técnico / Blueprint científico
+   (Sin estéticas genéricas "AI slop" ni degradados morados sobre blanco)
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700&family=Syne:wght@700;800&display=swap');
+
+:root {
+  /* Paleta Técnica de Laboratorio de Física */
+  --bg-deep: #07090e;
+  --bg-surface: #0e131f;
+  --bg-surface-elevated: #161d2f;
+  --bg-chip: #1f293d;
+  
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-strong: rgba(255, 255, 255, 0.16);
+  --border-technical: #2a364f;
+
+  /* Acentos de Física Aplicada */
+  --accent-cyan: #00e5ff;       /* Láser de argón / Cuántica */
+  --accent-amber: #ffb703;      /* Filamento / Potencia */
+  --accent-emerald: #06d6a0;    /* Fluorescencia / Sensores */
+  --accent-crimson: #ef476f;    /* Advertencia / Cierre inminente */
+  --accent-violet: #8338ec;     /* Fotónica / Óptica */
+
+  /* Tipografías con Carácter */
+  --font-display: 'Syne', sans-serif;
+  --font-body: 'Outfit', -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  --text-main: #f1f5f9;
+  --text-muted: #94a3b8;
+  --text-dim: #64748b;
+}
+
+/* Reset y Base */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg-deep);
+  color: var(--text-main);
+  min-height: 100vh;
+  line-height: 1.6;
+  /* Retícula sutil milimétrica de papel de laboratorio en CSS puro */
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    radial-gradient(circle at 10% 20%, rgba(0, 229, 255, 0.05) 0%, transparent 40%),
+    radial-gradient(circle at 90% 80%, rgba(255, 183, 3, 0.04) 0%, transparent 40%);
+  background-size: 32px 32px, 32px 32px, 100% 100%, 100% 100%;
+  background-position: 0 0, 0 0, 0 0, 0 0;
+  background-attachment: fixed;
+}
+
+/* Encabezado Superior (Header Semántico) */
+header.site-header {
+  background: rgba(7, 9, 14, 0.92);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border-subtle);
+  position: sticky;
+  top: 0;
+  z-index: 200;
+  padding: 16px 28px;
+}
+
+.header-container {
+  max-width: 1360px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.branding {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.brand-symbol {
+  width: 48px;
+  height: 48px;
+  background: linear-gradient(135deg, #0e131f, #1a233a);
+  border: 1px solid var(--border-technical);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  box-shadow: 0 0 15px rgba(0, 229, 255, 0.15);
+}
+
+.brand-text h1 {
+  font-family: var(--font-display);
+  font-size: 1.45rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  color: #ffffff;
+}
+
+.brand-text p.subtitle {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  margin-top: 2px;
+}
+
+.creator-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 6px;
+  background: rgba(0, 229, 255, 0.08);
+  border: 1px solid rgba(0, 229, 255, 0.25);
+  color: var(--accent-cyan);
+  font-size: 0.78rem;
+  font-family: var(--font-mono);
+  padding: 3px 12px;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+.creator-tag strong {
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.header-meta {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-technical);
+  padding: 8px 18px;
+  border-radius: 10px;
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+}
+
+.header-meta .live-indicator {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background-color: var(--accent-emerald);
+  border-radius: 50%;
+  box-shadow: 0 0 8px var(--accent-emerald);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(0.95); opacity: 0.8; }
+  50% { transform: scale(1.2); opacity: 1; }
+  100% { transform: scale(0.95); opacity: 0.8; }
+}
+
+/* Contenedor Principal */
+main.main-content {
+  max-width: 1360px;
+  margin: 30px auto;
+  padding: 0 24px;
+}
+
+/* Banner de Manifiesto */
+section.manifesto-box {
+  background: linear-gradient(135deg, rgba(14, 19, 31, 0.95), rgba(22, 29, 47, 0.75));
+  border: 1px solid var(--border-technical);
+  border-left: 4px solid var(--accent-cyan);
+  border-radius: 14px;
+  padding: 26px 30px;
+  margin-bottom: 28px;
+}
+
+section.manifesto-box h2 {
+  font-family: var(--font-display);
+  font-size: 1.55rem;
+  color: #fff;
+  margin-bottom: 8px;
+}
+
+section.manifesto-box p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  max-width: 1000px;
+}
+
+/* Pestañas de Navegación (Tabs Semánticos) */
+nav.tabs-nav {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 24px;
+  border-bottom: 1px solid var(--border-technical);
+  padding-bottom: 8px;
+  flex-wrap: wrap;
+}
+
+button.tab-link {
+  background: transparent;
+  border: none;
+  font-family: var(--font-mono);
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+button.tab-link:hover {
+  background: var(--bg-surface);
+  color: #fff;
+}
+
+button.tab-link.active {
+  background: var(--bg-surface-elevated);
+  color: var(--accent-cyan);
+  border: 1px solid var(--border-technical);
+}
+
+button.tab-link.urgent {
+  color: var(--accent-crimson);
+}
+button.tab-link.urgent.active {
+  background: rgba(239, 71, 111, 0.12);
+  border-color: rgba(239, 71, 111, 0.3);
+}
+
+/* Barra de Búsqueda y Píldoras */
+div.filters-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 26px;
+}
+
+input.search-bar {
+  width: 100%;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-technical);
+  border-radius: 10px;
+  padding: 14px 20px;
+  color: #ffffff;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+input.search-bar:focus {
+  border-color: var(--accent-cyan);
+  box-shadow: 0 0 10px rgba(0, 229, 255, 0.15);
+}
+
+div.branch-pills {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+button.branch-pill {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  padding: 6px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+button.branch-pill:hover {
+  color: #fff;
+  border-color: var(--border-strong);
+}
+
+button.branch-pill.active {
+  background: rgba(0, 229, 255, 0.12);
+  border-color: var(--accent-cyan);
+  color: var(--accent-cyan);
+  font-weight: 700;
+}
+
+/* Grilla de Artículos / Tarjetas Semánticas */
+section.jobs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+  gap: 20px;
+}
+
+article.job-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: 12px;
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  transition: all 0.25s ease;
+}
+
+article.job-card:hover {
+  border-color: var(--border-technical);
+  transform: translateY(-3px);
+  background: var(--bg-surface-elevated);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.4);
+}
+
+header.job-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 12px;
+  gap: 12px;
+}
+
+span.affinity-badge {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 4px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+time.job-date {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--text-dim);
+}
+
+h3.job-title {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 6px;
+  line-height: 1.35;
+}
+
+div.job-company {
+  color: var(--accent-cyan);
+  font-weight: 600;
+  font-size: 0.92rem;
+  margin-bottom: 10px;
+}
+
+div.job-specs {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 16px;
+}
+
+div.job-tags {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-bottom: 18px;
+}
+
+span.job-tag {
+  background: var(--bg-chip);
+  border: 1px solid var(--border-subtle);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  padding: 3px 8px;
+  border-radius: 4px;
+  color: var(--text-muted);
+}
+
+footer.job-card-footer {
+  margin-top: auto;
+}
+
+a.apply-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background: #0284c7;
+  color: #ffffff;
+  text-decoration: none;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 10px 16px;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  letter-spacing: 0.3px;
+}
+
+a.apply-link:hover {
+  background: var(--accent-cyan);
+  color: #07090e;
+  box-shadow: 0 0 15px rgba(0, 229, 255, 0.4);
+}
+
+/* Tarjetas de Cierre Inminente */
+article.urgent-card {
+  border-left: 4px solid var(--accent-crimson);
+}
+
+/* Tarjetas Exclusivas de Física */
+article.physics-exclusive {
+  border-left: 4px solid var(--accent-amber);
+}
+
+/* Tarjetas de Contenido Editorial / Guía */
+article.editorial-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-technical);
+  border-radius: 14px;
+  padding: 28px;
+  margin-bottom: 20px;
+}
+
+article.editorial-card h3 {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  color: var(--accent-cyan);
+  margin-bottom: 14px;
+}
+
+article.editorial-card ul {
+  margin-left: 24px;
+  margin-top: 10px;
+  margin-bottom: 18px;
+  color: #cbd5e1;
+}
+
+article.editorial-card li {
+  margin-bottom: 8px;
+}
+
+/* Pie de Página Semántico */
+footer.site-footer {
+  text-align: center;
+  margin-top: 60px;
+  padding: 30px 20px;
+  border-top: 1px solid var(--border-subtle);
+  color: var(--text-dim);
+  font-size: 0.86rem;
+  font-family: var(--font-mono);
+}
+
+footer.site-footer p.institution {
+  color: var(--text-muted);
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+
+footer.site-footer p.schedule-note {
+  color: var(--accent-amber);
+  font-size: 0.8rem;
+}

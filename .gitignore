@@ -1,0 +1,45 @@
+# ==============================================================================
+# SEGURIDAD Y PROTECCIÓN DE DATOS - INGENIERÍA FÍSICA UNAL
+# Evita fugas de claves de API, credenciales privadas, tokens o variables de entorno
+# ==============================================================================
+
+# Variables de entorno y llaves secretas de APIs
+.env
+.env.*
+*.env
+secrets/
+config.private.json
+credentials.json
+*.pem
+*.key
+*.cert
+*.token
+
+# Python & Entornos Virtuales
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Registros de depuración y logs
+*.log
+*.sqlite3
+
+# Archivos del Sistema Operativo
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+.DS_Store
+
+# IDEs y Editores de Código
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace

@@ -1,0 +1,92 @@
+{
+  "ramas": {
+    "energia_potencia": {
+      "nombre": "Energía, Potencia y Renovables",
+      "icono": "⚡",
+      "color": "#f59e0b",
+      "palabras_clave": [
+        "energia solar", "fotovoltaic", "solar", "subestacion", "transformador",
+        "redes electricas", "potencia", "bess", "bateria", "almacenamiento de energia",
+        "transmision", "distribucion electrica", "calidad de la energia", "eficiencia energetica",
+        "mercado de energia", "flujos de potencia"
+      ],
+      "carreras_mencionadas": ["ingenieria electrica", "ingenieria fisica", "ingenieria de energia", "electronica"],
+      "empresas_referencia": ["ISA", "XM", "EPM", "Celsia", "Intercolombia", "Erco Energia", "Sunita", "CIDET"]
+    },
+    "automatizacion_instrumentacion": {
+      "nombre": "Automatización, Instrumentación y Control",
+      "icono": "🎛️",
+      "color": "#3b82f6",
+      "palabras_clave": [
+        "plc", "scada", "instrumentacion", "sensores", "control de procesos",
+        "adquisicion de datos", "daq", "labview", "metrologia", "calibracion",
+        "automatizacion industrial", "iot", "arduino", "esp32", "microcontroladores",
+        "sensores industriales", "redes industriales"
+      ],
+      "carreras_mencionadas": ["ingenieria fisica", "ingenieria electronica", "ingenieria mecatronica", "control"],
+      "empresas_referencia": ["Haceb", "Corona", "Grupo Argos", "Sofasa", "Enka", "Nutresa", "Siemens", "Schneider"]
+    },
+    "materiales_nanotecnologia": {
+      "nombre": "Materiales, Nanotecnología y Ensayos",
+      "icono": "🔬",
+      "color": "#10b981",
+      "palabras_clave": [
+        "materiales", "nanotecnologia", "caracterizacion", "difraccion", "drx",
+        "microscopia", "sem", "ensayos mecanicos", "polimeros", "ceramicos",
+        "control de calidad", "revestimientos", "corrosion", "metalurgia",
+        "laboratorio de ensayos", "propiedades termicas"
+      ],
+      "carreras_mencionadas": ["ingenieria fisica", "ingenieria de materiales", "quimica", "ingenieria mecanica"],
+      "empresas_referencia": ["Sumicol / Corona", "Cementos Argos (Centro Innovacion)", "Enka", "Invesa", "Andercol"]
+    },
+    "optica_fotonica": {
+      "nombre": "Óptica, Fotónica y Visión Artificial",
+      "icono": "👁️",
+      "color": "#8b5cf6",
+      "palabras_clave": [
+        "optica", "fotonica", "laser", "fibra optica", "vision artificial",
+        "procesamiento de imagenes", "opencv", "espectroscopia", "interferometria",
+        "sensores opticos", "camaras industriales", "iluminacion", "guias de onda"
+      ],
+      "carreras_mencionadas": ["ingenieria fisica", "ingenieria electronica", "sistemas"],
+      "empresas_referencia": ["Centros de I+D", "Empresas de inspeccion automatizada", "Ruta N Startups", "Opticas industriales"]
+    },
+    "simulacion_datos_cuantica": {
+      "nombre": "Simulación, Datos, IA y Cuántica",
+      "icono": "📊",
+      "color": "#ec4899",
+      "palabras_clave": [
+        "modelado numerico", "simulacion", "python", "ciencia de datos", "data science",
+        "machine learning", "algoritmos", "analitica avanzada", "matlab", "comsol",
+        "elementos finitos", "ansys", "computacion cuantica", "optimizacion matematica",
+        "modelos estocasticos"
+      ],
+      "carreras_mencionadas": ["ingenieria fisica", "matematicas", "estadistica", "ingenieria de sistemas", "fisica"],
+      "empresas_referencia": ["Bancolombia", "Grupo Sura", "Proteccion", "Ruta N", "Interacpedia", "Tuya", "Globant"]
+    },
+    "fisica_medica_bio": {
+      "nombre": "Física Médica, Radiaciones y Bioingeniería",
+      "icono": "🏥",
+      "color": "#ef4444",
+      "palabras_clave": [
+        "fisica medica", "radiaciones", "radioterapia", "dosimetria", "resonancia magnetica",
+        "rayos x", "proteccion radiologica", "medicina nuclear", "aceleradores lineales",
+        "equipos biomedicos", "calibracion de equipos medicos"
+      ],
+      "carreras_mencionadas": ["ingenieria fisica", "fisica", "bioingenieria", "ingenieria biomedica"],
+      "empresas_referencia": ["Hospital San Vicente Fundacion", "Clinica Las Americas", "Instituto de Cancerologia", "Clinica Medellin"]
+    },
+    "id_deeptech": {
+      "nombre": "I+D, Innovación y Deep Tech",
+      "icono": "💡",
+      "color": "#6366f1",
+      "palabras_clave": [
+        "investigacion y desarrollo", "i+d", "r&d", "desarrollo tecnologico",
+        "prototipado", "innovacion", "deep tech", "transferencia tecnologica",
+        "patentes", "diseno experimental"
+      ],
+      "carreras_mencionadas": ["ingenieria fisica", "ingenierias afines"],
+      "empresas_referencia": ["CIDET", "CTA", "Tecnova", "Ruta N", "Centros de Innovacion Empresarial"]
+    }
+  }
+}

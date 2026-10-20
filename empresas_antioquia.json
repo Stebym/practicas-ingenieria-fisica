@@ -1,0 +1,162 @@
+[
+  {
+    "empresa": "Empresas Públicas de Medellín (EPM)",
+    "ubicacion": "Medellín, Antioquia",
+    "ramas": ["Energía, Potencia y Renovables", "Automatización, Instrumentación y Control", "I+D, Innovación y Deep Tech"],
+    "perfil_buscado": "Generación hidroeléctrica y solar, subestaciones, monitoreo y diagnóstico de transformadores, telemetría y calidad de energía.",
+    "portal_practicas": "https://www.epm.com.co/site/home/nuestra-gente/trabaje-con-nosotros",
+    "plataforma": "Portal EPM / Convocatorias universitarias",
+    "modalidad": "Contrato de Aprendizaje (Ley 789)",
+    "temporada_convocatoria": "Marzo-Mayo (para 2do semestre) / Septiembre-Noviembre (para 1er semestre)"
+  },
+  {
+    "empresa": "Interconexión Eléctrica S.A. (ISA) / Intercolombia",
+    "ubicacion": "Medellín, Antioquia",
+    "ramas": ["Energía, Potencia y Renovables", "Simulación, Datos, IA y Cuántica"],
+    "perfil_buscado": "Estudios de planificación eléctrica, protecciones, análisis de redes de alta tensión, transición energética e infraestructura inteligente.",
+    "portal_practicas": "https://www.isa.co/es/talento-isa/trabaja-con-nosotros/",
+    "plataforma": "Magneto Empleos / Portal ISA",
+    "modalidad": "Contrato de Aprendizaje",
+    "temporada_convocatoria": "Abril-Junio y Octubre-Diciembre"
+  },
+  {
+    "empresa": "XM Compañía de Expertos en Mercados",
+    "ubicacion": "Medellín, Antioquia",
+    "ramas": ["Energía, Potencia y Renovables", "Simulación, Datos, IA y Cuántica"],
+    "perfil_buscado": "Operador del Sistema Interconectado Nacional (SIN). Modelado matemático de mercados energéticos, despacho eléctrico, analítica de datos y flujos de potencia.",
+    "portal_practicas": "https://www.xm.com.co/nuestra-gente/trabaja-con-nosotros",
+    "plataforma": "Magneto Empleos / LinkedIn",
+    "modalidad": "Contrato de Aprendizaje",
+    "temporada_convocatoria": "Marzo-Mayo y Septiembre-Noviembre"
+  },
+  {
+    "empresa": "Celsia Energía",
+    "ubicacion": "Medellín / Yumbo (Antioquia / Valle)",
+    "ramas": ["Energía, Potencia y Renovables", "Automatización, Instrumentación y Control"],
+    "perfil_buscado": "Proyectos de generación solar a gran escala, techos solares, sistemas BESS (baterías), microrredes e internet de las cosas (IoT).",
+    "portal_practicas": "https://www.celsia.com/trabaja-con-nosotros/",
+    "plataforma": "Magneto Empleos / Celsia Careers",
+    "modalidad": "Contrato de Aprendizaje",
+    "temporada_convocatoria": "Convocatorias abiertas todo el año / Semilleros"
+  },
+  {
+    "empresa": "CIDET (Centro de Investigación y Desarrollo del Sector Eléctrico)",
+    "ubicacion": "Medellín, Antioquia (Ruta N / Sede Belén)",
+    "ramas": ["Energía, Potencia y Renovables", "I+D, Innovación y Deep Tech", "Materiales, Nanotecnología y Ensayos"],
+    "perfil_buscado": "Laboratorio de ensayos de alta y baja tensión, calibración de transformadores, investigación aplicada en redes inteligentes y certificación ONAC.",
+    "portal_practicas": "https://cidet.org.co/",
+    "plataforma": "Convocatoria directa UNAL / Contacto institucional",
+    "modalidad": "Convenio de práctica / Contrato de Aprendizaje",
+    "temporada_convocatoria": "Semestral"
+  },
+  {
+    "empresa": "Bancolombia (Analítica Avanzada & Quantum Lab)",
+    "ubicacion": "Medellín, Antioquia",
+    "ramas": ["Simulación, Datos, IA y Cuántica"],
+    "perfil_buscado": "Científico de datos, modelado estocástico, optimización financiera y algoritmos cuánticos aplicados a carteras de inversión.",
+    "portal_practicas": "https://www.bancolombia.com/personas/nosotros/empleo/trabaja-con-nosotros",
+    "plataforma": "Magneto Empleos / Talento Bancolombia",
+    "modalidad": "Contrato de Aprendizaje",
+    "temporada_convocatoria": "Marzo-Mayo y Septiembre-Noviembre"
+  },
+  {
+    "empresa": "Grupo Corona (Sumicol / Materiales)",
+    "ubicacion": "Sabaneta / Girardota / La Estrella, Antioquia",
+    "ramas": ["Materiales, Nanotecnología y Ensayos", "Automatización, Instrumentación y Control", "I+D, Innovación y Deep Tech"],
+    "perfil_buscado": "Laboratorios de caracterización físico-química de cerámicos y minerales, difracción de rayos X (DRX), microscopía, control térmico de hornos y automatización de procesos.",
+    "portal_practicas": "https://corona.co/trabaja-con-nosotros",
+    "plataforma": "Magneto Empleos / LinkedIn",
+    "modalidad": "Contrato de Aprendizaje",
+    "temporada_convocatoria": "Abril y Octubre"
+  },
+  {
+    "empresa": "Cementos Argos (Centro de Innovación en EAFIT)",
+    "ubicacion": "Medellín, Antioquia",
+    "ramas": ["Materiales, Nanotecnología y Ensayos", "I+D, Innovación y Deep Tech"],
+    "perfil_buscado": "Investigación en nanoestructuras de cemento, propiedades mecánicas y térmicas, microscopía electrónica de barrido (SEM), reducción de huella de carbono.",
+    "portal_practicas": "https://www.argos.co/trabaja-con-nosotros/",
+    "plataforma": "Magneto Empleos / LinkedIn",
+    "modalidad": "Contrato de Aprendizaje",
+    "temporada_convocatoria": "Marzo-Mayo y Septiembre-Noviembre"
+  },
+  {
+    "empresa": "Industrias Haceb",
+    "ubicacion": "Copacabana, Antioquia",
+    "ramas": ["Automatización, Instrumentación y Control", "Materiales, Nanotecnología y Ensayos"],
+    "perfil_buscado": "Automatización con PLCs en líneas de ensamble, termodinámica de refrigeración, control de procesos térmicos, pruebas de laboratorio y metrología.",
+    "portal_practicas": "https://www.haceb.com/trabaja-con-nosotros",
+    "plataforma": "Magneto Empleos / Portal Haceb",
+    "modalidad": "Contrato de Aprendizaje",
+    "temporada_convocatoria": "Semestral"
+  },
+  {
+    "empresa": "Enka de Colombia",
+    "ubicacion": "Girardota, Antioquia",
+    "ramas": ["Materiales, Nanotecnología y Ensayos", "Automatización, Instrumentación y Control"],
+    "perfil_buscado": "Líder en reciclaje de botellas PET y polímeros de alto rendimiento. Ensayos reológicos, viscosidad, resistencia a tracción y control de reactores.",
+    "portal_practicas": "https://www.enka.com.co/trabaje-con-nosotros/",
+    "plataforma": "ElEmpleo / LinkedIn",
+    "modalidad": "Contrato de Aprendizaje",
+    "temporada_convocatoria": "Convocatorias regulares"
+  },
+  {
+    "empresa": "Renault Sofasa",
+    "ubicacion": "Envigado, Antioquia",
+    "ramas": ["Automatización, Instrumentación y Control", "Óptica, Fotónica y Visión Artificial"],
+    "perfil_buscado": "Sistemas de visión artificial para control de calidad en carrocería, automatización con robots industriales y PLCs, metrología óptica 3D.",
+    "portal_practicas": "https://www.renault.com.co/trabaje-con-nosotros.html",
+    "plataforma": "LinkedIn / Magneto",
+    "modalidad": "Contrato de Aprendizaje",
+    "temporada_convocatoria": "Abril y Noviembre"
+  },
+  {
+    "empresa": "Grupo Nutresa (Servicios Nutresa / Doria / Noel / Zenú)",
+    "ubicacion": "Medellín, Antioquia",
+    "ramas": ["Automatización, Instrumentación y Control", "Simulación, Datos, IA y Cuántica"],
+    "perfil_buscado": "Instrumentación en plantas de alimentos, analítica de datos de producción y logística, control de calidad sensorial y de empaques.",
+    "portal_practicas": "https://gruponutresa.com/talento-nutresa/trabaja-con-nosotros/",
+    "plataforma": "Magneto Empleos",
+    "modalidad": "Contrato de Aprendizaje",
+    "temporada_convocatoria": "Marzo-Mayo y Septiembre-Noviembre"
+  },
+  {
+    "empresa": "Hospital San Vicente Fundación / Instituto de Cancerología",
+    "ubicacion": "Medellín / Rionegro, Antioquia",
+    "ramas": ["Física Médica, Radiaciones y Bioingeniería"],
+    "perfil_buscado": "Servicios de radioterapia, calibración de haces en aceleradores lineales, dosimetría clínica, control de calidad en equipos de imágenes diagnósticas.",
+    "portal_practicas": "https://www.sanvicentefundacion.com/",
+    "plataforma": "Convenio UNAL / Contacto directo con el Departamento de Física Médica",
+    "modalidad": "Convenio de práctica universitaria",
+    "temporada_convocatoria": "Semestral"
+  },
+  {
+    "empresa": "Clínica Las Américas Auna",
+    "ubicacion": "Medellín, Antioquia",
+    "ramas": ["Física Médica, Radiaciones y Bioingeniería"],
+    "perfil_buscado": "Protección radiológica, control de calidad en medicina nuclear y resonancia magnética, cálculo de dosis de radiación para pacientes oncológicos.",
+    "portal_practicas": "https://www.clinicalasamericas.net/",
+    "plataforma": "Convenio universitario",
+    "modalidad": "Convenio de práctica",
+    "temporada_convocatoria": "Semestral"
+  },
+  {
+    "empresa": "Erco Energía",
+    "ubicacion": "Medellín, Antioquia (Ruta N)",
+    "ramas": ["Energía, Potencia y Renovables", "Simulación, Datos, IA y Cuántica"],
+    "perfil_buscado": "Diseño y dimensionamiento de sistemas fotovoltaicos, telemetría de paneles solares, analítica de generación y almacenamiento energético.",
+    "portal_practicas": "https://erco.energy/",
+    "plataforma": "LinkedIn / Magneto / Portal Erco",
+    "modalidad": "Contrato de Aprendizaje",
+    "temporada_convocatoria": "Convocatorias continuas"
+  },
+  {
+    "empresa": "Corporación Ruta N Medellín",
+    "ubicacion": "Medellín, Antioquia",
+    "ramas": ["I+D, Innovación y Deep Tech", "Simulación, Datos, IA y Cuántica"],
+    "perfil_buscado": "Ecosistema de innovación, asesoría y validación tecnológica para startups de Deep Tech, analítica de datos de ciencia y tecnología.",
+    "portal_practicas": "https://www.rutanmedellin.org/",
+    "plataforma": "Magneto Empleos / Red de Startups de Ruta N",
+    "modalidad": "Contrato de Aprendizaje / Pasantía",
+    "temporada_convocatoria": "Semestral"
+  }
+]

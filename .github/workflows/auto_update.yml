@@ -1,0 +1,41 @@
+name: Actualizacion Automatica de Vacantes
+
+on:
+  schedule:
+    # Se ejecuta todos los días a las 12:00 UTC (7:00 AM hora Colombia)
+    - cron: '0 12 * * *'
+  workflow_dispatch: # Permite ejecutarlo manualmente con un botón en GitHub
+
+permissions:
+  contents: write
+
+jobs:
+  update-jobs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Descargar repositorio
+        uses: actions/checkout@v4
+
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Instalar dependencias
+        run: |
+          pip install -r requirements.txt
+
+      - name: Ejecutar Bot de Rastreo
+        run: |
+          python bot_practicas.py
+
+      - name: Preparar archivo para GitHub Pages
+        run: |
+          cp dashboard_practicas.html index.html
+
+      - name: Guardar y publicar cambios actualizados
+        run: |
+          git config --global user.name "Bot Practicas UNAL"
+          git config --global user.email "actions@github.com"
+          git add index.html dashboard_practicas.html vacantes_practicas.json vacantes_practicas.csv
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Auto-update: Vacantes de Ingeniería Física [$(date '+%Y-%m-%d')]" && git push)

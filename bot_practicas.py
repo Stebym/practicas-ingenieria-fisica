@@ -353,6 +353,15 @@ def build_full_html(vacantes, config_ramas):
     <!-- CONTENEDOR DE FILTROS Y BÚSQUEDA -->
     <div id="filterControls">
       <input type="text" id="searchInput" class="search-bar" placeholder="Buscar por materia, software o tecnología (ej. I2C, Python, Taller V, CAD, PLC, Cuántica, Radiaciones)..." onkeyup="handleFilter()">
+      <div class="application-tracker">
+        <label for="applicationFilter">Mis postulaciones <span>· se guarda en este navegador</span></label>
+        <select id="applicationFilter" onchange="handleFilter()">
+          <option value="all">Todas las convocatorias</option>
+          <option value="pending">Pendientes de postularme</option>
+          <option value="applied">Ya me postulé</option>
+        </select>
+        <span id="applicationSummary" aria-live="polite"></span>
+      </div>
       
       <div class="branch-pills" id="pillsContainer">
         <button class="branch-pill active" onclick="handlePill('TODOS', this)">Todas las ramas</button>
@@ -402,6 +411,9 @@ def build_full_html(vacantes, config_ramas):
     const allJobs = {vacantes_json_str};
     let currentTab = 'todas';
     let currentBranch = 'TODOS';
+    const appliedStorageKey = 'ipf-applied-jobs-v1';
+    let appliedJobs = new Set();
+    try {{ appliedJobs = new Set(JSON.parse(localStorage.getItem(appliedStorageKey) || '[]')); }} catch {{}}
 
     function renderJobs(list) {{
       const container = document.getElementById('jobsContainer');
@@ -430,6 +442,7 @@ def build_full_html(vacantes, config_ramas):
           badgeColor = '#ffb703';
         }}
         
+        const isApplied = appliedJobs.has(j.url);
         card.innerHTML = `
           <div>
             <header class="job-card-header">
@@ -461,18 +474,26 @@ def build_full_html(vacantes, config_ramas):
           </div>
           <footer class="job-card-footer">
             <a href="${{j.url}}" target="_blank" class="apply-link" rel="noopener noreferrer">Postularme a la Oferta</a>
+            <button type="button" class="application-toggle${{isApplied ? ' is-applied' : ''}}" aria-pressed="${{isApplied}}">${{isApplied ? '✓ Ya me postulé' : 'Marcar como postulada'}}</button>
           </footer>
         `;
+        card.querySelector('.application-toggle').addEventListener('click', () => toggleApplied(j.url));
         container.appendChild(card);
       }});
     }}
 
     function handleFilter() {{
       const query = document.getElementById('searchInput').value.toLowerCase();
+      const applicationFilter = document.getElementById('applicationFilter').value;
+      const appliedCount = allJobs.filter(j => appliedJobs.has(j.url)).length;
+      const pendingCount = allJobs.length - appliedCount;
+      document.getElementById('applicationSummary').textContent = `${{appliedCount}} postuladas · ${{pendingCount}} pendientes`;
       
       const filtered = allJobs.filter(j => {{
         if (currentTab === 'exclusivas' && !j.es_exclusiva_fisica) return false;
         if (currentTab === 'inminentes' && !j.es_cierre_inminente) return false;
+        if (applicationFilter === 'pending' && appliedJobs.has(j.url)) return false;
+        if (applicationFilter === 'applied' && !appliedJobs.has(j.url)) return false;
         
         const matchesBranch = (currentBranch === 'TODOS') || j.ramas.some(r => r.nombre === currentBranch);
         if (!matchesBranch) return false;
@@ -487,6 +508,13 @@ def build_full_html(vacantes, config_ramas):
       }});
       
       renderJobs(filtered);
+    }}
+
+    function toggleApplied(url) {{
+      if (appliedJobs.has(url)) appliedJobs.delete(url);
+      else appliedJobs.add(url);
+      try {{ localStorage.setItem(appliedStorageKey, JSON.stringify([...appliedJobs])); }} catch {{}}
+      handleFilter();
     }}
 
     function handlePill(branchName, btn) {{
@@ -532,7 +560,7 @@ def build_full_html(vacantes, config_ramas):
       setTheme(document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark');
     }});
     setTheme(document.documentElement.dataset.theme || 'light');
-    renderJobs(allJobs);
+    handleFilter();
   </script>
 </body>
 </html>

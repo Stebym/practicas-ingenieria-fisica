@@ -64,6 +64,13 @@ SEARCH_QUERIES = [
     "practicante nanotecnologia",
     "practicante energia solar",
     "practicante potencia transformadores",
+    "practicante protecciones electricas rele proteccion subestaciones Colombia",
+    "practicante proteccion y control sistemas de potencia Antioquia",
+    "estudiante ingenieria fisica materiales Corona Sumicol practicante",
+    "Banco de Occidente practicante ingenieria datos analitica Medellin",
+    "practicante ingenieria electrica protecciones Antioquia",
+    "site:magneto365.com protecciones electricas practicante Colombia",
+    "site:computrabajo.com.co rele proteccion ingenieria practicante Colombia",
     "practicante fisico",
     "practicante investigacion i+d",
     "practicante mujeres stem",
@@ -287,8 +294,10 @@ def build_full_html(vacantes, config_ramas):
     }} catch {{ document.documentElement.dataset.theme = 'light'; }}
   </script>
   <link rel="stylesheet" href="estilos.css">
+  <script src="estrellas.js" defer></script>
 </head>
 <body>
+  <canvas id="constellationCanvas" aria-hidden="true"></canvas>
 
   <!-- HEADER SEMÁNTICO -->
   <header class="site-header">
@@ -584,9 +593,12 @@ def main():
 
     # Descubre convocatorias publicadas en sitios corporativos indexados, no solo en portales.
     company_directory = load_json(os.path.join(BASE_DIR, "empresas_antioquia.json"))
-    company_names = [item.get("empresa", "") for item in company_directory if item.get("empresa")]
-    company_names.extend(["Antioquia Gold", "Mineros S.A.", "Atico Mining", "Zijin-Continental Gold"])
-    company_queries = [f'"{name}" (practicante OR prácticas OR estudiante OR ingeniero) empleo Antioquia' for name in company_names]
+    company_names = []
+    for item in company_directory:
+        company_names.extend([item.get("empresa", ""), *item.get("alias_busqueda", [])])
+    company_names.extend(["Mineros S.A.", "Atico Mining", "Zijin-Continental Gold"])
+    company_names = list(dict.fromkeys(name.strip() for name in company_names if name and name.strip()))
+    company_queries = [f'"{name}" (practicante OR prácticas OR estudiante OR ingeniero OR protecciones OR materiales) empleo Colombia' for name in company_names]
     print(f"[*] Revisando búsquedas de vacantes en {len(company_queries)} empresas de Antioquia...")
     for q in company_queries:
         for j in scrape_web_query(q):

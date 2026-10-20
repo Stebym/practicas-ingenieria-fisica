@@ -71,6 +71,7 @@
   },
   {
     "empresa": "Grupo Corona (Sumicol / Materiales)",
+    "alias_busqueda": ["Corona Sumicol", "Sumicol materiales"],
     "ubicacion": "Sabaneta / Girardota / La Estrella, Antioquia",
     "ramas": ["Materiales, Nanotecnología y Ensayos", "Automatización, Instrumentación y Control", "I+D, Innovación y Deep Tech"],
     "perfil_buscado": "Laboratorios de caracterización físico-química de cerámicos y minerales, difracción de rayos X (DRX), microscopía, control térmico de hornos y automatización de procesos.",
@@ -168,5 +169,65 @@
     "plataforma": "Magneto Empleos / Red de Startups de Ruta N",
     "modalidad": "Contrato de Aprendizaje / Pasantía",
     "temporada_convocatoria": "Semestral"
+  },
+  {
+    "empresa": "Banco de Occidente",
+    "ubicacion": "Colombia (buscar vacantes con opción Medellín / Antioquia)",
+    "ramas": ["Simulación, Datos, IA y Cuántica", "Automatización, Instrumentación y Control"],
+    "perfil_buscado": "Analítica, ciencia de datos, automatización de procesos, modelado cuantitativo, tecnología financiera y ciberseguridad.",
+    "portal_practicas": "https://www.bancodeoccidente.com.co/",
+    "plataforma": "Portal corporativo / LinkedIn / Magneto / ElEmpleo",
+    "modalidad": "Validar en cada convocatoria",
+    "temporada_convocatoria": "Convocatorias según necesidad"
+  },
+  {
+    "empresa": "Schneider Electric",
+    "ubicacion": "Colombia (buscar vacantes con opción Medellín / Antioquia)",
+    "ramas": ["Energía, Potencia y Renovables", "Automatización, Instrumentación y Control"],
+    "perfil_buscado": "Protección y control, relés, automatización de subestaciones, electrónica de potencia, calidad de energía y redes inteligentes.",
+    "portal_practicas": "https://www.se.com/co/es/about-us/careers/",
+    "plataforma": "Portal corporativo / LinkedIn",
+    "modalidad": "Validar en cada convocatoria",
+    "temporada_convocatoria": "Convocatorias según necesidad"
+  },
+  {
+    "empresa": "Siemens Energy",
+    "ubicacion": "Colombia (buscar vacantes con opción Medellín / Antioquia)",
+    "ramas": ["Energía, Potencia y Renovables", "Automatización, Instrumentación y Control"],
+    "perfil_buscado": "Sistemas eléctricos de potencia, protecciones, subestaciones, transformadores, redes y transición energética.",
+    "portal_practicas": "https://www.siemens-energy.com/global/en/home/careers.html",
+    "plataforma": "Portal corporativo / LinkedIn",
+    "modalidad": "Validar en cada convocatoria",
+    "temporada_convocatoria": "Convocatorias según necesidad"
+  },
+  {
+    "empresa": "Hitachi Energy",
+    "ubicacion": "Colombia (buscar vacantes con opción Medellín / Antioquia)",
+    "ramas": ["Energía, Potencia y Renovables", "Automatización, Instrumentación y Control"],
+    "perfil_buscado": "Protección, automatización y control de subestaciones, relés, transformadores y calidad de energía.",
+    "portal_practicas": "https://www.hitachienergy.com/careers",
+    "plataforma": "Portal corporativo / LinkedIn",
+    "modalidad": "Validar en cada convocatoria",
+    "temporada_convocatoria": "Convocatorias según necesidad"
+  },
+  {
+    "empresa": "SEL (Schweitzer Engineering Laboratories)",
+    "ubicacion": "Colombia (buscar vacantes con opción Medellín / Antioquia)",
+    "ramas": ["Energía, Potencia y Renovables", "Automatización, Instrumentación y Control"],
+    "perfil_buscado": "Relés de protección, ingeniería de protecciones eléctricas, automatización y control de sistemas de potencia.",
+    "portal_practicas": "https://selinc.com/company/careers/",
+    "plataforma": "Portal corporativo / LinkedIn",
+    "modalidad": "Validar en cada convocatoria",
+    "temporada_convocatoria": "Convocatorias según necesidad"
+  },
+  {
+    "empresa": "GE Vernova",
+    "ubicacion": "Colombia (buscar vacantes con opción Medellín / Antioquia)",
+    "ramas": ["Energía, Potencia y Renovables", "Automatización, Instrumentación y Control"],
+    "perfil_buscado": "Protección y control, redes eléctricas, automatización de subestaciones, máquinas eléctricas y generación.",
+    "portal_practicas": "https://careers.gevernova.com/",
+    "plataforma": "Portal corporativo / LinkedIn",
+    "modalidad": "Validar en cada convocatoria",
+    "temporada_convocatoria": "Convocatorias según necesidad"
   }
 ]

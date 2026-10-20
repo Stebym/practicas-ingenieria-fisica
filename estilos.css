@@ -624,9 +624,9 @@ a.apply-link:hover { background: #0d5c57; color: #fff; box-shadow: 0 8px 18px rg
   .job-card:hover .floating-cloud, .job-card:focus-within .floating-cloud { transform: translate(-50%, -50%) scale(1); }
 }
 
-/* Constelaciones y planetas en órbita, siempre detrás del contenido. */
+/* Constelaciones animadas en canvas y planetas suaves al fondo. */
 body { position: relative; isolation: isolate; }
-body::before, body::after { content: ""; position: fixed; inset: 0; pointer-events: none; }
+body::before { content: ""; position: fixed; inset: 0; pointer-events: none; }
 body::before {
   z-index: 0;
   background-image:
@@ -637,17 +637,7 @@ body::before {
   opacity: .72;
   animation: planet-drift 34s ease-in-out infinite alternate;
 }
-body::after {
-  z-index: 0;
-  background-image:
-    radial-gradient(circle at 12% 18%, rgba(8,127,140,.55) 0 1px, transparent 1.7px),
-    radial-gradient(circle at 35% 11%, rgba(199,120,37,.55) 0 1px, transparent 1.7px),
-    radial-gradient(circle at 54% 30%, rgba(8,127,140,.5) 0 1px, transparent 1.7px),
-    radial-gradient(circle at 94% 52%, rgba(199,120,37,.5) 0 1px, transparent 1.7px),
-    radial-gradient(circle at 27% 62%, rgba(8,127,140,.45) 0 1px, transparent 1.7px),
-    radial-gradient(circle at 72% 88%, rgba(199,120,37,.5) 0 1px, transparent 1.7px);
-  animation: star-glimmer 6s ease-in-out infinite alternate;
-}
+#constellationCanvas { position: fixed; inset: 0; z-index: 0; width: 100%; height: 100%; pointer-events: none; }
 .site-header, .main-content, .site-footer { position: relative; z-index: 1; }
 .header-meta { flex-wrap: wrap; justify-content: flex-start; }
 .theme-toggle {
@@ -673,7 +663,6 @@ body::after {
   from { transform: translate3d(0, 0, 0) rotate(-1deg); }
   to { transform: translate3d(-10px, 8px, 0) rotate(1deg); }
 }
-@keyframes star-glimmer { from { opacity: .28; } to { opacity: .7; } }
 
 html[data-theme="light"] { color-scheme: light; }
 html[data-theme="dark"] {
@@ -699,7 +688,6 @@ html[data-theme="dark"] body {
   background-image: radial-gradient(ellipse at 85% 8%, rgba(63,111,105,.2), transparent 32rem), radial-gradient(ellipse at 8% 38%, rgba(101,76,118,.14), transparent 28rem);
 }
 html[data-theme="dark"] body::before { opacity: .48; }
-html[data-theme="dark"] body::after { opacity: .72; }
 html[data-theme="dark"] header.site-header { background: rgba(16,21,26,.92); border-color: var(--border-technical); }
 html[data-theme="dark"] .brand-symbol { background: #1b302f; }
 html[data-theme="dark"] .brand-text h1,
@@ -727,6 +715,6 @@ html[data-theme="dark"] a.apply-link:hover { background: #35958a; color: #fff; }
 html[data-theme="dark"] .theme-toggle { background: #202b30; color: var(--text-main); }
 
 @media (prefers-reduced-motion: reduce) {
-  body::before, body::after { animation: none; }
+  body::before { animation: none; }
   .theme-toggle { transition: none; }
 }

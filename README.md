@@ -46,6 +46,7 @@ Este proyecto fue construido aplicando estándares profesionales de **Desarrollo
   * **⏳ Próximas a Finalizar (< 5 Días)**
   * **📝 Guía & Tips para la Hoja de Vida**
 * `.github/workflows/auto_update.yml`: Flujo de GitHub Actions que ejecuta el bot automáticamente todos los días en la nube y despliega los resultados a GitHub Pages sin requerir servidores de pago ni computadores encendidos.
+* `.github/workflows/publish-pages.yml`: Publica `index.html` y `estilos.css` en GitHub Pages cada vez que se actualiza `main`.
 
 ### Cobertura de fuentes
 La búsqueda web puede encontrar páginas públicas que los buscadores tengan indexadas, incluidos resultados de Magneto, Computrabajo/Pandapé, elempleo y sitios corporativos. No garantiza cubrir todo Internet: algunos portales requieren iniciar sesión, bloquean rastreadores o publican vacantes que aún no están indexadas. Las fechas y el estado de cada resultado se deben confirmar en la publicación original; los resúmenes web se distinguen de las misiones inferidas por área.

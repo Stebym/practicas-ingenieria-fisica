@@ -40,7 +40,7 @@ OUTPUT_INDEX = os.path.join(BASE_DIR, "index.html")
 OUTPUT_CSV = os.path.join(BASE_DIR, "vacantes_practicas.csv")
 OUTPUT_JSON = os.path.join(BASE_DIR, "vacantes_practicas.json")
 
-SEARCH_QUERIES = [
+BASE_SEARCH_QUERIES = [
     "practicante ingenieria",
     "practicante datos",
     "practicante ia",
@@ -90,6 +90,33 @@ SEARCH_QUERIES = [
     "site:computrabajo.com.co practicante ingenieria Medellin",
     "site:elempleo.com/co practicante ingenieria Medellin",
     "site:co.computrabajo.com practicante mineria Antioquia"
+]
+
+JOB_PORTAL_DOMAINS = [
+    "magneto365.com",
+    "co.computrabajo.com",
+    "computrabajo.com.co",
+    "elempleo.com",
+    "linkedin.com/jobs",
+    "indeed.com",
+    "talent.com",
+    "jooble.org",
+    "jobted.com.co",
+    "opcionempleo.com.co",
+    "jobisjob.com.co"
+]
+
+UNIVERSITY_INTERNSHIP_TERMS = [
+    "practicante ingenieria fisica Medellin",
+    "practicas universitarias ingenieria fisica Colombia",
+    "estudiante ingenieria fisica pasantia Colombia",
+    "internship physical engineering Colombia"
+]
+
+SEARCH_QUERIES = BASE_SEARCH_QUERIES + [
+    f"site:{domain} {term}"
+    for domain in JOB_PORTAL_DOMAINS
+    for term in UNIVERSITY_INTERNSHIP_TERMS
 ]
 
 def load_json(filepath):

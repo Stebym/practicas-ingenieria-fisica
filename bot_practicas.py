@@ -655,7 +655,8 @@ def main():
     print("\n" + "="*70)
     print(" ¡RASTREO Y ACTUALIZACIÓN COMPLETADOS EXITOSAMENTE!")
     print(f" Dashboard listo para abrir:")
-    print(f" file:///{OUTPUT_INDEX.replace('\\', '/')}")
+    output_index_uri = OUTPUT_INDEX.replace(os.sep, "/")
+    print(f" file:///{output_index_uri}")
     print("="*70)
 
 if __name__ == "__main__":

@@ -24,7 +24,8 @@
         "datos", "data", "analitica", "analytics", "ia", "ai", "machine learning",
         "python", "simulacion", "simulaciones", "modelado", "metodos numericos",
         "computacional", "prompt engineering", "inteligencia artificial", "algoritmos",
-        "estadistica", "investigacion de operaciones", "sql", "power bi", "matlab"
+        "estadistica", "investigacion de operaciones", "sql", "power bi", "matlab",
+        "business intelligence", "cientifico de datos", "analista de datos"
       ],
       "carreras_mencionadas": ["ingenieria fisica", "matematicas", "sistemas", "estadistica", "fisica"],
       "empresas_referencia": ["Bancolombia", "Sura", "Proteccion", "XM", "Ruta N", "Mercado Libre", "Globant", "Tuya"],
@@ -62,14 +63,15 @@
       "actividades_clave": "Simulación en Proteus/SPICE, pruebas con osciloscopio y generador de señales, cálculo de componentes pasivos/activos y diseño de PCB."
     },
     "instrumentacion_metrologia": {
-      "nombre": "Instrumentación y Metrología Industrial",
+      "nombre": "Instrumentación, Automatización y Metrología",
       "icono": "",
       "color": "#10b981",
       "prioridad_bonus": 55,
       "palabras_clave": [
         "instrumentacion", "instrumentación", "metrologia", "metrología", "calibracion",
-        "calibración", "sensores", "transductores", "daq", "labview", "instrumentacion virtual",
-        "incertidumbre", "medicion", "medición", "gum", "iso 17025", "onac", "plc", "scada"
+        "calibración", "automatizacion", "automatización", "control", "sensores", "transductores", "daq", "labview", "instrumentacion virtual",
+        "incertidumbre", "medicion", "medición", "gum", "iso 17025", "onac", "plc", "scada",
+        "electromecanica", "electromecánica", "electromecanico", "electromecánico", "mecatronica", "mecatrónica"
       ],
       "carreras_mencionadas": ["ingenieria fisica", "ingenieria electronica", "ingenieria de control"],
       "empresas_referencia": ["CIDET", "Haceb", "Corona", "Grupo Argos", "Laboratorios de Calibracion", "Sofasa"],

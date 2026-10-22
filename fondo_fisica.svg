@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" fill="none">
+  <defs>
+    <linearGradient id="planet" x1="1170" y1="200" x2="1390" y2="470" gradientUnits="userSpaceOnUse"><stop stop-color="#dfb176"/><stop offset=".48" stop-color="#b97858"/><stop offset="1" stop-color="#76544c"/></linearGradient>
+    <linearGradient id="ring" x1="1090" y1="372" x2="1445" y2="370" gradientUnits="userSpaceOnUse"><stop stop-color="#887969" stop-opacity=".08"/><stop offset=".25" stop-color="#c49364" stop-opacity=".72"/><stop offset=".52" stop-color="#ead1a5" stop-opacity=".9"/><stop offset=".8" stop-color="#ad795d" stop-opacity=".66"/><stop offset="1" stop-color="#76645d" stop-opacity=".1"/></linearGradient>
+    <radialGradient id="small" cx="0" cy="0" r="1" gradientTransform="matrix(52 61 -60 51 293 727)" gradientUnits="userSpaceOnUse"><stop stop-color="#d5ded0"/><stop offset=".65" stop-color="#93aa9e"/><stop offset="1" stop-color="#657e77"/></radialGradient>
+    <clipPath id="clipPlanet"><circle cx="1282" cy="326" r="109"/></clipPath>
+    <style>@keyframes float-equations{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}.equations{animation:float-equations 14s ease-in-out infinite}@media(prefers-reduced-motion:reduce){.equations{animation:none}}</style>
+  </defs>
+  <g class="equations" fill="#52756d" fill-opacity=".78" stroke="none" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="21">
+    <text x="940" y="148">iℏ ∂ψ / ∂t = Ĥψ</text>
+    <text x="1050" y="630" font-size="18">Eₙ = E₀ + ℏ²k² / 2m*</text>
+    <text x="180" y="347">σ = ne²τ / m*</text>
+    <text x="950" y="539">ρ(E) ∝ √E</text>
+    <text x="483" y="932" font-size="19">∇ × H = J + ∂D / ∂t</text>
+    <text x="753" y="541" font-size="15">E(k)</text>
+    <text x="779" y="572" font-size="13">k</text>
+  </g>
+  <g stroke="#52756d" stroke-opacity=".30" stroke-width="1.5">
+    <path d="M744 586h150M754 586v-98"/><path d="m758 568 23-13 24-35 24 13 23-38 24-20" stroke="#987a51" stroke-opacity=".55"/>
+    <path d="M760 539c23-22 45-30 68-26 22 4 43 15 65 13" stroke-dasharray="4 6"/>
+  </g>
+  <g fill="#668b82" fill-opacity=".7">
+    <circle cx="92" cy="115" r="2.2"/><circle cx="512" cy="182" r="1.8"/><circle cx="973" cy="267" r="1.7"/><circle cx="1510" cy="179" r="2"/><circle cx="1037" cy="834" r="1.8"/><circle cx="1410" cy="872" r="2"/>
+  </g>
+  <g stroke="#78958c" stroke-opacity=".62" stroke-width="1.7" stroke-linecap="round">
+    <path d="M90 97v14m-7-7h14"/><path d="M508 166v13m-6.5-6.5h13"/><path d="M1508 162v16m-8-8h16"/><path d="M1037 820v14m-7-7h14"/><path d="M1410 856v16m-8-8h16"/>
+  </g>
+  <ellipse cx="1282" cy="369" rx="190" ry="48" transform="rotate(-12 1282 369)" stroke="url(#ring)" stroke-width="18"/>
+  <circle cx="1282" cy="326" r="109" fill="url(#planet)" stroke="#70564a" stroke-opacity=".55" stroke-width="2"/>
+  <g clip-path="url(#clipPlanet)" stroke="#f0c18a" stroke-opacity=".3" stroke-width="9">
+    <path d="M1165 278c70 24 161 22 244-7"/><path d="M1162 316c71 18 158 15 245-13"/><path d="M1173 366c67 11 148 5 223-17"/><path d="M1197 407c55 6 120-1 177-19"/>
+  </g>
+  <ellipse cx="1282" cy="369" rx="190" ry="48" transform="rotate(-12 1282 369)" stroke="#e3c397" stroke-opacity=".58" stroke-width="2" stroke-dasharray="2 6"/>
+  <circle cx="293" cy="727" r="58" fill="url(#small)" stroke="#648076" stroke-width="2"/>
+  <g fill="#6e887d" fill-opacity=".48"><circle cx="275" cy="710" r="7"/><circle cx="314" cy="739" r="10"/><circle cx="287" cy="755" r="4"/><circle cx="325" cy="703" r="3.5"/></g>
+  <circle cx="293" cy="727" r="72" stroke="#8ba99d" stroke-opacity=".3" stroke-width="1.5"/>
+  <circle cx="1480" cy="754" r="22" fill="#d0b482" fill-opacity=".78" stroke="#987e5c" stroke-opacity=".7" stroke-width="2"/>
+  <path d="M1462 748c12 4 24 4 36-1m-34 10c11 3 22 3 32-1" stroke="#f1d5a2" stroke-opacity=".6" stroke-width="3"/>
+</svg>

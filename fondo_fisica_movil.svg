@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 390 844" fill="none">
+  <defs>
+    <radialGradient id="p" cx="0" cy="0" r="1" gradientTransform="matrix(27 31 -31 27 356 310)" gradientUnits="userSpaceOnUse"><stop stop-color="#e8c78e"/><stop offset=".6" stop-color="#bd805b"/><stop offset="1" stop-color="#7e594c"/></radialGradient>
+    <radialGradient id="m" cx="0" cy="0" r="1" gradientTransform="matrix(18 21 -21 18 57 790)" gradientUnits="userSpaceOnUse"><stop stop-color="#d3ded0"/><stop offset="1" stop-color="#78978a"/></radialGradient>
+  </defs>
+  <g fill="#52756d" fill-opacity=".82" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">
+    <text x="18" y="322" font-size="15">iℏ ∂ψ/∂t = Ĥψ</text>
+    <text x="132" y="822" font-size="14">Eₙ = E₀ + ℏ²k²/2m*</text>
+  </g>
+  <g fill="#668b82" fill-opacity=".75">
+    <circle cx="25" cy="93" r="1.8"/><circle cx="345" cy="105" r="2.2"/><circle cx="94" cy="243" r="1.5"/><circle cx="25" cy="540" r="2"/><circle cx="358" cy="572" r="1.7"/><circle cx="108" cy="748" r="1.8"/>
+  </g>
+  <g stroke="#78958c" stroke-opacity=".72" stroke-width="1.5" stroke-linecap="round">
+    <path d="M25 80v13m-6.5-6.5h13"/><path d="M345 90v15m-7.5-7.5h15"/><path d="M25 527v13m-6.5-6.5h13"/><path d="M358 558v14m-7-7h14"/>
+  </g>
+  <ellipse cx="356" cy="310" rx="43" ry="12" transform="rotate(-16 356 310)" stroke="#a98764" stroke-width="5" stroke-opacity=".8"/>
+  <circle cx="356" cy="310" r="25" fill="url(#p)" stroke="#74594a" stroke-width="1.5"/>
+  <path d="M334 304c14 4 29 3 44-2m-42 15c13 3 27 2 40-2" stroke="#f2d19c" stroke-opacity=".55" stroke-width="2"/>
+  <ellipse cx="57" cy="790" rx="35" ry="10" transform="rotate(17 57 790)" stroke="#9caf9d" stroke-width="4" stroke-opacity=".65"/>
+  <circle cx="57" cy="790" r="18" fill="url(#m)" stroke="#718c7d" stroke-width="1.5"/>
+  <circle cx="52" cy="786" r="3" fill="#627f72" fill-opacity=".6"/><circle cx="64" cy="795" r="4" fill="#627f72" fill-opacity=".5"/>
+</svg>

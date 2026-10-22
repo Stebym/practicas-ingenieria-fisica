@@ -580,31 +580,6 @@
     "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables."
   },
   {
-    "titulo": "AI Engineer",
-    "empresa": "Rockwell Automation",
-    "ubicacion": "Medellin, Antioquia, Colombia",
-    "url": "https://co.linkedin.com/jobs/view/ai-engineer-at-rockwell-automation-4454056999",
-    "fecha_publicacion": "Hace 5 días",
-    "fuente": "LinkedIn Jobs",
-    "ramas": [
-      {
-        "clave": "simulaciones_datos_ia",
-        "nombre": "Análisis de Datos, IA y Simulaciones",
-        "color": "#06b6d4",
-        "score": 63
-      }
-    ],
-    "rama_principal": "Análisis de Datos, IA y Simulaciones",
-    "color_principal": "#06b6d4",
-    "clave_principal": "simulaciones_datos_ia",
-    "afinidad": "Alta Afinidad Pénsum",
-    "es_exclusiva_fisica": false,
-    "es_cierre_inminente": true,
-    "score_pensum": 63,
-    "mision": "Modelamiento matemático, pipelines de datos, simulación numérica de procesos y entrenamiento de algoritmos predictivos e IA.",
-    "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables."
-  },
-  {
     "titulo": "Data Management and BI Senior Executive, GOC",
     "empresa": "WPP Media",
     "ubicacion": "Medellin, Antioquia, Colombia",
@@ -660,6 +635,31 @@
     "ubicacion": "Medellin, Antioquia, Colombia",
     "url": "https://co.linkedin.com/jobs/view/associate-insights-analytics-goc-at-wpp-media-4478630549",
     "fecha_publicacion": "Hace 2 días",
+    "fuente": "LinkedIn Jobs",
+    "ramas": [
+      {
+        "clave": "simulaciones_datos_ia",
+        "nombre": "Análisis de Datos, IA y Simulaciones",
+        "color": "#06b6d4",
+        "score": 63
+      }
+    ],
+    "rama_principal": "Análisis de Datos, IA y Simulaciones",
+    "color_principal": "#06b6d4",
+    "clave_principal": "simulaciones_datos_ia",
+    "afinidad": "Alta Afinidad Pénsum",
+    "es_exclusiva_fisica": false,
+    "es_cierre_inminente": true,
+    "score_pensum": 63,
+    "mision": "Modelamiento matemático, pipelines de datos, simulación numérica de procesos y entrenamiento de algoritmos predictivos e IA.",
+    "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables."
+  },
+  {
+    "titulo": "QA Automatizador- IA",
+    "empresa": "Accenture Colombia",
+    "ubicacion": "Medellin, Antioquia, Colombia",
+    "url": "https://co.linkedin.com/jobs/view/qa-automatizador-ia-at-accenture-colombia-4459435209",
+    "fecha_publicacion": "Hace 1 mes",
     "fuente": "LinkedIn Jobs",
     "ramas": [
       {
@@ -805,11 +805,11 @@
     "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables."
   },
   {
-    "titulo": "QA Automatizador- IA",
-    "empresa": "Accenture Colombia",
+    "titulo": "AI Engineer",
+    "empresa": "Rockwell Automation",
     "ubicacion": "Medellin, Antioquia, Colombia",
-    "url": "https://co.linkedin.com/jobs/view/qa-automatizador-ia-at-accenture-colombia-4459435209",
-    "fecha_publicacion": "Hace 1 mes",
+    "url": "https://co.linkedin.com/jobs/view/ai-engineer-at-rockwell-automation-4454056999",
+    "fecha_publicacion": "Hace 5 días",
     "fuente": "LinkedIn Jobs",
     "ramas": [
       {
@@ -3439,6 +3439,31 @@
     "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
   },
   {
+    "titulo": "Ayudante de laboratorio",
+    "empresa": "Outsourcing de Talento y Empleo Combarranquilla",
+    "ubicacion": "Ciudad Bolívar, Antioquia, Colombia",
+    "url": "https://co.linkedin.com/jobs/view/ayudante-de-laboratorio-at-outsourcing-de-talento-y-empleo-combarranquilla-4479096856",
+    "fecha_publicacion": "Hace 1 semana",
+    "fuente": "LinkedIn Jobs",
+    "ramas": [
+      {
+        "clave": "general",
+        "nombre": "Ingeniería General / Operaciones",
+        "color": "#64748b",
+        "score": 5
+      }
+    ],
+    "rama_principal": "Ingeniería General / Operaciones",
+    "color_principal": "#64748b",
+    "clave_principal": "general",
+    "afinidad": "General",
+    "es_exclusiva_fisica": false,
+    "es_cierre_inminente": true,
+    "score_pensum": 0,
+    "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Outsourcing de Talento y Empleo Combarranquilla.",
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
+  },
+  {
     "titulo": "Junior Fullstack React &amp; Node Developer - Remote Work | REF#281820",
     "empresa": "BairesDev",
     "ubicacion": "Medellin, Antioquia, Colombia",
@@ -3889,31 +3914,6 @@
     "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
   },
   {
-    "titulo": "Ayudante de laboratorio",
-    "empresa": "Outsourcing de Talento y Empleo Combarranquilla",
-    "ubicacion": "Ciudad Bolívar, Antioquia, Colombia",
-    "url": "https://co.linkedin.com/jobs/view/ayudante-de-laboratorio-at-outsourcing-de-talento-y-empleo-combarranquilla-4479096856",
-    "fecha_publicacion": "Hace 1 semana",
-    "fuente": "LinkedIn Jobs",
-    "ramas": [
-      {
-        "clave": "general",
-        "nombre": "Ingeniería General / Operaciones",
-        "color": "#64748b",
-        "score": 5
-      }
-    ],
-    "rama_principal": "Ingeniería General / Operaciones",
-    "color_principal": "#64748b",
-    "clave_principal": "general",
-    "afinidad": "General",
-    "es_exclusiva_fisica": false,
-    "es_cierre_inminente": true,
-    "score_pensum": 0,
-    "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Outsourcing de Talento y Empleo Combarranquilla.",
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
-  },
-  {
     "titulo": "Ejecutivo Cuentas I",
     "empresa": "Millicom (Tigo)",
     "ubicacion": "Medellin, Antioquia, Colombia",
@@ -4261,6 +4261,31 @@
     "es_cierre_inminente": false,
     "score_pensum": 0,
     "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Accenture Colombia.",
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
+  },
+  {
+    "titulo": "Operador de Planta",
+    "empresa": "Solenis",
+    "ubicacion": "Medellin, Antioquia, Colombia",
+    "url": "https://co.linkedin.com/jobs/view/operador-de-planta-at-solenis-4469771759",
+    "fecha_publicacion": "Hace 3 semanas",
+    "fuente": "LinkedIn Jobs",
+    "ramas": [
+      {
+        "clave": "general",
+        "nombre": "Ingeniería General / Operaciones",
+        "color": "#64748b",
+        "score": 5
+      }
+    ],
+    "rama_principal": "Ingeniería General / Operaciones",
+    "color_principal": "#64748b",
+    "clave_principal": "general",
+    "afinidad": "General",
+    "es_exclusiva_fisica": false,
+    "es_cierre_inminente": false,
+    "score_pensum": 0,
+    "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Solenis.",
     "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
   },
   {
@@ -4661,31 +4686,6 @@
     "es_cierre_inminente": false,
     "score_pensum": 0,
     "mision": "Apoyo en el área de ingeniería y operaciones técnicas en BairesDev.",
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
-  },
-  {
-    "titulo": "Campus Talent Acquisition Specialist",
-    "empresa": "Hatch",
-    "ubicacion": "Medellin, Antioquia, Colombia",
-    "url": "https://co.linkedin.com/jobs/view/campus-talent-acquisition-specialist-at-hatch-4478800942",
-    "fecha_publicacion": "Hace 1 semana",
-    "fuente": "LinkedIn Jobs",
-    "ramas": [
-      {
-        "clave": "general",
-        "nombre": "Ingeniería General / Operaciones",
-        "color": "#64748b",
-        "score": 5
-      }
-    ],
-    "rama_principal": "Ingeniería General / Operaciones",
-    "color_principal": "#64748b",
-    "clave_principal": "general",
-    "afinidad": "General",
-    "es_exclusiva_fisica": false,
-    "es_cierre_inminente": true,
-    "score_pensum": 0,
-    "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Hatch.",
     "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
   },
   {

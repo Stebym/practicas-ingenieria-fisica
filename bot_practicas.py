@@ -970,9 +970,9 @@ def build_full_html(vacantes, config_ramas):
               <div class="header-right">
                 <time class="job-date">${{escapeHtml(j.fecha_publicacion)}}</time>
                 <div class="info-trigger" tabindex="0">
-                  <span class="info-icon" title="Pasa el cursor o haz clic para ver la misión y tareas">[i]</span>
+                  <span class="info-icon" title="Pasa el cursor o haz clic para ver el reto técnico y tareas">[i]</span>
                   <div class="floating-cloud">
-                    <div class="cloud-title">Misión & Contexto</div>
+                    <div class="cloud-title">Reto Técnico & Misión</div>
                     <div class="cloud-body">${{escapeHtml(j.mision)}}</div>
                     ${{j.perfil ? `<div style="margin-top: 8px; font-size: 0.80rem; color: var(--accent-cyan); line-height: 1.35;"><strong>Perfil sugerido:</strong> ${{escapeHtml(j.perfil)}}</div>` : ''}}
                     <div class="cloud-tasks-section">

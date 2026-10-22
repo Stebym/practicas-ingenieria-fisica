@@ -37,7 +37,8 @@ Este proyecto fue construido aplicando estándares profesionales de **Desarrollo
 ---
 
 ## 🚀 Arquitectura y Automatización
-* `bot_practicas.py`: Motor de rastreo y clasificación en Python. Combina LinkedIn con búsquedas web públicas de ofertas indexadas en portales de empleo y páginas de empresas. Consulta también nombres del directorio `empresas_antioquia.json`, además de focos mineros como Antioquia Gold.
+* `bot_practicas.py`: Motor de rastreo y clasificación en Python. Integra rastreo multi-fuente en vivo (Computrabajo y LinkedIn Jobs), el catálogo verificado de convocatorias destacadas (`convocatorias_destacadas.json` con Magneto365, Jooble y portales oficiales de Antioquia) y el directorio de empleadores clave (`empresas_antioquia.json`).
+* `convocatorias_destacadas.json`: Catálogo de convocatorias de alto impacto para Ingeniería Física y carreras afines (Corona, Argos, Haceb, ISA, EPM, Enel, ERCO, Sievert, Gobernación de Antioquia, AKT, Protección, etc.).
 * `empresas_antioquia.json`: Directorio de empresas y sectores para ampliar la búsqueda a empleadores locales.
 * `estilos.css`: Sistema de diseño visual y responsivo.
 * `index.html`: Dashboard interactivo con buscador en vivo y filtros por pestañas:
@@ -45,8 +46,12 @@ Este proyecto fue construido aplicando estándares profesionales de **Desarrollo
   * **🎯 Exclusivas: Piden Físico / Ing. Físico**
   * **⏳ Próximas a Finalizar (< 5 Días)**
   * **📝 Guía & Tips para la Hoja de Vida**
-* `.github/workflows/auto_update.yml`: Flujo de GitHub Actions que ejecuta el bot automáticamente todos los días en la nube y despliega los resultados a GitHub Pages sin requerir servidores de pago ni computadores encendidos.
-* `.github/workflows/publish-pages.yml`: Publica `index.html` y `estilos.css` en GitHub Pages cada vez que se actualiza `main`.
+* `.github/workflows/auto_update.yml`: Flujo de GitHub Actions que ejecuta el bot diariamente a las 20:00 (hora Colombia), actualiza los datos y comitea al repositorio.
+* `.github/workflows/static.yml`: Despliega automáticamente `index.html`, `estilos.css`, `estrellas.js`, `vacantes_practicas.json` y `vacantes_practicas.csv` a GitHub Pages cada vez que se actualiza `main` o al concluir el bot diario.
 
 ### Cobertura de fuentes
-La búsqueda web puede encontrar páginas públicas que los buscadores tengan indexadas, incluidos resultados de Magneto Empleo (magneto365), Computrabajo/Pandapé, elempleo, LinkedIn Jobs, Indeed, Talent, Jooble, Jobted, Opción Empleo, JobisJob y sitios corporativos. No garantiza cubrir todo Internet: algunos portales requieren iniciar sesión, bloquean rastreadores o publican vacantes que aún no están indexadas. Las fechas y el estado de cada resultado se deben confirmar en la publicación original; los resúmenes web se distinguen de las misiones inferidas por área.
+Rastreo activo multi-plataforma:
+1. **Computrabajo Antioquia**: Barrido dinámico de convocatorias técnicas, electromecánicas, de datos, instrumentación y automatización.
+2. **LinkedIn Jobs Guest API**: Búsqueda en tiempo real de vacantes y pasantías para el pénsum UNAL y empresas de Medellín y Antioquia.
+3. **Magneto365 & Jooble**: Convocatorias verificadas para grandes empleadores (Corona, Haceb, ISA/XM, ERCO, Laproff, AKT, Protección, Sievert Radiaciones).
+4. **Portales Corporativos Directos**: EPM, Grupo Argos, Enel, ABB, Gobernación de Antioquia.

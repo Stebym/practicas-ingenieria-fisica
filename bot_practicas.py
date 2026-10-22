@@ -17,6 +17,7 @@ import re
 import time
 from html import unescape
 from datetime import datetime
+from pathlib import Path
 from urllib.parse import quote, unquote, urlparse
 import requests
 
@@ -35,89 +36,94 @@ HEADERS = {
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 CONFIG_RAMAS_PATH = os.path.join(BASE_DIR, "config_ramas.json")
+CONVOCATORIAS_DESTACADAS_PATH = os.path.join(BASE_DIR, "convocatorias_destacadas.json")
 OUTPUT_HTML = os.path.join(BASE_DIR, "dashboard_practicas.html")
 OUTPUT_INDEX = os.path.join(BASE_DIR, "index.html")
 OUTPUT_CSV = os.path.join(BASE_DIR, "vacantes_practicas.csv")
 OUTPUT_JSON = os.path.join(BASE_DIR, "vacantes_practicas.json")
 
-BASE_SEARCH_QUERIES = [
-    "practicante ingenieria",
+SEARCH_QUERIES = [
+    # Tronco común y perfil UNAL Ingeniería Física
+    "practicante ingenieria fisica",
+    "practicante fisica",
+    "estudiante ingenieria fisica pasantia",
+    "intern engineering medellin",
+    "practicante investigacion i+d",
+    # Análisis de Datos, IA y Simulaciones
     "practicante datos",
-    "practicante ia",
-    "practicante python",
     "practicante analitica",
+    "practicante inteligencia artificial",
+    "practicante python",
+    "practicante machine learning",
+    "practicante simulacion",
+    # Electrónica Digital, Microcontroladores e IoT
     "practicante iot",
-    "practicante electronica digital",
     "practicante embebidos",
+    "practicante electronica digital",
+    "practicante microcontroladores",
+    # Electrónica Análoga y Circuitos
     "practicante electronica analoga",
     "practicante circuitos",
+    # Instrumentación y Metrología Industrial
     "practicante instrumentacion",
     "practicante metrologia",
+    "practicante automatizacion",
+    # Diseño Mecánico y Dibujo Técnico
     "practicante diseno mecanico",
     "practicante cad solidworks",
+    # Cuántica y Estado Sólido
     "practicante cuantica",
+    "practicante semiconductores",
+    # Física de Radiaciones y Física Médica
     "practicante radiaciones",
     "practicante fisica medica",
+    # Óptica y Visión Artificial
     "practicante optica",
     "practicante vision artificial",
+    # Ciencia de Materiales y Nanotecnología
     "practicante materiales",
     "practicante nanotecnologia",
+    # Energía, Potencia y Renovables
     "practicante energia solar",
+    "practicante protecciones electricas",
     "practicante potencia transformadores",
-    "practicante protecciones electricas rele proteccion subestaciones Colombia",
-    "practicante proteccion y control sistemas de potencia Antioquia",
-    "estudiante ingenieria fisica materiales Corona Sumicol practicante",
-    "Banco de Occidente practicante ingenieria datos analitica Medellin",
-    "practicante ingenieria electrica protecciones Antioquia",
-    "site:magneto365.com protecciones electricas practicante Colombia",
-    "site:computrabajo.com.co rele proteccion ingenieria practicante Colombia",
-    "practicante fisico",
-    "practicante investigacion i+d",
+    # Mujeres en STEM
     "practicante mujeres stem",
-    "intern engineering medellin",
-    "practicante ingenieria minera",
-    "practicante ingenieria de procesos mineria",
-    "practicante laboratorio minerales",
-    "practicante metalurgia materiales",
-    "practicante instrumentacion minera",
-    "practicante automatizacion mineria",
-    "practicante analisis de datos mineria",
-    "Antioquia Gold ingeniero practicante",
-    "Antioquia Gold ingenieria Medellin",
-    "practicante ingenieria Antioquia",
-    "estudiante ingenieria fisica Medellin",
-    "site:magneto365.com practicante ingenieria Medellin",
-    "site:computrabajo.com.co practicante ingenieria Medellin",
-    "site:elempleo.com/co practicante ingenieria Medellin",
-    "site:co.computrabajo.com practicante mineria Antioquia"
+    "programa mujer stem"
 ]
 
-JOB_PORTAL_DOMAINS = [
-    "magneto365.com",
-    "co.computrabajo.com",
-    "computrabajo.com.co",
-    "elempleo.com",
-    "linkedin.com/jobs",
-    "indeed.com",
-    "talent.com",
-    "jooble.org",
-    "jobted.com.co",
-    "opcionempleo.com.co",
-    "jobisjob.com.co"
+EXCLUDED_ROLES = [
+    r"\brecepcionista\b",
+    r"\benfermer[ao]\b",
+    r"\brecursos\s+humanos\b",
+    r"\btalento\s+humano\b",
+    r"\bpsicolog[ao]\b",
+    r"\blibranza\b",
+    r"\bturismo\b",
+    r"\babogad[ao]\b",
+    r"\bderecho\b",
+    r"\bcontabilidad\b",
+    r"\bcontable\b",
+    r"\boperario\s+(?:de\s+)?empaque\b",
+    r"\bcajer[ao]\b",
+    r"\bcocina\b",
+    r"\bmeser[ao]\b",
+    r"\basesor[a]?\s+comercial\b",
+    r"\bejecutiv[ao]\s+comercial\b",
+    r"\bvendedor[a]?\b",
+    r"\bcall\s+center\b",
+    r"\bcobranza\b"
 ]
 
-UNIVERSITY_INTERNSHIP_TERMS = [
-    "practicante ingenieria fisica Medellin",
-    "practicas universitarias ingenieria fisica Colombia",
-    "estudiante ingenieria fisica pasantia Colombia",
-    "internship physical engineering Colombia"
-]
+TERMINOS_MUJERES_RE = re.compile(r'\b(mujer|mujeres|women|women in tech|femenin[ao]?|stem)\b', re.IGNORECASE)
+TERMINOS_FISICA_RE = re.compile(r'\b(f[ií]sic[ao]s?|metrolog[ií]a|cu[aá]ntic[ao]s?|espectroscop[ií]a|difracci[oó]n|radiaci[oó]n|dosimetr[ií]a|nanotecnolog[ií]a)\b', re.IGNORECASE)
 
-SEARCH_QUERIES = BASE_SEARCH_QUERIES + [
-    f"site:{domain} {term}"
-    for domain in JOB_PORTAL_DOMAINS
-    for term in UNIVERSITY_INTERNSHIP_TERMS
-]
+def matches_keyword(keyword, text):
+    """Verifica si una palabra clave coincide respetando límites de palabra para términos cortos."""
+    kw_clean = keyword.strip().lower()
+    if len(kw_clean) <= 4 or kw_clean in ["stem", "datos", "data", "cad", "ia", "ai", "pcb", "daq", "plc", "gum", "iot", "spi", "i2c", "sql", "sem", "drx"]:
+        return bool(re.search(r'(?:\b|_)' + re.escape(kw_clean) + r'(?:\b|_)', text, re.IGNORECASE))
+    return kw_clean in text.lower()
 
 def load_json(filepath):
     if os.path.exists(filepath):
@@ -163,11 +169,42 @@ def scrape_linkedin_query(query, location="Medellin, Antioquia, Colombia"):
     except Exception as e:
         return []
 
-def scrape_web_query(query):
-    """Busca resultados web públicos (incluye portales y páginas corporativas indexadas)."""
-    url = f"https://html.duckduckgo.com/html/?q={quote(query + ' Medellín Antioquia empleo práctica') }"
+def scrape_computrabajo_query(query):
+    """Consulta convocatorias de prácticas en Computrabajo Antioquia"""
+    url = f"https://co.computrabajo.com/empleos-en-antioquia?q={quote(query)}"
     try:
-        response = requests.get(url, headers=HEADERS, timeout=15)
+        r = requests.get(url, headers=HEADERS, timeout=6)
+        if r.status_code != 200:
+            return []
+        offers = re.findall(r'<article[^>]*id="([^"]+)"[^>]*>(.*?)</article>', r.text, re.DOTALL)
+        results = []
+        for oid, content in offers:
+            t_m = re.search(r'<a class="js-o-link fc_base"[^>]*href="([^"]+)"[^>]*>\s*([^<]+)\s*</a>', content)
+            if not t_m:
+                continue
+            href = "https://co.computrabajo.com" + t_m.group(1).split("#")[0]
+            title = unescape(t_m.group(2).strip())
+            c_m = re.search(r'offer-grid-article-company-url[^>]*>\s*([^<]+)\s*</a>', content)
+            comp = unescape(c_m.group(1).strip()) if c_m else "Empresa Confidencial"
+            loc_m = re.search(r'<p class="fs16 fc_base mt5">\s*<span[^>]*>\s*([^<]+)\s*</span>', content)
+            loc = unescape(loc_m.group(1).strip()) if loc_m else "Medellín, Antioquia"
+            results.append({
+                "titulo": title,
+                "empresa": comp,
+                "ubicacion": loc,
+                "url": href,
+                "fecha_publicacion": "Reciente",
+                "fuente": "Computrabajo"
+            })
+        return results
+    except Exception:
+        return []
+
+def scrape_web_query(query):
+    """Busca resultados web públicos con timeout corto para no congelar la ejecución."""
+    url = f"https://html.duckduckgo.com/html/?q={quote(query + ' Medellín Antioquia empleo práctica')}"
+    try:
+        response = requests.get(url, headers=HEADERS, timeout=4)
         if response.status_code != 200:
             return []
         results = []
@@ -175,8 +212,9 @@ def scrape_web_query(query):
         snippets = re.findall(r'class="result__snippet"[^>]*>(.*?)</', response.text, re.DOTALL)
         for index, (link, raw_title) in enumerate(links):
             if "uddg=" in link:
-                link = re.search(r'[?&]uddg=([^&]+)', link).group(1)
-                link = unquote(link)
+                m_uddg = re.search(r'[?&]uddg=([^&]+)', link)
+                if m_uddg:
+                    link = unquote(m_uddg.group(1))
             title = re.sub(r'<[^>]+>', ' ', unescape(raw_title))
             title = re.sub(r'\s+', ' ', title).strip()
             raw_snippet = snippets[index] if index < len(snippets) else ""
@@ -200,19 +238,18 @@ def scrape_web_query(query):
         return []
 
 def classify_and_score_job(job, config_ramas):
-    """Calcula el Score de Afinididad con el Pénsum UNAL con priorización interna discreta"""
-    text_to_analyze = f"{job['titulo']} {job.get('empresa', '')}".lower()
-    
-    # Detección interna para priorizar sin exhibirlo en público
-    es_impulso_liderazgo = False
-    terminos_mujeres = ["mujer", "mujeres", "women", "women in tech", "femenin", "stem"]
-    if any(t in text_to_analyze for t in terminos_mujeres):
-        es_impulso_liderazgo = True
+    """Calcula el Score de Afinidad con el Pénsum UNAL con priorización y filtrado de roles no técnicos."""
+    title_lower = job.get("titulo", "").lower()
+    company_lower = job.get("empresa", "").lower()
+    text_to_analyze = f"{title_lower} {company_lower}"
 
-    es_exclusiva_fisica = False
-    terminos_fisica = ["físic", "fisic", "metrolog", "cuantic", "cuántic", "espectroscop", "difracci", "radiaci", "dosimetr", "nanotecn"]
-    if any(t in text_to_analyze for t in terminos_fisica):
-        es_exclusiva_fisica = True
+    # Descartar roles abiertamente no técnicos / administrativos de servicio que se cuelan en búsquedas amplias
+    if any(re.search(p, title_lower) for p in EXCLUDED_ROLES):
+        return None
+
+    # Detección de programas especiales (con límites de palabra para evitar falsos positivos como 'systems' -> 'stem')
+    es_impulso_liderazgo = bool(TERMINOS_MUJERES_RE.search(text_to_analyze))
+    es_exclusiva_fisica = bool(TERMINOS_FISICA_RE.search(text_to_analyze))
 
     es_cierre_inminente = False
     pub_lower = job.get("fecha_publicacion", "").lower()
@@ -221,7 +258,6 @@ def classify_and_score_job(job, config_ramas):
     elif "urgente" in text_to_analyze or "pipeline" in text_to_analyze:
         es_cierre_inminente = True
 
-    # Ponderación interna: programas especiales quedan en los primeros puestos
     total_score = 0
     if es_impulso_liderazgo:
         total_score += 160
@@ -235,21 +271,23 @@ def classify_and_score_job(job, config_ramas):
 
     for rama_key, data in config_ramas.get("ramas", {}).items():
         if rama_key == "mujeres_stem":
-            continue # Mantener oculto del listado público de ramas
-            
-        score = 0
+            continue
+
+        kw_hits = 0
         palabras = data.get("palabras_clave", [])
         for p in palabras:
-            if p in text_to_analyze:
-                score += 3
-        
-        empresas_ref = [e.lower() for e in data.get("empresas_referencia", [])]
-        for e in empresas_ref:
-            if e in text_to_analyze:
-                score += 4
+            if matches_keyword(p, text_to_analyze):
+                kw_hits += 1
 
-        bonus = data.get("prioridad_bonus", 20)
-        if score > 0:
+        # Solo se considera rama afín si coincide al menos una palabra clave técnica real
+        if kw_hits > 0:
+            score = kw_hits * 3
+            empresas_ref = [e.lower() for e in data.get("empresas_referencia", [])]
+            for e in empresas_ref:
+                if e in company_lower:
+                    score += 4
+
+            bonus = data.get("prioridad_bonus", 20)
             score += bonus
             ramas_coincidentes.append({
                 "clave": rama_key,
@@ -282,6 +320,10 @@ def classify_and_score_job(job, config_ramas):
     else:
         afinidad = "Afinidad Media"
 
+    # Bonificación especial si es convocatoria verificada de alto impacto
+    if job.get("compensacion"):
+        total_score += 35
+
     job["ramas"] = ramas_coincidentes
     job["rama_principal"] = ramas_coincidentes[0]["nombre"]
     job["color_principal"] = ramas_coincidentes[0]["color"]
@@ -290,9 +332,9 @@ def classify_and_score_job(job, config_ramas):
     job["es_exclusiva_fisica"] = es_exclusiva_fisica
     job["es_cierre_inminente"] = es_cierre_inminente
     job["score_pensum"] = total_score
-    job["mision"] = job.get("resumen_fuente") or mision_especifica or f"Desarrollo de proyectos técnicos y operativos en {job.get('empresa', 'la empresa')}."
-    job["tareas"] = tareas_especificas if tareas_especificas else "Apoyo en mediciones, modelado técnico, análisis de datos y reporte de resultados."
-    if job.get("resumen_fuente"):
+    job["mision"] = job.get("mision") or job.get("resumen_fuente") or mision_especifica or f"Desarrollo de proyectos técnicos y operativos en {job.get('empresa', 'la empresa')}."
+    job["tareas"] = job.get("tareas") or (tareas_especificas if tareas_especificas else "Apoyo en mediciones, modelado técnico, análisis de datos y reporte de resultados.")
+    if job.get("resumen_fuente") and not job.get("tareas"):
         job["tareas"] = "Resumen de búsqueda web. Abre la publicación original para confirmar funciones, requisitos y vigencia."
 
     return job
@@ -483,6 +525,7 @@ def build_full_html(vacantes, config_ramas):
                   <div class="floating-cloud">
                     <div class="cloud-title">Misión & Contexto</div>
                     <div class="cloud-body">${{j.mision}}</div>
+                    ${{j.perfil ? `<div style="margin-top: 8px; font-size: 0.82rem; color: var(--accent-cyan); line-height: 1.35;"><strong>Perfil sugerido:</strong> ${{j.perfil}}</div>` : ''}}
                     <div class="cloud-tasks-section">
                       <strong>¿Qué te tocará hacer?</strong>
                       <p>${{j.tareas}}</p>
@@ -497,6 +540,7 @@ def build_full_html(vacantes, config_ramas):
               <span>Ubicación: ${{j.ubicacion}}</span>
               <span>Portal: ${{j.fuente}}</span>
             </div>
+            ${{j.compensacion ? `<div style="margin: 6px 0; font-size: 0.84rem; font-weight: 600; color: var(--accent-amber); display: flex; align-items: center; gap: 4px;"><span>★</span> ${{j.compensacion}}</div>` : ''}}
             <div class="job-tags">${{tagsHtml}}</div>
           </div>
           <footer class="job-card-footer">
@@ -530,6 +574,8 @@ def build_full_html(vacantes, config_ramas):
                             j.ubicacion.toLowerCase().includes(query) ||
                             j.mision.toLowerCase().includes(query) ||
                             j.tareas.toLowerCase().includes(query) ||
+                            (j.perfil && j.perfil.toLowerCase().includes(query)) ||
+                            (j.compensacion && j.compensacion.toLowerCase().includes(query)) ||
                             j.ramas.some(r => r.nombre.toLowerCase().includes(query));
         return matchesText;
       }});
@@ -600,7 +646,7 @@ def build_full_html(vacantes, config_ramas):
 
 def export_csv(vacantes):
     """Exporta las vacantes ordenadas a CSV para Excel"""
-    fieldnames = ["titulo", "empresa", "ubicacion", "rama_principal", "afinidad", "score_pensum", "es_exclusiva_fisica", "es_cierre_inminente", "mision", "tareas", "fecha_publicacion", "fuente", "url"]
+    fieldnames = ["titulo", "empresa", "ubicacion", "rama_principal", "afinidad", "score_pensum", "es_exclusiva_fisica", "es_cierre_inminente", "compensacion", "perfil", "mision", "tareas", "fecha_publicacion", "fuente", "url"]
     with open(OUTPUT_CSV, "w", newline="", encoding="utf-8-sig") as f:
         writer = csv.DictWriter(f, fieldnames=fieldnames)
         writer.writeheader()
@@ -614,6 +660,8 @@ def export_csv(vacantes):
                 "score_pensum": v.get("score_pensum", 0),
                 "es_exclusiva_fisica": v.get("es_exclusiva_fisica", False),
                 "es_cierre_inminente": v.get("es_cierre_inminente", False),
+                "compensacion": v.get("compensacion", ""),
+                "perfil": v.get("perfil", ""),
                 "mision": v.get("mision", ""),
                 "tareas": v.get("tareas", ""),
                 "fecha_publicacion": v["fecha_publicacion"],
@@ -632,11 +680,44 @@ def main():
     all_raw_jobs = []
     seen_urls = set()
     
-    print(f"[*] Rastreando LinkedIn y búsqueda web para {len(SEARCH_QUERIES)} categorías del pénsum UNAL...")
+    # 1. Cargar convocatorias destacadas verificadas (Magneto365, Jooble, Portales corporativos, Computrabajo)
+    convocatorias_destacadas = load_json(CONVOCATORIAS_DESTACADAS_PATH)
+    if isinstance(convocatorias_destacadas, list):
+        print(f"[*] Cargando {len(convocatorias_destacadas)} convocatorias verificadas (Magneto365, Jooble, Portales de Antioquia)...")
+        for c in convocatorias_destacadas:
+            if c.get("url") and c["url"] not in seen_urls:
+                seen_urls.add(c["url"])
+                all_raw_jobs.append(c)
+
+    # 2. Rastrear Computrabajo Antioquia
+    computrabajo_queries = [
+        "practicante ingenieria",
+        "practicante electronica",
+        "practicante mantenimiento",
+        "practicante automatizacion",
+        "practicante datos",
+        "practicante electromecanico",
+        "practicante instrumentacion",
+        "practicante metrologia"
+    ]
+    print(f"\n[*] Rastreando Computrabajo Antioquia ({len(computrabajo_queries)} categorías)...")
+    for q_ct in computrabajo_queries:
+        ct_jobs = scrape_computrabajo_query(q_ct)
+        added_ct = 0
+        for j in ct_jobs:
+            if j["url"] not in seen_urls:
+                seen_urls.add(j["url"])
+                all_raw_jobs.append(j)
+                added_ct += 1
+        if added_ct > 0:
+            print(f"    Computrabajo '{q_ct}': +{added_ct} ofertas")
+        time.sleep(0.3)
+
+    # 3. Rastrear LinkedIn Jobs para categorías del pénsum UNAL
+    print(f"\n[*] Rastreando LinkedIn Jobs para {len(SEARCH_QUERIES)} categorías del pénsum UNAL...")
     for q in SEARCH_QUERIES:
         print(f" -> Buscando: '{q}'...")
         jobs = scrape_linkedin_query(q)
-        jobs.extend(scrape_web_query(q))
         added = 0
         for j in jobs:
             if j["url"] not in seen_urls:
@@ -644,37 +725,43 @@ def main():
                 all_raw_jobs.append(j)
                 added += 1
         print(f"    Encontradas {len(jobs)} ofertas (+{added} nuevas)")
-        time.sleep(0.8)
+        time.sleep(0.3)
 
-    # Descubre convocatorias publicadas en sitios corporativos indexados, no solo en portales.
+    # 4. Rastrear convocatorias de practicantes en empresas líderes de Medellín y Antioquia
     company_directory = load_json(os.path.join(BASE_DIR, "empresas_antioquia.json"))
-    company_names = []
-    for item in company_directory:
-        company_names.extend([item.get("empresa", ""), *item.get("alias_busqueda", [])])
-    company_names.extend(["Mineros S.A.", "Atico Mining", "Zijin-Continental Gold"])
-    company_names = list(dict.fromkeys(name.strip() for name in company_names if name and name.strip()))
-    company_queries = [f'"{name}" (practicante OR prácticas OR estudiante OR ingeniero OR protecciones OR materiales) empleo Colombia' for name in company_names]
-    print(f"[*] Revisando búsquedas de vacantes en {len(company_queries)} empresas de Antioquia...")
-    for q in company_queries:
-        for j in scrape_web_query(q):
+    top_companies = [item.get("empresa") for item in company_directory if isinstance(item, dict) and item.get("empresa")]
+    top_companies.extend(["Haceb", "Corona", "ISA", "Sura", "Bancolombia", "Argos", "EPM", "CIDET", "XM", "Ruta N", "Mineros S.A.", "Continental Gold"])
+    top_companies = list(dict.fromkeys(name.strip() for name in top_companies if name and name.strip()))
+
+    print(f"\n[*] Rastreando vacantes en {len(top_companies)} empresas de Antioquia en LinkedIn...")
+    for comp in top_companies:
+        q_comp = f"practicante {comp}"
+        jobs = scrape_linkedin_query(q_comp)
+        added = 0
+        for j in jobs:
             if j["url"] not in seen_urls:
                 seen_urls.add(j["url"])
                 all_raw_jobs.append(j)
-        time.sleep(0.5)
+                added += 1
+        if added > 0:
+            print(f"    {comp:25s}: +{added} ofertas")
+        time.sleep(0.2)
         
     print(f"\n[*] Total de vacantes únicas recolectadas: {len(all_raw_jobs)}")
-    print("[*] Clasificando y ordenando por afinidad al pénsum UNAL...")
+    print("[*] Clasificando, filtrando y ordenando por afinidad al pénsum UNAL...")
     
     classified_jobs = []
     for j in all_raw_jobs:
-        classified_jobs.append(classify_and_score_job(j, config_ramas))
+        classified = classify_and_score_job(j, config_ramas)
+        if classified:
+            classified_jobs.append(classified)
         
     # Ordenar por Score de Afinidad del Pénsum
     classified_jobs.sort(key=lambda x: x.get("score_pensum", 0), reverse=True)
     
     with open(OUTPUT_JSON, "w", encoding="utf-8") as f:
         json.dump(classified_jobs, f, ensure_ascii=False, indent=2)
-    print(f" [✓] Datos JSON guardados en: {OUTPUT_JSON}")
+    print(f" [✓] Datos JSON guardados en: {OUTPUT_JSON} ({len(classified_jobs)} vacantes afines)")
     
     export_csv(classified_jobs)
     build_full_html(classified_jobs, config_ramas)
@@ -682,8 +769,7 @@ def main():
     print("\n" + "="*70)
     print(" ¡RASTREO Y ACTUALIZACIÓN COMPLETADOS EXITOSAMENTE!")
     print(f" Dashboard listo para abrir:")
-    output_index_uri = OUTPUT_INDEX.replace(os.sep, "/")
-    print(f" file:///{output_index_uri}")
+    print(f" {Path(OUTPUT_INDEX).as_uri()}")
     print("="*70)
 
 if __name__ == "__main__":

@@ -1291,32 +1291,6 @@
     "tareas": "Levantamiento de curvas de calibración, programación en LabVIEW, enlace con autómatas PLC y aseguramiento metrológico ISO 17025."
   },
   {
-    "titulo": "Práctica profesional - ingeniería mecatrónica / automatización",
-    "empresa": "Empresa confidencial",
-    "ubicacion": "Bogotá",
-    "url": "https://www.elempleo.com/co/ofertas-trabajo/aprendiz-de-tecnologia-estudiate-universitario-1886760603",
-    "fecha_publicacion": "Reciente",
-    "fuente": "ElEmpleo.com",
-    "compensacion": "$1,5 a $2 millones",
-    "ramas": [
-      {
-        "clave": "instrumentacion_metrologia",
-        "nombre": "Instrumentación, Automatización y Metrología",
-        "color": "#10b981",
-        "score": 61
-      }
-    ],
-    "rama_principal": "Instrumentación, Automatización y Metrología",
-    "color_principal": "#10b981",
-    "clave_principal": "instrumentacion_metrologia",
-    "afinidad": "Alta Afinidad Pénsum",
-    "es_exclusiva_fisica": false,
-    "es_cierre_inminente": false,
-    "score_pensum": 96,
-    "mision": "Calibración de instrumentos de medición de variables físicas, cálculo de incertidumbre y programación de sistemas DAQ/LabVIEW.",
-    "tareas": "Levantamiento de curvas de calibración, programación en LabVIEW, enlace con autómatas PLC y aseguramiento metrológico ISO 17025."
-  },
-  {
     "titulo": "Practicante Técnico en Electricidad Industrial y Solar",
     "empresa": "ERCO Energía",
     "ubicacion": "Valle de Aburrá, Antioquia",
@@ -1547,7 +1521,7 @@
     "titulo": "Profesional junior de automatización y transformación digital",
     "empresa": "Enel Colombia S.A ESP",
     "ubicacion": "Bogotá",
-    "url": "https://www.elempleo.com/co/ofertas-trabajo/practicante-universitario-en-datos-tecnologia-y-automatizacion-1886761106",
+    "url": "https://www.elempleo.com/co/ofertas-trabajo/ingeniero-de-automatizacion-y-digitalizacion-industrial-junioragcbogota-1886774958",
     "fecha_publicacion": "Reciente",
     "fuente": "ElEmpleo.com",
     "compensacion": "$5,5 a $6 millones",
@@ -1576,13 +1550,13 @@
     "tareas": "Programación de microcontroladores, adquisición y filtrado digital de señales, depuración con analizador lógico y pruebas de hardware."
   },
   {
-    "titulo": "Especialista de automatizacion qa",
-    "empresa": "CREDIBANCO S. A",
+    "titulo": "Ingeniero de innovaciónes y automatización - bogotá",
+    "empresa": "ADECCO COLOMBIA S A",
     "ubicacion": "Bogotá",
-    "url": "https://www.elempleo.com/co/ofertas-trabajo/practica-profesional-ingenieria-mecatronica-automatizacion-1886778926",
+    "url": "https://www.elempleo.com/co/ofertas-trabajo/profesional-junior-de-automatizacion-y-transformacion-digital-1886759420",
     "fecha_publicacion": "Reciente",
     "fuente": "ElEmpleo.com",
-    "compensacion": "$6 a $8 millones",
+    "compensacion": "$4 a $4,5 millones",
     "ramas": [
       {
         "clave": "instrumentacion_metrologia",
@@ -1602,13 +1576,39 @@
     "tareas": "Levantamiento de curvas de calibración, programación en LabVIEW, enlace con autómatas PLC y aseguramiento metrológico ISO 17025."
   },
   {
-    "titulo": "Coordinador de automatización tecnología",
-    "empresa": "Empresa confidencial",
-    "ubicacion": "Bogotá",
-    "url": "https://www.elempleo.com/co/ofertas-trabajo/auxiliar-de-automatizacion-1886770609",
+    "titulo": "Auxiliar de automatización",
+    "empresa": "Banco de Occidente",
+    "ubicacion": "Cali",
+    "url": "https://www.elempleo.com/co/ofertas-trabajo/analista-de-procesos-y-automatizacion-remoto-1886772940",
     "fecha_publicacion": "Reciente",
     "fuente": "ElEmpleo.com",
-    "compensacion": "$8 a $10 millones",
+    "compensacion": "$1,5 a $2 millones",
+    "ramas": [
+      {
+        "clave": "instrumentacion_metrologia",
+        "nombre": "Instrumentación, Automatización y Metrología",
+        "color": "#10b981",
+        "score": 58
+      }
+    ],
+    "rama_principal": "Instrumentación, Automatización y Metrología",
+    "color_principal": "#10b981",
+    "clave_principal": "instrumentacion_metrologia",
+    "afinidad": "Alta Afinidad Pénsum",
+    "es_exclusiva_fisica": false,
+    "es_cierre_inminente": false,
+    "score_pensum": 93,
+    "mision": "Calibración de instrumentos de medición de variables físicas, cálculo de incertidumbre y programación de sistemas DAQ/LabVIEW.",
+    "tareas": "Levantamiento de curvas de calibración, programación en LabVIEW, enlace con autómatas PLC y aseguramiento metrológico ISO 17025."
+  },
+  {
+    "titulo": "Gestor de procesos y automatización",
+    "empresa": "Cinte Colombia SAS",
+    "ubicacion": "Bogotá",
+    "url": "https://www.elempleo.com/co/ofertas-trabajo/practica-profesional-ingenieria-mecatronica-automatizacion-1886778926",
+    "fecha_publicacion": "Reciente",
+    "fuente": "ElEmpleo.com",
+    "compensacion": "$4,5 a $5,5 millones",
     "ramas": [
       {
         "clave": "instrumentacion_metrologia",
@@ -2297,31 +2297,6 @@
     "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables."
   },
   {
-    "titulo": "QA Automatizador- IA",
-    "empresa": "Accenture Colombia",
-    "ubicacion": "Medellin, Antioquia, Colombia",
-    "url": "https://co.linkedin.com/jobs/view/qa-automatizador-ia-at-accenture-colombia-4459435209",
-    "fecha_publicacion": "Hace 1 mes",
-    "fuente": "LinkedIn Jobs",
-    "ramas": [
-      {
-        "clave": "simulaciones_datos_ia",
-        "nombre": "Análisis de Datos, IA y Simulaciones",
-        "color": "#06b6d4",
-        "score": 63
-      }
-    ],
-    "rama_principal": "Análisis de Datos, IA y Simulaciones",
-    "color_principal": "#06b6d4",
-    "clave_principal": "simulaciones_datos_ia",
-    "afinidad": "Alta Afinidad Pénsum",
-    "es_exclusiva_fisica": false,
-    "es_cierre_inminente": true,
-    "score_pensum": 63,
-    "mision": "Modelamiento matemático, pipelines de datos, simulación numérica de procesos y entrenamiento de algoritmos predictivos e IA.",
-    "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables."
-  },
-  {
     "titulo": "AI Strategist - Remote, Medellín",
     "empresa": "WON",
     "ubicacion": "Medellin, Antioquia, Colombia",
@@ -2352,6 +2327,31 @@
     "ubicacion": "Medellin, Antioquia, Colombia",
     "url": "https://co.linkedin.com/jobs/view/1904-full-stack-developer-con-ia-%E2%80%93-semi-senior-at-softgic-4478807066",
     "fecha_publicacion": "Hace 1 semana",
+    "fuente": "LinkedIn Jobs",
+    "ramas": [
+      {
+        "clave": "simulaciones_datos_ia",
+        "nombre": "Análisis de Datos, IA y Simulaciones",
+        "color": "#06b6d4",
+        "score": 63
+      }
+    ],
+    "rama_principal": "Análisis de Datos, IA y Simulaciones",
+    "color_principal": "#06b6d4",
+    "clave_principal": "simulaciones_datos_ia",
+    "afinidad": "Alta Afinidad Pénsum",
+    "es_exclusiva_fisica": false,
+    "es_cierre_inminente": true,
+    "score_pensum": 63,
+    "mision": "Modelamiento matemático, pipelines de datos, simulación numérica de procesos y entrenamiento de algoritmos predictivos e IA.",
+    "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables."
+  },
+  {
+    "titulo": "AI Engineer",
+    "empresa": "Rockwell Automation",
+    "ubicacion": "Medellin, Antioquia, Colombia",
+    "url": "https://co.linkedin.com/jobs/view/ai-engineer-at-rockwell-automation-4454056999",
+    "fecha_publicacion": "Hace 5 días",
     "fuente": "LinkedIn Jobs",
     "ramas": [
       {
@@ -2427,31 +2427,6 @@
     "ubicacion": "Medellin, Antioquia, Colombia",
     "url": "https://co.linkedin.com/jobs/view/ingenieros-de-datos-at-accenture-colombia-4444002212",
     "fecha_publicacion": "Hace 1 mes",
-    "fuente": "LinkedIn Jobs",
-    "ramas": [
-      {
-        "clave": "simulaciones_datos_ia",
-        "nombre": "Análisis de Datos, IA y Simulaciones",
-        "color": "#06b6d4",
-        "score": 63
-      }
-    ],
-    "rama_principal": "Análisis de Datos, IA y Simulaciones",
-    "color_principal": "#06b6d4",
-    "clave_principal": "simulaciones_datos_ia",
-    "afinidad": "Alta Afinidad Pénsum",
-    "es_exclusiva_fisica": false,
-    "es_cierre_inminente": true,
-    "score_pensum": 63,
-    "mision": "Modelamiento matemático, pipelines de datos, simulación numérica de procesos y entrenamiento de algoritmos predictivos e IA.",
-    "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables."
-  },
-  {
-    "titulo": "AI Engineer",
-    "empresa": "Rockwell Automation",
-    "ubicacion": "Medellin, Antioquia, Colombia",
-    "url": "https://co.linkedin.com/jobs/view/ai-engineer-at-rockwell-automation-4454056999",
-    "fecha_publicacion": "Hace 5 días",
     "fuente": "LinkedIn Jobs",
     "ramas": [
       {
@@ -2554,9 +2529,9 @@
     "tareas": "Levantamiento de curvas de calibración, programación en LabVIEW, enlace con autómatas PLC y aseguramiento metrológico ISO 17025."
   },
   {
-    "titulo": "Ingeniero de automatización y control - oil&gas",
-    "empresa": "Empresa confidencial",
-    "ubicacion": "Bogotá",
+    "titulo": "Medellín - dibujante automatización y control bilingüe.",
+    "empresa": "HATCH S.A.S",
+    "ubicacion": "Medellín",
     "url": "https://www.elempleo.com/co/ofertas-trabajo/auxiliar-de-automatizacion-e-analitica-de-cobranza-1886758244",
     "fecha_publicacion": "Reciente",
     "fuente": "ElEmpleo.com",
@@ -2983,10 +2958,42 @@
     "tareas": "Levantamiento de curvas de calibración, programación en LabVIEW, enlace con autómatas PLC y aseguramiento metrológico ISO 17025."
   },
   {
+    "titulo": "Ingeniero de automatización y digitalización industrial junior-agc(bogotá)",
+    "empresa": "Empresa confidencial",
+    "ubicacion": "Bogotá",
+    "url": "https://www.elempleo.com/co/ofertas-trabajo/practicante-universitario-en-datos-tecnologia-y-automatizacion-1886761106",
+    "fecha_publicacion": "Reciente",
+    "fuente": "ElEmpleo.com",
+    "compensacion": "",
+    "ramas": [
+      {
+        "clave": "electronica_digital_iot",
+        "nombre": "Electrónica Digital, Microcontroladores e IoT",
+        "color": "#3b82f6",
+        "score": 58
+      },
+      {
+        "clave": "instrumentacion_metrologia",
+        "nombre": "Instrumentación, Automatización y Metrología",
+        "color": "#10b981",
+        "score": 58
+      }
+    ],
+    "rama_principal": "Electrónica Digital, Microcontroladores e IoT",
+    "color_principal": "#3b82f6",
+    "clave_principal": "electronica_digital_iot",
+    "afinidad": "Alta Afinidad Pénsum",
+    "es_exclusiva_fisica": false,
+    "es_cierre_inminente": false,
+    "score_pensum": 58,
+    "mision": "Desarrollo de sistemas embebidos, firmware en C/C++, comunicación por buses I2C/SPI y redes de sensores industriales IoT.",
+    "tareas": "Programación de microcontroladores, adquisición y filtrado digital de señales, depuración con analizador lógico y pruebas de hardware."
+  },
+  {
     "titulo": "Analista de procesos y automatización- remoto",
     "empresa": "MICHAEL PAGE INTERNATIONAL",
     "ubicacion": "Bogotá",
-    "url": "https://www.elempleo.com/co/ofertas-trabajo/ingeniero-de-automatizacion-y-digitalizacion-industrial-junioragcbogota-1886774958",
+    "url": "https://www.elempleo.com/co/ofertas-trabajo/aprendiz-de-tecnologia-estudiate-universitario-1886760603",
     "fecha_publicacion": "Reciente",
     "fuente": "ElEmpleo.com",
     "compensacion": "",
@@ -3012,7 +3019,7 @@
     "titulo": "Ingeniero de automatización",
     "empresa": "Empresa confidencial",
     "ubicacion": "Bogotá",
-    "url": "https://www.elempleo.com/co/ofertas-trabajo/analista-de-procesos-y-automatizacion-remoto-1886772940",
+    "url": "https://www.elempleo.com/co/ofertas-trabajo/ingeniero-de-innovaciones-y-automatizacion-bogota-1886781779",
     "fecha_publicacion": "Reciente",
     "fuente": "ElEmpleo.com",
     "compensacion": "",
@@ -3507,32 +3514,6 @@
     "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
   },
   {
-    "titulo": "Aprendiz de tecnología/ estudiate universitario",
-    "empresa": "MULTISOFTWARE TRANSACCIONAL SAS",
-    "ubicacion": "Bogotá",
-    "url": "https://www.elempleo.com/co/ofertas-trabajo/profesional-junior-de-automatizacion-y-transformacion-digital-1886759420",
-    "fecha_publicacion": "Reciente",
-    "fuente": "ElEmpleo.com",
-    "compensacion": "$1,5 a $2 millones",
-    "ramas": [
-      {
-        "clave": "general",
-        "nombre": "Ingeniería General / Operaciones",
-        "color": "#64748b",
-        "score": 5
-      }
-    ],
-    "rama_principal": "Ingeniería General / Operaciones",
-    "color_principal": "#64748b",
-    "clave_principal": "general",
-    "afinidad": "General",
-    "es_exclusiva_fisica": false,
-    "es_cierre_inminente": false,
-    "score_pensum": 35,
-    "mision": "Apoyo en el área de ingeniería y operaciones técnicas en MULTISOFTWARE TRANSACCIONAL SAS.",
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
-  },
-  {
     "titulo": "Aprendiz - archivo (inlusión)",
     "empresa": "AGENCIA DE EMPLEO COLSUBSIDIO",
     "ubicacion": "Bogotá",
@@ -3763,10 +3744,10 @@
     "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
   },
   {
-    "titulo": "Practicante de Ingeniería Ambiental",
+    "titulo": "Practicante de Ingeniería de Alimentos",
     "empresa": "Supermercados Euro S.A",
     "ubicacion": "Medellín, Antioquia",
-    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-practicante-de-ingenieria-ambiental-contrato-de-aprendizaje-en-medellin-EFCE820FB4598F9B61373E686DCF3405",
+    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-practicante-de-ingenieria-de-alimentos-contrato-de-aprendizaje-sena-en-medellin-C72D62AC0ADE00D661373E686DCF3405",
     "fecha_publicacion": "Reciente",
     "fuente": "Computrabajo",
     "ramas": [
@@ -3788,10 +3769,10 @@
     "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
   },
   {
-    "titulo": "Practicante de Ingeniería de Alimentos",
+    "titulo": "Practicante de Ingeniería Ambiental",
     "empresa": "Supermercados Euro S.A",
     "ubicacion": "Medellín, Antioquia",
-    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-practicante-de-ingenieria-de-alimentos-contrato-de-aprendizaje-sena-en-medellin-C72D62AC0ADE00D661373E686DCF3405",
+    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-practicante-de-ingenieria-ambiental-contrato-de-aprendizaje-en-medellin-EFCE820FB4598F9B61373E686DCF3405",
     "fecha_publicacion": "Reciente",
     "fuente": "Computrabajo",
     "ramas": [
@@ -6526,31 +6507,6 @@
     "afinidad": "General",
     "es_exclusiva_fisica": false,
     "es_cierre_inminente": true,
-    "score_pensum": 0,
-    "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Accenture Colombia.",
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
-  },
-  {
-    "titulo": "Agente de Compras - Procurement Processor (Portugues Deseable) Analyst (CL11)/Associate (CL12)",
-    "empresa": "Accenture Colombia",
-    "ubicacion": "Medellin, Antioquia, Colombia",
-    "url": "https://co.linkedin.com/jobs/view/agente-de-compras-procurement-processor-portugues-deseable-analyst-cl11-associate-cl12-at-accenture-colombia-4472359651",
-    "fecha_publicacion": "Hace 3 semanas",
-    "fuente": "LinkedIn Jobs",
-    "ramas": [
-      {
-        "clave": "general",
-        "nombre": "Ingeniería General / Operaciones",
-        "color": "#64748b",
-        "score": 5
-      }
-    ],
-    "rama_principal": "Ingeniería General / Operaciones",
-    "color_principal": "#64748b",
-    "clave_principal": "general",
-    "afinidad": "General",
-    "es_exclusiva_fisica": false,
-    "es_cierre_inminente": false,
     "score_pensum": 0,
     "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Accenture Colombia.",
     "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."

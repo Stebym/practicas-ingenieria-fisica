@@ -200,6 +200,92 @@ def scrape_computrabajo_query(query):
     except Exception:
         return []
 
+def scrape_magneto_query(query):
+    """Consulta convocatorias de prácticas en la API pública de Magneto365 en Antioquia/Remoto."""
+    api_url = "https://api.magneto365.com/jobs/v1/public/jobs/search"
+    headers = {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36",
+        "Origin": "https://www.magneto365.com",
+        "Referer": "https://www.magneto365.com/",
+        "Accept": "application/json, text/plain, */*"
+    }
+    params = {
+        "device": "desktop",
+        "paginator[page]": 1,
+        "paginator[pageSize]": 20,
+        "order[field]": "publish_date",
+        "order[order]": "DESC",
+        "queries[0][field]": "all",
+        "queries[0][term]": query,
+        "country": "co"
+    }
+    antioquia_cities = {
+        "medellín", "medellin", "envigado", "itagüí", "itagui", "bello", "sabaneta",
+        "la estrella", "copacabana", "girardota", "caldas", "barbosa", "rionegro",
+        "guarne", "marinilla", "apartadó", "apartado", "cisneros", "antioquia",
+        "retiro", "el retiro", "el carmen de viboral", "carmen de viboral", "puerto berrío"
+    }
+    try:
+        r = requests.get(api_url, params=params, headers=headers, timeout=6)
+        if r.status_code != 200:
+            return []
+        data = r.json()
+        rows = data.get("rows", [])
+        results = []
+        for row in rows:
+            slug = row.get("jobSlug")
+            title = (row.get("title") or "").strip()
+            if not slug or not title:
+                continue
+
+            cities = row.get("cities") or []
+            if isinstance(cities, list):
+                city_str = ", ".join(cities)
+                city_lower_list = [c.lower() for c in cities]
+            else:
+                city_str = str(cities)
+                city_lower_list = [city_str.lower()]
+
+            is_remote = bool(row.get("isRemote"))
+            is_antioquia = any(any(ac in c for ac in antioquia_cities) for c in city_lower_list)
+
+            # Aceptar si es en Antioquia, remoto, o programa multiciudad que incluye Antioquia
+            if not (is_antioquia or is_remote):
+                continue
+
+            empresa = (row.get("companyName") or "Empresa Confidencial").strip()
+            url = f"https://www.magneto365.com/co/empleos/{slug}"
+
+            salary = row.get("salary") or 0
+            comp = f"${salary:,.0f} COP".replace(",", ".") if salary and salary > 0 else ""
+
+            pub_date = row.get("publishDate") or "Reciente"
+            if "T" in pub_date:
+                pub_date = pub_date.split("T")[0]
+
+            raw_desc = row.get("description") or ""
+            desc = re.sub(r'<[^>]+>', ' ', raw_desc)
+            desc = re.sub(r'\s+', ' ', desc).strip()
+
+            skills = row.get("skills") or []
+            skills_names = [s.get("name") for s in skills if isinstance(s, dict) and s.get("name")]
+            perfil = ", ".join(skills_names[:5]) if skills_names else ""
+
+            results.append({
+                "titulo": title,
+                "empresa": empresa,
+                "ubicacion": city_str if city_str else "Medellín / Antioquia",
+                "url": url,
+                "fecha_publicacion": pub_date,
+                "fuente": "Magneto365",
+                "compensacion": comp,
+                "perfil": perfil,
+                "mision": desc[:250] if desc else ""
+            })
+        return results
+    except Exception:
+        return []
+
 def scrape_web_query(query):
     """Busca resultados web públicos con timeout corto para no congelar la ejecución."""
     url = f"https://html.duckduckgo.com/html/?q={quote(query + ' Medellín Antioquia empleo práctica')}"
@@ -340,301 +426,132 @@ def classify_and_score_job(job, config_ramas):
     return job
 
 def build_full_html(vacantes, config_ramas):
-    """Genera el HTML semántico con diseño de laboratorio, ícono [i] flotante y sin menciones públicas de género"""
-    vacantes_json_str = json.dumps(vacantes, ensure_ascii=False)
+    """Genera el portal responsive para Ingeniería Física y conserva la página de GitHub Pages."""
     total_exclusivas = sum(1 for v in vacantes if v.get("es_exclusiva_fisica"))
     total_inminentes = sum(1 for v in vacantes if v.get("es_cierre_inminente"))
+    vacantes_json = json.dumps(vacantes, ensure_ascii=False).replace("<", "\\u003c")
 
     html = f"""<!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-theme="light">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Prácticas de Ingeniería Física • UNAL Medellín | Jimmy Rosero</title>
-  <meta name="description" content="Portal de convocatorias prioritarias para estudiantes de Ingeniería Física de la Universidad Nacional de Colombia Sede Medellín. Creado por Jimmy Stebym Rosero Barrera.">
-  <meta name="author" content="Jimmy Stebym Rosero Barrera">
   <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#f5f4ee">
+  <meta name="description" content="Convocatorias de prácticas en Medellín y Antioquia, seleccionadas para Ingeniería Física. Explora vacantes, guarda tus postulaciones y conecta el pénsum con la industria.">
+  <meta name="author" content="Jimmy Stebym Rosero Barrera">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23173f39'/%3E%3Ctext x='50' y='72' text-anchor='middle' font-size='66' fill='%23d9f275' font-family='sans-serif'%3Eφ%3C/text%3E%3C/svg%3E">
+  <title>Prácticas de Ingeniería Física | UNAL Medellín</title>
   <script>
     try {{
-      const storedTheme = localStorage.getItem('ipf-theme');
-      const savedTheme = storedTheme === 'dark' || storedTheme === 'light' ? storedTheme : null;
-      const preferredTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-      document.documentElement.dataset.theme = savedTheme || preferredTheme;
-    }} catch {{ document.documentElement.dataset.theme = 'light'; }}
+      const savedTheme = localStorage.getItem('ipf-theme');
+      document.documentElement.dataset.theme = savedTheme === 'dark' || savedTheme === 'light' ? savedTheme : (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    }} catch {{}}
   </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="estilos.css">
-  <script src="estrellas.js" defer></script>
+  <script id="jobs-data" type="application/json">{vacantes_json}</script>
+  <script src="app.js" defer></script>
 </head>
 <body>
-  <canvas id="constellationCanvas" aria-hidden="true"></canvas>
-
-  <!-- HEADER SEMÁNTICO -->
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
   <header class="site-header">
-    <div class="header-container">
-      <div class="branding">
-        <div class="brand-symbol">⚛</div>
-        <div class="brand-text">
-          <h1>Prácticas de Ingeniería Física</h1>
-          <p class="subtitle">Medellín y Antioquia • Convocatorias & Directorio de I+D</p>
-          <div class="creator-tag">
-            Creado por <strong>Jimmy Stebym Rosero Barrera</strong>
-          </div>
-        </div>
-      </div>
-      <div class="header-meta">
-        <div>Vacantes activas: <strong style="color: var(--accent-cyan);">{len(vacantes)}</strong></div>
-        <div>•</div>
-        <div>Exclusivas Física: <strong style="color: var(--accent-amber);">{total_exclusivas}</strong></div>
-        <div>•</div>
-        <div>Próximas a cerrar: <strong style="color: var(--accent-crimson);">{total_inminentes}</strong></div>
-        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Cambiar a modo oscuro" aria-pressed="false">
-          <span class="theme-toggle-icon" aria-hidden="true">◐</span><span class="theme-toggle-label">Modo oscuro</span>
-        </button>
-      </div>
+    <a class="brand" href="#inicio" aria-label="Ingeniería Física, inicio">
+      <span class="brand-mark" aria-hidden="true"><span>φ</span></span>
+      <span class="brand-lockup"><strong>INGENIERÍA FÍSICA</strong><small>UNAL · MEDELLÍN</small></span>
+    </a>
+    <div class="header-actions">
+      <span class="open-status"><span class="status-dot" aria-hidden="true"></span>Radar de oportunidades</span>
+      <button class="theme-toggle" id="themeToggle" type="button" aria-pressed="false"><span class="theme-icon" aria-hidden="true">◐</span><span class="theme-label">Tema oscuro</span></button>
     </div>
   </header>
 
-  <main class="main-content">
-
-    <section class="manifesto-box">
-      <h2>Ecosistema de Prácticas para Ingenieros Físicos (UNAL Medellín)</h2>
-      <p>
-        Plataforma automatizada diseñada por <strong>Jimmy Stebym Rosero Barrera</strong>. El algoritmo prioriza en los primeros lugares las convocatorias de mayor rigor alineadas con las materias clave de nuestra carrera: <strong>Análisis de Datos & IA, Electrónica Digital (Taller V / Microcontroladores / I2C / IoT), Electrónica Análoga (Taller IV), Física de Radiaciones, Mecánica Cuántica, Diseño Mecánico (Taller II), Dibujo Técnico (Taller I), Instrumentación Virtual y Metrología</strong>.
-      </p>
-    </section>
-
-    <!-- NAVEGACIÓN POR PESTAÑAS (SIN EMOJIS) -->
-    <nav class="tabs-nav" aria-label="Secciones de prácticas">
-      <button class="tab-link active" onclick="switchMainTab('todas', this)">
-        Todas las Vacantes ({len(vacantes)})
-      </button>
-      <button class="tab-link exclusive" onclick="switchMainTab('exclusivas', this)">
-        Exclusivas: Piden Físico / Ing. Físico ({total_exclusivas})
-      </button>
-      <button class="tab-link urgent" onclick="switchMainTab('inminentes', this)">
-        Próximas a Finalizar (&lt; 5 Días) ({total_inminentes})
-      </button>
-      <button class="tab-link" onclick="switchMainTab('consejos', this)">
-        Guía & Tips de Hoja de Vida
-      </button>
-    </nav>
-
-    <!-- CONTENEDOR DE FILTROS Y BÚSQUEDA -->
-    <div id="filterControls">
-      <input type="text" id="searchInput" class="search-bar" placeholder="Buscar por materia, software o tecnología (ej. I2C, Python, Taller V, CAD, PLC, Cuántica, Radiaciones)..." onkeyup="handleFilter()">
-      <div class="application-tracker">
-        <label for="applicationFilter">Mis postulaciones <span>· se guarda en este navegador</span></label>
-        <select id="applicationFilter" onchange="handleFilter()">
-          <option value="all">Todas las convocatorias</option>
-          <option value="pending">Pendientes de postularme</option>
-          <option value="applied">Ya me postulé</option>
-        </select>
-        <span id="applicationSummary" aria-live="polite"></span>
+  <main id="contenido">
+    <section class="hero" id="inicio" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="eyebrow-rule" aria-hidden="true"></span>DE LA UNIVERSIDAD A LA INDUSTRIA</p>
+        <h1 id="hero-title">La física también <em>se pone a trabajar.</em></h1>
+        <p class="hero-description">Oportunidades donde lo que sabes de datos, materiales, electrónica y energía encuentra problemas reales que resolver.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#vacantes">Explorar oportunidades <span aria-hidden="true">↘</span></a>
+          <button class="button button-quiet" type="button" data-open-guide>Ver guía de postulación <span aria-hidden="true">↗</span></button>
+        </div>
+        <p class="hero-signature">Hecho por un ingeniero físico, para quienes vienen detrás.</p>
       </div>
-      
-      <div class="branch-pills" id="pillsContainer">
-        <button class="branch-pill active" onclick="handlePill('TODOS', this)">Todas las ramas</button>
-        <button class="branch-pill" onclick="handlePill('Análisis de Datos, IA y Simulaciones', this)">Datos, IA & Simulaciones</button>
-        <button class="branch-pill" onclick="handlePill('Electrónica Digital, Microcontroladores e IoT', this)">Electrónica Digital & IoT (I2C)</button>
-        <button class="branch-pill" onclick="handlePill('Electrónica Análoga y Circuitos', this)">Electrónica Análoga</button>
-        <button class="branch-pill" onclick="handlePill('Instrumentación y Metrología Industrial', this)">Instrumentación & Metrología</button>
-        <button class="branch-pill" onclick="handlePill('Diseño Mecánico y Dibujo Técnico', this)">Diseño Mecánico & CAD</button>
-        <button class="branch-pill" onclick="handlePill('Cuántica, Estado Sólido y Nuevas Tecnologías', this)">Cuántica & Estado Sólido</button>
-        <button class="branch-pill" onclick="handlePill('Física de Radiaciones y Física Médica', this)">Radiaciones & Física Médica</button>
-        <button class="branch-pill" onclick="handlePill('Óptica, Fotónica y Visión Artificial', this)">Óptica & Visión Artificial</button>
-        <button class="branch-pill" onclick="handlePill('Ciencia de Materiales y Nanotecnología', this)">Materiales & Nanotecnología</button>
-        <button class="branch-pill" onclick="handlePill('Energía, Potencia y Renovables', this)">Energía & Potencia</button>
+      <div class="hero-visual" aria-label="Áreas de aplicación de la ingeniería física">
+        <div class="visual-topline"><span>CAMPO DE ACCIÓN</span><span>MEDELLÍN · 6°14′N</span></div>
+        <div class="orbit-scene" aria-hidden="true">
+          <span class="orbit orbit-one"></span><span class="orbit orbit-two"></span><span class="orbit orbit-three"></span>
+          <span class="orbit-core">φ</span><span class="orbit-node node-one">λ</span><span class="orbit-node node-two">∿</span><span class="orbit-node node-three">+</span>
+          <span class="axis axis-x"></span><span class="axis axis-y"></span>
+        </div>
+        <div class="visual-caption"><span>TEORÍA <i></i> MEDICIÓN <i></i> IMPACTO</span><span class="visual-index">01 — ∞</span></div>
+        <div class="hero-note"><span class="note-symbol" aria-hidden="true">↗</span><span><strong>Tu pénsum sí tiene lugar.</strong><small>Encuentra dónde aplicarlo.</small></span></div>
       </div>
-    </div>
-
-    <!-- GRILLA PRINCIPAL DE VACANTES (HTML SEMÁNTICO) -->
-    <section class="jobs-grid" id="jobsContainer" aria-live="polite">
-      <!-- Inyectado dinámicamente con etiquetas article -->
+      <div class="hero-index" aria-hidden="true">IPF / 01</div>
     </section>
 
-    <!-- PESTAÑA: GUÍA Y TIPS -->
-    <section id="guideContainer" style="display: none;">
-      <article class="editorial-card">
-        <h3>Cómo defender el perfil de Ingeniería Física ante Recursos Humanos</h3>
-        <p>A menudo el reclutador de RRHH no conoce a fondo el pénsum de Ingeniería Física. Si dices solo <em>"Soy estudiante de Física"</em>, asumirán que solo haces teoría en tablero. Tu perfil debe destacar como <strong>Ingeniero Físico orientado a soluciones prácticas de alta tecnología</strong>:</p>
-        <ul>
-          <li><strong>Destaca tus habilidades duras en el encabezado del CV:</strong> Instrumentación industrial, adquisición de datos (DAQ), buses de comunicación (I2C/SPI), microcontroladores, automatización, modelado numérico (Python/MATLAB), caracterización de materiales (DRX/SEM) o análisis de datos.</li>
-          <li><strong>Si la oferta dice "Ing. Electrónico, Mecatrónico, Materiales o afines":</strong> Postúlate sin dudar. En tu carta o resumen escribe: <em>"Estudiante de Ingeniería Física con énfasis en sistemas de potencia / automatización / electrónica digital / análisis de datos..."</em></li>
-          <li><strong>Menciona tus proyectos de taller de la UNAL:</strong> Taller I (Dibujo técnico CAD), Taller II (Diseño mecánico), Taller III (Circuitos electromagnéticos), Taller IV (Electrónica análoga) y Taller V (Electrónica digital y microcontroladores).</li>
-        </ul>
-        <h4 style="color: #fff; margin-bottom: 8px; font-family: var(--font-display);">Calendario de Convocatorias Masivas en Medellín:</h4>
-        <p>• <strong>Semestre 1 (Prácticas enero a junio):</strong> Convocatorias abren entre <strong>septiembre y noviembre</strong>.<br>
-        • <strong>Semestre 2 (Prácticas julio a diciembre):</strong> Convocatorias abren entre <strong>marzo y mayo</strong>.</p>
-      </article>
+    <section class="signal-strip" aria-label="Resumen de convocatorias">
+      <p><span class="signal-icon" aria-hidden="true">↗</span> CONVOCATORIAS PARA EL VALLE DE ABURRÁ</p>
+      <div class="signal-stats">
+        <span><strong id="activeCount">{len(vacantes)}</strong> oportunidades</span><b aria-hidden="true">/</b>
+        <span><strong id="exclusiveCount">{total_exclusivas}</strong> afines a física</span><b aria-hidden="true">/</b>
+        <span><strong id="urgentCount">{total_inminentes}</strong> por cerrar</span>
+      </div>
     </section>
 
+    <section class="opportunities" id="vacantes" aria-labelledby="section-title">
+      <div class="section-heading">
+        <div><p class="eyebrow eyebrow-dark">EL SIGUIENTE PASO</p><h2 id="section-title">Encuentra tu lugar.</h2></div>
+        <p class="section-aside">Filtra por afinidad, explora las áreas<br class="desktop-break"> y guarda las postulaciones que te interesan.</p>
+      </div>
+      <div class="tabs-shell">
+        <div class="tabs-nav" role="tablist" aria-label="Secciones de convocatorias">
+          <button class="tab-link active" id="tab-todas" type="button" role="tab" aria-selected="true" aria-controls="jobsPanel" tabindex="0" data-tab="todas">Todas <span>{len(vacantes)}</span></button>
+          <button class="tab-link" id="tab-exclusivas" type="button" role="tab" aria-selected="false" aria-controls="jobsPanel" tabindex="-1" data-tab="exclusivas">Afinidad física <span>{total_exclusivas}</span></button>
+          <button class="tab-link" id="tab-inminentes" type="button" role="tab" aria-selected="false" aria-controls="jobsPanel" tabindex="-1" data-tab="inminentes">Cierre próximo <span>{total_inminentes}</span></button>
+          <button class="tab-link" id="tab-consejos" type="button" role="tab" aria-selected="false" aria-controls="guidePanel" tabindex="-1" data-tab="consejos">Guía de postulación <span aria-hidden="true">↗</span></button>
+        </div>
+      </div>
+
+      <div id="jobsPanel" role="tabpanel" aria-labelledby="tab-todas" tabindex="0">
+        <div class="filter-panel" id="filterControls">
+          <label class="search-field"><span class="search-icon" aria-hidden="true">⌕</span><span class="sr-only">Buscar oportunidades</span><input type="search" id="searchInput" placeholder="Busca una tecnología, empresa o materia…" autocomplete="off"><kbd>/</kbd></label>
+          <label class="application-filter"><span class="sr-only">Filtrar por estado de postulación</span><select id="applicationFilter"><option value="all">Todas mis vacantes</option><option value="pending">Pendientes</option><option value="applied">Ya postuladas</option></select><span class="select-chevron" aria-hidden="true">⌄</span></label>
+        </div>
+        <div class="branch-pills" id="pillsContainer" aria-label="Filtrar por área">
+          <button class="branch-pill active" type="button" aria-pressed="true" data-branch="TODOS">Todas las áreas</button>
+          <button class="branch-pill" type="button" aria-pressed="false" data-branch="Análisis de Datos, IA y Simulaciones">Datos e IA</button>
+          <button class="branch-pill" type="button" aria-pressed="false" data-branch="Electrónica Digital, Microcontroladores e IoT">Electrónica digital</button>
+          <button class="branch-pill" type="button" aria-pressed="false" data-branch="Electrónica Análoga y Circuitos">Electrónica análoga</button>
+          <button class="branch-pill" type="button" aria-pressed="false" data-branch="Instrumentación y Metrología Industrial">Instrumentación</button>
+          <button class="branch-pill" type="button" aria-pressed="false" data-branch="Diseño Mecánico y Dibujo Técnico">Diseño mecánico</button>
+          <button class="branch-pill" type="button" aria-pressed="false" data-branch="Cuántica, Estado Sólido y Nuevas Tecnologías">Cuántica</button>
+          <button class="branch-pill" type="button" aria-pressed="false" data-branch="Física de Radiaciones y Física Médica">Física médica</button>
+          <button class="branch-pill" type="button" aria-pressed="false" data-branch="Óptica, Fotónica y Visión Artificial">Óptica y fotónica</button>
+          <button class="branch-pill" type="button" aria-pressed="false" data-branch="Ciencia de Materiales y Nanotecnología">Materiales</button>
+          <button class="branch-pill" type="button" aria-pressed="false" data-branch="Energía, Potencia y Renovables">Energía</button>
+        </div>
+        <div class="results-heading"><p id="resultsCount" role="status" aria-live="polite">Cargando convocatorias…</p><p id="applicationSummary"></p></div>
+        <div class="jobs-grid" id="jobsContainer" aria-busy="false"></div>
+      </div>
+
+      <section class="guide-panel" id="guidePanel" role="tabpanel" aria-labelledby="tab-consejos" tabindex="0" hidden>
+        <div class="guide-intro"><p class="eyebrow eyebrow-dark">TRADUCE LO QUE SABES</p><h2>La ingeniería física<br><em>habla muchos idiomas.</em></h2><p>Ayuda al equipo de selección a ver cómo tu formación resuelve sus retos. Nombra herramientas, proyectos y resultados concretos.</p></div>
+        <div class="guide-grid">
+          <article class="guide-card"><span class="guide-number">01 / PERFIL</span><h3>Cuenta lo que sabes hacer</h3><p>Instrumentación, adquisición de datos, microcontroladores, automatización, Python, MATLAB o caracterización de materiales: pon tus habilidades técnicas en el primer tercio de la hoja de vida.</p></article>
+          <article class="guide-card"><span class="guide-number">02 / PROYECTOS</span><h3>Vuelve visible el pénsum</h3><p>Un proyecto de Taller V con ESP32, una curva de calibración en LabVIEW o una simulación numérica cuentan una historia más clara que una lista de asignaturas.</p></article>
+          <article class="guide-card"><span class="guide-number">03 / POSTULACIÓN</span><h3>Aplica a perfiles afines</h3><p>Si piden electrónica, mecatrónica, materiales o áreas afines, explica tu enfoque: sistemas embebidos, análisis de datos, potencia o física médica.</p></article>
+          <article class="guide-card guide-card-accent"><span class="guide-number">EL MOMENTO</span><h3>Anticipa las convocatorias.</h3><p>Prácticas de enero a junio: suele haber aperturas entre septiembre y noviembre. Para julio a diciembre, revisa desde marzo hasta mayo.</p></article>
+        </div>
+        <button class="button button-primary guide-back" type="button" data-back-to-jobs>Volver a las oportunidades <span aria-hidden="true">↗</span></button>
+      </section>
+    </section>
   </main>
 
-  <!-- FOOTER SEMÁNTICO -->
-  <footer class="site-footer">
-    <p class="institution">Herramienta desarrollada para estudiantes de Ingeniería Física • UNAL Medellín, Colombia</p>
-    <p class="schedule-note">Para actualizar las vacantes en cualquier momento, este se actualiza solo a las 20:00 pm</p>
-  </footer>
-
-  <script>
-    const allJobs = {vacantes_json_str};
-    let currentTab = 'todas';
-    let currentBranch = 'TODOS';
-    const appliedStorageKey = 'ipf-applied-jobs-v1';
-    let appliedJobs = new Set();
-    try {{ appliedJobs = new Set(JSON.parse(localStorage.getItem(appliedStorageKey) || '[]')); }} catch {{}}
-
-    function renderJobs(list) {{
-      const container = document.getElementById('jobsContainer');
-      container.innerHTML = '';
-      
-      if (list.length === 0) {{
-        container.innerHTML = '<div style="grid-column: 1/-1; text-align: center; padding: 50px; color: var(--text-muted); font-family: var(--font-mono);">No se encontraron vacantes bajo este criterio. Prueba con otra palabra clave o rama.</div>';
-        return;
-      }}
-      
-      list.forEach(j => {{
-        const card = document.createElement('article');
-        card.className = 'job-card';
-        if (j.es_cierre_inminente) card.classList.add('urgent');
-        if (j.es_exclusiva_fisica) card.classList.add('exclusive');
-        
-        const tagsHtml = j.ramas.map(r => `<span class="job-tag" style="border-left: 2px solid ${{r.color}}">${{r.nombre}}</span>`).join('');
-        
-        let badgeColor = j.color_principal;
-        let badgeText = j.afinidad.toUpperCase();
-        if (j.es_cierre_inminente) {{
-          badgeText = 'CIERRE INMINENTE (< 5 DIAS)';
-          badgeColor = '#ef476f';
-        }} else if (j.es_exclusiva_fisica) {{
-          badgeText = 'EXCLUSIVA FISICA';
-          badgeColor = '#ffb703';
-        }}
-        
-        const isApplied = appliedJobs.has(j.url);
-        card.innerHTML = `
-          <div>
-            <header class="job-card-header">
-              <span class="affinity-badge" style="background: ${{badgeColor}}22; color: ${{badgeColor}}; border: 1px solid ${{badgeColor}}55;">
-                ${{badgeText}}
-              </span>
-              <div class="header-right">
-                <time class="job-date">${{j.fecha_publicacion}}</time>
-                <div class="info-trigger" tabindex="0">
-                  <span class="info-icon" title="Pasa el cursor sobre la convocatoria para ver su misión">+</span>
-                  <div class="floating-cloud">
-                    <div class="cloud-title">Misión & Contexto</div>
-                    <div class="cloud-body">${{j.mision}}</div>
-                    ${{j.perfil ? `<div style="margin-top: 8px; font-size: 0.82rem; color: var(--accent-cyan); line-height: 1.35;"><strong>Perfil sugerido:</strong> ${{j.perfil}}</div>` : ''}}
-                    <div class="cloud-tasks-section">
-                      <strong>¿Qué te tocará hacer?</strong>
-                      <p>${{j.tareas}}</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </header>
-            <h3 class="job-title">${{j.titulo}}</h3>
-            <div class="job-company">${{j.empresa}}</div>
-            <div class="job-specs">
-              <span>Ubicación: ${{j.ubicacion}}</span>
-              <span>Portal: ${{j.fuente}}</span>
-            </div>
-            ${{j.compensacion ? `<div style="margin: 6px 0; font-size: 0.84rem; font-weight: 600; color: var(--accent-amber); display: flex; align-items: center; gap: 4px;"><span>★</span> ${{j.compensacion}}</div>` : ''}}
-            <div class="job-tags">${{tagsHtml}}</div>
-          </div>
-          <footer class="job-card-footer">
-            <a href="${{j.url}}" target="_blank" class="apply-link" rel="noopener noreferrer">Postularme a la Oferta</a>
-            <button type="button" class="application-toggle${{isApplied ? ' is-applied' : ''}}" aria-pressed="${{isApplied}}">${{isApplied ? '✓ Ya me postulé' : 'Marcar como postulada'}}</button>
-          </footer>
-        `;
-        card.querySelector('.application-toggle').addEventListener('click', () => toggleApplied(j.url));
-        container.appendChild(card);
-      }});
-    }}
-
-    function handleFilter() {{
-      const query = document.getElementById('searchInput').value.toLowerCase();
-      const applicationFilter = document.getElementById('applicationFilter').value;
-      const appliedCount = allJobs.filter(j => appliedJobs.has(j.url)).length;
-      const pendingCount = allJobs.length - appliedCount;
-      document.getElementById('applicationSummary').textContent = `${{appliedCount}} postuladas · ${{pendingCount}} pendientes`;
-      
-      const filtered = allJobs.filter(j => {{
-        if (currentTab === 'exclusivas' && !j.es_exclusiva_fisica) return false;
-        if (currentTab === 'inminentes' && !j.es_cierre_inminente) return false;
-        if (applicationFilter === 'pending' && appliedJobs.has(j.url)) return false;
-        if (applicationFilter === 'applied' && !appliedJobs.has(j.url)) return false;
-        
-        const matchesBranch = (currentBranch === 'TODOS') || j.ramas.some(r => r.nombre === currentBranch);
-        if (!matchesBranch) return false;
-        
-        const matchesText = j.titulo.toLowerCase().includes(query) ||
-                            j.empresa.toLowerCase().includes(query) ||
-                            j.ubicacion.toLowerCase().includes(query) ||
-                            j.mision.toLowerCase().includes(query) ||
-                            j.tareas.toLowerCase().includes(query) ||
-                            (j.perfil && j.perfil.toLowerCase().includes(query)) ||
-                            (j.compensacion && j.compensacion.toLowerCase().includes(query)) ||
-                            j.ramas.some(r => r.nombre.toLowerCase().includes(query));
-        return matchesText;
-      }});
-      
-      renderJobs(filtered);
-    }}
-
-    function toggleApplied(url) {{
-      if (appliedJobs.has(url)) appliedJobs.delete(url);
-      else appliedJobs.add(url);
-      try {{ localStorage.setItem(appliedStorageKey, JSON.stringify([...appliedJobs])); }} catch {{}}
-      handleFilter();
-    }}
-
-    function handlePill(branchName, btn) {{
-      currentBranch = branchName;
-      document.querySelectorAll('.branch-pill').forEach(p => p.classList.remove('active'));
-      btn.classList.add('active');
-      handleFilter();
-    }}
-
-    function switchMainTab(tabId, btn) {{
-      document.querySelectorAll('.tab-link').forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      
-      currentTab = tabId;
-      const filterBox = document.getElementById('filterControls');
-      const jobsBox = document.getElementById('jobsContainer');
-      const guideBox = document.getElementById('guideContainer');
-      
-      if (tabId === 'consejos') {{
-        filterBox.style.display = 'none';
-        jobsBox.style.display = 'none';
-        guideBox.style.display = 'block';
-      }} else {{
-        filterBox.style.display = 'block';
-        jobsBox.style.display = 'grid';
-        guideBox.style.display = 'none';
-        handleFilter();
-      }}
-    }}
-
-    function setTheme(theme) {{
-      document.documentElement.dataset.theme = theme;
-      try {{ localStorage.setItem('ipf-theme', theme); }} catch {{}}
-      const toggle = document.getElementById('themeToggle');
-      const isDark = theme === 'dark';
-      toggle.setAttribute('aria-pressed', String(isDark));
-      toggle.setAttribute('aria-label', isDark ? 'Cambiar a modo claro' : 'Cambiar a modo oscuro');
-      toggle.querySelector('.theme-toggle-label').textContent = isDark ? 'Modo claro' : 'Modo oscuro';
-      toggle.querySelector('.theme-toggle-icon').textContent = isDark ? '☼' : '◐';
-    }}
-
-    document.getElementById('themeToggle').addEventListener('click', () => {{
-      setTheme(document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark');
-    }});
-    setTheme(document.documentElement.dataset.theme || 'light');
-    handleFilter();
-  </script>
+  <footer class="site-footer"><a class="footer-brand" href="#inicio">φ <span>Ingeniería Física · UNAL Medellín</span></a><p>Una iniciativa independiente de Jimmy Stebym Rosero Barrera.</p><a class="back-top" href="#inicio">Volver arriba ↑</a></footer>
 </body>
 </html>
 """
@@ -713,7 +630,35 @@ def main():
             print(f"    Computrabajo '{q_ct}': +{added_ct} ofertas")
         time.sleep(0.3)
 
-    # 3. Rastrear LinkedIn Jobs para categorías del pénsum UNAL
+    # 3. Rastrear Magneto365 en tiempo real (API Pública Oficial)
+    magneto_queries = [
+        "practicante ingenieria",
+        "practica ingenieria",
+        "practicante ingenieria fisica",
+        "practicante electronica",
+        "practicante automatizacion",
+        "practicante mecatronica",
+        "practicante datos",
+        "practicante mantenimiento",
+        "practica profesional corona",
+        "practicante isa",
+        "practicante epm",
+        "practicante haceb"
+    ]
+    print(f"\n[*] Rastreando Magneto365 en tiempo real ({len(magneto_queries)} categorías)...")
+    for q_mag in magneto_queries:
+        mag_jobs = scrape_magneto_query(q_mag)
+        added_mag = 0
+        for j in mag_jobs:
+            if j["url"] not in seen_urls:
+                seen_urls.add(j["url"])
+                all_raw_jobs.append(j)
+                added_mag += 1
+        if added_mag > 0:
+            print(f"    Magneto365 '{q_mag}': +{added_mag} ofertas")
+        time.sleep(0.3)
+
+    # 4. Rastrear LinkedIn Jobs para categorías del pénsum UNAL
     print(f"\n[*] Rastreando LinkedIn Jobs para {len(SEARCH_QUERIES)} categorías del pénsum UNAL...")
     for q in SEARCH_QUERIES:
         print(f" -> Buscando: '{q}'...")
@@ -727,7 +672,7 @@ def main():
         print(f"    Encontradas {len(jobs)} ofertas (+{added} nuevas)")
         time.sleep(0.3)
 
-    # 4. Rastrear convocatorias de practicantes en empresas líderes de Medellín y Antioquia
+    # 5. Rastrear convocatorias de practicantes en empresas líderes de Medellín y Antioquia
     company_directory = load_json(os.path.join(BASE_DIR, "empresas_antioquia.json"))
     top_companies = [item.get("empresa") for item in company_directory if isinstance(item, dict) and item.get("empresa")]
     top_companies.extend(["Haceb", "Corona", "ISA", "Sura", "Bancolombia", "Argos", "EPM", "CIDET", "XM", "Ruta N", "Mineros S.A.", "Continental Gold"])

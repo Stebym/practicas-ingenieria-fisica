@@ -23,9 +23,9 @@ Rastrea en tiempo real vacantes en empresas industriales, centros de I+D, hospit
 
 ## 🎨 Principios de Diseño Frontend (Anti "AI Slop")
 Este proyecto fue construido aplicando estándares profesionales de **Desarrollo Web**:
-* **HTML5 100% Semántico:** Uso riguroso de `<header>`, `<nav>`, `<main>`, `<section>`, `<article>`, `<time>` y `<footer>` para máxima extractabilidad, accesibilidad y compatibilidad con rastreadores de IA.
+* **Estructura HTML semántica:** Uso de `<header>`, `<nav>`, `<main>`, `<section>`, `<article>` y `<footer>`, con controles de teclado y estados anunciados para lectores de pantalla.
 * **Separación de Responsabilidades:** Hoja de estilos externa e independiente (`estilos.css`) vinculada mediante `<link rel="stylesheet">`.
-* **Identidad Visual de Laboratorio:** Tipografía técnica (`Syne`, `JetBrains Mono` y `Outfit`), paleta clara de papel, verde mineral y acentos de laboratorio. Las descripciones se despliegan al pasar el cursor por una convocatoria y también al navegar con teclado.
+* **Identidad Visual de Ingeniería Física:** Sistema editorial de papel y verde profundo, tipografía `Manrope`, `DM Sans` y `DM Mono`, y diagramas orbitales. Las fichas revelan el encaje técnico al abrirse, también en pantallas táctiles y con teclado.
 * **Cero Plantillas Genéricas:** Se eliminaron las estéticas predecibles de IA (degradados morados sobre blanco, fuentes del sistema sobreusadas y tarjetas flotantes genéricas).
 
 ---
@@ -40,14 +40,14 @@ Este proyecto fue construido aplicando estándares profesionales de **Desarrollo
 * `bot_practicas.py`: Motor de rastreo y clasificación en Python. Integra rastreo multi-fuente en vivo (Computrabajo y LinkedIn Jobs), el catálogo verificado de convocatorias destacadas (`convocatorias_destacadas.json` con Magneto365, Jooble y portales oficiales de Antioquia) y el directorio de empleadores clave (`empresas_antioquia.json`).
 * `convocatorias_destacadas.json`: Catálogo de convocatorias de alto impacto para Ingeniería Física y carreras afines (Corona, Argos, Haceb, ISA, EPM, Enel, ERCO, Sievert, Gobernación de Antioquia, AKT, Protección, etc.).
 * `empresas_antioquia.json`: Directorio de empresas y sectores para ampliar la búsqueda a empleadores locales.
-* `estilos.css`: Sistema de diseño visual y responsivo.
-* `index.html`: Dashboard interactivo con buscador en vivo y filtros por pestañas:
+* `estilos.css` y `app.js`: interfaz responsive, búsqueda, filtros, seguimiento local de postulaciones y tema claro/oscuro.
+* `index.html`: página publicada; `bot_practicas.py` también regenera el mismo diseño en `dashboard_practicas.html`. Portal interactivo con buscador, áreas técnicas y seguimiento de postulaciones:
   * **💼 Todas las Vacantes**
   * **🎯 Exclusivas: Piden Físico / Ing. Físico**
   * **⏳ Próximas a Finalizar (< 5 Días)**
   * **📝 Guía & Tips para la Hoja de Vida**
 * `.github/workflows/auto_update.yml`: Flujo de GitHub Actions que ejecuta el bot diariamente a las 20:00 (hora Colombia), actualiza los datos y comitea al repositorio.
-* `.github/workflows/static.yml`: Despliega automáticamente `index.html`, `estilos.css`, `estrellas.js`, `vacantes_practicas.json` y `vacantes_practicas.csv` a GitHub Pages cada vez que se actualiza `main` o al concluir el bot diario.
+* `.github/workflows/static.yml`: Despliega automáticamente `index.html`, `estilos.css`, `app.js`, `vacantes_practicas.json` y `vacantes_practicas.csv` a GitHub Pages cada vez que se actualiza `main` o al concluir el bot diario.
 
 ### Cobertura de fuentes
 Rastreo activo multi-plataforma:

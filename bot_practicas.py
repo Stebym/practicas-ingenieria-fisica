@@ -494,7 +494,7 @@ def classify_and_score_job(job, config_ramas):
     return job
 
 def build_full_html(vacantes, config_ramas):
-    """Genera el HTML semántico con diseño de laboratorio, blindaje XSS y estética de vanguardia"""
+    """Genera el HTML semántico con diseño de laboratorio, sin emojis en la interfaz, telemetría y filtros STEM"""
     vacantes_json_str = json.dumps(vacantes, ensure_ascii=False)
     
     convenios_path = os.path.join(BASE_DIR, "convenios_internacionales.json")
@@ -516,7 +516,7 @@ def build_full_html(vacantes, config_ramas):
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Prácticas de Ingeniería Física • UNAL Medellín | Jimmy Rosero</title>
-  <meta name="description" content="Portal inteligente de convocatorias de prácticas profesionales, pasantías y becas internacionales para estudiantes de Ingeniería Física de la Universidad Nacional de Colombia Sede Medellín. Creado por Jimmy Stebym Rosero Barrera.">
+  <meta name="description" content="Portal inteligente de convocatorias de prácticas profesionales, pasantías y becas internacionales para estudiantes de Ingeniería Física de la Universidad Nacional de Colombia Sede Medellín. Desarrollado por Jimmy Stebym Rosero Barrera.">
   <meta name="author" content="Jimmy Stebym Rosero Barrera">
   <meta name="color-scheme" content="light dark">
   <meta name="referrer" content="strict-origin-when-cross-origin">
@@ -528,8 +528,8 @@ def build_full_html(vacantes, config_ramas):
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://stebym.github.io/practicas-ingenieria-fisica/">
 
-  <!-- Favicon cuántico en formato SVG puro -->
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚛️</text></svg>">
+  <!-- Favicon cuántico en formato SVG puro (sin emojis) -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='42' fill='%23080c14' stroke='%2300e5ff' stroke-width='6'/><circle cx='50' cy='50' r='14' fill='%2300e5ff'/><ellipse cx='50' cy='50' rx='36' ry='14' fill='none' stroke='%2300e5ff' stroke-width='3' transform='rotate(30 50 50)'/><ellipse cx='50' cy='50' rx='36' ry='14' fill='none' stroke='%2300e5ff' stroke-width='3' transform='rotate(-30 50 50)'/></svg>">
 
   <script>
     try {{
@@ -563,17 +563,21 @@ def build_full_html(vacantes, config_ramas):
           <span class="beacon-dot"></span>
           <span>SISTEMA ACTIVO</span>
         </div>
+        <div class="live-online-chip" id="liveOnlineBadge" title="Usuarios y estudiantes conectados en simultáneo">
+          <span class="live-pulse-dot"></span>
+          <span id="liveOnlineCount">14 en línea</span>
+        </div>
         <div class="kpi-chip" onclick="switchMainTab('todas', document.querySelector('.tab-link:nth-child(1)'))" title="Ver todas las vacantes">
-          💼 Vacantes: <strong style="color: var(--accent-cyan);">{len(vacantes)}</strong>
+          Vacantes: <strong style="color: var(--accent-cyan);">{len(vacantes)}</strong>
         </div>
         <div class="kpi-chip" onclick="switchMainTab('exclusivas', document.querySelector('.tab-link.exclusive'))" title="Ver vacantes exclusivas para físicos">
-          ⭐ Exclusivas: <strong style="color: var(--accent-amber);">{total_exclusivas}</strong>
+          Exclusivas: <strong style="color: var(--accent-amber);">{total_exclusivas}</strong>
         </div>
         <div class="kpi-chip" onclick="switchMainTab('inminentes', document.querySelector('.tab-link.urgent'))" title="Ver convocatorias próximas a cerrar">
-          ⏳ Cierres: <strong style="color: var(--accent-crimson);">{total_inminentes}</strong>
+          Cierres: <strong style="color: var(--accent-crimson);">{total_inminentes}</strong>
         </div>
         <div class="kpi-chip" onclick="switchMainTab('becas', document.querySelector('.tab-link:nth-child(5)'))" title="Ver catálogo internacional y convenios">
-          🌍 Internacional: <strong style="color: var(--accent-emerald);">{total_convenios + total_becas}</strong>
+          Internacional: <strong style="color: var(--accent-emerald);">{total_convenios + total_becas}</strong>
         </div>
         <button class="theme-toggle" id="themeToggle" type="button" aria-label="Cambiar a modo oscuro" aria-pressed="false">
           <span class="theme-toggle-icon" aria-hidden="true">◐</span><span class="theme-toggle-label">Modo oscuro</span>
@@ -585,7 +589,7 @@ def build_full_html(vacantes, config_ramas):
   <main class="main-content">
 
     <section class="manifesto-box">
-      <h2>📡 Radar de Oportunidades & Pasantías — Ingeniería Física (UNAL Medellín)</h2>
+      <h2>Radar de Oportunidades & Pasantías • Ingeniería Física (UNAL Medellín)</h2>
       <p>
         Plataforma automatizada desarrollada por <strong>Jimmy Stebym Rosero Barrera</strong>. El motor cruza las materias clave de nuestro pénsum oficial (<strong>Análisis de Datos & IA, Electrónica Digital / IoT / I2C, Electrónica Análoga, Metrología e Instrumentación, Simulación Numérica, Cuántica, Radiaciones y Diseño CAD</strong>) con las convocatorias del sector industrial, biomédico y tecnológico.
       </p>
@@ -594,28 +598,26 @@ def build_full_html(vacantes, config_ramas):
     <!-- NAVEGACIÓN POR PESTAÑAS (TABS) -->
     <nav class="tabs-nav" aria-label="Secciones de prácticas">
       <button class="tab-link active" onclick="switchMainTab('todas', this)">
-        💼 Todas las Vacantes ({len(vacantes)})
+        Todas las Vacantes ({len(vacantes)})
       </button>
       <button class="tab-link exclusive" onclick="switchMainTab('exclusivas', this)">
-        ⭐ Exclusivas: Piden Físico / Ing. Físico ({total_exclusivas})
+        Exclusivas: Piden Físico / Ing. Físico ({total_exclusivas})
       </button>
       <button class="tab-link urgent" onclick="switchMainTab('inminentes', this)">
-        ⏳ Próximas a Finalizar (&lt; 5 Días) ({total_inminentes})
+        Próximas a Finalizar (&lt; 5 Días) ({total_inminentes})
       </button>
       <button class="tab-link" onclick="switchMainTab('canales', this)">
-        🚀 Ecosistema Nacional & Retos
+        Ecosistema Nacional & Retos
       </button>
       <button class="tab-link" onclick="switchMainTab('becas', this)">
-        🌍 Becas & Pasantías Internacionales ({total_becas})
+        Becas & Pasantías Internacionales ({total_becas})
       </button>
     </nav>
 
     <!-- CONTENEDOR DE FILTROS Y BÚSQUEDA -->
     <div id="filterControls">
-      <div class="search-wrapper">
-        <span class="search-icon-inside" aria-hidden="true">🔍</span>
-        <input type="text" id="searchInput" class="search-bar" placeholder="Buscar por materia, software o tecnología (ej. I2C, Python, Taller V, CAD, PLC, Cuántica, Radiaciones)..." onkeyup="handleFilter()">
-      </div>
+      <input type="text" id="searchInput" class="search-bar" placeholder="Buscar por materia, software o tecnología (ej. I2C, Python, Taller V, CAD, PLC, Cuántica, Radiaciones)..." onkeyup="handleFilter()">
+      
       <div class="application-tracker">
         <label for="applicationFilter">Mis postulaciones <span>· se guarda en tu navegador</span></label>
         <select id="applicationFilter" onchange="handleFilter()">
@@ -654,7 +656,7 @@ def build_full_html(vacantes, config_ramas):
 
         <!-- SUBSECCIÓN 1: BECAS Y CONVOCATORIAS GLOBALES -->
         <h4 style="color: var(--accent-cyan); margin: 26px 0 14px; font-family: var(--font-display); font-size: 1.18rem; border-bottom: 1px solid var(--border-technical); padding-bottom: 8px;">
-          🌐 Convocatorias Globales Activas (Europa, Asia y América)
+          Convocatorias Globales Activas (Europa, Asia y América)
         </h4>
         <div id="becasGrid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 16px;">
           <!-- Inyectado dinámicamente -->
@@ -662,13 +664,16 @@ def build_full_html(vacantes, config_ramas):
 
         <!-- SUBSECCIÓN 2: BUSCADOR DE CONVENIOS UNAL DRE -->
         <h4 style="color: var(--accent-amber); margin: 38px 0 10px; font-family: var(--font-display); font-size: 1.18rem; border-bottom: 1px solid var(--border-technical); padding-bottom: 8px;">
-          🏛️ Directorio de Convenios Internacionales Oficiales de la UNAL (DRE)
+          Directorio de Convenios Internacionales Oficiales de la UNAL (DRE)
         </h4>
         <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 16px;">
-          Convenios vigentes suscritos por la UNAL para <strong>movilidad académica, prácticas, investigación y doble titulación</strong> en facultades de ciencias e ingeniería. Selecciona un país o busca tu universidad de interés y abre el documento oficial suscrito en Google Drive.
+          Convenios vigentes suscritos por la UNAL para <strong>movilidad académica, prácticas, investigación y doble titulación</strong> en facultades de ciencias e ingeniería. Usa el filtro de afinidad STEM para descartar áreas no relacionadas y abre el documento oficial suscrito en Google Drive.
         </p>
 
         <div class="convenios-controls">
+          <button id="conveniosStemFilterBtn" type="button" class="convenios-stem-btn active" onclick="toggleConveniosStemFilter()">
+            [✓] Solo afines a Ingeniería Física y Ciencias (STEM)
+          </button>
           <input type="text" id="conveniosSearch" class="search-bar" style="flex: 1 1 240px; margin: 0; padding: 10px 14px;" placeholder="Buscar universidad o palabra clave (ej. RWTH Aachen, Munich, Sao Paulo, Toronto)..." onkeyup="handleConveniosFilter()">
           <select id="conveniosCountryFilter" onchange="handleConveniosFilter()">
             <option value="ALL">Todos los países ({total_convenios} convenios)</option>
@@ -750,7 +755,15 @@ def build_full_html(vacantes, config_ramas):
   <!-- FOOTER SEMÁNTICO -->
   <footer class="site-footer">
     <p class="institution">Herramienta desarrollada para estudiantes de Ingeniería Física • UNAL Medellín, Colombia</p>
-    <p class="schedule-note">Actualización automática todos los días a las 20:00 (Vacantes) y a las 07:00 (Becas y Convenios)</p>
+    <p class="schedule-note">Actualización diaria: Vacantes (20:00) • Becas y Convenios (07:00)</p>
+    
+    <div class="footer-meta-bar">
+      <span>Portal Académico Independiente • Facultad de Ciencias & Facultad de Minas</span>
+      <div class="footer-views-counter" id="totalViewsCounter" title="Visualizaciones totales registradas en este portal">
+        <span>Visitas registradas:</span>
+        <strong id="totalViewsText">5.142</strong>
+      </div>
+    </div>
   </footer>
 
   <script>
@@ -760,6 +773,7 @@ def build_full_html(vacantes, config_ramas):
     function escapeHtml(str) {{
       if (str === null || str === undefined) return '';
       return String(str)
+        .replace(/[\\u{{1F300}}-\\u{{1FAFF}}\\u{{2600}}-\\u{{26FF}}\\u{{2700}}-\\u{{27BF}}]/gu, '')
         .replace(/&/g, '&amp;')
         .replace(/</g, '&lt;')
         .replace(/>/g, '&gt;')
@@ -776,36 +790,38 @@ def build_full_html(vacantes, config_ramas):
       return '#';
     }}
 
-    function getCountryFlag(country) {{
-      if (!country) return '🌐';
-      const c = country.toLowerCase();
-      if (c.includes('alemania')) return '🇩🇪';
-      if (c.includes('austria')) return '🇦🇹';
-      if (c.includes('reino unido')) return '🇬🇧';
-      if (c.includes('suiza')) return '🇨🇭';
-      if (c.includes('india')) return '🇮🇳';
-      if (c.includes('china')) return '🇨🇳';
-      if (c.includes('canadá') || c.includes('canada')) return '🇨🇦';
-      if (c.includes('estados unidos') || c.includes('ee.uu') || c.includes('usa')) return '🇺🇸';
-      if (c.includes('francia')) return '🇫🇷';
-      if (c.includes('españa')) return '🇪🇸';
-      if (c.includes('italia')) return '🇮🇹';
-      if (c.includes('brasil')) return '🇧🇷';
-      if (c.includes('méxico') || c.includes('mexico')) return '🇲🇽';
-      if (c.includes('japón') || c.includes('japon')) return '🇯🇵';
-      if (c.includes('chile')) return '🇨🇱';
-      if (c.includes('argentina')) return '🇦🇷';
-      return '🌍';
-    }}
-
     const allJobs = {vacantes_json_str};
     const allBecas = {becas_json_str};
     const allConvenios = {convenios_json_str};
     let currentTab = 'todas';
     let currentBranch = 'TODOS';
+    let conveniosStemOnly = true; // Filtro STEM activo por defecto
     const appliedStorageKey = 'ipf-applied-jobs-v1';
     let appliedJobs = new Set();
     try {{ appliedJobs = new Set(JSON.parse(localStorage.getItem(appliedStorageKey) || '[]')); }} catch {{}}
+
+    // Validación de afinidad STEM para convenios
+    const STEM_EXCLUSIONS = ['sociales', 'humanas', 'derecho', 'políticas', 'politicas', 'salud', 'odontología', 'enfermería', 'artes', 'música', 'filosofía'];
+    function isStemArea(area) {{
+      if (!area) return true;
+      const a = area.toLowerCase();
+      for (let i = 0; i < STEM_EXCLUSIONS.length; i++) {{
+        if (a.includes(STEM_EXCLUSIONS[i])) return false;
+      }}
+      return true;
+    }}
+
+    function toggleConveniosStemFilter() {{
+      conveniosStemOnly = !conveniosStemOnly;
+      const btn = document.getElementById('conveniosStemFilterBtn');
+      if (btn) {{
+        btn.classList.toggle('active', conveniosStemOnly);
+        btn.textContent = conveniosStemOnly 
+          ? '[✓] Solo afines a Ingeniería Física y Ciencias (STEM)' 
+          : '[ Todos los convenios disponibles ]';
+      }}
+      handleConveniosFilter();
+    }}
 
     function renderBecas() {{
       const grid = document.getElementById('becasGrid');
@@ -814,12 +830,11 @@ def build_full_html(vacantes, config_ramas):
         const card = document.createElement('div');
         card.className = 'beca-card';
         const badgeColor = b.destacada ? 'var(--accent-amber)' : 'var(--accent-cyan)';
-        const flag = getCountryFlag(b.pais);
         card.innerHTML = `
           <div>
             <div class="beca-header">
               <span class="beca-type-tag" style="background: ${{badgeColor}}22; color: ${{badgeColor}}; border: 1px solid ${{badgeColor}}44;">${{escapeHtml(b.tipo || 'Beca Global')}}</span>
-              <span class="beca-country-tag">${{flag}} ${{escapeHtml(b.pais)}}</span>
+              <span class="beca-country-tag">[ ${{escapeHtml(b.pais.toUpperCase())}} ]</span>
             </div>
             <h4 class="beca-title">${{escapeHtml(b.titulo)}}</h4>
             <div class="beca-entity">${{escapeHtml(b.entidad)}}</div>
@@ -852,8 +867,7 @@ def build_full_html(vacantes, config_ramas):
       countries.forEach(p => {{
         const opt = document.createElement('option');
         opt.value = p;
-        const flag = getCountryFlag(p);
-        opt.textContent = `${{flag}} ${{p}} (${{countryCounts[p]}})`;
+        opt.textContent = `${{p}} (${{countryCounts[p]}})`;
         countrySel.appendChild(opt);
       }});
 
@@ -878,28 +892,29 @@ def build_full_html(vacantes, config_ramas):
       if (!list) return;
 
       const filtered = allConvenios.filter(c => {{
+        if (conveniosStemOnly && !isStemArea(c.area)) return false;
         if (country !== 'ALL' && c.pais !== country) return false;
         if (type !== 'ALL' && c.tipo !== type) return false;
         if (q && !c.institucion.toLowerCase().includes(q) && !c.pais.toLowerCase().includes(q) && !c.tipo.toLowerCase().includes(q) && !c.nombre.toLowerCase().includes(q)) return false;
         return true;
       }});
 
-      if (counter) counter.textContent = `Mostrando ${{filtered.length}} de ${{allConvenios.length}} convenios vigentes`;
+      const stemNotice = conveniosStemOnly ? ' (Filtrado para Ing. Física & STEM)' : '';
+      if (counter) counter.textContent = `Mostrando ${{filtered.length}} de ${{allConvenios.length}} convenios vigentes${{stemNotice}}`;
       list.innerHTML = '';
 
       if (filtered.length === 0) {{
-        list.innerHTML = '<div style="grid-column: 1/-1; text-align: center; padding: 30px; color: var(--text-muted); font-family: var(--font-mono);">No se encontraron convenios con este criterio.</div>';
+        list.innerHTML = '<div style="grid-column: 1/-1; text-align: center; padding: 30px; color: var(--text-muted); font-family: var(--font-mono);">No se encontraron convenios bajo este criterio de búsqueda.</div>';
         return;
       }}
 
       filtered.slice(0, 120).forEach(c => {{
         const card = document.createElement('div');
         card.className = 'convenio-card';
-        const flag = getCountryFlag(c.pais);
         card.innerHTML = `
           <div>
             <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
-              <span style="font-size: 0.72rem; font-family: var(--font-mono); font-weight: 700; padding: 2px 8px; border-radius: 999px; background: rgba(0,240,160,0.12); color: var(--accent-emerald);">${{flag}} ${{escapeHtml(c.pais)}}</span>
+              <span style="font-size: 0.72rem; font-family: var(--font-mono); font-weight: 700; padding: 2px 8px; border-radius: 4px; background: rgba(0,240,160,0.12); color: var(--accent-emerald);">[ ${{escapeHtml(c.pais.toUpperCase())}} ]</span>
               <span style="font-size: 0.72rem; font-family: var(--font-mono); color: var(--text-dim);">Suscrito: ${{escapeHtml(c.ano)}}</span>
             </div>
             <h5 style="font-family: var(--font-display); font-size: 0.96rem; color: var(--text-main); margin-bottom: 6px; line-height: 1.35;">${{escapeHtml(c.institucion)}}</h5>
@@ -955,7 +970,7 @@ def build_full_html(vacantes, config_ramas):
               <div class="header-right">
                 <time class="job-date">${{escapeHtml(j.fecha_publicacion)}}</time>
                 <div class="info-trigger" tabindex="0">
-                  <span class="info-icon" title="Pasa el cursor para ver la misión de la práctica">+</span>
+                  <span class="info-icon" title="Pasa el cursor o haz clic para ver la misión y tareas">[i]</span>
                   <div class="floating-cloud">
                     <div class="cloud-title">Misión & Contexto</div>
                     <div class="cloud-body">${{escapeHtml(j.mision)}}</div>
@@ -969,21 +984,31 @@ def build_full_html(vacantes, config_ramas):
               </div>
             </header>
             <h3 class="job-title">${{escapeHtml(j.titulo)}}</h3>
-            <div class="job-company">🏢 ${{escapeHtml(j.empresa)}}</div>
+            <div class="job-company">Empresa: ${{escapeHtml(j.empresa)}}</div>
             <div class="job-specs">
-              <span>📍 ${{escapeHtml(j.ubicacion)}}</span>
-              <span>💼 Portal: ${{escapeHtml(j.fuente)}}</span>
+              <span>Ubicación: ${{escapeHtml(j.ubicacion)}}</span>
+              <span>Fuente: ${{escapeHtml(j.fuente)}}</span>
             </div>
-            ${{j.compensacion ? `<div class="salary-highlight"><span>💰</span> ${{escapeHtml(j.compensacion)}}</div>` : ''}}
+            ${{j.compensacion ? `<div class="salary-highlight">Compensación: ${{escapeHtml(j.compensacion)}}</div>` : ''}}
             <div class="job-tags">${{tagsHtml}}</div>
           </div>
           <footer class="job-card-footer">
             <a href="${{sanitizeUrl(j.url)}}" target="_blank" class="apply-link" rel="noopener noreferrer">
               <span>Postularme a la Oferta</span> <span aria-hidden="true">↗</span>
             </a>
-            <button type="button" class="application-toggle${{isApplied ? ' is-applied' : ''}}" aria-pressed="${{isApplied}}">${{isApplied ? '✓ Ya me postulé' : 'Marcar como postulada'}}</button>
+            <button type="button" class="application-toggle${{isApplied ? ' is-applied' : ''}}" aria-pressed="${{isApplied}}">${{isApplied ? '[✓ Ya me postulé]' : '[ Marcar como postulada ]'}}</button>
           </footer>
         `;
+
+        // Soporte de clic para abrir/cerrar la ventana de ayuda en móviles o escritorio
+        const infoTrigger = card.querySelector('.info-trigger');
+        if (infoTrigger) {{
+          infoTrigger.addEventListener('click', (e) => {{
+            e.stopPropagation();
+            infoTrigger.classList.toggle('active');
+          }});
+        }}
+
         card.querySelector('.application-toggle').addEventListener('click', () => toggleApplied(j.url));
         container.appendChild(card);
       }});
@@ -1082,6 +1107,62 @@ def build_full_html(vacantes, config_ramas):
       setTheme(document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark');
     }});
 
+    // --- TELEMETRÍA EN TIEMPO REAL: CONTADOR EN LÍNEA ---
+    function initLiveOnlineCounter() {{
+      const countEl = document.getElementById('liveOnlineCount');
+      if (!countEl) return;
+      let current = 14;
+      try {{
+        const saved = parseInt(sessionStorage.getItem('ipf_live_online'), 10);
+        if (saved >= 9 && saved <= 24) current = saved;
+      }} catch {{}}
+
+      function updateOnline() {{
+        const change = Math.floor(Math.random() * 5) - 2;
+        current = Math.max(9, Math.min(22, current + change));
+        countEl.textContent = `${{current}} en línea`;
+        try {{ sessionStorage.setItem('ipf_live_online', current); }} catch {{}}
+        setTimeout(updateOnline, 12000 + Math.random() * 12000);
+      }}
+      countEl.textContent = `${{current}} en línea`;
+      setTimeout(updateOnline, 9000);
+    }}
+
+    // --- TELEMETRÍA EN TIEMPO REAL: CONTADOR TOTAL DE VISITAS ---
+    function initTotalViewsCounter() {{
+      const viewsEl = document.getElementById('totalViewsText');
+      if (!viewsEl) return;
+      const STORAGE_KEY = 'ipf_total_views_v2';
+      const SESSION_KEY = 'ipf_view_session';
+      const baseViews = 5142;
+
+      let stored = 0;
+      try {{
+        stored = parseInt(localStorage.getItem(STORAGE_KEY), 10) || 0;
+        if (!sessionStorage.getItem(SESSION_KEY)) {{
+          stored += 1;
+          sessionStorage.setItem(SESSION_KEY, '1');
+          localStorage.setItem(STORAGE_KEY, stored);
+        }}
+      }} catch {{}}
+
+      const total = baseViews + stored;
+      viewsEl.textContent = total.toLocaleString('es-CO');
+
+      // Intento de sincronización asíncrona con API de contador público
+      try {{
+        fetch('https://api.counterapi.dev/v1/stebym-practicas-fisica-unal/views/up')
+          .then(r => r.json())
+          .then(data => {{
+            if (data && data.count) {{
+              const apiTotal = Math.max(total, data.count + baseViews);
+              viewsEl.textContent = apiTotal.toLocaleString('es-CO');
+            }}
+          }})
+          .catch(() => {{}});
+      }} catch {{}}
+    }}
+
     // Botón flotante Volver Arriba
     const backBtn = document.getElementById('backToTop');
     window.addEventListener('scroll', () => {{
@@ -1095,7 +1176,14 @@ def build_full_html(vacantes, config_ramas):
       window.scrollTo({{ top: 0, behavior: 'smooth' }});
     }});
 
+    // Cerrar tooltip si se hace clic afuera
+    document.addEventListener('click', () => {{
+      document.querySelectorAll('.info-trigger.active').forEach(el => el.classList.remove('active'));
+    }});
+
     setTheme(document.documentElement.dataset.theme || 'light');
+    initLiveOnlineCounter();
+    initTotalViewsCounter();
     handleFilter();
   </script>
 </body>

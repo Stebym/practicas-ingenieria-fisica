@@ -2,7 +2,8 @@
    ESTILOS CSS - PORTAL DE PRÁCTICAS & BECAS • INGENIERÍA FÍSICA UNAL
    Autor: Jimmy Stebym Rosero Barrera
    Institución: Universidad Nacional de Colombia (Sede Medellín)
-   Estética: Laboratorio Cuántico / Blueprint Científico de Vanguardia
+   Estética: Laboratorio Técnico / Blueprint Científico Profesional
+   (Cero emojis en la interfaz para máxima sobriedad y rigor técnico)
    ========================================================================== */
 
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Outfit:wght@300;400;500;600;700;800&family=Syne:wght@700;800&display=swap');
@@ -99,22 +100,6 @@ body {
   transition: background-color 0.25s ease, color 0.25s ease;
 }
 
-/* Fondo decorativo con ecuaciones de física y constelaciones */
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: 0;
-  background: url('fondo_fisica.svg') center / cover no-repeat;
-  opacity: 0.45;
-  transition: opacity 0.3s ease;
-}
-
-html[data-theme="light"] body::before {
-  opacity: 0.22;
-}
-
 #constellationCanvas {
   position: fixed;
   inset: 0;
@@ -125,7 +110,7 @@ html[data-theme="light"] body::before {
 }
 
 /* ==========================================================================
-   HEADER SEMÁNTICO Y BARRA DE ESTADO
+   HEADER SEMÁNTICO Y TELEMETRÍA EN TIEMPO REAL
    ========================================================================== */
 header.site-header {
   position: sticky;
@@ -223,12 +208,38 @@ html[data-theme="light"] .creator-tag {
   font-weight: 700;
 }
 
-/* Barra de Estado y Telemetría */
+/* Barra de Telemetría Superior Derecha */
 .header-meta {
   display: flex;
   align-items: center;
   gap: 10px;
   flex-wrap: wrap;
+}
+
+/* Indicador de Usuarios en Línea */
+.live-online-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: var(--bg-surface-elevated);
+  border: 1px solid var(--border-technical);
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  font-weight: 600;
+  color: var(--accent-emerald);
+  letter-spacing: 0.3px;
+  user-select: none;
+}
+
+.live-pulse-dot {
+  width: 8px;
+  height: 8px;
+  background: var(--accent-emerald);
+  border-radius: 50%;
+  box-shadow: 0 0 8px var(--accent-emerald);
+  animation: beacon-pulse 1.8s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
 
 .status-beacon {
@@ -249,15 +260,15 @@ html[data-theme="light"] .creator-tag {
 .beacon-dot {
   width: 8px;
   height: 8px;
-  background: var(--accent-emerald);
+  background: var(--accent-cyan);
   border-radius: 50%;
-  box-shadow: 0 0 10px var(--accent-emerald);
+  box-shadow: 0 0 8px var(--accent-cyan);
   animation: beacon-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
 
 @keyframes beacon-pulse {
   0%, 100% { opacity: 1; transform: scale(1); }
-  50% { opacity: 0.4; transform: scale(0.85); }
+  50% { opacity: 0.35; transform: scale(0.85); }
 }
 
 /* Micro-KPI Chips */
@@ -340,17 +351,6 @@ section.manifesto-box {
   box-shadow: var(--shadow-md);
   position: relative;
   overflow: hidden;
-}
-
-section.manifesto-box::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 200px;
-  height: 100%;
-  background: radial-gradient(circle at 100% 50%, rgba(0, 229, 255, 0.06), transparent 70%);
-  pointer-events: none;
 }
 
 section.manifesto-box h2 {
@@ -439,34 +439,19 @@ button.tab-link.urgent.active {
   margin-bottom: 24px;
 }
 
-.search-wrapper {
-  position: relative;
-  width: 100%;
-  margin-bottom: 14px;
-}
-
 input.search-bar {
   width: 100%;
   background: var(--bg-surface);
   border: 1px solid var(--border-technical);
   border-radius: 12px;
-  padding: 13px 20px 13px 44px;
+  padding: 13px 20px;
   color: var(--text-main);
   font-family: var(--font-body);
   font-size: 0.92rem;
   outline: none;
   transition: all 0.2s ease;
   box-shadow: var(--shadow-sm);
-}
-
-.search-icon-inside {
-  position: absolute;
-  left: 16px;
-  top: 50%;
-  transform: translateY(-50%);
-  color: var(--text-dim);
-  font-size: 1rem;
-  pointer-events: none;
+  margin-bottom: 14px;
 }
 
 input.search-bar:focus {
@@ -585,6 +570,7 @@ article.job-card {
   flex-direction: column;
   justify-content: space-between;
   position: relative;
+  z-index: 1;
   transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
               border-color 0.25s ease,
               box-shadow 0.25s ease,
@@ -593,6 +579,7 @@ article.job-card {
 }
 
 article.job-card:hover {
+  z-index: 80;
   transform: translateY(-4px);
   border-color: var(--accent-cyan);
   background: var(--bg-surface-elevated);
@@ -659,14 +646,14 @@ time.job-date {
 }
 
 .info-icon {
-  width: 22px;
-  height: 22px;
-  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  border-radius: 6px;
   background: var(--bg-chip);
   border: 1px solid var(--border-technical);
   color: var(--accent-cyan);
   font-family: var(--font-mono);
-  font-size: 0.76rem;
+  font-size: 0.74rem;
   font-weight: 700;
   display: flex;
   align-items: center;
@@ -676,51 +663,56 @@ time.job-date {
 }
 
 .info-trigger:hover .info-icon,
-.info-trigger:focus-visible .info-icon {
+.info-trigger:focus-visible .info-icon,
+.info-trigger.active .info-icon {
   background: var(--accent-cyan);
   color: var(--text-inverse);
   border-color: var(--accent-cyan);
   box-shadow: 0 0 10px rgba(0, 229, 255, 0.4);
-  transform: scale(1.1);
 }
 
-/* Nube Flotante (Popover de Misión) */
+/* Ventana Flotante de Ayuda (Popover de Misión & Tareas) */
 .floating-cloud {
   position: absolute;
-  top: calc(100% + 10px);
+  top: calc(100% + 8px);
   right: 0;
-  width: min(340px, calc(100vw - 48px));
-  background: var(--bg-surface);
+  width: min(350px, calc(100vw - 40px));
+  background: var(--bg-surface-elevated);
   border: 1px solid var(--accent-cyan);
-  border-radius: 14px;
+  border-radius: 12px;
   padding: 16px;
-  box-shadow: var(--shadow-lg), 0 0 20px rgba(0, 229, 255, 0.15);
-  z-index: 500;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.75), 0 0 20px rgba(0, 229, 255, 0.2);
+  z-index: 999;
   font-size: 0.82rem;
   line-height: 1.5;
   text-align: left;
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-  transform: translateY(8px) scale(0.96);
-  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
+  transform: translateY(6px) scale(0.97);
+  transition: opacity 0.2s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.2s cubic-bezier(0.16, 1, 0.3, 1),
+              visibility 0.2s;
 }
 
 .floating-cloud::before {
   content: "";
   position: absolute;
   top: -6px;
-  right: 7px;
+  right: 8px;
   width: 10px;
   height: 10px;
-  background: var(--bg-surface);
+  background: var(--bg-surface-elevated);
   border-top: 1px solid var(--accent-cyan);
   border-left: 1px solid var(--accent-cyan);
   transform: rotate(45deg);
 }
 
+/* La ventana de ayuda se muestra al pasar el mouse por la tarjeta O el botón [i] O con clic */
+article.job-card:hover .floating-cloud,
+article.job-card:focus-within .floating-cloud,
 .info-trigger:hover .floating-cloud,
-.info-trigger:focus-within .floating-cloud {
+.info-trigger.active .floating-cloud {
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
@@ -770,9 +762,6 @@ div.job-company {
   font-weight: 600;
   font-size: 0.90rem;
   margin-bottom: 10px;
-  display: flex;
-  align-items: center;
-  gap: 6px;
 }
 
 div.job-specs {
@@ -787,9 +776,7 @@ div.job-specs {
 
 /* Destacado de Compensación Económica */
 .salary-highlight {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
+  display: inline-block;
   margin-bottom: 12px;
   background: rgba(255, 183, 3, 0.1);
   border: 1px solid rgba(255, 183, 3, 0.25);
@@ -798,7 +785,7 @@ div.job-specs {
   font-size: 0.82rem;
   font-weight: 600;
   padding: 4px 10px;
-  border-radius: 8px;
+  border-radius: 6px;
 }
 
 /* Etiquetas de Ramas (Tags) */
@@ -943,14 +930,14 @@ article.editorial-card p {
   font-weight: 700;
   text-transform: uppercase;
   padding: 3px 9px;
-  border-radius: 999px;
+  border-radius: 4px;
 }
 
 .beca-country-tag {
-  font-size: 0.78rem;
+  font-size: 0.76rem;
   font-family: var(--font-mono);
   color: var(--text-muted);
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .beca-title {
@@ -985,12 +972,41 @@ article.editorial-card p {
   margin-bottom: 16px;
 }
 
-/* Convenios Explorer Controls */
+/* Controles de Convenios Explorer */
 .convenios-controls {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   gap: 10px;
   margin-bottom: 18px;
+}
+
+.convenios-stem-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-technical);
+  padding: 10px 16px;
+  border-radius: 10px;
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  user-select: none;
+}
+
+.convenios-stem-btn:hover {
+  border-color: var(--accent-cyan);
+  color: var(--text-main);
+}
+
+.convenios-stem-btn.active {
+  background: rgba(0, 229, 255, 0.12);
+  border-color: var(--accent-cyan);
+  color: var(--accent-cyan);
 }
 
 .convenios-controls select {
@@ -1068,12 +1084,12 @@ article.editorial-card p {
 }
 
 /* ==========================================================================
-   PIE DE PÁGINA (FOOTER)
+   PIE DE PÁGINA (FOOTER) Y CONTADOR DE VISITAS
    ========================================================================== */
 footer.site-footer {
   text-align: center;
   margin-top: 60px;
-  padding: 40px 20px;
+  padding: 40px 24px;
   border-top: 1px solid var(--border-subtle);
   background: var(--bg-surface);
   font-family: var(--font-mono);
@@ -1092,6 +1108,37 @@ footer.site-footer p.institution {
 footer.site-footer p.schedule-note {
   color: var(--accent-amber);
   font-size: 0.80rem;
+}
+
+.footer-meta-bar {
+  max-width: 1400px;
+  margin: 22px auto 0;
+  padding-top: 16px;
+  border-top: 1px dashed var(--border-subtle);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.footer-views-counter {
+  margin-left: auto;
+  font-family: var(--font-mono);
+  font-size: 0.80rem;
+  color: var(--text-muted);
+  background: var(--bg-surface-elevated);
+  border: 1px solid var(--border-technical);
+  padding: 6px 14px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.footer-views-counter strong {
+  color: var(--accent-cyan);
+  font-weight: 700;
 }
 
 /* ==========================================================================
@@ -1135,9 +1182,21 @@ footer.site-footer p.schedule-note {
     width: min(340px, calc(100vw - 32px));
   }
 
+  article.job-card:hover .floating-cloud,
+  article.job-card:focus-within .floating-cloud,
   .info-trigger:hover .floating-cloud,
-  .info-trigger:focus-within .floating-cloud {
+  .info-trigger.active .floating-cloud {
     transform: translate(-50%, -50%) scale(1);
+  }
+
+  .footer-meta-bar {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-views-counter {
+    margin-left: 0;
   }
 }
 

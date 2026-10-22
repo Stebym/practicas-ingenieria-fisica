@@ -496,8 +496,19 @@ def classify_and_score_job(job, config_ramas):
 def build_full_html(vacantes, config_ramas):
     """Genera el HTML semántico con diseño de laboratorio, ícono [i] flotante y sin menciones públicas de género"""
     vacantes_json_str = json.dumps(vacantes, ensure_ascii=False)
+    
+    convenios_path = os.path.join(BASE_DIR, "convenios_internacionales.json")
+    becas_path = os.path.join(BASE_DIR, "becas_internacionales.json")
+    convenios_data = load_json(convenios_path) if os.path.exists(convenios_path) else []
+    becas_data = load_json(becas_path) if os.path.exists(becas_path) else []
+    
+    convenios_json_str = json.dumps(convenios_data, ensure_ascii=False)
+    becas_json_str = json.dumps(becas_data, ensure_ascii=False)
+
     total_exclusivas = sum(1 for v in vacantes if v.get("es_exclusiva_fisica"))
     total_inminentes = sum(1 for v in vacantes if v.get("es_cierre_inminente"))
+    total_convenios = len(convenios_data)
+    total_becas = len(becas_data)
 
     html = f"""<!DOCTYPE html>
 <html lang="es">
@@ -569,10 +580,10 @@ def build_full_html(vacantes, config_ramas):
         Próximas a Finalizar (&lt; 5 Días) ({total_inminentes})
       </button>
       <button class="tab-link" onclick="switchMainTab('canales', this)">
-        Ecosistema & Canales Estratégicos
+        Ecosistema Nacional & Retos
       </button>
-      <button class="tab-link" onclick="switchMainTab('consejos', this)">
-        Guía & Tips de Hoja de Vida
+      <button class="tab-link" onclick="switchMainTab('becas', this)">
+        🌍 Becas & Pasantías Internacionales ({total_becas})
       </button>
     </nav>
 
@@ -609,19 +620,41 @@ def build_full_html(vacantes, config_ramas):
       <!-- Inyectado dinámicamente con etiquetas article -->
     </section>
 
-    <!-- PESTAÑA: GUÍA Y TIPS -->
-    <section id="guideContainer" style="display: none;">
+    <!-- PESTAÑA: BECAS & PASANTÍAS INTERNACIONALES -->
+    <section id="becasContainer" style="display: none;">
       <article class="editorial-card">
-        <h3>Cómo defender el perfil de Ingeniería Física ante Recursos Humanos</h3>
-        <p>A menudo el reclutador de RRHH no conoce a fondo el pénsum de Ingeniería Física. Si dices solo <em>"Soy estudiante de Física"</em>, asumirán que solo haces teoría en tablero. Tu perfil debe destacar como <strong>Ingeniero Físico orientado a soluciones prácticas de alta tecnología</strong>:</p>
-        <ul>
-          <li><strong>Destaca tus habilidades duras en el encabezado del CV:</strong> Instrumentación industrial, adquisición de datos (DAQ), buses de comunicación (I2C/SPI), microcontroladores, automatización, modelado numérico (Python/MATLAB), caracterización de materiales (DRX/SEM) o análisis de datos.</li>
-          <li><strong>Si la oferta dice "Ing. Electrónico, Mecatrónico, Materiales o afines":</strong> Postúlate sin dudar. En tu carta o resumen escribe: <em>"Estudiante de Ingeniería Física con énfasis en sistemas de potencia / automatización / electrónica digital / análisis de datos..."</em></li>
-          <li><strong>Menciona tus proyectos de taller de la UNAL:</strong> Taller I (Dibujo técnico CAD), Taller II (Diseño mecánico), Taller III (Circuitos electromagnéticos), Taller IV (Electrónica análoga) y Taller V (Electrónica digital y microcontroladores).</li>
-        </ul>
-        <h4 style="color: #fff; margin-bottom: 8px; font-family: var(--font-display);">Calendario de Convocatorias Masivas en Medellín:</h4>
-        <p>• <strong>Semestre 1 (Prácticas enero a junio):</strong> Convocatorias abren entre <strong>septiembre y noviembre</strong>.<br>
-        • <strong>Semestre 2 (Prácticas julio a diciembre):</strong> Convocatorias abren entre <strong>marzo y mayo</strong>.</p>
+        <h3>Becas, Pasantías Internacionales y Convenios Oficiales UNAL</h3>
+        <p>Oportunidades globales de alto impacto para estudiantes y egresados de <strong>Ingeniería Física</strong>: becas completas de posgrado (India, China, Europa), pasantías técnicas remuneradas (IAESTE, DAAD, CERN, Mitacs) y el catálogo oficial de más de <strong>{total_convenios} convenios vigentes suscritos por la Universidad Nacional de Colombia</strong> en más de 60 países.</p>
+
+        <!-- SUBSECCIÓN 1: BECAS Y CONVOCATORIAS GLOBALES -->
+        <h4 style="color: var(--accent-cyan); margin: 26px 0 14px; font-family: var(--font-display); font-size: 1.18rem; border-bottom: 1px solid var(--border-technical); padding-bottom: 8px;">
+          🌐 Convocatorias Globales Activas (Europa, Asia y América)
+        </h4>
+        <div id="becasGrid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 16px;">
+          <!-- Inyectado dinámicamente -->
+        </div>
+
+        <!-- SUBSECCIÓN 2: BUSCADOR DE CONVENIOS UNAL DRE -->
+        <h4 style="color: var(--accent-amber); margin: 38px 0 10px; font-family: var(--font-display); font-size: 1.18rem; border-bottom: 1px solid var(--border-technical); padding-bottom: 8px;">
+          🏛️ Directorio de Convenios Internacionales Oficiales de la UNAL (DRE)
+        </h4>
+        <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 16px;">
+          Convenios vigentes suscritos por la UNAL para <strong>movilidad académica, prácticas, investigación y doble titulación</strong> en facultades de ciencias e ingeniería. Selecciona un país o busca tu universidad de interés y abre el documento oficial suscrito en Google Drive.
+        </p>
+
+        <div class="convenios-controls" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 18px;">
+          <input type="text" id="conveniosSearch" class="search-bar" style="flex: 1 1 240px; margin: 0; padding: 10px 14px;" placeholder="Buscar universidad o palabra clave (ej. RWTH Aachen, Munich, Sao Paulo, Toronto)..." onkeyup="handleConveniosFilter()">
+          <select id="conveniosCountryFilter" onchange="handleConveniosFilter()" style="padding: 10px 14px; background: var(--bg-surface); color: var(--text-main); border: 1px solid var(--border-technical); border-radius: 8px; font-family: var(--font-mono); font-size: 0.85rem;">
+            <option value="ALL">Todos los países ({total_convenios} convenios)</option>
+          </select>
+          <select id="conveniosTypeFilter" onchange="handleConveniosFilter()" style="padding: 10px 14px; background: var(--bg-surface); color: var(--text-main); border: 1px solid var(--border-technical); border-radius: 8px; font-family: var(--font-mono); font-size: 0.85rem;">
+            <option value="ALL">Todos los tipos de convenio</option>
+          </select>
+        </div>
+        <div id="conveniosCounter" style="font-family: var(--font-mono); font-size: 0.84rem; color: var(--accent-cyan); margin-bottom: 14px; font-weight: 600;"></div>
+        <div id="conveniosList" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 14px; max-height: 700px; overflow-y: auto; padding-right: 6px;">
+          <!-- Inyectado dinámicamente -->
+        </div>
       </article>
     </section>
 
@@ -693,11 +726,112 @@ def build_full_html(vacantes, config_ramas):
 
   <script>
     const allJobs = {vacantes_json_str};
+    const allBecas = {becas_json_str};
+    const allConvenios = {convenios_json_str};
     let currentTab = 'todas';
     let currentBranch = 'TODOS';
     const appliedStorageKey = 'ipf-applied-jobs-v1';
     let appliedJobs = new Set();
     try {{ appliedJobs = new Set(JSON.parse(localStorage.getItem(appliedStorageKey) || '[]')); }} catch {{}}
+
+    function renderBecas() {{
+      const grid = document.getElementById('becasGrid');
+      if (!grid || grid.children.length > 0) return;
+      allBecas.forEach(b => {{
+        const card = document.createElement('div');
+        card.style.cssText = 'background: rgba(255,255,255,0.03); border: 1px solid var(--border-technical); border-radius: 12px; padding: 18px; display: flex; flex-direction: column; justify-content: space-between;';
+        const badgeColor = b.destacada ? 'var(--accent-amber)' : 'var(--accent-cyan)';
+        card.innerHTML = `
+          <div>
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px; gap: 8px;">
+              <span style="font-size: 0.72rem; font-family: var(--font-mono); font-weight: 600; text-transform: uppercase; padding: 3px 8px; border-radius: 4px; background: ${{badgeColor}}22; color: ${{badgeColor}}; border: 1px solid ${{badgeColor}}44;">${{b.tipo || 'Beca Global'}}</span>
+              <span style="font-size: 0.78rem; font-family: var(--font-mono); color: var(--text-muted);">${{b.pais}}</span>
+            </div>
+            <h4 style="font-family: var(--font-display); font-size: 1.05rem; color: #fff; margin-bottom: 6px; line-height: 1.3;">${{b.titulo}}</h4>
+            <div style="font-size: 0.82rem; color: var(--accent-emerald); font-weight: 500; margin-bottom: 8px;">${{b.entidad}}</div>
+            ${{b.cobertura ? `<div style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 8px; background: rgba(0,0,0,0.2); padding: 6px 10px; border-radius: 6px;"><strong>Cobertura:</strong> ${{b.cobertura}}</div>` : ''}}
+            <p style="font-size: 0.84rem; line-height: 1.45; color: var(--text-muted); margin-bottom: 12px;">${{b.descripcion || ''}}</p>
+          </div>
+          <a href="${{b.url}}" target="_blank" rel="noopener noreferrer" class="apply-link" style="text-align: center; font-size: 0.82rem; padding: 8px 14px;">Ver Convocatoria Oficial ↗</a>
+        `;
+        grid.appendChild(card);
+      }});
+    }}
+
+    let conveniosPopulated = false;
+    function initConveniosFilters() {{
+      if (conveniosPopulated) return;
+      const countrySel = document.getElementById('conveniosCountryFilter');
+      const typeSel = document.getElementById('conveniosTypeFilter');
+      if (!countrySel || !typeSel) return;
+
+      const countries = [...new Set(allConvenios.map(c => c.pais).filter(Boolean))].sort();
+      countries.forEach(p => {{
+        const opt = document.createElement('option');
+        opt.value = p;
+        opt.textContent = p;
+        countrySel.appendChild(opt);
+      }});
+
+      const types = [...new Set(allConvenios.map(c => c.tipo).filter(Boolean))].sort();
+      types.forEach(t => {{
+        const opt = document.createElement('option');
+        opt.value = t;
+        opt.textContent = t;
+        typeSel.appendChild(opt);
+      }});
+
+      conveniosPopulated = true;
+    }}
+
+    function handleConveniosFilter() {{
+      initConveniosFilters();
+      const q = (document.getElementById('conveniosSearch')?.value || '').toLowerCase();
+      const country = document.getElementById('conveniosCountryFilter')?.value || 'ALL';
+      const type = document.getElementById('conveniosTypeFilter')?.value || 'ALL';
+      const list = document.getElementById('conveniosList');
+      const counter = document.getElementById('conveniosCounter');
+      if (!list) return;
+
+      const filtered = allConvenios.filter(c => {{
+        if (country !== 'ALL' && c.pais !== country) return false;
+        if (type !== 'ALL' && c.tipo !== type) return false;
+        if (q && !c.institucion.toLowerCase().includes(q) && !c.pais.toLowerCase().includes(q) && !c.tipo.toLowerCase().includes(q) && !c.nombre.toLowerCase().includes(q)) return false;
+        return true;
+      }});
+
+      if (counter) counter.textContent = `Mostrando ${{filtered.length}} de ${{allConvenios.length}} convenios vigentes`;
+      list.innerHTML = '';
+
+      if (filtered.length === 0) {{
+        list.innerHTML = '<div style="grid-column: 1/-1; text-align: center; padding: 30px; color: var(--text-muted); font-family: var(--font-mono);">No se encontraron convenios con este criterio.</div>';
+        return;
+      }}
+
+      filtered.slice(0, 120).forEach(c => {{
+        const card = document.createElement('div');
+        card.style.cssText = 'background: rgba(255,255,255,0.02); border: 1px solid var(--border-technical); border-radius: 10px; padding: 14px; display: flex; flex-direction: column; justify-content: space-between;';
+        card.innerHTML = `
+          <div>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+              <span style="font-size: 0.72rem; font-family: var(--font-mono); font-weight: 600; padding: 2px 6px; border-radius: 4px; background: rgba(16,185,129,0.15); color: var(--accent-emerald);">${{c.pais}}</span>
+              <span style="font-size: 0.72rem; font-family: var(--font-mono); color: var(--text-muted);">Suscrito: ${{c.ano}}</span>
+            </div>
+            <h5 style="font-family: var(--font-display); font-size: 0.95rem; color: #fff; margin-bottom: 6px; line-height: 1.35;">${{c.institucion}}</h5>
+            <div style="font-size: 0.78rem; color: var(--accent-cyan); margin-bottom: 6px;">${{c.tipo}}</div>
+            <div style="font-size: 0.76rem; color: var(--text-muted); line-height: 1.3; margin-bottom: 10px;">${{c.area}}</div>
+          </div>
+          ${{c.link ? `<a href="${{c.link}}" target="_blank" rel="noopener noreferrer" class="apply-link" style="text-align: center; font-size: 0.76rem; padding: 5px 10px; border-radius: 6px;">Ver Convenio Oficial (Drive) ↗</a>` : ''}}
+        `;
+        list.appendChild(card);
+      }});
+      if (filtered.length > 120) {{
+        const notice = document.createElement('div');
+        notice.style.cssText = 'grid-column: 1/-1; text-align: center; padding: 12px; font-family: var(--font-mono); font-size: 0.78rem; color: var(--text-muted);';
+        notice.textContent = `Mostrando los primeros 120 resultados de ${{filtered.length}}. Usa el buscador o filtro de país para afinar.`;
+        list.appendChild(notice);
+      }}
+    }}
 
     function renderJobs(list) {{
       const container = document.getElementById('jobsContainer');
@@ -819,24 +953,28 @@ def build_full_html(vacantes, config_ramas):
       currentTab = tabId;
       const filterBox = document.getElementById('filterControls');
       const jobsBox = document.getElementById('jobsContainer');
-      const guideBox = document.getElementById('guideContainer');
       const canalesBox = document.getElementById('canalesContainer');
+      const becasBox = document.getElementById('becasContainer');
 
-      if (tabId === 'consejos') {{
+      if (tabId === 'canales') {{
         filterBox.style.display = 'none';
         jobsBox.style.display = 'none';
-        guideBox.style.display = 'block';
-        if (canalesBox) canalesBox.style.display = 'none';
-      }} else if (tabId === 'canales') {{
-        filterBox.style.display = 'none';
-        jobsBox.style.display = 'none';
-        guideBox.style.display = 'none';
         if (canalesBox) canalesBox.style.display = 'block';
+        if (becasBox) becasBox.style.display = 'none';
+      }} else if (tabId === 'becas') {{
+        filterBox.style.display = 'none';
+        jobsBox.style.display = 'none';
+        if (canalesBox) canalesBox.style.display = 'none';
+        if (becasBox) {{
+          becasBox.style.display = 'block';
+          renderBecas();
+          handleConveniosFilter();
+        }}
       }} else {{
         filterBox.style.display = 'block';
         jobsBox.style.display = 'grid';
-        guideBox.style.display = 'none';
         if (canalesBox) canalesBox.style.display = 'none';
+        if (becasBox) becasBox.style.display = 'none';
         handleFilter();
       }}
     }}
@@ -894,6 +1032,14 @@ def export_csv(vacantes):
     print(f" [✓] Archivo Excel/CSV generado: {OUTPUT_CSV}")
 
 def main():
+    if "--render-only" in sys.argv:
+        print("[*] Modo render-only: regenerando HTML y CSV desde vacantes_practicas.json...")
+        config_ramas = load_json(CONFIG_RAMAS_PATH)
+        vacantes = load_json(OUTPUT_JSON)
+        build_full_html(vacantes, config_ramas)
+        export_csv(vacantes)
+        return
+
     print("="*70)
     print(" [ATOM] BOT DE RASTREO INTEGRAL - PRÁCTICAS DE INGENIERÍA FÍSICA")
     print("        Medellín, Valle de Aburrá & Antioquia • Autor: Jimmy Rosero")

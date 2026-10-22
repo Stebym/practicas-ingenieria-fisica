@@ -9,9 +9,9 @@ on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
-  # Dispara el despliegue a Pages automáticamente cuando termina el bot diario
+  # Dispara el despliegue a Pages automáticamente cuando termina cualquiera de los bots diarios
   workflow_run:
-    workflows: ["Actualizacion Automatica de Vacantes"]
+    workflows: ["Actualizacion Automatica de Vacantes", "Actualizacion Automatica de Becas y Convenios Internacionales"]
     types:
       - completed
 
@@ -43,7 +43,7 @@ jobs:
         run: |
           mkdir -p _site
           cp index.html estilos.css estrellas.js fondo_fisica.svg fondo_fisica_movil.svg _site/
-          cp -f vacantes_practicas.json vacantes_practicas.csv _site/ 2>/dev/null || true
+          cp -f vacantes_practicas.json vacantes_practicas.csv convenios_internacionales.json becas_internacionales.json _site/ 2>/dev/null || true
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

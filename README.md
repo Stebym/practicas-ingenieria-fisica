@@ -37,19 +37,23 @@ Este proyecto fue construido aplicando estándares profesionales de **Desarrollo
 ---
 
 ## 🚀 Arquitectura y Automatización
-* `bot_practicas.py`: Motor de rastreo y clasificación en Python. Integra rastreo multi-fuente en vivo (Computrabajo y LinkedIn Jobs), el catálogo verificado de convocatorias destacadas (`convocatorias_destacadas.json` con Magneto365, Jooble y portales oficiales de Antioquia) y el directorio de empleadores clave (`empresas_antioquia.json`).
+* `bot_practicas.py`: Motor de rastreo y clasificación de prácticas y empleo industrial en Python (Computrabajo, LinkedIn, Magneto365, ElEmpleo, FirstJob).
+* `bot_becas_internacionales.py`: Bot de rastreo matutino para oportunidades globales y sincronización del catálogo oficial de convenios UNAL DRE (Google Sheets, ICETEX, IAESTE, DAAD, CERN, Mitacs).
+* `convenios_internacionales.json`: Base de datos de más de 1.150 convenios oficiales vigentes suscritos por la UNAL para ingeniería y ciencias en 63 países con enlaces a los documentos oficiales en Google Drive.
+* `becas_internacionales.json`: Convocatorias internacionales de becas completas y pasantías técnicas remuneradas.
 * `convocatorias_destacadas.json`: Catálogo de convocatorias de alto impacto para Ingeniería Física y carreras afines (Corona, Argos, Haceb, ISA, EPM, Enel, ERCO, Sievert, Gobernación de Antioquia, AKT, Protección, etc.).
 * `empresas_antioquia.json`: Directorio de empresas y sectores para ampliar la búsqueda a empleadores locales.
-* `estilos.css`: Sistema de diseño visual y responsivo.
+* `estilos.css`: Sistema de diseño visual y responsivo (laboratorio técnico / blueprint).
 * `fondo_fisica.svg` y `fondo_fisica_movil.svg`: Fondos vectoriales adaptados a escritorio y móvil con planetas, estrellas y ecuaciones.
 * `index.html`: Dashboard interactivo con buscador en vivo y filtros por pestañas:
   * **💼 Todas las Vacantes**
   * **🎯 Exclusivas: Piden Físico / Ing. Físico**
   * **⏳ Próximas a Finalizar (< 5 Días)**
-  * **🚀 Ecosistema & Canales Estratégicos (Interacpedia, Estado Joven, Torre.ai, SENA SGVA)**
-  * **📝 Guía & Tips para la Hoja de Vida**
-* `.github/workflows/auto_update.yml`: Flujo de GitHub Actions que ejecuta el bot diariamente a las 20:00 (hora Colombia), actualiza los datos y comitea al repositorio.
-* `.github/workflows/static.yml`: Despliega automáticamente `index.html`, `estilos.css`, `estrellas.js`, `fondo_fisica.svg`, `fondo_fisica_movil.svg`, `vacantes_practicas.json` y `vacantes_practicas.csv` a GitHub Pages cada vez que se actualiza `main` o al concluir el bot diario.
+  * **🚀 Ecosistema Nacional & Retos (Interacpedia, Estado Joven, Torre.ai, SENA SGVA)**
+  * **🌍 Becas & Pasantías Internacionales (ICETEX, IAESTE, DAAD, CERN, Mitacs y Convenios UNAL)**
+* `.github/workflows/auto_update.yml`: Flujo nocturno que rastrea las vacantes laborales a las 20:00 (hora Colombia).
+* `.github/workflows/becas_update.yml`: Flujo matutino que rastrea becas y convenios internacionales a las 07:00 AM (hora Colombia).
+* `.github/workflows/static.yml`: Despliega automáticamente `index.html`, `estilos.css`, `estrellas.js`, `fondo_fisica.svg`, `fondo_fisica_movil.svg`, `vacantes_practicas.json`, `convenios_internacionales.json` y `becas_internacionales.json` a GitHub Pages cada vez que se actualiza `main` o al concluir cualquiera de los bots diarios.
 
 ### Cobertura de fuentes
 Rastreo activo multi-plataforma:

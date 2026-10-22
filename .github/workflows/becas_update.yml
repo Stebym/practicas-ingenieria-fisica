@@ -1,0 +1,48 @@
+name: Actualizacion Automatica de Becas y Convenios Internacionales
+
+on:
+  schedule:
+    # Se ejecuta todas las mañanas a las 12:00 UTC (07:00 AM hora Colombia)
+    - cron: '0 12 * * *'
+  workflow_dispatch: # Permite ejecutar el barrido internacional manualmente desde GitHub Actions
+
+permissions:
+  contents: write
+
+jobs:
+  update-becas:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Descargar repositorio
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Instalar dependencias
+        run: |
+          pip install -r requirements.txt
+
+      - name: Ejecutar Bot de Becas y Convenios Internacionales
+        run: |
+          python bot_becas_internacionales.py
+
+      - name: Preparar archivo para GitHub Pages
+        run: |
+          cp dashboard_practicas.html index.html
+
+      - name: Guardar y publicar cambios actualizados
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add index.html dashboard_practicas.html convenios_internacionales.json becas_internacionales.json vacantes_practicas.json vacantes_practicas.csv
+          if ! git diff --staged --quiet; then
+            git commit -m "Auto-update: Becas, Pasantías y Convenios Internacionales UNAL [$(date '+%Y-%m-%d')]"
+            git push origin main
+          else
+            echo "No hay cambios nuevos en las becas o convenios internacionales."
+          fi

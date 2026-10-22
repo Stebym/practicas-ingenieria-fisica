@@ -35,6 +35,17 @@ HEADERS = {
     "Accept-Language": "es-ES,es;q=0.9,en;q=0.8"
 }
 
+LOCAL_LOCATION_RE = re.compile(
+    r"medell[ií]n|antioquia|valle de aburr[aá]|envigado|itag[uüíi]|bello|sabaneta|rionegro|"
+    r"apartad[oó]|la estrella|copacabana|girardota|caldas|marinilla|barbosa|cisneros|"
+    r"el retiro|retiro|guarne|santo domingo|puerto berr[ií]o",
+    re.IGNORECASE,
+)
+REMOTE_MODALITY_RE = re.compile(
+    r"\b(remoto|remota|remote|teletrabajo)\b|100\s*%\s*h[ií]brid[oa]",
+    re.IGNORECASE,
+)
+
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 CONFIG_RAMAS_PATH = os.path.join(BASE_DIR, "config_ramas.json")
 CONVOCATORIAS_DESTACADAS_PATH = os.path.join(BASE_DIR, "convocatorias_destacadas.json")
@@ -275,7 +286,7 @@ def scrape_magneto_query(query):
             results.append({
                 "titulo": title,
                 "empresa": empresa,
-                "ubicacion": city_str if city_str else "Medellín / Antioquia",
+                "ubicacion": "Remoto (Colombia)" if is_remote else (city_str if city_str else "Medellín / Antioquia"),
                 "url": url,
                 "fecha_publicacion": pub_date,
                 "fuente": "Magneto365",
@@ -307,7 +318,7 @@ def scrape_elempleo_query(query):
                 seen.add(clean_url)
                 title = data.get("title", "").strip()
                 company = data.get("company", "").strip() or "Empresa Confidencial"
-                loc = data.get("location", "").strip() or "Medellín / Antioquia"
+                loc = data.get("location", "").strip() or "Ubicación por confirmar"
                 sal = data.get("salary", "").strip()
                 comp = sal if sal and "confidencial" not in sal.lower() else ""
 
@@ -343,7 +354,7 @@ def scrape_firstjob_query(query):
             results.append({
                 "titulo": title,
                 "empresa": comp,
-                "ubicacion": "Colombia / Remoto",
+                "ubicacion": "Ubicación por confirmar",
                 "url": url_job,
                 "fecha_publicacion": "Reciente",
                 "fuente": "FirstJob",
@@ -380,7 +391,7 @@ def scrape_web_query(query):
                 results.append({
                     "titulo": title,
                     "empresa": company_match.group(1) if company_match else "Por identificar",
-                    "ubicacion": "Medellín / Antioquia (verificar en la oferta)",
+                    "ubicacion": "Ubicación por confirmar",
                     "url": link,
                     "fecha_publicacion": "Resultado web; verificar vigencia",
                     "fuente": f"Búsqueda web · {urlparse(link).netloc}",
@@ -523,13 +534,31 @@ def verify_job_url(job):
     except Exception:
         return False
 
+def is_in_target_location(job):
+    """Acepta Antioquia/Medellín o modalidad remota / 100 % híbrida explícita."""
+    location = str(job.get("ubicacion", ""))
+    if LOCAL_LOCATION_RE.search(location):
+        return True
+
+    # FirstJob no proporciona modalidad en la tarjeta rastreada; no confiar en el
+    # antiguo valor genérico "Colombia / Remoto" que se asignaba a todos sus avisos.
+    if job.get("fuente") == "FirstJob" and location.strip().lower() == "colombia / remoto":
+        return False
+
+    details = " ".join(str(job.get(key, "")) for key in (
+        "titulo", "ubicacion", "modalidad", "perfil", "mision", "tareas", "resumen_fuente"
+    ))
+    return bool(REMOTE_MODALITY_RE.search(details))
+
 def filter_verified_jobs(jobs, max_workers=25):
     """Filtra una lista de vacantes en paralelo conservando únicamente aquellas con enlaces 100% garantizados."""
-    print(f"[*] Verificando enlaces reales en vivo para {len(jobs)} vacantes candidatas...")
+    in_scope = [job for job in jobs if is_in_target_location(job)]
+    print(f"[*] Cobertura geográfica/modalidad: {len(in_scope)} de {len(jobs)} ofertas en Antioquia o remotas (descartadas {len(jobs) - len(in_scope)})")
+    print(f"[*] Verificando enlaces reales en vivo para {len(in_scope)} vacantes candidatas...")
     with concurrent.futures.ThreadPoolExecutor(max_workers=max_workers) as executor:
-        results = list(executor.map(verify_job_url, jobs))
-    verified = [j for j, ok in zip(jobs, results) if ok]
-    print(f" [✓] Enlaces 100% garantizados (HTTP 200 sin login): {len(verified)} (descartadas {len(jobs) - len(verified)})")
+        results = list(executor.map(verify_job_url, in_scope))
+    verified = [j for j, ok in zip(in_scope, results) if ok]
+    print(f" [✓] Enlaces públicos válidos (HTTP 200 sin login): {len(verified)} (descartadas {len(in_scope) - len(verified)})")
     return verified
 
 def build_full_html(vacantes, config_ramas):
@@ -632,6 +661,7 @@ def build_full_html(vacantes, config_ramas):
       <p>
         Plataforma automatizada desarrollada por <strong>Jimmy Stebym Rosero Barrera</strong>. El motor cruza las materias clave de nuestro pénsum oficial (<strong>Análisis de Datos & IA, Electrónica Digital / IoT / I2C, Electrónica Análoga, Metrología e Instrumentación, Simulación Numérica, Cuántica, Radiaciones y Diseño CAD</strong>) con las convocatorias del sector industrial, biomédico y tecnológico.
       </p>
+      <p><strong>Cobertura:</strong> Medellín y Antioquia. Fuera de la región solo se incluyen ofertas que indiquen modalidad remota o 100 % híbrida.</p>
     </section>
 
     <!-- NAVEGACIÓN POR PESTAÑAS (TABS) -->

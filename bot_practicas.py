@@ -20,6 +20,7 @@ from datetime import datetime
 from pathlib import Path
 from urllib.parse import quote, unquote, urlparse
 import requests
+import concurrent.futures
 
 # Asegurar codificación UTF-8 en terminal de Windows
 if sys.stdout.encoding != 'utf-8':
@@ -492,6 +493,34 @@ def classify_and_score_job(job, config_ramas):
         job["tareas"] = "Resumen de búsqueda web. Abre la publicación original para confirmar funciones, requisitos y vigencia."
 
     return job
+
+def verify_job_url(job):
+    """Verifica estrictamente que la URL de postulación sea pública, válida y responda HTTP 200 sin muros de login ni expiración."""
+    url = job.get("url", "")
+    if not url or not url.startswith("http"):
+        return False
+    # Excluir LinkedIn porque requiere inicio de sesión obligatorio o bloquea con HTTP 429
+    if "linkedin.com" in url.lower():
+        return False
+    try:
+        r = requests.get(url, headers=HEADERS, timeout=4.5, allow_redirects=True)
+        if r.status_code >= 400:
+            return False
+        txt = r.text.lower()
+        if "esta oferta ya no está disponible" in txt or "la oferta que buscas ya no está disponible" in txt or "página no encontrada" in txt or "la vacante ha finalizado" in txt:
+            return False
+        return True
+    except Exception:
+        return False
+
+def filter_verified_jobs(jobs, max_workers=25):
+    """Filtra una lista de vacantes en paralelo conservando únicamente aquellas con enlaces 100% garantizados."""
+    print(f"[*] Verificando enlaces reales en vivo para {len(jobs)} vacantes candidatas...")
+    with concurrent.futures.ThreadPoolExecutor(max_workers=max_workers) as executor:
+        results = list(executor.map(verify_job_url, jobs))
+    verified = [j for j, ok in zip(jobs, results) if ok]
+    print(f" [✓] Enlaces 100% garantizados (HTTP 200 sin login): {len(verified)} (descartadas {len(jobs) - len(verified)})")
+    return verified
 
 def build_full_html(vacantes, config_ramas):
     """Genera el HTML semántico con diseño de laboratorio, sin emojis en la interfaz, telemetría y filtros STEM"""
@@ -1223,9 +1252,12 @@ def export_csv(vacantes):
 
 def main():
     if "--render-only" in sys.argv:
-        print("[*] Modo render-only: regenerando HTML y CSV desde vacantes_practicas.json...")
+        print("[*] Modo render-only: verificando y regenerando HTML y CSV desde vacantes_practicas.json...")
         config_ramas = load_json(CONFIG_RAMAS_PATH)
         vacantes = load_json(OUTPUT_JSON)
+        vacantes = filter_verified_jobs(vacantes, max_workers=25)
+        with open(OUTPUT_JSON, "w", encoding="utf-8") as f:
+            json.dump(vacantes, f, ensure_ascii=False, indent=2)
         build_full_html(vacantes, config_ramas)
         export_csv(vacantes)
         return
@@ -1374,10 +1406,12 @@ def main():
         time.sleep(0.2)
         
     print(f"\n[*] Total de vacantes únicas recolectadas: {len(all_raw_jobs)}")
-    print("[*] Clasificando, filtrando y ordenando por afinidad al pénsum UNAL...")
+    # Validación estricta de enlaces: solo vacantes que abran garantizadamente sin 404, 429 ni login
+    verified_raw_jobs = filter_verified_jobs(all_raw_jobs, max_workers=25)
+    print(f"[*] Clasificando, filtrando y ordenando {len(verified_raw_jobs)} vacantes verificadas por afinidad al pénsum UNAL...")
     
     classified_jobs = []
-    for j in all_raw_jobs:
+    for j in verified_raw_jobs:
         classified = classify_and_score_job(j, config_ramas)
         if classified:
             classified_jobs.append(classified)

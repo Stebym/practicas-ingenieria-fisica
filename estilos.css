@@ -1,42 +1,86 @@
 /* ==========================================================================
-   ESTILOS CSS - PORTAL DE PRÁCTICAS INGENIERÍA FÍSICA
+   ESTILOS CSS - PORTAL DE PRÁCTICAS & BECAS • INGENIERÍA FÍSICA UNAL
    Autor: Jimmy Stebym Rosero Barrera
-   Institución: Universidad Nacional de Colombia (UNAL Sede Medellín)
-   Estética: Laboratorio Técnico / Blueprint Científico
-   (Sin emojis en la interfaz salvo el átomo superior)
+   Institución: Universidad Nacional de Colombia (Sede Medellín)
+   Estética: Laboratorio Cuántico / Blueprint Científico de Vanguardia
    ========================================================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700&family=Syne:wght@700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Outfit:wght@300;400;500;600;700;800&family=Syne:wght@700;800&display=swap');
 
+/* --- VARIABLES DE COLOR Y SISTEMA DE DISEÑO --- */
 :root {
-  --bg-deep: #07090e;
-  --bg-surface: #0e131f;
-  --bg-surface-elevated: #161d2f;
-  --bg-chip: #1f293d;
+  /* Modo Oscuro por defecto (Blueprint Cuántico) */
+  --bg-deep: #080c14;
+  --bg-surface: #0e1422;
+  --bg-surface-elevated: #162035;
+  --bg-chip: #1e2c47;
 
   --border-subtle: rgba(255, 255, 255, 0.08);
   --border-strong: rgba(255, 255, 255, 0.16);
-  --border-technical: #2a364f;
+  --border-technical: #23334f;
+  --border-glow: rgba(0, 229, 255, 0.35);
 
-  --accent-cyan: #00e5ff;       /* Láser / Cuántica */
-  --accent-amber: #ffb703;      /* Potencia / Energía */
-  --accent-emerald: #06d6a0;    /* Sensores / Materiales */
-  --accent-crimson: #ef476f;    /* Cierre inminente */
-  --accent-violet: #8338ec;     /* Fotónica */
+  --accent-cyan: #00e5ff;       /* Láser / Cuántica / Fotónica */
+  --accent-amber: #ffb703;      /* Potencia / Energía / Exclusiva */
+  --accent-emerald: #00f0a0;    /* Sensores / Materiales / Confiabilidad */
+  --accent-crimson: #ff3366;    /* Cierre Inminente */
+  --accent-violet: #a855f7;     /* Inteligencia Artificial / Datos */
+  --accent-blue: #3b82f6;       /* Sistemas de Control */
 
-  --font-display: 'Syne', sans-serif;
-  --font-body: 'Outfit', -apple-system, sans-serif;
-  --font-mono: 'JetBrains Mono', monospace;
+  --font-display: 'Syne', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
 
-  --text-main: #f1f5f9;
+  --text-main: #f8fafc;
   --text-muted: #94a3b8;
   --text-dim: #64748b;
+  --text-inverse: #080c14;
+
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.45);
+  --shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.6);
+  --shadow-glow: 0 0 20px rgba(0, 229, 255, 0.18);
 }
 
+/* Modo Claro (Laboratorio Científico / Papel Milimetrado Técnico) */
+html[data-theme="light"] {
+  --bg-deep: #f6f8fb;
+  --bg-surface: #ffffff;
+  --bg-surface-elevated: #f0f4f9;
+  --bg-chip: #e2e8f0;
+
+  --border-subtle: rgba(15, 23, 42, 0.08);
+  --border-strong: rgba(15, 23, 42, 0.16);
+  --border-technical: #cbd5e1;
+  --border-glow: rgba(2, 132, 199, 0.25);
+
+  --accent-cyan: #0284c7;
+  --accent-amber: #d97706;
+  --accent-emerald: #059669;
+  --accent-crimson: #e11d48;
+  --accent-violet: #7c3aed;
+  --accent-blue: #2563eb;
+
+  --text-main: #0f172a;
+  --text-muted: #475569;
+  --text-dim: #64748b;
+  --text-inverse: #ffffff;
+
+  --shadow-sm: 0 2px 8px rgba(15, 23, 42, 0.05);
+  --shadow-md: 0 8px 20px rgba(15, 23, 42, 0.08);
+  --shadow-lg: 0 16px 36px rgba(15, 23, 42, 0.12);
+  --shadow-glow: 0 0 20px rgba(2, 132, 199, 0.12);
+}
+
+/* Reset y Base */
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -45,26 +89,63 @@ body {
   color: var(--text-main);
   min-height: 100vh;
   line-height: 1.6;
+  position: relative;
+  isolation: isolate;
   background-image:
-    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
-  background-size: 32px 32px;
+    linear-gradient(to right, var(--border-subtle) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--border-subtle) 1px, transparent 1px);
+  background-size: 36px 36px;
   background-attachment: fixed;
+  transition: background-color 0.25s ease, color 0.25s ease;
 }
 
-/* Header */
+/* Fondo decorativo con ecuaciones de física y constelaciones */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background: url('fondo_fisica.svg') center / cover no-repeat;
+  opacity: 0.45;
+  transition: opacity 0.3s ease;
+}
+
+html[data-theme="light"] body::before {
+  opacity: 0.22;
+}
+
+#constellationCanvas {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+/* ==========================================================================
+   HEADER SEMÁNTICO Y BARRA DE ESTADO
+   ========================================================================== */
 header.site-header {
-  background: rgba(7, 9, 14, 0.94);
-  backdrop-filter: blur(16px);
-  border-bottom: 1px solid var(--border-technical);
   position: sticky;
   top: 0;
   z-index: 200;
-  padding: 18px 28px;
+  background: rgba(8, 12, 20, 0.88);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border-technical);
+  padding: 14px 24px;
+  box-shadow: var(--shadow-sm);
+  transition: background-color 0.25s ease, border-color 0.25s ease;
+}
+
+html[data-theme="light"] header.site-header {
+  background: rgba(255, 255, 255, 0.92);
 }
 
 .header-container {
-  max-width: 1360px;
+  max-width: 1400px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
@@ -73,6 +154,7 @@ header.site-header {
   gap: 16px;
 }
 
+/* Branding Principal */
 .branding {
   display: flex;
   align-items: center;
@@ -80,133 +162,252 @@ header.site-header {
 }
 
 .brand-symbol {
-  width: 50px;
-  height: 50px;
-  background: linear-gradient(135deg, #0e131f, #1e293b);
+  width: 52px;
+  height: 52px;
+  background: linear-gradient(135deg, var(--bg-surface-elevated), var(--bg-chip));
   border: 1px solid var(--accent-cyan);
-  border-radius: 12px;
+  border-radius: 14px;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 28px;
-  box-shadow: 0 0 20px rgba(0, 229, 255, 0.2);
+  box-shadow: var(--shadow-glow);
   color: var(--accent-cyan);
+  flex-shrink: 0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.brand-symbol:hover {
+  transform: rotate(30deg) scale(1.05);
+  box-shadow: 0 0 25px rgba(0, 229, 255, 0.4);
 }
 
 .brand-text h1 {
   font-family: var(--font-display);
   font-size: 1.45rem;
   font-weight: 800;
-  color: #fff;
+  color: var(--text-main);
   letter-spacing: -0.5px;
+  line-height: 1.2;
 }
 
 .brand-text p.subtitle {
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   color: var(--text-muted);
   font-family: var(--font-mono);
+  margin-top: 2px;
 }
 
 .creator-tag {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  margin-top: 5px;
+  margin-top: 4px;
   background: rgba(0, 229, 255, 0.08);
   border: 1px solid rgba(0, 229, 255, 0.25);
   color: var(--accent-cyan);
-  font-size: 0.8rem;
+  font-size: 0.76rem;
   font-family: var(--font-mono);
-  padding: 3px 12px;
-  border-radius: 6px;
+  padding: 2px 10px;
+  border-radius: 999px;
+}
+
+html[data-theme="light"] .creator-tag {
+  background: rgba(2, 132, 199, 0.08);
+  border-color: rgba(2, 132, 199, 0.25);
+  color: var(--accent-cyan);
 }
 
 .creator-tag strong {
-  color: #ffffff;
+  color: var(--text-main);
   font-weight: 700;
 }
 
+/* Barra de Estado y Telemetría */
 .header-meta {
   display: flex;
   align-items: center;
-  gap: 14px;
-  background: var(--bg-surface);
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.status-beacon {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: var(--bg-surface-elevated);
   border: 1px solid var(--border-technical);
-  padding: 8px 16px;
-  border-radius: 10px;
+  padding: 6px 12px;
+  border-radius: 999px;
   font-family: var(--font-mono);
-  font-size: 0.82rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  letter-spacing: 0.5px;
 }
 
-/* Main Layout */
+.beacon-dot {
+  width: 8px;
+  height: 8px;
+  background: var(--accent-emerald);
+  border-radius: 50%;
+  box-shadow: 0 0 10px var(--accent-emerald);
+  animation: beacon-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes beacon-pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(0.85); }
+}
+
+/* Micro-KPI Chips */
+.kpi-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--bg-surface-elevated);
+  border: 1px solid var(--border-technical);
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  user-select: none;
+}
+
+.kpi-chip:hover {
+  transform: translateY(-1px);
+  border-color: var(--accent-cyan);
+  color: var(--text-main);
+  box-shadow: var(--shadow-sm);
+}
+
+.kpi-chip strong {
+  font-weight: 700;
+}
+
+/* Selector de Tema */
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 36px;
+  padding: 6px 14px;
+  border: 1px solid var(--border-strong);
+  border-radius: 999px;
+  background: var(--bg-surface-elevated);
+  color: var(--text-main);
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.theme-toggle:hover {
+  transform: translateY(-1px);
+  border-color: var(--accent-cyan);
+  box-shadow: var(--shadow-sm);
+}
+
+.theme-toggle-icon {
+  font-size: 1rem;
+  line-height: 1;
+}
+
+/* ==========================================================================
+   LAYOUT PRINCIPAL
+   ========================================================================== */
 main.main-content {
-  max-width: 1360px;
-  margin: 30px auto;
+  max-width: 1400px;
+  margin: 28px auto 60px;
   padding: 0 24px;
+  position: relative;
+  z-index: 1;
 }
 
+/* Briefing & Radar de Ingeniería Física */
 section.manifesto-box {
-  background: linear-gradient(135deg, #0e131f, #161d2f);
+  background: linear-gradient(135deg, var(--bg-surface), var(--bg-surface-elevated));
   border: 1px solid var(--border-technical);
   border-left: 4px solid var(--accent-cyan);
-  border-radius: 14px;
+  border-radius: 16px;
   padding: 24px 28px;
-  margin-bottom: 26px;
+  margin-bottom: 24px;
+  box-shadow: var(--shadow-md);
+  position: relative;
+  overflow: hidden;
+}
+
+section.manifesto-box::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 200px;
+  height: 100%;
+  background: radial-gradient(circle at 100% 50%, rgba(0, 229, 255, 0.06), transparent 70%);
+  pointer-events: none;
 }
 
 section.manifesto-box h2 {
   font-family: var(--font-display);
-  font-size: 1.45rem;
+  font-size: 1.35rem;
   margin-bottom: 8px;
-  color: #fff;
+  color: var(--text-main);
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 section.manifesto-box p {
   color: var(--text-muted);
-  font-size: 0.95rem;
+  font-size: 0.92rem;
+  line-height: 1.6;
 }
 
-/* Tabs */
+/* ==========================================================================
+   NAVEGACIÓN POR PESTAÑAS (TABS)
+   ========================================================================== */
 nav.tabs-nav {
   display: flex;
-  gap: 10px;
-  margin-bottom: 24px;
+  gap: 8px;
+  margin-bottom: 22px;
   border-bottom: 1px solid var(--border-technical);
-  padding-bottom: 10px;
+  padding-bottom: 12px;
   flex-wrap: wrap;
 }
 
 button.tab-link {
   background: transparent;
-  border: none;
+  border: 1px solid transparent;
   font-family: var(--font-mono);
-  font-size: 0.88rem;
+  font-size: 0.84rem;
   font-weight: 600;
   color: var(--text-muted);
-  padding: 10px 18px;
-  border-radius: 8px;
+  padding: 9px 16px;
+  border-radius: 999px;
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
 }
 
 button.tab-link:hover {
   background: var(--bg-surface);
-  color: #fff;
+  color: var(--text-main);
+  border-color: var(--border-subtle);
 }
 
 button.tab-link.active {
   background: var(--bg-surface-elevated);
   color: var(--accent-cyan);
-  border: 1px solid var(--border-technical);
-}
-
-button.tab-link.urgent {
-  color: var(--accent-crimson);
-}
-
-button.tab-link.urgent.active {
-  background: rgba(239, 71, 111, 0.15);
-  border-color: rgba(239, 71, 111, 0.4);
+  border-color: var(--accent-cyan);
+  box-shadow: 0 0 12px rgba(0, 229, 255, 0.15);
 }
 
 button.tab-link.exclusive {
@@ -214,34 +415,122 @@ button.tab-link.exclusive {
 }
 
 button.tab-link.exclusive.active {
-  background: rgba(255, 183, 3, 0.15);
-  border-color: rgba(255, 183, 3, 0.4);
+  background: rgba(255, 183, 3, 0.12);
+  border-color: var(--accent-amber);
+  color: var(--accent-amber);
+  box-shadow: 0 0 12px rgba(255, 183, 3, 0.15);
 }
 
-/* Search and Pills */
+button.tab-link.urgent {
+  color: var(--accent-crimson);
+}
+
+button.tab-link.urgent.active {
+  background: rgba(255, 51, 102, 0.12);
+  border-color: var(--accent-crimson);
+  color: var(--accent-crimson);
+  box-shadow: 0 0 12px rgba(255, 51, 102, 0.15);
+}
+
+/* ==========================================================================
+   FILTROS, BUSCADOR Y PILAS DE MATERIAS
+   ========================================================================== */
+#filterControls {
+  margin-bottom: 24px;
+}
+
+.search-wrapper {
+  position: relative;
+  width: 100%;
+  margin-bottom: 14px;
+}
+
 input.search-bar {
   width: 100%;
   background: var(--bg-surface);
   border: 1px solid var(--border-technical);
-  border-radius: 10px;
-  padding: 14px 20px;
-  color: #fff;
-  font-size: 0.95rem;
+  border-radius: 12px;
+  padding: 13px 20px 13px 44px;
+  color: var(--text-main);
+  font-family: var(--font-body);
+  font-size: 0.92rem;
   outline: none;
-  margin-bottom: 14px;
-  transition: border-color 0.2s;
+  transition: all 0.2s ease;
+  box-shadow: var(--shadow-sm);
+}
+
+.search-icon-inside {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-dim);
+  font-size: 1rem;
+  pointer-events: none;
 }
 
 input.search-bar:focus {
   border-color: var(--accent-cyan);
-  box-shadow: 0 0 10px rgba(0, 229, 255, 0.15);
+  box-shadow: 0 0 0 3px rgba(0, 229, 255, 0.12), var(--shadow-sm);
 }
 
+/* Seguimiento de postulaciones */
+.application-tracker {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 16px;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  font-family: var(--font-mono);
+}
+
+.application-tracker label {
+  color: var(--text-main);
+  font-weight: 600;
+}
+
+.application-tracker label span {
+  color: var(--text-dim);
+  font-size: 0.74rem;
+  font-weight: 400;
+}
+
+.application-tracker select {
+  min-height: 36px;
+  padding: 6px 14px;
+  border: 1px solid var(--border-technical);
+  border-radius: 999px;
+  background: var(--bg-surface);
+  color: var(--text-main);
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  font-weight: 500;
+  outline: none;
+  cursor: pointer;
+  transition: border-color 0.2s ease;
+}
+
+.application-tracker select:focus {
+  border-color: var(--accent-cyan);
+}
+
+#applicationSummary {
+  background: var(--bg-surface-elevated);
+  border: 1px solid var(--border-technical);
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 0.76rem;
+  color: var(--accent-cyan);
+  font-weight: 600;
+}
+
+/* Píldoras de Materias y Ramas del Pénsum */
 div.branch-pills {
   display: flex;
   gap: 8px;
   flex-wrap: wrap;
-  margin-bottom: 24px;
 }
 
 button.branch-pill {
@@ -249,93 +538,118 @@ button.branch-pill {
   border: 1px solid var(--border-subtle);
   color: var(--text-muted);
   font-family: var(--font-mono);
-  font-size: 0.78rem;
-  padding: 6px 14px;
-  border-radius: 6px;
+  font-size: 0.76rem;
+  font-weight: 500;
+  padding: 6px 13px;
+  border-radius: 999px;
   cursor: pointer;
   transition: all 0.2s ease;
+  user-select: none;
 }
 
 button.branch-pill:hover {
-  color: #fff;
+  color: var(--text-main);
   border-color: var(--border-strong);
+  background: var(--bg-surface-elevated);
 }
 
 button.branch-pill.active {
-  background: rgba(0, 229, 255, 0.15);
+  background: rgba(0, 229, 255, 0.12);
   border-color: var(--accent-cyan);
   color: var(--accent-cyan);
   font-weight: 700;
+  box-shadow: 0 0 10px rgba(0, 229, 255, 0.15);
 }
 
-/* Jobs Grid */
+html[data-theme="light"] button.branch-pill.active {
+  background: rgba(2, 132, 199, 0.12);
+  border-color: var(--accent-cyan);
+  color: var(--accent-cyan);
+}
+
+/* ==========================================================================
+   GRILLA Y TARJETAS DE VACANTES (JOB CARDS)
+   ========================================================================== */
 section.jobs-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
-  gap: 22px;
+  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  gap: 20px;
 }
 
 article.job-card {
   background: var(--bg-surface);
   border: 1px solid var(--border-subtle);
-  border-radius: 12px;
+  border-radius: 16px;
   padding: 22px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   position: relative;
-  transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.25s ease,
+              box-shadow 0.25s ease,
+              background-color 0.25s ease;
+  box-shadow: var(--shadow-sm);
 }
 
 article.job-card:hover {
-  transform: translateY(-3px);
+  transform: translateY(-4px);
   border-color: var(--accent-cyan);
   background: var(--bg-surface-elevated);
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.45);
-}
-
-article.job-card.urgent {
-  border-left: 4px solid var(--accent-crimson);
+  box-shadow: var(--shadow-md), 0 0 15px rgba(0, 229, 255, 0.08);
 }
 
 article.job-card.exclusive {
   border-left: 4px solid var(--accent-amber);
 }
 
+article.job-card.exclusive:hover {
+  border-color: var(--accent-amber);
+  box-shadow: var(--shadow-md), 0 0 15px rgba(255, 183, 3, 0.1);
+}
+
+article.job-card.urgent {
+  border-left: 4px solid var(--accent-crimson);
+}
+
+article.job-card.urgent:hover {
+  border-color: var(--accent-crimson);
+  box-shadow: var(--shadow-md), 0 0 15px rgba(255, 51, 102, 0.1);
+}
+
+/* Encabezado de la Tarjeta */
 header.job-card-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 12px;
-  position: relative;
+  gap: 10px;
 }
 
 span.affinity-badge {
   font-family: var(--font-mono);
-  font-size: 0.72rem;
+  font-size: 0.70rem;
   font-weight: 700;
-  padding: 3px 8px;
-  border-radius: 4px;
+  padding: 3px 10px;
+  border-radius: 999px;
   letter-spacing: 0.5px;
   text-transform: uppercase;
+  white-space: nowrap;
 }
 
 .header-right {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
 }
 
 time.job-date {
   font-family: var(--font-mono);
   font-size: 0.72rem;
-  color: var(--text-muted);
+  color: var(--text-dim);
 }
 
-/* ==========================================================================
-   EL BOTÓN/ÍCONO DE INFORMACIÓN [i] Y LA NUBE FLOTANTE (HOVER POPOVER)
-   Aparece ÚNICAMENTE cuando pasas el ratón sobre el ícono [i]
-   ========================================================================== */
+/* Ícono de Información y Tooltip (Misión & Contexto) */
 .info-trigger {
   position: relative;
   display: inline-flex;
@@ -352,7 +666,7 @@ time.job-date {
   border: 1px solid var(--border-technical);
   color: var(--accent-cyan);
   font-family: var(--font-mono);
-  font-size: 0.75rem;
+  font-size: 0.76rem;
   font-weight: 700;
   display: flex;
   align-items: center;
@@ -362,31 +676,29 @@ time.job-date {
 }
 
 .info-trigger:hover .info-icon,
-.info-trigger:focus .info-icon {
+.info-trigger:focus-visible .info-icon {
   background: var(--accent-cyan);
-  color: #07090e;
+  color: var(--text-inverse);
   border-color: var(--accent-cyan);
-  box-shadow: 0 0 10px rgba(0, 229, 255, 0.5);
+  box-shadow: 0 0 10px rgba(0, 229, 255, 0.4);
   transform: scale(1.1);
 }
 
-/* La nube flotante real (Tooltip) */
+/* Nube Flotante (Popover de Misión) */
 .floating-cloud {
   position: absolute;
   top: calc(100% + 10px);
   right: 0;
-  width: 320px;
-  background: #090e1a;
+  width: min(340px, calc(100vw - 48px));
+  background: var(--bg-surface);
   border: 1px solid var(--accent-cyan);
-  border-radius: 10px;
-  padding: 14px 16px;
-  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.85), 0 0 15px rgba(0, 229, 255, 0.15);
+  border-radius: 14px;
+  padding: 16px;
+  box-shadow: var(--shadow-lg), 0 0 20px rgba(0, 229, 255, 0.15);
   z-index: 500;
   font-size: 0.82rem;
   line-height: 1.5;
   text-align: left;
-
-  /* Oculta por defecto: no está fija */
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
@@ -394,7 +706,6 @@ time.job-date {
   transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
 }
 
-/* Flechita superior de la nube que apunta al icono */
 .floating-cloud::before {
   content: "";
   position: absolute;
@@ -402,13 +713,12 @@ time.job-date {
   right: 7px;
   width: 10px;
   height: 10px;
-  background: #090e1a;
+  background: var(--bg-surface);
   border-top: 1px solid var(--accent-cyan);
   border-left: 1px solid var(--accent-cyan);
   transform: rotate(45deg);
 }
 
-/* Solo se muestra al pasar el ratón por encima del icono [i] */
 .info-trigger:hover .floating-cloud,
 .info-trigger:focus-within .floating-cloud {
   opacity: 1;
@@ -428,14 +738,14 @@ time.job-date {
 }
 
 .cloud-body {
-  color: #e2e8f0;
+  color: var(--text-main);
   margin-bottom: 8px;
 }
 
 .cloud-tasks-section {
   border-top: 1px dashed var(--border-subtle);
   padding-top: 8px;
-  color: #94a3b8;
+  color: var(--text-muted);
   font-size: 0.78rem;
 }
 
@@ -445,11 +755,12 @@ time.job-date {
   margin-bottom: 2px;
 }
 
+/* Cuerpo de la Tarjeta */
 h3.job-title {
   font-family: var(--font-display);
-  font-size: 1.15rem;
+  font-size: 1.12rem;
   font-weight: 700;
-  color: #fff;
+  color: var(--text-main);
   margin-bottom: 6px;
   line-height: 1.35;
 }
@@ -457,19 +768,40 @@ h3.job-title {
 div.job-company {
   color: var(--accent-cyan);
   font-weight: 600;
-  font-size: 0.92rem;
-  margin-bottom: 8px;
+  font-size: 0.90rem;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
 }
 
 div.job-specs {
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   color: var(--text-muted);
   display: flex;
   flex-direction: column;
   gap: 3px;
-  margin-bottom: 14px;
+  margin-bottom: 12px;
+  font-family: var(--font-mono);
 }
 
+/* Destacado de Compensación Económica */
+.salary-highlight {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 12px;
+  background: rgba(255, 183, 3, 0.1);
+  border: 1px solid rgba(255, 183, 3, 0.25);
+  color: var(--accent-amber);
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 8px;
+}
+
+/* Etiquetas de Ramas (Tags) */
 div.job-tags {
   display: flex;
   gap: 6px;
@@ -480,275 +812,339 @@ div.job-tags {
 span.job-tag {
   background: var(--bg-chip);
   font-family: var(--font-mono);
-  font-size: 0.72rem;
+  font-size: 0.70rem;
   padding: 3px 8px;
   border-radius: 4px;
-  color: #cbd5e1;
+  color: var(--text-main);
   border: 1px solid var(--border-subtle);
 }
 
+/* Pie de Tarjeta y Botones */
 footer.job-card-footer {
   margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
 a.apply-link {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  gap: 6px;
   width: 100%;
-  background: #0284c7;
-  color: #fff;
+  background: linear-gradient(135deg, var(--accent-cyan), #0284c7);
+  color: #080c14;
   text-decoration: none;
-  font-family: var(--font-mono);
-  font-size: 0.85rem;
+  font-family: var(--font-body);
+  font-size: 0.86rem;
   font-weight: 700;
   padding: 10px 16px;
-  border-radius: 8px;
+  border-radius: 10px;
   transition: all 0.2s ease;
+  box-shadow: 0 4px 12px rgba(0, 229, 255, 0.2);
+}
+
+html[data-theme="light"] a.apply-link {
+  background: linear-gradient(135deg, #0284c7, #0369a1);
+  color: #ffffff;
 }
 
 a.apply-link:hover {
-  background: var(--accent-cyan);
-  color: #07090e;
-  box-shadow: 0 0 15px rgba(0, 229, 255, 0.35);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 229, 255, 0.35);
+  filter: brightness(1.08);
 }
 
-/* Guía Editorial */
-article.editorial-card {
-  background: var(--bg-surface);
-  border: 1px solid var(--border-technical);
-  border-radius: 14px;
-  padding: 26px;
-  margin-bottom: 20px;
-}
-
-article.editorial-card h3 {
-  font-family: var(--font-display);
-  font-size: 1.35rem;
-  color: var(--accent-cyan);
-  margin-bottom: 14px;
-}
-
-article.editorial-card ul {
-  margin-left: 24px;
-  margin-top: 10px;
-  margin-bottom: 18px;
-  color: #cbd5e1;
-}
-
-article.editorial-card li {
-  margin-bottom: 8px;
-}
-
-/* Footer */
-footer.site-footer {
-  text-align: center;
-  margin-top: 60px;
-  padding: 30px 20px;
-  border-top: 1px solid var(--border-subtle);
-  font-family: var(--font-mono);
-  font-size: 0.86rem;
-}
-
-footer.site-footer p.institution {
-  color: var(--text-main);
-  font-weight: 600;
-  margin-bottom: 6px;
-}
-
-footer.site-footer p.schedule-note {
-  color: var(--accent-amber);
-  font-size: 0.82rem;
-}
-
-/* Identidad editorial: laboratorio de física en Medellín, con luz y papel. */
-:root {
-  --bg-deep: #f4f1e8;
-  --bg-surface: #fffdf7;
-  --bg-surface-elevated: #ffffff;
-  --bg-chip: #e8eee9;
-  --border-subtle: rgba(36, 65, 59, .13);
-  --border-strong: rgba(36, 65, 59, .25);
-  --border-technical: #d7ded5;
-  --accent-cyan: #087f8c;
-  --accent-amber: #c77825;
-  --accent-emerald: #32826a;
-  --accent-crimson: #bc4b50;
-  --accent-violet: #7064a3;
-  --text-main: #20302d;
-  --text-muted: #65736e;
-  --text-dim: #87928c;
-}
-
-body {
-  background-color: var(--bg-deep);
-  background-image: linear-gradient(to right, rgba(61,111,103,.035) 1px, transparent 1px), linear-gradient(to bottom, rgba(61,111,103,.035) 1px, transparent 1px);
-  background-size: auto;
-}
-
-header.site-header { background: rgba(250,248,241,.92); border-color: var(--border-technical); }
-.brand-symbol { border-radius: 18px 18px 18px 5px; background: #e3eee8; box-shadow: none; }
-.brand-text h1, h3.job-title { color: #203b36; }
-.creator-tag { border-radius: 999px; }
-.creator-tag strong { color: #203b36; }
-.header-meta, section.manifesto-box, article.job-card, article.editorial-card { background: rgba(255,253,247,.84); border-color: var(--border-technical); }
-section.manifesto-box { border-left-color: var(--accent-emerald); border-radius: 22px 22px 22px 7px; }
-section.manifesto-box h2 { color: #203b36; }
-button.tab-link { border-radius: 999px; }
-input.search-bar { background: #fffdf7; color: var(--text-main); border-radius: 16px; }
-button.branch-pill { background: rgba(255,253,247,.8); border-radius: 999px; }
-button.branch-pill.active { background: #dcebe5; }
-section.jobs-grid { grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr)); gap: 18px; }
-article.job-card { border-radius: 22px 22px 22px 8px; padding: 22px; box-shadow: 0 5px 18px rgba(46,63,55,.045); }
-article.job-card:hover { transform: translateY(-4px); border-color: #8bb5a5; background: #fffefa; box-shadow: 0 18px 34px rgba(46,63,55,.12); }
-span.affinity-badge, span.job-tag { border-radius: 999px; }
-div.job-company { color: #147b77; }
-span.job-tag { background: #edf2ec; color: #40534d; }
-
-/* La misión aparece al recorrer la convocatoria completa, con soporte de teclado. */
-.job-card:hover .floating-cloud, .job-card:focus-within .floating-cloud { opacity: 1; visibility: visible; pointer-events: auto; transform: translateY(0) scale(1); }
-.floating-cloud { width: min(360px, calc(100vw - 48px)); background: #fffdf7; color: var(--text-main); border-color: #91b8a8; border-radius: 18px 18px 18px 7px; box-shadow: 0 18px 38px rgba(35,55,48,.18); }
-.floating-cloud::before { background: #fffdf7; border-color: #91b8a8; }
-.cloud-title { color: #147b77; }
-.cloud-body { color: #31413c; }
-.cloud-tasks-section { color: #5f6d67; }
-.cloud-tasks-section strong { color: #a96320; }
-a.apply-link { background: #176f68; border-radius: 999px; font-family: var(--font-body); }
-a.apply-link:hover { background: #0d5c57; color: #fff; box-shadow: 0 8px 18px rgba(23,111,104,.2); }
-
-@media (max-width: 600px) {
-  header.site-header { padding: 14px 16px; }
-  main.main-content { padding: 0 16px; }
-  .header-meta { gap: 7px; font-size: .72rem; flex-wrap: wrap; }
-  .floating-cloud { position: fixed; top: 50%; left: 50%; right: auto; z-index: 1000; transform: translate(-50%, 8px) scale(.98); }
-  .job-card:hover .floating-cloud, .job-card:focus-within .floating-cloud { transform: translate(-50%, -50%) scale(1); }
-}
-
-/* Constelación animada y lámina vectorial de física como fondo. */
-body { position: relative; isolation: isolate; }
-body::before { content: ""; position: fixed; inset: 0; pointer-events: none; }
-body::before {
-  z-index: 0;
-  background: url('fondo_fisica.svg') center / cover no-repeat;
-  opacity: .76;
-}
-#constellationCanvas { position: fixed; inset: 0; z-index: 0; width: 100%; height: 100%; pointer-events: none; }
-.site-header, .main-content, .site-footer { position: relative; z-index: 1; }
-.header-meta { flex-wrap: wrap; justify-content: flex-start; }
-.theme-toggle {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  min-height: 40px;
-  padding: 7px 13px;
-  border: 1px solid var(--border-strong);
-  border-radius: 999px;
-  background: var(--bg-surface-elevated);
-  color: var(--text-main);
-  font: 600 .78rem var(--font-body);
-  cursor: pointer;
-  transition: background-color .25s, color .25s, border-color .25s, transform .25s;
-}
-.theme-toggle:hover { transform: translateY(-1px); border-color: var(--accent-cyan); }
-.theme-toggle:focus-visible { outline: 3px solid color-mix(in srgb, var(--accent-cyan) 40%, transparent); outline-offset: 3px; }
-.theme-toggle-icon { font-size: 1rem; line-height: 1; }
-
-html[data-theme="light"] { color-scheme: light; }
-html[data-theme="dark"] {
-  color-scheme: dark;
-  --bg-deep: #10151a;
-  --bg-surface: #171f24;
-  --bg-surface-elevated: #202b30;
-  --bg-chip: #29373b;
-  --border-subtle: rgba(221,239,229,.1);
-  --border-strong: rgba(221,239,229,.22);
-  --border-technical: #334249;
-  --accent-cyan: #77d3ca;
-  --accent-amber: #f5bd72;
-  --accent-emerald: #83cba5;
-  --accent-crimson: #ff8790;
-  --accent-violet: #b5a6ed;
-  --text-main: #edf3ee;
-  --text-muted: #a5b3ae;
-  --text-dim: #83918c;
-}
-html[data-theme="dark"] body {
-  background-color: var(--bg-deep);
-  background-image: radial-gradient(ellipse at 85% 8%, rgba(63,111,105,.2), transparent 32rem), radial-gradient(ellipse at 8% 38%, rgba(101,76,118,.14), transparent 28rem);
-}
-html[data-theme="dark"] body::before { opacity: .50; filter: saturate(.8) brightness(1.18); }
-html[data-theme="dark"] header.site-header { background: rgba(16,21,26,.92); border-color: var(--border-technical); }
-html[data-theme="dark"] .brand-symbol { background: #1b302f; }
-html[data-theme="dark"] .brand-text h1,
-html[data-theme="dark"] .creator-tag strong,
-html[data-theme="dark"] section.manifesto-box h2,
-html[data-theme="dark"] h3.job-title { color: var(--text-main); }
-html[data-theme="dark"] .creator-tag { background: rgba(119,211,202,.1); border-color: rgba(119,211,202,.25); }
-html[data-theme="dark"] .header-meta,
-html[data-theme="dark"] section.manifesto-box,
-html[data-theme="dark"] article.job-card,
-html[data-theme="dark"] article.editorial-card { background: rgba(23,31,36,.88); border-color: var(--border-technical); }
-html[data-theme="dark"] article.job-card:hover { background: #202b30; border-color: #5f9188; }
-html[data-theme="dark"] input.search-bar { background: #171f24; color: var(--text-main); }
-html[data-theme="dark"] button.branch-pill { background: #171f24; color: var(--text-muted); }
-html[data-theme="dark"] button.branch-pill.active { background: #203b39; }
-html[data-theme="dark"] span.job-tag { background: #29373b; color: #d4e0da; }
-html[data-theme="dark"] div.job-company { color: #83d5cc; }
-html[data-theme="dark"] .floating-cloud { background: #1b272c; color: var(--text-main); border-color: #5f9188; }
-html[data-theme="dark"] .floating-cloud::before { background: #1b272c; border-color: #5f9188; }
-html[data-theme="dark"] .cloud-title { color: #83d5cc; }
-html[data-theme="dark"] .cloud-body { color: #e1ebe5; }
-html[data-theme="dark"] .cloud-tasks-section { color: #afbeb7; }
-html[data-theme="dark"] a.apply-link { background: #267f77; }
-html[data-theme="dark"] a.apply-link:hover { background: #35958a; color: #fff; }
-html[data-theme="dark"] .theme-toggle { background: #202b30; color: var(--text-main); }
-
-@media (prefers-reduced-motion: reduce) {
-  .theme-toggle { transition: none; }
-}
-
-.application-tracker {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin: 0 0 18px;
-  color: var(--text-muted);
-  font-size: .88rem;
-}
-.application-tracker label { color: var(--text-main); font-weight: 700; }
-.application-tracker label span { color: var(--text-dim); font-size: .76rem; font-weight: 400; }
-.application-tracker select {
-  min-height: 40px;
-  padding: 7px 34px 7px 12px;
-  border: 1px solid var(--border-strong);
-  border-radius: 999px;
-  background: var(--bg-surface-elevated);
-  color: var(--text-main);
-  font: 500 .82rem var(--font-body);
-}
-.application-tracker select:focus-visible,
-.application-toggle:focus-visible { outline: 3px solid color-mix(in srgb, var(--accent-cyan) 38%, transparent); outline-offset: 2px; }
 .application-toggle {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   width: 100%;
-  min-height: 40px;
+  min-height: 36px;
   border: 1px solid var(--border-strong);
-  border-radius: 999px;
+  border-radius: 10px;
   background: var(--bg-chip);
-  color: var(--text-main);
-  font: 600 .82rem var(--font-body);
+  color: var(--text-muted);
+  font-family: var(--font-body);
+  font-size: 0.80rem;
+  font-weight: 600;
   cursor: pointer;
-  transition: background-color .2s, border-color .2s, transform .2s;
+  transition: all 0.2s ease;
 }
-.application-toggle:hover { transform: translateY(-1px); border-color: var(--accent-emerald); }
-.application-toggle.is-applied { background: color-mix(in srgb, var(--accent-emerald) 17%, var(--bg-surface)); border-color: color-mix(in srgb, var(--accent-emerald) 50%, var(--border-strong)); color: var(--accent-emerald); }
-footer.job-card-footer { display: grid; gap: 9px; }
 
-@media (max-width: 700px) {
-  body::before { background-image: url('fondo_fisica_movil.svg'); background-size: 100% 100%; background-position: center; opacity: .88; }
-  html[data-theme="dark"] body::before { opacity: .72; }
+.application-toggle:hover {
+  border-color: var(--accent-emerald);
+  color: var(--text-main);
+  background: var(--bg-surface-elevated);
+}
+
+.application-toggle.is-applied {
+  background: rgba(0, 240, 160, 0.12);
+  border-color: var(--accent-emerald);
+  color: var(--accent-emerald);
+}
+
+/* ==========================================================================
+   SECCIONES EDITORIALES: BECAS & CONVENIOS UNAL DRE
+   ========================================================================== */
+article.editorial-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-technical);
+  border-radius: 18px;
+  padding: 28px;
+  margin-bottom: 24px;
+  box-shadow: var(--shadow-md);
+}
+
+article.editorial-card h3 {
+  font-family: var(--font-display);
+  font-size: 1.45rem;
+  color: var(--accent-cyan);
+  margin-bottom: 12px;
+}
+
+article.editorial-card p {
+  color: var(--text-muted);
+  font-size: 0.94rem;
+  line-height: 1.6;
+}
+
+/* Tarjeta de Becas Globales */
+.beca-card {
+  background: var(--bg-surface-elevated);
+  border: 1px solid var(--border-technical);
+  border-radius: 14px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+  box-shadow: var(--shadow-sm);
+}
+
+.beca-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent-cyan);
+  box-shadow: var(--shadow-md);
+}
+
+.beca-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 10px;
+  gap: 8px;
+}
+
+.beca-type-tag {
+  font-size: 0.72rem;
+  font-family: var(--font-mono);
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 3px 9px;
+  border-radius: 999px;
+}
+
+.beca-country-tag {
+  font-size: 0.78rem;
+  font-family: var(--font-mono);
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.beca-title {
+  font-family: var(--font-display);
+  font-size: 1.08rem;
+  color: var(--text-main);
+  margin-bottom: 6px;
+  line-height: 1.35;
+}
+
+.beca-entity {
+  font-size: 0.84rem;
+  color: var(--accent-emerald);
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.beca-coverage {
+  font-size: 0.80rem;
+  color: var(--text-muted);
+  margin-bottom: 10px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  padding: 8px 12px;
+  border-radius: 8px;
+}
+
+.beca-desc {
+  font-size: 0.84rem;
+  line-height: 1.5;
+  color: var(--text-muted);
+  margin-bottom: 16px;
+}
+
+/* Convenios Explorer Controls */
+.convenios-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.convenios-controls select {
+  padding: 10px 14px;
+  background: var(--bg-surface);
+  color: var(--text-main);
+  border: 1px solid var(--border-technical);
+  border-radius: 10px;
+  font-family: var(--font-mono);
+  font-size: 0.84rem;
+  outline: none;
+  cursor: pointer;
+  transition: border-color 0.2s ease;
+}
+
+.convenios-controls select:focus {
+  border-color: var(--accent-cyan);
+}
+
+.convenio-card {
+  background: var(--bg-surface-elevated);
+  border: 1px solid var(--border-technical);
+  border-radius: 12px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.convenio-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--accent-emerald);
+}
+
+/* ==========================================================================
+   BOTÓN FLOTANTE "VOLVER ARRIBA"
+   ========================================================================== */
+.back-to-top {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--accent-cyan);
+  color: var(--text-inverse);
+  border: none;
+  font-family: var(--font-mono);
+  font-size: 1.2rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 16px rgba(0, 229, 255, 0.4);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(12px);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 300;
+}
+
+.back-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.back-to-top:hover {
+  transform: translateY(-3px) scale(1.08);
+  box-shadow: 0 6px 22px rgba(0, 229, 255, 0.6);
+}
+
+/* ==========================================================================
+   PIE DE PÁGINA (FOOTER)
+   ========================================================================== */
+footer.site-footer {
+  text-align: center;
+  margin-top: 60px;
+  padding: 40px 20px;
+  border-top: 1px solid var(--border-subtle);
+  background: var(--bg-surface);
+  font-family: var(--font-mono);
+  font-size: 0.84rem;
+  color: var(--text-muted);
+  position: relative;
+  z-index: 1;
+}
+
+footer.site-footer p.institution {
+  color: var(--text-main);
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+footer.site-footer p.schedule-note {
+  color: var(--accent-amber);
+  font-size: 0.80rem;
+}
+
+/* ==========================================================================
+   RESPONSIVIDAD Y AJUSTES MÓVILES
+   ========================================================================== */
+@media (max-width: 768px) {
+  header.site-header {
+    padding: 12px 16px;
+  }
+
+  .header-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .header-meta {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  main.main-content {
+    padding: 0 16px;
+    margin-top: 20px;
+  }
+
+  section.manifesto-box {
+    padding: 18px 20px;
+  }
+
+  section.jobs-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .floating-cloud {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    right: auto;
+    transform: translate(-50%, -50%) scale(0.96);
+    width: min(340px, calc(100vw - 32px));
+  }
+
+  .info-trigger:hover .floating-cloud,
+  .info-trigger:focus-within .floating-cloud {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }

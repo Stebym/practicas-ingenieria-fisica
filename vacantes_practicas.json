@@ -27,10 +27,335 @@
     "rama_principal": "Física de Radiaciones y Física Médica",
     "color_principal": "#ef4444",
     "clave_principal": "radiaciones_fisica_medica",
-    "afinidad": "Exclusiva Física",
+    "afinidad": "Afinidad con Física",
     "es_exclusiva_fisica": true,
     "es_cierre_inminente": false,
-    "score_pensum": 193
+    "score_pensum": 193,
+    "es_practica": true
+  },
+  {
+    "titulo": "Practicante de automatización de operaciones",
+    "empresa": "REDEBAN",
+    "ubicacion": "Bogotá",
+    "url": "https://www.elempleo.com/co/ofertas-trabajo/practicante-de-automatizacion-de-operaciones-1886773246",
+    "fecha_publicacion": "Reciente",
+    "fuente": "ElEmpleo.com",
+    "compensacion": "$2 a $2,5 millones",
+    "ramas": [
+      {
+        "clave": "instrumentacion_metrologia",
+        "nombre": "Instrumentación, Automatización y Metrología",
+        "color": "#10b981",
+        "score": 73
+      }
+    ],
+    "rama_principal": "Instrumentación, Automatización y Metrología",
+    "color_principal": "#10b981",
+    "clave_principal": "instrumentacion_metrologia",
+    "afinidad": "Afinidad con Física",
+    "es_exclusiva_fisica": true,
+    "es_cierre_inminente": false,
+    "score_pensum": 193,
+    "mision": "Calibración de instrumentos de medición de variables físicas, cálculo de incertidumbre y programación de sistemas DAQ/LabVIEW.",
+    "tareas": "Levantamiento de curvas de calibración, programación en LabVIEW, enlace con autómatas PLC y aseguramiento metrológico ISO 17025.",
+    "es_practica": true
+  },
+  {
+    "titulo": "Ingeniero de innovaciónes y automatización - bogotá",
+    "empresa": "ADECCO COLOMBIA S A",
+    "ubicacion": "Bogotá",
+    "url": "https://www.elempleo.com/co/ofertas-trabajo/profesional-junior-de-automatizacion-y-transformacion-digital-1886759420",
+    "fecha_publicacion": "Reciente",
+    "fuente": "ElEmpleo.com",
+    "compensacion": "$4 a $4,5 millones",
+    "ramas": [
+      {
+        "clave": "instrumentacion_metrologia",
+        "nombre": "Instrumentación, Automatización y Metrología",
+        "color": "#10b981",
+        "score": 73
+      }
+    ],
+    "rama_principal": "Instrumentación, Automatización y Metrología",
+    "color_principal": "#10b981",
+    "clave_principal": "instrumentacion_metrologia",
+    "afinidad": "Afinidad con Física",
+    "es_exclusiva_fisica": true,
+    "es_cierre_inminente": false,
+    "score_pensum": 193,
+    "mision": "Calibración de instrumentos de medición de variables físicas, cálculo de incertidumbre y programación de sistemas DAQ/LabVIEW.",
+    "tareas": "Levantamiento de curvas de calibración, programación en LabVIEW, enlace con autómatas PLC y aseguramiento metrológico ISO 17025.",
+    "es_practica": false
+  },
+  {
+    "titulo": "Auxiliar de automatización",
+    "empresa": "Banco de Occidente",
+    "ubicacion": "Cali",
+    "url": "https://www.elempleo.com/co/ofertas-trabajo/analista-de-procesos-y-automatizacion-remoto-1886772940",
+    "fecha_publicacion": "Reciente",
+    "fuente": "ElEmpleo.com",
+    "compensacion": "$1,5 a $2 millones",
+    "ramas": [
+      {
+        "clave": "instrumentacion_metrologia",
+        "nombre": "Instrumentación, Automatización y Metrología",
+        "color": "#10b981",
+        "score": 73
+      }
+    ],
+    "rama_principal": "Instrumentación, Automatización y Metrología",
+    "color_principal": "#10b981",
+    "clave_principal": "instrumentacion_metrologia",
+    "afinidad": "Afinidad con Física",
+    "es_exclusiva_fisica": true,
+    "es_cierre_inminente": false,
+    "score_pensum": 193,
+    "mision": "Calibración de instrumentos de medición de variables físicas, cálculo de incertidumbre y programación de sistemas DAQ/LabVIEW.",
+    "tareas": "Levantamiento de curvas de calibración, programación en LabVIEW, enlace con autómatas PLC y aseguramiento metrológico ISO 17025.",
+    "es_practica": false
+  },
+  {
+    "titulo": "Gestor de procesos y automatización",
+    "empresa": "Cinte Colombia SAS",
+    "ubicacion": "Bogotá",
+    "url": "https://www.elempleo.com/co/ofertas-trabajo/practica-profesional-ingenieria-mecatronica-automatizacion-1886778926",
+    "fecha_publicacion": "Reciente",
+    "fuente": "ElEmpleo.com",
+    "compensacion": "$4,5 a $5,5 millones",
+    "ramas": [
+      {
+        "clave": "instrumentacion_metrologia",
+        "nombre": "Instrumentación, Automatización y Metrología",
+        "color": "#10b981",
+        "score": 73
+      }
+    ],
+    "rama_principal": "Instrumentación, Automatización y Metrología",
+    "color_principal": "#10b981",
+    "clave_principal": "instrumentacion_metrologia",
+    "afinidad": "Afinidad con Física",
+    "es_exclusiva_fisica": true,
+    "es_cierre_inminente": false,
+    "score_pensum": 193,
+    "mision": "Calibración de instrumentos de medición de variables físicas, cálculo de incertidumbre y programación de sistemas DAQ/LabVIEW.",
+    "tareas": "Levantamiento de curvas de calibración, programación en LabVIEW, enlace con autómatas PLC y aseguramiento metrológico ISO 17025.",
+    "es_practica": false
+  },
+  {
+    "titulo": "Practicantes-tecnólogo electromecánico - eléctrico - refrigeración",
+    "empresa": "Empresa confidencial",
+    "ubicacion": "Bogotá",
+    "url": "https://www.elempleo.com/co/ofertas-trabajo/practicantestecnologo-electromecanico-electrico-refrigeracion-1886768573",
+    "fecha_publicacion": "Reciente",
+    "fuente": "ElEmpleo.com",
+    "compensacion": "$1 a $1,5 millones",
+    "ramas": [
+      {
+        "clave": "instrumentacion_metrologia",
+        "nombre": "Instrumentación, Automatización y Metrología",
+        "color": "#10b981",
+        "score": 73
+      }
+    ],
+    "rama_principal": "Instrumentación, Automatización y Metrología",
+    "color_principal": "#10b981",
+    "clave_principal": "instrumentacion_metrologia",
+    "afinidad": "Afinidad con Física",
+    "es_exclusiva_fisica": true,
+    "es_cierre_inminente": false,
+    "score_pensum": 193,
+    "mision": "Calibración de instrumentos de medición de variables físicas, cálculo de incertidumbre y programación de sistemas DAQ/LabVIEW.",
+    "tareas": "Levantamiento de curvas de calibración, programación en LabVIEW, enlace con autómatas PLC y aseguramiento metrológico ISO 17025.",
+    "es_practica": false
+  },
+  {
+    "titulo": "Electromecanico - mosquera - 1626478551-2",
+    "empresa": "AGENCIA DE EMPLEO Y FOMENTO EMPRESARIAL COMPENSAR",
+    "ubicacion": "Mosquera",
+    "url": "https://www.elempleo.com/co/ofertas-trabajo/electromecanico-bogota-1886774188",
+    "fecha_publicacion": "Reciente",
+    "fuente": "ElEmpleo.com",
+    "compensacion": "$2 a $2,5 millones",
+    "ramas": [
+      {
+        "clave": "instrumentacion_metrologia",
+        "nombre": "Instrumentación, Automatización y Metrología",
+        "color": "#10b981",
+        "score": 73
+      }
+    ],
+    "rama_principal": "Instrumentación, Automatización y Metrología",
+    "color_principal": "#10b981",
+    "clave_principal": "instrumentacion_metrologia",
+    "afinidad": "Afinidad con Física",
+    "es_exclusiva_fisica": true,
+    "es_cierre_inminente": false,
+    "score_pensum": 193,
+    "mision": "Calibración de instrumentos de medición de variables físicas, cálculo de incertidumbre y programación de sistemas DAQ/LabVIEW.",
+    "tareas": "Levantamiento de curvas de calibración, programación en LabVIEW, enlace con autómatas PLC y aseguramiento metrológico ISO 17025.",
+    "es_practica": false
+  },
+  {
+    "titulo": "Electromecanico- laboratorio farmaceutico",
+    "empresa": "Empresa confidencial",
+    "ubicacion": "Bogotá",
+    "url": "https://www.elempleo.com/co/ofertas-trabajo/electromecanico-mosquera-16264785512-1886757051",
+    "fecha_publicacion": "Reciente",
+    "fuente": "ElEmpleo.com",
+    "compensacion": "$2 a $2,5 millones",
+    "ramas": [
+      {
+        "clave": "instrumentacion_metrologia",
+        "nombre": "Instrumentación, Automatización y Metrología",
+        "color": "#10b981",
+        "score": 73
+      }
+    ],
+    "rama_principal": "Instrumentación, Automatización y Metrología",
+    "color_principal": "#10b981",
+    "clave_principal": "instrumentacion_metrologia",
+    "afinidad": "Afinidad con Física",
+    "es_exclusiva_fisica": true,
+    "es_cierre_inminente": false,
+    "score_pensum": 193,
+    "mision": "Calibración de instrumentos de medición de variables físicas, cálculo de incertidumbre y programación de sistemas DAQ/LabVIEW.",
+    "tareas": "Levantamiento de curvas de calibración, programación en LabVIEW, enlace con autómatas PLC y aseguramiento metrológico ISO 17025.",
+    "es_practica": false
+  },
+  {
+    "titulo": "Electromecánico",
+    "empresa": "Empresa confidencial",
+    "ubicacion": "Bogotá",
+    "url": "https://www.elempleo.com/co/ofertas-trabajo/electromecanico-laboratorio-farmaceutico-1886765467",
+    "fecha_publicacion": "Reciente",
+    "fuente": "ElEmpleo.com",
+    "compensacion": "$3 a $3,5 millones",
+    "ramas": [
+      {
+        "clave": "instrumentacion_metrologia",
+        "nombre": "Instrumentación, Automatización y Metrología",
+        "color": "#10b981",
+        "score": 73
+      }
+    ],
+    "rama_principal": "Instrumentación, Automatización y Metrología",
+    "color_principal": "#10b981",
+    "clave_principal": "instrumentacion_metrologia",
+    "afinidad": "Afinidad con Física",
+    "es_exclusiva_fisica": true,
+    "es_cierre_inminente": false,
+    "score_pensum": 193,
+    "mision": "Calibración de instrumentos de medición de variables físicas, cálculo de incertidumbre y programación de sistemas DAQ/LabVIEW.",
+    "tareas": "Levantamiento de curvas de calibración, programación en LabVIEW, enlace con autómatas PLC y aseguramiento metrológico ISO 17025.",
+    "es_practica": false
+  },
+  {
+    "titulo": "Electromecánico de mantenimiento industrial para alemania",
+    "empresa": "Gabarro Deutschland Gmbh",
+    "ubicacion": "Bogotá",
+    "url": "https://www.elempleo.com/co/ofertas-trabajo/electromecanico-mantenimiento-industrial-bogota-1886766336",
+    "fecha_publicacion": "Reciente",
+    "fuente": "ElEmpleo.com",
+    "compensacion": "$10 a $12,5 millones",
+    "ramas": [
+      {
+        "clave": "instrumentacion_metrologia",
+        "nombre": "Instrumentación, Automatización y Metrología",
+        "color": "#10b981",
+        "score": 73
+      }
+    ],
+    "rama_principal": "Instrumentación, Automatización y Metrología",
+    "color_principal": "#10b981",
+    "clave_principal": "instrumentacion_metrologia",
+    "afinidad": "Afinidad con Física",
+    "es_exclusiva_fisica": true,
+    "es_cierre_inminente": false,
+    "score_pensum": 193,
+    "mision": "Calibración de instrumentos de medición de variables físicas, cálculo de incertidumbre y programación de sistemas DAQ/LabVIEW.",
+    "tareas": "Levantamiento de curvas de calibración, programación en LabVIEW, enlace con autómatas PLC y aseguramiento metrológico ISO 17025.",
+    "es_practica": false
+  },
+  {
+    "titulo": "Técnico electromecánico",
+    "empresa": "Prysmian Group - Procables",
+    "ubicacion": "Bogotá",
+    "url": "https://www.elempleo.com/co/ofertas-trabajo/electromecanico-mantenimiento-industrial-1886780395",
+    "fecha_publicacion": "Reciente",
+    "fuente": "ElEmpleo.com",
+    "compensacion": "$3,5 a $4 millones",
+    "ramas": [
+      {
+        "clave": "instrumentacion_metrologia",
+        "nombre": "Instrumentación, Automatización y Metrología",
+        "color": "#10b981",
+        "score": 73
+      }
+    ],
+    "rama_principal": "Instrumentación, Automatización y Metrología",
+    "color_principal": "#10b981",
+    "clave_principal": "instrumentacion_metrologia",
+    "afinidad": "Afinidad con Física",
+    "es_exclusiva_fisica": true,
+    "es_cierre_inminente": false,
+    "score_pensum": 193,
+    "mision": "Calibración de instrumentos de medición de variables físicas, cálculo de incertidumbre y programación de sistemas DAQ/LabVIEW.",
+    "tareas": "Levantamiento de curvas de calibración, programación en LabVIEW, enlace con autómatas PLC y aseguramiento metrológico ISO 17025.",
+    "es_practica": false
+  },
+  {
+    "titulo": "Tecnico electromecanico - cajica",
+    "empresa": "IMPULSO TEMPORAL SAS",
+    "ubicacion": "Cajicá",
+    "url": "https://www.elempleo.com/co/ofertas-trabajo/electromecanico-1886772524",
+    "fecha_publicacion": "Reciente",
+    "fuente": "ElEmpleo.com",
+    "compensacion": "$1,5 a $2 millones",
+    "ramas": [
+      {
+        "clave": "instrumentacion_metrologia",
+        "nombre": "Instrumentación, Automatización y Metrología",
+        "color": "#10b981",
+        "score": 73
+      }
+    ],
+    "rama_principal": "Instrumentación, Automatización y Metrología",
+    "color_principal": "#10b981",
+    "clave_principal": "instrumentacion_metrologia",
+    "afinidad": "Afinidad con Física",
+    "es_exclusiva_fisica": true,
+    "es_cierre_inminente": false,
+    "score_pensum": 193,
+    "mision": "Calibración de instrumentos de medición de variables físicas, cálculo de incertidumbre y programación de sistemas DAQ/LabVIEW.",
+    "tareas": "Levantamiento de curvas de calibración, programación en LabVIEW, enlace con autómatas PLC y aseguramiento metrológico ISO 17025.",
+    "es_practica": false
+  },
+  {
+    "titulo": "1626541834-2 - técnico electromecánico - bogotá",
+    "empresa": "AGENCIA DE EMPLEO Y FOMENTO EMPRESARIAL COMPENSAR",
+    "ubicacion": "Bogotá",
+    "url": "https://www.elempleo.com/co/ofertas-trabajo/electromecanico-sector-hidrocarburos-1886757674",
+    "fecha_publicacion": "Reciente",
+    "fuente": "ElEmpleo.com",
+    "compensacion": "$1,5 a $2 millones",
+    "ramas": [
+      {
+        "clave": "instrumentacion_metrologia",
+        "nombre": "Instrumentación, Automatización y Metrología",
+        "color": "#10b981",
+        "score": 73
+      }
+    ],
+    "rama_principal": "Instrumentación, Automatización y Metrología",
+    "color_principal": "#10b981",
+    "clave_principal": "instrumentacion_metrologia",
+    "afinidad": "Afinidad con Física",
+    "es_exclusiva_fisica": true,
+    "es_cierre_inminente": false,
+    "score_pensum": 193,
+    "mision": "Calibración de instrumentos de medición de variables físicas, cálculo de incertidumbre y programación de sistemas DAQ/LabVIEW.",
+    "tareas": "Levantamiento de curvas de calibración, programación en LabVIEW, enlace con autómatas PLC y aseguramiento metrológico ISO 17025.",
+    "es_practica": false
   },
   {
     "titulo": "Practicantes de Datos y Analítica 2027-1",
@@ -54,10 +379,11 @@
     "rama_principal": "Análisis de Datos, IA y Simulaciones",
     "color_principal": "#06b6d4",
     "clave_principal": "simulaciones_datos_ia",
-    "afinidad": "Exclusiva Física",
+    "afinidad": "Afinidad con Física",
     "es_exclusiva_fisica": true,
-    "es_cierre_inminente": true,
-    "score_pensum": 192
+    "es_cierre_inminente": false,
+    "score_pensum": 192,
+    "es_practica": false
   },
   {
     "titulo": "Practicante de Metrología e Instrumentación",
@@ -81,10 +407,11 @@
     "rama_principal": "Instrumentación, Automatización y Metrología",
     "color_principal": "#10b981",
     "clave_principal": "instrumentacion_metrologia",
-    "afinidad": "Exclusiva Física",
+    "afinidad": "Afinidad con Física",
     "es_exclusiva_fisica": true,
     "es_cierre_inminente": false,
-    "score_pensum": 190
+    "score_pensum": 190,
+    "es_practica": true
   },
   {
     "titulo": "Prácticas de Excelencia 2027-I (Modelado, TIC y Electrificación)",
@@ -108,10 +435,11 @@
     "rama_principal": "Análisis de Datos, IA y Simulaciones",
     "color_principal": "#06b6d4",
     "clave_principal": "simulaciones_datos_ia",
-    "afinidad": "Exclusiva Física",
+    "afinidad": "Afinidad con Física",
     "es_exclusiva_fisica": true,
     "es_cierre_inminente": false,
-    "score_pensum": 189
+    "score_pensum": 189,
+    "es_practica": false
   },
   {
     "titulo": "Práctica Profesional 2027-1 (Insumos, Superficies y Materiales)",
@@ -141,10 +469,11 @@
     "rama_principal": "Instrumentación, Automatización y Metrología",
     "color_principal": "#10b981",
     "clave_principal": "instrumentacion_metrologia",
-    "afinidad": "Exclusiva Física",
+    "afinidad": "Afinidad con Física",
     "es_exclusiva_fisica": true,
     "es_cierre_inminente": false,
-    "score_pensum": 188
+    "score_pensum": 188,
+    "es_practica": true
   },
   {
     "titulo": "Semillero de Practicantes 2027-1 (Transitorios, Potencia y Datos)",
@@ -180,10 +509,11 @@
     "rama_principal": "Análisis de Datos, IA y Simulaciones",
     "color_principal": "#06b6d4",
     "clave_principal": "simulaciones_datos_ia",
-    "afinidad": "Exclusiva Física",
+    "afinidad": "Afinidad con Física",
     "es_exclusiva_fisica": true,
     "es_cierre_inminente": false,
-    "score_pensum": 187
+    "score_pensum": 187,
+    "es_practica": false
   },
   {
     "titulo": "Practicantes Universitarios 2027-1 Pruebas, Calidad y Validación",
@@ -207,10 +537,11 @@
     "rama_principal": "Instrumentación, Automatización y Metrología",
     "color_principal": "#10b981",
     "clave_principal": "instrumentacion_metrologia",
-    "afinidad": "Exclusiva Física",
+    "afinidad": "Afinidad con Física",
     "es_exclusiva_fisica": true,
     "es_cierre_inminente": false,
-    "score_pensum": 187
+    "score_pensum": 187,
+    "es_practica": false
   },
   {
     "titulo": "Practicante Universitario en Automatización y Desarrollo",
@@ -240,10 +571,11 @@
     "rama_principal": "Análisis de Datos, IA y Simulaciones",
     "color_principal": "#06b6d4",
     "clave_principal": "simulaciones_datos_ia",
-    "afinidad": "Exclusiva Física",
+    "afinidad": "Afinidad con Física",
     "es_exclusiva_fisica": true,
     "es_cierre_inminente": false,
-    "score_pensum": 186
+    "score_pensum": 186,
+    "es_practica": true
   },
   {
     "titulo": "Estudiante en Práctica de Ingeniería (Procesos Continuos)",
@@ -267,10 +599,11 @@
     "rama_principal": "Instrumentación, Automatización y Metrología",
     "color_principal": "#10b981",
     "clave_principal": "instrumentacion_metrologia",
-    "afinidad": "Exclusiva Física",
+    "afinidad": "Afinidad con Física",
     "es_exclusiva_fisica": true,
     "es_cierre_inminente": false,
-    "score_pensum": 184
+    "score_pensum": 184,
+    "es_practica": true
   },
   {
     "titulo": "Proyecto Mediciones y Movilidad Eléctrica 2027-1",
@@ -306,10 +639,11 @@
     "rama_principal": "Análisis de Datos, IA y Simulaciones",
     "color_principal": "#06b6d4",
     "clave_principal": "simulaciones_datos_ia",
-    "afinidad": "Exclusiva Física",
+    "afinidad": "Afinidad con Física",
     "es_exclusiva_fisica": true,
     "es_cierre_inminente": false,
-    "score_pensum": 183
+    "score_pensum": 183,
+    "es_practica": false
   },
   {
     "titulo": "Programa de Prácticas 2027-1 (Renovables y Redes)",
@@ -339,10 +673,570 @@
     "rama_principal": "Instrumentación, Automatización y Metrología",
     "color_principal": "#10b981",
     "clave_principal": "instrumentacion_metrologia",
-    "afinidad": "Exclusiva Física",
+    "afinidad": "Afinidad con Física",
     "es_exclusiva_fisica": true,
     "es_cierre_inminente": false,
-    "score_pensum": 181
+    "score_pensum": 181,
+    "es_practica": false
+  },
+  {
+    "titulo": "Técnico /Tecnólogo de Mecatronica, Electromecánica  automatización",
+    "empresa": "SERVIOPTICA S.A.S",
+    "ubicacion": "La Estrella, Antioquia",
+    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-tecnico-tecnologo-de-mecatronica-electromecanica-automatizacion-experiencia-de-2-anos-en-procesos-de-produccion-con-sistemas-automaticosorientados-a-la-industria-en-la-estrella-A5C5C0C2F2828AF461373E686DCF3405",
+    "fecha_publicacion": "Reciente",
+    "fuente": "Computrabajo",
+    "ramas": [
+      {
+        "clave": "instrumentacion_metrologia",
+        "nombre": "Instrumentación, Automatización y Metrología",
+        "color": "#10b981",
+        "score": 79
+      },
+      {
+        "clave": "optica_vision_artificial",
+        "nombre": "Óptica, Fotónica y Visión Artificial",
+        "color": "#a855f7",
+        "score": 53
+      }
+    ],
+    "rama_principal": "Instrumentación, Automatización y Metrología",
+    "color_principal": "#10b981",
+    "clave_principal": "instrumentacion_metrologia",
+    "afinidad": "Afinidad con Física",
+    "es_exclusiva_fisica": true,
+    "es_cierre_inminente": false,
+    "score_pensum": 164,
+    "mision": "Calibración de instrumentos de medición de variables físicas, cálculo de incertidumbre y programación de sistemas DAQ/LabVIEW.",
+    "tareas": "Levantamiento de curvas de calibración, programación en LabVIEW, enlace con autómatas PLC y aseguramiento metrológico ISO 17025.",
+    "es_practica": false
+  },
+  {
+    "titulo": "Ingeniero de proyectos automatización y control - oil&gas",
+    "empresa": "Empresa confidencial",
+    "ubicacion": "Bogotá",
+    "url": "https://www.elempleo.com/co/ofertas-trabajo/analista-de-automatizacion-1886774432",
+    "fecha_publicacion": "Reciente",
+    "fuente": "ElEmpleo.com",
+    "compensacion": "",
+    "ramas": [
+      {
+        "clave": "instrumentacion_metrologia",
+        "nombre": "Instrumentación, Automatización y Metrología",
+        "color": "#10b981",
+        "score": 76
+      }
+    ],
+    "rama_principal": "Instrumentación, Automatización y Metrología",
+    "color_principal": "#10b981",
+    "clave_principal": "instrumentacion_metrologia",
+    "afinidad": "Afinidad con Física",
+    "es_exclusiva_fisica": true,
+    "es_cierre_inminente": false,
+    "score_pensum": 161,
+    "mision": "Calibración de instrumentos de medición de variables físicas, cálculo de incertidumbre y programación de sistemas DAQ/LabVIEW.",
+    "tareas": "Levantamiento de curvas de calibración, programación en LabVIEW, enlace con autómatas PLC y aseguramiento metrológico ISO 17025.",
+    "es_practica": false
+  },
+  {
+    "titulo": "Medellín - dibujante automatización y control bilingüe.",
+    "empresa": "HATCH S.A.S",
+    "ubicacion": "Medellín",
+    "url": "https://www.elempleo.com/co/ofertas-trabajo/auxiliar-de-automatizacion-e-analitica-de-cobranza-1886758244",
+    "fecha_publicacion": "Reciente",
+    "fuente": "ElEmpleo.com",
+    "compensacion": "",
+    "ramas": [
+      {
+        "clave": "instrumentacion_metrologia",
+        "nombre": "Instrumentación, Automatización y Metrología",
+        "color": "#10b981",
+        "score": 76
+      }
+    ],
+    "rama_principal": "Instrumentación, Automatización y Metrología",
+    "color_principal": "#10b981",
+    "clave_principal": "instrumentacion_metrologia",
+    "afinidad": "Afinidad con Física",
+    "es_exclusiva_fisica": true,
+    "es_cierre_inminente": false,
+    "score_pensum": 161,
+    "mision": "Calibración de instrumentos de medición de variables físicas, cálculo de incertidumbre y programación de sistemas DAQ/LabVIEW.",
+    "tareas": "Levantamiento de curvas de calibración, programación en LabVIEW, enlace con autómatas PLC y aseguramiento metrológico ISO 17025.",
+    "es_practica": false
+  },
+  {
+    "titulo": "Practicante Profesional / Automatización Industrial / Ingeniería Mecánica / Disponibilidad Inmediata",
+    "empresa": "Burger King Colombia",
+    "ubicacion": "Medellín, Antioquia",
+    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-practicante-profesional-automatizacion-industrial-ingenieria-mecanica-disponibilidad-inmediata-practicante-profesional-mantenimiento-medellin-en-medellin-B7B3EF9FBC4AD3CD61373E686DCF3405",
+    "fecha_publicacion": "Reciente",
+    "fuente": "Computrabajo",
+    "ramas": [
+      {
+        "clave": "instrumentacion_metrologia",
+        "nombre": "Instrumentación, Automatización y Metrología",
+        "color": "#10b981",
+        "score": 73
+      }
+    ],
+    "rama_principal": "Instrumentación, Automatización y Metrología",
+    "color_principal": "#10b981",
+    "clave_principal": "instrumentacion_metrologia",
+    "afinidad": "Afinidad con Física",
+    "es_exclusiva_fisica": true,
+    "es_cierre_inminente": false,
+    "score_pensum": 158,
+    "mision": "Calibración de instrumentos de medición de variables físicas, cálculo de incertidumbre y programación de sistemas DAQ/LabVIEW.",
+    "tareas": "Levantamiento de curvas de calibración, programación en LabVIEW, enlace con autómatas PLC y aseguramiento metrológico ISO 17025.",
+    "es_practica": true
+  },
+  {
+    "titulo": "Practicante universitario de ingeniería mecánica o mecatrónica",
+    "empresa": "Agencia de Empleo de Comfenalco Antioquia",
+    "ubicacion": "Santo Domingo, Antioquia",
+    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-practicante-universitario-de-ingenieria-mecanica-o-mecatronica-proyecto-minero-en-santo-domingo-BEFB62D5BA99ECF261373E686DCF3405",
+    "fecha_publicacion": "Reciente",
+    "fuente": "Computrabajo",
+    "ramas": [
+      {
+        "clave": "instrumentacion_metrologia",
+        "nombre": "Instrumentación, Automatización y Metrología",
+        "color": "#10b981",
+        "score": 73
+      }
+    ],
+    "rama_principal": "Instrumentación, Automatización y Metrología",
+    "color_principal": "#10b981",
+    "clave_principal": "instrumentacion_metrologia",
+    "afinidad": "Afinidad con Física",
+    "es_exclusiva_fisica": true,
+    "es_cierre_inminente": false,
+    "score_pensum": 158,
+    "mision": "Calibración de instrumentos de medición de variables físicas, cálculo de incertidumbre y programación de sistemas DAQ/LabVIEW.",
+    "tareas": "Levantamiento de curvas de calibración, programación en LabVIEW, enlace con autómatas PLC y aseguramiento metrológico ISO 17025.",
+    "es_practica": true
+  },
+  {
+    "titulo": "Practicante de ingenieria Mecatronica y carreras afines",
+    "empresa": "Concentrix",
+    "ubicacion": "Bello, Antioquia",
+    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-practicante-de-ingenieria-mecatronica-y-carreras-afines-en-bello-BBF91AB818D7B28861373E686DCF3405",
+    "fecha_publicacion": "Reciente",
+    "fuente": "Computrabajo",
+    "ramas": [
+      {
+        "clave": "instrumentacion_metrologia",
+        "nombre": "Instrumentación, Automatización y Metrología",
+        "color": "#10b981",
+        "score": 73
+      }
+    ],
+    "rama_principal": "Instrumentación, Automatización y Metrología",
+    "color_principal": "#10b981",
+    "clave_principal": "instrumentacion_metrologia",
+    "afinidad": "Afinidad con Física",
+    "es_exclusiva_fisica": true,
+    "es_cierre_inminente": false,
+    "score_pensum": 158,
+    "mision": "Calibración de instrumentos de medición de variables físicas, cálculo de incertidumbre y programación de sistemas DAQ/LabVIEW.",
+    "tareas": "Levantamiento de curvas de calibración, programación en LabVIEW, enlace con autómatas PLC y aseguramiento metrológico ISO 17025.",
+    "es_practica": true
+  },
+  {
+    "titulo": "Practicante Universitario de Ingeniería Mecánica y Mecatrónica / Proyecto Minero.",
+    "empresa": "Antioquia Gold Ltd.",
+    "ubicacion": "Medellín, Antioquia",
+    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-practicante-universitario-de-ingenieria-mecanica-y-mecatronica-proyecto-minero-en-medellin-A0176B2FC0193C6F61373E686DCF3405",
+    "fecha_publicacion": "Reciente",
+    "fuente": "Computrabajo",
+    "ramas": [
+      {
+        "clave": "instrumentacion_metrologia",
+        "nombre": "Instrumentación, Automatización y Metrología",
+        "color": "#10b981",
+        "score": 73
+      }
+    ],
+    "rama_principal": "Instrumentación, Automatización y Metrología",
+    "color_principal": "#10b981",
+    "clave_principal": "instrumentacion_metrologia",
+    "afinidad": "Afinidad con Física",
+    "es_exclusiva_fisica": true,
+    "es_cierre_inminente": false,
+    "score_pensum": 158,
+    "mision": "Calibración de instrumentos de medición de variables físicas, cálculo de incertidumbre y programación de sistemas DAQ/LabVIEW.",
+    "tareas": "Levantamiento de curvas de calibración, programación en LabVIEW, enlace con autómatas PLC y aseguramiento metrológico ISO 17025.",
+    "es_practica": true
+  },
+  {
+    "titulo": "Practicante Eléctrico/ Electrónico/Electromecánico",
+    "empresa": "TRONEX / CODISCOS",
+    "ubicacion": "Medellín, Antioquia",
+    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-practicante-electrico-electronicoelectromecanico-tecnico-tecnologo-en-medellin-32D629052F0C892B61373E686DCF3405",
+    "fecha_publicacion": "Reciente",
+    "fuente": "Computrabajo",
+    "ramas": [
+      {
+        "clave": "instrumentacion_metrologia",
+        "nombre": "Instrumentación, Automatización y Metrología",
+        "color": "#10b981",
+        "score": 73
+      }
+    ],
+    "rama_principal": "Instrumentación, Automatización y Metrología",
+    "color_principal": "#10b981",
+    "clave_principal": "instrumentacion_metrologia",
+    "afinidad": "Afinidad con Física",
+    "es_exclusiva_fisica": true,
+    "es_cierre_inminente": false,
+    "score_pensum": 158,
+    "mision": "Calibración de instrumentos de medición de variables físicas, cálculo de incertidumbre y programación de sistemas DAQ/LabVIEW.",
+    "tareas": "Levantamiento de curvas de calibración, programación en LabVIEW, enlace con autómatas PLC y aseguramiento metrológico ISO 17025.",
+    "es_practica": true
+  },
+  {
+    "titulo": "Practicas nivel pregrado en Automatización de procesos",
+    "empresa": "OUTSOURCING SERVICIOS INFORMATICOS S A OUTSOURCING S A",
+    "ubicacion": "Bogotá, D.C., Bogotá, D.C.",
+    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-practicas-nivel-pregrado-en-automatizacion-de-procesos-contrato-aprendizaje-modalidad-remoto-en-bogota-dc-91E0CB4F4E11F7C861373E686DCF3405",
+    "fecha_publicacion": "Reciente",
+    "fuente": "Computrabajo",
+    "ramas": [
+      {
+        "clave": "instrumentacion_metrologia",
+        "nombre": "Instrumentación, Automatización y Metrología",
+        "color": "#10b981",
+        "score": 73
+      }
+    ],
+    "rama_principal": "Instrumentación, Automatización y Metrología",
+    "color_principal": "#10b981",
+    "clave_principal": "instrumentacion_metrologia",
+    "afinidad": "Afinidad con Física",
+    "es_exclusiva_fisica": true,
+    "es_cierre_inminente": false,
+    "score_pensum": 158,
+    "mision": "Calibración de instrumentos de medición de variables físicas, cálculo de incertidumbre y programación de sistemas DAQ/LabVIEW.",
+    "tareas": "Levantamiento de curvas de calibración, programación en LabVIEW, enlace con autómatas PLC y aseguramiento metrológico ISO 17025.",
+    "es_practica": false
+  },
+  {
+    "titulo": "Practicante Universitario Automatización",
+    "empresa": "Grupo Éxito",
+    "ubicacion": "Medellín, Antioquia",
+    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-practicante-universitario-automatizacion-en-medellin-48D6D6B96764C44861373E686DCF3405",
+    "fecha_publicacion": "Reciente",
+    "fuente": "Computrabajo",
+    "ramas": [
+      {
+        "clave": "instrumentacion_metrologia",
+        "nombre": "Instrumentación, Automatización y Metrología",
+        "color": "#10b981",
+        "score": 73
+      }
+    ],
+    "rama_principal": "Instrumentación, Automatización y Metrología",
+    "color_principal": "#10b981",
+    "clave_principal": "instrumentacion_metrologia",
+    "afinidad": "Afinidad con Física",
+    "es_exclusiva_fisica": true,
+    "es_cierre_inminente": false,
+    "score_pensum": 158,
+    "mision": "Calibración de instrumentos de medición de variables físicas, cálculo de incertidumbre y programación de sistemas DAQ/LabVIEW.",
+    "tareas": "Levantamiento de curvas de calibración, programación en LabVIEW, enlace con autómatas PLC y aseguramiento metrológico ISO 17025.",
+    "es_practica": true
+  },
+  {
+    "titulo": "Practicante Auxiliar Electromecánico",
+    "empresa": "Algamar S.A.",
+    "ubicacion": "Itagüí, Antioquia",
+    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-practicante-auxiliar-electromecanico-sector-metalmecanico-en-itagui-2F5A06B18594228B61373E686DCF3405",
+    "fecha_publicacion": "Reciente",
+    "fuente": "Computrabajo",
+    "ramas": [
+      {
+        "clave": "instrumentacion_metrologia",
+        "nombre": "Instrumentación, Automatización y Metrología",
+        "color": "#10b981",
+        "score": 73
+      }
+    ],
+    "rama_principal": "Instrumentación, Automatización y Metrología",
+    "color_principal": "#10b981",
+    "clave_principal": "instrumentacion_metrologia",
+    "afinidad": "Afinidad con Física",
+    "es_exclusiva_fisica": true,
+    "es_cierre_inminente": false,
+    "score_pensum": 158,
+    "mision": "Calibración de instrumentos de medición de variables físicas, cálculo de incertidumbre y programación de sistemas DAQ/LabVIEW.",
+    "tareas": "Levantamiento de curvas de calibración, programación en LabVIEW, enlace con autómatas PLC y aseguramiento metrológico ISO 17025.",
+    "es_practica": true
+  },
+  {
+    "titulo": "Aprendiz Electromecánico",
+    "empresa": "GRUPO BIOS S.A.S",
+    "ubicacion": "Caldas, Antioquia",
+    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-aprendiz-electromecanico-en-caldas-D4C1B91920FF643461373E686DCF3405",
+    "fecha_publicacion": "Reciente",
+    "fuente": "Computrabajo",
+    "ramas": [
+      {
+        "clave": "instrumentacion_metrologia",
+        "nombre": "Instrumentación, Automatización y Metrología",
+        "color": "#10b981",
+        "score": 73
+      }
+    ],
+    "rama_principal": "Instrumentación, Automatización y Metrología",
+    "color_principal": "#10b981",
+    "clave_principal": "instrumentacion_metrologia",
+    "afinidad": "Afinidad con Física",
+    "es_exclusiva_fisica": true,
+    "es_cierre_inminente": false,
+    "score_pensum": 158,
+    "mision": "Calibración de instrumentos de medición de variables físicas, cálculo de incertidumbre y programación de sistemas DAQ/LabVIEW.",
+    "tareas": "Levantamiento de curvas de calibración, programación en LabVIEW, enlace con autómatas PLC y aseguramiento metrológico ISO 17025.",
+    "es_practica": false
+  },
+  {
+    "titulo": "Aprendiz Electricidad, Mecánica, Mantenimiento Industrial, Automatización / Antioquia",
+    "empresa": "MAPER S.A.",
+    "ubicacion": "La Estrella, Antioquia",
+    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-aprendiz-electricidad-mecanica-mantenimiento-industrial-automatizacion-antioquia-en-la-estrella-2D98B1AA81F3905D61373E686DCF3405",
+    "fecha_publicacion": "Reciente",
+    "fuente": "Computrabajo",
+    "ramas": [
+      {
+        "clave": "instrumentacion_metrologia",
+        "nombre": "Instrumentación, Automatización y Metrología",
+        "color": "#10b981",
+        "score": 73
+      }
+    ],
+    "rama_principal": "Instrumentación, Automatización y Metrología",
+    "color_principal": "#10b981",
+    "clave_principal": "instrumentacion_metrologia",
+    "afinidad": "Afinidad con Física",
+    "es_exclusiva_fisica": true,
+    "es_cierre_inminente": false,
+    "score_pensum": 158,
+    "mision": "Calibración de instrumentos de medición de variables físicas, cálculo de incertidumbre y programación de sistemas DAQ/LabVIEW.",
+    "tareas": "Levantamiento de curvas de calibración, programación en LabVIEW, enlace con autómatas PLC y aseguramiento metrológico ISO 17025.",
+    "es_practica": false
+  },
+  {
+    "titulo": "Aprendiz técnico o tecnólogo  Automatización Industrial",
+    "empresa": "Servicios en Soluciones Humanas SAS",
+    "ubicacion": "Medellín, Antioquia",
+    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-aprendiz-tecnico-o-tecnologo-automatizacion-industrial-sabaneta-en-medellin-CC8ADC983BD874A361373E686DCF3405",
+    "fecha_publicacion": "Reciente",
+    "fuente": "Computrabajo",
+    "ramas": [
+      {
+        "clave": "instrumentacion_metrologia",
+        "nombre": "Instrumentación, Automatización y Metrología",
+        "color": "#10b981",
+        "score": 73
+      }
+    ],
+    "rama_principal": "Instrumentación, Automatización y Metrología",
+    "color_principal": "#10b981",
+    "clave_principal": "instrumentacion_metrologia",
+    "afinidad": "Afinidad con Física",
+    "es_exclusiva_fisica": true,
+    "es_cierre_inminente": false,
+    "score_pensum": 158,
+    "mision": "Calibración de instrumentos de medición de variables físicas, cálculo de incertidumbre y programación de sistemas DAQ/LabVIEW.",
+    "tareas": "Levantamiento de curvas de calibración, programación en LabVIEW, enlace con autómatas PLC y aseguramiento metrológico ISO 17025.",
+    "es_practica": false
+  },
+  {
+    "titulo": "Practicante Técnico/Tecnólogo Electromecánica, Mecánica, Industrial /Medellín Tronex",
+    "empresa": "TRONEX / CODISCOS",
+    "ubicacion": "Medellín, Antioquia",
+    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-practicante-tecnicotecnologo-electromecanica-mecanica-industrial-medellin-tronex-en-medellin-D376A2664D7943E861373E686DCF3405",
+    "fecha_publicacion": "Reciente",
+    "fuente": "Computrabajo",
+    "ramas": [
+      {
+        "clave": "instrumentacion_metrologia",
+        "nombre": "Instrumentación, Automatización y Metrología",
+        "color": "#10b981",
+        "score": 73
+      }
+    ],
+    "rama_principal": "Instrumentación, Automatización y Metrología",
+    "color_principal": "#10b981",
+    "clave_principal": "instrumentacion_metrologia",
+    "afinidad": "Afinidad con Física",
+    "es_exclusiva_fisica": true,
+    "es_cierre_inminente": false,
+    "score_pensum": 158,
+    "mision": "Calibración de instrumentos de medición de variables físicas, cálculo de incertidumbre y programación de sistemas DAQ/LabVIEW.",
+    "tareas": "Levantamiento de curvas de calibración, programación en LabVIEW, enlace con autómatas PLC y aseguramiento metrológico ISO 17025.",
+    "es_practica": true
+  },
+  {
+    "titulo": "Practicante Ambienta, practicante Electromecánico",
+    "empresa": "Empresa Confidencial",
+    "ubicacion": "Medellín, Antioquia",
+    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-practicante-ambienta-practicante-electromecanico-lunes-a-viernes-en-medellin-E0961CBF248154D261373E686DCF3405",
+    "fecha_publicacion": "Reciente",
+    "fuente": "Computrabajo",
+    "ramas": [
+      {
+        "clave": "instrumentacion_metrologia",
+        "nombre": "Instrumentación, Automatización y Metrología",
+        "color": "#10b981",
+        "score": 73
+      }
+    ],
+    "rama_principal": "Instrumentación, Automatización y Metrología",
+    "color_principal": "#10b981",
+    "clave_principal": "instrumentacion_metrologia",
+    "afinidad": "Afinidad con Física",
+    "es_exclusiva_fisica": true,
+    "es_cierre_inminente": false,
+    "score_pensum": 158,
+    "mision": "Calibración de instrumentos de medición de variables físicas, cálculo de incertidumbre y programación de sistemas DAQ/LabVIEW.",
+    "tareas": "Levantamiento de curvas de calibración, programación en LabVIEW, enlace con autómatas PLC y aseguramiento metrológico ISO 17025.",
+    "es_practica": true
+  },
+  {
+    "titulo": "Practicante  universitario ingenieria quimica",
+    "empresa": "APPLUS NORCONTROL COLOMBIA LTDA",
+    "ubicacion": "Bogotá",
+    "url": "https://www.elempleo.com/co/ofertas-trabajo/practicante-de-ingenieria-industrial-1886778367",
+    "fecha_publicacion": "Reciente",
+    "fuente": "ElEmpleo.com",
+    "compensacion": "",
+    "ramas": [
+      {
+        "clave": "instrumentacion_metrologia",
+        "nombre": "Instrumentación, Automatización y Metrología",
+        "color": "#10b981",
+        "score": 73
+      }
+    ],
+    "rama_principal": "Instrumentación, Automatización y Metrología",
+    "color_principal": "#10b981",
+    "clave_principal": "instrumentacion_metrologia",
+    "afinidad": "Afinidad con Física",
+    "es_exclusiva_fisica": true,
+    "es_cierre_inminente": false,
+    "score_pensum": 158,
+    "mision": "Calibración de instrumentos de medición de variables físicas, cálculo de incertidumbre y programación de sistemas DAQ/LabVIEW.",
+    "tareas": "Levantamiento de curvas de calibración, programación en LabVIEW, enlace con autómatas PLC y aseguramiento metrológico ISO 17025.",
+    "es_practica": true
+  },
+  {
+    "titulo": "Analista de procesos y automatización- remoto",
+    "empresa": "MICHAEL PAGE INTERNATIONAL",
+    "ubicacion": "Bogotá",
+    "url": "https://www.elempleo.com/co/ofertas-trabajo/aprendiz-de-tecnologia-estudiate-universitario-1886760603",
+    "fecha_publicacion": "Reciente",
+    "fuente": "ElEmpleo.com",
+    "compensacion": "",
+    "ramas": [
+      {
+        "clave": "instrumentacion_metrologia",
+        "nombre": "Instrumentación, Automatización y Metrología",
+        "color": "#10b981",
+        "score": 73
+      }
+    ],
+    "rama_principal": "Instrumentación, Automatización y Metrología",
+    "color_principal": "#10b981",
+    "clave_principal": "instrumentacion_metrologia",
+    "afinidad": "Afinidad con Física",
+    "es_exclusiva_fisica": true,
+    "es_cierre_inminente": false,
+    "score_pensum": 158,
+    "mision": "Calibración de instrumentos de medición de variables físicas, cálculo de incertidumbre y programación de sistemas DAQ/LabVIEW.",
+    "tareas": "Levantamiento de curvas de calibración, programación en LabVIEW, enlace con autómatas PLC y aseguramiento metrológico ISO 17025.",
+    "es_practica": false
+  },
+  {
+    "titulo": "Ingeniero de automatización",
+    "empresa": "Empresa confidencial",
+    "ubicacion": "Bogotá",
+    "url": "https://www.elempleo.com/co/ofertas-trabajo/ingeniero-de-innovaciones-y-automatizacion-bogota-1886781779",
+    "fecha_publicacion": "Reciente",
+    "fuente": "ElEmpleo.com",
+    "compensacion": "",
+    "ramas": [
+      {
+        "clave": "instrumentacion_metrologia",
+        "nombre": "Instrumentación, Automatización y Metrología",
+        "color": "#10b981",
+        "score": 73
+      }
+    ],
+    "rama_principal": "Instrumentación, Automatización y Metrología",
+    "color_principal": "#10b981",
+    "clave_principal": "instrumentacion_metrologia",
+    "afinidad": "Afinidad con Física",
+    "es_exclusiva_fisica": true,
+    "es_cierre_inminente": false,
+    "score_pensum": 158,
+    "mision": "Calibración de instrumentos de medición de variables físicas, cálculo de incertidumbre y programación de sistemas DAQ/LabVIEW.",
+    "tareas": "Levantamiento de curvas de calibración, programación en LabVIEW, enlace con autómatas PLC y aseguramiento metrológico ISO 17025.",
+    "es_practica": false
+  },
+  {
+    "titulo": "Electromecánico mantenimiento industrial",
+    "empresa": "Empresa confidencial",
+    "ubicacion": "Bogotá",
+    "url": "https://www.elempleo.com/co/ofertas-trabajo/electromecanico-sector-hidrocarburos-1886759143",
+    "fecha_publicacion": "Reciente",
+    "fuente": "ElEmpleo.com",
+    "compensacion": "",
+    "ramas": [
+      {
+        "clave": "instrumentacion_metrologia",
+        "nombre": "Instrumentación, Automatización y Metrología",
+        "color": "#10b981",
+        "score": 73
+      }
+    ],
+    "rama_principal": "Instrumentación, Automatización y Metrología",
+    "color_principal": "#10b981",
+    "clave_principal": "instrumentacion_metrologia",
+    "afinidad": "Afinidad con Física",
+    "es_exclusiva_fisica": true,
+    "es_cierre_inminente": false,
+    "score_pensum": 158,
+    "mision": "Calibración de instrumentos de medición de variables físicas, cálculo de incertidumbre y programación de sistemas DAQ/LabVIEW.",
+    "tareas": "Levantamiento de curvas de calibración, programación en LabVIEW, enlace con autómatas PLC y aseguramiento metrológico ISO 17025.",
+    "es_practica": false
+  },
+  {
+    "titulo": "Jefe de fiscalización de montaje electromecánico - ampliación",
+    "empresa": "INTEGRAL",
+    "ubicacion": "Medellín",
+    "url": "https://www.elempleo.com/co/ofertas-trabajo/residente-de-interventoria-electromecanico-yumbo-1886780556",
+    "fecha_publicacion": "Reciente",
+    "fuente": "ElEmpleo.com",
+    "compensacion": "",
+    "ramas": [
+      {
+        "clave": "instrumentacion_metrologia",
+        "nombre": "Instrumentación, Automatización y Metrología",
+        "color": "#10b981",
+        "score": 73
+      }
+    ],
+    "rama_principal": "Instrumentación, Automatización y Metrología",
+    "color_principal": "#10b981",
+    "clave_principal": "instrumentacion_metrologia",
+    "afinidad": "Afinidad con Física",
+    "es_exclusiva_fisica": true,
+    "es_cierre_inminente": false,
+    "score_pensum": 158,
+    "mision": "Calibración de instrumentos de medición de variables físicas, cálculo de incertidumbre y programación de sistemas DAQ/LabVIEW.",
+    "tareas": "Levantamiento de curvas de calibración, programación en LabVIEW, enlace con autómatas PLC y aseguramiento metrológico ISO 17025.",
+    "es_practica": false
   },
   {
     "titulo": "Aprendiz Asesoría Comercial",
@@ -365,11 +1259,45 @@
     "rama_principal": "Energía, Potencia y Renovables",
     "color_principal": "#eab308",
     "clave_principal": "energia_potencia",
-    "afinidad": "Exclusiva Física",
+    "afinidad": "Afinidad con Física",
     "es_exclusiva_fisica": true,
     "es_cierre_inminente": false,
     "score_pensum": 133,
-    "tareas": "Simulación de flujos de carga, curvas de envejecimiento de aislamiento según norma IEEE, telemetría y calidad de onda."
+    "tareas": "Simulación de flujos de carga, curvas de envejecimiento de aislamiento según norma IEEE, telemetría y calidad de onda.",
+    "es_practica": false
+  },
+  {
+    "titulo": "Profesional junior de automatización y transformación digital",
+    "empresa": "Enel Colombia S.A ESP",
+    "ubicacion": "Bogotá",
+    "url": "https://www.elempleo.com/co/ofertas-trabajo/ingeniero-de-automatizacion-y-digitalizacion-industrial-junioragcbogota-1886774958",
+    "fecha_publicacion": "Reciente",
+    "fuente": "ElEmpleo.com",
+    "compensacion": "$5,5 a $6 millones",
+    "ramas": [
+      {
+        "clave": "electronica_digital_iot",
+        "nombre": "Electrónica Digital, Microcontroladores e IoT",
+        "color": "#3b82f6",
+        "score": 76
+      },
+      {
+        "clave": "instrumentacion_metrologia",
+        "nombre": "Instrumentación, Automatización y Metrología",
+        "color": "#10b981",
+        "score": 61
+      }
+    ],
+    "rama_principal": "Electrónica Digital, Microcontroladores e IoT",
+    "color_principal": "#3b82f6",
+    "clave_principal": "electronica_digital_iot",
+    "afinidad": "Alta Afinidad Pénsum",
+    "es_exclusiva_fisica": false,
+    "es_cierre_inminente": false,
+    "score_pensum": 111,
+    "mision": "Desarrollo de sistemas embebidos, firmware en C/C++, comunicación por buses I2C/SPI y redes de sensores industriales IoT.",
+    "tareas": "Programación de microcontroladores, adquisición y filtrado digital de señales, depuración con analizador lógico y pruebas de hardware.",
+    "es_practica": false
   },
   {
     "titulo": "Practicante Cientifico de Datos",
@@ -396,7 +1324,8 @@
     "es_exclusiva_fisica": false,
     "es_cierre_inminente": false,
     "score_pensum": 110,
-    "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables."
+    "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables.",
+    "es_practica": true
   },
   {
     "titulo": "Aprendiz Datos",
@@ -423,7 +1352,8 @@
     "es_exclusiva_fisica": false,
     "es_cierre_inminente": false,
     "score_pensum": 107,
-    "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables."
+    "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables.",
+    "es_practica": true
   },
   {
     "titulo": "APRENDIZ DATOS",
@@ -450,7 +1380,8 @@
     "es_exclusiva_fisica": false,
     "es_cierre_inminente": false,
     "score_pensum": 107,
-    "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables."
+    "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables.",
+    "es_practica": true
   },
   {
     "titulo": "Aprendiz en Automatización Industrial (PLC y Neumática)",
@@ -477,7 +1408,8 @@
     "afinidad": "Alta Afinidad Pénsum",
     "es_exclusiva_fisica": false,
     "es_cierre_inminente": false,
-    "score_pensum": 105
+    "score_pensum": 105,
+    "es_practica": false
   },
   {
     "titulo": "Practicante ingeniería electrónica, analítica de datos",
@@ -504,7 +1436,35 @@
     "es_exclusiva_fisica": false,
     "es_cierre_inminente": false,
     "score_pensum": 104,
-    "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables."
+    "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables.",
+    "es_practica": true
+  },
+  {
+    "titulo": "Médico auditor de calidad de datos",
+    "empresa": "Fundación Santa Fe de Bogotá",
+    "ubicacion": "Bogotá",
+    "url": "https://www.elempleo.com/co/ofertas-trabajo/practicante-universitarioa-de-proteccion-de-datos-bogota-1886755350",
+    "fecha_publicacion": "Reciente",
+    "fuente": "ElEmpleo.com",
+    "compensacion": "$8 a $10 millones",
+    "ramas": [
+      {
+        "clave": "simulaciones_datos_ia",
+        "nombre": "Análisis de Datos, IA y Simulaciones",
+        "color": "#06b6d4",
+        "score": 69
+      }
+    ],
+    "rama_principal": "Análisis de Datos, IA y Simulaciones",
+    "color_principal": "#06b6d4",
+    "clave_principal": "simulaciones_datos_ia",
+    "afinidad": "Alta Afinidad Pénsum",
+    "es_exclusiva_fisica": false,
+    "es_cierre_inminente": false,
+    "score_pensum": 104,
+    "mision": "Modelamiento matemático, pipelines de datos, simulación numérica de procesos y entrenamiento de algoritmos predictivos e IA.",
+    "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables.",
+    "es_practica": false
   },
   {
     "titulo": "Practicante de Mantenimiento y Confiabilidad",
@@ -531,7 +1491,8 @@
     "afinidad": "Alta Afinidad Pénsum",
     "es_exclusiva_fisica": false,
     "es_cierre_inminente": false,
-    "score_pensum": 103
+    "score_pensum": 103,
+    "es_practica": true
   },
   {
     "titulo": "Prácticas Profesionales 2027-1 (Operaciones y Mantenimiento)",
@@ -558,7 +1519,8 @@
     "afinidad": "Alta Afinidad Pénsum",
     "es_exclusiva_fisica": false,
     "es_cierre_inminente": false,
-    "score_pensum": 102
+    "score_pensum": 102,
+    "es_practica": false
   },
   {
     "titulo": "Prácticas Profesionales 2027-1 (Automatización, IA y Datos)",
@@ -591,7 +1553,8 @@
     "afinidad": "Alta Afinidad Pénsum",
     "es_exclusiva_fisica": false,
     "es_cierre_inminente": false,
-    "score_pensum": 101
+    "score_pensum": 101,
+    "es_practica": false
   },
   {
     "titulo": "Practicante Universitario de Ingeniería / Proyecto Minero (Cisneros / Medellín)",
@@ -618,7 +1581,8 @@
     "afinidad": "Alta Afinidad Pénsum",
     "es_exclusiva_fisica": false,
     "es_cierre_inminente": false,
-    "score_pensum": 99
+    "score_pensum": 99,
+    "es_practica": true
   },
   {
     "titulo": "Técnico Instrumentista Industrial – Sector Procesos Continuos",
@@ -645,7 +1609,8 @@
     "afinidad": "Alta Afinidad Pénsum",
     "es_exclusiva_fisica": false,
     "es_cierre_inminente": false,
-    "score_pensum": 99
+    "score_pensum": 99,
+    "es_practica": false
   },
   {
     "titulo": "Intern en Electrificación y Automatización",
@@ -672,7 +1637,8 @@
     "afinidad": "Alta Afinidad Pénsum",
     "es_exclusiva_fisica": false,
     "es_cierre_inminente": false,
-    "score_pensum": 99
+    "score_pensum": 99,
+    "es_practica": true
   },
   {
     "titulo": "Practicante Tecnólogo Electromecánico (Sistemas de Bombeo)",
@@ -699,7 +1665,8 @@
     "afinidad": "Alta Afinidad Pénsum",
     "es_exclusiva_fisica": false,
     "es_cierre_inminente": false,
-    "score_pensum": 99
+    "score_pensum": 99,
+    "es_practica": true
   },
   {
     "titulo": "Practicante mecánico/a, electromecánico/a o mecatrónico/a 1626362187-3",
@@ -726,7 +1693,8 @@
     "es_exclusiva_fisica": false,
     "es_cierre_inminente": false,
     "score_pensum": 99,
-    "tareas": "Levantamiento de curvas de calibración, programación en LabVIEW, enlace con autómatas PLC y aseguramiento metrológico ISO 17025."
+    "tareas": "Levantamiento de curvas de calibración, programación en LabVIEW, enlace con autómatas PLC y aseguramiento metrológico ISO 17025.",
+    "es_practica": true
   },
   {
     "titulo": "Practicante Universitario(a) de Control Corporativo",
@@ -759,7 +1727,8 @@
     "es_exclusiva_fisica": false,
     "es_cierre_inminente": false,
     "score_pensum": 98,
-    "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables."
+    "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables.",
+    "es_practica": true
   },
   {
     "titulo": "Practicante En Ingeniería Civil",
@@ -786,7 +1755,8 @@
     "es_exclusiva_fisica": false,
     "es_cierre_inminente": false,
     "score_pensum": 98,
-    "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables."
+    "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables.",
+    "es_practica": true
   },
   {
     "titulo": "Aprendiz Business Intelligence",
@@ -813,7 +1783,8 @@
     "es_exclusiva_fisica": false,
     "es_cierre_inminente": false,
     "score_pensum": 98,
-    "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables."
+    "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables.",
+    "es_practica": false
   },
   {
     "titulo": "Practicantes Universitarios – Datos, Analítica y Tecnología 2027-1",
@@ -840,7 +1811,8 @@
     "es_exclusiva_fisica": false,
     "es_cierre_inminente": false,
     "score_pensum": 98,
-    "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables."
+    "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables.",
+    "es_practica": false
   },
   {
     "titulo": "Aprendiz análisis de datos 1626532605-2",
@@ -867,7 +1839,8 @@
     "es_exclusiva_fisica": false,
     "es_cierre_inminente": false,
     "score_pensum": 98,
-    "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables."
+    "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables.",
+    "es_practica": false
   },
   {
     "titulo": "Practicante de Logística (Indicadores) ACO",
@@ -900,33 +1873,8 @@
     "es_exclusiva_fisica": false,
     "es_cierre_inminente": false,
     "score_pensum": 98,
-    "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables."
-  },
-  {
-    "titulo": "Médico auditor de calidad de datos",
-    "empresa": "Fundación Santa Fe de Bogotá",
-    "ubicacion": "Bogotá",
-    "url": "https://www.elempleo.com/co/ofertas-trabajo/practicante-universitarioa-de-proteccion-de-datos-bogota-1886755350",
-    "fecha_publicacion": "Reciente",
-    "fuente": "ElEmpleo.com",
-    "compensacion": "$8 a $10 millones",
-    "ramas": [
-      {
-        "clave": "simulaciones_datos_ia",
-        "nombre": "Análisis de Datos, IA y Simulaciones",
-        "color": "#06b6d4",
-        "score": 63
-      }
-    ],
-    "rama_principal": "Análisis de Datos, IA y Simulaciones",
-    "color_principal": "#06b6d4",
-    "clave_principal": "simulaciones_datos_ia",
-    "afinidad": "Alta Afinidad Pénsum",
-    "es_exclusiva_fisica": false,
-    "es_cierre_inminente": false,
-    "score_pensum": 98,
-    "mision": "Modelamiento matemático, pipelines de datos, simulación numérica de procesos y entrenamiento de algoritmos predictivos e IA.",
-    "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables."
+    "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables.",
+    "es_practica": true
   },
   {
     "titulo": "Practicante Electromecánico de Planta",
@@ -959,7 +1907,8 @@
     "afinidad": "Alta Afinidad Pénsum",
     "es_exclusiva_fisica": false,
     "es_cierre_inminente": false,
-    "score_pensum": 96
+    "score_pensum": 96,
+    "es_practica": true
   },
   {
     "titulo": "Aprendiz en Electromecánica y Pesaje Industrial",
@@ -986,7 +1935,8 @@
     "afinidad": "Alta Afinidad Pénsum",
     "es_exclusiva_fisica": false,
     "es_cierre_inminente": false,
-    "score_pensum": 96
+    "score_pensum": 96,
+    "es_practica": false
   },
   {
     "titulo": "Aprendiz Técnico/Tecnólogo en Tableros Eléctricos",
@@ -1019,7 +1969,8 @@
     "afinidad": "Alta Afinidad Pénsum",
     "es_exclusiva_fisica": false,
     "es_cierre_inminente": false,
-    "score_pensum": 96
+    "score_pensum": 96,
+    "es_practica": false
   },
   {
     "titulo": "Practicante de Mantenimiento Electromecánico",
@@ -1046,7 +1997,8 @@
     "afinidad": "Alta Afinidad Pénsum",
     "es_exclusiva_fisica": false,
     "es_cierre_inminente": false,
-    "score_pensum": 96
+    "score_pensum": 96,
+    "es_practica": true
   },
   {
     "titulo": "Practicante Electromecánico de Planta",
@@ -1073,7 +2025,8 @@
     "afinidad": "Alta Afinidad Pénsum",
     "es_exclusiva_fisica": false,
     "es_cierre_inminente": false,
-    "score_pensum": 96
+    "score_pensum": 96,
+    "es_practica": true
   },
   {
     "titulo": "Practicante electromecánica y/o automatización 349922-98721",
@@ -1100,7 +2053,8 @@
     "es_exclusiva_fisica": false,
     "es_cierre_inminente": false,
     "score_pensum": 96,
-    "tareas": "Levantamiento de curvas de calibración, programación en LabVIEW, enlace con autómatas PLC y aseguramiento metrológico ISO 17025."
+    "tareas": "Levantamiento de curvas de calibración, programación en LabVIEW, enlace con autómatas PLC y aseguramiento metrológico ISO 17025.",
+    "es_practica": true
   },
   {
     "titulo": "Practicante de Mantenimiento Electromecánico",
@@ -1127,7 +2081,8 @@
     "afinidad": "Alta Afinidad Pénsum",
     "es_exclusiva_fisica": false,
     "es_cierre_inminente": false,
-    "score_pensum": 96
+    "score_pensum": 96,
+    "es_practica": true
   },
   {
     "titulo": "Practicante Técnico en Electricidad Industrial y Solar",
@@ -1160,7 +2115,8 @@
     "afinidad": "Alta Afinidad Pénsum",
     "es_exclusiva_fisica": false,
     "es_cierre_inminente": false,
-    "score_pensum": 93
+    "score_pensum": 93,
+    "es_practica": true
   },
   {
     "titulo": "Practicante en Almacenamiento Energético (BESS)",
@@ -1193,7 +2149,8 @@
     "afinidad": "Alta Afinidad Pénsum",
     "es_exclusiva_fisica": false,
     "es_cierre_inminente": false,
-    "score_pensum": 93
+    "score_pensum": 93,
+    "es_practica": true
   },
   {
     "titulo": "Practicante de ingeniería industrial para Apartadó",
@@ -1220,7 +2177,8 @@
     "es_exclusiva_fisica": false,
     "es_cierre_inminente": false,
     "score_pensum": 93,
-    "tareas": "Levantamiento de curvas de calibración, programación en LabVIEW, enlace con autómatas PLC y aseguramiento metrológico ISO 17025."
+    "tareas": "Levantamiento de curvas de calibración, programación en LabVIEW, enlace con autómatas PLC y aseguramiento metrológico ISO 17025.",
+    "es_practica": true
   },
   {
     "titulo": "Practicante Universitario Automatización(Diseño Organizacional)",
@@ -1247,7 +2205,8 @@
     "es_exclusiva_fisica": false,
     "es_cierre_inminente": false,
     "score_pensum": 93,
-    "tareas": "Levantamiento de curvas de calibración, programación en LabVIEW, enlace con autómatas PLC y aseguramiento metrológico ISO 17025."
+    "tareas": "Levantamiento de curvas de calibración, programación en LabVIEW, enlace con autómatas PLC y aseguramiento metrológico ISO 17025.",
+    "es_practica": true
   },
   {
     "titulo": "Practicante Universitario Soporte y Mantenimiento",
@@ -1274,7 +2233,8 @@
     "es_exclusiva_fisica": false,
     "es_cierre_inminente": false,
     "score_pensum": 93,
-    "tareas": "Levantamiento de curvas de calibración, programación en LabVIEW, enlace con autómatas PLC y aseguramiento metrológico ISO 17025."
+    "tareas": "Levantamiento de curvas de calibración, programación en LabVIEW, enlace con autómatas PLC y aseguramiento metrológico ISO 17025.",
+    "es_practica": true
   },
   {
     "titulo": "Practicante en electromecánica industrial para Guarne 1626324091-10",
@@ -1301,7 +2261,8 @@
     "es_exclusiva_fisica": false,
     "es_cierre_inminente": false,
     "score_pensum": 93,
-    "tareas": "Levantamiento de curvas de calibración, programación en LabVIEW, enlace con autómatas PLC y aseguramiento metrológico ISO 17025."
+    "tareas": "Levantamiento de curvas de calibración, programación en LabVIEW, enlace con autómatas PLC y aseguramiento metrológico ISO 17025.",
+    "es_practica": true
   },
   {
     "titulo": "Aprendiz Patrocinio - Mantenimiento Electromecánico",
@@ -1328,48 +2289,22 @@
     "es_exclusiva_fisica": false,
     "es_cierre_inminente": false,
     "score_pensum": 93,
-    "tareas": "Levantamiento de curvas de calibración, programación en LabVIEW, enlace con autómatas PLC y aseguramiento metrológico ISO 17025."
+    "tareas": "Levantamiento de curvas de calibración, programación en LabVIEW, enlace con autómatas PLC y aseguramiento metrológico ISO 17025.",
+    "es_practica": false
   },
   {
-    "titulo": "Practicante de automatización de operaciones",
-    "empresa": "REDEBAN",
-    "ubicacion": "Bogotá",
-    "url": "https://www.elempleo.com/co/ofertas-trabajo/practicante-de-automatizacion-de-operaciones-1886773246",
+    "titulo": "Practicante Universitario Digital Tecnología",
+    "empresa": "Grupo Éxito",
+    "ubicacion": "Medellín, Antioquia",
+    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-practicante-universitario-digital-tecnologia-en-medellin-0B29DA11EF8A724B61373E686DCF3405",
     "fecha_publicacion": "Reciente",
-    "fuente": "ElEmpleo.com",
-    "compensacion": "$2 a $2,5 millones",
-    "ramas": [
-      {
-        "clave": "instrumentacion_metrologia",
-        "nombre": "Instrumentación, Automatización y Metrología",
-        "color": "#10b981",
-        "score": 58
-      }
-    ],
-    "rama_principal": "Instrumentación, Automatización y Metrología",
-    "color_principal": "#10b981",
-    "clave_principal": "instrumentacion_metrologia",
-    "afinidad": "Alta Afinidad Pénsum",
-    "es_exclusiva_fisica": false,
-    "es_cierre_inminente": false,
-    "score_pensum": 93,
-    "mision": "Calibración de instrumentos de medición de variables físicas, cálculo de incertidumbre y programación de sistemas DAQ/LabVIEW.",
-    "tareas": "Levantamiento de curvas de calibración, programación en LabVIEW, enlace con autómatas PLC y aseguramiento metrológico ISO 17025."
-  },
-  {
-    "titulo": "Profesional junior de automatización y transformación digital",
-    "empresa": "Enel Colombia S.A ESP",
-    "ubicacion": "Bogotá",
-    "url": "https://www.elempleo.com/co/ofertas-trabajo/ingeniero-de-automatizacion-y-digitalizacion-industrial-junioragcbogota-1886774958",
-    "fecha_publicacion": "Reciente",
-    "fuente": "ElEmpleo.com",
-    "compensacion": "$5,5 a $6 millones",
+    "fuente": "Computrabajo",
     "ramas": [
       {
         "clave": "electronica_digital_iot",
         "nombre": "Electrónica Digital, Microcontroladores e IoT",
         "color": "#3b82f6",
-        "score": 58
+        "score": 76
       },
       {
         "clave": "instrumentacion_metrologia",
@@ -1384,295 +2319,43 @@
     "afinidad": "Alta Afinidad Pénsum",
     "es_exclusiva_fisica": false,
     "es_cierre_inminente": false,
-    "score_pensum": 93,
+    "score_pensum": 76,
     "mision": "Desarrollo de sistemas embebidos, firmware en C/C++, comunicación por buses I2C/SPI y redes de sensores industriales IoT.",
-    "tareas": "Programación de microcontroladores, adquisición y filtrado digital de señales, depuración con analizador lógico y pruebas de hardware."
+    "tareas": "Programación de microcontroladores, adquisición y filtrado digital de señales, depuración con analizador lógico y pruebas de hardware.",
+    "es_practica": true
   },
   {
-    "titulo": "Ingeniero de innovaciónes y automatización - bogotá",
-    "empresa": "ADECCO COLOMBIA S A",
-    "ubicacion": "Bogotá",
-    "url": "https://www.elempleo.com/co/ofertas-trabajo/profesional-junior-de-automatizacion-y-transformacion-digital-1886759420",
-    "fecha_publicacion": "Reciente",
-    "fuente": "ElEmpleo.com",
-    "compensacion": "$4 a $4,5 millones",
-    "ramas": [
-      {
-        "clave": "instrumentacion_metrologia",
-        "nombre": "Instrumentación, Automatización y Metrología",
-        "color": "#10b981",
-        "score": 58
-      }
-    ],
-    "rama_principal": "Instrumentación, Automatización y Metrología",
-    "color_principal": "#10b981",
-    "clave_principal": "instrumentacion_metrologia",
-    "afinidad": "Alta Afinidad Pénsum",
-    "es_exclusiva_fisica": false,
-    "es_cierre_inminente": false,
-    "score_pensum": 93,
-    "mision": "Calibración de instrumentos de medición de variables físicas, cálculo de incertidumbre y programación de sistemas DAQ/LabVIEW.",
-    "tareas": "Levantamiento de curvas de calibración, programación en LabVIEW, enlace con autómatas PLC y aseguramiento metrológico ISO 17025."
-  },
-  {
-    "titulo": "Auxiliar de automatización",
-    "empresa": "Banco de Occidente",
-    "ubicacion": "Cali",
-    "url": "https://www.elempleo.com/co/ofertas-trabajo/analista-de-procesos-y-automatizacion-remoto-1886772940",
-    "fecha_publicacion": "Reciente",
-    "fuente": "ElEmpleo.com",
-    "compensacion": "$1,5 a $2 millones",
-    "ramas": [
-      {
-        "clave": "instrumentacion_metrologia",
-        "nombre": "Instrumentación, Automatización y Metrología",
-        "color": "#10b981",
-        "score": 58
-      }
-    ],
-    "rama_principal": "Instrumentación, Automatización y Metrología",
-    "color_principal": "#10b981",
-    "clave_principal": "instrumentacion_metrologia",
-    "afinidad": "Alta Afinidad Pénsum",
-    "es_exclusiva_fisica": false,
-    "es_cierre_inminente": false,
-    "score_pensum": 93,
-    "mision": "Calibración de instrumentos de medición de variables físicas, cálculo de incertidumbre y programación de sistemas DAQ/LabVIEW.",
-    "tareas": "Levantamiento de curvas de calibración, programación en LabVIEW, enlace con autómatas PLC y aseguramiento metrológico ISO 17025."
-  },
-  {
-    "titulo": "Gestor de procesos y automatización",
-    "empresa": "Cinte Colombia SAS",
-    "ubicacion": "Bogotá",
-    "url": "https://www.elempleo.com/co/ofertas-trabajo/practica-profesional-ingenieria-mecatronica-automatizacion-1886778926",
-    "fecha_publicacion": "Reciente",
-    "fuente": "ElEmpleo.com",
-    "compensacion": "$4,5 a $5,5 millones",
-    "ramas": [
-      {
-        "clave": "instrumentacion_metrologia",
-        "nombre": "Instrumentación, Automatización y Metrología",
-        "color": "#10b981",
-        "score": 58
-      }
-    ],
-    "rama_principal": "Instrumentación, Automatización y Metrología",
-    "color_principal": "#10b981",
-    "clave_principal": "instrumentacion_metrologia",
-    "afinidad": "Alta Afinidad Pénsum",
-    "es_exclusiva_fisica": false,
-    "es_cierre_inminente": false,
-    "score_pensum": 93,
-    "mision": "Calibración de instrumentos de medición de variables físicas, cálculo de incertidumbre y programación de sistemas DAQ/LabVIEW.",
-    "tareas": "Levantamiento de curvas de calibración, programación en LabVIEW, enlace con autómatas PLC y aseguramiento metrológico ISO 17025."
-  },
-  {
-    "titulo": "Practicantes-tecnólogo electromecánico - eléctrico - refrigeración",
+    "titulo": "Ingeniero de automatización y digitalización industrial junior-agc(bogotá)",
     "empresa": "Empresa confidencial",
     "ubicacion": "Bogotá",
-    "url": "https://www.elempleo.com/co/ofertas-trabajo/practicantestecnologo-electromecanico-electrico-refrigeracion-1886768573",
+    "url": "https://www.elempleo.com/co/ofertas-trabajo/practicante-universitario-en-datos-tecnologia-y-automatizacion-1886761106",
     "fecha_publicacion": "Reciente",
     "fuente": "ElEmpleo.com",
-    "compensacion": "$1 a $1,5 millones",
+    "compensacion": "",
     "ramas": [
+      {
+        "clave": "electronica_digital_iot",
+        "nombre": "Electrónica Digital, Microcontroladores e IoT",
+        "color": "#3b82f6",
+        "score": 76
+      },
       {
         "clave": "instrumentacion_metrologia",
         "nombre": "Instrumentación, Automatización y Metrología",
         "color": "#10b981",
-        "score": 58
+        "score": 61
       }
     ],
-    "rama_principal": "Instrumentación, Automatización y Metrología",
-    "color_principal": "#10b981",
-    "clave_principal": "instrumentacion_metrologia",
+    "rama_principal": "Electrónica Digital, Microcontroladores e IoT",
+    "color_principal": "#3b82f6",
+    "clave_principal": "electronica_digital_iot",
     "afinidad": "Alta Afinidad Pénsum",
     "es_exclusiva_fisica": false,
     "es_cierre_inminente": false,
-    "score_pensum": 93,
-    "mision": "Calibración de instrumentos de medición de variables físicas, cálculo de incertidumbre y programación de sistemas DAQ/LabVIEW.",
-    "tareas": "Levantamiento de curvas de calibración, programación en LabVIEW, enlace con autómatas PLC y aseguramiento metrológico ISO 17025."
-  },
-  {
-    "titulo": "Electromecanico - mosquera - 1626478551-2",
-    "empresa": "AGENCIA DE EMPLEO Y FOMENTO EMPRESARIAL COMPENSAR",
-    "ubicacion": "Mosquera",
-    "url": "https://www.elempleo.com/co/ofertas-trabajo/electromecanico-bogota-1886774188",
-    "fecha_publicacion": "Reciente",
-    "fuente": "ElEmpleo.com",
-    "compensacion": "$2 a $2,5 millones",
-    "ramas": [
-      {
-        "clave": "instrumentacion_metrologia",
-        "nombre": "Instrumentación, Automatización y Metrología",
-        "color": "#10b981",
-        "score": 58
-      }
-    ],
-    "rama_principal": "Instrumentación, Automatización y Metrología",
-    "color_principal": "#10b981",
-    "clave_principal": "instrumentacion_metrologia",
-    "afinidad": "Alta Afinidad Pénsum",
-    "es_exclusiva_fisica": false,
-    "es_cierre_inminente": false,
-    "score_pensum": 93,
-    "mision": "Calibración de instrumentos de medición de variables físicas, cálculo de incertidumbre y programación de sistemas DAQ/LabVIEW.",
-    "tareas": "Levantamiento de curvas de calibración, programación en LabVIEW, enlace con autómatas PLC y aseguramiento metrológico ISO 17025."
-  },
-  {
-    "titulo": "Electromecanico- laboratorio farmaceutico",
-    "empresa": "Empresa confidencial",
-    "ubicacion": "Bogotá",
-    "url": "https://www.elempleo.com/co/ofertas-trabajo/electromecanico-mosquera-16264785512-1886757051",
-    "fecha_publicacion": "Reciente",
-    "fuente": "ElEmpleo.com",
-    "compensacion": "$2 a $2,5 millones",
-    "ramas": [
-      {
-        "clave": "instrumentacion_metrologia",
-        "nombre": "Instrumentación, Automatización y Metrología",
-        "color": "#10b981",
-        "score": 58
-      }
-    ],
-    "rama_principal": "Instrumentación, Automatización y Metrología",
-    "color_principal": "#10b981",
-    "clave_principal": "instrumentacion_metrologia",
-    "afinidad": "Alta Afinidad Pénsum",
-    "es_exclusiva_fisica": false,
-    "es_cierre_inminente": false,
-    "score_pensum": 93,
-    "mision": "Calibración de instrumentos de medición de variables físicas, cálculo de incertidumbre y programación de sistemas DAQ/LabVIEW.",
-    "tareas": "Levantamiento de curvas de calibración, programación en LabVIEW, enlace con autómatas PLC y aseguramiento metrológico ISO 17025."
-  },
-  {
-    "titulo": "Electromecánico",
-    "empresa": "Empresa confidencial",
-    "ubicacion": "Bogotá",
-    "url": "https://www.elempleo.com/co/ofertas-trabajo/electromecanico-laboratorio-farmaceutico-1886765467",
-    "fecha_publicacion": "Reciente",
-    "fuente": "ElEmpleo.com",
-    "compensacion": "$3 a $3,5 millones",
-    "ramas": [
-      {
-        "clave": "instrumentacion_metrologia",
-        "nombre": "Instrumentación, Automatización y Metrología",
-        "color": "#10b981",
-        "score": 58
-      }
-    ],
-    "rama_principal": "Instrumentación, Automatización y Metrología",
-    "color_principal": "#10b981",
-    "clave_principal": "instrumentacion_metrologia",
-    "afinidad": "Alta Afinidad Pénsum",
-    "es_exclusiva_fisica": false,
-    "es_cierre_inminente": false,
-    "score_pensum": 93,
-    "mision": "Calibración de instrumentos de medición de variables físicas, cálculo de incertidumbre y programación de sistemas DAQ/LabVIEW.",
-    "tareas": "Levantamiento de curvas de calibración, programación en LabVIEW, enlace con autómatas PLC y aseguramiento metrológico ISO 17025."
-  },
-  {
-    "titulo": "Electromecánico de mantenimiento industrial para alemania",
-    "empresa": "Gabarro Deutschland Gmbh",
-    "ubicacion": "Bogotá",
-    "url": "https://www.elempleo.com/co/ofertas-trabajo/electromecanico-mantenimiento-industrial-bogota-1886766336",
-    "fecha_publicacion": "Reciente",
-    "fuente": "ElEmpleo.com",
-    "compensacion": "$10 a $12,5 millones",
-    "ramas": [
-      {
-        "clave": "instrumentacion_metrologia",
-        "nombre": "Instrumentación, Automatización y Metrología",
-        "color": "#10b981",
-        "score": 58
-      }
-    ],
-    "rama_principal": "Instrumentación, Automatización y Metrología",
-    "color_principal": "#10b981",
-    "clave_principal": "instrumentacion_metrologia",
-    "afinidad": "Alta Afinidad Pénsum",
-    "es_exclusiva_fisica": false,
-    "es_cierre_inminente": false,
-    "score_pensum": 93,
-    "mision": "Calibración de instrumentos de medición de variables físicas, cálculo de incertidumbre y programación de sistemas DAQ/LabVIEW.",
-    "tareas": "Levantamiento de curvas de calibración, programación en LabVIEW, enlace con autómatas PLC y aseguramiento metrológico ISO 17025."
-  },
-  {
-    "titulo": "Técnico electromecánico",
-    "empresa": "Prysmian Group - Procables",
-    "ubicacion": "Bogotá",
-    "url": "https://www.elempleo.com/co/ofertas-trabajo/electromecanico-mantenimiento-industrial-1886780395",
-    "fecha_publicacion": "Reciente",
-    "fuente": "ElEmpleo.com",
-    "compensacion": "$3,5 a $4 millones",
-    "ramas": [
-      {
-        "clave": "instrumentacion_metrologia",
-        "nombre": "Instrumentación, Automatización y Metrología",
-        "color": "#10b981",
-        "score": 58
-      }
-    ],
-    "rama_principal": "Instrumentación, Automatización y Metrología",
-    "color_principal": "#10b981",
-    "clave_principal": "instrumentacion_metrologia",
-    "afinidad": "Alta Afinidad Pénsum",
-    "es_exclusiva_fisica": false,
-    "es_cierre_inminente": false,
-    "score_pensum": 93,
-    "mision": "Calibración de instrumentos de medición de variables físicas, cálculo de incertidumbre y programación de sistemas DAQ/LabVIEW.",
-    "tareas": "Levantamiento de curvas de calibración, programación en LabVIEW, enlace con autómatas PLC y aseguramiento metrológico ISO 17025."
-  },
-  {
-    "titulo": "Tecnico electromecanico - cajica",
-    "empresa": "IMPULSO TEMPORAL SAS",
-    "ubicacion": "Cajicá",
-    "url": "https://www.elempleo.com/co/ofertas-trabajo/electromecanico-1886772524",
-    "fecha_publicacion": "Reciente",
-    "fuente": "ElEmpleo.com",
-    "compensacion": "$1,5 a $2 millones",
-    "ramas": [
-      {
-        "clave": "instrumentacion_metrologia",
-        "nombre": "Instrumentación, Automatización y Metrología",
-        "color": "#10b981",
-        "score": 58
-      }
-    ],
-    "rama_principal": "Instrumentación, Automatización y Metrología",
-    "color_principal": "#10b981",
-    "clave_principal": "instrumentacion_metrologia",
-    "afinidad": "Alta Afinidad Pénsum",
-    "es_exclusiva_fisica": false,
-    "es_cierre_inminente": false,
-    "score_pensum": 93,
-    "mision": "Calibración de instrumentos de medición de variables físicas, cálculo de incertidumbre y programación de sistemas DAQ/LabVIEW.",
-    "tareas": "Levantamiento de curvas de calibración, programación en LabVIEW, enlace con autómatas PLC y aseguramiento metrológico ISO 17025."
-  },
-  {
-    "titulo": "1626541834-2 - técnico electromecánico - bogotá",
-    "empresa": "AGENCIA DE EMPLEO Y FOMENTO EMPRESARIAL COMPENSAR",
-    "ubicacion": "Bogotá",
-    "url": "https://www.elempleo.com/co/ofertas-trabajo/electromecanico-sector-hidrocarburos-1886757674",
-    "fecha_publicacion": "Reciente",
-    "fuente": "ElEmpleo.com",
-    "compensacion": "$1,5 a $2 millones",
-    "ramas": [
-      {
-        "clave": "instrumentacion_metrologia",
-        "nombre": "Instrumentación, Automatización y Metrología",
-        "color": "#10b981",
-        "score": 58
-      }
-    ],
-    "rama_principal": "Instrumentación, Automatización y Metrología",
-    "color_principal": "#10b981",
-    "clave_principal": "instrumentacion_metrologia",
-    "afinidad": "Alta Afinidad Pénsum",
-    "es_exclusiva_fisica": false,
-    "es_cierre_inminente": false,
-    "score_pensum": 93,
-    "mision": "Calibración de instrumentos de medición de variables físicas, cálculo de incertidumbre y programación de sistemas DAQ/LabVIEW.",
-    "tareas": "Levantamiento de curvas de calibración, programación en LabVIEW, enlace con autómatas PLC y aseguramiento metrológico ISO 17025."
+    "score_pensum": 76,
+    "mision": "Desarrollo de sistemas embebidos, firmware en C/C++, comunicación por buses I2C/SPI y redes de sensores industriales IoT.",
+    "tareas": "Programación de microcontroladores, adquisición y filtrado digital de señales, depuración con analizador lógico y pruebas de hardware.",
+    "es_practica": false
   },
   {
     "titulo": "Practicante de Analisis de Datos, Estadistica, Sistemas y carreras afines",
@@ -1686,7 +2369,7 @@
         "clave": "simulaciones_datos_ia",
         "nombre": "Análisis de Datos, IA y Simulaciones",
         "color": "#06b6d4",
-        "score": 66
+        "score": 72
       }
     ],
     "rama_principal": "Análisis de Datos, IA y Simulaciones",
@@ -1695,9 +2378,88 @@
     "afinidad": "Alta Afinidad Pénsum",
     "es_exclusiva_fisica": false,
     "es_cierre_inminente": false,
-    "score_pensum": 66,
+    "score_pensum": 72,
     "mision": "Modelamiento matemático, pipelines de datos, simulación numérica de procesos y entrenamiento de algoritmos predictivos e IA.",
-    "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables."
+    "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables.",
+    "es_practica": true
+  },
+  {
+    "titulo": "Desarrollador Junior de Microsoft Power Platform",
+    "empresa": "NTT DATA Colombia",
+    "ubicacion": "Medellín, Antioquia",
+    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-desarrollador-junior-de-microsoft-power-platform-medellin-en-medellin-F6E5D177E3974FE161373E686DCF3405",
+    "fecha_publicacion": "Reciente",
+    "fuente": "Computrabajo",
+    "ramas": [
+      {
+        "clave": "simulaciones_datos_ia",
+        "nombre": "Análisis de Datos, IA y Simulaciones",
+        "color": "#06b6d4",
+        "score": 72
+      }
+    ],
+    "rama_principal": "Análisis de Datos, IA y Simulaciones",
+    "color_principal": "#06b6d4",
+    "clave_principal": "simulaciones_datos_ia",
+    "afinidad": "Alta Afinidad Pénsum",
+    "es_exclusiva_fisica": false,
+    "es_cierre_inminente": false,
+    "score_pensum": 72,
+    "mision": "Modelamiento matemático, pipelines de datos, simulación numérica de procesos y entrenamiento de algoritmos predictivos e IA.",
+    "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables.",
+    "es_practica": false
+  },
+  {
+    "titulo": "Practicante en ciencias de datos técnico/tecnólogo",
+    "empresa": "EVOLUTION DEVELOPMENT COLOMBIA S.A.S",
+    "ubicacion": "Medellín, Antioquia",
+    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-practicante-en-ciencias-de-datos-tecnicotecnologo-en-medellin-4DE8D7BBA208DAEA61373E686DCF3405",
+    "fecha_publicacion": "Reciente",
+    "fuente": "Computrabajo",
+    "ramas": [
+      {
+        "clave": "simulaciones_datos_ia",
+        "nombre": "Análisis de Datos, IA y Simulaciones",
+        "color": "#06b6d4",
+        "score": 69
+      }
+    ],
+    "rama_principal": "Análisis de Datos, IA y Simulaciones",
+    "color_principal": "#06b6d4",
+    "clave_principal": "simulaciones_datos_ia",
+    "afinidad": "Alta Afinidad Pénsum",
+    "es_exclusiva_fisica": false,
+    "es_cierre_inminente": false,
+    "score_pensum": 69,
+    "mision": "Modelamiento matemático, pipelines de datos, simulación numérica de procesos y entrenamiento de algoritmos predictivos e IA.",
+    "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables.",
+    "es_practica": true
+  },
+  {
+    "titulo": "Practicante de Marketing y Análisis de Datos",
+    "empresa": "SOLVO S.A.S",
+    "ubicacion": "Medellín, Antioquia",
+    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-practicante-de-marketing-y-analisis-de-datos-medellin-en-medellin-344383DDC066B73361373E686DCF3405",
+    "fecha_publicacion": "Reciente",
+    "fuente": "Computrabajo",
+    "ramas": [
+      {
+        "clave": "simulaciones_datos_ia",
+        "nombre": "Análisis de Datos, IA y Simulaciones",
+        "color": "#06b6d4",
+        "score": 69
+      }
+    ],
+    "rama_principal": "Análisis de Datos, IA y Simulaciones",
+    "color_principal": "#06b6d4",
+    "clave_principal": "simulaciones_datos_ia",
+    "afinidad": "Alta Afinidad Pénsum",
+    "es_exclusiva_fisica": false,
+    "es_cierre_inminente": false,
+    "score_pensum": 69,
+    "mision": "Modelamiento matemático, pipelines de datos, simulación numérica de procesos y entrenamiento de algoritmos predictivos e IA.",
+    "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables.",
+    "es_practica": true
   },
   {
     "titulo": "Administrador/a de Bases de Datos SQL Server (DBA)",
@@ -1724,7 +2486,8 @@
     "es_exclusiva_fisica": false,
     "es_cierre_inminente": false,
     "score_pensum": 66,
-    "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables."
+    "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables.",
+    "es_practica": false
   },
   {
     "titulo": "Practicante Inteligencia De Negocios Y Gestión Comercial - Medellín",
@@ -1751,113 +2514,8 @@
     "es_exclusiva_fisica": false,
     "es_cierre_inminente": false,
     "score_pensum": 66,
-    "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables."
-  },
-  {
-    "titulo": "Técnico /Tecnólogo de Mecatronica, Electromecánica  automatización",
-    "empresa": "SERVIOPTICA S.A.S",
-    "ubicacion": "La Estrella, Antioquia",
-    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-tecnico-tecnologo-de-mecatronica-electromecanica-automatizacion-experiencia-de-2-anos-en-procesos-de-produccion-con-sistemas-automaticosorientados-a-la-industria-en-la-estrella-A5C5C0C2F2828AF461373E686DCF3405",
-    "fecha_publicacion": "Reciente",
-    "fuente": "Computrabajo",
-    "ramas": [
-      {
-        "clave": "instrumentacion_metrologia",
-        "nombre": "Instrumentación, Automatización y Metrología",
-        "color": "#10b981",
-        "score": 64
-      },
-      {
-        "clave": "optica_vision_artificial",
-        "nombre": "Óptica, Fotónica y Visión Artificial",
-        "color": "#a855f7",
-        "score": 53
-      }
-    ],
-    "rama_principal": "Instrumentación, Automatización y Metrología",
-    "color_principal": "#10b981",
-    "clave_principal": "instrumentacion_metrologia",
-    "afinidad": "Alta Afinidad Pénsum",
-    "es_exclusiva_fisica": false,
-    "es_cierre_inminente": false,
-    "score_pensum": 64,
-    "mision": "Calibración de instrumentos de medición de variables físicas, cálculo de incertidumbre y programación de sistemas DAQ/LabVIEW.",
-    "tareas": "Levantamiento de curvas de calibración, programación en LabVIEW, enlace con autómatas PLC y aseguramiento metrológico ISO 17025."
-  },
-  {
-    "titulo": "Desarrollador Junior de Microsoft Power Platform",
-    "empresa": "NTT DATA Colombia",
-    "ubicacion": "Medellín, Antioquia",
-    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-desarrollador-junior-de-microsoft-power-platform-medellin-en-medellin-F6E5D177E3974FE161373E686DCF3405",
-    "fecha_publicacion": "Reciente",
-    "fuente": "Computrabajo",
-    "ramas": [
-      {
-        "clave": "simulaciones_datos_ia",
-        "nombre": "Análisis de Datos, IA y Simulaciones",
-        "color": "#06b6d4",
-        "score": 63
-      }
-    ],
-    "rama_principal": "Análisis de Datos, IA y Simulaciones",
-    "color_principal": "#06b6d4",
-    "clave_principal": "simulaciones_datos_ia",
-    "afinidad": "Alta Afinidad Pénsum",
-    "es_exclusiva_fisica": false,
-    "es_cierre_inminente": false,
-    "score_pensum": 63,
-    "mision": "Modelamiento matemático, pipelines de datos, simulación numérica de procesos y entrenamiento de algoritmos predictivos e IA.",
-    "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables."
-  },
-  {
-    "titulo": "Practicante en ciencias de datos técnico/tecnólogo",
-    "empresa": "EVOLUTION DEVELOPMENT COLOMBIA S.A.S",
-    "ubicacion": "Medellín, Antioquia",
-    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-practicante-en-ciencias-de-datos-tecnicotecnologo-en-medellin-4DE8D7BBA208DAEA61373E686DCF3405",
-    "fecha_publicacion": "Reciente",
-    "fuente": "Computrabajo",
-    "ramas": [
-      {
-        "clave": "simulaciones_datos_ia",
-        "nombre": "Análisis de Datos, IA y Simulaciones",
-        "color": "#06b6d4",
-        "score": 63
-      }
-    ],
-    "rama_principal": "Análisis de Datos, IA y Simulaciones",
-    "color_principal": "#06b6d4",
-    "clave_principal": "simulaciones_datos_ia",
-    "afinidad": "Alta Afinidad Pénsum",
-    "es_exclusiva_fisica": false,
-    "es_cierre_inminente": false,
-    "score_pensum": 63,
-    "mision": "Modelamiento matemático, pipelines de datos, simulación numérica de procesos y entrenamiento de algoritmos predictivos e IA.",
-    "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables."
-  },
-  {
-    "titulo": "Practicante de Marketing y Análisis de Datos",
-    "empresa": "SOLVO S.A.S",
-    "ubicacion": "Medellín, Antioquia",
-    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-practicante-de-marketing-y-analisis-de-datos-medellin-en-medellin-344383DDC066B73361373E686DCF3405",
-    "fecha_publicacion": "Reciente",
-    "fuente": "Computrabajo",
-    "ramas": [
-      {
-        "clave": "simulaciones_datos_ia",
-        "nombre": "Análisis de Datos, IA y Simulaciones",
-        "color": "#06b6d4",
-        "score": 63
-      }
-    ],
-    "rama_principal": "Análisis de Datos, IA y Simulaciones",
-    "color_principal": "#06b6d4",
-    "clave_principal": "simulaciones_datos_ia",
-    "afinidad": "Alta Afinidad Pénsum",
-    "es_exclusiva_fisica": false,
-    "es_cierre_inminente": false,
-    "score_pensum": 63,
-    "mision": "Modelamiento matemático, pipelines de datos, simulación numérica de procesos y entrenamiento de algoritmos predictivos e IA.",
-    "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables."
+    "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables.",
+    "es_practica": true
   },
   {
     "titulo": "Practicante Universitario (Ingeniería Eléctrica y Electrónica)",
@@ -1890,7 +2548,8 @@
     "es_exclusiva_fisica": false,
     "es_cierre_inminente": false,
     "score_pensum": 63,
-    "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables."
+    "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables.",
+    "es_practica": true
   },
   {
     "titulo": "Practicante Universitario/a de Analítica de Datos",
@@ -1917,7 +2576,8 @@
     "es_exclusiva_fisica": false,
     "es_cierre_inminente": false,
     "score_pensum": 63,
-    "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables."
+    "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables.",
+    "es_practica": true
   },
   {
     "titulo": "Practicante Universitario/a de Cumplimiento Operativo y Judicial",
@@ -1950,7 +2610,8 @@
     "es_exclusiva_fisica": false,
     "es_cierre_inminente": false,
     "score_pensum": 63,
-    "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables."
+    "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables.",
+    "es_practica": true
   },
   {
     "titulo": "Practicante de Ingeniería (Gestión de Flota)",
@@ -1983,409 +2644,8 @@
     "es_exclusiva_fisica": false,
     "es_cierre_inminente": false,
     "score_pensum": 63,
-    "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables."
-  },
-  {
-    "titulo": "Ingeniero de proyectos automatización y control - oil&gas",
-    "empresa": "Empresa confidencial",
-    "ubicacion": "Bogotá",
-    "url": "https://www.elempleo.com/co/ofertas-trabajo/analista-de-automatizacion-1886774432",
-    "fecha_publicacion": "Reciente",
-    "fuente": "ElEmpleo.com",
-    "compensacion": "",
-    "ramas": [
-      {
-        "clave": "instrumentacion_metrologia",
-        "nombre": "Instrumentación, Automatización y Metrología",
-        "color": "#10b981",
-        "score": 61
-      }
-    ],
-    "rama_principal": "Instrumentación, Automatización y Metrología",
-    "color_principal": "#10b981",
-    "clave_principal": "instrumentacion_metrologia",
-    "afinidad": "Alta Afinidad Pénsum",
-    "es_exclusiva_fisica": false,
-    "es_cierre_inminente": false,
-    "score_pensum": 61,
-    "mision": "Calibración de instrumentos de medición de variables físicas, cálculo de incertidumbre y programación de sistemas DAQ/LabVIEW.",
-    "tareas": "Levantamiento de curvas de calibración, programación en LabVIEW, enlace con autómatas PLC y aseguramiento metrológico ISO 17025."
-  },
-  {
-    "titulo": "Medellín - dibujante automatización y control bilingüe.",
-    "empresa": "HATCH S.A.S",
-    "ubicacion": "Medellín",
-    "url": "https://www.elempleo.com/co/ofertas-trabajo/auxiliar-de-automatizacion-e-analitica-de-cobranza-1886758244",
-    "fecha_publicacion": "Reciente",
-    "fuente": "ElEmpleo.com",
-    "compensacion": "",
-    "ramas": [
-      {
-        "clave": "instrumentacion_metrologia",
-        "nombre": "Instrumentación, Automatización y Metrología",
-        "color": "#10b981",
-        "score": 61
-      }
-    ],
-    "rama_principal": "Instrumentación, Automatización y Metrología",
-    "color_principal": "#10b981",
-    "clave_principal": "instrumentacion_metrologia",
-    "afinidad": "Alta Afinidad Pénsum",
-    "es_exclusiva_fisica": false,
-    "es_cierre_inminente": false,
-    "score_pensum": 61,
-    "mision": "Calibración de instrumentos de medición de variables físicas, cálculo de incertidumbre y programación de sistemas DAQ/LabVIEW.",
-    "tareas": "Levantamiento de curvas de calibración, programación en LabVIEW, enlace con autómatas PLC y aseguramiento metrológico ISO 17025."
-  },
-  {
-    "titulo": "Practicante Profesional / Automatización Industrial / Ingeniería Mecánica / Disponibilidad Inmediata",
-    "empresa": "Burger King Colombia",
-    "ubicacion": "Medellín, Antioquia",
-    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-practicante-profesional-automatizacion-industrial-ingenieria-mecanica-disponibilidad-inmediata-practicante-profesional-mantenimiento-medellin-en-medellin-B7B3EF9FBC4AD3CD61373E686DCF3405",
-    "fecha_publicacion": "Reciente",
-    "fuente": "Computrabajo",
-    "ramas": [
-      {
-        "clave": "instrumentacion_metrologia",
-        "nombre": "Instrumentación, Automatización y Metrología",
-        "color": "#10b981",
-        "score": 58
-      }
-    ],
-    "rama_principal": "Instrumentación, Automatización y Metrología",
-    "color_principal": "#10b981",
-    "clave_principal": "instrumentacion_metrologia",
-    "afinidad": "Alta Afinidad Pénsum",
-    "es_exclusiva_fisica": false,
-    "es_cierre_inminente": false,
-    "score_pensum": 58,
-    "mision": "Calibración de instrumentos de medición de variables físicas, cálculo de incertidumbre y programación de sistemas DAQ/LabVIEW.",
-    "tareas": "Levantamiento de curvas de calibración, programación en LabVIEW, enlace con autómatas PLC y aseguramiento metrológico ISO 17025."
-  },
-  {
-    "titulo": "Practicante universitario de ingeniería mecánica o mecatrónica",
-    "empresa": "Agencia de Empleo de Comfenalco Antioquia",
-    "ubicacion": "Santo Domingo, Antioquia",
-    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-practicante-universitario-de-ingenieria-mecanica-o-mecatronica-proyecto-minero-en-santo-domingo-BEFB62D5BA99ECF261373E686DCF3405",
-    "fecha_publicacion": "Reciente",
-    "fuente": "Computrabajo",
-    "ramas": [
-      {
-        "clave": "instrumentacion_metrologia",
-        "nombre": "Instrumentación, Automatización y Metrología",
-        "color": "#10b981",
-        "score": 58
-      }
-    ],
-    "rama_principal": "Instrumentación, Automatización y Metrología",
-    "color_principal": "#10b981",
-    "clave_principal": "instrumentacion_metrologia",
-    "afinidad": "Alta Afinidad Pénsum",
-    "es_exclusiva_fisica": false,
-    "es_cierre_inminente": false,
-    "score_pensum": 58,
-    "mision": "Calibración de instrumentos de medición de variables físicas, cálculo de incertidumbre y programación de sistemas DAQ/LabVIEW.",
-    "tareas": "Levantamiento de curvas de calibración, programación en LabVIEW, enlace con autómatas PLC y aseguramiento metrológico ISO 17025."
-  },
-  {
-    "titulo": "Practicante de ingenieria Mecatronica y carreras afines",
-    "empresa": "Concentrix",
-    "ubicacion": "Bello, Antioquia",
-    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-practicante-de-ingenieria-mecatronica-y-carreras-afines-en-bello-BBF91AB818D7B28861373E686DCF3405",
-    "fecha_publicacion": "Reciente",
-    "fuente": "Computrabajo",
-    "ramas": [
-      {
-        "clave": "instrumentacion_metrologia",
-        "nombre": "Instrumentación, Automatización y Metrología",
-        "color": "#10b981",
-        "score": 58
-      }
-    ],
-    "rama_principal": "Instrumentación, Automatización y Metrología",
-    "color_principal": "#10b981",
-    "clave_principal": "instrumentacion_metrologia",
-    "afinidad": "Alta Afinidad Pénsum",
-    "es_exclusiva_fisica": false,
-    "es_cierre_inminente": false,
-    "score_pensum": 58,
-    "mision": "Calibración de instrumentos de medición de variables físicas, cálculo de incertidumbre y programación de sistemas DAQ/LabVIEW.",
-    "tareas": "Levantamiento de curvas de calibración, programación en LabVIEW, enlace con autómatas PLC y aseguramiento metrológico ISO 17025."
-  },
-  {
-    "titulo": "Practicante Universitario de Ingeniería Mecánica y Mecatrónica / Proyecto Minero.",
-    "empresa": "Antioquia Gold Ltd.",
-    "ubicacion": "Medellín, Antioquia",
-    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-practicante-universitario-de-ingenieria-mecanica-y-mecatronica-proyecto-minero-en-medellin-A0176B2FC0193C6F61373E686DCF3405",
-    "fecha_publicacion": "Reciente",
-    "fuente": "Computrabajo",
-    "ramas": [
-      {
-        "clave": "instrumentacion_metrologia",
-        "nombre": "Instrumentación, Automatización y Metrología",
-        "color": "#10b981",
-        "score": 58
-      }
-    ],
-    "rama_principal": "Instrumentación, Automatización y Metrología",
-    "color_principal": "#10b981",
-    "clave_principal": "instrumentacion_metrologia",
-    "afinidad": "Alta Afinidad Pénsum",
-    "es_exclusiva_fisica": false,
-    "es_cierre_inminente": false,
-    "score_pensum": 58,
-    "mision": "Calibración de instrumentos de medición de variables físicas, cálculo de incertidumbre y programación de sistemas DAQ/LabVIEW.",
-    "tareas": "Levantamiento de curvas de calibración, programación en LabVIEW, enlace con autómatas PLC y aseguramiento metrológico ISO 17025."
-  },
-  {
-    "titulo": "Practicante Eléctrico/ Electrónico/Electromecánico",
-    "empresa": "TRONEX / CODISCOS",
-    "ubicacion": "Medellín, Antioquia",
-    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-practicante-electrico-electronicoelectromecanico-tecnico-tecnologo-en-medellin-32D629052F0C892B61373E686DCF3405",
-    "fecha_publicacion": "Reciente",
-    "fuente": "Computrabajo",
-    "ramas": [
-      {
-        "clave": "instrumentacion_metrologia",
-        "nombre": "Instrumentación, Automatización y Metrología",
-        "color": "#10b981",
-        "score": 58
-      }
-    ],
-    "rama_principal": "Instrumentación, Automatización y Metrología",
-    "color_principal": "#10b981",
-    "clave_principal": "instrumentacion_metrologia",
-    "afinidad": "Alta Afinidad Pénsum",
-    "es_exclusiva_fisica": false,
-    "es_cierre_inminente": false,
-    "score_pensum": 58,
-    "mision": "Calibración de instrumentos de medición de variables físicas, cálculo de incertidumbre y programación de sistemas DAQ/LabVIEW.",
-    "tareas": "Levantamiento de curvas de calibración, programación en LabVIEW, enlace con autómatas PLC y aseguramiento metrológico ISO 17025."
-  },
-  {
-    "titulo": "Practicas nivel pregrado en Automatización de procesos",
-    "empresa": "OUTSOURCING SERVICIOS INFORMATICOS S A OUTSOURCING S A",
-    "ubicacion": "Bogotá, D.C., Bogotá, D.C.",
-    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-practicas-nivel-pregrado-en-automatizacion-de-procesos-contrato-aprendizaje-modalidad-remoto-en-bogota-dc-91E0CB4F4E11F7C861373E686DCF3405",
-    "fecha_publicacion": "Reciente",
-    "fuente": "Computrabajo",
-    "ramas": [
-      {
-        "clave": "instrumentacion_metrologia",
-        "nombre": "Instrumentación, Automatización y Metrología",
-        "color": "#10b981",
-        "score": 58
-      }
-    ],
-    "rama_principal": "Instrumentación, Automatización y Metrología",
-    "color_principal": "#10b981",
-    "clave_principal": "instrumentacion_metrologia",
-    "afinidad": "Alta Afinidad Pénsum",
-    "es_exclusiva_fisica": false,
-    "es_cierre_inminente": false,
-    "score_pensum": 58,
-    "mision": "Calibración de instrumentos de medición de variables físicas, cálculo de incertidumbre y programación de sistemas DAQ/LabVIEW.",
-    "tareas": "Levantamiento de curvas de calibración, programación en LabVIEW, enlace con autómatas PLC y aseguramiento metrológico ISO 17025."
-  },
-  {
-    "titulo": "Practicante Universitario Automatización",
-    "empresa": "Grupo Éxito",
-    "ubicacion": "Medellín, Antioquia",
-    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-practicante-universitario-automatizacion-en-medellin-48D6D6B96764C44861373E686DCF3405",
-    "fecha_publicacion": "Reciente",
-    "fuente": "Computrabajo",
-    "ramas": [
-      {
-        "clave": "instrumentacion_metrologia",
-        "nombre": "Instrumentación, Automatización y Metrología",
-        "color": "#10b981",
-        "score": 58
-      }
-    ],
-    "rama_principal": "Instrumentación, Automatización y Metrología",
-    "color_principal": "#10b981",
-    "clave_principal": "instrumentacion_metrologia",
-    "afinidad": "Alta Afinidad Pénsum",
-    "es_exclusiva_fisica": false,
-    "es_cierre_inminente": false,
-    "score_pensum": 58,
-    "mision": "Calibración de instrumentos de medición de variables físicas, cálculo de incertidumbre y programación de sistemas DAQ/LabVIEW.",
-    "tareas": "Levantamiento de curvas de calibración, programación en LabVIEW, enlace con autómatas PLC y aseguramiento metrológico ISO 17025."
-  },
-  {
-    "titulo": "Practicante Auxiliar Electromecánico",
-    "empresa": "Algamar S.A.",
-    "ubicacion": "Itagüí, Antioquia",
-    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-practicante-auxiliar-electromecanico-sector-metalmecanico-en-itagui-2F5A06B18594228B61373E686DCF3405",
-    "fecha_publicacion": "Reciente",
-    "fuente": "Computrabajo",
-    "ramas": [
-      {
-        "clave": "instrumentacion_metrologia",
-        "nombre": "Instrumentación, Automatización y Metrología",
-        "color": "#10b981",
-        "score": 58
-      }
-    ],
-    "rama_principal": "Instrumentación, Automatización y Metrología",
-    "color_principal": "#10b981",
-    "clave_principal": "instrumentacion_metrologia",
-    "afinidad": "Alta Afinidad Pénsum",
-    "es_exclusiva_fisica": false,
-    "es_cierre_inminente": false,
-    "score_pensum": 58,
-    "mision": "Calibración de instrumentos de medición de variables físicas, cálculo de incertidumbre y programación de sistemas DAQ/LabVIEW.",
-    "tareas": "Levantamiento de curvas de calibración, programación en LabVIEW, enlace con autómatas PLC y aseguramiento metrológico ISO 17025."
-  },
-  {
-    "titulo": "Aprendiz Electromecánico",
-    "empresa": "GRUPO BIOS S.A.S",
-    "ubicacion": "Caldas, Antioquia",
-    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-aprendiz-electromecanico-en-caldas-D4C1B91920FF643461373E686DCF3405",
-    "fecha_publicacion": "Reciente",
-    "fuente": "Computrabajo",
-    "ramas": [
-      {
-        "clave": "instrumentacion_metrologia",
-        "nombre": "Instrumentación, Automatización y Metrología",
-        "color": "#10b981",
-        "score": 58
-      }
-    ],
-    "rama_principal": "Instrumentación, Automatización y Metrología",
-    "color_principal": "#10b981",
-    "clave_principal": "instrumentacion_metrologia",
-    "afinidad": "Alta Afinidad Pénsum",
-    "es_exclusiva_fisica": false,
-    "es_cierre_inminente": false,
-    "score_pensum": 58,
-    "mision": "Calibración de instrumentos de medición de variables físicas, cálculo de incertidumbre y programación de sistemas DAQ/LabVIEW.",
-    "tareas": "Levantamiento de curvas de calibración, programación en LabVIEW, enlace con autómatas PLC y aseguramiento metrológico ISO 17025."
-  },
-  {
-    "titulo": "Practicante Universitario Digital Tecnología",
-    "empresa": "Grupo Éxito",
-    "ubicacion": "Medellín, Antioquia",
-    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-practicante-universitario-digital-tecnologia-en-medellin-0B29DA11EF8A724B61373E686DCF3405",
-    "fecha_publicacion": "Reciente",
-    "fuente": "Computrabajo",
-    "ramas": [
-      {
-        "clave": "electronica_digital_iot",
-        "nombre": "Electrónica Digital, Microcontroladores e IoT",
-        "color": "#3b82f6",
-        "score": 58
-      }
-    ],
-    "rama_principal": "Electrónica Digital, Microcontroladores e IoT",
-    "color_principal": "#3b82f6",
-    "clave_principal": "electronica_digital_iot",
-    "afinidad": "Alta Afinidad Pénsum",
-    "es_exclusiva_fisica": false,
-    "es_cierre_inminente": false,
-    "score_pensum": 58,
-    "mision": "Desarrollo de sistemas embebidos, firmware en C/C++, comunicación por buses I2C/SPI y redes de sensores industriales IoT.",
-    "tareas": "Programación de microcontroladores, adquisición y filtrado digital de señales, depuración con analizador lógico y pruebas de hardware."
-  },
-  {
-    "titulo": "Aprendiz Electricidad, Mecánica, Mantenimiento Industrial, Automatización / Antioquia",
-    "empresa": "MAPER S.A.",
-    "ubicacion": "La Estrella, Antioquia",
-    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-aprendiz-electricidad-mecanica-mantenimiento-industrial-automatizacion-antioquia-en-la-estrella-2D98B1AA81F3905D61373E686DCF3405",
-    "fecha_publicacion": "Reciente",
-    "fuente": "Computrabajo",
-    "ramas": [
-      {
-        "clave": "instrumentacion_metrologia",
-        "nombre": "Instrumentación, Automatización y Metrología",
-        "color": "#10b981",
-        "score": 58
-      }
-    ],
-    "rama_principal": "Instrumentación, Automatización y Metrología",
-    "color_principal": "#10b981",
-    "clave_principal": "instrumentacion_metrologia",
-    "afinidad": "Alta Afinidad Pénsum",
-    "es_exclusiva_fisica": false,
-    "es_cierre_inminente": false,
-    "score_pensum": 58,
-    "mision": "Calibración de instrumentos de medición de variables físicas, cálculo de incertidumbre y programación de sistemas DAQ/LabVIEW.",
-    "tareas": "Levantamiento de curvas de calibración, programación en LabVIEW, enlace con autómatas PLC y aseguramiento metrológico ISO 17025."
-  },
-  {
-    "titulo": "Aprendiz técnico o tecnólogo  Automatización Industrial",
-    "empresa": "Servicios en Soluciones Humanas SAS",
-    "ubicacion": "Medellín, Antioquia",
-    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-aprendiz-tecnico-o-tecnologo-automatizacion-industrial-sabaneta-en-medellin-CC8ADC983BD874A361373E686DCF3405",
-    "fecha_publicacion": "Reciente",
-    "fuente": "Computrabajo",
-    "ramas": [
-      {
-        "clave": "instrumentacion_metrologia",
-        "nombre": "Instrumentación, Automatización y Metrología",
-        "color": "#10b981",
-        "score": 58
-      }
-    ],
-    "rama_principal": "Instrumentación, Automatización y Metrología",
-    "color_principal": "#10b981",
-    "clave_principal": "instrumentacion_metrologia",
-    "afinidad": "Alta Afinidad Pénsum",
-    "es_exclusiva_fisica": false,
-    "es_cierre_inminente": false,
-    "score_pensum": 58,
-    "mision": "Calibración de instrumentos de medición de variables físicas, cálculo de incertidumbre y programación de sistemas DAQ/LabVIEW.",
-    "tareas": "Levantamiento de curvas de calibración, programación en LabVIEW, enlace con autómatas PLC y aseguramiento metrológico ISO 17025."
-  },
-  {
-    "titulo": "Practicante Técnico/Tecnólogo Electromecánica, Mecánica, Industrial /Medellín Tronex",
-    "empresa": "TRONEX / CODISCOS",
-    "ubicacion": "Medellín, Antioquia",
-    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-practicante-tecnicotecnologo-electromecanica-mecanica-industrial-medellin-tronex-en-medellin-D376A2664D7943E861373E686DCF3405",
-    "fecha_publicacion": "Reciente",
-    "fuente": "Computrabajo",
-    "ramas": [
-      {
-        "clave": "instrumentacion_metrologia",
-        "nombre": "Instrumentación, Automatización y Metrología",
-        "color": "#10b981",
-        "score": 58
-      }
-    ],
-    "rama_principal": "Instrumentación, Automatización y Metrología",
-    "color_principal": "#10b981",
-    "clave_principal": "instrumentacion_metrologia",
-    "afinidad": "Alta Afinidad Pénsum",
-    "es_exclusiva_fisica": false,
-    "es_cierre_inminente": false,
-    "score_pensum": 58,
-    "mision": "Calibración de instrumentos de medición de variables físicas, cálculo de incertidumbre y programación de sistemas DAQ/LabVIEW.",
-    "tareas": "Levantamiento de curvas de calibración, programación en LabVIEW, enlace con autómatas PLC y aseguramiento metrológico ISO 17025."
-  },
-  {
-    "titulo": "Practicante Ambienta, practicante Electromecánico",
-    "empresa": "Empresa Confidencial",
-    "ubicacion": "Medellín, Antioquia",
-    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-practicante-ambienta-practicante-electromecanico-lunes-a-viernes-en-medellin-E0961CBF248154D261373E686DCF3405",
-    "fecha_publicacion": "Reciente",
-    "fuente": "Computrabajo",
-    "ramas": [
-      {
-        "clave": "instrumentacion_metrologia",
-        "nombre": "Instrumentación, Automatización y Metrología",
-        "color": "#10b981",
-        "score": 58
-      }
-    ],
-    "rama_principal": "Instrumentación, Automatización y Metrología",
-    "color_principal": "#10b981",
-    "clave_principal": "instrumentacion_metrologia",
-    "afinidad": "Alta Afinidad Pénsum",
-    "es_exclusiva_fisica": false,
-    "es_cierre_inminente": false,
-    "score_pensum": 58,
-    "mision": "Calibración de instrumentos de medición de variables físicas, cálculo de incertidumbre y programación de sistemas DAQ/LabVIEW.",
-    "tareas": "Levantamiento de curvas de calibración, programación en LabVIEW, enlace con autómatas PLC y aseguramiento metrológico ISO 17025."
+    "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables.",
+    "es_practica": true
   },
   {
     "titulo": "Practicante de calidad para Apartadó 349787-184",
@@ -2412,169 +2672,8 @@
     "es_exclusiva_fisica": false,
     "es_cierre_inminente": false,
     "score_pensum": 58,
-    "tareas": "Levantamiento de curvas de calibración, programación en LabVIEW, enlace con autómatas PLC y aseguramiento metrológico ISO 17025."
-  },
-  {
-    "titulo": "Practicante  universitario ingenieria quimica",
-    "empresa": "APPLUS NORCONTROL COLOMBIA LTDA",
-    "ubicacion": "Bogotá",
-    "url": "https://www.elempleo.com/co/ofertas-trabajo/practicante-de-ingenieria-industrial-1886778367",
-    "fecha_publicacion": "Reciente",
-    "fuente": "ElEmpleo.com",
-    "compensacion": "",
-    "ramas": [
-      {
-        "clave": "instrumentacion_metrologia",
-        "nombre": "Instrumentación, Automatización y Metrología",
-        "color": "#10b981",
-        "score": 58
-      }
-    ],
-    "rama_principal": "Instrumentación, Automatización y Metrología",
-    "color_principal": "#10b981",
-    "clave_principal": "instrumentacion_metrologia",
-    "afinidad": "Alta Afinidad Pénsum",
-    "es_exclusiva_fisica": false,
-    "es_cierre_inminente": false,
-    "score_pensum": 58,
-    "mision": "Calibración de instrumentos de medición de variables físicas, cálculo de incertidumbre y programación de sistemas DAQ/LabVIEW.",
-    "tareas": "Levantamiento de curvas de calibración, programación en LabVIEW, enlace con autómatas PLC y aseguramiento metrológico ISO 17025."
-  },
-  {
-    "titulo": "Ingeniero de automatización y digitalización industrial junior-agc(bogotá)",
-    "empresa": "Empresa confidencial",
-    "ubicacion": "Bogotá",
-    "url": "https://www.elempleo.com/co/ofertas-trabajo/practicante-universitario-en-datos-tecnologia-y-automatizacion-1886761106",
-    "fecha_publicacion": "Reciente",
-    "fuente": "ElEmpleo.com",
-    "compensacion": "",
-    "ramas": [
-      {
-        "clave": "electronica_digital_iot",
-        "nombre": "Electrónica Digital, Microcontroladores e IoT",
-        "color": "#3b82f6",
-        "score": 58
-      },
-      {
-        "clave": "instrumentacion_metrologia",
-        "nombre": "Instrumentación, Automatización y Metrología",
-        "color": "#10b981",
-        "score": 58
-      }
-    ],
-    "rama_principal": "Electrónica Digital, Microcontroladores e IoT",
-    "color_principal": "#3b82f6",
-    "clave_principal": "electronica_digital_iot",
-    "afinidad": "Alta Afinidad Pénsum",
-    "es_exclusiva_fisica": false,
-    "es_cierre_inminente": false,
-    "score_pensum": 58,
-    "mision": "Desarrollo de sistemas embebidos, firmware en C/C++, comunicación por buses I2C/SPI y redes de sensores industriales IoT.",
-    "tareas": "Programación de microcontroladores, adquisición y filtrado digital de señales, depuración con analizador lógico y pruebas de hardware."
-  },
-  {
-    "titulo": "Analista de procesos y automatización- remoto",
-    "empresa": "MICHAEL PAGE INTERNATIONAL",
-    "ubicacion": "Bogotá",
-    "url": "https://www.elempleo.com/co/ofertas-trabajo/aprendiz-de-tecnologia-estudiate-universitario-1886760603",
-    "fecha_publicacion": "Reciente",
-    "fuente": "ElEmpleo.com",
-    "compensacion": "",
-    "ramas": [
-      {
-        "clave": "instrumentacion_metrologia",
-        "nombre": "Instrumentación, Automatización y Metrología",
-        "color": "#10b981",
-        "score": 58
-      }
-    ],
-    "rama_principal": "Instrumentación, Automatización y Metrología",
-    "color_principal": "#10b981",
-    "clave_principal": "instrumentacion_metrologia",
-    "afinidad": "Alta Afinidad Pénsum",
-    "es_exclusiva_fisica": false,
-    "es_cierre_inminente": false,
-    "score_pensum": 58,
-    "mision": "Calibración de instrumentos de medición de variables físicas, cálculo de incertidumbre y programación de sistemas DAQ/LabVIEW.",
-    "tareas": "Levantamiento de curvas de calibración, programación en LabVIEW, enlace con autómatas PLC y aseguramiento metrológico ISO 17025."
-  },
-  {
-    "titulo": "Ingeniero de automatización",
-    "empresa": "Empresa confidencial",
-    "ubicacion": "Bogotá",
-    "url": "https://www.elempleo.com/co/ofertas-trabajo/ingeniero-de-innovaciones-y-automatizacion-bogota-1886781779",
-    "fecha_publicacion": "Reciente",
-    "fuente": "ElEmpleo.com",
-    "compensacion": "",
-    "ramas": [
-      {
-        "clave": "instrumentacion_metrologia",
-        "nombre": "Instrumentación, Automatización y Metrología",
-        "color": "#10b981",
-        "score": 58
-      }
-    ],
-    "rama_principal": "Instrumentación, Automatización y Metrología",
-    "color_principal": "#10b981",
-    "clave_principal": "instrumentacion_metrologia",
-    "afinidad": "Alta Afinidad Pénsum",
-    "es_exclusiva_fisica": false,
-    "es_cierre_inminente": false,
-    "score_pensum": 58,
-    "mision": "Calibración de instrumentos de medición de variables físicas, cálculo de incertidumbre y programación de sistemas DAQ/LabVIEW.",
-    "tareas": "Levantamiento de curvas de calibración, programación en LabVIEW, enlace con autómatas PLC y aseguramiento metrológico ISO 17025."
-  },
-  {
-    "titulo": "Electromecánico mantenimiento industrial",
-    "empresa": "Empresa confidencial",
-    "ubicacion": "Bogotá",
-    "url": "https://www.elempleo.com/co/ofertas-trabajo/electromecanico-sector-hidrocarburos-1886759143",
-    "fecha_publicacion": "Reciente",
-    "fuente": "ElEmpleo.com",
-    "compensacion": "",
-    "ramas": [
-      {
-        "clave": "instrumentacion_metrologia",
-        "nombre": "Instrumentación, Automatización y Metrología",
-        "color": "#10b981",
-        "score": 58
-      }
-    ],
-    "rama_principal": "Instrumentación, Automatización y Metrología",
-    "color_principal": "#10b981",
-    "clave_principal": "instrumentacion_metrologia",
-    "afinidad": "Alta Afinidad Pénsum",
-    "es_exclusiva_fisica": false,
-    "es_cierre_inminente": false,
-    "score_pensum": 58,
-    "mision": "Calibración de instrumentos de medición de variables físicas, cálculo de incertidumbre y programación de sistemas DAQ/LabVIEW.",
-    "tareas": "Levantamiento de curvas de calibración, programación en LabVIEW, enlace con autómatas PLC y aseguramiento metrológico ISO 17025."
-  },
-  {
-    "titulo": "Jefe de fiscalización de montaje electromecánico - ampliación",
-    "empresa": "INTEGRAL",
-    "ubicacion": "Medellín",
-    "url": "https://www.elempleo.com/co/ofertas-trabajo/residente-de-interventoria-electromecanico-yumbo-1886780556",
-    "fecha_publicacion": "Reciente",
-    "fuente": "ElEmpleo.com",
-    "compensacion": "",
-    "ramas": [
-      {
-        "clave": "instrumentacion_metrologia",
-        "nombre": "Instrumentación, Automatización y Metrología",
-        "color": "#10b981",
-        "score": 58
-      }
-    ],
-    "rama_principal": "Instrumentación, Automatización y Metrología",
-    "color_principal": "#10b981",
-    "clave_principal": "instrumentacion_metrologia",
-    "afinidad": "Alta Afinidad Pénsum",
-    "es_exclusiva_fisica": false,
-    "es_cierre_inminente": false,
-    "score_pensum": 58,
-    "mision": "Calibración de instrumentos de medición de variables físicas, cálculo de incertidumbre y programación de sistemas DAQ/LabVIEW.",
-    "tareas": "Levantamiento de curvas de calibración, programación en LabVIEW, enlace con autómatas PLC y aseguramiento metrológico ISO 17025."
+    "tareas": "Levantamiento de curvas de calibración, programación en LabVIEW, enlace con autómatas PLC y aseguramiento metrológico ISO 17025.",
+    "es_practica": true
   },
   {
     "titulo": "Practicante de Ingeniería Industrial",
@@ -2601,7 +2700,8 @@
     "es_exclusiva_fisica": false,
     "es_cierre_inminente": false,
     "score_pensum": 35,
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
+    "es_practica": true
   },
   {
     "titulo": "Practicante De Ingeniería Sistemas - Mosquera",
@@ -2628,7 +2728,8 @@
     "es_exclusiva_fisica": false,
     "es_cierre_inminente": false,
     "score_pensum": 35,
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
+    "es_practica": true
   },
   {
     "titulo": "Practicante De Ingeniería Sistemas - Medellín",
@@ -2655,7 +2756,8 @@
     "es_exclusiva_fisica": false,
     "es_cierre_inminente": false,
     "score_pensum": 35,
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
+    "es_practica": true
   },
   {
     "titulo": "Practicante Ingeniería Industrial - Marinilla",
@@ -2682,7 +2784,8 @@
     "es_exclusiva_fisica": false,
     "es_cierre_inminente": false,
     "score_pensum": 35,
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
+    "es_practica": true
   },
   {
     "titulo": "Practicante Ingeniería Industrial - Marinilla",
@@ -2709,7 +2812,8 @@
     "es_exclusiva_fisica": false,
     "es_cierre_inminente": false,
     "score_pensum": 35,
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
+    "es_practica": true
   },
   {
     "titulo": "Aprendiz de mecánica en motores diésel para Apartadó 349787-176",
@@ -2736,7 +2840,8 @@
     "es_exclusiva_fisica": false,
     "es_cierre_inminente": false,
     "score_pensum": 35,
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
+    "es_practica": true
   },
   {
     "titulo": "Practicante ingeniería industrial",
@@ -2762,7 +2867,8 @@
     "es_cierre_inminente": false,
     "score_pensum": 35,
     "mision": "Apoyo en el área de ingeniería y operaciones técnicas en IMPRESISTEM S.A..",
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
+    "es_practica": true
   },
   {
     "titulo": "Practicante de ingeniería industrial",
@@ -2788,7 +2894,8 @@
     "es_cierre_inminente": false,
     "score_pensum": 35,
     "mision": "Apoyo en el área de ingeniería y operaciones técnicas en UCompensar.",
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
+    "es_practica": true
   },
   {
     "titulo": "Practicante de ingeniería industrial",
@@ -2814,7 +2921,8 @@
     "es_cierre_inminente": false,
     "score_pensum": 35,
     "mision": "Apoyo en el área de ingeniería y operaciones técnicas en IMPRESISTEM S.A..",
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
+    "es_practica": true
   },
   {
     "titulo": "Practicante profesional ingenieria industrial",
@@ -2840,7 +2948,8 @@
     "es_cierre_inminente": false,
     "score_pensum": 35,
     "mision": "Apoyo en el área de ingeniería y operaciones técnicas en IMPRESISTEM S.A..",
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
+    "es_practica": true
   },
   {
     "titulo": "Practicante de ingeniería industrial",
@@ -2866,7 +2975,8 @@
     "es_cierre_inminente": false,
     "score_pensum": 35,
     "mision": "Apoyo en el área de ingeniería y operaciones técnicas en IMPRESISTEM S.A..",
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
+    "es_practica": true
   },
   {
     "titulo": "Estudiante ingenieria ambiental",
@@ -2892,7 +3002,8 @@
     "es_cierre_inminente": false,
     "score_pensum": 35,
     "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Cruz Roja Colombiana Seccional Cundinamarca y Bogotá..",
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
+    "es_practica": false
   },
   {
     "titulo": "Practicante ingeniería agronómica",
@@ -2918,7 +3029,8 @@
     "es_cierre_inminente": false,
     "score_pensum": 35,
     "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Elite Flower.",
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
+    "es_practica": true
   },
   {
     "titulo": "Practicante de ingeniería ambiental - cajicá",
@@ -2944,7 +3056,8 @@
     "es_cierre_inminente": false,
     "score_pensum": 35,
     "mision": "Apoyo en el área de ingeniería y operaciones técnicas en ALQUERIA.",
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
+    "es_practica": true
   },
   {
     "titulo": "Aprendiz - archivo (inlusión)",
@@ -2970,7 +3083,8 @@
     "es_cierre_inminente": false,
     "score_pensum": 35,
     "mision": "Apoyo en el área de ingeniería y operaciones técnicas en AGENCIA DE EMPLEO COLSUBSIDIO.",
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
+    "es_practica": false
   },
   {
     "titulo": "Practicante sena  archivo y documentación 10/26",
@@ -2996,7 +3110,8 @@
     "es_cierre_inminente": false,
     "score_pensum": 35,
     "mision": "Apoyo en el área de ingeniería y operaciones técnicas en AGENCIA DE EMPLEO COLSUBSIDIO.",
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
+    "es_practica": true
   },
   {
     "titulo": "Aprendiz universitario - administrador de empresa",
@@ -3022,7 +3137,8 @@
     "es_cierre_inminente": false,
     "score_pensum": 35,
     "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Empresa confidencial.",
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
+    "es_practica": false
   },
   {
     "titulo": "Practicante administrativo",
@@ -3048,7 +3164,8 @@
     "es_cierre_inminente": false,
     "score_pensum": 35,
     "mision": "Apoyo en el área de ingeniería y operaciones técnicas en FRESENIUS MEDICAL ANDINA SAS.",
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
+    "es_practica": true
   },
   {
     "titulo": "Practicante universitario - crédito  economia o administración",
@@ -3074,7 +3191,8 @@
     "es_cierre_inminente": false,
     "score_pensum": 35,
     "mision": "Apoyo en el área de ingeniería y operaciones técnicas en BANCO PICHINCHA SA.",
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
+    "es_practica": true
   },
   {
     "titulo": "practicante estudiante tecnico tecnologo en ingenieria de sistemas mantenimiento de computadores",
@@ -3099,7 +3217,8 @@
     "es_cierre_inminente": false,
     "score_pensum": 0,
     "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Atain.",
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
+    "es_practica": true
   },
   {
     "titulo": "Practicante Universitario Adm empresas, ingenieria industrial.",
@@ -3124,7 +3243,8 @@
     "es_cierre_inminente": false,
     "score_pensum": 0,
     "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Eficacia.",
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
+    "es_practica": true
   },
   {
     "titulo": "Practicante Universitario Adm empresas, ingenieria industrial o Afines",
@@ -3149,7 +3269,8 @@
     "es_cierre_inminente": false,
     "score_pensum": 0,
     "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Eficacia.",
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
+    "es_practica": true
   },
   {
     "titulo": "Practicante de Ingeniería de Alimentos",
@@ -3174,7 +3295,8 @@
     "es_cierre_inminente": false,
     "score_pensum": 0,
     "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Supermercados Euro S.A.",
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
+    "es_practica": true
   },
   {
     "titulo": "Practicante de Ingeniería Ambiental",
@@ -3199,7 +3321,8 @@
     "es_cierre_inminente": false,
     "score_pensum": 0,
     "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Supermercados Euro S.A.",
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
+    "es_practica": true
   },
   {
     "titulo": "Practicante en Ingenieria de Sistemas/ Afines 2027 1",
@@ -3224,7 +3347,8 @@
     "es_cierre_inminente": false,
     "score_pensum": 0,
     "mision": "Apoyo en el área de ingeniería y operaciones técnicas en SOLVO S.A.S.",
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
+    "es_practica": true
   },
   {
     "titulo": "Practicante de ingenieria electrica",
@@ -3249,7 +3373,8 @@
     "es_cierre_inminente": false,
     "score_pensum": 0,
     "mision": "Apoyo en el área de ingeniería y operaciones técnicas en AGENCIA DE EMPLEO COMFAMA.",
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
+    "es_practica": true
   },
   {
     "titulo": "Practicante de ingeniería de alimentos/ con y sin PCD",
@@ -3274,7 +3399,8 @@
     "es_cierre_inminente": false,
     "score_pensum": 0,
     "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Corporación Country Club Ejecutivos.",
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
+    "es_practica": true
   },
   {
     "titulo": "Practicante Profesional en Sistemas / Informatica / Ingeniería / Disponibilidad Inmediata / Medellín",
@@ -3299,7 +3425,8 @@
     "es_cierre_inminente": false,
     "score_pensum": 0,
     "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Burger King Colombia.",
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
+    "es_practica": true
   },
   {
     "titulo": "Practicante de Ingeniería de sistemas / informática",
@@ -3324,7 +3451,8 @@
     "es_cierre_inminente": false,
     "score_pensum": 0,
     "mision": "Apoyo en el área de ingeniería y operaciones técnicas en SOLVO S.A.S.",
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
+    "es_practica": true
   },
   {
     "titulo": "Practicante Universitario en Administración o Ingeniería Industrial",
@@ -3349,7 +3477,8 @@
     "es_cierre_inminente": false,
     "score_pensum": 0,
     "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Aliar S.A.",
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
+    "es_practica": true
   },
   {
     "titulo": "Practicante Ingeniería Mecánica",
@@ -3374,7 +3503,8 @@
     "es_cierre_inminente": false,
     "score_pensum": 0,
     "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Celerix SAS.",
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
+    "es_practica": true
   },
   {
     "titulo": "Practicante Ingenierio/a Industrial",
@@ -3399,7 +3529,8 @@
     "es_cierre_inminente": false,
     "score_pensum": 0,
     "mision": "Apoyo en el área de ingeniería y operaciones técnicas en GRUPO BIOS S.A.S.",
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
+    "es_practica": true
   },
   {
     "titulo": "Practicante Ingeniería de Alimentos",
@@ -3424,7 +3555,8 @@
     "es_cierre_inminente": false,
     "score_pensum": 0,
     "mision": "Apoyo en el área de ingeniería y operaciones técnicas en GRUPO BIOS S.A.S.",
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
+    "es_practica": true
   },
   {
     "titulo": "Practicante de ingeniería industrial",
@@ -3449,7 +3581,8 @@
     "es_cierre_inminente": false,
     "score_pensum": 0,
     "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Concentrix.",
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
+    "es_practica": true
   },
   {
     "titulo": "Practicante de diseño gráfico",
@@ -3474,7 +3607,8 @@
     "es_cierre_inminente": false,
     "score_pensum": 0,
     "mision": "Apoyo en el área de ingeniería y operaciones técnicas en NSIT.",
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
+    "es_practica": true
   },
   {
     "titulo": "Analista de mantenimiento",
@@ -3499,7 +3633,8 @@
     "es_cierre_inminente": false,
     "score_pensum": 0,
     "mision": "Apoyo en el área de ingeniería y operaciones técnicas en D1 S A S.",
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
+    "es_practica": false
   },
   {
     "titulo": "Practicante en Auxiliar Administrativo",
@@ -3524,7 +3659,8 @@
     "es_cierre_inminente": false,
     "score_pensum": 0,
     "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Agencia de Empleo de Comfenalco Antioquia.",
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
+    "es_practica": true
   },
   {
     "titulo": "Auxiliar Administrativa y Comercial",
@@ -3549,7 +3685,8 @@
     "es_cierre_inminente": false,
     "score_pensum": 0,
     "mision": "Apoyo en el área de ingeniería y operaciones técnicas en 2B eCommerce.",
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
+    "es_practica": false
   },
   {
     "titulo": "Practicante de recepción y reservas",
@@ -3574,7 +3711,8 @@
     "es_cierre_inminente": false,
     "score_pensum": 0,
     "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Empresa Confidencial.",
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
+    "es_practica": true
   },
   {
     "titulo": "Practicante de aires acondicionados técnico / tecnólogo",
@@ -3599,7 +3737,8 @@
     "es_cierre_inminente": false,
     "score_pensum": 0,
     "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Atain.",
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
+    "es_practica": true
   },
   {
     "titulo": "practicante de aires acondicionados tecnico tecnologo",
@@ -3624,7 +3763,8 @@
     "es_cierre_inminente": false,
     "score_pensum": 0,
     "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Atain.",
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
+    "es_practica": true
   },
   {
     "titulo": "Practicante de Ambiental",
@@ -3649,7 +3789,8 @@
     "es_cierre_inminente": false,
     "score_pensum": 0,
     "mision": "Apoyo en el área de ingeniería y operaciones técnicas en KONECTA.",
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
+    "es_practica": true
   },
   {
     "titulo": "Practicante de aires acondicionados técnico / tecnólogo",
@@ -3674,7 +3815,8 @@
     "es_cierre_inminente": false,
     "score_pensum": 0,
     "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Atain.",
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
+    "es_practica": true
   },
   {
     "titulo": "Practicante de Gestión Administrativa",
@@ -3699,7 +3841,8 @@
     "es_cierre_inminente": false,
     "score_pensum": 0,
     "mision": "Apoyo en el área de ingeniería y operaciones técnicas en PORCICARNES.",
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
+    "es_practica": true
   },
   {
     "titulo": "practicante administrativo/a",
@@ -3724,7 +3867,8 @@
     "es_cierre_inminente": false,
     "score_pensum": 0,
     "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Access Tecnologia.",
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
+    "es_practica": true
   },
   {
     "titulo": "Practicante Universitario de Contaduría Publica",
@@ -3749,7 +3893,8 @@
     "es_cierre_inminente": false,
     "score_pensum": 0,
     "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Foundever®.",
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
+    "es_practica": true
   },
   {
     "titulo": "Aprendiz de atención al cliente para Rionegro para personas con o sin discapacidad",
@@ -3774,7 +3919,8 @@
     "es_cierre_inminente": false,
     "score_pensum": 0,
     "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Empresa Confidencial.",
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
+    "es_practica": false
   },
   {
     "titulo": "Aprendices y Practicantes en Circuito Cerrado de Televisión CCVT",
@@ -3799,7 +3945,8 @@
     "es_cierre_inminente": false,
     "score_pensum": 0,
     "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Línea Estética.",
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
+    "es_practica": false
   },
   {
     "titulo": "Aprendiz en Técnica en Archivo.",
@@ -3824,7 +3971,8 @@
     "es_cierre_inminente": false,
     "score_pensum": 0,
     "mision": "Apoyo en el área de ingeniería y operaciones técnicas en POLO1 S . A . S ..",
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
+    "es_practica": false
   },
   {
     "titulo": "Remoto asistente legal",
@@ -3849,7 +3997,8 @@
     "es_cierre_inminente": false,
     "score_pensum": 0,
     "mision": "Apoyo en el área de ingeniería y operaciones técnicas en SOLVO S.A.S.",
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
+    "es_practica": false
   },
   {
     "titulo": "Practicante Mantenimiento",
@@ -3874,7 +4023,8 @@
     "es_cierre_inminente": false,
     "score_pensum": 0,
     "mision": "Apoyo en el área de ingeniería y operaciones técnicas en COSMETICOS SAMY S.A..",
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
+    "es_practica": true
   },
   {
     "titulo": "Practicante en Ensamble y Mantenimiento de Equipos de Cómputo",
@@ -3899,7 +4049,8 @@
     "es_cierre_inminente": false,
     "score_pensum": 0,
     "mision": "Apoyo en el área de ingeniería y operaciones técnicas en B&B HOLDING MEDELLIN S.A.S.",
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
+    "es_practica": true
   },
   {
     "titulo": "Aprendiz  Practicante Mantenimiento Etapa Productiva Medellín",
@@ -3924,7 +4075,8 @@
     "es_cierre_inminente": false,
     "score_pensum": 0,
     "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Movich Hotels.",
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
+    "es_practica": true
   },
   {
     "titulo": "Practicante Universitario Soporte y Mantenimiento",
@@ -3949,7 +4101,8 @@
     "es_cierre_inminente": false,
     "score_pensum": 0,
     "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Grupo Éxito.",
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
+    "es_practica": true
   },
   {
     "titulo": "Practicante Universitario Operaciones Centro Comercial",
@@ -3974,7 +4127,8 @@
     "es_cierre_inminente": false,
     "score_pensum": 0,
     "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Grupo Éxito.",
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
+    "es_practica": true
   },
   {
     "titulo": "Practicante de compras",
@@ -3999,7 +4153,8 @@
     "es_cierre_inminente": false,
     "score_pensum": 0,
     "mision": "Apoyo en el área de ingeniería y operaciones técnicas en EVOLUTION DEVELOPMENT COLOMBIA S.A.S.",
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
+    "es_practica": true
   },
   {
     "titulo": "Practicante Logístico",
@@ -4024,7 +4179,8 @@
     "es_cierre_inminente": false,
     "score_pensum": 0,
     "mision": "Apoyo en el área de ingeniería y operaciones técnicas en LEVI STRAUSS COLOMBIA SAS.",
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
+    "es_practica": true
   },
   {
     "titulo": "Aprendiz Administrativo o logístico.",
@@ -4049,7 +4205,8 @@
     "es_cierre_inminente": false,
     "score_pensum": 0,
     "mision": "Apoyo en el área de ingeniería y operaciones técnicas en emtelco.",
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
+    "es_practica": false
   },
   {
     "titulo": "Aprendiz  Practicante Repostería Etapa Productiva Medellín",
@@ -4074,7 +4231,8 @@
     "es_cierre_inminente": false,
     "score_pensum": 0,
     "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Movich Hotels.",
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
+    "es_practica": true
   },
   {
     "titulo": "Practicante de mecánica",
@@ -4099,7 +4257,8 @@
     "es_cierre_inminente": false,
     "score_pensum": 0,
     "mision": "Apoyo en el área de ingeniería y operaciones técnicas en AGENCIA DE EMPLEO COMFAMA.",
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
+    "es_practica": true
   },
   {
     "titulo": "Practicante de Innovación",
@@ -4124,7 +4283,8 @@
     "es_cierre_inminente": false,
     "score_pensum": 0,
     "mision": "Apoyo en el área de ingeniería y operaciones técnicas en C.I. FAJAS MYD COLOMBIA S.A.S..",
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
+    "es_practica": true
   },
   {
     "titulo": "Estudiante Industrial",
@@ -4149,7 +4309,8 @@
     "es_cierre_inminente": false,
     "score_pensum": 0,
     "mision": "Apoyo en el área de ingeniería y operaciones técnicas en COSMETICOS SAMY S.A..",
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
+    "es_practica": false
   },
   {
     "titulo": "Aprendiz Mantenimiento Planta Itagui",
@@ -4174,7 +4335,8 @@
     "es_cierre_inminente": false,
     "score_pensum": 0,
     "mision": "Apoyo en el área de ingeniería y operaciones técnicas en BIMBO DE COLOMBIA S.A..",
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
+    "es_practica": false
   },
   {
     "titulo": "Aprendiz logística / Administrativo/ Medellin Sury y Norte",
@@ -4199,7 +4361,8 @@
     "es_cierre_inminente": false,
     "score_pensum": 0,
     "mision": "Apoyo en el área de ingeniería y operaciones técnicas en BIMBO DE COLOMBIA S.A..",
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
+    "es_practica": false
   },
   {
     "titulo": "Aprendiz de Mantenimiento",
@@ -4224,7 +4387,8 @@
     "es_cierre_inminente": false,
     "score_pensum": 0,
     "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Laboratorio Maria Salome.",
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
+    "es_practica": false
   },
   {
     "titulo": "Aprendiz Administrativo",
@@ -4249,7 +4413,8 @@
     "es_cierre_inminente": false,
     "score_pensum": 0,
     "mision": "Apoyo en el área de ingeniería y operaciones técnicas en GRUPO BIOS S.A.S.",
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
+    "es_practica": false
   },
   {
     "titulo": "Practicante logística",
@@ -4274,7 +4439,8 @@
     "es_cierre_inminente": false,
     "score_pensum": 0,
     "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Altipal S.A.S..",
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
+    "es_practica": true
   },
   {
     "titulo": "Gestor/a de Prácticas y Empleabilidad",
@@ -4299,7 +4465,8 @@
     "es_cierre_inminente": false,
     "score_pensum": 0,
     "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Empresa Confidencial.",
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
+    "es_practica": false
   },
   {
     "titulo": "Practicante profesional  Ing de sistemas",
@@ -4324,7 +4491,8 @@
     "es_cierre_inminente": false,
     "score_pensum": 0,
     "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Eficacia.",
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
+    "es_practica": true
   },
   {
     "titulo": "Practicante de Psicología Organizacional Bilingüe",
@@ -4349,7 +4517,8 @@
     "es_cierre_inminente": false,
     "score_pensum": 0,
     "mision": "Apoyo en el área de ingeniería y operaciones técnicas en B&B HOLDING MEDELLIN S.A.S.",
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
+    "es_practica": true
   },
   {
     "titulo": "Practicante Área Financiera",
@@ -4374,7 +4543,8 @@
     "es_cierre_inminente": false,
     "score_pensum": 0,
     "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Empresa Confidencial.",
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
+    "es_practica": true
   },
   {
     "titulo": "Practicante de Gestión Humana",
@@ -4399,7 +4569,8 @@
     "es_cierre_inminente": false,
     "score_pensum": 0,
     "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Landers y CIA.",
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
+    "es_practica": true
   },
   {
     "titulo": "Practicante Técnico o Tecnología en Gestión Humana",
@@ -4424,7 +4595,8 @@
     "es_cierre_inminente": false,
     "score_pensum": 0,
     "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Futesa s.a..",
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
+    "es_practica": true
   },
   {
     "titulo": "Practicante de psicología para Apartadó",
@@ -4449,7 +4621,8 @@
     "es_cierre_inminente": false,
     "score_pensum": 0,
     "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Empresa Confidencial.",
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
+    "es_practica": true
   },
   {
     "titulo": "Aprendices técnicos",
@@ -4474,7 +4647,8 @@
     "es_cierre_inminente": false,
     "score_pensum": 0,
     "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Prebel S.A..",
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
+    "es_practica": false
   },
   {
     "titulo": "Practicante Universitario Servicio",
@@ -4499,7 +4673,8 @@
     "es_cierre_inminente": false,
     "score_pensum": 0,
     "mision": "Apoyo en el área de ingeniería y operaciones técnicas en SOLUCIONES EMPRESARIALES 360°.",
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
+    "es_practica": true
   },
   {
     "titulo": "Aprendiz de Mantenimiento Industrial",
@@ -4524,7 +4699,8 @@
     "es_cierre_inminente": false,
     "score_pensum": 0,
     "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Empresa Confidencial.",
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
+    "es_practica": false
   },
   {
     "titulo": "Aprendiz Técnico en Electricidad o Mantenimiento",
@@ -4549,7 +4725,8 @@
     "es_cierre_inminente": false,
     "score_pensum": 0,
     "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Supermercados Euro S.A.",
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
+    "es_practica": false
   },
   {
     "titulo": "Aprendiz tecnólogo en electricidad industrial",
@@ -4574,7 +4751,8 @@
     "es_cierre_inminente": false,
     "score_pensum": 0,
     "mision": "Apoyo en el área de ingeniería y operaciones técnicas en AGENCIA DE EMPLEO COMFAMA.",
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
+    "es_practica": false
   },
   {
     "titulo": "Auxiliar de calidad en plantas de alimentos",
@@ -4599,7 +4777,8 @@
     "es_cierre_inminente": false,
     "score_pensum": 0,
     "mision": "Apoyo en el área de ingeniería y operaciones técnicas en A'HORA S.A.S..",
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
+    "es_practica": false
   },
   {
     "titulo": "Auxiliar de calidad",
@@ -4624,7 +4803,8 @@
     "es_cierre_inminente": false,
     "score_pensum": 0,
     "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Meridiano SAS.",
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
+    "es_practica": false
   },
   {
     "titulo": "Practicante de ingeniería ambiental para Apartadó",
@@ -4651,7 +4831,8 @@
     "es_exclusiva_fisica": false,
     "es_cierre_inminente": false,
     "score_pensum": 0,
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
+    "es_practica": true
   },
   {
     "titulo": "Practicante de ingeniería agrícola para Apartadó",
@@ -4678,7 +4859,8 @@
     "es_exclusiva_fisica": false,
     "es_cierre_inminente": false,
     "score_pensum": 0,
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
+    "es_practica": true
   },
   {
     "titulo": "Practicante TI (Soporte Técnico) - 8223",
@@ -4705,7 +4887,8 @@
     "es_exclusiva_fisica": false,
     "es_cierre_inminente": false,
     "score_pensum": 0,
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
+    "es_practica": true
   },
   {
     "titulo": "Practicante técnico, tecnólogo o profesional",
@@ -4732,7 +4915,8 @@
     "es_exclusiva_fisica": false,
     "es_cierre_inminente": false,
     "score_pensum": 0,
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
+    "es_practica": true
   },
   {
     "titulo": "Practicante ingeniería biomédica - inicio 2026/ii",
@@ -4758,7 +4942,8 @@
     "es_cierre_inminente": false,
     "score_pensum": 0,
     "mision": "Apoyo en el área de ingeniería y operaciones técnicas en HUSI.",
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
+    "es_practica": true
   },
   {
     "titulo": "Practicante universitario - economia o administración",
@@ -4784,7 +4969,8 @@
     "es_cierre_inminente": false,
     "score_pensum": 0,
     "mision": "Apoyo en el área de ingeniería y operaciones técnicas en BANCO PICHINCHA SA.",
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
+    "es_practica": true
   },
   {
     "titulo": "Practicante universitario chia",
@@ -4810,7 +4996,8 @@
     "es_cierre_inminente": false,
     "score_pensum": 0,
     "mision": "Apoyo en el área de ingeniería y operaciones técnicas en BANCO FINANDINA BIC.",
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
+    "es_practica": true
   },
   {
     "titulo": "Banco de talentos para practicantes con discapacidad",
@@ -4836,7 +5023,8 @@
     "es_cierre_inminente": false,
     "score_pensum": 0,
     "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Galderma Colombia.",
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
+    "es_practica": false
   },
   {
     "titulo": "Practicante Universitario De Diseño Grafico",
@@ -4862,7 +5050,8 @@
     "es_cierre_inminente": false,
     "score_pensum": 0,
     "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Alsea Colombia.",
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
+    "es_practica": true
   },
   {
     "titulo": "Practicante Universitario De Diseño Grafico y Comunicaciones-Starbucks",
@@ -4888,7 +5077,8 @@
     "es_cierre_inminente": false,
     "score_pensum": 0,
     "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Alsea Colombia.",
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
+    "es_practica": true
   },
   {
     "titulo": "Practicante de administración empresas y carreras afines - Asistencia Administrativa, Mercadeo, Comunicación Visual o carreras afines.",
@@ -4914,7 +5104,8 @@
     "es_cierre_inminente": false,
     "score_pensum": 0,
     "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Alsea Colombia.",
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
+    "es_practica": true
   },
   {
     "titulo": "Talent Acquisition Intern - 2027 I",
@@ -4940,7 +5131,8 @@
     "es_cierre_inminente": false,
     "score_pensum": 0,
     "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Dialectica Colombia.",
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
+    "es_practica": true
   },
   {
     "titulo": "Internship Program - Client Service Intern (Bogota) - January 2027",
@@ -4966,7 +5158,8 @@
     "es_cierre_inminente": false,
     "score_pensum": 0,
     "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Dialectica Colombia.",
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
+    "es_practica": true
   },
   {
     "titulo": "Internship Program Colombia",
@@ -4992,6 +5185,7 @@
     "es_cierre_inminente": false,
     "score_pensum": 0,
     "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Schneider Electric Colombia.",
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
+    "es_practica": true
   }
 ]

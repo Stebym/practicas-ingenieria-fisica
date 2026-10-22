@@ -406,12 +406,21 @@ def classify_and_score_job(job, config_ramas):
     es_impulso_liderazgo = bool(TERMINOS_MUJERES_RE.search(text_to_analyze))
     es_exclusiva_fisica = bool(TERMINOS_FISICA_RE.search(text_to_analyze))
 
+    # La antigüedad de publicación no revela la fecha límite de postulación.
+    # Solo indicar cierre inminente cuando el rastreador obtenga una fecha explícita.
     es_cierre_inminente = False
-    pub_lower = job.get("fecha_publicacion", "").lower()
-    if any(k in pub_lower for k in ["hora", "horas", "1 día", "2 días", "3 días", "4 días", "5 días", "hace 1", "hace 2"]):
-        es_cierre_inminente = True
-    elif "urgente" in text_to_analyze or "pipeline" in text_to_analyze:
-        es_cierre_inminente = True
+    fecha_cierre = job.get("fecha_cierre_iso", "")
+    if fecha_cierre:
+        try:
+            dias_para_cierre = (datetime.fromisoformat(fecha_cierre).date() - datetime.now().date()).days
+            es_cierre_inminente = 0 <= dias_para_cierre <= 5
+        except ValueError:
+            pass
+
+    es_practica = bool(re.search(
+        r"\b(practicante|práctica|practica|intern(ship)?|trainee|estudiante en práctica|pasantía|pasantia)\b",
+        text_to_analyze,
+    ))
 
     total_score = 0
     if es_impulso_liderazgo:
@@ -469,7 +478,7 @@ def classify_and_score_job(job, config_ramas):
         mision_especifica = f"Apoyo en el área de ingeniería y operaciones técnicas en {job.get('empresa', 'la compañía')}."
         tareas_especificas = "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
     elif es_exclusiva_fisica:
-        afinidad = "Exclusiva Física"
+        afinidad = "Afinidad con Física"
     elif max_rama_score >= 50 or es_impulso_liderazgo:
         afinidad = "Alta Afinidad Pénsum"
     else:
@@ -486,6 +495,7 @@ def classify_and_score_job(job, config_ramas):
     job["afinidad"] = afinidad
     job["es_exclusiva_fisica"] = es_exclusiva_fisica
     job["es_cierre_inminente"] = es_cierre_inminente
+    job["es_practica"] = es_practica
     job["score_pensum"] = total_score
     job["mision"] = job.get("mision") or job.get("resumen_fuente") or mision_especifica or f"Desarrollo de proyectos técnicos y operativos en {job.get('empresa', 'la empresa')}."
     job["tareas"] = job.get("tareas") or (tareas_especificas if tareas_especificas else "Apoyo en mediciones, modelado técnico, análisis de datos y reporte de resultados.")
@@ -535,7 +545,7 @@ def build_full_html(vacantes, config_ramas):
     becas_json_str = json.dumps(becas_data, ensure_ascii=False)
 
     total_exclusivas = sum(1 for v in vacantes if v.get("es_exclusiva_fisica"))
-    total_inminentes = sum(1 for v in vacantes if v.get("es_cierre_inminente"))
+    total_practicas = sum(1 for v in vacantes if v.get("es_practica"))
     total_convenios = len(convenios_data)
     total_becas = len(becas_data)
 
@@ -599,11 +609,11 @@ def build_full_html(vacantes, config_ramas):
         <div class="kpi-chip" onclick="switchMainTab('todas', document.querySelector('.tab-link:nth-child(1)'))" title="Ver todas las vacantes">
           Vacantes: <strong style="color: var(--accent-cyan);">{len(vacantes)}</strong>
         </div>
-        <div class="kpi-chip" onclick="switchMainTab('exclusivas', document.querySelector('.tab-link.exclusive'))" title="Ver vacantes exclusivas para físicos">
-          Exclusivas: <strong style="color: var(--accent-amber);">{total_exclusivas}</strong>
+        <div class="kpi-chip" onclick="switchMainTab('exclusivas', document.querySelector('.tab-link.exclusive'))" title="Ver vacantes afines a Física">
+          Afinidad con Física: <strong style="color: var(--accent-amber);">{total_exclusivas}</strong>
         </div>
-        <div class="kpi-chip" onclick="switchMainTab('inminentes', document.querySelector('.tab-link.urgent'))" title="Ver convocatorias próximas a cerrar">
-          Cierres: <strong style="color: var(--accent-crimson);">{total_inminentes}</strong>
+        <div class="kpi-chip" onclick="switchMainTab('practicas', document.querySelector('.tab-link.urgent'))" title="Ver prácticas y pasantías identificadas">
+          Prácticas: <strong style="color: var(--accent-emerald);">{total_practicas}</strong>
         </div>
         <div class="kpi-chip" onclick="switchMainTab('becas', document.querySelector('.tab-link:nth-child(5)'))" title="Ver catálogo internacional y convenios">
           Internacional: <strong style="color: var(--accent-emerald);">{total_convenios + total_becas}</strong>
@@ -630,10 +640,10 @@ def build_full_html(vacantes, config_ramas):
         Todas las Vacantes ({len(vacantes)})
       </button>
       <button class="tab-link exclusive" onclick="switchMainTab('exclusivas', this)">
-        Exclusivas: Piden Físico / Ing. Físico ({total_exclusivas})
+        Afinidad con Física ({total_exclusivas})
       </button>
-      <button class="tab-link urgent" onclick="switchMainTab('inminentes', this)">
-        Próximas a Finalizar (&lt; 5 Días) ({total_inminentes})
+      <button class="tab-link urgent" onclick="switchMainTab('practicas', this)">
+        Prácticas / pasantías ({total_practicas})
       </button>
       <button class="tab-link" onclick="switchMainTab('canales', this)">
         Ecosistema Nacional & Retos
@@ -982,10 +992,10 @@ def build_full_html(vacantes, config_ramas):
         let badgeColor = j.color_principal;
         let badgeText = j.afinidad.toUpperCase();
         if (j.es_cierre_inminente) {{
-          badgeText = 'CIERRE INMINENTE (< 5 DIAS)';
+          badgeText = 'CIERRE: ' + new Date(j.fecha_cierre_iso + 'T00:00:00').toLocaleDateString('es-CO');
           badgeColor = 'var(--accent-crimson)';
         }} else if (j.es_exclusiva_fisica) {{
-          badgeText = 'EXCLUSIVA FISICA';
+          badgeText = 'AFINIDAD CON FÍSICA';
           badgeColor = 'var(--accent-amber)';
         }}
 
@@ -1017,6 +1027,7 @@ def build_full_html(vacantes, config_ramas):
             <div class="job-specs">
               <span>Ubicación: ${{escapeHtml(j.ubicacion)}}</span>
               <span>Fuente: ${{escapeHtml(j.fuente)}}</span>
+              <span>Vigencia: confirmar en la publicación original</span>
             </div>
             ${{j.compensacion ? `<div class="salary-highlight">Compensación: ${{escapeHtml(j.compensacion)}}</div>` : ''}}
             <div class="job-tags">${{tagsHtml}}</div>
@@ -1053,7 +1064,7 @@ def build_full_html(vacantes, config_ramas):
 
       const filtered = allJobs.filter(j => {{
         if (currentTab === 'exclusivas' && !j.es_exclusiva_fisica) return false;
-        if (currentTab === 'inminentes' && !j.es_cierre_inminente) return false;
+        if (currentTab === 'practicas' && !j.es_practica) return false;
         if (applicationFilter === 'pending' && appliedJobs.has(j.url)) return false;
         if (applicationFilter === 'applied' && !appliedJobs.has(j.url)) return false;
 
@@ -1226,12 +1237,12 @@ def build_full_html(vacantes, config_ramas):
 
 def export_csv(vacantes):
     """Exporta las vacantes ordenadas a CSV para Excel"""
-    fieldnames = ["titulo", "empresa", "ubicacion", "rama_principal", "afinidad", "score_pensum", "es_exclusiva_fisica", "es_cierre_inminente", "compensacion", "perfil", "mision", "tareas", "fecha_publicacion", "fuente", "url"]
+    fieldnames = ["titulo", "empresa", "ubicacion", "rama_principal", "afinidad", "score_pensum", "es_exclusiva_fisica", "es_cierre_inminente", "es_practica", "compensacion", "perfil", "mision", "tareas", "fecha_publicacion", "fuente", "url"]
     with open(OUTPUT_CSV, "w", newline="", encoding="utf-8-sig") as f:
-        writer = csv.DictWriter(f, fieldnames=fieldnames)
+        writer = csv.DictWriter(f, fieldnames=fieldnames, lineterminator="\n")
         writer.writeheader()
         for v in vacantes:
-            writer.writerow({
+            row = {
                 "titulo": v["titulo"],
                 "empresa": v["empresa"],
                 "ubicacion": v["ubicacion"],
@@ -1240,6 +1251,7 @@ def export_csv(vacantes):
                 "score_pensum": v.get("score_pensum", 0),
                 "es_exclusiva_fisica": v.get("es_exclusiva_fisica", False),
                 "es_cierre_inminente": v.get("es_cierre_inminente", False),
+                "es_practica": v.get("es_practica", False),
                 "compensacion": v.get("compensacion", ""),
                 "perfil": v.get("perfil", ""),
                 "mision": v.get("mision", ""),
@@ -1247,7 +1259,8 @@ def export_csv(vacantes):
                 "fecha_publicacion": v["fecha_publicacion"],
                 "fuente": v["fuente"],
                 "url": v["url"]
-            })
+            }
+            writer.writerow({key: value.strip() if isinstance(value, str) else value for key, value in row.items()})
     print(f" [✓] Archivo Excel/CSV generado: {OUTPUT_CSV}")
 
 def main():

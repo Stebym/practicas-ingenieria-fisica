@@ -30,8 +30,8 @@
     "afinidad": "Afinidad con Física",
     "es_exclusiva_fisica": true,
     "es_cierre_inminente": false,
-    "score_pensum": 193,
-    "es_practica": true
+    "es_practica": true,
+    "score_pensum": 193
   },
   {
     "titulo": "Practicantes de Datos y Analítica 2027-1",
@@ -58,8 +58,8 @@
     "afinidad": "Afinidad con Física",
     "es_exclusiva_fisica": true,
     "es_cierre_inminente": false,
-    "score_pensum": 192,
-    "es_practica": false
+    "es_practica": false,
+    "score_pensum": 192
   },
   {
     "titulo": "Practicante de Metrología e Instrumentación",
@@ -86,8 +86,8 @@
     "afinidad": "Afinidad con Física",
     "es_exclusiva_fisica": true,
     "es_cierre_inminente": false,
-    "score_pensum": 190,
-    "es_practica": true
+    "es_practica": true,
+    "score_pensum": 190
   },
   {
     "titulo": "Prácticas de Excelencia 2027-I (Modelado, TIC y Electrificación)",
@@ -114,8 +114,8 @@
     "afinidad": "Afinidad con Física",
     "es_exclusiva_fisica": true,
     "es_cierre_inminente": false,
-    "score_pensum": 189,
-    "es_practica": false
+    "es_practica": false,
+    "score_pensum": 189
   },
   {
     "titulo": "Práctica Profesional 2027-1 (Insumos, Superficies y Materiales)",
@@ -148,8 +148,8 @@
     "afinidad": "Afinidad con Física",
     "es_exclusiva_fisica": true,
     "es_cierre_inminente": false,
-    "score_pensum": 188,
-    "es_practica": true
+    "es_practica": true,
+    "score_pensum": 188
   },
   {
     "titulo": "Semillero de Practicantes 2027-1 (Transitorios, Potencia y Datos)",
@@ -188,8 +188,8 @@
     "afinidad": "Afinidad con Física",
     "es_exclusiva_fisica": true,
     "es_cierre_inminente": false,
-    "score_pensum": 187,
-    "es_practica": false
+    "es_practica": false,
+    "score_pensum": 187
   },
   {
     "titulo": "Practicantes Universitarios 2027-1 Pruebas, Calidad y Validación",
@@ -216,8 +216,8 @@
     "afinidad": "Afinidad con Física",
     "es_exclusiva_fisica": true,
     "es_cierre_inminente": false,
-    "score_pensum": 187,
-    "es_practica": false
+    "es_practica": false,
+    "score_pensum": 187
   },
   {
     "titulo": "Practicante Universitario en Automatización y Desarrollo",
@@ -250,8 +250,8 @@
     "afinidad": "Afinidad con Física",
     "es_exclusiva_fisica": true,
     "es_cierre_inminente": false,
-    "score_pensum": 186,
-    "es_practica": true
+    "es_practica": true,
+    "score_pensum": 186
   },
   {
     "titulo": "Estudiante en Práctica de Ingeniería (Procesos Continuos)",
@@ -278,8 +278,8 @@
     "afinidad": "Afinidad con Física",
     "es_exclusiva_fisica": true,
     "es_cierre_inminente": false,
-    "score_pensum": 184,
-    "es_practica": true
+    "es_practica": true,
+    "score_pensum": 184
   },
   {
     "titulo": "Proyecto Mediciones y Movilidad Eléctrica 2027-1",
@@ -318,8 +318,8 @@
     "afinidad": "Afinidad con Física",
     "es_exclusiva_fisica": true,
     "es_cierre_inminente": false,
-    "score_pensum": 183,
-    "es_practica": false
+    "es_practica": false,
+    "score_pensum": 183
   },
   {
     "titulo": "Programa de Prácticas 2027-1 (Renovables y Redes)",
@@ -352,433 +352,8 @@
     "afinidad": "Afinidad con Física",
     "es_exclusiva_fisica": true,
     "es_cierre_inminente": false,
-    "score_pensum": 181,
-    "es_practica": false
-  },
-  {
-    "titulo": "Técnico /Tecnólogo de Mecatronica, Electromecánica  automatización",
-    "empresa": "SERVIOPTICA S.A.S",
-    "ubicacion": "La Estrella, Antioquia",
-    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-tecnico-tecnologo-de-mecatronica-electromecanica-automatizacion-experiencia-de-2-anos-en-procesos-de-produccion-con-sistemas-automaticosorientados-a-la-industria-en-la-estrella-A5C5C0C2F2828AF461373E686DCF3405",
-    "fecha_publicacion": "Reciente",
-    "fuente": "Computrabajo",
-    "ramas": [
-      {
-        "clave": "instrumentacion_metrologia",
-        "nombre": "Instrumentación, Automatización y Metrología",
-        "color": "#10b981",
-        "score": 79
-      },
-      {
-        "clave": "optica_vision_artificial",
-        "nombre": "Óptica, Fotónica y Visión Artificial",
-        "color": "#a855f7",
-        "score": 53
-      }
-    ],
-    "rama_principal": "Instrumentación, Automatización y Metrología",
-    "color_principal": "#10b981",
-    "clave_principal": "instrumentacion_metrologia",
-    "afinidad": "Afinidad con Física",
-    "es_exclusiva_fisica": true,
-    "es_cierre_inminente": false,
-    "score_pensum": 164,
-    "mision": "Calibración de instrumentos de medición de variables físicas, cálculo de incertidumbre y programación de sistemas DAQ/LabVIEW.",
-    "tareas": "Levantamiento de curvas de calibración, programación en LabVIEW, enlace con autómatas PLC y aseguramiento metrológico ISO 17025.",
-    "es_practica": false
-  },
-  {
-    "titulo": "Medellín - dibujante automatización y control bilingüe.",
-    "empresa": "HATCH S.A.S",
-    "ubicacion": "Medellín",
-    "url": "https://www.elempleo.com/co/ofertas-trabajo/auxiliar-de-automatizacion-e-analitica-de-cobranza-1886758244",
-    "fecha_publicacion": "Reciente",
-    "fuente": "ElEmpleo.com",
-    "compensacion": "",
-    "ramas": [
-      {
-        "clave": "instrumentacion_metrologia",
-        "nombre": "Instrumentación, Automatización y Metrología",
-        "color": "#10b981",
-        "score": 76
-      }
-    ],
-    "rama_principal": "Instrumentación, Automatización y Metrología",
-    "color_principal": "#10b981",
-    "clave_principal": "instrumentacion_metrologia",
-    "afinidad": "Afinidad con Física",
-    "es_exclusiva_fisica": true,
-    "es_cierre_inminente": false,
-    "score_pensum": 161,
-    "mision": "Calibración de instrumentos de medición de variables físicas, cálculo de incertidumbre y programación de sistemas DAQ/LabVIEW.",
-    "tareas": "Levantamiento de curvas de calibración, programación en LabVIEW, enlace con autómatas PLC y aseguramiento metrológico ISO 17025.",
-    "es_practica": false
-  },
-  {
-    "titulo": "Practicante Profesional / Automatización Industrial / Ingeniería Mecánica / Disponibilidad Inmediata",
-    "empresa": "Burger King Colombia",
-    "ubicacion": "Medellín, Antioquia",
-    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-practicante-profesional-automatizacion-industrial-ingenieria-mecanica-disponibilidad-inmediata-practicante-profesional-mantenimiento-medellin-en-medellin-B7B3EF9FBC4AD3CD61373E686DCF3405",
-    "fecha_publicacion": "Reciente",
-    "fuente": "Computrabajo",
-    "ramas": [
-      {
-        "clave": "instrumentacion_metrologia",
-        "nombre": "Instrumentación, Automatización y Metrología",
-        "color": "#10b981",
-        "score": 73
-      }
-    ],
-    "rama_principal": "Instrumentación, Automatización y Metrología",
-    "color_principal": "#10b981",
-    "clave_principal": "instrumentacion_metrologia",
-    "afinidad": "Afinidad con Física",
-    "es_exclusiva_fisica": true,
-    "es_cierre_inminente": false,
-    "score_pensum": 158,
-    "mision": "Calibración de instrumentos de medición de variables físicas, cálculo de incertidumbre y programación de sistemas DAQ/LabVIEW.",
-    "tareas": "Levantamiento de curvas de calibración, programación en LabVIEW, enlace con autómatas PLC y aseguramiento metrológico ISO 17025.",
-    "es_practica": true
-  },
-  {
-    "titulo": "Practicante universitario de ingeniería mecánica o mecatrónica",
-    "empresa": "Agencia de Empleo de Comfenalco Antioquia",
-    "ubicacion": "Santo Domingo, Antioquia",
-    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-practicante-universitario-de-ingenieria-mecanica-o-mecatronica-proyecto-minero-en-santo-domingo-BEFB62D5BA99ECF261373E686DCF3405",
-    "fecha_publicacion": "Reciente",
-    "fuente": "Computrabajo",
-    "ramas": [
-      {
-        "clave": "instrumentacion_metrologia",
-        "nombre": "Instrumentación, Automatización y Metrología",
-        "color": "#10b981",
-        "score": 73
-      }
-    ],
-    "rama_principal": "Instrumentación, Automatización y Metrología",
-    "color_principal": "#10b981",
-    "clave_principal": "instrumentacion_metrologia",
-    "afinidad": "Afinidad con Física",
-    "es_exclusiva_fisica": true,
-    "es_cierre_inminente": false,
-    "score_pensum": 158,
-    "mision": "Calibración de instrumentos de medición de variables físicas, cálculo de incertidumbre y programación de sistemas DAQ/LabVIEW.",
-    "tareas": "Levantamiento de curvas de calibración, programación en LabVIEW, enlace con autómatas PLC y aseguramiento metrológico ISO 17025.",
-    "es_practica": true
-  },
-  {
-    "titulo": "Practicante de ingenieria Mecatronica y carreras afines",
-    "empresa": "Concentrix",
-    "ubicacion": "Bello, Antioquia",
-    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-practicante-de-ingenieria-mecatronica-y-carreras-afines-en-bello-BBF91AB818D7B28861373E686DCF3405",
-    "fecha_publicacion": "Reciente",
-    "fuente": "Computrabajo",
-    "ramas": [
-      {
-        "clave": "instrumentacion_metrologia",
-        "nombre": "Instrumentación, Automatización y Metrología",
-        "color": "#10b981",
-        "score": 73
-      }
-    ],
-    "rama_principal": "Instrumentación, Automatización y Metrología",
-    "color_principal": "#10b981",
-    "clave_principal": "instrumentacion_metrologia",
-    "afinidad": "Afinidad con Física",
-    "es_exclusiva_fisica": true,
-    "es_cierre_inminente": false,
-    "score_pensum": 158,
-    "mision": "Calibración de instrumentos de medición de variables físicas, cálculo de incertidumbre y programación de sistemas DAQ/LabVIEW.",
-    "tareas": "Levantamiento de curvas de calibración, programación en LabVIEW, enlace con autómatas PLC y aseguramiento metrológico ISO 17025.",
-    "es_practica": true
-  },
-  {
-    "titulo": "Practicante Universitario de Ingeniería Mecánica y Mecatrónica / Proyecto Minero.",
-    "empresa": "Antioquia Gold Ltd.",
-    "ubicacion": "Medellín, Antioquia",
-    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-practicante-universitario-de-ingenieria-mecanica-y-mecatronica-proyecto-minero-en-medellin-A0176B2FC0193C6F61373E686DCF3405",
-    "fecha_publicacion": "Reciente",
-    "fuente": "Computrabajo",
-    "ramas": [
-      {
-        "clave": "instrumentacion_metrologia",
-        "nombre": "Instrumentación, Automatización y Metrología",
-        "color": "#10b981",
-        "score": 73
-      }
-    ],
-    "rama_principal": "Instrumentación, Automatización y Metrología",
-    "color_principal": "#10b981",
-    "clave_principal": "instrumentacion_metrologia",
-    "afinidad": "Afinidad con Física",
-    "es_exclusiva_fisica": true,
-    "es_cierre_inminente": false,
-    "score_pensum": 158,
-    "mision": "Calibración de instrumentos de medición de variables físicas, cálculo de incertidumbre y programación de sistemas DAQ/LabVIEW.",
-    "tareas": "Levantamiento de curvas de calibración, programación en LabVIEW, enlace con autómatas PLC y aseguramiento metrológico ISO 17025.",
-    "es_practica": true
-  },
-  {
-    "titulo": "Practicante Eléctrico/ Electrónico/Electromecánico",
-    "empresa": "TRONEX / CODISCOS",
-    "ubicacion": "Medellín, Antioquia",
-    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-practicante-electrico-electronicoelectromecanico-tecnico-tecnologo-en-medellin-32D629052F0C892B61373E686DCF3405",
-    "fecha_publicacion": "Reciente",
-    "fuente": "Computrabajo",
-    "ramas": [
-      {
-        "clave": "instrumentacion_metrologia",
-        "nombre": "Instrumentación, Automatización y Metrología",
-        "color": "#10b981",
-        "score": 73
-      }
-    ],
-    "rama_principal": "Instrumentación, Automatización y Metrología",
-    "color_principal": "#10b981",
-    "clave_principal": "instrumentacion_metrologia",
-    "afinidad": "Afinidad con Física",
-    "es_exclusiva_fisica": true,
-    "es_cierre_inminente": false,
-    "score_pensum": 158,
-    "mision": "Calibración de instrumentos de medición de variables físicas, cálculo de incertidumbre y programación de sistemas DAQ/LabVIEW.",
-    "tareas": "Levantamiento de curvas de calibración, programación en LabVIEW, enlace con autómatas PLC y aseguramiento metrológico ISO 17025.",
-    "es_practica": true
-  },
-  {
-    "titulo": "Practicante Universitario Automatización",
-    "empresa": "Grupo Éxito",
-    "ubicacion": "Medellín, Antioquia",
-    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-practicante-universitario-automatizacion-en-medellin-48D6D6B96764C44861373E686DCF3405",
-    "fecha_publicacion": "Reciente",
-    "fuente": "Computrabajo",
-    "ramas": [
-      {
-        "clave": "instrumentacion_metrologia",
-        "nombre": "Instrumentación, Automatización y Metrología",
-        "color": "#10b981",
-        "score": 73
-      }
-    ],
-    "rama_principal": "Instrumentación, Automatización y Metrología",
-    "color_principal": "#10b981",
-    "clave_principal": "instrumentacion_metrologia",
-    "afinidad": "Afinidad con Física",
-    "es_exclusiva_fisica": true,
-    "es_cierre_inminente": false,
-    "score_pensum": 158,
-    "mision": "Calibración de instrumentos de medición de variables físicas, cálculo de incertidumbre y programación de sistemas DAQ/LabVIEW.",
-    "tareas": "Levantamiento de curvas de calibración, programación en LabVIEW, enlace con autómatas PLC y aseguramiento metrológico ISO 17025.",
-    "es_practica": true
-  },
-  {
-    "titulo": "Practicante Auxiliar Electromecánico",
-    "empresa": "Algamar S.A.",
-    "ubicacion": "Itagüí, Antioquia",
-    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-practicante-auxiliar-electromecanico-sector-metalmecanico-en-itagui-2F5A06B18594228B61373E686DCF3405",
-    "fecha_publicacion": "Reciente",
-    "fuente": "Computrabajo",
-    "ramas": [
-      {
-        "clave": "instrumentacion_metrologia",
-        "nombre": "Instrumentación, Automatización y Metrología",
-        "color": "#10b981",
-        "score": 73
-      }
-    ],
-    "rama_principal": "Instrumentación, Automatización y Metrología",
-    "color_principal": "#10b981",
-    "clave_principal": "instrumentacion_metrologia",
-    "afinidad": "Afinidad con Física",
-    "es_exclusiva_fisica": true,
-    "es_cierre_inminente": false,
-    "score_pensum": 158,
-    "mision": "Calibración de instrumentos de medición de variables físicas, cálculo de incertidumbre y programación de sistemas DAQ/LabVIEW.",
-    "tareas": "Levantamiento de curvas de calibración, programación en LabVIEW, enlace con autómatas PLC y aseguramiento metrológico ISO 17025.",
-    "es_practica": true
-  },
-  {
-    "titulo": "Aprendiz Electromecánico",
-    "empresa": "GRUPO BIOS S.A.S",
-    "ubicacion": "Caldas, Antioquia",
-    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-aprendiz-electromecanico-en-caldas-D4C1B91920FF643461373E686DCF3405",
-    "fecha_publicacion": "Reciente",
-    "fuente": "Computrabajo",
-    "ramas": [
-      {
-        "clave": "instrumentacion_metrologia",
-        "nombre": "Instrumentación, Automatización y Metrología",
-        "color": "#10b981",
-        "score": 73
-      }
-    ],
-    "rama_principal": "Instrumentación, Automatización y Metrología",
-    "color_principal": "#10b981",
-    "clave_principal": "instrumentacion_metrologia",
-    "afinidad": "Afinidad con Física",
-    "es_exclusiva_fisica": true,
-    "es_cierre_inminente": false,
-    "score_pensum": 158,
-    "mision": "Calibración de instrumentos de medición de variables físicas, cálculo de incertidumbre y programación de sistemas DAQ/LabVIEW.",
-    "tareas": "Levantamiento de curvas de calibración, programación en LabVIEW, enlace con autómatas PLC y aseguramiento metrológico ISO 17025.",
-    "es_practica": false
-  },
-  {
-    "titulo": "Aprendiz Electricidad, Mecánica, Mantenimiento Industrial, Automatización / Antioquia",
-    "empresa": "MAPER S.A.",
-    "ubicacion": "La Estrella, Antioquia",
-    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-aprendiz-electricidad-mecanica-mantenimiento-industrial-automatizacion-antioquia-en-la-estrella-2D98B1AA81F3905D61373E686DCF3405",
-    "fecha_publicacion": "Reciente",
-    "fuente": "Computrabajo",
-    "ramas": [
-      {
-        "clave": "instrumentacion_metrologia",
-        "nombre": "Instrumentación, Automatización y Metrología",
-        "color": "#10b981",
-        "score": 73
-      }
-    ],
-    "rama_principal": "Instrumentación, Automatización y Metrología",
-    "color_principal": "#10b981",
-    "clave_principal": "instrumentacion_metrologia",
-    "afinidad": "Afinidad con Física",
-    "es_exclusiva_fisica": true,
-    "es_cierre_inminente": false,
-    "score_pensum": 158,
-    "mision": "Calibración de instrumentos de medición de variables físicas, cálculo de incertidumbre y programación de sistemas DAQ/LabVIEW.",
-    "tareas": "Levantamiento de curvas de calibración, programación en LabVIEW, enlace con autómatas PLC y aseguramiento metrológico ISO 17025.",
-    "es_practica": false
-  },
-  {
-    "titulo": "Aprendiz técnico o tecnólogo  Automatización Industrial",
-    "empresa": "Servicios en Soluciones Humanas SAS",
-    "ubicacion": "Medellín, Antioquia",
-    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-aprendiz-tecnico-o-tecnologo-automatizacion-industrial-sabaneta-en-medellin-CC8ADC983BD874A361373E686DCF3405",
-    "fecha_publicacion": "Reciente",
-    "fuente": "Computrabajo",
-    "ramas": [
-      {
-        "clave": "instrumentacion_metrologia",
-        "nombre": "Instrumentación, Automatización y Metrología",
-        "color": "#10b981",
-        "score": 73
-      }
-    ],
-    "rama_principal": "Instrumentación, Automatización y Metrología",
-    "color_principal": "#10b981",
-    "clave_principal": "instrumentacion_metrologia",
-    "afinidad": "Afinidad con Física",
-    "es_exclusiva_fisica": true,
-    "es_cierre_inminente": false,
-    "score_pensum": 158,
-    "mision": "Calibración de instrumentos de medición de variables físicas, cálculo de incertidumbre y programación de sistemas DAQ/LabVIEW.",
-    "tareas": "Levantamiento de curvas de calibración, programación en LabVIEW, enlace con autómatas PLC y aseguramiento metrológico ISO 17025.",
-    "es_practica": false
-  },
-  {
-    "titulo": "Practicante Técnico/Tecnólogo Electromecánica, Mecánica, Industrial /Medellín Tronex",
-    "empresa": "TRONEX / CODISCOS",
-    "ubicacion": "Medellín, Antioquia",
-    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-practicante-tecnicotecnologo-electromecanica-mecanica-industrial-medellin-tronex-en-medellin-D376A2664D7943E861373E686DCF3405",
-    "fecha_publicacion": "Reciente",
-    "fuente": "Computrabajo",
-    "ramas": [
-      {
-        "clave": "instrumentacion_metrologia",
-        "nombre": "Instrumentación, Automatización y Metrología",
-        "color": "#10b981",
-        "score": 73
-      }
-    ],
-    "rama_principal": "Instrumentación, Automatización y Metrología",
-    "color_principal": "#10b981",
-    "clave_principal": "instrumentacion_metrologia",
-    "afinidad": "Afinidad con Física",
-    "es_exclusiva_fisica": true,
-    "es_cierre_inminente": false,
-    "score_pensum": 158,
-    "mision": "Calibración de instrumentos de medición de variables físicas, cálculo de incertidumbre y programación de sistemas DAQ/LabVIEW.",
-    "tareas": "Levantamiento de curvas de calibración, programación en LabVIEW, enlace con autómatas PLC y aseguramiento metrológico ISO 17025.",
-    "es_practica": true
-  },
-  {
-    "titulo": "Practicante Ambienta, practicante Electromecánico",
-    "empresa": "Empresa Confidencial",
-    "ubicacion": "Medellín, Antioquia",
-    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-practicante-ambienta-practicante-electromecanico-lunes-a-viernes-en-medellin-E0961CBF248154D261373E686DCF3405",
-    "fecha_publicacion": "Reciente",
-    "fuente": "Computrabajo",
-    "ramas": [
-      {
-        "clave": "instrumentacion_metrologia",
-        "nombre": "Instrumentación, Automatización y Metrología",
-        "color": "#10b981",
-        "score": 73
-      }
-    ],
-    "rama_principal": "Instrumentación, Automatización y Metrología",
-    "color_principal": "#10b981",
-    "clave_principal": "instrumentacion_metrologia",
-    "afinidad": "Afinidad con Física",
-    "es_exclusiva_fisica": true,
-    "es_cierre_inminente": false,
-    "score_pensum": 158,
-    "mision": "Calibración de instrumentos de medición de variables físicas, cálculo de incertidumbre y programación de sistemas DAQ/LabVIEW.",
-    "tareas": "Levantamiento de curvas de calibración, programación en LabVIEW, enlace con autómatas PLC y aseguramiento metrológico ISO 17025.",
-    "es_practica": true
-  },
-  {
-    "titulo": "Analista de procesos y automatización- remoto",
-    "empresa": "MICHAEL PAGE INTERNATIONAL",
-    "ubicacion": "Bogotá",
-    "url": "https://www.elempleo.com/co/ofertas-trabajo/aprendiz-de-tecnologia-estudiate-universitario-1886760603",
-    "fecha_publicacion": "Reciente",
-    "fuente": "ElEmpleo.com",
-    "compensacion": "",
-    "ramas": [
-      {
-        "clave": "instrumentacion_metrologia",
-        "nombre": "Instrumentación, Automatización y Metrología",
-        "color": "#10b981",
-        "score": 73
-      }
-    ],
-    "rama_principal": "Instrumentación, Automatización y Metrología",
-    "color_principal": "#10b981",
-    "clave_principal": "instrumentacion_metrologia",
-    "afinidad": "Afinidad con Física",
-    "es_exclusiva_fisica": true,
-    "es_cierre_inminente": false,
-    "score_pensum": 158,
-    "mision": "Calibración de instrumentos de medición de variables físicas, cálculo de incertidumbre y programación de sistemas DAQ/LabVIEW.",
-    "tareas": "Levantamiento de curvas de calibración, programación en LabVIEW, enlace con autómatas PLC y aseguramiento metrológico ISO 17025.",
-    "es_practica": false
-  },
-  {
-    "titulo": "Jefe de fiscalización de montaje electromecánico - ampliación",
-    "empresa": "INTEGRAL",
-    "ubicacion": "Medellín",
-    "url": "https://www.elempleo.com/co/ofertas-trabajo/residente-de-interventoria-electromecanico-yumbo-1886780556",
-    "fecha_publicacion": "Reciente",
-    "fuente": "ElEmpleo.com",
-    "compensacion": "",
-    "ramas": [
-      {
-        "clave": "instrumentacion_metrologia",
-        "nombre": "Instrumentación, Automatización y Metrología",
-        "color": "#10b981",
-        "score": 73
-      }
-    ],
-    "rama_principal": "Instrumentación, Automatización y Metrología",
-    "color_principal": "#10b981",
-    "clave_principal": "instrumentacion_metrologia",
-    "afinidad": "Afinidad con Física",
-    "es_exclusiva_fisica": true,
-    "es_cierre_inminente": false,
-    "score_pensum": 158,
-    "mision": "Calibración de instrumentos de medición de variables físicas, cálculo de incertidumbre y programación de sistemas DAQ/LabVIEW.",
-    "tareas": "Levantamiento de curvas de calibración, programación en LabVIEW, enlace con autómatas PLC y aseguramiento metrológico ISO 17025.",
-    "es_practica": false
+    "es_practica": false,
+    "score_pensum": 181
   },
   {
     "titulo": "Aprendiz Asesoría Comercial",
@@ -804,9 +379,9 @@
     "afinidad": "Afinidad con Física",
     "es_exclusiva_fisica": true,
     "es_cierre_inminente": false,
+    "es_practica": false,
     "score_pensum": 133,
-    "tareas": "Simulación de flujos de carga, curvas de envejecimiento de aislamiento según norma IEEE, telemetría y calidad de onda.",
-    "es_practica": false
+    "tareas": "Simulación de flujos de carga, curvas de envejecimiento de aislamiento según norma IEEE, telemetría y calidad de onda."
   },
   {
     "titulo": "Practicante Cientifico de Datos",
@@ -832,9 +407,9 @@
     "afinidad": "Alta Afinidad Pénsum",
     "es_exclusiva_fisica": false,
     "es_cierre_inminente": false,
+    "es_practica": true,
     "score_pensum": 110,
-    "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables.",
-    "es_practica": true
+    "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables."
   },
   {
     "titulo": "Aprendiz Datos",
@@ -860,9 +435,9 @@
     "afinidad": "Alta Afinidad Pénsum",
     "es_exclusiva_fisica": false,
     "es_cierre_inminente": false,
+    "es_practica": true,
     "score_pensum": 107,
-    "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables.",
-    "es_practica": true
+    "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables."
   },
   {
     "titulo": "APRENDIZ DATOS",
@@ -888,9 +463,9 @@
     "afinidad": "Alta Afinidad Pénsum",
     "es_exclusiva_fisica": false,
     "es_cierre_inminente": false,
+    "es_practica": true,
     "score_pensum": 107,
-    "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables.",
-    "es_practica": true
+    "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables."
   },
   {
     "titulo": "Aprendiz en Automatización Industrial (PLC y Neumática)",
@@ -917,8 +492,36 @@
     "afinidad": "Alta Afinidad Pénsum",
     "es_exclusiva_fisica": false,
     "es_cierre_inminente": false,
-    "score_pensum": 105,
-    "es_practica": false
+    "es_practica": false,
+    "score_pensum": 105
+  },
+  {
+    "titulo": "Practicante ingeniería electrónica, analítica de datos",
+    "empresa": "IQ Outsourcing",
+    "ubicacion": "Remoto (Colombia)",
+    "url": "https://www.magneto365.com/co/empleos/practicante-analitica-945919",
+    "fecha_publicacion": "2026-06-10",
+    "fuente": "Magneto365",
+    "compensacion": "$1.750.000 COP",
+    "perfil": "",
+    "mision": "Practicante Analítica de Datos (Ciencia de Datos) Palabras clave: Ingerieria electronica Practicante analítica de datos Ciencia de datos Modelos predictivos Python Análisis de datos Prácticas profesionales Híbrido Servicios Tecnología Data analyst Da",
+    "ramas": [
+      {
+        "clave": "simulaciones_datos_ia",
+        "nombre": "Análisis de Datos, IA y Simulaciones",
+        "color": "#06b6d4",
+        "score": 69
+      }
+    ],
+    "rama_principal": "Análisis de Datos, IA y Simulaciones",
+    "color_principal": "#06b6d4",
+    "clave_principal": "simulaciones_datos_ia",
+    "afinidad": "Alta Afinidad Pénsum",
+    "es_exclusiva_fisica": false,
+    "es_cierre_inminente": false,
+    "es_practica": true,
+    "score_pensum": 104,
+    "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables."
   },
   {
     "titulo": "Practicante de Mantenimiento y Confiabilidad",
@@ -945,8 +548,8 @@
     "afinidad": "Alta Afinidad Pénsum",
     "es_exclusiva_fisica": false,
     "es_cierre_inminente": false,
-    "score_pensum": 103,
-    "es_practica": true
+    "es_practica": true,
+    "score_pensum": 103
   },
   {
     "titulo": "Prácticas Profesionales 2027-1 (Operaciones y Mantenimiento)",
@@ -973,8 +576,8 @@
     "afinidad": "Alta Afinidad Pénsum",
     "es_exclusiva_fisica": false,
     "es_cierre_inminente": false,
-    "score_pensum": 102,
-    "es_practica": false
+    "es_practica": false,
+    "score_pensum": 102
   },
   {
     "titulo": "Prácticas Profesionales 2027-1 (Automatización, IA y Datos)",
@@ -1007,8 +610,8 @@
     "afinidad": "Alta Afinidad Pénsum",
     "es_exclusiva_fisica": false,
     "es_cierre_inminente": false,
-    "score_pensum": 101,
-    "es_practica": false
+    "es_practica": false,
+    "score_pensum": 101
   },
   {
     "titulo": "Practicante Universitario de Ingeniería / Proyecto Minero (Cisneros / Medellín)",
@@ -1035,8 +638,8 @@
     "afinidad": "Alta Afinidad Pénsum",
     "es_exclusiva_fisica": false,
     "es_cierre_inminente": false,
-    "score_pensum": 99,
-    "es_practica": true
+    "es_practica": true,
+    "score_pensum": 99
   },
   {
     "titulo": "Técnico Instrumentista Industrial – Sector Procesos Continuos",
@@ -1063,8 +666,8 @@
     "afinidad": "Alta Afinidad Pénsum",
     "es_exclusiva_fisica": false,
     "es_cierre_inminente": false,
-    "score_pensum": 99,
-    "es_practica": false
+    "es_practica": false,
+    "score_pensum": 99
   },
   {
     "titulo": "Intern en Electrificación y Automatización",
@@ -1091,8 +694,8 @@
     "afinidad": "Alta Afinidad Pénsum",
     "es_exclusiva_fisica": false,
     "es_cierre_inminente": false,
-    "score_pensum": 99,
-    "es_practica": true
+    "es_practica": true,
+    "score_pensum": 99
   },
   {
     "titulo": "Practicante Tecnólogo Electromecánico (Sistemas de Bombeo)",
@@ -1119,8 +722,8 @@
     "afinidad": "Alta Afinidad Pénsum",
     "es_exclusiva_fisica": false,
     "es_cierre_inminente": false,
-    "score_pensum": 99,
-    "es_practica": true
+    "es_practica": true,
+    "score_pensum": 99
   },
   {
     "titulo": "Practicante mecánico/a, electromecánico/a o mecatrónico/a 1626362187-3",
@@ -1146,9 +749,9 @@
     "afinidad": "Alta Afinidad Pénsum",
     "es_exclusiva_fisica": false,
     "es_cierre_inminente": false,
+    "es_practica": true,
     "score_pensum": 99,
-    "tareas": "Levantamiento de curvas de calibración, programación en LabVIEW, enlace con autómatas PLC y aseguramiento metrológico ISO 17025.",
-    "es_practica": true
+    "tareas": "Levantamiento de curvas de calibración, programación en LabVIEW, enlace con autómatas PLC y aseguramiento metrológico ISO 17025."
   },
   {
     "titulo": "Practicante Universitario(a) de Control Corporativo",
@@ -1180,37 +783,9 @@
     "afinidad": "Alta Afinidad Pénsum",
     "es_exclusiva_fisica": false,
     "es_cierre_inminente": false,
+    "es_practica": true,
     "score_pensum": 98,
-    "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables.",
-    "es_practica": true
-  },
-  {
-    "titulo": "Practicante En Ingeniería Civil",
-    "empresa": "Sedic S.A.",
-    "ubicacion": "Medellín",
-    "url": "https://www.magneto365.com/co/empleos/practicante-en-ingenieria-civil-1099844",
-    "fecha_publicacion": "2026-10-15",
-    "fuente": "Magneto365",
-    "compensacion": "$1.750.905 COP",
-    "perfil": "Microsoft Office, Power BI, Project",
-    "mision": "Practicante en &nbsp;Ingeniería&nbsp; Ci vil 2027-1 Palabras clave: Practicante en Ingeniería Civil Estudiante de Ingeniería Civil Buscamos practicante de ingeniería civil para unirse a nuestro equipo de trabajo Perfil:&nbsp; Estudiante de últimos se",
-    "ramas": [
-      {
-        "clave": "simulaciones_datos_ia",
-        "nombre": "Análisis de Datos, IA y Simulaciones",
-        "color": "#06b6d4",
-        "score": 63
-      }
-    ],
-    "rama_principal": "Análisis de Datos, IA y Simulaciones",
-    "color_principal": "#06b6d4",
-    "clave_principal": "simulaciones_datos_ia",
-    "afinidad": "Alta Afinidad Pénsum",
-    "es_exclusiva_fisica": false,
-    "es_cierre_inminente": false,
-    "score_pensum": 98,
-    "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables.",
-    "es_practica": true
+    "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables."
   },
   {
     "titulo": "Aprendiz Business Intelligence",
@@ -1236,9 +811,9 @@
     "afinidad": "Alta Afinidad Pénsum",
     "es_exclusiva_fisica": false,
     "es_cierre_inminente": false,
+    "es_practica": false,
     "score_pensum": 98,
-    "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables.",
-    "es_practica": false
+    "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables."
   },
   {
     "titulo": "Practicantes Universitarios – Datos, Analítica y Tecnología 2027-1",
@@ -1264,9 +839,9 @@
     "afinidad": "Alta Afinidad Pénsum",
     "es_exclusiva_fisica": false,
     "es_cierre_inminente": false,
+    "es_practica": false,
     "score_pensum": 98,
-    "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables.",
-    "es_practica": false
+    "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables."
   },
   {
     "titulo": "Aprendiz análisis de datos 1626532605-2",
@@ -1292,9 +867,71 @@
     "afinidad": "Alta Afinidad Pénsum",
     "es_exclusiva_fisica": false,
     "es_cierre_inminente": false,
+    "es_practica": false,
     "score_pensum": 98,
-    "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables.",
-    "es_practica": false
+    "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables."
+  },
+  {
+    "titulo": "Practicante de Logística (Indicadores) ACO",
+    "empresa": "ACO",
+    "ubicacion": "Remoto (Colombia)",
+    "url": "https://www.magneto365.com/co/empleos/practicante-de-logistica-indicadores-aco-1068179",
+    "fecha_publicacion": "2026-09-16",
+    "fuente": "Magneto365",
+    "compensacion": "$1.750.905 COP",
+    "perfil": "Microsoft Office, Microsoft Excel, Bases de datos, Control de indicadores, Seguimiento de programas logísticos",
+    "mision": "Practicante de Logística (Indicadores) ACO Palabras clave: Practicante de logística Excel Bases de datos Indicadores logísticos Operaciones Cadena de suministro Seguimiento de programas Office Practicante logístico Auxiliar de logística Asistente de ",
+    "ramas": [
+      {
+        "clave": "simulaciones_datos_ia",
+        "nombre": "Análisis de Datos, IA y Simulaciones",
+        "color": "#06b6d4",
+        "score": 63
+      },
+      {
+        "clave": "instrumentacion_metrologia",
+        "nombre": "Instrumentación, Automatización y Metrología",
+        "color": "#10b981",
+        "score": 58
+      }
+    ],
+    "rama_principal": "Análisis de Datos, IA y Simulaciones",
+    "color_principal": "#06b6d4",
+    "clave_principal": "simulaciones_datos_ia",
+    "afinidad": "Alta Afinidad Pénsum",
+    "es_exclusiva_fisica": false,
+    "es_cierre_inminente": false,
+    "es_practica": true,
+    "score_pensum": 98,
+    "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables."
+  },
+  {
+    "titulo": "Practicante de Mantenimiento Electromecánico",
+    "empresa": "Cementos Argos",
+    "ubicacion": "Valle de Aburrá, Antioquia",
+    "url": "https://www.grupoargos.com/talento/",
+    "fecha_publicacion": "Convocatoria Activa 2027",
+    "fuente": "Grupo Argos Careers",
+    "perfil": "Tecnología Electromecánica / Mantenimiento Industrial",
+    "mision": "Inspección de maquinaria rotativa continua, termografía infrarroja, análisis predictivo de vibraciones y variadores de frecuencia.",
+    "tareas": "Termografía infrarroja, análisis de espectro de vibraciones, diagnóstico de motores y ajuste de variadores de frecuencia en planta de cemento.",
+    "compensacion": "1 SMMLV + beneficios corporativos Grupo Argos",
+    "ramas": [
+      {
+        "clave": "instrumentacion_metrologia",
+        "nombre": "Instrumentación, Automatización y Metrología",
+        "color": "#10b981",
+        "score": 61
+      }
+    ],
+    "rama_principal": "Instrumentación, Automatización y Metrología",
+    "color_principal": "#10b981",
+    "clave_principal": "instrumentacion_metrologia",
+    "afinidad": "Alta Afinidad Pénsum",
+    "es_exclusiva_fisica": false,
+    "es_cierre_inminente": false,
+    "es_practica": true,
+    "score_pensum": 96
   },
   {
     "titulo": "Practicante Electromecánico de Planta",
@@ -1327,8 +964,8 @@
     "afinidad": "Alta Afinidad Pénsum",
     "es_exclusiva_fisica": false,
     "es_cierre_inminente": false,
-    "score_pensum": 96,
-    "es_practica": true
+    "es_practica": true,
+    "score_pensum": 96
   },
   {
     "titulo": "Aprendiz en Electromecánica y Pesaje Industrial",
@@ -1355,8 +992,8 @@
     "afinidad": "Alta Afinidad Pénsum",
     "es_exclusiva_fisica": false,
     "es_cierre_inminente": false,
-    "score_pensum": 96,
-    "es_practica": false
+    "es_practica": false,
+    "score_pensum": 96
   },
   {
     "titulo": "Aprendiz Técnico/Tecnólogo en Tableros Eléctricos",
@@ -1389,8 +1026,8 @@
     "afinidad": "Alta Afinidad Pénsum",
     "es_exclusiva_fisica": false,
     "es_cierre_inminente": false,
-    "score_pensum": 96,
-    "es_practica": false
+    "es_practica": false,
+    "score_pensum": 96
   },
   {
     "titulo": "Practicante de Mantenimiento Electromecánico",
@@ -1417,8 +1054,8 @@
     "afinidad": "Alta Afinidad Pénsum",
     "es_exclusiva_fisica": false,
     "es_cierre_inminente": false,
-    "score_pensum": 96,
-    "es_practica": true
+    "es_practica": true,
+    "score_pensum": 96
   },
   {
     "titulo": "Practicante Electromecánico de Planta",
@@ -1445,8 +1082,8 @@
     "afinidad": "Alta Afinidad Pénsum",
     "es_exclusiva_fisica": false,
     "es_cierre_inminente": false,
-    "score_pensum": 96,
-    "es_practica": true
+    "es_practica": true,
+    "score_pensum": 96
   },
   {
     "titulo": "Practicante electromecánica y/o automatización 349922-98721",
@@ -1472,37 +1109,9 @@
     "afinidad": "Alta Afinidad Pénsum",
     "es_exclusiva_fisica": false,
     "es_cierre_inminente": false,
+    "es_practica": true,
     "score_pensum": 96,
-    "tareas": "Levantamiento de curvas de calibración, programación en LabVIEW, enlace con autómatas PLC y aseguramiento metrológico ISO 17025.",
-    "es_practica": true
-  },
-  {
-    "titulo": "Practicante de Mantenimiento Electromecánico",
-    "empresa": "Cementos Argos",
-    "ubicacion": "Valle de Aburrá, Antioquia",
-    "url": "https://www.grupoargos.com/talento/",
-    "fecha_publicacion": "Convocatoria Activa 2027",
-    "fuente": "Grupo Argos Careers",
-    "perfil": "Tecnología Electromecánica / Mantenimiento Industrial",
-    "mision": "Inspección de maquinaria rotativa continua, termografía infrarroja, análisis predictivo de vibraciones y variadores de frecuencia.",
-    "tareas": "Termografía infrarroja, análisis de espectro de vibraciones, diagnóstico de motores y ajuste de variadores de frecuencia en planta de cemento.",
-    "compensacion": "1 SMMLV + beneficios corporativos Grupo Argos",
-    "ramas": [
-      {
-        "clave": "instrumentacion_metrologia",
-        "nombre": "Instrumentación, Automatización y Metrología",
-        "color": "#10b981",
-        "score": 61
-      }
-    ],
-    "rama_principal": "Instrumentación, Automatización y Metrología",
-    "color_principal": "#10b981",
-    "clave_principal": "instrumentacion_metrologia",
-    "afinidad": "Alta Afinidad Pénsum",
-    "es_exclusiva_fisica": false,
-    "es_cierre_inminente": false,
-    "score_pensum": 96,
-    "es_practica": true
+    "tareas": "Levantamiento de curvas de calibración, programación en LabVIEW, enlace con autómatas PLC y aseguramiento metrológico ISO 17025."
   },
   {
     "titulo": "Practicante Técnico en Electricidad Industrial y Solar",
@@ -1535,8 +1144,8 @@
     "afinidad": "Alta Afinidad Pénsum",
     "es_exclusiva_fisica": false,
     "es_cierre_inminente": false,
-    "score_pensum": 93,
-    "es_practica": true
+    "es_practica": true,
+    "score_pensum": 93
   },
   {
     "titulo": "Practicante en Almacenamiento Energético (BESS)",
@@ -1569,8 +1178,8 @@
     "afinidad": "Alta Afinidad Pénsum",
     "es_exclusiva_fisica": false,
     "es_cierre_inminente": false,
-    "score_pensum": 93,
-    "es_practica": true
+    "es_practica": true,
+    "score_pensum": 93
   },
   {
     "titulo": "Practicante de ingeniería industrial para Apartadó",
@@ -1596,37 +1205,9 @@
     "afinidad": "Alta Afinidad Pénsum",
     "es_exclusiva_fisica": false,
     "es_cierre_inminente": false,
+    "es_practica": true,
     "score_pensum": 93,
-    "tareas": "Levantamiento de curvas de calibración, programación en LabVIEW, enlace con autómatas PLC y aseguramiento metrológico ISO 17025.",
-    "es_practica": true
-  },
-  {
-    "titulo": "Practicante Universitario Automatización(Diseño Organizacional)",
-    "empresa": "Grupo-Éxito Corporativos",
-    "ubicacion": "Medellín",
-    "url": "https://www.magneto365.com/co/empleos/practicante-universitario-automatizacion-diseno-organizacional-1082725",
-    "fecha_publicacion": "2026-09-28",
-    "fuente": "Magneto365",
-    "compensacion": "$1.751.000 COP",
-    "perfil": "",
-    "mision": "Buscamos un Practicante Universitario de Ingeniería de sistemas, Ingeniería Software.&nbsp; Para unirse a nuestro equipo de Diseño organizacional y servicio de Recursos. Tendrás la oportunidad de brindar apoyo en el diseño, implementación y mejora de",
-    "ramas": [
-      {
-        "clave": "instrumentacion_metrologia",
-        "nombre": "Instrumentación, Automatización y Metrología",
-        "color": "#10b981",
-        "score": 58
-      }
-    ],
-    "rama_principal": "Instrumentación, Automatización y Metrología",
-    "color_principal": "#10b981",
-    "clave_principal": "instrumentacion_metrologia",
-    "afinidad": "Alta Afinidad Pénsum",
-    "es_exclusiva_fisica": false,
-    "es_cierre_inminente": false,
-    "score_pensum": 93,
-    "tareas": "Levantamiento de curvas de calibración, programación en LabVIEW, enlace con autómatas PLC y aseguramiento metrológico ISO 17025.",
-    "es_practica": true
+    "tareas": "Levantamiento de curvas de calibración, programación en LabVIEW, enlace con autómatas PLC y aseguramiento metrológico ISO 17025."
   },
   {
     "titulo": "Practicante Universitario Soporte y Mantenimiento",
@@ -1652,9 +1233,9 @@
     "afinidad": "Alta Afinidad Pénsum",
     "es_exclusiva_fisica": false,
     "es_cierre_inminente": false,
+    "es_practica": true,
     "score_pensum": 93,
-    "tareas": "Levantamiento de curvas de calibración, programación en LabVIEW, enlace con autómatas PLC y aseguramiento metrológico ISO 17025.",
-    "es_practica": true
+    "tareas": "Levantamiento de curvas de calibración, programación en LabVIEW, enlace con autómatas PLC y aseguramiento metrológico ISO 17025."
   },
   {
     "titulo": "Practicante en electromecánica industrial para Guarne 1626324091-10",
@@ -1680,9 +1261,9 @@
     "afinidad": "Alta Afinidad Pénsum",
     "es_exclusiva_fisica": false,
     "es_cierre_inminente": false,
+    "es_practica": true,
     "score_pensum": 93,
-    "tareas": "Levantamiento de curvas de calibración, programación en LabVIEW, enlace con autómatas PLC y aseguramiento metrológico ISO 17025.",
-    "es_practica": true
+    "tareas": "Levantamiento de curvas de calibración, programación en LabVIEW, enlace con autómatas PLC y aseguramiento metrológico ISO 17025."
   },
   {
     "titulo": "Aprendiz Patrocinio - Mantenimiento Electromecánico",
@@ -1708,41 +1289,9 @@
     "afinidad": "Alta Afinidad Pénsum",
     "es_exclusiva_fisica": false,
     "es_cierre_inminente": false,
+    "es_practica": false,
     "score_pensum": 93,
-    "tareas": "Levantamiento de curvas de calibración, programación en LabVIEW, enlace con autómatas PLC y aseguramiento metrológico ISO 17025.",
-    "es_practica": false
-  },
-  {
-    "titulo": "Practicante Universitario Digital Tecnología",
-    "empresa": "Grupo Éxito",
-    "ubicacion": "Medellín, Antioquia",
-    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-practicante-universitario-digital-tecnologia-en-medellin-0B29DA11EF8A724B61373E686DCF3405",
-    "fecha_publicacion": "Reciente",
-    "fuente": "Computrabajo",
-    "ramas": [
-      {
-        "clave": "electronica_digital_iot",
-        "nombre": "Electrónica Digital, Microcontroladores e IoT",
-        "color": "#3b82f6",
-        "score": 76
-      },
-      {
-        "clave": "instrumentacion_metrologia",
-        "nombre": "Instrumentación, Automatización y Metrología",
-        "color": "#10b981",
-        "score": 58
-      }
-    ],
-    "rama_principal": "Electrónica Digital, Microcontroladores e IoT",
-    "color_principal": "#3b82f6",
-    "clave_principal": "electronica_digital_iot",
-    "afinidad": "Alta Afinidad Pénsum",
-    "es_exclusiva_fisica": false,
-    "es_cierre_inminente": false,
-    "score_pensum": 76,
-    "mision": "Desarrollo de sistemas embebidos, firmware en C/C++, comunicación por buses I2C/SPI y redes de sensores industriales IoT.",
-    "tareas": "Programación de microcontroladores, adquisición y filtrado digital de señales, depuración con analizador lógico y pruebas de hardware.",
-    "es_practica": true
+    "tareas": "Levantamiento de curvas de calibración, programación en LabVIEW, enlace con autómatas PLC y aseguramiento metrológico ISO 17025."
   },
   {
     "titulo": "Practicante de Analisis de Datos, Estadistica, Sistemas y carreras afines",
@@ -1751,113 +1300,6 @@
     "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-practicante-de-analisis-de-datos-estadistica-sistemas-y-carreras-afines-en-bello-A6655A3267BC6ECD61373E686DCF3405",
     "fecha_publicacion": "Reciente",
     "fuente": "Computrabajo",
-    "ramas": [
-      {
-        "clave": "simulaciones_datos_ia",
-        "nombre": "Análisis de Datos, IA y Simulaciones",
-        "color": "#06b6d4",
-        "score": 72
-      }
-    ],
-    "rama_principal": "Análisis de Datos, IA y Simulaciones",
-    "color_principal": "#06b6d4",
-    "clave_principal": "simulaciones_datos_ia",
-    "afinidad": "Alta Afinidad Pénsum",
-    "es_exclusiva_fisica": false,
-    "es_cierre_inminente": false,
-    "score_pensum": 72,
-    "mision": "Modelamiento matemático, pipelines de datos, simulación numérica de procesos y entrenamiento de algoritmos predictivos e IA.",
-    "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables.",
-    "es_practica": true
-  },
-  {
-    "titulo": "Desarrollador Junior de Microsoft Power Platform",
-    "empresa": "NTT DATA Colombia",
-    "ubicacion": "Medellín, Antioquia",
-    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-desarrollador-junior-de-microsoft-power-platform-medellin-en-medellin-F6E5D177E3974FE161373E686DCF3405",
-    "fecha_publicacion": "Reciente",
-    "fuente": "Computrabajo",
-    "ramas": [
-      {
-        "clave": "simulaciones_datos_ia",
-        "nombre": "Análisis de Datos, IA y Simulaciones",
-        "color": "#06b6d4",
-        "score": 72
-      }
-    ],
-    "rama_principal": "Análisis de Datos, IA y Simulaciones",
-    "color_principal": "#06b6d4",
-    "clave_principal": "simulaciones_datos_ia",
-    "afinidad": "Alta Afinidad Pénsum",
-    "es_exclusiva_fisica": false,
-    "es_cierre_inminente": false,
-    "score_pensum": 72,
-    "mision": "Modelamiento matemático, pipelines de datos, simulación numérica de procesos y entrenamiento de algoritmos predictivos e IA.",
-    "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables.",
-    "es_practica": false
-  },
-  {
-    "titulo": "Practicante en ciencias de datos técnico/tecnólogo",
-    "empresa": "EVOLUTION DEVELOPMENT COLOMBIA S.A.S",
-    "ubicacion": "Medellín, Antioquia",
-    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-practicante-en-ciencias-de-datos-tecnicotecnologo-en-medellin-4DE8D7BBA208DAEA61373E686DCF3405",
-    "fecha_publicacion": "Reciente",
-    "fuente": "Computrabajo",
-    "ramas": [
-      {
-        "clave": "simulaciones_datos_ia",
-        "nombre": "Análisis de Datos, IA y Simulaciones",
-        "color": "#06b6d4",
-        "score": 69
-      }
-    ],
-    "rama_principal": "Análisis de Datos, IA y Simulaciones",
-    "color_principal": "#06b6d4",
-    "clave_principal": "simulaciones_datos_ia",
-    "afinidad": "Alta Afinidad Pénsum",
-    "es_exclusiva_fisica": false,
-    "es_cierre_inminente": false,
-    "score_pensum": 69,
-    "mision": "Modelamiento matemático, pipelines de datos, simulación numérica de procesos y entrenamiento de algoritmos predictivos e IA.",
-    "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables.",
-    "es_practica": true
-  },
-  {
-    "titulo": "Practicante de Marketing y Análisis de Datos",
-    "empresa": "SOLVO S.A.S",
-    "ubicacion": "Medellín, Antioquia",
-    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-practicante-de-marketing-y-analisis-de-datos-medellin-en-medellin-344383DDC066B73361373E686DCF3405",
-    "fecha_publicacion": "Reciente",
-    "fuente": "Computrabajo",
-    "ramas": [
-      {
-        "clave": "simulaciones_datos_ia",
-        "nombre": "Análisis de Datos, IA y Simulaciones",
-        "color": "#06b6d4",
-        "score": 69
-      }
-    ],
-    "rama_principal": "Análisis de Datos, IA y Simulaciones",
-    "color_principal": "#06b6d4",
-    "clave_principal": "simulaciones_datos_ia",
-    "afinidad": "Alta Afinidad Pénsum",
-    "es_exclusiva_fisica": false,
-    "es_cierre_inminente": false,
-    "score_pensum": 69,
-    "mision": "Modelamiento matemático, pipelines de datos, simulación numérica de procesos y entrenamiento de algoritmos predictivos e IA.",
-    "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables.",
-    "es_practica": true
-  },
-  {
-    "titulo": "Practicante Inteligencia De Negocios Y Gestión Comercial - Medellín",
-    "empresa": "Protección",
-    "ubicacion": "Medellín",
-    "url": "https://www.magneto365.com/co/empleos/practicante-inteligencia-de-negocios-y-gestion-comercial-medellin-1049118",
-    "fecha_publicacion": "2026-09-07",
-    "fuente": "Magneto365",
-    "compensacion": "",
-    "perfil": "Inteligencia Artificial, Power BI, Lenguajes de Programación, Inteligencia Negocio",
-    "mision": "Si te encuentras estudiando los últimos semestres de tu carrera profesional, y estás en búsqueda de una Compañía para hacer tus prácticas, ¡te estamos buscando! Si sientes pasión y ganas de aprender del área de Inteligencia de Negocios y por plasmar ",
     "ramas": [
       {
         "clave": "simulaciones_datos_ia",
@@ -1872,9 +1314,722 @@
     "afinidad": "Alta Afinidad Pénsum",
     "es_exclusiva_fisica": false,
     "es_cierre_inminente": false,
+    "es_practica": true,
     "score_pensum": 66,
-    "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables.",
-    "es_practica": true
+    "mision": "Modelamiento matemático, pipelines de datos, simulación numérica de procesos y entrenamiento de algoritmos predictivos e IA.",
+    "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables."
+  },
+  {
+    "titulo": "Administrador/a de Bases de Datos SQL Server (DBA)",
+    "empresa": "Indra",
+    "ubicacion": "Remoto (Colombia)",
+    "url": "https://www.magneto365.com/co/empleos/administradora-de-bases-de-datos-sql-server-dba-1109174",
+    "fecha_publicacion": "2026-10-21",
+    "fuente": "Magneto365",
+    "compensacion": "",
+    "perfil": "Administración SQL Server, Optimización bases datos, Ajuste rendimiento SQL, Respaldos bases datos, Monitoreo bases datos",
+    "mision": "🚀 ¿Te apasiona la administración de bases de datos y la optimización de entornos SQL Server? ¡Esta oportunidad es para ti! 🚨 ¡Reclutamiento en curso! ¡Se busca talento para unirse al equipo Indra Group! 🚨 Estamos en búsqueda de un/a Administrador/a d",
+    "ramas": [
+      {
+        "clave": "simulaciones_datos_ia",
+        "nombre": "Análisis de Datos, IA y Simulaciones",
+        "color": "#06b6d4",
+        "score": 66
+      }
+    ],
+    "rama_principal": "Análisis de Datos, IA y Simulaciones",
+    "color_principal": "#06b6d4",
+    "clave_principal": "simulaciones_datos_ia",
+    "afinidad": "Alta Afinidad Pénsum",
+    "es_exclusiva_fisica": false,
+    "es_cierre_inminente": false,
+    "es_practica": false,
+    "score_pensum": 66,
+    "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables."
+  },
+  {
+    "titulo": "Técnico /Tecnólogo de Mecatronica, Electromecánica  automatización",
+    "empresa": "SERVIOPTICA S.A.S",
+    "ubicacion": "La Estrella, Antioquia",
+    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-tecnico-tecnologo-de-mecatronica-electromecanica-automatizacion-experiencia-de-2-anos-en-procesos-de-produccion-con-sistemas-automaticosorientados-a-la-industria-en-la-estrella-A5C5C0C2F2828AF461373E686DCF3405",
+    "fecha_publicacion": "Reciente",
+    "fuente": "Computrabajo",
+    "ramas": [
+      {
+        "clave": "instrumentacion_metrologia",
+        "nombre": "Instrumentación, Automatización y Metrología",
+        "color": "#10b981",
+        "score": 64
+      },
+      {
+        "clave": "optica_vision_artificial",
+        "nombre": "Óptica, Fotónica y Visión Artificial",
+        "color": "#a855f7",
+        "score": 53
+      }
+    ],
+    "rama_principal": "Instrumentación, Automatización y Metrología",
+    "color_principal": "#10b981",
+    "clave_principal": "instrumentacion_metrologia",
+    "afinidad": "Alta Afinidad Pénsum",
+    "es_exclusiva_fisica": false,
+    "es_cierre_inminente": false,
+    "es_practica": false,
+    "score_pensum": 64,
+    "mision": "Calibración de instrumentos de medición de variables físicas, cálculo de incertidumbre y programación de sistemas DAQ/LabVIEW.",
+    "tareas": "Levantamiento de curvas de calibración, programación en LabVIEW, enlace con autómatas PLC y aseguramiento metrológico ISO 17025."
+  },
+  {
+    "titulo": "Desarrollador Junior de Microsoft Power Platform",
+    "empresa": "NTT DATA Colombia",
+    "ubicacion": "Medellín, Antioquia",
+    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-desarrollador-junior-de-microsoft-power-platform-medellin-en-medellin-F6E5D177E3974FE161373E686DCF3405",
+    "fecha_publicacion": "Reciente",
+    "fuente": "Computrabajo",
+    "ramas": [
+      {
+        "clave": "simulaciones_datos_ia",
+        "nombre": "Análisis de Datos, IA y Simulaciones",
+        "color": "#06b6d4",
+        "score": 63
+      }
+    ],
+    "rama_principal": "Análisis de Datos, IA y Simulaciones",
+    "color_principal": "#06b6d4",
+    "clave_principal": "simulaciones_datos_ia",
+    "afinidad": "Alta Afinidad Pénsum",
+    "es_exclusiva_fisica": false,
+    "es_cierre_inminente": false,
+    "es_practica": false,
+    "score_pensum": 63,
+    "mision": "Modelamiento matemático, pipelines de datos, simulación numérica de procesos y entrenamiento de algoritmos predictivos e IA.",
+    "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables."
+  },
+  {
+    "titulo": "Practicante en ciencias de datos técnico/tecnólogo",
+    "empresa": "EVOLUTION DEVELOPMENT COLOMBIA S.A.S",
+    "ubicacion": "Medellín, Antioquia",
+    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-practicante-en-ciencias-de-datos-tecnicotecnologo-en-medellin-4DE8D7BBA208DAEA61373E686DCF3405",
+    "fecha_publicacion": "Reciente",
+    "fuente": "Computrabajo",
+    "ramas": [
+      {
+        "clave": "simulaciones_datos_ia",
+        "nombre": "Análisis de Datos, IA y Simulaciones",
+        "color": "#06b6d4",
+        "score": 63
+      }
+    ],
+    "rama_principal": "Análisis de Datos, IA y Simulaciones",
+    "color_principal": "#06b6d4",
+    "clave_principal": "simulaciones_datos_ia",
+    "afinidad": "Alta Afinidad Pénsum",
+    "es_exclusiva_fisica": false,
+    "es_cierre_inminente": false,
+    "es_practica": true,
+    "score_pensum": 63,
+    "mision": "Modelamiento matemático, pipelines de datos, simulación numérica de procesos y entrenamiento de algoritmos predictivos e IA.",
+    "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables."
+  },
+  {
+    "titulo": "Practicante de Marketing y Análisis de Datos",
+    "empresa": "SOLVO S.A.S",
+    "ubicacion": "Medellín, Antioquia",
+    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-practicante-de-marketing-y-analisis-de-datos-medellin-en-medellin-344383DDC066B73361373E686DCF3405",
+    "fecha_publicacion": "Reciente",
+    "fuente": "Computrabajo",
+    "ramas": [
+      {
+        "clave": "simulaciones_datos_ia",
+        "nombre": "Análisis de Datos, IA y Simulaciones",
+        "color": "#06b6d4",
+        "score": 63
+      }
+    ],
+    "rama_principal": "Análisis de Datos, IA y Simulaciones",
+    "color_principal": "#06b6d4",
+    "clave_principal": "simulaciones_datos_ia",
+    "afinidad": "Alta Afinidad Pénsum",
+    "es_exclusiva_fisica": false,
+    "es_cierre_inminente": false,
+    "es_practica": true,
+    "score_pensum": 63,
+    "mision": "Modelamiento matemático, pipelines de datos, simulación numérica de procesos y entrenamiento de algoritmos predictivos e IA.",
+    "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables."
+  },
+  {
+    "titulo": "Practicante Universitario (Ingeniería Eléctrica y Electrónica)",
+    "empresa": "ERCO ENERGÍA S.A.S",
+    "ubicacion": "Remoto (Colombia)",
+    "url": "https://www.magneto365.com/co/empleos/practicante-universitario-ingenieria-electrica-y-electronica-1081592",
+    "fecha_publicacion": "2026-09-28",
+    "fuente": "Magneto365",
+    "compensacion": "",
+    "perfil": "Sistemas solares fotovoltaicos, Análisis de datos de generación, Indicadores KPI, Configuración de strings, Inversores",
+    "mision": "Practicante Universitario (Ingeniería Eléctrica y Electrónica) Palabras clave: Practicante de Ingeniería Eléctrica Practicante de Ingeniería Electrónica Sistemas fotovoltaicos Energía solar Análisis de desempeño KPIs Inversores Reportes técnicos Inge",
+    "ramas": [
+      {
+        "clave": "simulaciones_datos_ia",
+        "nombre": "Análisis de Datos, IA y Simulaciones",
+        "color": "#06b6d4",
+        "score": 63
+      },
+      {
+        "clave": "energia_potencia",
+        "nombre": "Energía, Potencia y Renovables",
+        "color": "#eab308",
+        "score": 51
+      }
+    ],
+    "rama_principal": "Análisis de Datos, IA y Simulaciones",
+    "color_principal": "#06b6d4",
+    "clave_principal": "simulaciones_datos_ia",
+    "afinidad": "Alta Afinidad Pénsum",
+    "es_exclusiva_fisica": false,
+    "es_cierre_inminente": false,
+    "es_practica": true,
+    "score_pensum": 63,
+    "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables."
+  },
+  {
+    "titulo": "Practicante Universitario/a de Analítica de Datos",
+    "empresa": "PORVENIR S.A.",
+    "ubicacion": "Remoto (Colombia)",
+    "url": "https://www.magneto365.com/co/empleos/practicante-universitarioa-de-analitica-de-datos-1084627",
+    "fecha_publicacion": "2026-09-29",
+    "fuente": "Magneto365",
+    "compensacion": "",
+    "perfil": "",
+    "mision": "¡Impulsa tu futuro profesional con Porvenir! ¿Te apasionan los datos, la tecnología y la analítica? En Porvenir buscamos estudiantes con interés en transformar información en conocimiento, impulsar la toma de decisiones y explorar herramientas innova",
+    "ramas": [
+      {
+        "clave": "simulaciones_datos_ia",
+        "nombre": "Análisis de Datos, IA y Simulaciones",
+        "color": "#06b6d4",
+        "score": 63
+      }
+    ],
+    "rama_principal": "Análisis de Datos, IA y Simulaciones",
+    "color_principal": "#06b6d4",
+    "clave_principal": "simulaciones_datos_ia",
+    "afinidad": "Alta Afinidad Pénsum",
+    "es_exclusiva_fisica": false,
+    "es_cierre_inminente": false,
+    "es_practica": true,
+    "score_pensum": 63,
+    "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables."
+  },
+  {
+    "titulo": "Practicante Universitario/a de Cumplimiento Operativo y Judicial",
+    "empresa": "PORVENIR S.A.",
+    "ubicacion": "Remoto (Colombia)",
+    "url": "https://www.magneto365.com/co/empleos/practicante-universitarioa-de-cumplimiento-operativo-y-judicial-1077782",
+    "fecha_publicacion": "2026-09-23",
+    "fuente": "Magneto365",
+    "compensacion": "",
+    "perfil": "",
+    "mision": "¡Impulsa tu futuro profesional con Porvenir! ¿Te apasiona el análisis de datos, la automatización de procesos y la mejora continua? En Porvenir buscamos estudiantes con pensamiento analítico, orientación a resultados y ganas de generar impacto a trav",
+    "ramas": [
+      {
+        "clave": "simulaciones_datos_ia",
+        "nombre": "Análisis de Datos, IA y Simulaciones",
+        "color": "#06b6d4",
+        "score": 63
+      },
+      {
+        "clave": "instrumentacion_metrologia",
+        "nombre": "Instrumentación, Automatización y Metrología",
+        "color": "#10b981",
+        "score": 58
+      }
+    ],
+    "rama_principal": "Análisis de Datos, IA y Simulaciones",
+    "color_principal": "#06b6d4",
+    "clave_principal": "simulaciones_datos_ia",
+    "afinidad": "Alta Afinidad Pénsum",
+    "es_exclusiva_fisica": false,
+    "es_cierre_inminente": false,
+    "es_practica": true,
+    "score_pensum": 63,
+    "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables."
+  },
+  {
+    "titulo": "Practicante de Ingeniería (Gestión de Flota)",
+    "empresa": "Magnex Colombia",
+    "ubicacion": "Remoto (Colombia)",
+    "url": "https://www.magneto365.com/co/empleos/practicante-de-ingenieria-gestion-de-flota-1076948",
+    "fecha_publicacion": "2026-09-23",
+    "fuente": "Magneto365",
+    "compensacion": "",
+    "perfil": "Gestión de flota, Control operativo, Análisis de datos, Microsoft Excel, Aprendizaje continuo",
+    "mision": "Practicante de Ingeniería (Gestión de Flota) Palabras clave: Practicante universitario Ingeniería Gestión de flota Control operativo Análisis de datos Microsoft Excel Prácticas empresariales Transporte Logística Operaciones 🚚 ¡Hola! ¿Estás en el últi",
+    "ramas": [
+      {
+        "clave": "simulaciones_datos_ia",
+        "nombre": "Análisis de Datos, IA y Simulaciones",
+        "color": "#06b6d4",
+        "score": 63
+      },
+      {
+        "clave": "instrumentacion_metrologia",
+        "nombre": "Instrumentación, Automatización y Metrología",
+        "color": "#10b981",
+        "score": 58
+      }
+    ],
+    "rama_principal": "Análisis de Datos, IA y Simulaciones",
+    "color_principal": "#06b6d4",
+    "clave_principal": "simulaciones_datos_ia",
+    "afinidad": "Alta Afinidad Pénsum",
+    "es_exclusiva_fisica": false,
+    "es_cierre_inminente": false,
+    "es_practica": true,
+    "score_pensum": 63,
+    "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables."
+  },
+  {
+    "titulo": "Practicante electromecánica y/o automatización",
+    "empresa": "AGENCIA DE EMPLEO COMFAMA",
+    "ubicacion": "Itagüí, Antioquia",
+    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-practicante-electromecanica-yo-automatizacion-en-itagui-33D918551102074761373E686DCF3405",
+    "fecha_publicacion": "Reciente",
+    "fuente": "Computrabajo",
+    "ramas": [
+      {
+        "clave": "instrumentacion_metrologia",
+        "nombre": "Instrumentación, Automatización y Metrología",
+        "color": "#10b981",
+        "score": 61
+      }
+    ],
+    "rama_principal": "Instrumentación, Automatización y Metrología",
+    "color_principal": "#10b981",
+    "clave_principal": "instrumentacion_metrologia",
+    "afinidad": "Alta Afinidad Pénsum",
+    "es_exclusiva_fisica": false,
+    "es_cierre_inminente": false,
+    "es_practica": true,
+    "score_pensum": 61,
+    "mision": "Calibración de instrumentos de medición de variables físicas, cálculo de incertidumbre y programación de sistemas DAQ/LabVIEW.",
+    "tareas": "Levantamiento de curvas de calibración, programación en LabVIEW, enlace con autómatas PLC y aseguramiento metrológico ISO 17025."
+  },
+  {
+    "titulo": "Practicante electromecánica y/o automatización",
+    "empresa": "AGENCIA DE EMPLEO COMFAMA",
+    "ubicacion": "Itagüí, Antioquia",
+    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-practicante-electromecanica-yo-automatizacion-en-itagui-488F35E2C55F9F2861373E686DCF3405",
+    "fecha_publicacion": "Reciente",
+    "fuente": "Computrabajo",
+    "ramas": [
+      {
+        "clave": "instrumentacion_metrologia",
+        "nombre": "Instrumentación, Automatización y Metrología",
+        "color": "#10b981",
+        "score": 61
+      }
+    ],
+    "rama_principal": "Instrumentación, Automatización y Metrología",
+    "color_principal": "#10b981",
+    "clave_principal": "instrumentacion_metrologia",
+    "afinidad": "Alta Afinidad Pénsum",
+    "es_exclusiva_fisica": false,
+    "es_cierre_inminente": false,
+    "es_practica": true,
+    "score_pensum": 61,
+    "mision": "Calibración de instrumentos de medición de variables físicas, cálculo de incertidumbre y programación de sistemas DAQ/LabVIEW.",
+    "tareas": "Levantamiento de curvas de calibración, programación en LabVIEW, enlace con autómatas PLC y aseguramiento metrológico ISO 17025."
+  },
+  {
+    "titulo": "Practicante de ingenieria Mecatronica y carreras afines",
+    "empresa": "Concentrix",
+    "ubicacion": "Bello, Antioquia",
+    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-practicante-de-ingenieria-mecatronica-y-carreras-afines-en-bello-BBF91AB818D7B28861373E686DCF3405",
+    "fecha_publicacion": "Reciente",
+    "fuente": "Computrabajo",
+    "ramas": [
+      {
+        "clave": "instrumentacion_metrologia",
+        "nombre": "Instrumentación, Automatización y Metrología",
+        "color": "#10b981",
+        "score": 58
+      }
+    ],
+    "rama_principal": "Instrumentación, Automatización y Metrología",
+    "color_principal": "#10b981",
+    "clave_principal": "instrumentacion_metrologia",
+    "afinidad": "Alta Afinidad Pénsum",
+    "es_exclusiva_fisica": false,
+    "es_cierre_inminente": false,
+    "es_practica": true,
+    "score_pensum": 58,
+    "mision": "Calibración de instrumentos de medición de variables físicas, cálculo de incertidumbre y programación de sistemas DAQ/LabVIEW.",
+    "tareas": "Levantamiento de curvas de calibración, programación en LabVIEW, enlace con autómatas PLC y aseguramiento metrológico ISO 17025."
+  },
+  {
+    "titulo": "Practicante Universitario de Ingeniería Mecánica y Mecatrónica / Proyecto Minero.",
+    "empresa": "Antioquia Gold Ltd.",
+    "ubicacion": "Medellín, Antioquia",
+    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-practicante-universitario-de-ingenieria-mecanica-y-mecatronica-proyecto-minero-en-medellin-A0176B2FC0193C6F61373E686DCF3405",
+    "fecha_publicacion": "Reciente",
+    "fuente": "Computrabajo",
+    "ramas": [
+      {
+        "clave": "instrumentacion_metrologia",
+        "nombre": "Instrumentación, Automatización y Metrología",
+        "color": "#10b981",
+        "score": 58
+      }
+    ],
+    "rama_principal": "Instrumentación, Automatización y Metrología",
+    "color_principal": "#10b981",
+    "clave_principal": "instrumentacion_metrologia",
+    "afinidad": "Alta Afinidad Pénsum",
+    "es_exclusiva_fisica": false,
+    "es_cierre_inminente": false,
+    "es_practica": true,
+    "score_pensum": 58,
+    "mision": "Calibración de instrumentos de medición de variables físicas, cálculo de incertidumbre y programación de sistemas DAQ/LabVIEW.",
+    "tareas": "Levantamiento de curvas de calibración, programación en LabVIEW, enlace con autómatas PLC y aseguramiento metrológico ISO 17025."
+  },
+  {
+    "titulo": "Practicante Profesional / Automatización Industrial / Ingeniería Mecánica / Disponibilidad Inmediata",
+    "empresa": "Burger King Colombia",
+    "ubicacion": "Medellín, Antioquia",
+    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-practicante-profesional-automatizacion-industrial-ingenieria-mecanica-disponibilidad-inmediata-practicante-profesional-mantenimiento-medellin-en-medellin-B7B3EF9FBC4AD3CD61373E686DCF3405",
+    "fecha_publicacion": "Reciente",
+    "fuente": "Computrabajo",
+    "ramas": [
+      {
+        "clave": "instrumentacion_metrologia",
+        "nombre": "Instrumentación, Automatización y Metrología",
+        "color": "#10b981",
+        "score": 58
+      }
+    ],
+    "rama_principal": "Instrumentación, Automatización y Metrología",
+    "color_principal": "#10b981",
+    "clave_principal": "instrumentacion_metrologia",
+    "afinidad": "Alta Afinidad Pénsum",
+    "es_exclusiva_fisica": false,
+    "es_cierre_inminente": false,
+    "es_practica": true,
+    "score_pensum": 58,
+    "mision": "Calibración de instrumentos de medición de variables físicas, cálculo de incertidumbre y programación de sistemas DAQ/LabVIEW.",
+    "tareas": "Levantamiento de curvas de calibración, programación en LabVIEW, enlace con autómatas PLC y aseguramiento metrológico ISO 17025."
+  },
+  {
+    "titulo": "Practicante universitario de ingeniería mecánica o mecatrónica",
+    "empresa": "Agencia de Empleo de Comfenalco Antioquia",
+    "ubicacion": "Santo Domingo, Antioquia",
+    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-practicante-universitario-de-ingenieria-mecanica-o-mecatronica-proyecto-minero-en-santo-domingo-BEFB62D5BA99ECF261373E686DCF3405",
+    "fecha_publicacion": "Reciente",
+    "fuente": "Computrabajo",
+    "ramas": [
+      {
+        "clave": "instrumentacion_metrologia",
+        "nombre": "Instrumentación, Automatización y Metrología",
+        "color": "#10b981",
+        "score": 58
+      }
+    ],
+    "rama_principal": "Instrumentación, Automatización y Metrología",
+    "color_principal": "#10b981",
+    "clave_principal": "instrumentacion_metrologia",
+    "afinidad": "Alta Afinidad Pénsum",
+    "es_exclusiva_fisica": false,
+    "es_cierre_inminente": false,
+    "es_practica": true,
+    "score_pensum": 58,
+    "mision": "Calibración de instrumentos de medición de variables físicas, cálculo de incertidumbre y programación de sistemas DAQ/LabVIEW.",
+    "tareas": "Levantamiento de curvas de calibración, programación en LabVIEW, enlace con autómatas PLC y aseguramiento metrológico ISO 17025."
+  },
+  {
+    "titulo": "Practicante Eléctrico/ Electrónico/Electromecánico",
+    "empresa": "TRONEX / CODISCOS",
+    "ubicacion": "Medellín, Antioquia",
+    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-practicante-electrico-electronicoelectromecanico-tecnico-tecnologo-en-medellin-32D629052F0C892B61373E686DCF3405",
+    "fecha_publicacion": "Reciente",
+    "fuente": "Computrabajo",
+    "ramas": [
+      {
+        "clave": "instrumentacion_metrologia",
+        "nombre": "Instrumentación, Automatización y Metrología",
+        "color": "#10b981",
+        "score": 58
+      }
+    ],
+    "rama_principal": "Instrumentación, Automatización y Metrología",
+    "color_principal": "#10b981",
+    "clave_principal": "instrumentacion_metrologia",
+    "afinidad": "Alta Afinidad Pénsum",
+    "es_exclusiva_fisica": false,
+    "es_cierre_inminente": false,
+    "es_practica": true,
+    "score_pensum": 58,
+    "mision": "Calibración de instrumentos de medición de variables físicas, cálculo de incertidumbre y programación de sistemas DAQ/LabVIEW.",
+    "tareas": "Levantamiento de curvas de calibración, programación en LabVIEW, enlace con autómatas PLC y aseguramiento metrológico ISO 17025."
+  },
+  {
+    "titulo": "Practicante Universitario Automatización",
+    "empresa": "Grupo Éxito",
+    "ubicacion": "Medellín, Antioquia",
+    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-practicante-universitario-automatizacion-en-medellin-48D6D6B96764C44861373E686DCF3405",
+    "fecha_publicacion": "Reciente",
+    "fuente": "Computrabajo",
+    "ramas": [
+      {
+        "clave": "instrumentacion_metrologia",
+        "nombre": "Instrumentación, Automatización y Metrología",
+        "color": "#10b981",
+        "score": 58
+      }
+    ],
+    "rama_principal": "Instrumentación, Automatización y Metrología",
+    "color_principal": "#10b981",
+    "clave_principal": "instrumentacion_metrologia",
+    "afinidad": "Alta Afinidad Pénsum",
+    "es_exclusiva_fisica": false,
+    "es_cierre_inminente": false,
+    "es_practica": true,
+    "score_pensum": 58,
+    "mision": "Calibración de instrumentos de medición de variables físicas, cálculo de incertidumbre y programación de sistemas DAQ/LabVIEW.",
+    "tareas": "Levantamiento de curvas de calibración, programación en LabVIEW, enlace con autómatas PLC y aseguramiento metrológico ISO 17025."
+  },
+  {
+    "titulo": "Practicante Auxiliar Electromecánico",
+    "empresa": "Algamar S.A.",
+    "ubicacion": "Itagüí, Antioquia",
+    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-practicante-auxiliar-electromecanico-sector-metalmecanico-en-itagui-2F5A06B18594228B61373E686DCF3405",
+    "fecha_publicacion": "Reciente",
+    "fuente": "Computrabajo",
+    "ramas": [
+      {
+        "clave": "instrumentacion_metrologia",
+        "nombre": "Instrumentación, Automatización y Metrología",
+        "color": "#10b981",
+        "score": 58
+      }
+    ],
+    "rama_principal": "Instrumentación, Automatización y Metrología",
+    "color_principal": "#10b981",
+    "clave_principal": "instrumentacion_metrologia",
+    "afinidad": "Alta Afinidad Pénsum",
+    "es_exclusiva_fisica": false,
+    "es_cierre_inminente": false,
+    "es_practica": true,
+    "score_pensum": 58,
+    "mision": "Calibración de instrumentos de medición de variables físicas, cálculo de incertidumbre y programación de sistemas DAQ/LabVIEW.",
+    "tareas": "Levantamiento de curvas de calibración, programación en LabVIEW, enlace con autómatas PLC y aseguramiento metrológico ISO 17025."
+  },
+  {
+    "titulo": "Practicante Universitario Digital Tecnología",
+    "empresa": "Grupo Éxito",
+    "ubicacion": "Medellín, Antioquia",
+    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-practicante-universitario-digital-tecnologia-en-medellin-0B29DA11EF8A724B61373E686DCF3405",
+    "fecha_publicacion": "Reciente",
+    "fuente": "Computrabajo",
+    "ramas": [
+      {
+        "clave": "electronica_digital_iot",
+        "nombre": "Electrónica Digital, Microcontroladores e IoT",
+        "color": "#3b82f6",
+        "score": 58
+      }
+    ],
+    "rama_principal": "Electrónica Digital, Microcontroladores e IoT",
+    "color_principal": "#3b82f6",
+    "clave_principal": "electronica_digital_iot",
+    "afinidad": "Alta Afinidad Pénsum",
+    "es_exclusiva_fisica": false,
+    "es_cierre_inminente": false,
+    "es_practica": true,
+    "score_pensum": 58,
+    "mision": "Desarrollo de sistemas embebidos, firmware en C/C++, comunicación por buses I2C/SPI y redes de sensores industriales IoT.",
+    "tareas": "Programación de microcontroladores, adquisición y filtrado digital de señales, depuración con analizador lógico y pruebas de hardware."
+  },
+  {
+    "titulo": "Aprendiz Electromecánico",
+    "empresa": "GRUPO BIOS S.A.S",
+    "ubicacion": "Caldas, Antioquia",
+    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-aprendiz-electromecanico-en-caldas-D4C1B91920FF643461373E686DCF3405",
+    "fecha_publicacion": "Reciente",
+    "fuente": "Computrabajo",
+    "ramas": [
+      {
+        "clave": "instrumentacion_metrologia",
+        "nombre": "Instrumentación, Automatización y Metrología",
+        "color": "#10b981",
+        "score": 58
+      }
+    ],
+    "rama_principal": "Instrumentación, Automatización y Metrología",
+    "color_principal": "#10b981",
+    "clave_principal": "instrumentacion_metrologia",
+    "afinidad": "Alta Afinidad Pénsum",
+    "es_exclusiva_fisica": false,
+    "es_cierre_inminente": false,
+    "es_practica": false,
+    "score_pensum": 58,
+    "mision": "Calibración de instrumentos de medición de variables físicas, cálculo de incertidumbre y programación de sistemas DAQ/LabVIEW.",
+    "tareas": "Levantamiento de curvas de calibración, programación en LabVIEW, enlace con autómatas PLC y aseguramiento metrológico ISO 17025."
+  },
+  {
+    "titulo": "Aprendiz Electricidad, Mecánica, Mantenimiento Industrial, Automatización / Antioquia",
+    "empresa": "MAPER S.A.",
+    "ubicacion": "La Estrella, Antioquia",
+    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-aprendiz-electricidad-mecanica-mantenimiento-industrial-automatizacion-antioquia-en-la-estrella-2D98B1AA81F3905D61373E686DCF3405",
+    "fecha_publicacion": "Reciente",
+    "fuente": "Computrabajo",
+    "ramas": [
+      {
+        "clave": "instrumentacion_metrologia",
+        "nombre": "Instrumentación, Automatización y Metrología",
+        "color": "#10b981",
+        "score": 58
+      }
+    ],
+    "rama_principal": "Instrumentación, Automatización y Metrología",
+    "color_principal": "#10b981",
+    "clave_principal": "instrumentacion_metrologia",
+    "afinidad": "Alta Afinidad Pénsum",
+    "es_exclusiva_fisica": false,
+    "es_cierre_inminente": false,
+    "es_practica": false,
+    "score_pensum": 58,
+    "mision": "Calibración de instrumentos de medición de variables físicas, cálculo de incertidumbre y programación de sistemas DAQ/LabVIEW.",
+    "tareas": "Levantamiento de curvas de calibración, programación en LabVIEW, enlace con autómatas PLC y aseguramiento metrológico ISO 17025."
+  },
+  {
+    "titulo": "Practicante Administrativo. Area Juridica",
+    "empresa": "DIGITAL WARE",
+    "ubicacion": "Medellín, Antioquia",
+    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-practicante-administrativo-area-juridica-trabajo-hibridoremoto-en-medellin-9B3BEF12DEEB321961373E686DCF3405",
+    "fecha_publicacion": "Reciente",
+    "fuente": "Computrabajo",
+    "ramas": [
+      {
+        "clave": "electronica_digital_iot",
+        "nombre": "Electrónica Digital, Microcontroladores e IoT",
+        "color": "#3b82f6",
+        "score": 58
+      }
+    ],
+    "rama_principal": "Electrónica Digital, Microcontroladores e IoT",
+    "color_principal": "#3b82f6",
+    "clave_principal": "electronica_digital_iot",
+    "afinidad": "Alta Afinidad Pénsum",
+    "es_exclusiva_fisica": false,
+    "es_cierre_inminente": false,
+    "es_practica": true,
+    "score_pensum": 58,
+    "mision": "Desarrollo de sistemas embebidos, firmware en C/C++, comunicación por buses I2C/SPI y redes de sensores industriales IoT.",
+    "tareas": "Programación de microcontroladores, adquisición y filtrado digital de señales, depuración con analizador lógico y pruebas de hardware."
+  },
+  {
+    "titulo": "Practicante Técnico/Tecnólogo Electromecánica, Mecánica, Industrial /Medellín Tronex",
+    "empresa": "TRONEX / CODISCOS",
+    "ubicacion": "Medellín, Antioquia",
+    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-practicante-tecnicotecnologo-electromecanica-mecanica-industrial-medellin-tronex-en-medellin-D376A2664D7943E861373E686DCF3405",
+    "fecha_publicacion": "Reciente",
+    "fuente": "Computrabajo",
+    "ramas": [
+      {
+        "clave": "instrumentacion_metrologia",
+        "nombre": "Instrumentación, Automatización y Metrología",
+        "color": "#10b981",
+        "score": 58
+      }
+    ],
+    "rama_principal": "Instrumentación, Automatización y Metrología",
+    "color_principal": "#10b981",
+    "clave_principal": "instrumentacion_metrologia",
+    "afinidad": "Alta Afinidad Pénsum",
+    "es_exclusiva_fisica": false,
+    "es_cierre_inminente": false,
+    "es_practica": true,
+    "score_pensum": 58,
+    "mision": "Calibración de instrumentos de medición de variables físicas, cálculo de incertidumbre y programación de sistemas DAQ/LabVIEW.",
+    "tareas": "Levantamiento de curvas de calibración, programación en LabVIEW, enlace con autómatas PLC y aseguramiento metrológico ISO 17025."
+  },
+  {
+    "titulo": "Practicante Ambienta, practicante Electromecánico",
+    "empresa": "Empresa Confidencial",
+    "ubicacion": "Medellín, Antioquia",
+    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-practicante-ambienta-practicante-electromecanico-lunes-a-viernes-en-medellin-E0961CBF248154D261373E686DCF3405",
+    "fecha_publicacion": "Reciente",
+    "fuente": "Computrabajo",
+    "ramas": [
+      {
+        "clave": "instrumentacion_metrologia",
+        "nombre": "Instrumentación, Automatización y Metrología",
+        "color": "#10b981",
+        "score": 58
+      }
+    ],
+    "rama_principal": "Instrumentación, Automatización y Metrología",
+    "color_principal": "#10b981",
+    "clave_principal": "instrumentacion_metrologia",
+    "afinidad": "Alta Afinidad Pénsum",
+    "es_exclusiva_fisica": false,
+    "es_cierre_inminente": false,
+    "es_practica": true,
+    "score_pensum": 58,
+    "mision": "Calibración de instrumentos de medición de variables físicas, cálculo de incertidumbre y programación de sistemas DAQ/LabVIEW.",
+    "tareas": "Levantamiento de curvas de calibración, programación en LabVIEW, enlace con autómatas PLC y aseguramiento metrológico ISO 17025."
+  },
+  {
+    "titulo": "Técnico Electromecánico Junior",
+    "empresa": "ACTIVOS S A S",
+    "ubicacion": "Medellín, Antioquia",
+    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-tecnico-electromecanico-junior-medellin-sector-caribe-en-medellin-2C9DEDF6F71AA5C161373E686DCF3405",
+    "fecha_publicacion": "Reciente",
+    "fuente": "Computrabajo",
+    "ramas": [
+      {
+        "clave": "instrumentacion_metrologia",
+        "nombre": "Instrumentación, Automatización y Metrología",
+        "color": "#10b981",
+        "score": 58
+      }
+    ],
+    "rama_principal": "Instrumentación, Automatización y Metrología",
+    "color_principal": "#10b981",
+    "clave_principal": "instrumentacion_metrologia",
+    "afinidad": "Alta Afinidad Pénsum",
+    "es_exclusiva_fisica": false,
+    "es_cierre_inminente": false,
+    "es_practica": false,
+    "score_pensum": 58,
+    "mision": "Calibración de instrumentos de medición de variables físicas, cálculo de incertidumbre y programación de sistemas DAQ/LabVIEW.",
+    "tareas": "Levantamiento de curvas de calibración, programación en LabVIEW, enlace con autómatas PLC y aseguramiento metrológico ISO 17025."
+  },
+  {
+    "titulo": "Practicante de Ingenieria Industrial - Quironsalud",
+    "empresa": "Quiron Salud",
+    "ubicacion": "Medellín",
+    "url": "https://www.magneto365.com/co/empleos/practicante-de-ingenieria-industrial-quironsalud-1109559",
+    "fecha_publicacion": "2026-10-22",
+    "fuente": "Magneto365",
+    "compensacion": "",
+    "perfil": "",
+    "mision": "Objetivo del Cargo Contribuir al fortalecimiento del sistema de gestión organizacional mediante el análisis, documentación, estandarización y mejora de los procesos, apoyando la gestión de riesgos, el control interno, el cumplimiento normativo y la i",
+    "ramas": [
+      {
+        "clave": "instrumentacion_metrologia",
+        "nombre": "Instrumentación, Automatización y Metrología",
+        "color": "#10b981",
+        "score": 58
+      }
+    ],
+    "rama_principal": "Instrumentación, Automatización y Metrología",
+    "color_principal": "#10b981",
+    "clave_principal": "instrumentacion_metrologia",
+    "afinidad": "Alta Afinidad Pénsum",
+    "es_exclusiva_fisica": false,
+    "es_cierre_inminente": false,
+    "es_practica": true,
+    "score_pensum": 58,
+    "tareas": "Levantamiento de curvas de calibración, programación en LabVIEW, enlace con autómatas PLC y aseguramiento metrológico ISO 17025."
   },
   {
     "titulo": "Practicante de calidad para Apartadó 349787-184",
@@ -1900,9 +2055,64 @@
     "afinidad": "Alta Afinidad Pénsum",
     "es_exclusiva_fisica": false,
     "es_cierre_inminente": false,
+    "es_practica": true,
     "score_pensum": 58,
-    "tareas": "Levantamiento de curvas de calibración, programación en LabVIEW, enlace con autómatas PLC y aseguramiento metrológico ISO 17025.",
-    "es_practica": true
+    "tareas": "Levantamiento de curvas de calibración, programación en LabVIEW, enlace con autómatas PLC y aseguramiento metrológico ISO 17025."
+  },
+  {
+    "titulo": "Analista de procesos y automatización- remoto",
+    "empresa": "MICHAEL PAGE INTERNATIONAL",
+    "ubicacion": "Bogotá",
+    "url": "https://www.elempleo.com/co/ofertas-trabajo/ingeniero-de-procesos-y-automatizacion-junior-1886783689",
+    "fecha_publicacion": "Reciente",
+    "fuente": "ElEmpleo.com",
+    "compensacion": "",
+    "ramas": [
+      {
+        "clave": "instrumentacion_metrologia",
+        "nombre": "Instrumentación, Automatización y Metrología",
+        "color": "#10b981",
+        "score": 58
+      }
+    ],
+    "rama_principal": "Instrumentación, Automatización y Metrología",
+    "color_principal": "#10b981",
+    "clave_principal": "instrumentacion_metrologia",
+    "afinidad": "Alta Afinidad Pénsum",
+    "es_exclusiva_fisica": false,
+    "es_cierre_inminente": false,
+    "es_practica": false,
+    "score_pensum": 58,
+    "mision": "Calibración de instrumentos de medición de variables físicas, cálculo de incertidumbre y programación de sistemas DAQ/LabVIEW.",
+    "tareas": "Levantamiento de curvas de calibración, programación en LabVIEW, enlace con autómatas PLC y aseguramiento metrológico ISO 17025."
+  },
+  {
+    "titulo": "Practicante Ingeniería Industrial.",
+    "empresa": "Operadora Avícola Colombia",
+    "ubicacion": "Caldas",
+    "url": "https://www.magneto365.com/co/empleos/practicante-ingenieria-industrial-1110758",
+    "fecha_publicacion": "2026-10-22",
+    "fuente": "Magneto365",
+    "compensacion": "$1.750.905 COP",
+    "perfil": "",
+    "mision": "En Grupo BIOS somos una población diversa e incluyente donde el valor de nuestra gente radica en su actitud y en sus ganas de sumar, creemos en las segundas oportunidades y abrimos nuestras puertas, promoviendo procesos de selección basados en compet",
+    "ramas": [
+      {
+        "clave": "general",
+        "nombre": "Ingeniería General / Operaciones",
+        "color": "#64748b",
+        "score": 5
+      }
+    ],
+    "rama_principal": "Ingeniería General / Operaciones",
+    "color_principal": "#64748b",
+    "clave_principal": "general",
+    "afinidad": "General",
+    "es_exclusiva_fisica": false,
+    "es_cierre_inminente": false,
+    "es_practica": true,
+    "score_pensum": 35,
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
   },
   {
     "titulo": "Practicante de Ingeniería Industrial",
@@ -1928,37 +2138,9 @@
     "afinidad": "General",
     "es_exclusiva_fisica": false,
     "es_cierre_inminente": false,
+    "es_practica": true,
     "score_pensum": 35,
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
-    "es_practica": true
-  },
-  {
-    "titulo": "Practicante De Ingeniería Sistemas - Medellín",
-    "empresa": "EQUIPOS TECNICOS Y LOGISTICA S.A",
-    "ubicacion": "Medellín, Itagui, Bello",
-    "url": "https://www.magneto365.com/co/empleos/practicante-de-ingenieria-sistemas-medellin-1100131",
-    "fecha_publicacion": "2026-10-15",
-    "fuente": "Magneto365",
-    "compensacion": "$1.750.905 COP",
-    "perfil": "Proactividad, Trabajo en equipo, Comunicación efectiva, sistemas, programación",
-    "mision": "Practicante de Ingeniería Sistemas - Mosquera, Cundinamarca Palabras clave: Practicante de Ingeniería Sistemas&nbsp; Estudiante de Ingeniería Sistemas Pasante de Ingeniería Sistemas ¡Únete a nuestro equipo como Practicante de Ingeniería Sistemas! Bus",
-    "ramas": [
-      {
-        "clave": "general",
-        "nombre": "Ingeniería General / Operaciones",
-        "color": "#64748b",
-        "score": 5
-      }
-    ],
-    "rama_principal": "Ingeniería General / Operaciones",
-    "color_principal": "#64748b",
-    "clave_principal": "general",
-    "afinidad": "General",
-    "es_exclusiva_fisica": false,
-    "es_cierre_inminente": false,
-    "score_pensum": 35,
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
-    "es_practica": true
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
   },
   {
     "titulo": "Practicante Ingeniería Industrial - Marinilla",
@@ -1984,9 +2166,9 @@
     "afinidad": "General",
     "es_exclusiva_fisica": false,
     "es_cierre_inminente": false,
+    "es_practica": true,
     "score_pensum": 35,
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
-    "es_practica": true
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
   },
   {
     "titulo": "Practicante Ingeniería Industrial - Marinilla",
@@ -2012,20 +2194,20 @@
     "afinidad": "General",
     "es_exclusiva_fisica": false,
     "es_cierre_inminente": false,
+    "es_practica": true,
     "score_pensum": 35,
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
-    "es_practica": true
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
   },
   {
-    "titulo": "Aprendiz de mecánica en motores diésel para Apartadó 349787-176",
-    "empresa": "Servicio de Empleo Comfama",
-    "ubicacion": "Apartadó",
-    "url": "https://www.magneto365.com/co/empleos/aprendiz-de-mecanica-en-motores-diesel-para-apartado-349787-176-1020714",
-    "fecha_publicacion": "2026-08-12",
+    "titulo": "Practicante De Ingeniería Sistemas - Medellín",
+    "empresa": "EQUIPOS TECNICOS Y LOGISTICA S.A",
+    "ubicacion": "Remoto (Colombia)",
+    "url": "https://www.magneto365.com/co/empleos/practicante-de-ingenieria-sistemas-medellin-1100131",
+    "fecha_publicacion": "2026-10-15",
     "fuente": "Magneto365",
     "compensacion": "$1.750.905 COP",
-    "perfil": "Mantenimiento preventivo, Mantenimiento predictivo, Mantenimiento correctivo, Atención al detalle, Trabajo en equipo",
-    "mision": "Empresa del sector industrial ubicada en la región de Urabá, requiere para su equipo de trabajo aprendiz de mecánica de motores diésel apto/a para iniciar su etapa práctica, para brindar apoyo a los mecánicos en los procesos de mantenimiento de maqui",
+    "perfil": "Proactividad, Trabajo en equipo, Comunicación efectiva, sistemas, programación",
+    "mision": "Practicante de Ingeniería Sistemas - Mosquera, Cundinamarca Palabras clave: Practicante de Ingeniería Sistemas&nbsp; Estudiante de Ingeniería Sistemas Pasante de Ingeniería Sistemas ¡Únete a nuestro equipo como Practicante de Ingeniería Sistemas! Bus",
     "ramas": [
       {
         "clave": "general",
@@ -2040,17 +2222,20 @@
     "afinidad": "General",
     "es_exclusiva_fisica": false,
     "es_cierre_inminente": false,
+    "es_practica": true,
     "score_pensum": 35,
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
-    "es_practica": true
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
   },
   {
-    "titulo": "practicante estudiante tecnico tecnologo en ingenieria de sistemas mantenimiento de computadores",
-    "empresa": "Atain",
-    "ubicacion": "Medellín, Antioquia",
-    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-practicante-estudiante-tecnico-tecnologo-en-ingenieria-de-sistemas-mantenimiento-de-computadores-bogota-en-medellin-AC9F12FE3BAD7E4E61373E686DCF3405",
-    "fecha_publicacion": "Reciente",
-    "fuente": "Computrabajo",
+    "titulo": "Aprendiz de mantenimiento Rionegro",
+    "empresa": "Servicio de Empleo Comfama",
+    "ubicacion": "Medellín",
+    "url": "https://www.magneto365.com/co/empleos/aprendiz-de-mantenimiento-1109074",
+    "fecha_publicacion": "2026-10-22",
+    "fuente": "Magneto365",
+    "compensacion": "$1.750.905 COP",
+    "perfil": "",
+    "mision": "Quieres iniciar tu crecimiento profesional y conectar tus conocimientos técnicos con nuevos retos en el área de mantenimiento. Esta oportunidad como aprendiz de mantenimiento te permitirá desarrollar tu talento, fortalecer tus habilidades en electric",
     "ramas": [
       {
         "clave": "general",
@@ -2065,328 +2250,15 @@
     "afinidad": "General",
     "es_exclusiva_fisica": false,
     "es_cierre_inminente": false,
-    "score_pensum": 0,
-    "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Atain.",
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
-    "es_practica": true
-  },
-  {
-    "titulo": "Practicante Universitario Adm empresas, ingenieria industrial.",
-    "empresa": "Eficacia",
-    "ubicacion": "Medellín, Antioquia",
-    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-practicante-universitario-adm-empresas-ingenieria-industrial-en-medellin-975FE1ED6DBA6EDB61373E686DCF3405",
-    "fecha_publicacion": "Reciente",
-    "fuente": "Computrabajo",
-    "ramas": [
-      {
-        "clave": "general",
-        "nombre": "Ingeniería General / Operaciones",
-        "color": "#64748b",
-        "score": 5
-      }
-    ],
-    "rama_principal": "Ingeniería General / Operaciones",
-    "color_principal": "#64748b",
-    "clave_principal": "general",
-    "afinidad": "General",
-    "es_exclusiva_fisica": false,
-    "es_cierre_inminente": false,
-    "score_pensum": 0,
-    "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Eficacia.",
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
-    "es_practica": true
-  },
-  {
-    "titulo": "Practicante Universitario Adm empresas, ingenieria industrial o Afines",
-    "empresa": "Eficacia",
-    "ubicacion": "Medellín, Antioquia",
-    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-practicante-universitario-adm-empresas-ingenieria-industrial-o-afines-en-medellin-35C0AAB6A4763A2461373E686DCF3405",
-    "fecha_publicacion": "Reciente",
-    "fuente": "Computrabajo",
-    "ramas": [
-      {
-        "clave": "general",
-        "nombre": "Ingeniería General / Operaciones",
-        "color": "#64748b",
-        "score": 5
-      }
-    ],
-    "rama_principal": "Ingeniería General / Operaciones",
-    "color_principal": "#64748b",
-    "clave_principal": "general",
-    "afinidad": "General",
-    "es_exclusiva_fisica": false,
-    "es_cierre_inminente": false,
-    "score_pensum": 0,
-    "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Eficacia.",
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
-    "es_practica": true
-  },
-  {
-    "titulo": "Practicante de Ingeniería de Alimentos",
-    "empresa": "Supermercados Euro S.A",
-    "ubicacion": "Medellín, Antioquia",
-    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-practicante-de-ingenieria-de-alimentos-contrato-de-aprendizaje-sena-en-medellin-C72D62AC0ADE00D661373E686DCF3405",
-    "fecha_publicacion": "Reciente",
-    "fuente": "Computrabajo",
-    "ramas": [
-      {
-        "clave": "general",
-        "nombre": "Ingeniería General / Operaciones",
-        "color": "#64748b",
-        "score": 5
-      }
-    ],
-    "rama_principal": "Ingeniería General / Operaciones",
-    "color_principal": "#64748b",
-    "clave_principal": "general",
-    "afinidad": "General",
-    "es_exclusiva_fisica": false,
-    "es_cierre_inminente": false,
-    "score_pensum": 0,
-    "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Supermercados Euro S.A.",
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
-    "es_practica": true
-  },
-  {
-    "titulo": "Practicante de Ingeniería Ambiental",
-    "empresa": "Supermercados Euro S.A",
-    "ubicacion": "Medellín, Antioquia",
-    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-practicante-de-ingenieria-ambiental-contrato-de-aprendizaje-en-medellin-EFCE820FB4598F9B61373E686DCF3405",
-    "fecha_publicacion": "Reciente",
-    "fuente": "Computrabajo",
-    "ramas": [
-      {
-        "clave": "general",
-        "nombre": "Ingeniería General / Operaciones",
-        "color": "#64748b",
-        "score": 5
-      }
-    ],
-    "rama_principal": "Ingeniería General / Operaciones",
-    "color_principal": "#64748b",
-    "clave_principal": "general",
-    "afinidad": "General",
-    "es_exclusiva_fisica": false,
-    "es_cierre_inminente": false,
-    "score_pensum": 0,
-    "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Supermercados Euro S.A.",
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
-    "es_practica": true
-  },
-  {
-    "titulo": "Practicante en Ingenieria de Sistemas/ Afines 2027 1",
-    "empresa": "SOLVO S.A.S",
-    "ubicacion": "Medellín, Antioquia",
-    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-practicante-en-ingenieria-de-sistemas-afines-2027-1-en-medellin-929F5D6CDFB7436961373E686DCF3405",
-    "fecha_publicacion": "Reciente",
-    "fuente": "Computrabajo",
-    "ramas": [
-      {
-        "clave": "general",
-        "nombre": "Ingeniería General / Operaciones",
-        "color": "#64748b",
-        "score": 5
-      }
-    ],
-    "rama_principal": "Ingeniería General / Operaciones",
-    "color_principal": "#64748b",
-    "clave_principal": "general",
-    "afinidad": "General",
-    "es_exclusiva_fisica": false,
-    "es_cierre_inminente": false,
-    "score_pensum": 0,
-    "mision": "Apoyo en el área de ingeniería y operaciones técnicas en SOLVO S.A.S.",
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
-    "es_practica": true
-  },
-  {
-    "titulo": "Practicante de ingenieria electrica",
-    "empresa": "AGENCIA DE EMPLEO COMFAMA",
-    "ubicacion": "Medellín, Antioquia",
-    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-practicante-de-ingenieria-electrica-en-medellin-C9DE0E5622D9D50361373E686DCF3405",
-    "fecha_publicacion": "Reciente",
-    "fuente": "Computrabajo",
-    "ramas": [
-      {
-        "clave": "general",
-        "nombre": "Ingeniería General / Operaciones",
-        "color": "#64748b",
-        "score": 5
-      }
-    ],
-    "rama_principal": "Ingeniería General / Operaciones",
-    "color_principal": "#64748b",
-    "clave_principal": "general",
-    "afinidad": "General",
-    "es_exclusiva_fisica": false,
-    "es_cierre_inminente": false,
-    "score_pensum": 0,
-    "mision": "Apoyo en el área de ingeniería y operaciones técnicas en AGENCIA DE EMPLEO COMFAMA.",
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
-    "es_practica": true
-  },
-  {
-    "titulo": "Practicante de ingeniería de alimentos/ con y sin PCD",
-    "empresa": "Corporación Country Club Ejecutivos",
-    "ubicacion": "Medellín, Antioquia",
-    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-practicante-de-ingenieria-de-alimentos-con-y-sin-pcd-en-medellin-F7C0B446EEF164D661373E686DCF3405",
-    "fecha_publicacion": "Reciente",
-    "fuente": "Computrabajo",
-    "ramas": [
-      {
-        "clave": "general",
-        "nombre": "Ingeniería General / Operaciones",
-        "color": "#64748b",
-        "score": 5
-      }
-    ],
-    "rama_principal": "Ingeniería General / Operaciones",
-    "color_principal": "#64748b",
-    "clave_principal": "general",
-    "afinidad": "General",
-    "es_exclusiva_fisica": false,
-    "es_cierre_inminente": false,
-    "score_pensum": 0,
-    "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Corporación Country Club Ejecutivos.",
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
-    "es_practica": true
-  },
-  {
-    "titulo": "Practicante Profesional en Sistemas / Informatica / Ingeniería / Disponibilidad Inmediata / Medellín",
-    "empresa": "Burger King Colombia",
-    "ubicacion": "Medellín, Antioquia",
-    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-practicante-profesional-en-sistemas-informatica-ingenieria-disponibilidad-inmediata-medellin-burger-king-medellin-en-medellin-791906E390F184D961373E686DCF3405",
-    "fecha_publicacion": "Reciente",
-    "fuente": "Computrabajo",
-    "ramas": [
-      {
-        "clave": "general",
-        "nombre": "Ingeniería General / Operaciones",
-        "color": "#64748b",
-        "score": 5
-      }
-    ],
-    "rama_principal": "Ingeniería General / Operaciones",
-    "color_principal": "#64748b",
-    "clave_principal": "general",
-    "afinidad": "General",
-    "es_exclusiva_fisica": false,
-    "es_cierre_inminente": false,
-    "score_pensum": 0,
-    "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Burger King Colombia.",
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
-    "es_practica": true
-  },
-  {
-    "titulo": "Practicante de Ingeniería de sistemas / informática",
-    "empresa": "SOLVO S.A.S",
-    "ubicacion": "Medellín, Antioquia",
-    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-practicante-de-ingenieria-de-sistemas-informatica-en-medellin-A09E7D0BDF95DC2561373E686DCF3405",
-    "fecha_publicacion": "Reciente",
-    "fuente": "Computrabajo",
-    "ramas": [
-      {
-        "clave": "general",
-        "nombre": "Ingeniería General / Operaciones",
-        "color": "#64748b",
-        "score": 5
-      }
-    ],
-    "rama_principal": "Ingeniería General / Operaciones",
-    "color_principal": "#64748b",
-    "clave_principal": "general",
-    "afinidad": "General",
-    "es_exclusiva_fisica": false,
-    "es_cierre_inminente": false,
-    "score_pensum": 0,
-    "mision": "Apoyo en el área de ingeniería y operaciones técnicas en SOLVO S.A.S.",
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
-    "es_practica": true
-  },
-  {
-    "titulo": "Practicante Universitario en Administración o Ingeniería Industrial",
-    "empresa": "Aliar S.A",
-    "ubicacion": "Medellín, Antioquia",
-    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-practicante-universitario-en-administracion-o-ingenieria-industrial-medellin-antioquia-en-medellin-E5901FDCF693DFCF61373E686DCF3405",
-    "fecha_publicacion": "Reciente",
-    "fuente": "Computrabajo",
-    "ramas": [
-      {
-        "clave": "general",
-        "nombre": "Ingeniería General / Operaciones",
-        "color": "#64748b",
-        "score": 5
-      }
-    ],
-    "rama_principal": "Ingeniería General / Operaciones",
-    "color_principal": "#64748b",
-    "clave_principal": "general",
-    "afinidad": "General",
-    "es_exclusiva_fisica": false,
-    "es_cierre_inminente": false,
-    "score_pensum": 0,
-    "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Aliar S.A.",
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
-    "es_practica": true
-  },
-  {
-    "titulo": "Practicante Ingeniería Mecánica",
-    "empresa": "Celerix SAS",
-    "ubicacion": "Rionegro, Antioquia",
-    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-practicante-ingenieria-mecanica-en-rionegro-B6955C07653E187E61373E686DCF3405",
-    "fecha_publicacion": "Reciente",
-    "fuente": "Computrabajo",
-    "ramas": [
-      {
-        "clave": "general",
-        "nombre": "Ingeniería General / Operaciones",
-        "color": "#64748b",
-        "score": 5
-      }
-    ],
-    "rama_principal": "Ingeniería General / Operaciones",
-    "color_principal": "#64748b",
-    "clave_principal": "general",
-    "afinidad": "General",
-    "es_exclusiva_fisica": false,
-    "es_cierre_inminente": false,
-    "score_pensum": 0,
-    "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Celerix SAS.",
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
-    "es_practica": true
-  },
-  {
-    "titulo": "Practicante Ingenierio/a Industrial",
-    "empresa": "GRUPO BIOS S.A.S",
-    "ubicacion": "Caldas, Antioquia",
-    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-practicante-ingenierioa-industrial-en-caldas-418EF1753ADF6DF461373E686DCF3405",
-    "fecha_publicacion": "Reciente",
-    "fuente": "Computrabajo",
-    "ramas": [
-      {
-        "clave": "general",
-        "nombre": "Ingeniería General / Operaciones",
-        "color": "#64748b",
-        "score": 5
-      }
-    ],
-    "rama_principal": "Ingeniería General / Operaciones",
-    "color_principal": "#64748b",
-    "clave_principal": "general",
-    "afinidad": "General",
-    "es_exclusiva_fisica": false,
-    "es_cierre_inminente": false,
-    "score_pensum": 0,
-    "mision": "Apoyo en el área de ingeniería y operaciones técnicas en GRUPO BIOS S.A.S.",
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
-    "es_practica": true
+    "es_practica": false,
+    "score_pensum": 35,
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
   },
   {
     "titulo": "Practicante Ingeniería de Alimentos",
     "empresa": "GRUPO BIOS S.A.S",
     "ubicacion": "Caldas, Antioquia",
-    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-practicante-ingenieria-de-alimentos-en-caldas-86FDBF2F68E2C6F261373E686DCF3405",
+    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-practicante-ingenieria-de-alimentos-en-caldas-DCC667512114A1A961373E686DCF3405",
     "fecha_publicacion": "Reciente",
     "fuente": "Computrabajo",
     "ramas": [
@@ -2403,10 +2275,88 @@
     "afinidad": "General",
     "es_exclusiva_fisica": false,
     "es_cierre_inminente": false,
+    "es_practica": true,
     "score_pensum": 0,
     "mision": "Apoyo en el área de ingeniería y operaciones técnicas en GRUPO BIOS S.A.S.",
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
-    "es_practica": true
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
+  },
+  {
+    "titulo": "Practicante Ingeniería Industrial",
+    "empresa": "GRUPO BIOS S.A.S",
+    "ubicacion": "Caldas, Antioquia",
+    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-practicante-ingenieria-industrial-en-caldas-9F3C14AD382A8A3261373E686DCF3405",
+    "fecha_publicacion": "Reciente",
+    "fuente": "Computrabajo",
+    "ramas": [
+      {
+        "clave": "general",
+        "nombre": "Ingeniería General / Operaciones",
+        "color": "#64748b",
+        "score": 5
+      }
+    ],
+    "rama_principal": "Ingeniería General / Operaciones",
+    "color_principal": "#64748b",
+    "clave_principal": "general",
+    "afinidad": "General",
+    "es_exclusiva_fisica": false,
+    "es_cierre_inminente": false,
+    "es_practica": true,
+    "score_pensum": 0,
+    "mision": "Apoyo en el área de ingeniería y operaciones técnicas en GRUPO BIOS S.A.S.",
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
+  },
+  {
+    "titulo": "Practicante de Ingeniería Mecánica",
+    "empresa": "Cemex",
+    "ubicacion": "Medellín, Antioquia",
+    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-practicante-de-ingenieria-mecanica-medellin-en-medellin-8F8299728263DEBC61373E686DCF3405",
+    "fecha_publicacion": "Reciente",
+    "fuente": "Computrabajo",
+    "ramas": [
+      {
+        "clave": "general",
+        "nombre": "Ingeniería General / Operaciones",
+        "color": "#64748b",
+        "score": 5
+      }
+    ],
+    "rama_principal": "Ingeniería General / Operaciones",
+    "color_principal": "#64748b",
+    "clave_principal": "general",
+    "afinidad": "General",
+    "es_exclusiva_fisica": false,
+    "es_cierre_inminente": false,
+    "es_practica": true,
+    "score_pensum": 0,
+    "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Cemex.",
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
+  },
+  {
+    "titulo": "Practicante de Ingeniería Industrial, Productividad y Calidad o Procesos.",
+    "empresa": "emtelco",
+    "ubicacion": "Medellín, Antioquia",
+    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-practicante-de-ingenieria-industrial-productividad-y-calidad-o-procesos-habilitadoa-para-firmar-contrato-aprendizaje-en-medellin-3D543EFA77BAB1BF61373E686DCF3405",
+    "fecha_publicacion": "Reciente",
+    "fuente": "Computrabajo",
+    "ramas": [
+      {
+        "clave": "general",
+        "nombre": "Ingeniería General / Operaciones",
+        "color": "#64748b",
+        "score": 5
+      }
+    ],
+    "rama_principal": "Ingeniería General / Operaciones",
+    "color_principal": "#64748b",
+    "clave_principal": "general",
+    "afinidad": "General",
+    "es_exclusiva_fisica": false,
+    "es_cierre_inminente": false,
+    "es_practica": true,
+    "score_pensum": 0,
+    "mision": "Apoyo en el área de ingeniería y operaciones técnicas en emtelco.",
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
   },
   {
     "titulo": "Practicante de ingeniería industrial",
@@ -2429,16 +2379,16 @@
     "afinidad": "General",
     "es_exclusiva_fisica": false,
     "es_cierre_inminente": false,
+    "es_practica": true,
     "score_pensum": 0,
     "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Concentrix.",
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
-    "es_practica": true
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
   },
   {
-    "titulo": "Practicante de diseño gráfico",
-    "empresa": "NSIT",
-    "ubicacion": "Medellín, Antioquia",
-    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-practicante-de-diseno-grafico-en-medellin-E9FD5D511126A1FB61373E686DCF3405",
+    "titulo": "Practicante de Ingeniería industrial, producción o costos",
+    "empresa": "Tipalma SAS",
+    "ubicacion": "La Estrella, Antioquia",
+    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-practicante-de-ingenieria-industrial-produccion-o-costos-en-la-estrella-CE570D8E39EE0D7861373E686DCF3405",
     "fecha_publicacion": "Reciente",
     "fuente": "Computrabajo",
     "ramas": [
@@ -2455,10 +2405,270 @@
     "afinidad": "General",
     "es_exclusiva_fisica": false,
     "es_cierre_inminente": false,
+    "es_practica": true,
     "score_pensum": 0,
-    "mision": "Apoyo en el área de ingeniería y operaciones técnicas en NSIT.",
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
-    "es_practica": true
+    "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Tipalma SAS.",
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
+  },
+  {
+    "titulo": "practicante estudiante tecnico tecnologo en ingenieria de sistemas mantenimiento de computadores",
+    "empresa": "Atain",
+    "ubicacion": "Medellín, Antioquia",
+    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-practicante-estudiante-tecnico-tecnologo-en-ingenieria-de-sistemas-mantenimiento-de-computadores-bogota-en-medellin-AC9F12FE3BAD7E4E61373E686DCF3405",
+    "fecha_publicacion": "Reciente",
+    "fuente": "Computrabajo",
+    "ramas": [
+      {
+        "clave": "general",
+        "nombre": "Ingeniería General / Operaciones",
+        "color": "#64748b",
+        "score": 5
+      }
+    ],
+    "rama_principal": "Ingeniería General / Operaciones",
+    "color_principal": "#64748b",
+    "clave_principal": "general",
+    "afinidad": "General",
+    "es_exclusiva_fisica": false,
+    "es_cierre_inminente": false,
+    "es_practica": true,
+    "score_pensum": 0,
+    "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Atain.",
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
+  },
+  {
+    "titulo": "Practicante Universitario Adm empresas, ingenieria industrial.",
+    "empresa": "Eficacia",
+    "ubicacion": "Medellín, Antioquia",
+    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-practicante-universitario-adm-empresas-ingenieria-industrial-en-medellin-975FE1ED6DBA6EDB61373E686DCF3405",
+    "fecha_publicacion": "Reciente",
+    "fuente": "Computrabajo",
+    "ramas": [
+      {
+        "clave": "general",
+        "nombre": "Ingeniería General / Operaciones",
+        "color": "#64748b",
+        "score": 5
+      }
+    ],
+    "rama_principal": "Ingeniería General / Operaciones",
+    "color_principal": "#64748b",
+    "clave_principal": "general",
+    "afinidad": "General",
+    "es_exclusiva_fisica": false,
+    "es_cierre_inminente": false,
+    "es_practica": true,
+    "score_pensum": 0,
+    "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Eficacia.",
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
+  },
+  {
+    "titulo": "Practicante Universitario Adm empresas, ingenieria industrial o Afines",
+    "empresa": "Eficacia",
+    "ubicacion": "Medellín, Antioquia",
+    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-practicante-universitario-adm-empresas-ingenieria-industrial-o-afines-en-medellin-35C0AAB6A4763A2461373E686DCF3405",
+    "fecha_publicacion": "Reciente",
+    "fuente": "Computrabajo",
+    "ramas": [
+      {
+        "clave": "general",
+        "nombre": "Ingeniería General / Operaciones",
+        "color": "#64748b",
+        "score": 5
+      }
+    ],
+    "rama_principal": "Ingeniería General / Operaciones",
+    "color_principal": "#64748b",
+    "clave_principal": "general",
+    "afinidad": "General",
+    "es_exclusiva_fisica": false,
+    "es_cierre_inminente": false,
+    "es_practica": true,
+    "score_pensum": 0,
+    "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Eficacia.",
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
+  },
+  {
+    "titulo": "Practicante de Ingeniería Ambiental",
+    "empresa": "Supermercados Euro S.A",
+    "ubicacion": "Medellín, Antioquia",
+    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-practicante-de-ingenieria-ambiental-contrato-de-aprendizaje-en-medellin-EFCE820FB4598F9B61373E686DCF3405",
+    "fecha_publicacion": "Reciente",
+    "fuente": "Computrabajo",
+    "ramas": [
+      {
+        "clave": "general",
+        "nombre": "Ingeniería General / Operaciones",
+        "color": "#64748b",
+        "score": 5
+      }
+    ],
+    "rama_principal": "Ingeniería General / Operaciones",
+    "color_principal": "#64748b",
+    "clave_principal": "general",
+    "afinidad": "General",
+    "es_exclusiva_fisica": false,
+    "es_cierre_inminente": false,
+    "es_practica": true,
+    "score_pensum": 0,
+    "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Supermercados Euro S.A.",
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
+  },
+  {
+    "titulo": "Practicante de Ingeniería de Alimentos",
+    "empresa": "Supermercados Euro S.A",
+    "ubicacion": "Medellín, Antioquia",
+    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-practicante-de-ingenieria-de-alimentos-contrato-de-aprendizaje-sena-en-medellin-C72D62AC0ADE00D661373E686DCF3405",
+    "fecha_publicacion": "Reciente",
+    "fuente": "Computrabajo",
+    "ramas": [
+      {
+        "clave": "general",
+        "nombre": "Ingeniería General / Operaciones",
+        "color": "#64748b",
+        "score": 5
+      }
+    ],
+    "rama_principal": "Ingeniería General / Operaciones",
+    "color_principal": "#64748b",
+    "clave_principal": "general",
+    "afinidad": "General",
+    "es_exclusiva_fisica": false,
+    "es_cierre_inminente": false,
+    "es_practica": true,
+    "score_pensum": 0,
+    "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Supermercados Euro S.A.",
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
+  },
+  {
+    "titulo": "Practicante en Ingenieria de Sistemas/ Afines 2027 1",
+    "empresa": "SOLVO S.A.S",
+    "ubicacion": "Medellín, Antioquia",
+    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-practicante-en-ingenieria-de-sistemas-afines-2027-1-en-medellin-929F5D6CDFB7436961373E686DCF3405",
+    "fecha_publicacion": "Reciente",
+    "fuente": "Computrabajo",
+    "ramas": [
+      {
+        "clave": "general",
+        "nombre": "Ingeniería General / Operaciones",
+        "color": "#64748b",
+        "score": 5
+      }
+    ],
+    "rama_principal": "Ingeniería General / Operaciones",
+    "color_principal": "#64748b",
+    "clave_principal": "general",
+    "afinidad": "General",
+    "es_exclusiva_fisica": false,
+    "es_cierre_inminente": false,
+    "es_practica": true,
+    "score_pensum": 0,
+    "mision": "Apoyo en el área de ingeniería y operaciones técnicas en SOLVO S.A.S.",
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
+  },
+  {
+    "titulo": "Practicante de ingenieria electrica",
+    "empresa": "AGENCIA DE EMPLEO COMFAMA",
+    "ubicacion": "Medellín, Antioquia",
+    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-practicante-de-ingenieria-electrica-en-medellin-C9DE0E5622D9D50361373E686DCF3405",
+    "fecha_publicacion": "Reciente",
+    "fuente": "Computrabajo",
+    "ramas": [
+      {
+        "clave": "general",
+        "nombre": "Ingeniería General / Operaciones",
+        "color": "#64748b",
+        "score": 5
+      }
+    ],
+    "rama_principal": "Ingeniería General / Operaciones",
+    "color_principal": "#64748b",
+    "clave_principal": "general",
+    "afinidad": "General",
+    "es_exclusiva_fisica": false,
+    "es_cierre_inminente": false,
+    "es_practica": true,
+    "score_pensum": 0,
+    "mision": "Apoyo en el área de ingeniería y operaciones técnicas en AGENCIA DE EMPLEO COMFAMA.",
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
+  },
+  {
+    "titulo": "Practicante de ingeniería de alimentos/ con y sin PCD",
+    "empresa": "Corporación Country Club Ejecutivos",
+    "ubicacion": "Medellín, Antioquia",
+    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-practicante-de-ingenieria-de-alimentos-con-y-sin-pcd-en-medellin-F7C0B446EEF164D661373E686DCF3405",
+    "fecha_publicacion": "Reciente",
+    "fuente": "Computrabajo",
+    "ramas": [
+      {
+        "clave": "general",
+        "nombre": "Ingeniería General / Operaciones",
+        "color": "#64748b",
+        "score": 5
+      }
+    ],
+    "rama_principal": "Ingeniería General / Operaciones",
+    "color_principal": "#64748b",
+    "clave_principal": "general",
+    "afinidad": "General",
+    "es_exclusiva_fisica": false,
+    "es_cierre_inminente": false,
+    "es_practica": true,
+    "score_pensum": 0,
+    "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Corporación Country Club Ejecutivos.",
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
+  },
+  {
+    "titulo": "Practicante Profesional en Sistemas / Informatica / Ingeniería / Disponibilidad Inmediata / Medellín",
+    "empresa": "Burger King Colombia",
+    "ubicacion": "Medellín, Antioquia",
+    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-practicante-profesional-en-sistemas-informatica-ingenieria-disponibilidad-inmediata-medellin-burger-king-medellin-en-medellin-791906E390F184D961373E686DCF3405",
+    "fecha_publicacion": "Reciente",
+    "fuente": "Computrabajo",
+    "ramas": [
+      {
+        "clave": "general",
+        "nombre": "Ingeniería General / Operaciones",
+        "color": "#64748b",
+        "score": 5
+      }
+    ],
+    "rama_principal": "Ingeniería General / Operaciones",
+    "color_principal": "#64748b",
+    "clave_principal": "general",
+    "afinidad": "General",
+    "es_exclusiva_fisica": false,
+    "es_cierre_inminente": false,
+    "es_practica": true,
+    "score_pensum": 0,
+    "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Burger King Colombia.",
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
+  },
+  {
+    "titulo": "Practicante de Ingeniería de sistemas / informática",
+    "empresa": "SOLVO S.A.S",
+    "ubicacion": "Medellín, Antioquia",
+    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-practicante-de-ingenieria-de-sistemas-informatica-en-medellin-A09E7D0BDF95DC2561373E686DCF3405",
+    "fecha_publicacion": "Reciente",
+    "fuente": "Computrabajo",
+    "ramas": [
+      {
+        "clave": "general",
+        "nombre": "Ingeniería General / Operaciones",
+        "color": "#64748b",
+        "score": 5
+      }
+    ],
+    "rama_principal": "Ingeniería General / Operaciones",
+    "color_principal": "#64748b",
+    "clave_principal": "general",
+    "afinidad": "General",
+    "es_exclusiva_fisica": false,
+    "es_cierre_inminente": false,
+    "es_practica": true,
+    "score_pensum": 0,
+    "mision": "Apoyo en el área de ingeniería y operaciones técnicas en SOLVO S.A.S.",
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
   },
   {
     "titulo": "Analista de mantenimiento",
@@ -2481,192 +2691,10 @@
     "afinidad": "General",
     "es_exclusiva_fisica": false,
     "es_cierre_inminente": false,
+    "es_practica": false,
     "score_pensum": 0,
     "mision": "Apoyo en el área de ingeniería y operaciones técnicas en D1 S A S.",
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
-    "es_practica": false
-  },
-  {
-    "titulo": "Practicante en Auxiliar Administrativo",
-    "empresa": "Agencia de Empleo de Comfenalco Antioquia",
-    "ubicacion": "Medellín, Antioquia",
-    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-practicante-en-auxiliar-administrativo-en-medellin-ADFD83D2E8467A5461373E686DCF3405",
-    "fecha_publicacion": "Reciente",
-    "fuente": "Computrabajo",
-    "ramas": [
-      {
-        "clave": "general",
-        "nombre": "Ingeniería General / Operaciones",
-        "color": "#64748b",
-        "score": 5
-      }
-    ],
-    "rama_principal": "Ingeniería General / Operaciones",
-    "color_principal": "#64748b",
-    "clave_principal": "general",
-    "afinidad": "General",
-    "es_exclusiva_fisica": false,
-    "es_cierre_inminente": false,
-    "score_pensum": 0,
-    "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Agencia de Empleo de Comfenalco Antioquia.",
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
-    "es_practica": true
-  },
-  {
-    "titulo": "Auxiliar Administrativa y Comercial",
-    "empresa": "2B eCommerce",
-    "ubicacion": "Medellín, Antioquia",
-    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-auxiliar-administrativa-y-comercial-en-medellin-E91630C1A6B020D461373E686DCF3405",
-    "fecha_publicacion": "Reciente",
-    "fuente": "Computrabajo",
-    "ramas": [
-      {
-        "clave": "general",
-        "nombre": "Ingeniería General / Operaciones",
-        "color": "#64748b",
-        "score": 5
-      }
-    ],
-    "rama_principal": "Ingeniería General / Operaciones",
-    "color_principal": "#64748b",
-    "clave_principal": "general",
-    "afinidad": "General",
-    "es_exclusiva_fisica": false,
-    "es_cierre_inminente": false,
-    "score_pensum": 0,
-    "mision": "Apoyo en el área de ingeniería y operaciones técnicas en 2B eCommerce.",
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
-    "es_practica": false
-  },
-  {
-    "titulo": "Practicante de recepción y reservas",
-    "empresa": "Empresa Confidencial",
-    "ubicacion": "Tarso, Antioquia",
-    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-practicante-de-recepcion-y-reservas-en-tarso-F7CA17C87D0F89FE61373E686DCF3405",
-    "fecha_publicacion": "Reciente",
-    "fuente": "Computrabajo",
-    "ramas": [
-      {
-        "clave": "general",
-        "nombre": "Ingeniería General / Operaciones",
-        "color": "#64748b",
-        "score": 5
-      }
-    ],
-    "rama_principal": "Ingeniería General / Operaciones",
-    "color_principal": "#64748b",
-    "clave_principal": "general",
-    "afinidad": "General",
-    "es_exclusiva_fisica": false,
-    "es_cierre_inminente": false,
-    "score_pensum": 0,
-    "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Empresa Confidencial.",
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
-    "es_practica": true
-  },
-  {
-    "titulo": "Practicante de aires acondicionados técnico / tecnólogo",
-    "empresa": "Atain",
-    "ubicacion": "Medellín, Antioquia",
-    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-practicante-de-aires-acondicionados-tecnico-tecnologo-en-medellin-3DF9771B9F96F57C61373E686DCF3405",
-    "fecha_publicacion": "Reciente",
-    "fuente": "Computrabajo",
-    "ramas": [
-      {
-        "clave": "general",
-        "nombre": "Ingeniería General / Operaciones",
-        "color": "#64748b",
-        "score": 5
-      }
-    ],
-    "rama_principal": "Ingeniería General / Operaciones",
-    "color_principal": "#64748b",
-    "clave_principal": "general",
-    "afinidad": "General",
-    "es_exclusiva_fisica": false,
-    "es_cierre_inminente": false,
-    "score_pensum": 0,
-    "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Atain.",
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
-    "es_practica": true
-  },
-  {
-    "titulo": "practicante de aires acondicionados tecnico tecnologo",
-    "empresa": "Atain",
-    "ubicacion": "Medellín, Antioquia",
-    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-practicante-de-aires-acondicionados-tecnico-tecnologo-en-medellin-B073DD338A76A07C61373E686DCF3405",
-    "fecha_publicacion": "Reciente",
-    "fuente": "Computrabajo",
-    "ramas": [
-      {
-        "clave": "general",
-        "nombre": "Ingeniería General / Operaciones",
-        "color": "#64748b",
-        "score": 5
-      }
-    ],
-    "rama_principal": "Ingeniería General / Operaciones",
-    "color_principal": "#64748b",
-    "clave_principal": "general",
-    "afinidad": "General",
-    "es_exclusiva_fisica": false,
-    "es_cierre_inminente": false,
-    "score_pensum": 0,
-    "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Atain.",
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
-    "es_practica": true
-  },
-  {
-    "titulo": "Practicante de Ambiental",
-    "empresa": "KONECTA",
-    "ubicacion": "Medellín, Antioquia",
-    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-practicante-de-ambiental-en-medellin-199A32390892688061373E686DCF3405",
-    "fecha_publicacion": "Reciente",
-    "fuente": "Computrabajo",
-    "ramas": [
-      {
-        "clave": "general",
-        "nombre": "Ingeniería General / Operaciones",
-        "color": "#64748b",
-        "score": 5
-      }
-    ],
-    "rama_principal": "Ingeniería General / Operaciones",
-    "color_principal": "#64748b",
-    "clave_principal": "general",
-    "afinidad": "General",
-    "es_exclusiva_fisica": false,
-    "es_cierre_inminente": false,
-    "score_pensum": 0,
-    "mision": "Apoyo en el área de ingeniería y operaciones técnicas en KONECTA.",
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
-    "es_practica": true
-  },
-  {
-    "titulo": "Practicante de aires acondicionados técnico / tecnólogo",
-    "empresa": "Atain",
-    "ubicacion": "Medellín, Antioquia",
-    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-practicante-de-aires-acondicionados-tecnico-tecnologo-en-medellin-53F246611B02622B61373E686DCF3405",
-    "fecha_publicacion": "Reciente",
-    "fuente": "Computrabajo",
-    "ramas": [
-      {
-        "clave": "general",
-        "nombre": "Ingeniería General / Operaciones",
-        "color": "#64748b",
-        "score": 5
-      }
-    ],
-    "rama_principal": "Ingeniería General / Operaciones",
-    "color_principal": "#64748b",
-    "clave_principal": "general",
-    "afinidad": "General",
-    "es_exclusiva_fisica": false,
-    "es_cierre_inminente": false,
-    "score_pensum": 0,
-    "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Atain.",
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
-    "es_practica": true
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
   },
   {
     "titulo": "Practicante de Gestión Administrativa",
@@ -2689,10 +2717,218 @@
     "afinidad": "General",
     "es_exclusiva_fisica": false,
     "es_cierre_inminente": false,
+    "es_practica": true,
     "score_pensum": 0,
     "mision": "Apoyo en el área de ingeniería y operaciones técnicas en PORCICARNES.",
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
-    "es_practica": true
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
+  },
+  {
+    "titulo": "Practicante de diseño gráfico",
+    "empresa": "NSIT",
+    "ubicacion": "Medellín, Antioquia",
+    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-practicante-de-diseno-grafico-en-medellin-E9FD5D511126A1FB61373E686DCF3405",
+    "fecha_publicacion": "Reciente",
+    "fuente": "Computrabajo",
+    "ramas": [
+      {
+        "clave": "general",
+        "nombre": "Ingeniería General / Operaciones",
+        "color": "#64748b",
+        "score": 5
+      }
+    ],
+    "rama_principal": "Ingeniería General / Operaciones",
+    "color_principal": "#64748b",
+    "clave_principal": "general",
+    "afinidad": "General",
+    "es_exclusiva_fisica": false,
+    "es_cierre_inminente": false,
+    "es_practica": true,
+    "score_pensum": 0,
+    "mision": "Apoyo en el área de ingeniería y operaciones técnicas en NSIT.",
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
+  },
+  {
+    "titulo": "Practicante en Auxiliar Administrativo",
+    "empresa": "Agencia de Empleo de Comfenalco Antioquia",
+    "ubicacion": "Medellín, Antioquia",
+    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-practicante-en-auxiliar-administrativo-en-medellin-ADFD83D2E8467A5461373E686DCF3405",
+    "fecha_publicacion": "Reciente",
+    "fuente": "Computrabajo",
+    "ramas": [
+      {
+        "clave": "general",
+        "nombre": "Ingeniería General / Operaciones",
+        "color": "#64748b",
+        "score": 5
+      }
+    ],
+    "rama_principal": "Ingeniería General / Operaciones",
+    "color_principal": "#64748b",
+    "clave_principal": "general",
+    "afinidad": "General",
+    "es_exclusiva_fisica": false,
+    "es_cierre_inminente": false,
+    "es_practica": true,
+    "score_pensum": 0,
+    "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Agencia de Empleo de Comfenalco Antioquia.",
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
+  },
+  {
+    "titulo": "Auxiliar Administrativa y Comercial",
+    "empresa": "2B eCommerce",
+    "ubicacion": "Medellín, Antioquia",
+    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-auxiliar-administrativa-y-comercial-en-medellin-E91630C1A6B020D461373E686DCF3405",
+    "fecha_publicacion": "Reciente",
+    "fuente": "Computrabajo",
+    "ramas": [
+      {
+        "clave": "general",
+        "nombre": "Ingeniería General / Operaciones",
+        "color": "#64748b",
+        "score": 5
+      }
+    ],
+    "rama_principal": "Ingeniería General / Operaciones",
+    "color_principal": "#64748b",
+    "clave_principal": "general",
+    "afinidad": "General",
+    "es_exclusiva_fisica": false,
+    "es_cierre_inminente": false,
+    "es_practica": false,
+    "score_pensum": 0,
+    "mision": "Apoyo en el área de ingeniería y operaciones técnicas en 2B eCommerce.",
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
+  },
+  {
+    "titulo": "Practicante de recepción y reservas",
+    "empresa": "Empresa Confidencial",
+    "ubicacion": "Tarso, Antioquia",
+    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-practicante-de-recepcion-y-reservas-en-tarso-F7CA17C87D0F89FE61373E686DCF3405",
+    "fecha_publicacion": "Reciente",
+    "fuente": "Computrabajo",
+    "ramas": [
+      {
+        "clave": "general",
+        "nombre": "Ingeniería General / Operaciones",
+        "color": "#64748b",
+        "score": 5
+      }
+    ],
+    "rama_principal": "Ingeniería General / Operaciones",
+    "color_principal": "#64748b",
+    "clave_principal": "general",
+    "afinidad": "General",
+    "es_exclusiva_fisica": false,
+    "es_cierre_inminente": false,
+    "es_practica": true,
+    "score_pensum": 0,
+    "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Empresa Confidencial.",
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
+  },
+  {
+    "titulo": "Practicante de aires acondicionados técnico / tecnólogo",
+    "empresa": "Atain",
+    "ubicacion": "Medellín, Antioquia",
+    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-practicante-de-aires-acondicionados-tecnico-tecnologo-en-medellin-3DF9771B9F96F57C61373E686DCF3405",
+    "fecha_publicacion": "Reciente",
+    "fuente": "Computrabajo",
+    "ramas": [
+      {
+        "clave": "general",
+        "nombre": "Ingeniería General / Operaciones",
+        "color": "#64748b",
+        "score": 5
+      }
+    ],
+    "rama_principal": "Ingeniería General / Operaciones",
+    "color_principal": "#64748b",
+    "clave_principal": "general",
+    "afinidad": "General",
+    "es_exclusiva_fisica": false,
+    "es_cierre_inminente": false,
+    "es_practica": true,
+    "score_pensum": 0,
+    "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Atain.",
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
+  },
+  {
+    "titulo": "practicante de aires acondicionados tecnico tecnologo",
+    "empresa": "Atain",
+    "ubicacion": "Medellín, Antioquia",
+    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-practicante-de-aires-acondicionados-tecnico-tecnologo-en-medellin-B073DD338A76A07C61373E686DCF3405",
+    "fecha_publicacion": "Reciente",
+    "fuente": "Computrabajo",
+    "ramas": [
+      {
+        "clave": "general",
+        "nombre": "Ingeniería General / Operaciones",
+        "color": "#64748b",
+        "score": 5
+      }
+    ],
+    "rama_principal": "Ingeniería General / Operaciones",
+    "color_principal": "#64748b",
+    "clave_principal": "general",
+    "afinidad": "General",
+    "es_exclusiva_fisica": false,
+    "es_cierre_inminente": false,
+    "es_practica": true,
+    "score_pensum": 0,
+    "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Atain.",
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
+  },
+  {
+    "titulo": "Practicante de Ambiental",
+    "empresa": "KONECTA",
+    "ubicacion": "Medellín, Antioquia",
+    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-practicante-de-ambiental-en-medellin-199A32390892688061373E686DCF3405",
+    "fecha_publicacion": "Reciente",
+    "fuente": "Computrabajo",
+    "ramas": [
+      {
+        "clave": "general",
+        "nombre": "Ingeniería General / Operaciones",
+        "color": "#64748b",
+        "score": 5
+      }
+    ],
+    "rama_principal": "Ingeniería General / Operaciones",
+    "color_principal": "#64748b",
+    "clave_principal": "general",
+    "afinidad": "General",
+    "es_exclusiva_fisica": false,
+    "es_cierre_inminente": false,
+    "es_practica": true,
+    "score_pensum": 0,
+    "mision": "Apoyo en el área de ingeniería y operaciones técnicas en KONECTA.",
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
+  },
+  {
+    "titulo": "Practicante de aires acondicionados técnico / tecnólogo",
+    "empresa": "Atain",
+    "ubicacion": "Medellín, Antioquia",
+    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-practicante-de-aires-acondicionados-tecnico-tecnologo-en-medellin-53F246611B02622B61373E686DCF3405",
+    "fecha_publicacion": "Reciente",
+    "fuente": "Computrabajo",
+    "ramas": [
+      {
+        "clave": "general",
+        "nombre": "Ingeniería General / Operaciones",
+        "color": "#64748b",
+        "score": 5
+      }
+    ],
+    "rama_principal": "Ingeniería General / Operaciones",
+    "color_principal": "#64748b",
+    "clave_principal": "general",
+    "afinidad": "General",
+    "es_exclusiva_fisica": false,
+    "es_cierre_inminente": false,
+    "es_practica": true,
+    "score_pensum": 0,
+    "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Atain.",
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
   },
   {
     "titulo": "practicante administrativo/a",
@@ -2715,16 +2951,94 @@
     "afinidad": "General",
     "es_exclusiva_fisica": false,
     "es_cierre_inminente": false,
+    "es_practica": true,
     "score_pensum": 0,
     "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Access Tecnologia.",
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
-    "es_practica": true
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
   },
   {
-    "titulo": "Aprendiz de atención al cliente para Rionegro para personas con o sin discapacidad",
+    "titulo": "Practicante gestión documental para El Santuario",
+    "empresa": "AGENCIA DE EMPLEO COMFAMA",
+    "ubicacion": "El Santuario, Antioquia",
+    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-practicante-gestion-documental-para-el-santuario-en-el-santuario-F378243B8958456F61373E686DCF3405",
+    "fecha_publicacion": "Reciente",
+    "fuente": "Computrabajo",
+    "ramas": [
+      {
+        "clave": "general",
+        "nombre": "Ingeniería General / Operaciones",
+        "color": "#64748b",
+        "score": 5
+      }
+    ],
+    "rama_principal": "Ingeniería General / Operaciones",
+    "color_principal": "#64748b",
+    "clave_principal": "general",
+    "afinidad": "General",
+    "es_exclusiva_fisica": false,
+    "es_cierre_inminente": false,
+    "es_practica": true,
+    "score_pensum": 0,
+    "mision": "Apoyo en el área de ingeniería y operaciones técnicas en AGENCIA DE EMPLEO COMFAMA.",
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
+  },
+  {
+    "titulo": "Estudiante de elecromecanica o mecanica",
+    "empresa": "Employer Talent",
+    "ubicacion": "Medellín, Antioquia",
+    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-estudiante-de-elecromecanica-o-mecanica-en-medellin-DEC8EE7A3ED383BF61373E686DCF3405",
+    "fecha_publicacion": "Reciente",
+    "fuente": "Computrabajo",
+    "ramas": [
+      {
+        "clave": "general",
+        "nombre": "Ingeniería General / Operaciones",
+        "color": "#64748b",
+        "score": 5
+      }
+    ],
+    "rama_principal": "Ingeniería General / Operaciones",
+    "color_principal": "#64748b",
+    "clave_principal": "general",
+    "afinidad": "General",
+    "es_exclusiva_fisica": false,
+    "es_cierre_inminente": false,
+    "es_practica": false,
+    "score_pensum": 0,
+    "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Employer Talent.",
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
+  },
+  {
+    "titulo": "Aprendiz administrativo",
+    "empresa": "INTERASEO S.A.S E.S.P.",
+    "ubicacion": "Medellín, Antioquia",
+    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-aprendiz-administrativo-en-medellin-935DBAD705BA08B761373E686DCF3405",
+    "fecha_publicacion": "Reciente",
+    "fuente": "Computrabajo",
+    "ramas": [
+      {
+        "clave": "general",
+        "nombre": "Ingeniería General / Operaciones",
+        "color": "#64748b",
+        "score": 5
+      }
+    ],
+    "rama_principal": "Ingeniería General / Operaciones",
+    "color_principal": "#64748b",
+    "clave_principal": "general",
+    "afinidad": "General",
+    "es_exclusiva_fisica": false,
+    "es_cierre_inminente": false,
+    "es_practica": false,
+    "score_pensum": 0,
+    "mision": "Apoyo en el área de ingeniería y operaciones técnicas en INTERASEO S.A.S E.S.P..",
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
+  },
+  {
+    "titulo": "Practicante de mantenimiento Rionegro",
     "empresa": "Empresa Confidencial",
     "ubicacion": "Rionegro, Antioquia",
-    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-aprendiz-de-atencion-al-cliente-para-rionegro-para-personas-con-o-sin-discapacidad-en-rionegro-BD3AB10CEB2DA6D061373E686DCF3405",
+    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-practicante-de-mantenimiento-rionegro-en-rionegro-CC822F0BA3FFE1D461373E686DCF3405",
     "fecha_publicacion": "Reciente",
     "fuente": "Computrabajo",
     "ramas": [
@@ -2741,166 +3055,10 @@
     "afinidad": "General",
     "es_exclusiva_fisica": false,
     "es_cierre_inminente": false,
+    "es_practica": true,
     "score_pensum": 0,
     "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Empresa Confidencial.",
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
-    "es_practica": false
-  },
-  {
-    "titulo": "Aprendices y Practicantes en Circuito Cerrado de Televisión CCVT",
-    "empresa": "Línea Estética",
-    "ubicacion": "Medellín, Antioquia",
-    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-aprendices-y-practicantes-en-circuito-cerrado-de-television-ccvt-en-medellin-8B1FD4709D31B0FD61373E686DCF3405",
-    "fecha_publicacion": "Reciente",
-    "fuente": "Computrabajo",
-    "ramas": [
-      {
-        "clave": "general",
-        "nombre": "Ingeniería General / Operaciones",
-        "color": "#64748b",
-        "score": 5
-      }
-    ],
-    "rama_principal": "Ingeniería General / Operaciones",
-    "color_principal": "#64748b",
-    "clave_principal": "general",
-    "afinidad": "General",
-    "es_exclusiva_fisica": false,
-    "es_cierre_inminente": false,
-    "score_pensum": 0,
-    "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Línea Estética.",
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
-    "es_practica": false
-  },
-  {
-    "titulo": "Aprendiz en Técnica en Archivo.",
-    "empresa": "POLO1 S . A . S .",
-    "ubicacion": "Medellín, Antioquia",
-    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-aprendiz-en-tecnica-en-archivo-medellin-en-medellin-8B43617A66FDE59161373E686DCF3405",
-    "fecha_publicacion": "Reciente",
-    "fuente": "Computrabajo",
-    "ramas": [
-      {
-        "clave": "general",
-        "nombre": "Ingeniería General / Operaciones",
-        "color": "#64748b",
-        "score": 5
-      }
-    ],
-    "rama_principal": "Ingeniería General / Operaciones",
-    "color_principal": "#64748b",
-    "clave_principal": "general",
-    "afinidad": "General",
-    "es_exclusiva_fisica": false,
-    "es_cierre_inminente": false,
-    "score_pensum": 0,
-    "mision": "Apoyo en el área de ingeniería y operaciones técnicas en POLO1 S . A . S ..",
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
-    "es_practica": false
-  },
-  {
-    "titulo": "Remoto asistente legal",
-    "empresa": "SOLVO S.A.S",
-    "ubicacion": "Medellín, Antioquia",
-    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-remoto-asistente-legal-personal-injury-ingles-c1-en-medellin-7498FD524CA81C0161373E686DCF3405",
-    "fecha_publicacion": "Reciente",
-    "fuente": "Computrabajo",
-    "ramas": [
-      {
-        "clave": "general",
-        "nombre": "Ingeniería General / Operaciones",
-        "color": "#64748b",
-        "score": 5
-      }
-    ],
-    "rama_principal": "Ingeniería General / Operaciones",
-    "color_principal": "#64748b",
-    "clave_principal": "general",
-    "afinidad": "General",
-    "es_exclusiva_fisica": false,
-    "es_cierre_inminente": false,
-    "score_pensum": 0,
-    "mision": "Apoyo en el área de ingeniería y operaciones técnicas en SOLVO S.A.S.",
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
-    "es_practica": false
-  },
-  {
-    "titulo": "Practicante Mantenimiento",
-    "empresa": "COSMETICOS SAMY S.A.",
-    "ubicacion": "Medellín, Antioquia",
-    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-practicante-mantenimiento-en-medellin-08D25B2983F0076361373E686DCF3405",
-    "fecha_publicacion": "Reciente",
-    "fuente": "Computrabajo",
-    "ramas": [
-      {
-        "clave": "general",
-        "nombre": "Ingeniería General / Operaciones",
-        "color": "#64748b",
-        "score": 5
-      }
-    ],
-    "rama_principal": "Ingeniería General / Operaciones",
-    "color_principal": "#64748b",
-    "clave_principal": "general",
-    "afinidad": "General",
-    "es_exclusiva_fisica": false,
-    "es_cierre_inminente": false,
-    "score_pensum": 0,
-    "mision": "Apoyo en el área de ingeniería y operaciones técnicas en COSMETICOS SAMY S.A..",
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
-    "es_practica": true
-  },
-  {
-    "titulo": "Practicante en Ensamble y Mantenimiento de Equipos de Cómputo",
-    "empresa": "B&B HOLDING MEDELLIN S.A.S",
-    "ubicacion": "Medellín, Antioquia",
-    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-practicante-en-ensamble-y-mantenimiento-de-equipos-de-computo-en-medellin-FC9A8900CD54E5D061373E686DCF3405",
-    "fecha_publicacion": "Reciente",
-    "fuente": "Computrabajo",
-    "ramas": [
-      {
-        "clave": "general",
-        "nombre": "Ingeniería General / Operaciones",
-        "color": "#64748b",
-        "score": 5
-      }
-    ],
-    "rama_principal": "Ingeniería General / Operaciones",
-    "color_principal": "#64748b",
-    "clave_principal": "general",
-    "afinidad": "General",
-    "es_exclusiva_fisica": false,
-    "es_cierre_inminente": false,
-    "score_pensum": 0,
-    "mision": "Apoyo en el área de ingeniería y operaciones técnicas en B&B HOLDING MEDELLIN S.A.S.",
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
-    "es_practica": true
-  },
-  {
-    "titulo": "Aprendiz  Practicante Mantenimiento Etapa Productiva Medellín",
-    "empresa": "Movich Hotels",
-    "ubicacion": "Medellín, Antioquia",
-    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-aprendiz-practicante-mantenimiento-etapa-productiva-medellin-hotel-intercontinental-movich-medellin-en-medellin-73A4AE2ED82DBC3461373E686DCF3405",
-    "fecha_publicacion": "Reciente",
-    "fuente": "Computrabajo",
-    "ramas": [
-      {
-        "clave": "general",
-        "nombre": "Ingeniería General / Operaciones",
-        "color": "#64748b",
-        "score": 5
-      }
-    ],
-    "rama_principal": "Ingeniería General / Operaciones",
-    "color_principal": "#64748b",
-    "clave_principal": "general",
-    "afinidad": "General",
-    "es_exclusiva_fisica": false,
-    "es_cierre_inminente": false,
-    "score_pensum": 0,
-    "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Movich Hotels.",
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
-    "es_practica": true
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
   },
   {
     "titulo": "Practicante Universitario Soporte y Mantenimiento",
@@ -2923,10 +3081,114 @@
     "afinidad": "General",
     "es_exclusiva_fisica": false,
     "es_cierre_inminente": false,
+    "es_practica": true,
     "score_pensum": 0,
     "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Grupo Éxito.",
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
-    "es_practica": true
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
+  },
+  {
+    "titulo": "Practicante en Ensamble y Mantenimiento de Equipos de Cómputo",
+    "empresa": "B&B HOLDING MEDELLIN S.A.S",
+    "ubicacion": "Medellín, Antioquia",
+    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-practicante-en-ensamble-y-mantenimiento-de-equipos-de-computo-en-medellin-FC9A8900CD54E5D061373E686DCF3405",
+    "fecha_publicacion": "Reciente",
+    "fuente": "Computrabajo",
+    "ramas": [
+      {
+        "clave": "general",
+        "nombre": "Ingeniería General / Operaciones",
+        "color": "#64748b",
+        "score": 5
+      }
+    ],
+    "rama_principal": "Ingeniería General / Operaciones",
+    "color_principal": "#64748b",
+    "clave_principal": "general",
+    "afinidad": "General",
+    "es_exclusiva_fisica": false,
+    "es_cierre_inminente": false,
+    "es_practica": true,
+    "score_pensum": 0,
+    "mision": "Apoyo en el área de ingeniería y operaciones técnicas en B&B HOLDING MEDELLIN S.A.S.",
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
+  },
+  {
+    "titulo": "Practicante Mantenimiento",
+    "empresa": "COSMETICOS SAMY S.A.",
+    "ubicacion": "Medellín, Antioquia",
+    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-practicante-mantenimiento-en-medellin-08D25B2983F0076361373E686DCF3405",
+    "fecha_publicacion": "Reciente",
+    "fuente": "Computrabajo",
+    "ramas": [
+      {
+        "clave": "general",
+        "nombre": "Ingeniería General / Operaciones",
+        "color": "#64748b",
+        "score": 5
+      }
+    ],
+    "rama_principal": "Ingeniería General / Operaciones",
+    "color_principal": "#64748b",
+    "clave_principal": "general",
+    "afinidad": "General",
+    "es_exclusiva_fisica": false,
+    "es_cierre_inminente": false,
+    "es_practica": true,
+    "score_pensum": 0,
+    "mision": "Apoyo en el área de ingeniería y operaciones técnicas en COSMETICOS SAMY S.A..",
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
+  },
+  {
+    "titulo": "Aprendiz  Practicante Mantenimiento Etapa Productiva Medellín",
+    "empresa": "Movich Hotels",
+    "ubicacion": "Medellín, Antioquia",
+    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-aprendiz-practicante-mantenimiento-etapa-productiva-medellin-hotel-intercontinental-movich-medellin-en-medellin-73A4AE2ED82DBC3461373E686DCF3405",
+    "fecha_publicacion": "Reciente",
+    "fuente": "Computrabajo",
+    "ramas": [
+      {
+        "clave": "general",
+        "nombre": "Ingeniería General / Operaciones",
+        "color": "#64748b",
+        "score": 5
+      }
+    ],
+    "rama_principal": "Ingeniería General / Operaciones",
+    "color_principal": "#64748b",
+    "clave_principal": "general",
+    "afinidad": "General",
+    "es_exclusiva_fisica": false,
+    "es_cierre_inminente": false,
+    "es_practica": true,
+    "score_pensum": 0,
+    "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Movich Hotels.",
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
+  },
+  {
+    "titulo": "Analista de Mercadeo",
+    "empresa": "FRANCORP SOCIEDAD POR ACCIONES SIMPLIFICADA",
+    "ubicacion": "Medellín, Antioquia",
+    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-analista-de-mercadeo-en-medellin-F366A6962997A18661373E686DCF3405",
+    "fecha_publicacion": "Reciente",
+    "fuente": "Computrabajo",
+    "ramas": [
+      {
+        "clave": "general",
+        "nombre": "Ingeniería General / Operaciones",
+        "color": "#64748b",
+        "score": 5
+      }
+    ],
+    "rama_principal": "Ingeniería General / Operaciones",
+    "color_principal": "#64748b",
+    "clave_principal": "general",
+    "afinidad": "General",
+    "es_exclusiva_fisica": false,
+    "es_cierre_inminente": false,
+    "es_practica": false,
+    "score_pensum": 0,
+    "mision": "Apoyo en el área de ingeniería y operaciones técnicas en FRANCORP SOCIEDAD POR ACCIONES SIMPLIFICADA.",
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
   },
   {
     "titulo": "Practicante Universitario Operaciones Centro Comercial",
@@ -2949,36 +3211,10 @@
     "afinidad": "General",
     "es_exclusiva_fisica": false,
     "es_cierre_inminente": false,
+    "es_practica": true,
     "score_pensum": 0,
     "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Grupo Éxito.",
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
-    "es_practica": true
-  },
-  {
-    "titulo": "Practicante de compras",
-    "empresa": "EVOLUTION DEVELOPMENT COLOMBIA S.A.S",
-    "ubicacion": "Medellín, Antioquia",
-    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-practicante-de-compras-procurement-intern-en-medellin-796F7A0BD25A43AC61373E686DCF3405",
-    "fecha_publicacion": "Reciente",
-    "fuente": "Computrabajo",
-    "ramas": [
-      {
-        "clave": "general",
-        "nombre": "Ingeniería General / Operaciones",
-        "color": "#64748b",
-        "score": 5
-      }
-    ],
-    "rama_principal": "Ingeniería General / Operaciones",
-    "color_principal": "#64748b",
-    "clave_principal": "general",
-    "afinidad": "General",
-    "es_exclusiva_fisica": false,
-    "es_cierre_inminente": false,
-    "score_pensum": 0,
-    "mision": "Apoyo en el área de ingeniería y operaciones técnicas en EVOLUTION DEVELOPMENT COLOMBIA S.A.S.",
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
-    "es_practica": true
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
   },
   {
     "titulo": "Practicante Logístico",
@@ -3001,10 +3237,10 @@
     "afinidad": "General",
     "es_exclusiva_fisica": false,
     "es_cierre_inminente": false,
+    "es_practica": true,
     "score_pensum": 0,
     "mision": "Apoyo en el área de ingeniería y operaciones técnicas en LEVI STRAUSS COLOMBIA SAS.",
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
-    "es_practica": true
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
   },
   {
     "titulo": "Aprendiz Administrativo o logístico.",
@@ -3027,62 +3263,10 @@
     "afinidad": "General",
     "es_exclusiva_fisica": false,
     "es_cierre_inminente": false,
+    "es_practica": false,
     "score_pensum": 0,
     "mision": "Apoyo en el área de ingeniería y operaciones técnicas en emtelco.",
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
-    "es_practica": false
-  },
-  {
-    "titulo": "Aprendiz  Practicante Repostería Etapa Productiva Medellín",
-    "empresa": "Movich Hotels",
-    "ubicacion": "Medellín, Antioquia",
-    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-aprendiz-practicante-reposteria-etapa-productiva-medellin-hotel-intercontinental-movich-medellin-en-medellin-EF5C623B348F002461373E686DCF3405",
-    "fecha_publicacion": "Reciente",
-    "fuente": "Computrabajo",
-    "ramas": [
-      {
-        "clave": "general",
-        "nombre": "Ingeniería General / Operaciones",
-        "color": "#64748b",
-        "score": 5
-      }
-    ],
-    "rama_principal": "Ingeniería General / Operaciones",
-    "color_principal": "#64748b",
-    "clave_principal": "general",
-    "afinidad": "General",
-    "es_exclusiva_fisica": false,
-    "es_cierre_inminente": false,
-    "score_pensum": 0,
-    "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Movich Hotels.",
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
-    "es_practica": true
-  },
-  {
-    "titulo": "Practicante de mecánica",
-    "empresa": "AGENCIA DE EMPLEO COMFAMA",
-    "ubicacion": "Medellín, Antioquia",
-    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-practicante-de-mecanica-en-medellin-55819E4F67C50E7A61373E686DCF3405",
-    "fecha_publicacion": "Reciente",
-    "fuente": "Computrabajo",
-    "ramas": [
-      {
-        "clave": "general",
-        "nombre": "Ingeniería General / Operaciones",
-        "color": "#64748b",
-        "score": 5
-      }
-    ],
-    "rama_principal": "Ingeniería General / Operaciones",
-    "color_principal": "#64748b",
-    "clave_principal": "general",
-    "afinidad": "General",
-    "es_exclusiva_fisica": false,
-    "es_cierre_inminente": false,
-    "score_pensum": 0,
-    "mision": "Apoyo en el área de ingeniería y operaciones técnicas en AGENCIA DE EMPLEO COMFAMA.",
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
-    "es_practica": true
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
   },
   {
     "titulo": "Practicante de Innovación",
@@ -3105,10 +3289,10 @@
     "afinidad": "General",
     "es_exclusiva_fisica": false,
     "es_cierre_inminente": false,
+    "es_practica": true,
     "score_pensum": 0,
     "mision": "Apoyo en el área de ingeniería y operaciones técnicas en C.I. FAJAS MYD COLOMBIA S.A.S..",
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
-    "es_practica": true
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
   },
   {
     "titulo": "Estudiante Industrial",
@@ -3131,36 +3315,10 @@
     "afinidad": "General",
     "es_exclusiva_fisica": false,
     "es_cierre_inminente": false,
+    "es_practica": false,
     "score_pensum": 0,
     "mision": "Apoyo en el área de ingeniería y operaciones técnicas en COSMETICOS SAMY S.A..",
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
-    "es_practica": false
-  },
-  {
-    "titulo": "Aprendiz Mantenimiento Planta Itagui",
-    "empresa": "BIMBO DE COLOMBIA S.A.",
-    "ubicacion": "Itagüí, Antioquia",
-    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-aprendiz-mantenimiento-planta-itagui-en-itagui-A08308A726F1759A61373E686DCF3405",
-    "fecha_publicacion": "Reciente",
-    "fuente": "Computrabajo",
-    "ramas": [
-      {
-        "clave": "general",
-        "nombre": "Ingeniería General / Operaciones",
-        "color": "#64748b",
-        "score": 5
-      }
-    ],
-    "rama_principal": "Ingeniería General / Operaciones",
-    "color_principal": "#64748b",
-    "clave_principal": "general",
-    "afinidad": "General",
-    "es_exclusiva_fisica": false,
-    "es_cierre_inminente": false,
-    "score_pensum": 0,
-    "mision": "Apoyo en el área de ingeniería y operaciones técnicas en BIMBO DE COLOMBIA S.A..",
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
-    "es_practica": false
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
   },
   {
     "titulo": "Aprendiz logística / Administrativo/ Medellin Sury y Norte",
@@ -3183,10 +3341,36 @@
     "afinidad": "General",
     "es_exclusiva_fisica": false,
     "es_cierre_inminente": false,
+    "es_practica": false,
     "score_pensum": 0,
     "mision": "Apoyo en el área de ingeniería y operaciones técnicas en BIMBO DE COLOMBIA S.A..",
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
-    "es_practica": false
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
+  },
+  {
+    "titulo": "Aprendiz Mantenimiento Planta Itagui",
+    "empresa": "BIMBO DE COLOMBIA S.A.",
+    "ubicacion": "Itagüí, Antioquia",
+    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-aprendiz-mantenimiento-planta-itagui-en-itagui-A08308A726F1759A61373E686DCF3405",
+    "fecha_publicacion": "Reciente",
+    "fuente": "Computrabajo",
+    "ramas": [
+      {
+        "clave": "general",
+        "nombre": "Ingeniería General / Operaciones",
+        "color": "#64748b",
+        "score": 5
+      }
+    ],
+    "rama_principal": "Ingeniería General / Operaciones",
+    "color_principal": "#64748b",
+    "clave_principal": "general",
+    "afinidad": "General",
+    "es_exclusiva_fisica": false,
+    "es_cierre_inminente": false,
+    "es_practica": false,
+    "score_pensum": 0,
+    "mision": "Apoyo en el área de ingeniería y operaciones técnicas en BIMBO DE COLOMBIA S.A..",
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
   },
   {
     "titulo": "Aprendiz de Mantenimiento",
@@ -3209,68 +3393,16 @@
     "afinidad": "General",
     "es_exclusiva_fisica": false,
     "es_cierre_inminente": false,
+    "es_practica": false,
     "score_pensum": 0,
     "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Laboratorio Maria Salome.",
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
-    "es_practica": false
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
   },
   {
-    "titulo": "Aprendiz Administrativo",
-    "empresa": "GRUPO BIOS S.A.S",
-    "ubicacion": "Envigado, Antioquia",
-    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-aprendiz-administrativo-en-envigado-A059F4CA82E7CA7761373E686DCF3405",
-    "fecha_publicacion": "Reciente",
-    "fuente": "Computrabajo",
-    "ramas": [
-      {
-        "clave": "general",
-        "nombre": "Ingeniería General / Operaciones",
-        "color": "#64748b",
-        "score": 5
-      }
-    ],
-    "rama_principal": "Ingeniería General / Operaciones",
-    "color_principal": "#64748b",
-    "clave_principal": "general",
-    "afinidad": "General",
-    "es_exclusiva_fisica": false,
-    "es_cierre_inminente": false,
-    "score_pensum": 0,
-    "mision": "Apoyo en el área de ingeniería y operaciones técnicas en GRUPO BIOS S.A.S.",
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
-    "es_practica": false
-  },
-  {
-    "titulo": "Practicante logística",
-    "empresa": "Altipal S.A.S.",
-    "ubicacion": "Girardota, Antioquia",
-    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-practicante-logistica-en-girardota-DACC75FD5F45431A61373E686DCF3405",
-    "fecha_publicacion": "Reciente",
-    "fuente": "Computrabajo",
-    "ramas": [
-      {
-        "clave": "general",
-        "nombre": "Ingeniería General / Operaciones",
-        "color": "#64748b",
-        "score": 5
-      }
-    ],
-    "rama_principal": "Ingeniería General / Operaciones",
-    "color_principal": "#64748b",
-    "clave_principal": "general",
-    "afinidad": "General",
-    "es_exclusiva_fisica": false,
-    "es_cierre_inminente": false,
-    "score_pensum": 0,
-    "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Altipal S.A.S..",
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
-    "es_practica": true
-  },
-  {
-    "titulo": "Gestor/a de Prácticas y Empleabilidad",
-    "empresa": "Empresa Confidencial",
+    "titulo": "Practicante auxiliar administrativo",
+    "empresa": "IGGA SAS",
     "ubicacion": "Medellín, Antioquia",
-    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-gestora-de-practicas-y-empleabilidad-en-medellin-64587E2EA69BC9EE61373E686DCF3405",
+    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-practicante-auxiliar-administrativo-en-medellin-6864D0D3150358A461373E686DCF3405",
     "fecha_publicacion": "Reciente",
     "fuente": "Computrabajo",
     "ramas": [
@@ -3287,16 +3419,16 @@
     "afinidad": "General",
     "es_exclusiva_fisica": false,
     "es_cierre_inminente": false,
+    "es_practica": true,
     "score_pensum": 0,
-    "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Empresa Confidencial.",
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
-    "es_practica": false
+    "mision": "Apoyo en el área de ingeniería y operaciones técnicas en IGGA SAS.",
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
   },
   {
-    "titulo": "Practicante profesional  Ing de sistemas",
-    "empresa": "Eficacia",
-    "ubicacion": "Envigado, Antioquia",
-    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-practicante-profesional-ing-de-sistemas-en-envigado-0D489A8468D5B7A361373E686DCF3405",
+    "titulo": "Practicante Universitario Conocimiento Mercados",
+    "empresa": "Grupo Éxito",
+    "ubicacion": "Medellín, Antioquia",
+    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-practicante-universitario-conocimiento-mercados-en-medellin-55FAAEADFF3DBFE161373E686DCF3405",
     "fecha_publicacion": "Reciente",
     "fuente": "Computrabajo",
     "ramas": [
@@ -3313,10 +3445,10 @@
     "afinidad": "General",
     "es_exclusiva_fisica": false,
     "es_cierre_inminente": false,
+    "es_practica": true,
     "score_pensum": 0,
-    "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Eficacia.",
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
-    "es_practica": true
+    "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Grupo Éxito.",
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
   },
   {
     "titulo": "Practicante de Psicología Organizacional Bilingüe",
@@ -3339,16 +3471,120 @@
     "afinidad": "General",
     "es_exclusiva_fisica": false,
     "es_cierre_inminente": false,
+    "es_practica": true,
     "score_pensum": 0,
     "mision": "Apoyo en el área de ingeniería y operaciones técnicas en B&B HOLDING MEDELLIN S.A.S.",
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
-    "es_practica": true
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
   },
   {
-    "titulo": "Practicante Área Financiera",
+    "titulo": "Practicante de Producción",
+    "empresa": "HMV Ingenieros",
+    "ubicacion": "Medellín, Antioquia",
+    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-practicante-de-produccion-medellin-en-medellin-362BBFF96247452961373E686DCF3405",
+    "fecha_publicacion": "Reciente",
+    "fuente": "Computrabajo",
+    "ramas": [
+      {
+        "clave": "general",
+        "nombre": "Ingeniería General / Operaciones",
+        "color": "#64748b",
+        "score": 5
+      }
+    ],
+    "rama_principal": "Ingeniería General / Operaciones",
+    "color_principal": "#64748b",
+    "clave_principal": "general",
+    "afinidad": "General",
+    "es_exclusiva_fisica": false,
+    "es_cierre_inminente": false,
+    "es_practica": true,
+    "score_pensum": 0,
+    "mision": "Apoyo en el área de ingeniería y operaciones técnicas en HMV Ingenieros.",
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
+  },
+  {
+    "titulo": "Aprendiz Administrativo",
+    "empresa": "emtelco",
+    "ubicacion": "Medellín, Antioquia",
+    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-aprendiz-administrativo-habilitadoa-para-firmar-contrato-de-aprendizaje-en-medellin-41822D646D20711961373E686DCF3405",
+    "fecha_publicacion": "Reciente",
+    "fuente": "Computrabajo",
+    "ramas": [
+      {
+        "clave": "general",
+        "nombre": "Ingeniería General / Operaciones",
+        "color": "#64748b",
+        "score": 5
+      }
+    ],
+    "rama_principal": "Ingeniería General / Operaciones",
+    "color_principal": "#64748b",
+    "clave_principal": "general",
+    "afinidad": "General",
+    "es_exclusiva_fisica": false,
+    "es_cierre_inminente": false,
+    "es_practica": false,
+    "score_pensum": 0,
+    "mision": "Apoyo en el área de ingeniería y operaciones técnicas en emtelco.",
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
+  },
+  {
+    "titulo": "Aprendiz de Contratación",
+    "empresa": "IMBOCAR S.A.S.",
+    "ubicacion": "Medellín, Antioquia",
+    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-aprendiz-de-contratacion-medellin-en-medellin-4C87444AC7757D0A61373E686DCF3405",
+    "fecha_publicacion": "Reciente",
+    "fuente": "Computrabajo",
+    "ramas": [
+      {
+        "clave": "general",
+        "nombre": "Ingeniería General / Operaciones",
+        "color": "#64748b",
+        "score": 5
+      }
+    ],
+    "rama_principal": "Ingeniería General / Operaciones",
+    "color_principal": "#64748b",
+    "clave_principal": "general",
+    "afinidad": "General",
+    "es_exclusiva_fisica": false,
+    "es_cierre_inminente": false,
+    "es_practica": false,
+    "score_pensum": 0,
+    "mision": "Apoyo en el área de ingeniería y operaciones técnicas en IMBOCAR S.A.S..",
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
+  },
+  {
+    "titulo": "Practicante de Psicología, Atracción y Selección",
+    "empresa": "LA RECETA Y CIA S.A.S",
+    "ubicacion": "Medellín, Antioquia",
+    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-practicante-de-psicologia-atraccion-y-seleccion-en-medellin-9D9E2F15FD6872D161373E686DCF3405",
+    "fecha_publicacion": "Reciente",
+    "fuente": "Computrabajo",
+    "ramas": [
+      {
+        "clave": "general",
+        "nombre": "Ingeniería General / Operaciones",
+        "color": "#64748b",
+        "score": 5
+      }
+    ],
+    "rama_principal": "Ingeniería General / Operaciones",
+    "color_principal": "#64748b",
+    "clave_principal": "general",
+    "afinidad": "General",
+    "es_exclusiva_fisica": false,
+    "es_cierre_inminente": false,
+    "es_practica": true,
+    "score_pensum": 0,
+    "mision": "Apoyo en el área de ingeniería y operaciones técnicas en LA RECETA Y CIA S.A.S.",
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
+  },
+  {
+    "titulo": "Practicante Trade y Marketing",
     "empresa": "Empresa Confidencial",
     "ubicacion": "Medellín, Antioquia",
-    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-practicante-area-financiera-en-medellin-D2B754E3AB1D658961373E686DCF3405",
+    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-practicante-trade-y-marketing-en-medellin-3C43743C76CA627061373E686DCF3405",
     "fecha_publicacion": "Reciente",
     "fuente": "Computrabajo",
     "ramas": [
@@ -3365,16 +3601,16 @@
     "afinidad": "General",
     "es_exclusiva_fisica": false,
     "es_cierre_inminente": false,
+    "es_practica": true,
     "score_pensum": 0,
     "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Empresa Confidencial.",
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
-    "es_practica": true
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
   },
   {
-    "titulo": "Practicante de Gestión Humana",
-    "empresa": "Landers y CIA",
-    "ubicacion": "Medellín, Antioquia",
-    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-practicante-de-gestion-humana-en-medellin-789946FE70862DFF61373E686DCF3405",
+    "titulo": "Practicante logística",
+    "empresa": "Altipal S.A.S.",
+    "ubicacion": "Girardota, Antioquia",
+    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-practicante-logistica-en-girardota-DACC75FD5F45431A61373E686DCF3405",
     "fecha_publicacion": "Reciente",
     "fuente": "Computrabajo",
     "ramas": [
@@ -3391,16 +3627,16 @@
     "afinidad": "General",
     "es_exclusiva_fisica": false,
     "es_cierre_inminente": false,
+    "es_practica": true,
     "score_pensum": 0,
-    "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Landers y CIA.",
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
-    "es_practica": true
+    "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Altipal S.A.S..",
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
   },
   {
-    "titulo": "Practicante Técnico o Tecnología en Gestión Humana",
-    "empresa": "Futesa s.a.",
-    "ubicacion": "Medellín, Antioquia",
-    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-practicante-tecnico-o-tecnologia-en-gestion-humana-en-medellin-492ABFB27CFF48EC61373E686DCF3405",
+    "titulo": "Practicante profesional  Ing de sistemas",
+    "empresa": "Eficacia",
+    "ubicacion": "Envigado, Antioquia",
+    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-practicante-profesional-ing-de-sistemas-en-envigado-0D489A8468D5B7A361373E686DCF3405",
     "fecha_publicacion": "Reciente",
     "fuente": "Computrabajo",
     "ramas": [
@@ -3417,36 +3653,10 @@
     "afinidad": "General",
     "es_exclusiva_fisica": false,
     "es_cierre_inminente": false,
+    "es_practica": true,
     "score_pensum": 0,
-    "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Futesa s.a..",
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
-    "es_practica": true
-  },
-  {
-    "titulo": "Practicante de psicología para Apartadó",
-    "empresa": "Empresa Confidencial",
-    "ubicacion": "Apartadó, Antioquia",
-    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-practicante-de-psicologia-para-apartado-en-apartado-6B86D0EF0013DD6E61373E686DCF3405",
-    "fecha_publicacion": "Reciente",
-    "fuente": "Computrabajo",
-    "ramas": [
-      {
-        "clave": "general",
-        "nombre": "Ingeniería General / Operaciones",
-        "color": "#64748b",
-        "score": 5
-      }
-    ],
-    "rama_principal": "Ingeniería General / Operaciones",
-    "color_principal": "#64748b",
-    "clave_principal": "general",
-    "afinidad": "General",
-    "es_exclusiva_fisica": false,
-    "es_cierre_inminente": false,
-    "score_pensum": 0,
-    "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Empresa Confidencial.",
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
-    "es_practica": true
+    "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Eficacia.",
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
   },
   {
     "titulo": "Aprendices técnicos",
@@ -3469,10 +3679,10 @@
     "afinidad": "General",
     "es_exclusiva_fisica": false,
     "es_cierre_inminente": false,
+    "es_practica": false,
     "score_pensum": 0,
     "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Prebel S.A..",
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
-    "es_practica": false
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
   },
   {
     "titulo": "Practicante Universitario Servicio",
@@ -3495,16 +3705,16 @@
     "afinidad": "General",
     "es_exclusiva_fisica": false,
     "es_cierre_inminente": false,
+    "es_practica": true,
     "score_pensum": 0,
     "mision": "Apoyo en el área de ingeniería y operaciones técnicas en SOLUCIONES EMPRESARIALES 360°.",
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
-    "es_practica": true
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
   },
   {
-    "titulo": "Aprendiz de Mantenimiento Industrial",
-    "empresa": "Empresa Confidencial",
-    "ubicacion": "Medellín, Antioquia",
-    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-aprendiz-de-mantenimiento-industrial-etapa-productiva-contrato-de-aprendizaje-en-medellin-12F29F50344A036361373E686DCF3405",
+    "titulo": "Practicante Ingeniería Mecánica",
+    "empresa": "Celerix SAS",
+    "ubicacion": "Rionegro, Antioquia",
+    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-practicante-ingenieria-mecanica-en-rionegro-B6955C07653E187E61373E686DCF3405",
     "fecha_publicacion": "Reciente",
     "fuente": "Computrabajo",
     "ramas": [
@@ -3521,62 +3731,10 @@
     "afinidad": "General",
     "es_exclusiva_fisica": false,
     "es_cierre_inminente": false,
+    "es_practica": true,
     "score_pensum": 0,
-    "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Empresa Confidencial.",
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
-    "es_practica": false
-  },
-  {
-    "titulo": "Aprendiz Técnico en Electricidad o Mantenimiento",
-    "empresa": "Supermercados Euro S.A",
-    "ubicacion": "Itagüí, Antioquia",
-    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-aprendiz-tecnico-en-electricidad-o-mantenimiento-contrato-de-aprendizaje-sena-en-itagui-DA2B689FD340CCDC61373E686DCF3405",
-    "fecha_publicacion": "Reciente",
-    "fuente": "Computrabajo",
-    "ramas": [
-      {
-        "clave": "general",
-        "nombre": "Ingeniería General / Operaciones",
-        "color": "#64748b",
-        "score": 5
-      }
-    ],
-    "rama_principal": "Ingeniería General / Operaciones",
-    "color_principal": "#64748b",
-    "clave_principal": "general",
-    "afinidad": "General",
-    "es_exclusiva_fisica": false,
-    "es_cierre_inminente": false,
-    "score_pensum": 0,
-    "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Supermercados Euro S.A.",
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
-    "es_practica": false
-  },
-  {
-    "titulo": "Aprendiz tecnólogo en electricidad industrial",
-    "empresa": "AGENCIA DE EMPLEO COMFAMA",
-    "ubicacion": "Medellín, Antioquia",
-    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-aprendiz-tecnologo-en-electricidad-industrial-en-medellin-2188EDEC5575532161373E686DCF3405",
-    "fecha_publicacion": "Reciente",
-    "fuente": "Computrabajo",
-    "ramas": [
-      {
-        "clave": "general",
-        "nombre": "Ingeniería General / Operaciones",
-        "color": "#64748b",
-        "score": 5
-      }
-    ],
-    "rama_principal": "Ingeniería General / Operaciones",
-    "color_principal": "#64748b",
-    "clave_principal": "general",
-    "afinidad": "General",
-    "es_exclusiva_fisica": false,
-    "es_cierre_inminente": false,
-    "score_pensum": 0,
-    "mision": "Apoyo en el área de ingeniería y operaciones técnicas en AGENCIA DE EMPLEO COMFAMA.",
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
-    "es_practica": false
+    "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Celerix SAS.",
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
   },
   {
     "titulo": "Auxiliar de calidad en plantas de alimentos",
@@ -3599,10 +3757,10 @@
     "afinidad": "General",
     "es_exclusiva_fisica": false,
     "es_cierre_inminente": false,
+    "es_practica": false,
     "score_pensum": 0,
     "mision": "Apoyo en el área de ingeniería y operaciones técnicas en A'HORA S.A.S..",
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
-    "es_practica": false
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
   },
   {
     "titulo": "Auxiliar de calidad",
@@ -3625,10 +3783,10 @@
     "afinidad": "General",
     "es_exclusiva_fisica": false,
     "es_cierre_inminente": false,
+    "es_practica": false,
     "score_pensum": 0,
     "mision": "Apoyo en el área de ingeniería y operaciones técnicas en Meridiano SAS.",
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
-    "es_practica": false
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
   },
   {
     "titulo": "Practicante de ingeniería ambiental para Apartadó",
@@ -3654,9 +3812,9 @@
     "afinidad": "General",
     "es_exclusiva_fisica": false,
     "es_cierre_inminente": false,
+    "es_practica": true,
     "score_pensum": 0,
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
-    "es_practica": true
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
   },
   {
     "titulo": "Practicante de ingeniería agrícola para Apartadó",
@@ -3682,9 +3840,9 @@
     "afinidad": "General",
     "es_exclusiva_fisica": false,
     "es_cierre_inminente": false,
+    "es_practica": true,
     "score_pensum": 0,
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
-    "es_practica": true
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
   },
   {
     "titulo": "Practicante TI (Soporte Técnico) - 8223",
@@ -3710,14 +3868,14 @@
     "afinidad": "General",
     "es_exclusiva_fisica": false,
     "es_cierre_inminente": false,
+    "es_practica": true,
     "score_pensum": 0,
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
-    "es_practica": true
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
   },
   {
     "titulo": "Practicante técnico, tecnólogo o profesional",
     "empresa": "Haceb",
-    "ubicacion": "Copacabana, Barbosa, Medellín, Girardota, Bello",
+    "ubicacion": "Remoto (Colombia)",
     "url": "https://www.magneto365.com/co/empleos/practicante-tecnico-tecnologo-o-profesional-1045368",
     "fecha_publicacion": "2026-09-04",
     "fuente": "Magneto365",
@@ -3738,8 +3896,8 @@
     "afinidad": "General",
     "es_exclusiva_fisica": false,
     "es_cierre_inminente": false,
+    "es_practica": true,
     "score_pensum": 0,
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
-    "es_practica": true
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
   }
 ]

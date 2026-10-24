@@ -19,7 +19,9 @@ Salida: index.html y dashboard_practicas.html.
 
 import json
 import os
+import re
 import sys
+from datetime import datetime, timezone
 
 from firma import ANIO, AUTOR, AVISO_LEGAL_CORTO, FIRMA_ID, encabezado_bot, marca_agua
 
@@ -54,6 +56,46 @@ def json_for_script(data):
     return json.dumps(data, ensure_ascii=False).replace("</", "<\\/")
 
 
+SMMLV_COP = 1_750_905  # Salario mínimo usado en los avisos rastreados
+
+
+def zona_y_modalidad(job):
+    """Clasifica cada vacante para el filtro "Dónde" y el chip de modalidad."""
+    alcance = str(job.get("alcance_geografico", ""))
+    texto = f"{job.get('modalidad', '')} {job.get('ubicacion', '')}".lower()
+    if "internacional" in alcance.lower():
+        return "exterior", "Remoto · exterior"
+    hibrido = re.search(r"h[ií]brid|hybrid", texto)
+    remoto = re.search(r"remot|teletrabajo", texto)
+    if alcance:
+        return "colombia", "Híbrido · Colombia" if hibrido and not remoto else "Remoto / híbrido · Colombia"
+    if hibrido:
+        return "antioquia", "Híbrido · Antioquia"
+    if remoto:
+        return "antioquia", "Remoto · Antioquia"
+    return "antioquia", "Presencial · Antioquia"
+
+
+def pago_estimado(texto):
+    """Pago mensual aproximado en COP a partir del texto de compensación (0 si no hay)."""
+    texto = str(texto or "")
+    montos = [int(m.replace(".", "").replace(",", "")) for m in re.findall(r"\$\s*([\d.,]{6,})", texto)]
+    montos = [m for m in montos if 300_000 <= m <= 30_000_000]
+    if montos:
+        return max(montos)
+    smmlv = re.search(r"(\d+(?:[.,]\d+)?)\s*SMMLV", texto, re.IGNORECASE)
+    if smmlv:
+        return int(float(smmlv.group(1).replace(",", ".")) * SMMLV_COP)
+    return 0
+
+
+def preparar_vacantes(vacantes):
+    for job in vacantes:
+        job["_zona"], job["_modalidad"] = zona_y_modalidad(job)
+        job["_pago"] = pago_estimado(job.get("compensacion"))
+    return vacantes
+
+
 def cargar_lista(nombre):
     datos = load_json(os.path.join(BASE_DIR, FUENTES[nombre]), [])
     if not isinstance(datos, list):
@@ -65,7 +107,8 @@ def cargar_lista(nombre):
 
 def build_full_html(vacantes, becas_data, convenios_data, retos_data):
     """Genera el HTML semántico con diseño de laboratorio a partir de los datos de los cuatro bots."""
-    vacantes_json_str = json_for_script(vacantes)
+    vacantes_json_str = json_for_script(preparar_vacantes(vacantes))
+    generado_iso = datetime.now(timezone.utc).isoformat(timespec="seconds")
     convenios_json_str = json_for_script(convenios_data)
     becas_json_str = json_for_script(becas_data)
     retos_json_str = json_for_script(retos_data)
@@ -129,9 +172,9 @@ def build_full_html(vacantes, becas_data, convenios_data, retos_data):
         </div>
       </div>
       <div class="header-meta">
-        <div class="status-beacon" title="Estado del bot y sincronización diaria">
+        <div class="status-beacon" title="Última actualización automática de los datos">
           <span class="beacon-dot"></span>
-          <span>SISTEMA ACTIVO</span>
+          <span id="lastUpdate" data-iso="{generado_iso}">Actualizado</span>
         </div>
         <div class="live-online-chip" id="liveOnlineBadge" title="Personas con la página abierta en este momento" hidden>
           <span class="live-pulse-dot"></span>
@@ -159,11 +202,22 @@ def build_full_html(vacantes, becas_data, convenios_data, retos_data):
   <main class="main-content">
 
     <section class="manifesto-box">
-      <h2>Radar de Oportunidades & Pasantías • Ingeniería Física (UNAL Medellín)</h2>
-      <p>
-        Plataforma automatizada desarrollada por <strong>Jimmy Stebym Rosero Barrera</strong>. El motor cruza las materias clave de nuestro pénsum oficial (<strong>Análisis de Datos & IA, Electrónica Digital / IoT / I2C, Electrónica Análoga, Metrología e Instrumentación, Simulación Numérica, Cuántica, Radiaciones y Diseño CAD</strong>) con las convocatorias del sector industrial, biomédico y tecnológico.
-      </p>
-      <p><strong>Cobertura:</strong> Antioquia con cualquier modalidad; resto de Colombia solo prácticas remotas o híbridas; exterior solo remotas (confirma en el aviso si aceptan postulantes desde Colombia).</p>
+      <h2>Radar de prácticas para Ingeniería Física · UNAL Medellín</h2>
+      <div class="stats-row">
+        <div class="stat-box">
+          <span class="stat-number">{len(vacantes)}</span>
+          <span class="stat-label">prácticas abiertas</span>
+        </div>
+        <div class="stat-box">
+          <span class="stat-number" id="statNuevas">—</span>
+          <span class="stat-label">nuevas en la última búsqueda</span>
+        </div>
+        <div class="stat-box">
+          <span class="stat-number">{total_retos}</span>
+          <span class="stat-label">retos y hackatones abiertos</span>
+        </div>
+      </div>
+      <p class="coverage-note"><strong>Cobertura:</strong> Antioquia con cualquier modalidad · resto de Colombia solo remoto o híbrido · exterior solo remoto. Clasificadas según el pénsum de Ingeniería Física de la UNAL.</p>
     </section>
 
     <!-- NAVEGACIÓN POR PESTAÑAS (TABS) -->
@@ -188,6 +242,27 @@ def build_full_html(vacantes, becas_data, convenios_data, retos_data):
     <!-- CONTENEDOR DE FILTROS Y BÚSQUEDA -->
     <div id="filterControls">
       <input type="text" id="searchInput" class="search-bar" placeholder="Buscar por materia, software o tecnología (ej. I2C, Python, Taller V, CAD, PLC, Cuántica, Radiaciones)..." onkeyup="handleFilter()">
+
+      <div class="filters-row">
+        <label class="filter-field">
+          <span>Ordenar por</span>
+          <select id="sortSelect" onchange="handleFilter()">
+            <option value="afinidad">Más afines a Ingeniería Física</option>
+            <option value="nuevas">Más nuevas</option>
+            <option value="pago">Mejor pagadas</option>
+            <option value="cierre">Cierran pronto</option>
+          </select>
+        </label>
+        <label class="filter-field">
+          <span>Dónde</span>
+          <select id="zoneSelect" onchange="handleFilter()">
+            <option value="ALL">Todas</option>
+            <option value="antioquia">Antioquia (cualquier modalidad)</option>
+            <option value="colombia">Remoto / híbrido en Colombia</option>
+            <option value="exterior">Remoto en el exterior</option>
+          </select>
+        </label>
+      </div>
       
       <div class="application-tracker">
         <label for="applicationFilter">Mis postulaciones <span>· se guarda en tu navegador</span></label>
@@ -599,6 +674,10 @@ def build_full_html(vacantes, becas_data, convenios_data, retos_data):
         }}
 
         const isApplied = appliedJobs.has(j.url);
+        if (isApplied) card.classList.add('is-applied');
+        const nueva = esNueva(j);
+        const publicada = textoPublicacion(j);
+        const tagsVisibles = j.ramas.slice(0, 3).map(r => `<span class="job-tag" style="border-left: 2px solid ${{r.color}}">${{escapeHtml(r.nombre)}}</span>`).join('');
         card.innerHTML = `
           <div>
             <header class="job-card-header">
@@ -606,9 +685,9 @@ def build_full_html(vacantes, becas_data, convenios_data, retos_data):
                 ${{escapeHtml(badgeText)}}
               </span>
               <div class="header-right">
-                <time class="job-date">${{escapeHtml(j.fecha_publicacion)}}</time>
+                ${{nueva ? '<span class="new-badge">Nueva</span>' : ''}}
                 <div class="info-trigger" tabindex="0">
-                  <span class="info-icon" title="Pasa el cursor o haz clic para ver el reto técnico y tareas">[i]</span>
+                  <span class="info-icon" title="Pasa el cursor para ver el reto técnico; un clic la deja fija y otro la cierra">[i]</span>
                   <div class="floating-cloud">
                     <div class="cloud-title">Reto Técnico & Misión</div>
                     <div class="cloud-body">${{escapeHtml(j.mision)}}</div>
@@ -622,22 +701,28 @@ def build_full_html(vacantes, becas_data, convenios_data, retos_data):
               </div>
             </header>
             <h3 class="job-title">${{escapeHtml(j.titulo)}}</h3>
-            <div class="job-company">Empresa: ${{escapeHtml(j.empresa)}}</div>
+            <div class="job-company">${{escapeHtml(j.empresa)}}</div>
+            <div class="job-chips">
+              <span class="job-chip zona-${{escapeHtml(j._zona || 'antioquia')}}">${{escapeHtml(j._modalidad || '')}}</span>
+              ${{publicada ? `<span class="job-chip chip-tiempo">${{escapeHtml(publicada)}}</span>` : ''}}
+            </div>
             <div class="job-specs">
-              <span>Ubicación: ${{escapeHtml(j.ubicacion)}}</span>
-              <span>Fuente: ${{escapeHtml(j.fuente)}}</span>
-              <span>Vigencia: confirmar en la publicación original</span>
+              <span>${{escapeHtml(j.ubicacion)}}</span>
+              <span class="job-source">Fuente: ${{escapeHtml(j.fuente)}}</span>
               ${{j.programa_inclusion_genero ? `<span>Programa STEM / inclusión de género · revisar requisitos de elegibilidad</span>` : ''}}
               ${{j.convocatoria_exclusiva_mujeres ? `<span>Convocatoria dirigida exclusivamente a mujeres según el aviso</span>` : ''}}
             </div>
             ${{j.compensacion ? `<div class="salary-highlight">Compensación: ${{escapeHtml(j.compensacion)}}</div>` : ''}}
-            <div class="job-tags">${{tagsHtml}}</div>
+            <div class="job-tags">${{tagsVisibles}}</div>
           </div>
           <footer class="job-card-footer">
             <a href="${{sanitizeUrl(j.url)}}" target="_blank" class="apply-link" rel="noopener noreferrer">
               <span>Postularme a la Oferta</span> <span aria-hidden="true">↗</span>
             </a>
-            <button type="button" class="application-toggle${{isApplied ? ' is-applied' : ''}}" aria-pressed="${{isApplied}}">${{isApplied ? '[✓ Ya me postulé]' : '[ Marcar como postulada ]'}}</button>
+            <label class="applied-check">
+              <input type="checkbox" class="application-toggle"${{isApplied ? ' checked' : ''}}>
+              <span>Ya me postulé</span>
+            </label>
           </footer>
         `;
 
@@ -668,16 +753,74 @@ def build_full_html(vacantes, becas_data, convenios_data, retos_data):
           card.addEventListener('mouseleave', () => card.classList.remove('info-cerrada'));
         }}
 
-        card.querySelector('.application-toggle').addEventListener('click', () => toggleApplied(j.url));
+        card.querySelector('.application-toggle').addEventListener('change', () => toggleApplied(j.url));
         container.appendChild(card);
       }});
     }}
 
     const PUEDE_HOVER = window.matchMedia('(hover: hover)').matches;
+    const DIA_MS = 86400000;
+
+    function diasDesde(iso) {{
+      if (!iso) return null;
+      const t = new Date(String(iso).slice(0, 10) + 'T12:00:00');
+      if (isNaN(t)) return null;
+      return Math.max(0, Math.floor((Date.now() - t) / DIA_MS));
+    }}
+
+    // "Nueva": el bot la encontró por primera vez en su corrida más reciente.
+    const ULTIMA_CORRIDA = allJobs.reduce((max, j) => (j.primera_deteccion || '') > max ? j.primera_deteccion : max, '');
+    function esNueva(j) {{
+      return Boolean(ULTIMA_CORRIDA) && j.primera_deteccion === ULTIMA_CORRIDA;
+    }}
+
+    function haceDias(d) {{
+      return d === 0 ? 'hoy' : (d === 1 ? 'ayer' : `hace ${{d}} días`);
+    }}
+
+    function textoPublicacion(j) {{
+      const pub = String(j.fecha_publicacion || '');
+      if (/^\\d{{4}}-\\d{{2}}-\\d{{2}}/.test(pub)) return `Publicada ${{haceDias(diasDesde(pub))}}`;
+      if (/^hace\\s/i.test(pub)) return `Publicada ${{pub.toLowerCase()}}`;
+      const d = diasDesde(j.primera_deteccion);
+      return d === null ? '' : `En el portal desde ${{haceDias(d)}}`;
+    }}
+
+    function ordenar(lista, criterio) {{
+      const copia = [...lista];
+      if (criterio === 'nuevas') {{
+        copia.sort((a, b) => String(b.primera_deteccion || '').localeCompare(String(a.primera_deteccion || '')) || (b.score_pensum || 0) - (a.score_pensum || 0));
+      }} else if (criterio === 'pago') {{
+        copia.sort((a, b) => (b._pago || 0) - (a._pago || 0) || (b.score_pensum || 0) - (a.score_pensum || 0));
+      }} else if (criterio === 'cierre') {{
+        copia.sort((a, b) => (a.fecha_cierre_iso || '9999').localeCompare(b.fecha_cierre_iso || '9999'));
+      }} else {{
+        copia.sort((a, b) => (b.score_pensum || 0) - (a.score_pensum || 0));
+      }}
+      return copia;
+    }}
+
+    function mostrarActualizacion() {{
+      const el = document.getElementById('lastUpdate');
+      if (el && el.dataset.iso) {{
+        const fecha = new Date(el.dataset.iso);
+        const zona = {{ timeZone: 'America/Bogota' }};
+        const dia = fecha.toLocaleDateString('es-CO', zona);
+        const hoy = new Date().toLocaleDateString('es-CO', zona);
+        const ayer = new Date(Date.now() - DIA_MS).toLocaleDateString('es-CO', zona);
+        const hora = fecha.toLocaleTimeString('es-CO', {{ ...zona, hour: 'numeric', minute: '2-digit' }});
+        const cuando = dia === hoy ? 'hoy' : (dia === ayer ? 'ayer' : dia);
+        el.textContent = `Actualizado ${{cuando}} ${{hora}}`;
+      }}
+      const nuevas = document.getElementById('statNuevas');
+      if (nuevas) nuevas.textContent = allJobs.filter(esNueva).length;
+    }}
 
     function handleFilter() {{
       const query = (document.getElementById('searchInput')?.value || '').toLowerCase();
       const applicationFilter = document.getElementById('applicationFilter')?.value || 'all';
+      const zone = document.getElementById('zoneSelect')?.value || 'ALL';
+      const sortBy = document.getElementById('sortSelect')?.value || 'afinidad';
       const appliedCount = allJobs.filter(j => appliedJobs.has(j.url)).length;
       const pendingCount = allJobs.length - appliedCount;
       const summaryEl = document.getElementById('applicationSummary');
@@ -688,6 +831,7 @@ def build_full_html(vacantes, becas_data, convenios_data, retos_data):
         if (currentTab === 'practicas' && !j.es_practica) return false;
         if (applicationFilter === 'pending' && appliedJobs.has(j.url)) return false;
         if (applicationFilter === 'applied' && !appliedJobs.has(j.url)) return false;
+        if (zone !== 'ALL' && j._zona !== zone) return false;
 
         const matchesBranch = (currentBranch === 'TODOS') || j.ramas.some(r => r.nombre === currentBranch);
         if (!matchesBranch) return false;
@@ -703,7 +847,7 @@ def build_full_html(vacantes, becas_data, convenios_data, retos_data):
         return matchesText;
       }});
 
-      renderJobs(filtered);
+      renderJobs(ordenar(filtered, sortBy));
     }}
 
     function toggleApplied(url) {{
@@ -786,6 +930,7 @@ def build_full_html(vacantes, becas_data, convenios_data, retos_data):
 
 
     setTheme(document.documentElement.dataset.theme || 'light');
+    mostrarActualizacion();
     handleFilter();
   </script>
   <!-- Contador real de personas en línea y visitas (Firebase Realtime Database) -->

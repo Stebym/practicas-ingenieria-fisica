@@ -1243,3 +1243,204 @@ article.job-card.info-cerrada .info-trigger .info-icon {
   border-color: var(--border-technical);
   box-shadow: none;
 }
+
+/* ==========================================================================
+   REDISEÑO 2026-10: RESUMEN, FILTROS EN UNA FILA Y TARJETAS MÁS LIMPIAS
+   ========================================================================== */
+.stats-row {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin: 14px 0 12px;
+}
+.stat-box {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 12px 16px;
+  border-radius: 12px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-technical);
+}
+.stat-number {
+  font-family: var(--font-display);
+  font-size: 1.9rem;
+  font-weight: 800;
+  line-height: 1.1;
+  color: var(--accent-cyan);
+}
+.stat-label {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
+section.manifesto-box p.coverage-note {
+  font-size: 0.84rem;
+}
+
+/* Pestañas y ramas: una sola fila con desplazamiento lateral */
+nav.tabs-nav,
+div.branch-pills {
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  scrollbar-width: thin;
+  -webkit-overflow-scrolling: touch;
+}
+button.tab-link,
+button.branch-pill {
+  flex: 0 0 auto;
+  white-space: nowrap;
+}
+div.branch-pills {
+  padding-bottom: 6px;
+}
+
+/* Ordenar y "Dónde" */
+.filters-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 12px 0;
+}
+.filter-field {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
+.filter-field select {
+  background: var(--bg-surface);
+  color: var(--text-main);
+  border: 1px solid var(--border-technical);
+  border-radius: 8px;
+  padding: 7px 10px;
+  font-family: var(--font-body);
+  font-size: 0.84rem;
+}
+
+/* Tarjetas: chips de modalidad y fecha, etiqueta "Nueva" */
+.new-badge {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 3px 8px;
+  border-radius: 999px;
+  background: var(--accent-emerald);
+  color: var(--text-inverse);
+}
+div.job-company {
+  margin-bottom: 8px;
+}
+.job-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+.job-chip {
+  font-size: 0.74rem;
+  font-weight: 600;
+  padding: 3px 9px;
+  border-radius: 999px;
+  border: 1px solid var(--border-technical);
+  background: var(--bg-chip);
+  color: var(--text-main);
+}
+.job-chip.zona-colombia {
+  border-color: var(--accent-violet);
+  color: var(--accent-violet);
+  background: transparent;
+}
+.job-chip.zona-exterior {
+  border-color: var(--accent-amber);
+  color: var(--accent-amber);
+  background: transparent;
+}
+.job-chip.chip-tiempo {
+  background: transparent;
+  color: var(--text-muted);
+}
+div.job-specs {
+  font-family: var(--font-body);
+  font-size: 0.84rem;
+}
+div.job-specs .job-source {
+  font-size: 0.76rem;
+  color: var(--text-dim);
+}
+
+/* "Ya me postulé" como casilla */
+.applied-check {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  cursor: pointer;
+  user-select: none;
+}
+.applied-check input {
+  width: 16px;
+  height: 16px;
+  accent-color: var(--accent-emerald);
+  cursor: pointer;
+}
+article.job-card.is-applied {
+  opacity: 0.72;
+}
+article.job-card.is-applied .applied-check {
+  color: var(--accent-emerald);
+  font-weight: 600;
+}
+
+@media (max-width: 720px) {
+  .stats-row {
+    grid-template-columns: 1fr;
+  }
+  .stat-box {
+    flex-direction: row;
+    align-items: baseline;
+    gap: 10px;
+  }
+  .stat-number {
+    font-size: 1.5rem;
+  }
+  .filter-field {
+    flex: 1 1 100%;
+  }
+  .filter-field select {
+    flex: 1;
+  }
+}
+
+/* Barras de desplazamiento discretas; en computador las pestañas usan varias líneas */
+nav.tabs-nav::-webkit-scrollbar,
+div.branch-pills::-webkit-scrollbar {
+  height: 4px;
+}
+nav.tabs-nav::-webkit-scrollbar-thumb,
+div.branch-pills::-webkit-scrollbar-thumb {
+  background: var(--border-technical);
+  border-radius: 4px;
+}
+@media (min-width: 900px) {
+  nav.tabs-nav {
+    flex-wrap: wrap;
+    overflow-x: visible;
+  }
+}
+
+/* Celular: los contadores ya están en el resumen; el encabezado queda corto */
+@media (max-width: 720px) {
+  .header-meta .kpi-chip {
+    display: none;
+  }
+  .header-meta {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+}

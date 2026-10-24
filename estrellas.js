@@ -973,7 +973,7 @@
         f.currentY -= f.speed * 0.6;
         if (f.currentY < -40) f.currentY = height + 40;
         const posX = ((i + 1) / 7) * width + Math.sin(f.phase) * 8;
-        ctx.fillStyle = isDark ? 'rgba(0, 229, 255, 0.20)' : 'rgba(2, 132, 199, 0.16)';
+        ctx.fillStyle = isDark ? 'rgba(0, 229, 255, 0.10)' : 'rgba(2, 132, 199, 0.08)';
         ctx.fillText(f.text, posX, f.currentY);
       }
     }
@@ -1039,43 +1039,48 @@
     const leftCenter = isWidescreen ? leftMarginWidth * 0.5 : width * 0.15;
     const rightCenter = isWidescreen ? rightMarginStart + (width - rightMarginStart) * 0.5 : width * 0.85;
 
-    // 2. ELEMENTOS DEL CORREDOR IZQUIERDO:
-    // A) Telescopio Espacial James Webb (JWST) 3D con parasol y espejos dorados
-    drawJamesWebbSatellite(leftCenter, Math.min(height * 0.25, 230), isDark);
+    // Los modelos 3D solo se dibujan si hay corredores laterales libres: en
+    // pantallas más angostas quedaban encima del texto y los filtros.
+    if (isWidescreen) {
+      // 2. ELEMENTOS DEL CORREDOR IZQUIERDO:
+      // A) Telescopio Espacial James Webb (JWST) 3D con parasol y espejos dorados
+      drawJamesWebbSatellite(leftCenter, Math.min(height * 0.25, 230), isDark);
 
-    // B) Procesador Cuántico QPU 3D con Qubits Transmon
-    if (height > 550) {
-      drawQuantumProcessor(leftCenter, Math.min(height * 0.62, 590), isDark);
-    }
+      // B) Procesador Cuántico QPU 3D con Qubits Transmon
+      if (height > 550) {
+        drawQuantumProcessor(leftCenter, Math.min(height * 0.62, 590), isDark);
+      }
 
-    // C) Planeta Gaseoso Gigante 3D (Saturno con Cassini y luna)
-    if (height > 850) {
-      const pRadius = Math.min(46, Math.max(28, leftMarginWidth * 0.22));
-      drawPlanetWithRings(leftCenter, Math.min(height * 1.05, 960), pRadius, isDark);
-    }
+      // C) Planeta Gaseoso Gigante 3D (Saturno con Cassini y luna)
+      if (height > 850) {
+        const pRadius = Math.min(46, Math.max(28, leftMarginWidth * 0.22));
+        drawPlanetWithRings(leftCenter, Math.min(height * 1.05, 960), pRadius, isDark);
+      }
 
-    // D) Paquete de Ondas ψ(x,t)
-    if (isWidescreen && leftMarginWidth > 130 && height > 1150) {
-      drawQuantumWave(leftCenter, Math.min(height * 1.35, 1280), leftMarginWidth, isDark);
-    }
+      // D) Paquete de Ondas ψ(x,t)
+      if (isWidescreen && leftMarginWidth > 130 && height > 1150) {
+        drawQuantumWave(leftCenter, Math.min(height * 1.35, 1280), leftMarginWidth, isDark);
+      }
 
-    // 3. ELEMENTOS DEL CORREDOR DERECHO:
-    // A) Estación Espacial Internacional (ISS) 3D con paneles rotativos
-    drawSpaceStationISS(rightCenter, Math.min(height * 0.26, 240), isDark);
+      // 3. ELEMENTOS DEL CORREDOR DERECHO:
+      // A) Estación Espacial Internacional (ISS) 3D con paneles rotativos
+      drawSpaceStationISS(rightCenter, Math.min(height * 0.26, 240), isDark);
 
-    // B) Átomo Cuántico 3D / Nanotecnología con orbitales en precesión
-    if (height > 550) {
-      drawQuantumAtom(rightCenter, Math.min(height * 0.60, 580), isDark);
-    }
+      // B) Átomo Cuántico 3D / Nanotecnología con orbitales en precesión
+      if (height > 550) {
+        drawQuantumAtom(rightCenter, Math.min(height * 0.60, 580), isDark);
+      }
 
-    // C) Púlsar Relativista con haces Doppler
-    if (height > 850) {
-      drawPulsar(rightCenter, Math.min(height * 0.98, 940), isDark);
-    }
+      // C) Púlsar Relativista con haces Doppler
+      if (height > 850) {
+        drawPulsar(rightCenter, Math.min(height * 0.98, 940), isDark);
+      }
 
-    // D) Diagrama de bandas E(k)
-    if (isWidescreen && (width - rightMarginStart) > 130 && height > 1150) {
-      drawBandStructure(rightCenter, Math.min(height * 1.32, 1260), width - rightMarginStart, isDark);
+      // D) Diagrama de bandas E(k)
+      if (isWidescreen && (width - rightMarginStart) > 130 && height > 1150) {
+        drawBandStructure(rightCenter, Math.min(height * 1.32, 1260), width - rightMarginStart, isDark);
+      }
+
     }
 
     // 4. FÓRMULAS CIENTÍFICAS FLOTANTES

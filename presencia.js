@@ -2,7 +2,7 @@
  * =============================================================================
  * PRESENCIA EN LÍNEA Y VISITAS REALES (PORTAL IPF)
  * Autor: Jimmy Stebym Rosero Barrera <jiroserob@unal.edu.co>
- * Licencia: MIT con descargo de responsabilidad (ver LICENSE)
+ * Licencia: PolyForm Noncommercial 1.0.0 con descargo de responsabilidad (ver LICENSE)
  * =============================================================================
  * Cada pestaña abierta registra un nodo en /presencia de Firebase Realtime
  * Database. Firebase lo borra solo cuando la pestaña se cierra o pierde la

@@ -76,6 +76,9 @@ Además del aviso de copyright, el proyecto lleva una firma interna (`FIRMA_ID` 
 
 `python verificar_firma.py index.html vacantes_practicas.json` dice si un archivo salió de este proyecto.
 
+### Licencia
+**PolyForm Noncommercial 1.0.0** (ver `LICENSE`): puedes ver, copiar, modificar y usar el código para estudio, investigación, proyectos personales, universidades y organizaciones sin ánimo de lucro, conservando las líneas `Required Notice`. **El uso comercial requiere autorización escrita del autor.** Las versiones publicadas antes del 24 de octubre de 2026 se distribuyeron bajo licencia MIT.
+
 ### Aviso legal
 Proyecto académico independiente. No somos agencia de empleo ni representamos a las empresas, universidades o plataformas citadas. La información proviene de fuentes públicas y puede cambiar o tener errores: verifica siempre en la fuente oficial. El autor no se hace responsable por decisiones, postulaciones, pérdidas o daños derivados del uso del portal, ni por el mal uso que terceros hagan del código o de los datos. Ver `LICENSE`.
 

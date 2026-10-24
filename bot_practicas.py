@@ -2,7 +2,7 @@
 =============================================================================
 BOT DE RASTREO DE PRÁCTICAS - INGENIERÍA FÍSICA (UNAL MEDELLÍN) · PORTAL IPF
 Autor: Jimmy Stebym Rosero Barrera <jiroserob@unal.edu.co>
-Licencia: MIT con descargo de responsabilidad (ver LICENSE)
+Licencia: PolyForm Noncommercial 1.0.0 con descargo de responsabilidad (ver LICENSE)
 =============================================================================
 Rastrea prácticas en LinkedIn, Magneto365, Computrabajo, ElEmpleo, FirstJob,
 portales corporativos y búsqueda web, y las prioriza según el pénsum de
@@ -28,6 +28,7 @@ from urllib.parse import quote, unquote, urlparse
 import requests
 import concurrent.futures
 
+from busqueda_web import buscar_web
 from firma import encabezado_bot, sellar_registros
 
 # Asegurar codificación UTF-8 en terminal de Windows
@@ -847,26 +848,9 @@ def scrape_web_query(query, search_scope="LOCAL"):
         "COLOMBIA": " Colombia práctica remota híbrida",
         "WORLDWIDE": " remote internship",
     }.get(search_scope, " Colombia práctica remota híbrida")
-    url = f"https://html.duckduckgo.com/html/?q={quote(query + suffix)}"
     try:
-        response = requests.get(url, headers=HEADERS, timeout=4)
-        if response.status_code != 200 or "anomaly" in response.text[:20000].lower():
-            # DuckDuckGo responde 202 con una página de "anomalía" cuando detecta bots.
-            print(f"    [!] Búsqueda web bloqueada (HTTP {response.status_code}): '{query}'")
-            return []
         results = []
-        links = re.findall(r'class="result__a"[^>]*href="([^"]+)"[^>]*>(.*?)</a>', response.text, re.DOTALL)
-        snippets = re.findall(r'class="result__snippet"[^>]*>(.*?)</', response.text, re.DOTALL)
-        for index, (link, raw_title) in enumerate(links):
-            if "uddg=" in link:
-                m_uddg = re.search(r'[?&]uddg=([^&]+)', link)
-                if m_uddg:
-                    link = unquote(m_uddg.group(1))
-            title = re.sub(r'<[^>]+>', ' ', unescape(raw_title))
-            title = re.sub(r'\s+', ' ', title).strip()
-            raw_snippet = snippets[index] if index < len(snippets) else ""
-            snippet = re.sub(r'<[^>]+>', ' ', unescape(raw_snippet))
-            snippet = re.sub(r'\s+', ' ', snippet).strip()
+        for link, title, snippet in buscar_web(query + suffix):
             evidence = f"{title} {snippet}"
             if not PRACTICE_RE.search(evidence):
                 continue

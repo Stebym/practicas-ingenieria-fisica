@@ -5,7 +5,7 @@
 FIRMA, AUTORÍA Y AVISO LEGAL DEL PORTAL IPF
 Proyecto: Portal de Prácticas, Retos y Becas • Ingeniería Física UNAL Medellín
 Autor: Jimmy Stebym Rosero Barrera <jiroserob@unal.edu.co>
-Licencia: MIT con descargo de responsabilidad (ver LICENSE)
+Licencia: PolyForm Noncommercial 1.0.0 con descargo de responsabilidad (ver LICENSE)
 =============================================================================
 Módulo compartido por todos los bots. Centraliza:
 1. La autoría y el aviso legal que se muestran en la página y en los datos.

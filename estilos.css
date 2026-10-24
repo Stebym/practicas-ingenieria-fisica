@@ -1230,3 +1230,16 @@ footer.site-footer p.schedule-note {
   color: inherit;
   text-decoration: underline;
 }
+
+/* [i] cerrada con clic: oculta la ayuda de esa vacante aunque el mouse siga encima */
+article.job-card.info-cerrada .floating-cloud {
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+article.job-card.info-cerrada .info-trigger .info-icon {
+  background: var(--bg-chip);
+  color: var(--accent-cyan);
+  border-color: var(--border-technical);
+  box-shadow: none;
+}

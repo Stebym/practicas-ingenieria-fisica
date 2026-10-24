@@ -5,7 +5,7 @@
 BOT DE CONVENIOS INTERNACIONALES UNAL (DRIVE / GOOGLE SHEETS DE LA DRE)
 Autor: Jimmy Stebym Rosero Barrera <jiroserob@unal.edu.co>
 Universidad Nacional de Colombia - Sede Medellín • Ingeniería Física
-Licencia: MIT con descargo de responsabilidad (ver LICENSE)
+Licencia: PolyForm Noncommercial 1.0.0 con descargo de responsabilidad (ver LICENSE)
 =============================================================================
 Descarga la hoja pública de convenios de la Dirección de Relaciones Exteriores
 de la UNAL y conserva los vigentes de ciencias, ingeniería y movilidad.

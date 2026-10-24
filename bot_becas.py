@@ -5,7 +5,7 @@
 BOT DE BECAS Y PASANTÍAS INTERNACIONALES (PORTAL IPF)
 Autor: Jimmy Stebym Rosero Barrera <jiroserob@unal.edu.co>
 Universidad Nacional de Colombia - Sede Medellín • Ingeniería Física
-Licencia: MIT con descargo de responsabilidad (ver LICENSE)
+Licencia: PolyForm Noncommercial 1.0.0 con descargo de responsabilidad (ver LICENSE)
 =============================================================================
 Rastrea becas vigentes del ICETEX y compila convocatorias internacionales de
 alto impacto para Ingeniería Física (IAESTE, DAAD, CERN, Mitacs, CSC, ITEC, Erasmus).

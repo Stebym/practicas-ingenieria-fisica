@@ -1,5 +1,5 @@
 @echo off
-rem Portal IPF - Jimmy Stebym Rosero Barrera (Licencia MIT, ver LICENSE)
+rem Portal IPF - Jimmy Stebym Rosero Barrera (Licencia PolyForm Noncommercial, ver LICENSE)
 rem Corre los cuatro bots de datos y luego el bot que arma la pagina.
 title Portal IPF - Bots
 cd /d "%~dp0"

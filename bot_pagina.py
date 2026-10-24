@@ -5,7 +5,7 @@
 BOT CONSTRUCTOR DE LA PÁGINA (PORTAL IPF)
 Autor: Jimmy Stebym Rosero Barrera <jiroserob@unal.edu.co>
 Universidad Nacional de Colombia - Sede Medellín • Ingeniería Física
-Licencia: MIT con descargo de responsabilidad (ver LICENSE)
+Licencia: PolyForm Noncommercial 1.0.0 con descargo de responsabilidad (ver LICENSE)
 =============================================================================
 Reúne lo que dejan los otros cuatro bots y arma la página pública:
   bot_practicas.py   -> vacantes_practicas.json
@@ -21,7 +21,7 @@ import json
 import os
 import sys
 
-from firma import ANIO, AUTOR, AVISO_LEGAL_CORTO, FIRMA_ID, REPOSITORIO, encabezado_bot, marca_agua
+from firma import ANIO, AUTOR, AVISO_LEGAL_CORTO, FIRMA_ID, encabezado_bot, marca_agua
 
 if sys.stdout.encoding != "utf-8":
     try:
@@ -71,7 +71,7 @@ def build_full_html(vacantes, becas_data, convenios_data, retos_data):
     retos_json_str = json_for_script(retos_data)
     firebase_config_str = json_for_script(load_json(FIREBASE_CONFIG_PATH, {}))
     total_retos = sum(1 for r in retos_data if r.get("tipo") != "Plataforma")
-    pie_firma = marca_agua(f"© {ANIO} {AUTOR} · Licencia MIT · Portal IPF")
+    pie_firma = marca_agua(f"© {ANIO} {AUTOR} · Licencia no comercial · Portal IPF")
 
     total_exclusivas = sum(1 for v in vacantes if v.get("es_exclusiva_fisica"))
     total_practicas = sum(1 for v in vacantes if v.get("es_practica"))
@@ -80,7 +80,7 @@ def build_full_html(vacantes, becas_data, convenios_data, retos_data):
 
     html = f"""<!DOCTYPE html>
 <html lang="es" data-ipf="{FIRMA_ID}">
-<!-- Portal IPF · © {ANIO} {AUTOR} · Licencia MIT · firma {FIRMA_ID} -->
+<!-- Portal IPF · © {ANIO} {AUTOR} · Licencia no comercial · firma {FIRMA_ID} -->
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -353,7 +353,7 @@ def build_full_html(vacantes, becas_data, convenios_data, retos_data):
       </div>
     </div>
     <p class="legal-note"><strong>Aviso legal:</strong> {AVISO_LEGAL_CORTO}</p>
-    <p class="signature-note">{pie_firma} · <a href="{REPOSITORIO}" target="_blank" rel="noopener noreferrer">Código fuente</a></p>
+    <p class="signature-note">{pie_firma}</p>
   </footer>
 
   <script>
@@ -641,19 +641,39 @@ def build_full_html(vacantes, becas_data, convenios_data, retos_data):
           </footer>
         `;
 
-        // Soporte de clic para abrir/cerrar la ventana de ayuda en móviles o escritorio
+        // Ventana de ayuda [i]: el hover la muestra; un clic la deja fija y otro
+        // clic la cierra (aunque el mouse siga encima). Solo afecta a esta vacante.
         const infoTrigger = card.querySelector('.info-trigger');
         if (infoTrigger) {{
+          const cerrarInfo = () => {{
+            infoTrigger.classList.remove('active');
+            card.classList.add('info-cerrada');
+            infoTrigger.blur();
+          }};
           infoTrigger.addEventListener('click', (e) => {{
             e.stopPropagation();
-            infoTrigger.classList.toggle('active');
+            const visible = infoTrigger.classList.contains('active') ||
+              (PUEDE_HOVER && card.matches(':hover') && !card.classList.contains('info-cerrada'));
+            if (visible) {{
+              cerrarInfo();
+            }} else {{
+              card.classList.remove('info-cerrada');
+              infoTrigger.classList.add('active');
+            }}
           }});
+          card.querySelector('.floating-cloud')?.addEventListener('click', (e) => {{
+            e.stopPropagation();
+            cerrarInfo();
+          }});
+          card.addEventListener('mouseleave', () => card.classList.remove('info-cerrada'));
         }}
 
         card.querySelector('.application-toggle').addEventListener('click', () => toggleApplied(j.url));
         container.appendChild(card);
       }});
     }}
+
+    const PUEDE_HOVER = window.matchMedia('(hover: hover)').matches;
 
     function handleFilter() {{
       const query = (document.getElementById('searchInput')?.value || '').toLowerCase();
@@ -764,10 +784,6 @@ def build_full_html(vacantes, becas_data, convenios_data, retos_data):
       window.scrollTo({{ top: 0, behavior: 'smooth' }});
     }});
 
-    // Cerrar tooltip si se hace clic afuera
-    document.addEventListener('click', () => {{
-      document.querySelectorAll('.info-trigger.active').forEach(el => el.classList.remove('active'));
-    }});
 
     setTheme(document.documentElement.dataset.theme || 'light');
     handleFilter();

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="es" data-ipf="7c9aa49595688885">
-<!-- Portal IPF · © 2026 Jimmy Stebym Rosero Barrera · Licencia MIT · firma 7c9aa49595688885 -->
+<!-- Portal IPF · © 2026 Jimmy Stebym Rosero Barrera · Licencia no comercial · firma 7c9aa49595688885 -->
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -273,7 +273,7 @@
       </div>
     </div>
     <p class="legal-note"><strong>Aviso legal:</strong> Proyecto académico independiente. No somos agencia de empleo ni representamos a las empresas, universidades o plataformas citadas. La información proviene de fuentes públicas y puede cambiar o tener errores: verifica siempre en la fuente oficial antes de postularte. El autor no se hace responsable por decisiones, postulaciones, pérdidas o daños derivados del uso de este portal ni por el mal uso que terceros hagan del código o de los datos.</p>
-    <p class="signature-note">© 2026 Jimmy Stebym Rosero Barr⁠​‌‌‌‌‌​​‌​​‌‌​‌​‌​‌​​‌​​‌​​‌​‌​‌‌​​‌​‌​‌​‌‌​‌​​​‌​​​‌​​​‌​​​​‌​‌⁠era · Licencia MIT · Portal IPF · <a href="https://github.com/Stebym/practicas-ingenieria-fisica" target="_blank" rel="noopener noreferrer">Código fuente</a></p>
+    <p class="signature-note">© 2026 Jimmy Stebym Rosero Barrera ⁠​‌‌‌‌‌​​‌​​‌‌​‌​‌​‌​​‌​​‌​​‌​‌​‌‌​​‌​‌​‌​‌‌​‌​​​‌​​​‌​​​‌​​​​‌​‌⁠· Licencia no comercial · Portal IPF</p>
   </footer>
 
   <script>
@@ -561,19 +561,39 @@
           </footer>
         `;
 
-        // Soporte de clic para abrir/cerrar la ventana de ayuda en móviles o escritorio
+        // Ventana de ayuda [i]: el hover la muestra; un clic la deja fija y otro
+        // clic la cierra (aunque el mouse siga encima). Solo afecta a esta vacante.
         const infoTrigger = card.querySelector('.info-trigger');
         if (infoTrigger) {
+          const cerrarInfo = () => {
+            infoTrigger.classList.remove('active');
+            card.classList.add('info-cerrada');
+            infoTrigger.blur();
+          };
           infoTrigger.addEventListener('click', (e) => {
             e.stopPropagation();
-            infoTrigger.classList.toggle('active');
+            const visible = infoTrigger.classList.contains('active') ||
+              (PUEDE_HOVER && card.matches(':hover') && !card.classList.contains('info-cerrada'));
+            if (visible) {
+              cerrarInfo();
+            } else {
+              card.classList.remove('info-cerrada');
+              infoTrigger.classList.add('active');
+            }
           });
+          card.querySelector('.floating-cloud')?.addEventListener('click', (e) => {
+            e.stopPropagation();
+            cerrarInfo();
+          });
+          card.addEventListener('mouseleave', () => card.classList.remove('info-cerrada'));
         }
 
         card.querySelector('.application-toggle').addEventListener('click', () => toggleApplied(j.url));
         container.appendChild(card);
       });
     }
+
+    const PUEDE_HOVER = window.matchMedia('(hover: hover)').matches;
 
     function handleFilter() {
       const query = (document.getElementById('searchInput')?.value || '').toLowerCase();
@@ -684,10 +704,6 @@
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 
-    // Cerrar tooltip si se hace clic afuera
-    document.addEventListener('click', () => {
-      document.querySelectorAll('.info-trigger.active').forEach(el => el.classList.remove('active'));
-    });
 
     setTheme(document.documentElement.dataset.theme || 'light');
     handleFilter();

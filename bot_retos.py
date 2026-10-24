@@ -5,7 +5,7 @@
 BOT DE RASTREO: RETOS, HACKATONES Y COMPETENCIAS (PORTAL IPF)
 Autor: Jimmy Stebym Rosero Barrera <jiroserob@unal.edu.co>
 Universidad Nacional de Colombia - Sede Medellín • Ingeniería Física
-Licencia: MIT con descargo de responsabilidad (ver LICENSE)
+Licencia: PolyForm Noncommercial 1.0.0 con descargo de responsabilidad (ver LICENSE)
 =============================================================================
 Rastrea oportunidades para participar como estudiante:
 1. Hackatones en línea abiertos o próximos (API pública de Devpost).
@@ -28,10 +28,11 @@ import sys
 import time
 from datetime import date, datetime
 from html import unescape
-from urllib.parse import quote, unquote, urlparse
+from urllib.parse import urlparse
 
 import requests
 
+from busqueda_web import buscar_web
 from firma import encabezado_bot, sellar_registros
 
 if sys.stdout.encoding != "utf-8":
@@ -273,27 +274,11 @@ def scrape_drivendata():
 
 def scrape_web(query, alcance):
     """Retos en Colombia vía búsqueda web: son pistas y se marcan para verificar vigencia."""
-    try:
-        r = requests.get(f"https://html.duckduckgo.com/html/?q={quote(query)}", headers=HEADERS, timeout=8)
-    except requests.RequestException:
-        return []
-    if r.status_code != 200 or "anomaly" in r.text[:20000].lower():
-        # DuckDuckGo responde 202 con una página de "anomalía" cuando detecta bots.
-        print(f"    [!] Búsqueda web bloqueada (HTTP {r.status_code}); se omite '{query}'")
-        return []
-    page = r.text
     anio = date.today().year
-    links = re.findall(r'class="result__a"[^>]*href="([^"]+)"[^>]*>(.*?)</a>', page, re.DOTALL)
-    snippets = re.findall(r'class="result__snippet"[^>]*>(.*?)</', page, re.DOTALL)
     results = []
-    for i, (link, raw_title) in enumerate(links):
-        m = re.search(r"[?&]uddg=([^&]+)", link)
-        if m:
-            link = unquote(m.group(1))
-        if not link.startswith("http") or any(d in link for d in WEB_DOMINIOS_EXCLUIDOS):
+    for link, title, snippet in buscar_web(query):
+        if any(d in link for d in WEB_DOMINIOS_EXCLUIDOS):
             continue
-        title = html_to_text(raw_title)
-        snippet = html_to_text(snippets[i]) if i < len(snippets) else ""
         evidencia = f"{title} {snippet}"
         if not RETO_RE.search(evidencia):
             continue
@@ -362,7 +347,7 @@ def main():
         encontrados = scrape_web(query, alcance)
         print(f"    '{query}': {len(encontrados)}")
         retos.extend(encontrados)
-        time.sleep(1.0)
+
 
     unicos = {}
     for reto in retos:

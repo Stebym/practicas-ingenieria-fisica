@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Portal IPF - Jimmy Stebym Rosero Barrera (Licencia MIT, ver LICENSE)
+# Portal IPF - Jimmy Stebym Rosero Barrera (Licencia PolyForm Noncommercial, ver LICENSE)
 # Corre los cuatro bots de datos y luego el bot que arma la página.
 # Uso: ./ejecutar_todo.sh            (todos)
 #      ./ejecutar_todo.sh retos becas (solo esos, y luego la página)

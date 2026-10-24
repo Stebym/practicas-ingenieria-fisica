@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 Verifica si un archivo (HTML o JSON) contiene la firma interna del Portal IPF.
-Autor: Jimmy Stebym Rosero Barrera • Licencia MIT (ver LICENSE)
+Autor: Jimmy Stebym Rosero Barrera • Licencia PolyForm Noncommercial (ver LICENSE)
 
 Uso:
     python verificar_firma.py index.html vacantes_practicas.json retos_hackatones.json

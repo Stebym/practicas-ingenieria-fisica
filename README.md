@@ -36,24 +36,56 @@ Este proyecto fue construido aplicando estándares profesionales de **Desarrollo
 
 ---
 
-## 🚀 Arquitectura y Automatización
-* `bot_practicas.py`: Motor de rastreo y clasificación de prácticas y empleo industrial en Python (Computrabajo, LinkedIn, Magneto365, ElEmpleo, FirstJob).
-* `bot_becas_internacionales.py`: Bot de rastreo matutino para oportunidades globales y sincronización del catálogo oficial de convenios UNAL DRE (Google Sheets, ICETEX, IAESTE, DAAD, CERN, Mitacs).
-* `convenios_internacionales.json`: Base de datos de más de 1.150 convenios oficiales vigentes suscritos por la UNAL para ingeniería y ciencias en 63 países con enlaces a los documentos oficiales en Google Drive.
-* `becas_internacionales.json`: Convocatorias internacionales de becas completas y pasantías técnicas remuneradas.
-* `convocatorias_destacadas.json`: Catálogo de convocatorias de alto impacto para Ingeniería Física y carreras afines (Corona, Argos, Haceb, ISA, EPM, Enel, ERCO, Sievert, Gobernación de Antioquia, AKT, Protección, etc.).
-* `empresas_antioquia.json`: Directorio de empresas y sectores para ampliar la búsqueda a empleadores locales.
-* `estilos.css`: Sistema de diseño visual y responsivo (laboratorio técnico / blueprint).
-* `fondo_fisica.svg` y `fondo_fisica_movil.svg`: Fondos vectoriales adaptados a escritorio y móvil con planetas, estrellas y ecuaciones.
-* `index.html`: Dashboard interactivo con buscador en vivo y filtros por pestañas:
-  * **💼 Todas las Vacantes**
-  * **🎯 Exclusivas: Piden Físico / Ing. Físico**
-  * **⏳ Próximas a Finalizar (< 5 Días)**
-  * **🚀 Ecosistema Nacional & Retos (Interacpedia, Estado Joven, Torre.ai, SENA SGVA)**
-  * **🌍 Becas & Pasantías Internacionales (ICETEX, IAESTE, DAAD, CERN, Mitacs y Convenios UNAL)**
-* `.github/workflows/auto_update.yml`: Flujo nocturno que inicia el rastreo a las 19:30 (hora Colombia) y publica la página al terminar.
-* `.github/workflows/becas_update.yml`: Flujo matutino que rastrea becas y convenios internacionales a las 07:00 AM (hora Colombia).
-* `.github/workflows/static.yml`: Despliega automáticamente `index.html`, `estilos.css`, `estrellas.js`, `fondo_fisica.svg`, `fondo_fisica_movil.svg`, `vacantes_practicas.json`, `convenios_internacionales.json` y `becas_internacionales.json` a GitHub Pages cada vez que se actualiza `main` o al concluir cualquiera de los bots diarios.
+## 🚀 Arquitectura: cinco bots automáticos
+
+Cuatro bots recolectan datos y un quinto arma la página. Todo corre solo en GitHub Actions.
+
+| Bot | Qué hace | Salida | Horario (Colombia) |
+|---|---|---|---|
+| `bot_practicas.py` | Prácticas en LinkedIn, Magneto365, Computrabajo, ElEmpleo, FirstJob, portales corporativos y 200+ empresas objetivo | `vacantes_practicas.json` / `.csv` | 19:30 |
+| `bot_retos.py` | Hackatones en línea (Devpost), competencias de datos e IA (Zindi, DrivenData), retos de ciudad e innovación abierta en Colombia y plataformas recurrentes (`retos_destacados.json`) | `retos_hackatones.json` | 06:00 |
+| `bot_becas.py` | Becas vigentes del ICETEX y convocatorias internacionales (IAESTE, DAAD, CERN, Mitacs, CSC, ITEC, Erasmus) | `becas_internacionales.json` | 07:00 |
+| `bot_convenios.py` | Convenios vigentes de la UNAL desde la hoja pública de la DRE (Google Drive / Sheets) | `convenios_internacionales.json` | 07:30 |
+| `bot_pagina.py` | Junta los cuatro JSON, arma `index.html`, incrusta la firma y publica en GitHub Pages | `index.html` | Al terminar cualquiera de los anteriores |
+
+Cada bot tiene su propio workflow (`auto_update.yml`, `retos_update.yml`, `becas_update.yml`, `convenios_update.yml`) y solo sube sus datos. `static.yml` ("Construir y publicar página") se dispara cuando cualquiera termina. Si un bot falla, los demás siguen y la página se arma con los últimos datos buenos.
+
+En local: `./ejecutar_todo.sh` (o `ejecutar_todo.bat` en Windows) corre los cuatro bots y luego la página; `./ejecutar_todo.sh retos` corre solo uno.
+
+Otros archivos:
+* `firma.py` / `verificar_firma.py`: autoría, aviso legal y firma interna del proyecto (ver abajo).
+* `presencia.js`, `firebase_config.json`, `database.rules.json`: contador real de personas en línea y visitas.
+* `empresas_objetivo.json`, `empresas_antioquia.json`, `convocatorias_destacadas.json`, `config_ramas.json`: catálogos que usa el bot de prácticas.
+* `portales_workday.json`: portales de empleo Workday de empresas (Rockwell, 3M, Medtronic, Hitachi…). Para agregar una empresa basta copiar de su portal `https://<tenant>.<servidor>.myworkdayjobs.com/<sitio>` esos tres datos.
+* `estilos.css`, `estrellas.js`, `fondo_fisica*.svg`: diseño visual.
+
+### Contador real de personas en línea (Firebase)
+La página ya no muestra cifras inventadas: si Firebase no está configurado, el contador se oculta. Para activarlo (gratis, plan Spark):
+1. Entra a <https://console.firebase.google.com>, crea un proyecto y agrega una **app web**.
+2. En *Build → Realtime Database* crea la base de datos (ubicación `us-central1`, modo bloqueado).
+3. En la pestaña *Reglas* pega el contenido de `database.rules.json` y publica.
+4. Copia el objeto `firebaseConfig` de la app web (apiKey, authDomain, databaseURL, projectId, appId…) en `firebase_config.json` y súbelo. Estos datos son públicos por diseño; la seguridad la dan las reglas.
+
+Cada pestaña abierta se registra en `/presencia` y Firebase la borra sola al cerrarse, así que el número es real; `/visitas` suma una por sesión.
+
+### Firma y autoría
+Además del aviso de copyright, el proyecto lleva una firma interna (`FIRMA_ID` en `firma.py`):
+* marca de agua invisible (caracteres de ancho cero) en el pie de la página;
+* metadatos `ipf-<firma>` en el HTML y la hoja de estilos;
+* un `_sello` en cada registro de los JSON, derivado de la firma y del enlace de la oportunidad.
+
+`python verificar_firma.py index.html vacantes_practicas.json` dice si un archivo salió de este proyecto.
+
+### Aviso legal
+Proyecto académico independiente. No somos agencia de empleo ni representamos a las empresas, universidades o plataformas citadas. La información proviene de fuentes públicas y puede cambiar o tener errores: verifica siempre en la fuente oficial. El autor no se hace responsable por decisiones, postulaciones, pérdidas o daños derivados del uso del portal, ni por el mal uso que terceros hagan del código o de los datos. Ver `LICENSE`.
+
+### Alcance geográfico y de perfil
+* **Antioquia:** se publican prácticas con cualquier modalidad (presencial, híbrida o remota).
+* **Resto de Colombia:** solo si el aviso dice remoto o híbrido.
+* **Exterior:** solo prácticas remotas (lo híbrido en otro país no sirve); hay que confirmar la elegibilidad desde Colombia.
+* Solo prácticas (practicante, aprendiz, pasantía, intern, estudiante en práctica); los empleos regulares se descartan.
+* Se descartan los avisos cuyo título pide solo carreras ajenas (administración, psicología, ingeniería industrial, ambiental, de alimentos, ventas, etc.) sin mencionar una carrera afín.
+* Las vacantes que una noche no reaparecen se vuelven a verificar durante 21 días antes de retirarse.
 
 ### Cobertura de fuentes
 Rastreo activo multi-plataforma:

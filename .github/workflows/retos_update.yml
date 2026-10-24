@@ -1,0 +1,51 @@
+# Portal IPF · Jimmy Stebym Rosero Barrera · Licencia MIT (ver LICENSE)
+name: Bot de Retos y Hackatones
+
+on:
+  schedule:
+    # Todos los días a las 11:00 UTC (06:00 hora Colombia).
+    - cron: '0 11 * * *'
+  workflow_dispatch: # Permite ejecutarlo manualmente con un botón en GitHub
+
+permissions:
+  contents: write
+
+jobs:
+  rastrear:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Descargar repositorio
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Instalar dependencias
+        run: pip install -r requirements.txt
+
+      - name: Ejecutar bot_retos.py
+        run: python bot_retos.py
+
+      - name: Guardar datos actualizados
+        # Solo se suben los datos de este bot; la página la arma
+        # "Construir y publicar página" al terminar este flujo.
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add retos_hackatones.json
+          if git diff --staged --quiet; then
+            echo "Sin cambios nuevos."
+            exit 0
+          fi
+          git commit -m "Auto-update: Retos y hackatones [$(date '+%Y-%m-%d')]"
+          # Otros bots pueden haber subido sus datos mientras tanto.
+          for intento in 1 2 3 4 5; do
+            git pull --rebase origin main && git push origin main && exit 0
+            sleep $((intento * 10))
+          done
+          exit 1

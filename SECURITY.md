@@ -10,7 +10,7 @@
 ## 1. Arquitectura de Cero Credenciales (Zero-Key Architecture)
 
 Este repositorio opera bajo una arquitectura de **Cero Credenciales**:
-* **Sin claves de API privadas en el código:** Los módulos de rastreo (`bot_practicas.py` y `bot_becas_internacionales.py`) consultan únicamente puntos de enlace públicos de acceso libre (API pública de búsqueda de Magneto365, catálogo público de la DRE de la Universidad Nacional, convocatorias abiertas del ICETEX e indexadores de empleo).
+* **Sin claves de API privadas en el código:** Los módulos de rastreo (`bot_practicas.py`, `bot_retos.py`, `bot_becas.py` y `bot_convenios.py`) consultan únicamente puntos de enlace públicos de acceso libre (API pública de Magneto365, API pública de Devpost y Zindi, catálogo público de la DRE de la Universidad Nacional, convocatorias abiertas del ICETEX e indexadores de empleo). La configuración de Firebase del contador en línea es pública por diseño y está protegida por las reglas de `database.rules.json`.
 * **Sin bases de datos con contraseñas:** La información se procesa y consolida en archivos estáticos (`vacantes_practicas.json`, `convenios_internacionales.json`, `becas_internacionales.json`), eliminando riesgos de inyección SQL (SQLi) o robo de contraseñas de bases de datos.
 * **Sin credenciales financieras ni cuentas de pago:** No existe ningún servicio de pago, cuenta de facturación ni tarjeta asociada a las consultas del bot.
 

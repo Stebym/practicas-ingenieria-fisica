@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
-# Bot de Becas y Convenios Internacionales - Ingeniería Física UNAL
+# Bots de Becas y Convenios Internacionales - Portal IPF (Jimmy Stebym Rosero Barrera)
 set -e
 cd "$(dirname "$0")"
-
-echo "Iniciando rastreo de becas y convenios internacionales..."
-python3 bot_becas_internacionales.py
+./ejecutar_todo.sh becas convenios

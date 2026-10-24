@@ -1,0 +1,2539 @@
+[
+  {
+    "titulo": "The Geologic Enhanced Mapping System (GEMS) Prize Challenge",
+    "organizador": "DrivenData",
+    "plataforma": "DrivenData",
+    "tipo": "Competencia de datos / IA",
+    "modalidad": "En línea",
+    "ubicacion": "En línea (internacional; revisar elegibilidad de premios)",
+    "pais": "Internacional",
+    "url": "https://www.drivendata.org/competitions/306/competition-doe-gems/",
+    "fechas": "Cierra 2026-12-03",
+    "fecha_cierre_iso": "2026-12-03",
+    "premio": "$300,000 USD",
+    "temas": [
+      "energy",
+      "science"
+    ],
+    "apto_principiantes": false,
+    "estado": "Abierto",
+    "fuente": "DrivenData",
+    "areas_perfil": [
+      "Energía y clima",
+      "Datos, IA y simulación",
+      "Materiales y manufactura"
+    ],
+    "score": 70,
+    "_sello": "fc845b804fef"
+  },
+  {
+    "titulo": "Nebius x NVIDIA Global AI Hackathon",
+    "organizador": "nebius",
+    "plataforma": "Devpost",
+    "tipo": "Hackatón",
+    "modalidad": "En línea",
+    "ubicacion": "En línea (internacional)",
+    "pais": "Internacional",
+    "url": "https://nebiusglobalaihackathon.devpost.com/",
+    "fechas": "Aug 26 - Oct 30, 2026",
+    "fecha_cierre_iso": "2026-10-30",
+    "premio": "$50,000",
+    "temas": [
+      "Machine Learning/AI",
+      "Beginner Friendly",
+      "Robotic Process Automation"
+    ],
+    "apto_principiantes": true,
+    "inscritos": 26919,
+    "estado": "Abierto",
+    "fuente": "Devpost API",
+    "areas_perfil": [
+      "Datos, IA y simulación",
+      "Hardware, IoT y electrónica"
+    ],
+    "score": 55,
+    "_sello": "6cb08e78556a"
+  },
+  {
+    "titulo": "IEEE ClimateChain Global Hackathon",
+    "organizador": "IEEE Turkey",
+    "plataforma": "Devpost",
+    "tipo": "Hackatón",
+    "modalidad": "En línea",
+    "ubicacion": "En línea (internacional)",
+    "pais": "Internacional",
+    "url": "https://ieee-climatechain-hack.devpost.com/",
+    "fechas": "Oct 05 - 25, 2026",
+    "fecha_cierre_iso": "2026-10-25",
+    "premio": "$3,000",
+    "temas": [
+      "Blockchain",
+      "Machine Learning/AI",
+      "Social Good"
+    ],
+    "apto_principiantes": false,
+    "inscritos": 1159,
+    "estado": "Abierto",
+    "fuente": "Devpost API",
+    "areas_perfil": [
+      "Energía y clima",
+      "Datos, IA y simulación"
+    ],
+    "score": 50,
+    "_sello": "f4afbe2e75ba"
+  },
+  {
+    "titulo": "OpenCV AI Competition 2026, powered by AWS",
+    "organizador": "OpenCV",
+    "plataforma": "Devpost",
+    "tipo": "Hackatón",
+    "modalidad": "En línea",
+    "ubicacion": "En línea (internacional)",
+    "pais": "Internacional",
+    "url": "https://opencv26.devpost.com/",
+    "fechas": "Aug 26 - Oct 27, 2026",
+    "fecha_cierre_iso": "2026-10-27",
+    "premio": "$20,250",
+    "temas": [
+      "IoT",
+      "Machine Learning/AI",
+      "Serverless"
+    ],
+    "apto_principiantes": false,
+    "inscritos": 5956,
+    "estado": "Abierto",
+    "fuente": "Devpost API",
+    "areas_perfil": [
+      "Datos, IA y simulación",
+      "Hardware, IoT y electrónica"
+    ],
+    "score": 50,
+    "_sello": "45849a42fa21"
+  },
+  {
+    "titulo": "HackWithAditya",
+    "organizador": "Aditya University",
+    "plataforma": "Devpost",
+    "tipo": "Hackatón",
+    "modalidad": "En línea",
+    "ubicacion": "En línea (internacional)",
+    "pais": "Internacional",
+    "url": "https://hackwithaditya.devpost.com/",
+    "fechas": "Oct 16 - Nov 25, 2026",
+    "fecha_cierre_iso": "2026-11-25",
+    "premio": "₹500,000",
+    "temas": [
+      "Education",
+      "Health",
+      "Machine Learning/AI"
+    ],
+    "apto_principiantes": false,
+    "inscritos": 73,
+    "estado": "Abierto",
+    "fuente": "Devpost API",
+    "areas_perfil": [
+      "Datos, IA y simulación",
+      "Salud y biomédica"
+    ],
+    "score": 50,
+    "_sello": "0b1014aeb9e0"
+  },
+  {
+    "titulo": "EthnoHack",
+    "organizador": "ETHCSTWIN",
+    "plataforma": "Devpost",
+    "tipo": "Hackatón",
+    "modalidad": "En línea",
+    "ubicacion": "En línea (internacional)",
+    "pais": "Internacional",
+    "url": "https://ethnohack2026.devpost.com/",
+    "fechas": "Nov 02 - 08, 2026",
+    "fecha_cierre_iso": "2026-11-08",
+    "premio": "",
+    "temas": [
+      "Databases",
+      "Health",
+      "Machine Learning/AI"
+    ],
+    "apto_principiantes": false,
+    "inscritos": 130,
+    "estado": "Próximamente",
+    "fuente": "Devpost API",
+    "areas_perfil": [
+      "Datos, IA y simulación",
+      "Salud y biomédica"
+    ],
+    "score": 40,
+    "_sello": "ccedab15af7a"
+  },
+  {
+    "titulo": "Syntax Summit",
+    "organizador": "Student Organization",
+    "plataforma": "Devpost",
+    "tipo": "Hackatón",
+    "modalidad": "En línea",
+    "ubicacion": "En línea (internacional)",
+    "pais": "Internacional",
+    "url": "https://syntax-summit.devpost.com/",
+    "fechas": "Jul 18, 2026 - Jan 14, 2027",
+    "fecha_cierre_iso": "2027-01-14",
+    "premio": "",
+    "temas": [
+      "DevOps",
+      "Machine Learning/AI",
+      "Robotic Process Automation"
+    ],
+    "apto_principiantes": false,
+    "inscritos": 367,
+    "estado": "Abierto",
+    "fuente": "Devpost API",
+    "areas_perfil": [
+      "Datos, IA y simulación",
+      "Hardware, IoT y electrónica"
+    ],
+    "score": 40,
+    "_sello": "159cf6067071"
+  },
+  {
+    "titulo": "Flu Shot Learning: Predict H1N1 and Seasonal Flu Vaccines",
+    "organizador": "DrivenData",
+    "plataforma": "DrivenData",
+    "tipo": "Competencia de datos / IA",
+    "modalidad": "En línea",
+    "ubicacion": "En línea (internacional; revisar elegibilidad de premios)",
+    "pais": "Internacional",
+    "url": "https://www.drivendata.org/competitions/66/flu-shot-learning/",
+    "fechas": "Cierra 2028-07-03",
+    "fecha_cierre_iso": "2028-07-03",
+    "premio": "",
+    "temas": [
+      "health"
+    ],
+    "apto_principiantes": false,
+    "estado": "Abierto",
+    "fuente": "DrivenData",
+    "areas_perfil": [
+      "Datos, IA y simulación",
+      "Salud y biomédica"
+    ],
+    "score": 40,
+    "_sello": "71e719dcf1cb"
+  },
+  {
+    "titulo": "Conser-vision Practice Area: Image Classification",
+    "organizador": "DrivenData",
+    "plataforma": "DrivenData",
+    "tipo": "Competencia de datos / IA",
+    "modalidad": "En línea",
+    "ubicacion": "En línea (internacional; revisar elegibilidad de premios)",
+    "pais": "Internacional",
+    "url": "https://www.drivendata.org/competitions/87/competition-image-classification-wildlife-conservation/",
+    "fechas": "Cierra 2028-10-02",
+    "fecha_cierre_iso": "2028-10-02",
+    "premio": "",
+    "temas": [
+      "climate"
+    ],
+    "apto_principiantes": false,
+    "estado": "Abierto",
+    "fuente": "DrivenData",
+    "areas_perfil": [
+      "Energía y clima",
+      "Datos, IA y simulación"
+    ],
+    "score": 40,
+    "_sello": "7dc0d43a11c2"
+  },
+  {
+    "titulo": "DengAI: Predicting Disease Spread",
+    "organizador": "DrivenData",
+    "plataforma": "DrivenData",
+    "tipo": "Competencia de datos / IA",
+    "modalidad": "En línea",
+    "ubicacion": "En línea (internacional; revisar elegibilidad de premios)",
+    "pais": "Internacional",
+    "url": "https://www.drivendata.org/competitions/44/dengai-predicting-disease-spread/",
+    "fechas": "Cierra 2028-10-02",
+    "fecha_cierre_iso": "2028-10-02",
+    "premio": "",
+    "temas": [
+      "health"
+    ],
+    "apto_principiantes": false,
+    "estado": "Abierto",
+    "fuente": "DrivenData",
+    "areas_perfil": [
+      "Datos, IA y simulación",
+      "Salud y biomédica"
+    ],
+    "score": 40,
+    "_sello": "661039302f83"
+  },
+  {
+    "titulo": "Pump it Up: Data Mining the Water Table",
+    "organizador": "DrivenData",
+    "plataforma": "DrivenData",
+    "tipo": "Competencia de datos / IA",
+    "modalidad": "En línea",
+    "ubicacion": "En línea (internacional; revisar elegibilidad de premios)",
+    "pais": "Internacional",
+    "url": "https://www.drivendata.org/competitions/7/pump-it-up-data-mining-the-water-table/",
+    "fechas": "Cierra 2028-10-02",
+    "fecha_cierre_iso": "2028-10-02",
+    "premio": "",
+    "temas": [
+      "development"
+    ],
+    "apto_principiantes": false,
+    "estado": "Abierto",
+    "fuente": "DrivenData",
+    "areas_perfil": [
+      "Datos, IA y simulación",
+      "Materiales y manufactura"
+    ],
+    "score": 40,
+    "_sello": "e4a15bedb4a3"
+  },
+  {
+    "titulo": "Taskforge",
+    "organizador": "HackathonForEveryone",
+    "plataforma": "Devpost",
+    "tipo": "Hackatón",
+    "modalidad": "En línea",
+    "ubicacion": "En línea (internacional)",
+    "pais": "Internacional",
+    "url": "https://taskforge.devpost.com/",
+    "fechas": "Oct 17 - 24, 2026",
+    "fecha_cierre_iso": "2026-10-24",
+    "premio": "$200",
+    "temas": [
+      "Beginner Friendly",
+      "Quantum"
+    ],
+    "apto_principiantes": true,
+    "inscritos": 206,
+    "estado": "Abierto",
+    "fuente": "Devpost API",
+    "areas_perfil": [
+      "Física, cuántica y espacio"
+    ],
+    "score": 35,
+    "_sello": "bd0b17a78a10"
+  },
+  {
+    "titulo": "Build With AI: Basics",
+    "organizador": "Devpost",
+    "plataforma": "Devpost",
+    "tipo": "Hackatón",
+    "modalidad": "En línea",
+    "ubicacion": "En línea (internacional)",
+    "pais": "Internacional",
+    "url": "https://learn-ai-basics.devpost.com/",
+    "fechas": "Sep 22 - Oct 26, 2026",
+    "fecha_cierre_iso": "2026-10-26",
+    "premio": "$2,500",
+    "temas": [
+      "Machine Learning/AI",
+      "Beginner Friendly",
+      "Education"
+    ],
+    "apto_principiantes": true,
+    "inscritos": 4795,
+    "estado": "Abierto",
+    "fuente": "Devpost API",
+    "areas_perfil": [
+      "Datos, IA y simulación"
+    ],
+    "score": 35,
+    "_sello": "d0970a4979d9"
+  },
+  {
+    "titulo": "NextSpark Hacks",
+    "organizador": "Independent Student Organizer",
+    "plataforma": "Devpost",
+    "tipo": "Hackatón",
+    "modalidad": "En línea",
+    "ubicacion": "En línea (internacional)",
+    "pais": "Internacional",
+    "url": "https://nextspark-hacks.devpost.com/",
+    "fechas": "Oct 21 - 26, 2026",
+    "fecha_cierre_iso": "2026-10-26",
+    "premio": "$100",
+    "temas": [
+      "Beginner Friendly",
+      "Machine Learning/AI",
+      "Open Ended"
+    ],
+    "apto_principiantes": true,
+    "inscritos": 164,
+    "estado": "Abierto",
+    "fuente": "Devpost API",
+    "areas_perfil": [
+      "Datos, IA y simulación"
+    ],
+    "score": 35,
+    "_sello": "dce5b7f3abb3"
+  },
+  {
+    "titulo": "Bias Bounty Mapping Equity Challenge",
+    "organizador": "Zindi",
+    "plataforma": "Zindi",
+    "tipo": "Competencia de datos / IA",
+    "modalidad": "En línea",
+    "ubicacion": "En línea (internacional)",
+    "pais": "Internacional",
+    "url": "https://zindi.africa/competitions/bias-bounty-mapping-equity-challenge",
+    "fechas": "2026-08-28 a 2026-10-31",
+    "fecha_cierre_iso": "2026-10-31",
+    "premio": "$10 000 USD",
+    "temas": [
+      "Ciencia de datos",
+      "IA"
+    ],
+    "apto_principiantes": true,
+    "inscritos": 1457,
+    "estado": "Abierto",
+    "fuente": "Zindi API",
+    "areas_perfil": [
+      "Datos, IA y simulación"
+    ],
+    "score": 35,
+    "_sello": "4e9627d9d338"
+  },
+  {
+    "titulo": "AQX Sports Analytics Data Bowl 4.0",
+    "organizador": "Devpost",
+    "plataforma": "Devpost",
+    "tipo": "Hackatón",
+    "modalidad": "En línea",
+    "ubicacion": "En línea (internacional)",
+    "pais": "Internacional",
+    "url": "https://aqxanalyticsfour.devpost.com/",
+    "fechas": "Oct 18 - Nov 01, 2026",
+    "fecha_cierre_iso": "2026-11-01",
+    "premio": "$50",
+    "temas": [
+      "Beginner Friendly",
+      "Databases",
+      "Gaming"
+    ],
+    "apto_principiantes": true,
+    "inscritos": 87,
+    "estado": "Abierto",
+    "fuente": "Devpost API",
+    "areas_perfil": [
+      "Datos, IA y simulación"
+    ],
+    "score": 35,
+    "_sello": "0bd112979794"
+  },
+  {
+    "titulo": "Neural Storm",
+    "organizador": "JNTUH",
+    "plataforma": "Devpost",
+    "tipo": "Hackatón",
+    "modalidad": "En línea",
+    "ubicacion": "En línea (internacional)",
+    "pais": "Internacional",
+    "url": "https://neuralstorm.devpost.com/",
+    "fechas": "Nov 02 - 04, 2026",
+    "fecha_cierre_iso": "2026-11-04",
+    "premio": "₹20,000",
+    "temas": [
+      "Beginner Friendly",
+      "Machine Learning/AI"
+    ],
+    "apto_principiantes": true,
+    "inscritos": 27,
+    "estado": "Próximamente",
+    "fuente": "Devpost API",
+    "areas_perfil": [
+      "Datos, IA y simulación"
+    ],
+    "score": 35,
+    "_sello": "9d6eef1558f1"
+  },
+  {
+    "titulo": "Kiroween 2026",
+    "organizador": "Kiro",
+    "plataforma": "Devpost",
+    "tipo": "Hackatón",
+    "modalidad": "En línea",
+    "ubicacion": "En línea (internacional)",
+    "pais": "Internacional",
+    "url": "https://kiroween.devpost.com/",
+    "fechas": "Oct 30 - Dec 04, 2026",
+    "fecha_cierre_iso": "2026-12-04",
+    "premio": "$100,000",
+    "temas": [
+      "Beginner Friendly",
+      "Machine Learning/AI",
+      "Open Ended"
+    ],
+    "apto_principiantes": true,
+    "inscritos": 1063,
+    "estado": "Próximamente",
+    "fuente": "Devpost API",
+    "areas_perfil": [
+      "Datos, IA y simulación"
+    ],
+    "score": 35,
+    "_sello": "75e15e1ed7b6"
+  },
+  {
+    "titulo": "Arbiter Hacks V1",
+    "organizador": "Arbiter",
+    "plataforma": "Devpost",
+    "tipo": "Hackatón",
+    "modalidad": "En línea",
+    "ubicacion": "En línea (internacional)",
+    "pais": "Internacional",
+    "url": "https://arbiter-hacks-v1.devpost.com/",
+    "fechas": "Oct 20 - Dec 21, 2026",
+    "fecha_cierre_iso": "2026-12-21",
+    "premio": "$7,800",
+    "temas": [
+      "Beginner Friendly",
+      "Machine Learning/AI",
+      "Open Ended"
+    ],
+    "apto_principiantes": true,
+    "inscritos": 510,
+    "estado": "Abierto",
+    "fuente": "Devpost API",
+    "areas_perfil": [
+      "Datos, IA y simulación"
+    ],
+    "score": 35,
+    "_sello": "7d355e5a846e"
+  },
+  {
+    "titulo": "HackTheFashion Global'26",
+    "organizador": "FabricVTON",
+    "plataforma": "Devpost",
+    "tipo": "Hackatón",
+    "modalidad": "En línea",
+    "ubicacion": "En línea (internacional)",
+    "pais": "Internacional",
+    "url": "https://hackthefashion-global26.devpost.com/",
+    "fechas": "Nov 06 - Dec 31, 2026",
+    "fecha_cierre_iso": "2026-12-31",
+    "premio": "$45,000",
+    "temas": [
+      "AR/VR",
+      "Beginner Friendly",
+      "Machine Learning/AI"
+    ],
+    "apto_principiantes": true,
+    "inscritos": 1,
+    "estado": "Próximamente",
+    "fuente": "Devpost API",
+    "areas_perfil": [
+      "Datos, IA y simulación"
+    ],
+    "score": 35,
+    "_sello": "5cb86e644bf1"
+  },
+  {
+    "titulo": "HackTitan",
+    "organizador": "IWU",
+    "plataforma": "Devpost",
+    "tipo": "Hackatón",
+    "modalidad": "En línea",
+    "ubicacion": "En línea (internacional)",
+    "pais": "Internacional",
+    "url": "https://hacktitan.devpost.com/",
+    "fechas": "Feb 02 - 04, 2027",
+    "fecha_cierre_iso": "2027-02-04",
+    "premio": "$10,000",
+    "temas": [
+      "Beginner Friendly",
+      "Databases",
+      "DevOps"
+    ],
+    "apto_principiantes": true,
+    "inscritos": 191,
+    "estado": "Próximamente",
+    "fuente": "Devpost API",
+    "areas_perfil": [
+      "Datos, IA y simulación"
+    ],
+    "score": 35,
+    "_sello": "d849d759463d"
+  },
+  {
+    "titulo": "AI for Human Impact: A Global BASIS Hackathon",
+    "organizador": "BASIS Independent Silicon Valley",
+    "plataforma": "Devpost",
+    "tipo": "Hackatón",
+    "modalidad": "En línea",
+    "ubicacion": "En línea (internacional)",
+    "pais": "Internacional",
+    "url": "https://basisglobalhackathon.devpost.com/",
+    "fechas": "Feb 06 - 13, 2027",
+    "fecha_cierre_iso": "2027-02-13",
+    "premio": "$10,200",
+    "temas": [
+      "Beginner Friendly",
+      "Machine Learning/AI",
+      "Social Good"
+    ],
+    "apto_principiantes": true,
+    "inscritos": 0,
+    "estado": "Próximamente",
+    "fuente": "Devpost API",
+    "areas_perfil": [
+      "Datos, IA y simulación"
+    ],
+    "score": 35,
+    "_sello": "6ae12158d884"
+  },
+  {
+    "titulo": "Life After Code",
+    "organizador": "GitLab",
+    "plataforma": "Devpost",
+    "tipo": "Hackatón",
+    "modalidad": "En línea",
+    "ubicacion": "En línea (internacional)",
+    "pais": "Internacional",
+    "url": "https://gitlab-transcend.devpost.com/",
+    "fechas": "Oct 05 - 27, 2026",
+    "fecha_cierre_iso": "2026-10-27",
+    "premio": "$45,000",
+    "temas": [
+      "DevOps",
+      "Machine Learning/AI",
+      "Productivity"
+    ],
+    "apto_principiantes": false,
+    "inscritos": 3081,
+    "estado": "Abierto",
+    "fuente": "Devpost API",
+    "areas_perfil": [
+      "Datos, IA y simulación"
+    ],
+    "score": 30,
+    "_sello": "6980f378c0a8"
+  },
+  {
+    "titulo": "AWS Communication Developer Services (CDS) Agentic AI Partner Hackathon",
+    "organizador": "AWS",
+    "plataforma": "Devpost",
+    "tipo": "Hackatón",
+    "modalidad": "En línea",
+    "ubicacion": "En línea (internacional)",
+    "pais": "Internacional",
+    "url": "https://aws-cds-partner.devpost.com/",
+    "fechas": "Sep 14 - Oct 28, 2026",
+    "fecha_cierre_iso": "2026-10-28",
+    "premio": "$40,000",
+    "temas": [
+      "Communication",
+      "Mobile",
+      "Machine Learning/AI"
+    ],
+    "apto_principiantes": false,
+    "inscritos": 1017,
+    "estado": "Abierto",
+    "fuente": "Devpost API",
+    "areas_perfil": [
+      "Datos, IA y simulación"
+    ],
+    "score": 30,
+    "_sello": "248269de3b85"
+  },
+  {
+    "titulo": "Hybrid Micro Mouse Challenge",
+    "organizador": "Alliance University",
+    "plataforma": "Devpost",
+    "tipo": "Hackatón",
+    "modalidad": "En línea",
+    "ubicacion": "En línea (internacional)",
+    "pais": "Internacional",
+    "url": "https://hybrid-micro-mouse-challenge.devpost.com/",
+    "fechas": "Oct 22 - 29, 2026",
+    "fecha_cierre_iso": "2026-10-29",
+    "premio": "₹55,000",
+    "temas": [
+      "Education",
+      "IoT",
+      "Open Ended"
+    ],
+    "apto_principiantes": false,
+    "inscritos": 15,
+    "estado": "Abierto",
+    "fuente": "Devpost API",
+    "areas_perfil": [
+      "Hardware, IoT y electrónica"
+    ],
+    "score": 30,
+    "_sello": "065c4d3bb8ff"
+  },
+  {
+    "titulo": "Qloo Agentic Hackathon",
+    "organizador": "Qloo",
+    "plataforma": "Devpost",
+    "tipo": "Hackatón",
+    "modalidad": "En línea",
+    "ubicacion": "En línea (internacional)",
+    "pais": "Internacional",
+    "url": "https://qloo.devpost.com/",
+    "fechas": "Sep 30 - Oct 30, 2026",
+    "fecha_cierre_iso": "2026-10-30",
+    "premio": "$25,000",
+    "temas": [
+      "Machine Learning/AI"
+    ],
+    "apto_principiantes": false,
+    "inscritos": 2331,
+    "estado": "Abierto",
+    "fuente": "Devpost API",
+    "areas_perfil": [
+      "Datos, IA y simulación"
+    ],
+    "score": 30,
+    "_sello": "fb2006a52ff9"
+  },
+  {
+    "titulo": "YouCam API Skin AI & eCommerce VTO Hackathon",
+    "organizador": "Perfect Corp",
+    "plataforma": "Devpost",
+    "tipo": "Hackatón",
+    "modalidad": "En línea",
+    "ubicacion": "En línea (internacional)",
+    "pais": "Internacional",
+    "url": "https://youcam-api-skin-ai-ecommerce.devpost.com/",
+    "fechas": "Sep 29 - Nov 02, 2026",
+    "fecha_cierre_iso": "2026-11-02",
+    "premio": "$6,000",
+    "temas": [
+      "AR/VR",
+      "E-commerce/Retail",
+      "Machine Learning/AI"
+    ],
+    "apto_principiantes": false,
+    "inscritos": 1230,
+    "estado": "Abierto",
+    "fuente": "Devpost API",
+    "areas_perfil": [
+      "Datos, IA y simulación"
+    ],
+    "score": 30,
+    "_sello": "3248d5f86c9f"
+  },
+  {
+    "titulo": "Codex x TwitchCon Hackathon",
+    "organizador": "Twitch",
+    "plataforma": "Devpost",
+    "tipo": "Hackatón",
+    "modalidad": "En línea",
+    "ubicacion": "En línea (internacional)",
+    "pais": "Internacional",
+    "url": "https://twitchcon-codex.devpost.com/",
+    "fechas": "Oct 23 - Nov 02, 2026",
+    "fecha_cierre_iso": "2026-11-02",
+    "premio": "$25,000",
+    "temas": [
+      "Communication",
+      "Gaming",
+      "Machine Learning/AI"
+    ],
+    "apto_principiantes": false,
+    "inscritos": 347,
+    "estado": "Abierto",
+    "fuente": "Devpost API",
+    "areas_perfil": [
+      "Datos, IA y simulación"
+    ],
+    "score": 30,
+    "_sello": "971d5f37f32f"
+  },
+  {
+    "titulo": "Learn AR with SPECS",
+    "organizador": "Devpost",
+    "plataforma": "Devpost",
+    "tipo": "Hackatón",
+    "modalidad": "En línea",
+    "ubicacion": "En línea (internacional)",
+    "pais": "Internacional",
+    "url": "https://learn-specs.devpost.com/",
+    "fechas": "Oct 15 - Nov 09, 2026",
+    "fecha_cierre_iso": "2026-11-09",
+    "premio": "$2,500",
+    "temas": [
+      "AR/VR",
+      "Machine Learning/AI",
+      "Design"
+    ],
+    "apto_principiantes": false,
+    "inscritos": 665,
+    "estado": "Abierto",
+    "fuente": "Devpost API",
+    "areas_perfil": [
+      "Datos, IA y simulación"
+    ],
+    "score": 30,
+    "_sello": "7acd47a97142"
+  },
+  {
+    "titulo": "The Atomiq Hackathon | Qiskit Fall Fest 2026 at IEM",
+    "organizador": "Institute of Engineering & Management",
+    "plataforma": "Devpost",
+    "tipo": "Hackatón",
+    "modalidad": "En línea",
+    "ubicacion": "En línea (internacional)",
+    "pais": "Internacional",
+    "url": "https://atomiq-hackathon-qff-26-iem.devpost.com/",
+    "fechas": "Nov 10 - 11, 2026",
+    "fecha_cierre_iso": "2026-11-11",
+    "premio": "₹10,000",
+    "temas": [
+      "Quantum"
+    ],
+    "apto_principiantes": false,
+    "inscritos": 37,
+    "estado": "Próximamente",
+    "fuente": "Devpost API",
+    "areas_perfil": [
+      "Física, cuántica y espacio"
+    ],
+    "score": 30,
+    "_sello": "79a05d7032d8"
+  },
+  {
+    "titulo": "PayPal AI Hackathon",
+    "organizador": "PayPal",
+    "plataforma": "Devpost",
+    "tipo": "Hackatón",
+    "modalidad": "En línea",
+    "ubicacion": "En línea (internacional)",
+    "pais": "Internacional",
+    "url": "https://paypalaihackathon.devpost.com/",
+    "fechas": "Oct 01 - Nov 12, 2026",
+    "fecha_cierre_iso": "2026-11-12",
+    "premio": "$67,500",
+    "temas": [
+      "Low/No Code",
+      "Machine Learning/AI",
+      "Web"
+    ],
+    "apto_principiantes": false,
+    "inscritos": 20546,
+    "estado": "Abierto",
+    "fuente": "Devpost API",
+    "areas_perfil": [
+      "Datos, IA y simulación"
+    ],
+    "score": 30,
+    "_sello": "9af2ebb32beb"
+  },
+  {
+    "titulo": "UGREEN Hackathon 2026 on AI NAS",
+    "organizador": "UGREEN",
+    "plataforma": "Devpost",
+    "tipo": "Hackatón",
+    "modalidad": "En línea",
+    "ubicacion": "En línea (internacional)",
+    "pais": "Internacional",
+    "url": "https://ugreenhackathon.devpost.com/",
+    "fechas": "Oct 22 - Nov 16, 2026",
+    "fecha_cierre_iso": "2026-11-16",
+    "premio": "$46,000",
+    "temas": [
+      "Lifehacks",
+      "Machine Learning/AI",
+      "Productivity"
+    ],
+    "apto_principiantes": false,
+    "inscritos": 288,
+    "estado": "Abierto",
+    "fuente": "Devpost API",
+    "areas_perfil": [
+      "Datos, IA y simulación"
+    ],
+    "score": 30,
+    "_sello": "1946a4733587"
+  },
+  {
+    "titulo": "Meta VR Start Developer Competition 2026",
+    "organizador": "Meta",
+    "plataforma": "Devpost",
+    "tipo": "Hackatón",
+    "modalidad": "En línea",
+    "ubicacion": "En línea (internacional)",
+    "pais": "Internacional",
+    "url": "https://start-developer-competition-26.devpost.com/",
+    "fechas": "Sep 24 - Nov 18, 2026",
+    "fecha_cierre_iso": "2026-11-18",
+    "premio": "$1,000,000",
+    "temas": [
+      "AR/VR",
+      "Machine Learning/AI",
+      "Web"
+    ],
+    "apto_principiantes": false,
+    "inscritos": 3870,
+    "estado": "Abierto",
+    "fuente": "Devpost API",
+    "areas_perfil": [
+      "Datos, IA y simulación"
+    ],
+    "score": 30,
+    "_sello": "38bd0891ff79"
+  },
+  {
+    "titulo": "Dakar Bitcoin Hack by BTrust",
+    "organizador": "Dakar Bitcoin Days",
+    "plataforma": "Devpost",
+    "tipo": "Hackatón",
+    "modalidad": "En línea",
+    "ubicacion": "En línea (internacional)",
+    "pais": "Internacional",
+    "url": "https://dakar-bitcoin-hack-2026.devpost.com/",
+    "fechas": "Oct 26 - Nov 20, 2026",
+    "fecha_cierre_iso": "2026-11-20",
+    "premio": "$900",
+    "temas": [
+      "Blockchain",
+      "Fintech",
+      "Machine Learning/AI"
+    ],
+    "apto_principiantes": false,
+    "inscritos": 10,
+    "estado": "Próximamente",
+    "fuente": "Devpost API",
+    "areas_perfil": [
+      "Datos, IA y simulación"
+    ],
+    "score": 30,
+    "_sello": "b99d596248ed"
+  },
+  {
+    "titulo": "KUK VIRTUAL HACKATHON",
+    "organizador": "Kelab UMNO Korea",
+    "plataforma": "Devpost",
+    "tipo": "Hackatón",
+    "modalidad": "En línea",
+    "ubicacion": "En línea (internacional)",
+    "pais": "Internacional",
+    "url": "https://kuk-virtual-hackathon.devpost.com/",
+    "fechas": "Nov 15 - 22, 2026",
+    "fecha_cierre_iso": "2026-11-22",
+    "premio": "$800",
+    "temas": [
+      "Databases",
+      "Machine Learning/AI",
+      "Productivity"
+    ],
+    "apto_principiantes": false,
+    "inscritos": 16,
+    "estado": "Próximamente",
+    "fuente": "Devpost API",
+    "areas_perfil": [
+      "Datos, IA y simulación"
+    ],
+    "score": 30,
+    "_sello": "36e775f30102"
+  },
+  {
+    "titulo": "OBSCURA: Satellite AI Research Challenge",
+    "organizador": "BTAJI CREW",
+    "plataforma": "Devpost",
+    "tipo": "Hackatón",
+    "modalidad": "En línea",
+    "ubicacion": "En línea (internacional)",
+    "pais": "Internacional",
+    "url": "https://obscura.devpost.com/",
+    "fechas": "Nov 18 - 24, 2026",
+    "fecha_cierre_iso": "2026-11-24",
+    "premio": "$50",
+    "temas": [
+      "Education",
+      "Machine Learning/AI",
+      "Social Good"
+    ],
+    "apto_principiantes": false,
+    "inscritos": 3,
+    "estado": "Próximamente",
+    "fuente": "Devpost API",
+    "areas_perfil": [
+      "Datos, IA y simulación"
+    ],
+    "score": 30,
+    "_sello": "3c72e24e3113"
+  },
+  {
+    "titulo": "Underwater Vessel Noise Challenge by the French Embassy in South Africa",
+    "organizador": "Zindi",
+    "plataforma": "Zindi",
+    "tipo": "Competencia de datos / IA",
+    "modalidad": "En línea",
+    "ubicacion": "En línea (internacional)",
+    "pais": "Internacional",
+    "url": "https://zindi.africa/competitions/french-embassy-underwater-vessel-noise-challenge",
+    "fechas": "2026-10-16 a 2026-12-13",
+    "fecha_cierre_iso": "2026-12-13",
+    "premio": "$5 000 USD",
+    "temas": [
+      "Ciencia de datos",
+      "IA"
+    ],
+    "apto_principiantes": false,
+    "inscritos": 574,
+    "estado": "Abierto",
+    "fuente": "Zindi API",
+    "areas_perfil": [
+      "Datos, IA y simulación"
+    ],
+    "score": 30,
+    "_sello": "31abd1a02304"
+  },
+  {
+    "titulo": "AI Agents for Founders Challenge — HETIC 2026",
+    "organizador": "HETIC",
+    "plataforma": "Devpost",
+    "tipo": "Hackatón",
+    "modalidad": "En línea",
+    "ubicacion": "En línea (internacional)",
+    "pais": "Internacional",
+    "url": "https://ai-agents-founders-hetic-26.devpost.com/",
+    "fechas": "Nov 04 - Dec 18, 2026",
+    "fecha_cierre_iso": "2026-12-18",
+    "premio": "€997",
+    "temas": [
+      "Low/No Code",
+      "Machine Learning/AI",
+      "Productivity"
+    ],
+    "apto_principiantes": false,
+    "inscritos": 114,
+    "estado": "Próximamente",
+    "fuente": "Devpost API",
+    "areas_perfil": [
+      "Datos, IA y simulación"
+    ],
+    "score": 30,
+    "_sello": "7b678575a44d"
+  },
+  {
+    "titulo": "evensonarisnord",
+    "organizador": "HoustonHacks2026",
+    "plataforma": "Devpost",
+    "tipo": "Hackatón",
+    "modalidad": "En línea",
+    "ubicacion": "En línea (internacional)",
+    "pais": "Internacional",
+    "url": "https://evensonarisnord.devpost.com/",
+    "fechas": "Dec 31, 2026",
+    "fecha_cierre_iso": "2026-12-31",
+    "premio": "$150",
+    "temas": [
+      "Communication",
+      "Databases"
+    ],
+    "apto_principiantes": false,
+    "inscritos": 121,
+    "estado": "Próximamente",
+    "fuente": "Devpost API",
+    "areas_perfil": [
+      "Datos, IA y simulación"
+    ],
+    "score": 30,
+    "_sello": "68b62791560f"
+  },
+  {
+    "titulo": "checkpoint 1 — games for good",
+    "organizador": "Checkpoint",
+    "plataforma": "Devpost",
+    "tipo": "Hackatón",
+    "modalidad": "En línea",
+    "ubicacion": "En línea (internacional)",
+    "pais": "Internacional",
+    "url": "https://checkpoint-1.devpost.com/",
+    "fechas": "Jan 08 - 10, 2027",
+    "fecha_cierre_iso": "2027-01-10",
+    "premio": "$11,960",
+    "temas": [
+      "Gaming",
+      "Machine Learning/AI",
+      "Social Good"
+    ],
+    "apto_principiantes": false,
+    "inscritos": 52,
+    "estado": "Próximamente",
+    "fuente": "Devpost API",
+    "areas_perfil": [
+      "Datos, IA y simulación"
+    ],
+    "score": 30,
+    "_sello": "4cc6466ae570"
+  },
+  {
+    "titulo": "Brewing Codes 4.0",
+    "organizador": "HARD MODE",
+    "plataforma": "Devpost",
+    "tipo": "Hackatón",
+    "modalidad": "En línea",
+    "ubicacion": "En línea (internacional)",
+    "pais": "Internacional",
+    "url": "https://brewing-codes-4-0.devpost.com/",
+    "fechas": "Mar 12 - 27, 2028",
+    "fecha_cierre_iso": "2028-03-27",
+    "premio": "₹100,000",
+    "temas": [
+      "Low/No Code",
+      "Machine Learning/AI",
+      "Web"
+    ],
+    "apto_principiantes": false,
+    "inscritos": 82,
+    "estado": "Próximamente",
+    "fuente": "Devpost API",
+    "areas_perfil": [
+      "Datos, IA y simulación"
+    ],
+    "score": 30,
+    "_sello": "5c120d11a573"
+  },
+  {
+    "titulo": "2026 International CodeTheCure Hackathon",
+    "organizador": "CodeTheCure",
+    "plataforma": "Devpost",
+    "tipo": "Hackatón",
+    "modalidad": "En línea",
+    "ubicacion": "En línea (internacional)",
+    "pais": "Internacional",
+    "url": "https://codethecure-hackathon-26.devpost.com/",
+    "fechas": "Oct 10 - 28, 2026",
+    "fecha_cierre_iso": "2026-10-28",
+    "premio": "",
+    "temas": [
+      "Beginner Friendly",
+      "Education",
+      "Health"
+    ],
+    "apto_principiantes": true,
+    "inscritos": 228,
+    "estado": "Abierto",
+    "fuente": "Devpost API",
+    "areas_perfil": [
+      "Salud y biomédica"
+    ],
+    "score": 25,
+    "_sello": "2b5e20fb2def"
+  },
+  {
+    "titulo": "Trick or Build: Mel × Prompt Anything × AI Builders",
+    "organizador": "Agentic Day (co-hosted with Mel)",
+    "plataforma": "Devpost",
+    "tipo": "Hackatón",
+    "modalidad": "En línea",
+    "ubicacion": "En línea (internacional)",
+    "pais": "Internacional",
+    "url": "https://trick-or-build.devpost.com/",
+    "fechas": "Oct 29, 2026",
+    "fecha_cierre_iso": "2026-10-29",
+    "premio": "",
+    "temas": [
+      "Beginner Friendly",
+      "Machine Learning/AI",
+      "Productivity"
+    ],
+    "apto_principiantes": true,
+    "inscritos": 3,
+    "estado": "Próximamente",
+    "fuente": "Devpost API",
+    "areas_perfil": [
+      "Datos, IA y simulación"
+    ],
+    "score": 25,
+    "_sello": "3fb2e53927ec"
+  },
+  {
+    "titulo": "Ctrl+V Hackathon",
+    "organizador": "AKSZ",
+    "plataforma": "Devpost",
+    "tipo": "Hackatón",
+    "modalidad": "En línea",
+    "ubicacion": "En línea (internacional)",
+    "pais": "Internacional",
+    "url": "https://ctrl-v-hackathon-31831.devpost.com/",
+    "fechas": "Nov 06 - 10, 2026",
+    "fecha_cierre_iso": "2026-11-10",
+    "premio": "",
+    "temas": [
+      "Beginner Friendly",
+      "Machine Learning/AI",
+      "Social Good"
+    ],
+    "apto_principiantes": true,
+    "inscritos": 12,
+    "estado": "Próximamente",
+    "fuente": "Devpost API",
+    "areas_perfil": [
+      "Datos, IA y simulación"
+    ],
+    "score": 25,
+    "_sello": "aa82193eae04"
+  },
+  {
+    "titulo": "LPC Hacks",
+    "organizador": "LPCHacks",
+    "plataforma": "Devpost",
+    "tipo": "Hackatón",
+    "modalidad": "En línea",
+    "ubicacion": "En línea (internacional)",
+    "pais": "Internacional",
+    "url": "https://lpc-hacks.devpost.com/",
+    "fechas": "Nov 14, 2026",
+    "fecha_cierre_iso": "2026-11-14",
+    "premio": "",
+    "temas": [
+      "Beginner Friendly",
+      "Machine Learning/AI",
+      "Open Ended"
+    ],
+    "apto_principiantes": true,
+    "inscritos": 0,
+    "estado": "Próximamente",
+    "fuente": "Devpost API",
+    "areas_perfil": [
+      "Datos, IA y simulación"
+    ],
+    "score": 25,
+    "_sello": "4e08620e640f"
+  },
+  {
+    "titulo": "STEM2Connect AI Hackathon",
+    "organizador": "STEM2Connect",
+    "plataforma": "Devpost",
+    "tipo": "Hackatón",
+    "modalidad": "En línea",
+    "ubicacion": "En línea (internacional)",
+    "pais": "Internacional",
+    "url": "https://stem2connect-online-hackathon.devpost.com/",
+    "fechas": "Oct 17 - Nov 21, 2026",
+    "fecha_cierre_iso": "2026-11-21",
+    "premio": "",
+    "temas": [
+      "Beginner Friendly",
+      "Education",
+      "Web"
+    ],
+    "apto_principiantes": true,
+    "inscritos": 124,
+    "estado": "Abierto",
+    "fuente": "Devpost API",
+    "areas_perfil": [
+      "Datos, IA y simulación"
+    ],
+    "score": 25,
+    "_sello": "24c3fcc68668"
+  },
+  {
+    "titulo": "Bridge The Gap Hacks",
+    "organizador": "Bridge The Gap Hacks",
+    "plataforma": "Devpost",
+    "tipo": "Hackatón",
+    "modalidad": "En línea",
+    "ubicacion": "En línea (internacional)",
+    "pais": "Internacional",
+    "url": "https://sq-hacks.devpost.com/",
+    "fechas": "Nov 15 - 21, 2026",
+    "fecha_cierre_iso": "2026-11-21",
+    "premio": "",
+    "temas": [
+      "Beginner Friendly",
+      "Machine Learning/AI",
+      "Social Good"
+    ],
+    "apto_principiantes": true,
+    "inscritos": 55,
+    "estado": "Próximamente",
+    "fuente": "Devpost API",
+    "areas_perfil": [
+      "Datos, IA y simulación"
+    ],
+    "score": 25,
+    "_sello": "8ef567ad10f1"
+  },
+  {
+    "titulo": "MEGA Hackathon 2027",
+    "organizador": "MegaHackathonLeague",
+    "plataforma": "Devpost",
+    "tipo": "Hackatón",
+    "modalidad": "En línea",
+    "ubicacion": "En línea (internacional)",
+    "pais": "Internacional",
+    "url": "https://megahackathon-27.devpost.com/",
+    "fechas": "Feb 14 - 21, 2027",
+    "fecha_cierre_iso": "2027-02-21",
+    "premio": "",
+    "temas": [
+      "COVID-19",
+      "Health",
+      "Beginner Friendly"
+    ],
+    "apto_principiantes": true,
+    "inscritos": 4,
+    "estado": "Próximamente",
+    "fuente": "Devpost API",
+    "areas_perfil": [
+      "Salud y biomédica"
+    ],
+    "score": 25,
+    "_sello": "2ca86910c974"
+  },
+  {
+    "titulo": "Five Nights with AI",
+    "organizador": "ACM@UCSD",
+    "plataforma": "Devpost",
+    "tipo": "Hackatón",
+    "modalidad": "En línea",
+    "ubicacion": "En línea (internacional)",
+    "pais": "Internacional",
+    "url": "https://five-nights-with-ai.devpost.com/",
+    "fechas": "Oct 24, 2026",
+    "fecha_cierre_iso": "2026-10-24",
+    "premio": "",
+    "temas": [
+      "Machine Learning/AI"
+    ],
+    "apto_principiantes": false,
+    "inscritos": 25,
+    "estado": "Abierto",
+    "fuente": "Devpost API",
+    "areas_perfil": [
+      "Datos, IA y simulación"
+    ],
+    "score": 20,
+    "_sello": "74c8af2347fd"
+  },
+  {
+    "titulo": "Mathematics for systems security",
+    "organizador": "Software Engineering Club (DEV)",
+    "plataforma": "Devpost",
+    "tipo": "Hackatón",
+    "modalidad": "En línea",
+    "ubicacion": "En línea (internacional)",
+    "pais": "Internacional",
+    "url": "https://mathematics-systems-security.devpost.com/",
+    "fechas": "Oct 16 - Nov 01, 2026",
+    "fecha_cierre_iso": "2026-11-01",
+    "premio": "",
+    "temas": [
+      "Communication",
+      "Cybersecurity",
+      "Machine Learning/AI"
+    ],
+    "apto_principiantes": false,
+    "inscritos": 71,
+    "estado": "Abierto",
+    "fuente": "Devpost API",
+    "areas_perfil": [
+      "Datos, IA y simulación"
+    ],
+    "score": 20,
+    "_sello": "3b250d03f037"
+  },
+  {
+    "titulo": "Ostad Presents YUNet AIgnite Buildathon 2026",
+    "organizador": "Youth Upskill Network - YUNet",
+    "plataforma": "Devpost",
+    "tipo": "Hackatón",
+    "modalidad": "En línea",
+    "ubicacion": "En línea (internacional)",
+    "pais": "Internacional",
+    "url": "https://yunet-aignite26.devpost.com/",
+    "fechas": "Nov 01 - 05, 2026",
+    "fecha_cierre_iso": "2026-11-05",
+    "premio": "",
+    "temas": [
+      "Education",
+      "Low/No Code",
+      "Machine Learning/AI"
+    ],
+    "apto_principiantes": false,
+    "inscritos": 203,
+    "estado": "Próximamente",
+    "fuente": "Devpost API",
+    "areas_perfil": [
+      "Datos, IA y simulación"
+    ],
+    "score": 20,
+    "_sello": "e5d2cf8bfd61"
+  },
+  {
+    "titulo": "STEMergent Hacks 2026",
+    "organizador": "STEMergent",
+    "plataforma": "Devpost",
+    "tipo": "Hackatón",
+    "modalidad": "En línea",
+    "ubicacion": "En línea (internacional)",
+    "pais": "Internacional",
+    "url": "https://stemergent-hacks.devpost.com/",
+    "fechas": "Oct 31 - Nov 15, 2026",
+    "fecha_cierre_iso": "2026-11-15",
+    "premio": "",
+    "temas": [
+      "Low/No Code",
+      "Machine Learning/AI",
+      "Social Good"
+    ],
+    "apto_principiantes": false,
+    "inscritos": 139,
+    "estado": "Próximamente",
+    "fuente": "Devpost API",
+    "areas_perfil": [
+      "Datos, IA y simulación"
+    ],
+    "score": 20,
+    "_sello": "5ad89ee5e92a"
+  },
+  {
+    "titulo": "Global AI Builder’s Challenge",
+    "organizador": "Refactor The World",
+    "plataforma": "Devpost",
+    "tipo": "Hackatón",
+    "modalidad": "En línea",
+    "ubicacion": "En línea (internacional)",
+    "pais": "Internacional",
+    "url": "https://global-ai-builders-challenge.devpost.com/",
+    "fechas": "Nov 21 - 28, 2026",
+    "fecha_cierre_iso": "2026-11-28",
+    "premio": "",
+    "temas": [
+      "Machine Learning/AI"
+    ],
+    "apto_principiantes": false,
+    "inscritos": 24,
+    "estado": "Próximamente",
+    "fuente": "Devpost API",
+    "areas_perfil": [
+      "Datos, IA y simulación"
+    ],
+    "score": 20,
+    "_sello": "1b32701e037d"
+  },
+  {
+    "titulo": "Code for Humanity",
+    "organizador": "nill",
+    "plataforma": "Devpost",
+    "tipo": "Hackatón",
+    "modalidad": "En línea",
+    "ubicacion": "En línea (internacional)",
+    "pais": "Internacional",
+    "url": "https://code-for-humanity.devpost.com/",
+    "fechas": "Jul 16, 2026 - Jan 15, 2027",
+    "fecha_cierre_iso": "2027-01-15",
+    "premio": "",
+    "temas": [
+      "Education",
+      "Machine Learning/AI",
+      "Web"
+    ],
+    "apto_principiantes": false,
+    "inscritos": 665,
+    "estado": "Abierto",
+    "fuente": "Devpost API",
+    "areas_perfil": [
+      "Datos, IA y simulación"
+    ],
+    "score": 20,
+    "_sello": "99b5b332f35e"
+  },
+  {
+    "titulo": "What's Up, Docs? Document Summarization with LLMs",
+    "organizador": "DrivenData",
+    "plataforma": "DrivenData",
+    "tipo": "Competencia de datos / IA",
+    "modalidad": "En línea",
+    "ubicacion": "En línea (internacional; revisar elegibilidad de premios)",
+    "pais": "Internacional",
+    "url": "https://www.drivendata.org/competitions/297/whats-up-docs/",
+    "fechas": "Cierra 2028-04-03",
+    "fecha_cierre_iso": "2028-04-03",
+    "premio": "",
+    "temas": [
+      "development",
+      "science"
+    ],
+    "apto_principiantes": false,
+    "estado": "Abierto",
+    "fuente": "DrivenData",
+    "areas_perfil": [
+      "Datos, IA y simulación"
+    ],
+    "score": 20,
+    "_sello": "391a3fd9f15a"
+  },
+  {
+    "titulo": "Richter's Predictor: Modeling Earthquake Damage",
+    "organizador": "DrivenData",
+    "plataforma": "DrivenData",
+    "tipo": "Competencia de datos / IA",
+    "modalidad": "En línea",
+    "ubicacion": "En línea (internacional; revisar elegibilidad de premios)",
+    "pais": "Internacional",
+    "url": "https://www.drivendata.org/competitions/57/nepal-earthquake/",
+    "fechas": "Cierra 2028-10-02",
+    "fecha_cierre_iso": "2028-10-02",
+    "premio": "",
+    "temas": [
+      "disasters"
+    ],
+    "apto_principiantes": false,
+    "estado": "Abierto",
+    "fuente": "DrivenData",
+    "areas_perfil": [
+      "Datos, IA y simulación"
+    ],
+    "score": 20,
+    "_sello": "c8432b3f4972"
+  },
+  {
+    "titulo": "Girls Who Code HHS Hackathon 2026",
+    "organizador": "Girls Who Code HHS",
+    "plataforma": "Devpost",
+    "tipo": "Hackatón",
+    "modalidad": "En línea",
+    "ubicacion": "En línea (internacional)",
+    "pais": "Internacional",
+    "url": "https://gwchhs-hackathon-2026.devpost.com/",
+    "fechas": "Oct 15 - 29, 2026",
+    "fecha_cierre_iso": "2026-10-29",
+    "premio": "$50",
+    "temas": [
+      "Beginner Friendly",
+      "Gaming",
+      "Social Good"
+    ],
+    "apto_principiantes": true,
+    "inscritos": 44,
+    "estado": "Abierto",
+    "fuente": "Devpost API",
+    "areas_perfil": [],
+    "score": 15,
+    "_sello": "a4ddcf742851"
+  },
+  {
+    "titulo": "CodeSprint by Elite Coders",
+    "organizador": "elite coders",
+    "plataforma": "Devpost",
+    "tipo": "Hackatón",
+    "modalidad": "En línea",
+    "ubicacion": "En línea (internacional)",
+    "pais": "Internacional",
+    "url": "https://codesprint-by-elitecoders.devpost.com/",
+    "fechas": "Sep 25 - Oct 30, 2026",
+    "fecha_cierre_iso": "2026-10-30",
+    "premio": "₹30,000",
+    "temas": [
+      "Beginner Friendly",
+      "Open Ended",
+      "Web"
+    ],
+    "apto_principiantes": true,
+    "inscritos": 334,
+    "estado": "Abierto",
+    "fuente": "Devpost API",
+    "areas_perfil": [],
+    "score": 15,
+    "_sello": "d35327f43ecf"
+  },
+  {
+    "titulo": "FUSE Society Blueprint 2026",
+    "organizador": "Fuse Society",
+    "plataforma": "Devpost",
+    "tipo": "Hackatón",
+    "modalidad": "En línea",
+    "ubicacion": "En línea (internacional)",
+    "pais": "Internacional",
+    "url": "https://fuse-society-blueprint-2026.devpost.com/",
+    "fechas": "Oct 24 - 31, 2026",
+    "fecha_cierre_iso": "2026-10-31",
+    "premio": "$250",
+    "temas": [
+      "Beginner Friendly"
+    ],
+    "apto_principiantes": true,
+    "inscritos": 16,
+    "estado": "Abierto",
+    "fuente": "Devpost API",
+    "areas_perfil": [],
+    "score": 15,
+    "_sello": "87986e913f8c"
+  },
+  {
+    "titulo": "Next Byte Hacks V5",
+    "organizador": "Next Byte Hacks",
+    "plataforma": "Devpost",
+    "tipo": "Hackatón",
+    "modalidad": "En línea",
+    "ubicacion": "En línea (internacional)",
+    "pais": "Internacional",
+    "url": "https://next-byte-hacks-v5.devpost.com/",
+    "fechas": "Oct 06 - 31, 2026",
+    "fecha_cierre_iso": "2026-10-31",
+    "premio": "$100",
+    "temas": [
+      "Beginner Friendly",
+      "Low/No Code",
+      "Open Ended"
+    ],
+    "apto_principiantes": true,
+    "inscritos": 365,
+    "estado": "Abierto",
+    "fuente": "Devpost API",
+    "areas_perfil": [],
+    "score": 15,
+    "_sello": "fbfe9393c7dc"
+  },
+  {
+    "titulo": "UXDC Designathon - 2026",
+    "organizador": "UXDC - Ucalgary design club",
+    "plataforma": "Devpost",
+    "tipo": "Hackatón",
+    "modalidad": "En línea",
+    "ubicacion": "En línea (internacional)",
+    "pais": "Internacional",
+    "url": "https://uxdc-designathon-2026.devpost.com/",
+    "fechas": "Nov 07 - 08, 2026",
+    "fecha_cierre_iso": "2026-11-08",
+    "premio": "$200",
+    "temas": [
+      "Beginner Friendly",
+      "Design",
+      "Low/No Code"
+    ],
+    "apto_principiantes": true,
+    "inscritos": 8,
+    "estado": "Próximamente",
+    "fuente": "Devpost API",
+    "areas_perfil": [],
+    "score": 15,
+    "_sello": "8c06329fbf99"
+  },
+  {
+    "titulo": "Herhack",
+    "organizador": "Echelon institute of technology",
+    "plataforma": "Devpost",
+    "tipo": "Hackatón",
+    "modalidad": "En línea",
+    "ubicacion": "En línea (internacional)",
+    "pais": "Internacional",
+    "url": "https://herhack.devpost.com/",
+    "fechas": "Oct 17 - Nov 10, 2026",
+    "fecha_cierre_iso": "2026-11-10",
+    "premio": "₹200,000",
+    "temas": [
+      "Beginner Friendly",
+      "Blockchain",
+      "Open Ended"
+    ],
+    "apto_principiantes": true,
+    "inscritos": 58,
+    "estado": "Abierto",
+    "fuente": "Devpost API",
+    "areas_perfil": [],
+    "score": 15,
+    "_sello": "6f6c5b2cf8fc"
+  },
+  {
+    "titulo": "IceHacks",
+    "organizador": "CodeStarters",
+    "plataforma": "Devpost",
+    "tipo": "Hackatón",
+    "modalidad": "En línea",
+    "ubicacion": "En línea (internacional)",
+    "pais": "Internacional",
+    "url": "https://icehacks.devpost.com/",
+    "fechas": "Nov 08 - 15, 2026",
+    "fecha_cierre_iso": "2026-11-15",
+    "premio": "$17,150",
+    "temas": [
+      "Beginner Friendly",
+      "Low/No Code",
+      "Open Ended"
+    ],
+    "apto_principiantes": true,
+    "inscritos": 122,
+    "estado": "Próximamente",
+    "fuente": "Devpost API",
+    "areas_perfil": [],
+    "score": 15,
+    "_sello": "bd5774c616c0"
+  },
+  {
+    "titulo": "Green Shift Hacks",
+    "organizador": "HackathonForEveryone",
+    "plataforma": "Devpost",
+    "tipo": "Hackatón",
+    "modalidad": "En línea",
+    "ubicacion": "En línea (internacional)",
+    "pais": "Internacional",
+    "url": "https://green-shift-hacks.devpost.com/",
+    "fechas": "Oct 18 - Nov 17, 2026",
+    "fecha_cierre_iso": "2026-11-17",
+    "premio": "$125",
+    "temas": [
+      "Beginner Friendly",
+      "Social Good"
+    ],
+    "apto_principiantes": true,
+    "inscritos": 53,
+    "estado": "Abierto",
+    "fuente": "Devpost API",
+    "areas_perfil": [],
+    "score": 15,
+    "_sello": "c14b294074c4"
+  },
+  {
+    "titulo": "LaunchPad Hacks",
+    "organizador": "Hack4TodayOrg",
+    "plataforma": "Devpost",
+    "tipo": "Hackatón",
+    "modalidad": "En línea",
+    "ubicacion": "En línea (internacional)",
+    "pais": "Internacional",
+    "url": "https://launchpad-hacks.devpost.com/",
+    "fechas": "Oct 16 - Nov 20, 2026",
+    "fecha_cierre_iso": "2026-11-20",
+    "premio": "$300",
+    "temas": [
+      "Beginner Friendly",
+      "Open Ended"
+    ],
+    "apto_principiantes": true,
+    "inscritos": 145,
+    "estado": "Abierto",
+    "fuente": "Devpost API",
+    "areas_perfil": [],
+    "score": 15,
+    "_sello": "6992ada4c1f3"
+  },
+  {
+    "titulo": "AccessED Hacks",
+    "organizador": "AccessEDnpo",
+    "plataforma": "Devpost",
+    "tipo": "Hackatón",
+    "modalidad": "En línea",
+    "ubicacion": "En línea (internacional)",
+    "pais": "Internacional",
+    "url": "https://accessed-hacks.devpost.com/",
+    "fechas": "Oct 17 - Nov 20, 2026",
+    "fecha_cierre_iso": "2026-11-20",
+    "premio": "$225",
+    "temas": [
+      "Beginner Friendly",
+      "Education",
+      "Social Good"
+    ],
+    "apto_principiantes": true,
+    "inscritos": 57,
+    "estado": "Abierto",
+    "fuente": "Devpost API",
+    "areas_perfil": [],
+    "score": 15,
+    "_sello": "911211d65c8f"
+  },
+  {
+    "titulo": "SafeSpace Hacks",
+    "organizador": "SafeSpace",
+    "plataforma": "Devpost",
+    "tipo": "Hackatón",
+    "modalidad": "En línea",
+    "ubicacion": "En línea (internacional)",
+    "pais": "Internacional",
+    "url": "https://safespace-hacks.devpost.com/",
+    "fechas": "Oct 17 - Nov 22, 2026",
+    "fecha_cierre_iso": "2026-11-22",
+    "premio": "$280",
+    "temas": [
+      "Beginner Friendly",
+      "Cybersecurity",
+      "Social Good"
+    ],
+    "apto_principiantes": true,
+    "inscritos": 121,
+    "estado": "Abierto",
+    "fuente": "Devpost API",
+    "areas_perfil": [],
+    "score": 15,
+    "_sello": "1615a060ca05"
+  },
+  {
+    "titulo": "CSC Winter Sparkathon",
+    "organizador": "The Webb Schools CSC",
+    "plataforma": "Devpost",
+    "tipo": "Hackatón",
+    "modalidad": "En línea",
+    "ubicacion": "En línea (internacional)",
+    "pais": "Internacional",
+    "url": "https://csc-winter-sparkathon.devpost.com/",
+    "fechas": "Oct 29 - Nov 30, 2026",
+    "fecha_cierre_iso": "2026-11-30",
+    "premio": "$100",
+    "temas": [
+      "Beginner Friendly",
+      "Open Ended",
+      "Social Good"
+    ],
+    "apto_principiantes": true,
+    "inscritos": 35,
+    "estado": "Próximamente",
+    "fuente": "Devpost API",
+    "areas_perfil": [],
+    "score": 15,
+    "_sello": "b49060afdc63"
+  },
+  {
+    "titulo": "Cosmo Hacks 2026",
+    "organizador": "Cosmo Hacks",
+    "plataforma": "Devpost",
+    "tipo": "Hackatón",
+    "modalidad": "En línea",
+    "ubicacion": "En línea (internacional)",
+    "pais": "Internacional",
+    "url": "https://cosmohacks.devpost.com/",
+    "fechas": "Dec 18 - 21, 2026",
+    "fecha_cierre_iso": "2026-12-21",
+    "premio": "$196,955",
+    "temas": [
+      "Beginner Friendly",
+      "Open Ended",
+      "Education"
+    ],
+    "apto_principiantes": true,
+    "inscritos": 443,
+    "estado": "Próximamente",
+    "fuente": "Devpost API",
+    "areas_perfil": [],
+    "score": 15,
+    "_sello": "ea9243bc5229"
+  },
+  {
+    "titulo": "United Hacks V8",
+    "organizador": "Hack United",
+    "plataforma": "Devpost",
+    "tipo": "Hackatón",
+    "modalidad": "En línea",
+    "ubicacion": "En línea (internacional)",
+    "pais": "Internacional",
+    "url": "https://unitedhacksv8.devpost.com/",
+    "fechas": "Jan 08 - 10, 2027",
+    "fecha_cierre_iso": "2027-01-10",
+    "premio": "$13,700",
+    "temas": [
+      "Beginner Friendly",
+      "Design",
+      "Education"
+    ],
+    "apto_principiantes": true,
+    "inscritos": 283,
+    "estado": "Próximamente",
+    "fuente": "Devpost API",
+    "areas_perfil": [],
+    "score": 15,
+    "_sello": "48183186a1f3"
+  },
+  {
+    "titulo": "Build Beyond Hackathon",
+    "organizador": "OSC",
+    "plataforma": "Devpost",
+    "tipo": "Hackatón",
+    "modalidad": "En línea",
+    "ubicacion": "En línea (internacional)",
+    "pais": "Internacional",
+    "url": "https://build-beyond.devpost.com/",
+    "fechas": "Mar 01 - 15, 2027",
+    "fecha_cierre_iso": "2027-03-15",
+    "premio": "$5,000",
+    "temas": [
+      "Beginner Friendly",
+      "Open Ended",
+      "Productivity"
+    ],
+    "apto_principiantes": true,
+    "inscritos": 40,
+    "estado": "Próximamente",
+    "fuente": "Devpost API",
+    "areas_perfil": [],
+    "score": 15,
+    "_sello": "2d8fb0c37dd0"
+  },
+  {
+    "titulo": "GLITCHATHON",
+    "organizador": "sir padampat singhania university",
+    "plataforma": "Devpost",
+    "tipo": "Hackatón",
+    "modalidad": "En línea",
+    "ubicacion": "En línea (internacional)",
+    "pais": "Internacional",
+    "url": "https://glitchathon.devpost.com/",
+    "fechas": "Oct 18 - 25, 2026",
+    "fecha_cierre_iso": "2026-10-25",
+    "premio": "₹200",
+    "temas": [
+      "Design",
+      "Low/No Code",
+      "Productivity"
+    ],
+    "apto_principiantes": false,
+    "inscritos": 87,
+    "estado": "Abierto",
+    "fuente": "Devpost API",
+    "areas_perfil": [],
+    "score": 10,
+    "_sello": "5f22a5eef7a0"
+  },
+  {
+    "titulo": "Pumpkin Playground",
+    "organizador": "ACM Long Beach",
+    "plataforma": "Devpost",
+    "tipo": "Hackatón",
+    "modalidad": "En línea",
+    "ubicacion": "En línea (internacional)",
+    "pais": "Internacional",
+    "url": "https://pumpkin-playground.devpost.com/",
+    "fechas": "Oct 12 - 30, 2026",
+    "fecha_cierre_iso": "2026-10-30",
+    "premio": "$30",
+    "temas": [
+      "Design",
+      "Gaming",
+      "Web"
+    ],
+    "apto_principiantes": false,
+    "inscritos": 135,
+    "estado": "Abierto",
+    "fuente": "Devpost API",
+    "areas_perfil": [],
+    "score": 10,
+    "_sello": "49b84e8e292a"
+  },
+  {
+    "titulo": "Hack to the Future",
+    "organizador": "HackathonForEveryone",
+    "plataforma": "Devpost",
+    "tipo": "Hackatón",
+    "modalidad": "En línea",
+    "ubicacion": "En línea (internacional)",
+    "pais": "Internacional",
+    "url": "https://hack-to-the-missing-future-ai.devpost.com/",
+    "fechas": "Oct 20 - 27, 2026",
+    "fecha_cierre_iso": "2026-10-27",
+    "premio": "",
+    "temas": [
+      "Beginner Friendly"
+    ],
+    "apto_principiantes": true,
+    "inscritos": 32,
+    "estado": "Abierto",
+    "fuente": "Devpost API",
+    "areas_perfil": [],
+    "score": 5,
+    "_sello": "e1e80a749741"
+  },
+  {
+    "titulo": "305 EmpowHER Edition October 2026 — 305Hackathons.vercel.app",
+    "organizador": "CODE CRUNCH",
+    "plataforma": "Devpost",
+    "tipo": "Hackatón",
+    "modalidad": "En línea",
+    "ubicacion": "En línea (internacional)",
+    "pais": "Internacional",
+    "url": "https://305empowheroct2026.devpost.com/",
+    "fechas": "Oct 14 - 31, 2026",
+    "fecha_cierre_iso": "2026-10-31",
+    "premio": "",
+    "temas": [
+      "Beginner Friendly",
+      "Cybersecurity",
+      "Education"
+    ],
+    "apto_principiantes": true,
+    "inscritos": 34,
+    "estado": "Abierto",
+    "fuente": "Devpost API",
+    "areas_perfil": [],
+    "score": 5,
+    "_sello": "0a1525f9a27b"
+  },
+  {
+    "titulo": "DSH Hacks V2 ($100k+ in prizes!)",
+    "organizador": "STEMise",
+    "plataforma": "Devpost",
+    "tipo": "Hackatón",
+    "modalidad": "En línea",
+    "ubicacion": "En línea (internacional)",
+    "pais": "Internacional",
+    "url": "https://dsh-hacks-v2.devpost.com/",
+    "fechas": "Jun 24 - Nov 15, 2026",
+    "fecha_cierre_iso": "2026-11-15",
+    "premio": "",
+    "temas": [
+      "Beginner Friendly",
+      "Low/No Code",
+      "Open Ended"
+    ],
+    "apto_principiantes": true,
+    "inscritos": 699,
+    "estado": "Abierto",
+    "fuente": "Devpost API",
+    "areas_perfil": [],
+    "score": 5,
+    "_sello": "802b1ecb1b30"
+  },
+  {
+    "titulo": "Code For DFW",
+    "organizador": "n/a",
+    "plataforma": "Devpost",
+    "tipo": "Hackatón",
+    "modalidad": "En línea",
+    "ubicacion": "En línea (internacional)",
+    "pais": "Internacional",
+    "url": "https://code-for-dfw.devpost.com/",
+    "fechas": "Oct 20 - Nov 25, 2026",
+    "fecha_cierre_iso": "2026-11-25",
+    "premio": "",
+    "temas": [
+      "Open Ended",
+      "Social Good",
+      "Beginner Friendly"
+    ],
+    "apto_principiantes": true,
+    "inscritos": 9,
+    "estado": "Abierto",
+    "fuente": "Devpost API",
+    "areas_perfil": [],
+    "score": 5,
+    "_sello": "805fe9c515cf"
+  },
+  {
+    "titulo": "BuildyourOwnWebsite",
+    "organizador": "Roxten Studios",
+    "plataforma": "Devpost",
+    "tipo": "Hackatón",
+    "modalidad": "En línea",
+    "ubicacion": "En línea (internacional)",
+    "pais": "Internacional",
+    "url": "https://buildyourownwebsite.devpost.com/",
+    "fechas": "Nov 16 - 25, 2026",
+    "fecha_cierre_iso": "2026-11-25",
+    "premio": "",
+    "temas": [
+      "Beginner Friendly",
+      "Education",
+      "Web"
+    ],
+    "apto_principiantes": true,
+    "inscritos": 36,
+    "estado": "Próximamente",
+    "fuente": "Devpost API",
+    "areas_perfil": [],
+    "score": 5,
+    "_sello": "fcfe179a0433"
+  },
+  {
+    "titulo": "305 Veterans Hackathon Edition November 2026 — 305Hackathons.vercel.app",
+    "organizador": "GOOGLE DEVELOPER GROUP AT FIU",
+    "plataforma": "Devpost",
+    "tipo": "Hackatón",
+    "modalidad": "En línea",
+    "ubicacion": "En línea (internacional)",
+    "pais": "Internacional",
+    "url": "https://305veteransnov2026.devpost.com/",
+    "fechas": "Nov 01 - 30, 2026",
+    "fecha_cierre_iso": "2026-11-30",
+    "premio": "",
+    "temas": [
+      "Beginner Friendly",
+      "Cybersecurity",
+      "Education"
+    ],
+    "apto_principiantes": true,
+    "inscritos": 1,
+    "estado": "Próximamente",
+    "fuente": "Devpost API",
+    "areas_perfil": [],
+    "score": 5,
+    "_sello": "13eec3b4d061"
+  },
+  {
+    "titulo": "305 CodeFest Edition December 2026 — 305Hackathons.vercel.app",
+    "organizador": "COLORSTACKatFIU",
+    "plataforma": "Devpost",
+    "tipo": "Hackatón",
+    "modalidad": "En línea",
+    "ubicacion": "En línea (internacional)",
+    "pais": "Internacional",
+    "url": "https://305codefestdec2026.devpost.com/",
+    "fechas": "Dec 01 - 31, 2026",
+    "fecha_cierre_iso": "2026-12-31",
+    "premio": "",
+    "temas": [
+      "Beginner Friendly",
+      "Cybersecurity",
+      "Education"
+    ],
+    "apto_principiantes": true,
+    "inscritos": 2,
+    "estado": "Próximamente",
+    "fuente": "Devpost API",
+    "areas_perfil": [],
+    "score": 5,
+    "_sello": "a1a31902682f"
+  },
+  {
+    "titulo": "InnovArt 2027: Art and Technology Hack Day",
+    "organizador": "Binnovative",
+    "plataforma": "Devpost",
+    "tipo": "Hackatón",
+    "modalidad": "En línea",
+    "ubicacion": "En línea (internacional)",
+    "pais": "Internacional",
+    "url": "https://innovart2027.devpost.com/",
+    "fechas": "Aug 23, 2026 - Jan 02, 2027",
+    "fecha_cierre_iso": "2027-01-02",
+    "premio": "",
+    "temas": [
+      "Music/Art",
+      "Beginner Friendly",
+      "Open Ended"
+    ],
+    "apto_principiantes": true,
+    "inscritos": 238,
+    "estado": "Abierto",
+    "fuente": "Devpost API",
+    "areas_perfil": [],
+    "score": 5,
+    "_sello": "88573ab54acf"
+  },
+  {
+    "titulo": "WiCS Hackathon",
+    "organizador": "MLH",
+    "plataforma": "Devpost",
+    "tipo": "Hackatón",
+    "modalidad": "En línea",
+    "ubicacion": "En línea (internacional)",
+    "pais": "Internacional",
+    "url": "https://wics-hackathon.devpost.com/",
+    "fechas": "Feb 28 - Mar 02, 2027",
+    "fecha_cierre_iso": "2027-03-02",
+    "premio": "",
+    "temas": [
+      "Beginner Friendly",
+      "Design",
+      "Education"
+    ],
+    "apto_principiantes": true,
+    "inscritos": 10,
+    "estado": "Próximamente",
+    "fuente": "Devpost API",
+    "areas_perfil": [],
+    "score": 5,
+    "_sello": "479a5f9b1fee"
+  },
+  {
+    "titulo": "The Top 500 (UH v2)",
+    "organizador": "noclue",
+    "plataforma": "Devpost",
+    "tipo": "Hackatón",
+    "modalidad": "En línea",
+    "ubicacion": "En línea (internacional)",
+    "pais": "Internacional",
+    "url": "https://the-top-500-uh-v2.devpost.com/",
+    "fechas": "Oct 23 - 25, 2026",
+    "fecha_cierre_iso": "2026-10-25",
+    "premio": "",
+    "temas": [
+      "Low/No Code",
+      "Open Ended",
+      "Social Good"
+    ],
+    "apto_principiantes": false,
+    "inscritos": 10,
+    "estado": "Abierto",
+    "fuente": "Devpost API",
+    "areas_perfil": [],
+    "score": 0,
+    "_sello": "feb0ec1cb228"
+  },
+  {
+    "tipo": "Plataforma",
+    "modalidad": "Presencial o en línea (según el reto)",
+    "estado": "Permanente",
+    "titulo": "Retos de innovación abierta Ruta N",
+    "organizador": "Ruta N Medellín",
+    "plataforma": "Ruta N",
+    "pais": "Colombia",
+    "ubicacion": "Medellín / Antioquia",
+    "url": "https://www.rutanmedellin.org/programas/retos-de-innovaci%C3%B3n-abierta-ofertas-ruta-n",
+    "temas": [
+      "Innovación abierta",
+      "Ciudad"
+    ],
+    "descripcion": "Empresas e instituciones de Medellín publican retos de innovación abierta (movilidad, energía, salud, industria) para que startups, investigadores y estudiantes propongan soluciones.",
+    "fuente": "Curado",
+    "curado": true,
+    "areas_perfil": [
+      "Energía y clima",
+      "Movilidad y ciudad",
+      "Salud y biomédica",
+      "Innovación abierta"
+    ],
+    "premio": "",
+    "score": 115,
+    "_sello": "34c5c9771c96"
+  },
+  {
+    "tipo": "Plataforma",
+    "modalidad": "En línea",
+    "estado": "Permanente",
+    "titulo": "Kaggle Competitions",
+    "organizador": "Google / Kaggle",
+    "plataforma": "Kaggle",
+    "pais": "Internacional",
+    "ubicacion": "En línea (internacional)",
+    "url": "https://www.kaggle.com/competitions",
+    "temas": [
+      "Datos",
+      "IA",
+      "Simulación"
+    ],
+    "descripcion": "Competencias de ciencia de datos y machine learning; muchas tienen datos de física, energía, salud y clima.",
+    "fuente": "Curado",
+    "curado": true,
+    "areas_perfil": [
+      "Física, cuántica y espacio",
+      "Energía y clima",
+      "Datos, IA y simulación",
+      "Salud y biomédica"
+    ],
+    "premio": "",
+    "score": 80,
+    "_sello": "de1337f12c35"
+  },
+  {
+    "tipo": "Plataforma",
+    "modalidad": "En línea",
+    "estado": "Permanente",
+    "titulo": "Datos Abiertos Colombia",
+    "organizador": "MinTIC",
+    "plataforma": "datos.gov.co",
+    "pais": "Colombia",
+    "ubicacion": "En línea (Colombia)",
+    "url": "https://www.datos.gov.co/",
+    "temas": [
+      "Datos",
+      "Movilidad",
+      "Ciudad"
+    ],
+    "descripcion": "Portal oficial de datos abiertos (movilidad, energía, calidad del aire, accidentalidad). Sirve para los retos de ciudad y es la fuente de concursos de datos del Gobierno.",
+    "fuente": "Curado",
+    "curado": true,
+    "areas_perfil": [
+      "Energía y clima",
+      "Movilidad y ciudad",
+      "Datos, IA y simulación"
+    ],
+    "premio": "",
+    "score": 80,
+    "_sello": "2c624f989e44"
+  },
+  {
+    "tipo": "Plataforma",
+    "modalidad": "En línea o presencial en sede local",
+    "estado": "Permanente",
+    "titulo": "NASA Space Apps Challenge",
+    "organizador": "NASA",
+    "plataforma": "Space Apps",
+    "pais": "Internacional",
+    "ubicacion": "En línea y sedes locales (revisar sede Medellín)",
+    "url": "https://www.spaceappschallenge.org/",
+    "temas": [
+      "Espacio",
+      "Datos",
+      "Clima"
+    ],
+    "descripcion": "Hackatón internacional anual (octubre) con datos abiertos de la NASA: clima, observación terrestre, astrofísica y exploración espacial.",
+    "fuente": "Curado",
+    "curado": true,
+    "areas_perfil": [
+      "Física, cuántica y espacio",
+      "Energía y clima",
+      "Datos, IA y simulación"
+    ],
+    "premio": "",
+    "score": 60,
+    "_sello": "532727302441"
+  },
+  {
+    "tipo": "Plataforma",
+    "modalidad": "En línea",
+    "estado": "Permanente",
+    "titulo": "HeroX: retos de innovación con premio",
+    "organizador": "HeroX",
+    "plataforma": "HeroX",
+    "pais": "Internacional",
+    "ubicacion": "En línea (internacional)",
+    "url": "https://www.herox.com/",
+    "temas": [
+      "Energía",
+      "Espacio",
+      "Hardware"
+    ],
+    "descripcion": "Retos abiertos de agencias y empresas (NASA, Departamento de Energía de EE. UU., etc.); revisar elegibilidad por país en cada reto.",
+    "fuente": "Curado",
+    "curado": true,
+    "areas_perfil": [
+      "Física, cuántica y espacio",
+      "Energía y clima",
+      "Hardware, IoT y electrónica"
+    ],
+    "premio": "",
+    "score": 60,
+    "_sello": "05ef385eb456"
+  },
+  {
+    "tipo": "Plataforma",
+    "modalidad": "En línea",
+    "estado": "Permanente",
+    "titulo": "Interacpedia: retos empresariales para estudiantes",
+    "organizador": "Interacpedia",
+    "plataforma": "Interacpedia",
+    "pais": "Colombia",
+    "ubicacion": "En línea (Colombia)",
+    "url": "https://interacpedia.com/",
+    "temas": [
+      "Innovación abierta"
+    ],
+    "descripcion": "Plataforma nacida en Medellín donde empresas plantean retos reales; las mejores soluciones pueden terminar en prácticas o vinculación.",
+    "fuente": "Curado",
+    "curado": true,
+    "areas_perfil": [
+      "Innovación abierta"
+    ],
+    "premio": "",
+    "score": 40,
+    "_sello": "874731550845"
+  },
+  {
+    "tipo": "Plataforma",
+    "modalidad": "En línea",
+    "estado": "Permanente",
+    "titulo": "Devpost: directorio de hackatones",
+    "organizador": "Devpost",
+    "plataforma": "Devpost",
+    "pais": "Internacional",
+    "ubicacion": "En línea (internacional)",
+    "url": "https://devpost.com/hackathons",
+    "temas": [
+      "IA",
+      "Hardware",
+      "Datos"
+    ],
+    "descripcion": "El bot ya rastrea sus hackatones en línea; aquí puedes filtrar por tema, premio y fecha.",
+    "fuente": "Curado",
+    "curado": true,
+    "areas_perfil": [
+      "Datos, IA y simulación",
+      "Hardware, IoT y electrónica"
+    ],
+    "premio": "",
+    "score": 40,
+    "_sello": "ec3ba81a31d4"
+  },
+  {
+    "tipo": "Plataforma",
+    "modalidad": "En línea",
+    "estado": "Permanente",
+    "titulo": "Convocatorias MinCiencias",
+    "organizador": "Ministerio de Ciencia, Tecnología e Innovación",
+    "plataforma": "MinCiencias",
+    "pais": "Colombia",
+    "ubicacion": "En línea (Colombia)",
+    "url": "https://minciencias.gov.co/convocatorias",
+    "temas": [
+      "Investigación",
+      "Innovación abierta"
+    ],
+    "descripcion": "Convocatorias nacionales de ciencia e innovación, jóvenes investigadores y retos con financiación pública.",
+    "fuente": "Curado",
+    "curado": true,
+    "areas_perfil": [
+      "Innovación abierta"
+    ],
+    "premio": "",
+    "score": 40,
+    "_sello": "9a34f4880f4f"
+  },
+  {
+    "tipo": "Plataforma",
+    "modalidad": "En línea",
+    "estado": "Permanente",
+    "titulo": "Convocatorias iNNpulsa Colombia",
+    "organizador": "iNNpulsa Colombia",
+    "plataforma": "iNNpulsa",
+    "pais": "Colombia",
+    "ubicacion": "En línea (Colombia)",
+    "url": "https://www.innpulsacolombia.com/",
+    "temas": [
+      "Innovación abierta",
+      "Emprendimiento"
+    ],
+    "descripcion": "Agencia de emprendimiento e innovación del Gobierno; publica retos y convocatorias para startups y proyectos de base tecnológica.",
+    "fuente": "Curado",
+    "curado": true,
+    "areas_perfil": [
+      "Innovación abierta"
+    ],
+    "premio": "",
+    "score": 40,
+    "_sello": "1c36d0337ffc"
+  },
+  {
+    "tipo": "Plataforma",
+    "modalidad": "En línea",
+    "estado": "Permanente",
+    "titulo": "Microsoft Imagine Cup",
+    "organizador": "Microsoft",
+    "plataforma": "Imagine Cup",
+    "pais": "Internacional",
+    "ubicacion": "En línea (internacional)",
+    "url": "https://imaginecup.microsoft.com/",
+    "temas": [
+      "IA",
+      "Emprendimiento"
+    ],
+    "descripcion": "Competencia global para estudiantes que crean startups tecnológicas con IA.",
+    "fuente": "Curado",
+    "curado": true,
+    "areas_perfil": [
+      "Datos, IA y simulación",
+      "Innovación abierta"
+    ],
+    "premio": "",
+    "score": 40,
+    "_sello": "aa6ad0c4dda8"
+  },
+  {
+    "tipo": "Plataforma",
+    "modalidad": "En línea",
+    "estado": "Permanente",
+    "titulo": "Major League Hacking (MLH): hackatones estudiantiles",
+    "organizador": "MLH",
+    "plataforma": "MLH",
+    "pais": "Internacional",
+    "ubicacion": "En línea y presencial",
+    "url": "https://mlh.io/seasons/2027/events",
+    "temas": [
+      "Programación",
+      "Hardware"
+    ],
+    "descripcion": "Liga oficial de hackatones universitarios; muchos eventos son en línea y abiertos a estudiantes de cualquier país.",
+    "fuente": "Curado",
+    "curado": true,
+    "areas_perfil": [
+      "Hardware, IoT y electrónica"
+    ],
+    "premio": "",
+    "score": 20,
+    "_sello": "556fe997509a"
+  },
+  {
+    "tipo": "Plataforma",
+    "modalidad": "En línea",
+    "estado": "Permanente",
+    "titulo": "lablab.ai: hackatones de IA (incluye retos con Llama de Meta)",
+    "organizador": "lablab.ai",
+    "plataforma": "lablab.ai",
+    "pais": "Internacional",
+    "ubicacion": "En línea (internacional)",
+    "url": "https://lablab.ai/event",
+    "temas": [
+      "IA",
+      "LLM"
+    ],
+    "descripcion": "Hackatones en línea de inteligencia artificial patrocinados por empresas de IA; ahí suelen aparecer los retos con modelos Llama de Meta.",
+    "fuente": "Curado",
+    "curado": true,
+    "areas_perfil": [
+      "Datos, IA y simulación"
+    ],
+    "premio": "",
+    "score": 20,
+    "_sello": "66e9c55caa03"
+  },
+  {
+    "tipo": "Plataforma",
+    "modalidad": "En línea",
+    "estado": "Permanente",
+    "titulo": "Topcoder: retos de software y datos",
+    "organizador": "Topcoder",
+    "plataforma": "Topcoder",
+    "pais": "Internacional",
+    "ubicacion": "En línea (internacional)",
+    "url": "https://www.topcoder.com/",
+    "temas": [
+      "Programación",
+      "Datos"
+    ],
+    "descripcion": "Retos pagos de desarrollo, ciencia de datos y diseño, abiertos a participantes de todo el mundo.",
+    "fuente": "Curado",
+    "curado": true,
+    "areas_perfil": [
+      "Datos, IA y simulación"
+    ],
+    "premio": "",
+    "score": 20,
+    "_sello": "dfa62584b1aa"
+  },
+  {
+    "tipo": "Plataforma",
+    "modalidad": "En línea",
+    "estado": "Permanente",
+    "titulo": "Hult Prize",
+    "organizador": "Hult Prize Foundation",
+    "plataforma": "Hult Prize",
+    "pais": "Internacional",
+    "ubicacion": "En línea y sedes universitarias",
+    "url": "https://www.hultprize.org/",
+    "temas": [
+      "Emprendimiento",
+      "Impacto social"
+    ],
+    "descripcion": "Competencia universitaria de emprendimiento social; las rondas iniciales se hacen dentro de cada universidad.",
+    "fuente": "Curado",
+    "curado": true,
+    "areas_perfil": [
+      "Innovación abierta"
+    ],
+    "premio": "",
+    "score": 20,
+    "_sello": "6c514f9175b5"
+  },
+  {
+    "tipo": "Plataforma",
+    "modalidad": "En línea",
+    "estado": "Permanente",
+    "titulo": "IEEEXtreme: maratón de programación de 24 horas",
+    "organizador": "IEEE",
+    "plataforma": "IEEE",
+    "pais": "Internacional",
+    "ubicacion": "En línea (equipos de rama estudiantil IEEE)",
+    "url": "https://ieeextreme.org/",
+    "temas": [
+      "Programación",
+      "Algoritmos"
+    ],
+    "descripcion": "Competencia global de programación por equipos de estudiantes miembros de IEEE; se realiza cada año en octubre.",
+    "fuente": "Curado",
+    "curado": true,
+    "areas_perfil": [],
+    "premio": "",
+    "score": 0,
+    "_sello": "39c619960fb6"
+  }
+]

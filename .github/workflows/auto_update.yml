@@ -1,8 +1,9 @@
-name: Actualizacion Automatica de Vacantes
+# Portal IPF · Jimmy Stebym Rosero Barrera · Licencia MIT (ver LICENSE)
+name: Bot de Practicas
 
 on:
   schedule:
-    # Inicia todos los días a las 00:30 UTC (19:30 / 7:30 PM hora Colombia).
+    # Todos los días a las 00:30 UTC (19:30 hora Colombia).
     - cron: '30 0 * * *'
   workflow_dispatch: # Permite ejecutarlo manualmente con un botón en GitHub
 
@@ -10,8 +11,11 @@ permissions:
   contents: write
 
 jobs:
-  update-jobs:
+  rastrear:
     runs-on: ubuntu-latest
+    # LinkedIn se consulta con pausas de 3 s para evitar el bloqueo 429:
+    # la corrida completa tarda unos 40-60 minutos.
+    timeout-minutes: 120
     steps:
       - name: Descargar repositorio
         uses: actions/checkout@v4
@@ -24,25 +28,26 @@ jobs:
           python-version: '3.11'
 
       - name: Instalar dependencias
-        run: |
-          pip install -r requirements.txt
+        run: pip install -r requirements.txt
 
-      - name: Ejecutar Bot de Rastreo
-        run: |
-          python bot_practicas.py
+      - name: Ejecutar bot_practicas.py
+        run: python bot_practicas.py
 
-      - name: Preparar archivo para GitHub Pages
-        run: |
-          cp dashboard_practicas.html index.html
-
-      - name: Guardar y publicar cambios actualizados
+      - name: Guardar datos actualizados
+        # Solo se suben los datos de este bot; la página la arma
+        # "Construir y publicar página" al terminar este flujo.
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add index.html dashboard_practicas.html vacantes_practicas.json vacantes_practicas.csv
-          if ! git diff --staged --quiet; then
-            git commit -m "Auto-update: Vacantes de Ingeniería Física [$(date '+%Y-%m-%d')]"
-            git push origin main
-          else
-            echo "No hay cambios nuevos en las vacantes."
+          git add vacantes_practicas.json vacantes_practicas.csv
+          if git diff --staged --quiet; then
+            echo "Sin cambios nuevos."
+            exit 0
           fi
+          git commit -m "Auto-update: Vacantes de Ingeniería Física [$(date '+%Y-%m-%d')]"
+          # Otros bots pueden haber subido sus datos mientras tanto.
+          for intento in 1 2 3 4 5; do
+            git pull --rebase origin main && git push origin main && exit 0
+            sleep $((intento * 10))
+          done
+          exit 1

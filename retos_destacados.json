@@ -1,0 +1,246 @@
+[
+ {
+  "tipo": "Plataforma",
+  "modalidad": "Presencial o en línea (según el reto)",
+  "estado": "Permanente",
+  "titulo": "Retos de innovación abierta Ruta N",
+  "organizador": "Ruta N Medellín",
+  "plataforma": "Ruta N",
+  "pais": "Colombia",
+  "ubicacion": "Medellín / Antioquia",
+  "url": "https://www.rutanmedellin.org/programas/retos-de-innovaci%C3%B3n-abierta-ofertas-ruta-n",
+  "temas": [
+   "Innovación abierta",
+   "Ciudad"
+  ],
+  "descripcion": "Empresas e instituciones de Medellín publican retos de innovación abierta (movilidad, energía, salud, industria) para que startups, investigadores y estudiantes propongan soluciones."
+ },
+ {
+  "tipo": "Plataforma",
+  "modalidad": "En línea",
+  "estado": "Permanente",
+  "titulo": "Interacpedia: retos empresariales para estudiantes",
+  "organizador": "Interacpedia",
+  "plataforma": "Interacpedia",
+  "pais": "Colombia",
+  "ubicacion": "En línea (Colombia)",
+  "url": "https://interacpedia.com/",
+  "temas": [
+   "Innovación abierta"
+  ],
+  "descripcion": "Plataforma nacida en Medellín donde empresas plantean retos reales; las mejores soluciones pueden terminar en prácticas o vinculación."
+ },
+ {
+  "tipo": "Plataforma",
+  "modalidad": "En línea o presencial en sede local",
+  "estado": "Permanente",
+  "titulo": "NASA Space Apps Challenge",
+  "organizador": "NASA",
+  "plataforma": "Space Apps",
+  "pais": "Internacional",
+  "ubicacion": "En línea y sedes locales (revisar sede Medellín)",
+  "url": "https://www.spaceappschallenge.org/",
+  "temas": [
+   "Espacio",
+   "Datos",
+   "Clima"
+  ],
+  "descripcion": "Hackatón internacional anual (octubre) con datos abiertos de la NASA: clima, observación terrestre, astrofísica y exploración espacial."
+ },
+ {
+  "tipo": "Plataforma",
+  "modalidad": "En línea",
+  "estado": "Permanente",
+  "titulo": "IEEEXtreme: maratón de programación de 24 horas",
+  "organizador": "IEEE",
+  "plataforma": "IEEE",
+  "pais": "Internacional",
+  "ubicacion": "En línea (equipos de rama estudiantil IEEE)",
+  "url": "https://ieeextreme.org/",
+  "temas": [
+   "Programación",
+   "Algoritmos"
+  ],
+  "descripcion": "Competencia global de programación por equipos de estudiantes miembros de IEEE; se realiza cada año en octubre."
+ },
+ {
+  "tipo": "Plataforma",
+  "modalidad": "En línea",
+  "estado": "Permanente",
+  "titulo": "Devpost: directorio de hackatones",
+  "organizador": "Devpost",
+  "plataforma": "Devpost",
+  "pais": "Internacional",
+  "ubicacion": "En línea (internacional)",
+  "url": "https://devpost.com/hackathons",
+  "temas": [
+   "IA",
+   "Hardware",
+   "Datos"
+  ],
+  "descripcion": "El bot ya rastrea sus hackatones en línea; aquí puedes filtrar por tema, premio y fecha."
+ },
+ {
+  "tipo": "Plataforma",
+  "modalidad": "En línea",
+  "estado": "Permanente",
+  "titulo": "Major League Hacking (MLH): hackatones estudiantiles",
+  "organizador": "MLH",
+  "plataforma": "MLH",
+  "pais": "Internacional",
+  "ubicacion": "En línea y presencial",
+  "url": "https://mlh.io/seasons/2027/events",
+  "temas": [
+   "Programación",
+   "Hardware"
+  ],
+  "descripcion": "Liga oficial de hackatones universitarios; muchos eventos son en línea y abiertos a estudiantes de cualquier país."
+ },
+ {
+  "tipo": "Plataforma",
+  "modalidad": "En línea",
+  "estado": "Permanente",
+  "titulo": "lablab.ai: hackatones de IA (incluye retos con Llama de Meta)",
+  "organizador": "lablab.ai",
+  "plataforma": "lablab.ai",
+  "pais": "Internacional",
+  "ubicacion": "En línea (internacional)",
+  "url": "https://lablab.ai/event",
+  "temas": [
+   "IA",
+   "LLM"
+  ],
+  "descripcion": "Hackatones en línea de inteligencia artificial patrocinados por empresas de IA; ahí suelen aparecer los retos con modelos Llama de Meta."
+ },
+ {
+  "tipo": "Plataforma",
+  "modalidad": "En línea",
+  "estado": "Permanente",
+  "titulo": "Kaggle Competitions",
+  "organizador": "Google / Kaggle",
+  "plataforma": "Kaggle",
+  "pais": "Internacional",
+  "ubicacion": "En línea (internacional)",
+  "url": "https://www.kaggle.com/competitions",
+  "temas": [
+   "Datos",
+   "IA",
+   "Simulación"
+  ],
+  "descripcion": "Competencias de ciencia de datos y machine learning; muchas tienen datos de física, energía, salud y clima."
+ },
+ {
+  "tipo": "Plataforma",
+  "modalidad": "En línea",
+  "estado": "Permanente",
+  "titulo": "HeroX: retos de innovación con premio",
+  "organizador": "HeroX",
+  "plataforma": "HeroX",
+  "pais": "Internacional",
+  "ubicacion": "En línea (internacional)",
+  "url": "https://www.herox.com/",
+  "temas": [
+   "Energía",
+   "Espacio",
+   "Hardware"
+  ],
+  "descripcion": "Retos abiertos de agencias y empresas (NASA, Departamento de Energía de EE. UU., etc.); revisar elegibilidad por país en cada reto."
+ },
+ {
+  "tipo": "Plataforma",
+  "modalidad": "En línea",
+  "estado": "Permanente",
+  "titulo": "Topcoder: retos de software y datos",
+  "organizador": "Topcoder",
+  "plataforma": "Topcoder",
+  "pais": "Internacional",
+  "ubicacion": "En línea (internacional)",
+  "url": "https://www.topcoder.com/",
+  "temas": [
+   "Programación",
+   "Datos"
+  ],
+  "descripcion": "Retos pagos de desarrollo, ciencia de datos y diseño, abiertos a participantes de todo el mundo."
+ },
+ {
+  "tipo": "Plataforma",
+  "modalidad": "En línea",
+  "estado": "Permanente",
+  "titulo": "Convocatorias MinCiencias",
+  "organizador": "Ministerio de Ciencia, Tecnología e Innovación",
+  "plataforma": "MinCiencias",
+  "pais": "Colombia",
+  "ubicacion": "En línea (Colombia)",
+  "url": "https://minciencias.gov.co/convocatorias",
+  "temas": [
+   "Investigación",
+   "Innovación abierta"
+  ],
+  "descripcion": "Convocatorias nacionales de ciencia e innovación, jóvenes investigadores y retos con financiación pública."
+ },
+ {
+  "tipo": "Plataforma",
+  "modalidad": "En línea",
+  "estado": "Permanente",
+  "titulo": "Convocatorias iNNpulsa Colombia",
+  "organizador": "iNNpulsa Colombia",
+  "plataforma": "iNNpulsa",
+  "pais": "Colombia",
+  "ubicacion": "En línea (Colombia)",
+  "url": "https://www.innpulsacolombia.com/",
+  "temas": [
+   "Innovación abierta",
+   "Emprendimiento"
+  ],
+  "descripcion": "Agencia de emprendimiento e innovación del Gobierno; publica retos y convocatorias para startups y proyectos de base tecnológica."
+ },
+ {
+  "tipo": "Plataforma",
+  "modalidad": "En línea",
+  "estado": "Permanente",
+  "titulo": "Datos Abiertos Colombia",
+  "organizador": "MinTIC",
+  "plataforma": "datos.gov.co",
+  "pais": "Colombia",
+  "ubicacion": "En línea (Colombia)",
+  "url": "https://www.datos.gov.co/",
+  "temas": [
+   "Datos",
+   "Movilidad",
+   "Ciudad"
+  ],
+  "descripcion": "Portal oficial de datos abiertos (movilidad, energía, calidad del aire, accidentalidad). Sirve para los retos de ciudad y es la fuente de concursos de datos del Gobierno."
+ },
+ {
+  "tipo": "Plataforma",
+  "modalidad": "En línea",
+  "estado": "Permanente",
+  "titulo": "Microsoft Imagine Cup",
+  "organizador": "Microsoft",
+  "plataforma": "Imagine Cup",
+  "pais": "Internacional",
+  "ubicacion": "En línea (internacional)",
+  "url": "https://imaginecup.microsoft.com/",
+  "temas": [
+   "IA",
+   "Emprendimiento"
+  ],
+  "descripcion": "Competencia global para estudiantes que crean startups tecnológicas con IA."
+ },
+ {
+  "tipo": "Plataforma",
+  "modalidad": "En línea",
+  "estado": "Permanente",
+  "titulo": "Hult Prize",
+  "organizador": "Hult Prize Foundation",
+  "plataforma": "Hult Prize",
+  "pais": "Internacional",
+  "ubicacion": "En línea y sedes universitarias",
+  "url": "https://www.hultprize.org/",
+  "temas": [
+   "Emprendimiento",
+   "Impacto social"
+  ],
+  "descripcion": "Competencia universitaria de emprendimiento social; las rondas iniciales se hacen dentro de cada universidad."
+ }
+]

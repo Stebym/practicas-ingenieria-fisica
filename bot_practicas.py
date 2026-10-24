@@ -1,12 +1,16 @@
 """
 =============================================================================
-PORTAL & BOT DE RASTREO DE PRÁCTICAS - INGENIERÍA FÍSICA (UNAL MEDELLÍN)
-Autor: Jimmy Stebym Rosero Barrera
-Descripción: Rastreador integral de convocatorias y vacantes para pregrado.
-Prioriza automáticamente según el pénsum real de Ingeniería Física UNAL.
-Incluye ícono de información [i] interactivo con nube flotante (tooltip).
-(Cero emojis en la interfaz salvo el átomo superior)
+BOT DE RASTREO DE PRÁCTICAS - INGENIERÍA FÍSICA (UNAL MEDELLÍN) · PORTAL IPF
+Autor: Jimmy Stebym Rosero Barrera <jiroserob@unal.edu.co>
+Licencia: MIT con descargo de responsabilidad (ver LICENSE)
 =============================================================================
+Rastrea prácticas en LinkedIn, Magneto365, Computrabajo, ElEmpleo, FirstJob,
+portales corporativos y búsqueda web, y las prioriza según el pénsum de
+Ingeniería Física UNAL.
+Alcance: Antioquia con cualquier modalidad; fuera de Antioquia solo remoto o
+híbrido; en el exterior solo remoto.
+Salida: vacantes_practicas.json y vacantes_practicas.csv (la página la arma
+bot_pagina.py).
 """
 
 import os
@@ -15,13 +19,16 @@ import json
 import csv
 import re
 import time
+import threading
 import unicodedata
+from collections import Counter
 from html import unescape
 from datetime import datetime
-from pathlib import Path
 from urllib.parse import quote, unquote, urlparse
 import requests
 import concurrent.futures
+
+from firma import encabezado_bot, sellar_registros
 
 # Asegurar codificación UTF-8 en terminal de Windows
 if sys.stdout.encoding != 'utf-8':
@@ -36,14 +43,36 @@ HEADERS = {
     "Accept-Language": "es-ES,es;q=0.9,en;q=0.8"
 }
 
+# Antioquia se acepta con cualquier modalidad. "Caldas" solo cuenta junto a
+# Antioquia para no confundir el municipio con el departamento de Caldas.
 LOCAL_LOCATION_RE = re.compile(
-    r"medell[ií]n|antioquia|valle de aburr[aá]|envigado|itag[uüíi]|bello|sabaneta|rionegro|"
-    r"apartad[oó]|la estrella|copacabana|girardota|caldas|marinilla|barbosa|cisneros|"
-    r"el retiro|retiro|guarne|santo domingo|puerto berr[ií]o",
+    r"medell[ií]n|antioquia|valle de aburr[aá]|envigado|itag[uüíi]|\bbello\b|sabaneta|rionegro|"
+    r"apartad[oó]|la estrella|copacabana|girardota|caldas,?\s*antioquia|marinilla|barbosa|cisneros|"
+    r"el retiro|guarne|santo domingo|puerto berr[ií]o|la ceja|carmen de viboral|el santuario|"
+    r"santa fe de antioquia|segovia|remedios|caucasia|yarumal|turbo|carepa|chigorod[oó]|"
+    r"salgar|sons[oó]n|amag[aá]|fredonia|jeric[oó]|andes|urrao|zaragoza|el bagre|yond[oó]|"
+    r"puerto nare|la uni[oó]n|san pedro de los milagros|donmat[ií]as|entrerr[ií]os|"
+    r"santa rosa de osos|san jer[oó]nimo|sopetr[aá]n|buritic[aá]|briceño|ituango",
     re.IGNORECASE,
 )
+# Fuera de Antioquia (resto de Colombia o exterior) solo sirven prácticas
+# remotas o híbridas.
 REMOTE_MODALITY_RE = re.compile(
-    r"\b(remoto|remota|remote|teletrabajo)\b|100\s*%\s*h[ií]brid[oa]",
+    r"\b(?:remot[oa]s?|remote|teletrabajo|trabajo\s+(?:en\s+casa|desde\s+casa)|home[\s-]?office|"
+    r"work\s+from\s+home|h[ií]brid[oa]s?|hybrid|anywhere)\b",
+    re.IGNORECASE,
+)
+REMOTE_ONLY_RE = re.compile(r"\b(?:remot[oa]s?|remote|teletrabajo|work\s+from\s+home|anywhere)\b", re.IGNORECASE)
+REMOTE_WORLDWIDE_DESC_RE = re.compile(
+    r"\b(?:fully\s+remote|100\s*%\s*remote|remote[\s-]first|remote\s+(?:position|role|internship|opportunity)|"
+    r"work\s+remotely\s+from\s+anywhere|this\s+(?:is\s+a|role\s+is|position\s+is)\s+(?:fully\s+)?remote|"
+    r"open\s+to\s+(?:candidates\s+in\s+)?latin\s+america|latam)\b",
+    re.IGNORECASE,
+)
+REMOTE_NEGATION_RE = re.compile(
+    r"\b(?:not\s+(?:a\s+)?remote|non[\s-]remote|no\s+remote|not\s+eligible\s+for\s+remote|"
+    r"must\s+(?:be\s+)?(?:located|based|reside)\s+in\s+(?:the\s+)?(?:u\.?s\.?|united\s+states|india|china|canada|europe|germany)|"
+    r"work\s+authori[sz]ation\s+in\s+the\s+(?:u\.?s|united\s+states))\b",
     re.IGNORECASE,
 )
 REMOTE_GLOBAL_SEARCH_QUERIES = [
@@ -79,6 +108,23 @@ CARRERAS_ESPEJO_QUERIES = [
     "practicante telecomunicaciones optica afines",
 ]
 
+# Búsquedas en todo Colombia: solo se publican si el aviso dice remoto o
+# híbrido (se confirma leyendo la descripción completa de cada oferta).
+REMOTE_COLOMBIA_QUERIES = [
+    "practicante remoto",
+    "practicante hibrido",
+    "practicante ingenieria remoto",
+    "practicante ingenieria hibrido",
+    "practicante datos remoto",
+    "practicante analitica hibrido",
+    "practicante desarrollo python remoto",
+    "practicante ingenieria fisica",
+    "practicante fisica",
+    "pasantia remota ingenieria",
+    "intern remote Colombia",
+    "practicante teletrabajo",
+]
+
 # Búsquedas web abiertas para encontrar convocatorias fuera de los portales
 # que exponen APIs o páginas de resultados fáciles de rastrear.
 WEB_SEARCH_QUERIES = [
@@ -89,6 +135,8 @@ WEB_SEARCH_QUERIES = [
     ("Nutresa aprendices practicantes 2027-1 Colombia", "LOCAL"),
     ("Alkomprar prácticas universitarias 2027-1 Medellín", "LOCAL"),
     ("convocatoria prácticas Distrito Medellín 2027-1", "LOCAL"),
+    ("practicante ingeniería física remoto Colombia", "COLOMBIA"),
+    ("práctica profesional ingeniería híbrida Colombia afines", "COLOMBIA"),
     ("internship engineering physics remote worldwide", "WORLDWIDE"),
     ("remote engineering internship Latin America", "WORLDWIDE"),
     ("remote internship Python data science international", "WORLDWIDE"),
@@ -98,8 +146,6 @@ WEB_SEARCH_QUERIES = [
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 CONFIG_RAMAS_PATH = os.path.join(BASE_DIR, "config_ramas.json")
 CONVOCATORIAS_DESTACADAS_PATH = os.path.join(BASE_DIR, "convocatorias_destacadas.json")
-OUTPUT_HTML = os.path.join(BASE_DIR, "dashboard_practicas.html")
-OUTPUT_INDEX = os.path.join(BASE_DIR, "index.html")
 OUTPUT_CSV = os.path.join(BASE_DIR, "vacantes_practicas.csv")
 OUTPUT_JSON = os.path.join(BASE_DIR, "vacantes_practicas.json")
 
@@ -192,11 +238,99 @@ CONVOCATORIA_MUJERES_RE = re.compile(
     re.IGNORECASE,
 )
 PRACTICE_RE = re.compile(
-    r"\b(?:practicante|pr[aá]ctica(?:s)?(?:\s+(?:profesional(?:es)?|acad[eé]mica(?:s)?|universitaria(?:s)?))?|"
+    r"\b(?:practicantes?|pr[aá]ctica(?:s)?(?:\s+(?:profesional(?:es)?|acad[eé]mica(?:s)?|universitaria(?:s)?|formativa(?:s)?))?|"
     r"estudiante\s+en\s+(?:etapa\s+)?pr[aá]ctica|etapa\s+productiva|pasant[ií]a(?:s)?|"
-    r"intern(?:ship)?s?|trainee|co[\s-]?op|industrial\s+placement|aprendiz(?:\s+universitari[oa])?)\b",
+    r"intern(?:ship)?s?|trainee|co[\s-]?op|industrial\s+placement|aprendiz|aprendices|estudiantes?\s+(?:de|en|universitari[oa]s?)\b)\b",
     re.IGNORECASE,
 )
+# Carreras o áreas que no corresponden a un ingeniero físico cuando el título
+# las nombra sin mencionar ninguna carrera afín.
+CARRERA_NO_AFIN_RE = re.compile(
+    r"\b(?:administrativ|administraci[oó]n\s+de\s+empresas|adm\s+empresas|psicolog|contab|contadur|mercade|marketing|trade\b|dise[ñn]o\s+gr[aá]fico|"
+    r"comunicaci[oó]n|periodis|deport|archivo|documental|compensaci[oó]n|vigilan|escolta|jur[ií]dic|derecho|recepci[oó]n|reservas|gesti[oó]n\s+documental|"
+    r"contrataci[oó]n|servicio\s+al\s+cliente|cumplimiento|comercial|ventas|selecci[oó]n|n[oó]mina|"
+    r"cocina|barismo|hotel|finanz|negocios\s+internacionales|auditor|tributari|riesgos|cr[eé]dito|seguros|bienestar|sst\b|"
+    r"seguridad\s+y\s+salud|salud\s+ocupacional|talento|gesti[oó]n\s+humana|"
+    r"corporativ|eventos|m[eé]dic[oa]s?\s+(?:general|especialista)|visitador|"
+    r"sales|business\s+development|finance|accounting|legal\b|human\s+resources|\bhr\b|recruit|talent|"
+    r"communications|customer|fraud|disputes|risk\b|conservation|events?\b|social\s+media|content\b|"
+    r"partnerships|operations\s+intern|real\s+estate)",
+    re.IGNORECASE,
+)
+CARRERA_AFIN_RE = re.compile(
+    r"\b(?:f[ií]sic|electr[oó]nic|el[eé]ctric|electricidad|mecatr[oó]nic|mec[aá]nic|electromec[aá]nic|automatizaci|"
+    r"instrumentaci|control\s+(?:autom|de\s+procesos|industrial|el[eé]ctric|electr[oó]nic)|ingenier[ií]a\s+de\s+control|materiales|metal[uú]rg|metrolog|datos|data\b|anal[ií]tic|estad[ií]stic|matem[aá]tic|"
+    r"biom[eé]dic|bioingenier|telecomunicaci|energ[ií]a|renovable|solar|ciencias|stem\b|"
+    r"todas\s+las\s+ingenier[ií]as|cualquier\s+ingenier[ií]a|python|programaci|software|desarroll|sistemas|"
+    r"inteligencia\s+artificial|machine\s+learning|\bia\b|\bai\b|iot\b|embebid|rob[oó]tic|[oó]ptic|"
+    r"l[aá]ser|qu[ií]mic|nanotecnolog|simulaci|investigaci|i\+d|innovaci|laboratorio|mantenimiento|"
+    r"engineer|physics|scien|developer|software\s+development|infraestructura|infrastructure|hardware|research|electrical|mechanical|"
+    r"r&d|tecnolog[ií]a|technolog|automation|robotics|optics|photonics|semiconductor|quantum|cu[aá]ntic)",
+    re.IGNORECASE,
+)
+# Áreas técnicas genéricas: no rescatan un título de otra carrera, pero sí
+# permiten conservar un aviso técnico sin rama específica.
+AREA_TECNICA_RE = re.compile(r"\b(?:ingenier|calidad|procesos|producci|proyectos|planta|t[eé]cnic)", re.IGNORECASE)
+
+# Otras carreras técnicas: el aviso entra si, además, nombra una carrera afín
+# ("Practicante de ingeniería industrial, mecatrónica o electrónica").
+CARRERA_OTRA_RE = re.compile(
+    r"\b(?:ambiental|alimentos|agr[ií]col|agron[oó]m|agroindustri|civil(?:es)?\b|obras\s+civiles|arquitect|"
+    r"industrial\b|log[ií]stic|costos|abastecimiento|compras|zootecn|veterinari|nutrici|odontolog|"
+    r"fisioterap|farmac|econom)",
+    re.IGNORECASE,
+)
+CARRERA_AFIN_EXPLICITA_RE = re.compile(
+    r"\b(?:ingenier[ií]a\s+(?:f[ií]sica|electr[oó]nica|el[eé]ctrica|mecatr[oó]nica|mec[aá]nica|electromec[aá]nica|"
+    r"de\s+control|de\s+materiales|biom[eé]dica|de\s+telecomunicaciones|de\s+sistemas|qu[ií]mica)|"
+    r"f[ií]sica|f[ií]sicos?|electr[oó]nica|mecatr[oó]nica|electromec[aá]nica|el[eé]ctrica|automatizaci[oó]n|"
+    r"instrumentaci[oó]n|todas\s+las\s+ingenier[ií]as|cualquier\s+ingenier[ií]a|physics|electrical|"
+    r"mechanical|mechatronics|electronics)\b",
+    re.IGNORECASE,
+)
+
+# "Física" que no es la ciencia: seguridad física (vigilancia), educación física...
+FISICA_FALSA_RE = re.compile(
+    r"\b(?:seguridad|educaci[oó]n|actividad|terapia|preparaci[oó]n|condici[oó]n|cultura|persona)\s+f[ií]sica\b|"
+    r"\bf[ií]sico\s+(?:deportiv|culturista)|\bentrenamiento\s+f[ií]sico\b",
+    re.IGNORECASE,
+)
+
+def title_is_out_of_profile(title, descripcion=None):
+    """True si el aviso es ajeno al perfil.
+
+    Roles no técnicos (administrativo, ventas, psicología...) se descartan por
+    el título. Si el título nombra otra carrera técnica (industrial,
+    ambiental...), el aviso entra cuando él mismo o su descripción mencionan una
+    carrera afín; con `descripcion=None` (aún sin leer) se deja pasar.
+    """
+    if any(re.search(p, title, re.IGNORECASE) for p in EXCLUDED_ROLES):
+        return True
+    if FISICA_FALSA_RE.search(title):
+        return True
+    if CARRERA_AFIN_RE.search(title):
+        return False
+    if CARRERA_NO_AFIN_RE.search(title):
+        return True
+    if CARRERA_OTRA_RE.search(title):
+        return descripcion is not None and not CARRERA_AFIN_EXPLICITA_RE.search(descripcion)
+    return False
+
+GENERIC_TITLE_FILLER_RE = re.compile(
+    r"\b(?:universitari[oa]s?|profesional(?:es)?|programa|convocatoria|semillero|talento\s+joven|"
+    r"de|del|en|para|y|o|la|el|los|las|a|e|intern(?:ship)?s?|student|summer|fall|spring|fy\d+|"
+    r"20\d\d(?:-[12i]+)?|i{1,2})\b|[\d\W_]+",
+    re.IGNORECASE,
+)
+
+def title_is_generic_program(title):
+    """True si el título solo dice 'practicante(s)/programa/año/ciudad' sin un área concreta."""
+    rest = PRACTICE_RE.sub(" ", title)
+    rest = LOCAL_LOCATION_RE.sub(" ", rest)
+    rest = re.sub(r"\bcolombia\b", " ", rest, flags=re.IGNORECASE)
+    rest = GENERIC_TITLE_FILLER_RE.sub(" ", rest)
+    return not rest.strip()
+
 TERMINOS_FISICA_RE = re.compile(r'\b(f[ií]sic[ao]s?|metrolog[ií]a|cu[aá]ntic[ao]s?|espectroscop[ií]a|difracci[oó]n|radiaci[oó]n|dosimetr[ií]a|nanotecnolog[ií]a)\b', re.IGNORECASE)
 
 def matches_keyword(keyword, text):
@@ -235,16 +369,142 @@ def load_json(filepath):
             return json.load(f)
     return {}
 
-def scrape_linkedin_query(query, location="Medellin, Antioquia, Colombia"):
-    """Consulta la API pública guest de LinkedIn Jobs para Medellín y Antioquia"""
-    url = f"https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords={quote(query)}&location={quote(location)}"
-    try:
-        r = requests.get(url, headers=HEADERS, timeout=12)
-        if r.status_code != 200:
-            return []
-        
+def canonical_job_url(url):
+    """Normaliza enlaces para evitar perder o duplicar una vacante por tracking."""
+    parsed = urlparse(str(url or "").strip())
+    host = parsed.netloc.lower().removeprefix("www.")
+    path = unquote(parsed.path).rstrip("/")
+    # co.linkedin.com y www.linkedin.com apuntan al mismo aviso: se usa su id.
+    linkedin_id = re.search(r"(\d{8,})$", path) if host.endswith("linkedin.com") else None
+    if linkedin_id:
+        return f"linkedin.com/jobs/view/{linkedin_id.group(1)}"
+    return f"{host}{path}".lower()
+
+# Días que se conserva una vacante que dejó de aparecer en las búsquedas
+# (sigue sujeta a la verificación del enlace en cada corrida).
+DIAS_RETENCION_SIN_REAPARECER = 21
+
+def merge_job_snapshots(current_jobs, previous_jobs):
+    """Conserva vacantes previas si el portal no las devolvió en esta corrida."""
+    today = datetime.now().date()
+    merged = {}
+    detail_fields = ("perfil", "compensacion", "resumen_fuente", "descripcion_fuente", "fecha_publicacion", "fecha_cierre_iso")
+    for source in current_jobs:
+        key = canonical_job_url(source.get("url"))
+        if not key:
+            continue
+        if key not in merged:
+            item = dict(source)
+            merged[key] = item
+        else:
+            item = merged[key]
+            for field, value in source.items():
+                if value not in (None, "", [], {}):
+                    item[field] = value
+        item["encontrada_ultima_corrida"] = True
+        item["ultima_deteccion"] = today.isoformat()
+
+    for source in previous_jobs if isinstance(previous_jobs, list) else []:
+        key = canonical_job_url(source.get("url"))
+        if not key:
+            continue
+        if key not in merged:
+            try:
+                last_seen = datetime.fromisoformat(source.get("ultima_deteccion", "")).date()
+            except ValueError:
+                last_seen = today
+            if (today - last_seen).days > DIAS_RETENCION_SIN_REAPARECER:
+                continue
+            item = dict(source)
+            item["encontrada_ultima_corrida"] = False
+            item["ultima_deteccion"] = last_seen.isoformat()
+            item["estado_vigencia"] = "No reapareció en esta búsqueda; revisar vigencia en la fuente"
+            merged[key] = item
+        else:
+            item = merged[key]
+            item.setdefault("primera_deteccion", source.get("primera_deteccion"))
+            for field in detail_fields:
+                if item.get(field) in (None, "", [], {}) and source.get(field) not in (None, "", [], {}):
+                    item[field] = source[field]
+    for item in merged.values():
+        if not item.get("primera_deteccion"):
+            item["primera_deteccion"] = today.isoformat()
+    return list(merged.values())
+
+EMPRESAS_OBJETIVO_PATH = os.path.join(BASE_DIR, "empresas_objetivo.json")
+EMPRESAS_ANTIOQUIA_PATH = os.path.join(BASE_DIR, "empresas_antioquia.json")
+_target_company_re = None
+
+def load_target_companies():
+    """Empresas objetivo (empresas_objetivo.json) más el directorio de Antioquia."""
+    names = [item.get("empresa") for item in load_json(EMPRESAS_OBJETIVO_PATH) or [] if isinstance(item, dict)]
+    for item in load_json(EMPRESAS_ANTIOQUIA_PATH) or []:
+        if isinstance(item, dict) and item.get("empresa"):
+            names.append(re.sub(r"\s*\(.*?\)", "", item["empresa"]).strip())
+    return list(dict.fromkeys(name.strip() for name in names if name and name.strip()))
+
+def company_is_target(company):
+    global _target_company_re
+    if _target_company_re is None:
+        alternatives = sorted({normalize_match_text(n) for n in load_target_companies()}, key=len, reverse=True)
+        pattern = "|".join(re.escape(n) for n in alternatives if n)
+        _target_company_re = re.compile(rf"(?<![a-z0-9])(?:{pattern})(?![a-z0-9])") if pattern else re.compile(r"(?!x)x")
+    return bool(_target_company_re.search(normalize_match_text(company)))
+
+# LinkedIn responde 429 si recibe más de ~10 consultas seguidas. Antes el bot
+# tomaba ese 429 como "cero resultados" y perdía casi todas sus búsquedas.
+LINKEDIN_MIN_INTERVAL = 3.0
+LINKEDIN_STATS = Counter()
+_linkedin_lock = threading.Lock()
+_linkedin_last_request = [0.0]
+LINKEDIN_CLOSED_RE = re.compile(
+    r"no longer accepting applications|ya no se aceptan solicitudes|ya no acepta solicitudes",
+    re.IGNORECASE,
+)
+
+def linkedin_get(url, retries=3):
+    """GET a LinkedIn respetando el intervalo mínimo y reintentando tras un 429."""
+    for attempt in range(retries):
+        with _linkedin_lock:
+            wait = _linkedin_last_request[0] + LINKEDIN_MIN_INTERVAL - time.time()
+            if wait > 0:
+                time.sleep(wait)
+            _linkedin_last_request[0] = time.time()
+        try:
+            response = requests.get(url, headers=HEADERS, timeout=12)
+        except requests.RequestException:
+            LINKEDIN_STATS["error de red"] += 1
+            continue
+        if response.status_code == 429:
+            LINKEDIN_STATS["429 (reintento)"] += 1
+            with _linkedin_lock:
+                time.sleep(30 * (attempt + 1))
+            continue
+        LINKEDIN_STATS[f"HTTP {response.status_code}"] += 1
+        return response
+    LINKEDIN_STATS["perdida tras reintentos"] += 1
+    return None
+
+def html_to_text(raw_html):
+    text = re.sub(r"<(?:script|style)[^>]*>.*?</(?:script|style)>", " ", raw_html or "", flags=re.DOTALL | re.IGNORECASE)
+    text = re.sub(r"<br\s*/?>|</p>|</li>", " ", text, flags=re.IGNORECASE)
+    text = re.sub(r"<[^>]+>", " ", text)
+    return re.sub(r"\s+", " ", unescape(text)).strip()
+
+def scrape_linkedin_query(query, location="Medellin, Antioquia, Colombia", pages=1):
+    """Consulta la API pública guest de LinkedIn Jobs (10 avisos por página)."""
+    results = []
+    for start in range(0, pages * 10, 10):
+        url = (
+            "https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search"
+            f"?keywords={quote(query)}&location={quote(location)}&start={start}"
+        )
+        r = linkedin_get(url)
+        if r is None or r.status_code != 200:
+            break
         cards = re.findall(r'<div class="base-card[^"]*"[^>]*>(.*?)</li>', r.text, re.DOTALL)
-        results = []
+        if not cards:
+            break
         for card in cards:
             title_m = re.search(r'<h3[^>]*class="[^"]*base-search-card__title[^"]*"[^>]*>\s*([^<]+)\s*</h3>', card)
             comp_m = re.search(r'<h4[^>]*class="[^"]*base-search-card__subtitle[^"]*"[^>]*>.*?<a[^>]*>\s*([^<]+)\s*</a>', card, re.DOTALL)
@@ -253,18 +513,22 @@ def scrape_linkedin_query(query, location="Medellin, Antioquia, Colombia"):
             loc_m = re.search(r'<span[^>]*class="[^"]*job-search-card__location[^"]*"[^>]*>\s*([^<]+)\s*</span>', card)
             link_m = re.search(r'<a[^>]*class="[^"]*base-card__full-link[^"]*"[^>]*href="([^"]+)"', card)
             date_m = re.search(r'<time[^>]*datetime="([^"]+)"[^>]*>\s*([^<]+)\s*</time>', card)
-            
-            title = title_m.group(1).strip() if title_m else ""
-            company = comp_m.group(1).strip() if comp_m else "Empresa Confidencial"
-            loc = loc_m.group(1).strip() if loc_m else "Medellín, Antioquia"
+
+            title = unescape(title_m.group(1).strip()) if title_m else ""
+            company = unescape(comp_m.group(1).strip()) if comp_m else "Empresa Confidencial"
+            loc = unescape(loc_m.group(1).strip()) if loc_m else "Ubicación por confirmar"
             link = link_m.group(1).split("?")[0] if link_m else ""
             iso_date = date_m.group(1).strip() if date_m else ""
             pub_date = date_m.group(2).strip() if date_m else "Reciente"
+            if not title or not link:
+                continue
+            # Se descartan desde el título los roles ajenos para no gastar
+            # consultas de detalle en ellos.
+            if title_is_out_of_profile(title):
+                continue
 
             if location == "Worldwide":
-                if not REMOTE_MODALITY_RE.search(f"{title} {loc}"):
-                    continue
-                if not re.search(r"\b(intern(?:ship)?|trainee|practicante|pasant[ií]a|pr[aá]ctica|student)\b", title, re.IGNORECASE):
+                if not re.search(r"\b(intern(?:ship)?|trainee|practicante|pasant[ií]a|pr[aá]ctica|student|co-?op)\b", title, re.IGNORECASE):
                     continue
                 if iso_date:
                     try:
@@ -272,28 +536,62 @@ def scrape_linkedin_query(query, location="Medellin, Antioquia, Colombia"):
                             continue
                     except ValueError:
                         pass
-            
-            if title and link:
-                job = {
-                    "titulo": title,
-                    "empresa": company,
-                    "ubicacion": loc,
-                    "url": link,
-                    "fecha_publicacion": (iso_date or pub_date) if location == "Worldwide" else pub_date,
-                    "fuente": "LinkedIn Jobs"
-                }
-                if location == "Worldwide":
-                    job["search_scope"] = "WORLDWIDE"
-                    job["alcance_geografico"] = "Remoto internacional; confirmar elegibilidad desde Colombia"
-                    job["ubicacion"] = f"{loc} · remoto internacional (elegibilidad por confirmar)"
-                results.append(job)
-        return results
-    except Exception as e:
-        return []
 
-def scrape_computrabajo_query(query):
-    """Consulta convocatorias de prácticas en Computrabajo Antioquia"""
-    url = f"https://co.computrabajo.com/empleos-en-antioquia?q={quote(query)}"
+            job = {
+                "titulo": title,
+                "empresa": company,
+                "ubicacion": loc,
+                "url": link,
+                "fecha_publicacion": iso_date or pub_date,
+                "fuente": "LinkedIn Jobs",
+            }
+            id_m = re.search(r"(\d{8,})$", link)
+            if id_m:
+                job["linkedin_id"] = id_m.group(1)
+            if location == "Worldwide":
+                job["search_scope"] = "WORLDWIDE"
+            elif location == "Colombia":
+                job["search_scope"] = "COLOMBIA"
+            results.append(job)
+    return results
+
+def enrich_linkedin_job(job):
+    """Lee el detalle público del aviso: confirma que sigue abierto y trae la descripción."""
+    job_id = job.get("linkedin_id") or (re.search(r"(\d{8,})", job.get("url", "")) or [None, None])[1]
+    if not job_id:
+        return False
+    r = linkedin_get(f"https://www.linkedin.com/jobs-guest/jobs/api/jobPosting/{job_id}")
+    if r is None or r.status_code != 200:
+        return False
+    page = r.text
+    if LINKEDIN_CLOSED_RE.search(page):
+        return False
+    desc_m = re.search(r'show-more-less-html__markup[^>]*>(.*?)</div>', page, re.DOTALL)
+    if desc_m:
+        job["descripcion_fuente"] = html_to_text(desc_m.group(1))[:2500]
+    criteria = re.findall(
+        r'description__job-criteria-subheader[^>]*>\s*([^<]+?)\s*</h3>\s*<span[^>]*>\s*([^<]+?)\s*</span>',
+        page,
+    )
+    for label, value in criteria:
+        if re.search(r"tipo de empleo|employment type", label, re.IGNORECASE):
+            job["tipo_empleo"] = value.strip()
+    job["estado_vigencia"] = "Aviso abierto en LinkedIn al momento del rastreo"
+    return True
+
+def scrape_computrabajo_query(query, pages=2):
+    """Consulta prácticas en Computrabajo Antioquia (20 avisos por página)."""
+    results = []
+    for page in range(1, pages + 1):
+        url = f"https://co.computrabajo.com/empleos-en-antioquia?q={quote(query)}&p={page}"
+        page_results = _scrape_computrabajo_page(url)
+        results.extend(page_results)
+        if len(page_results) < 20:
+            break
+        time.sleep(0.3)
+    return results
+
+def _scrape_computrabajo_page(url):
     try:
         r = requests.get(url, headers=HEADERS, timeout=6)
         if r.status_code != 200:
@@ -322,8 +620,18 @@ def scrape_computrabajo_query(query):
     except Exception:
         return []
 
-def scrape_magneto_query(query):
-    """Consulta convocatorias de prácticas en la API pública de Magneto365 en Antioquia/Remoto."""
+def scrape_magneto_query(query, pages=4):
+    """Consulta Magneto365 en todo Colombia; el filtro de ubicación/modalidad se aplica después."""
+    results = []
+    for page in range(1, pages + 1):
+        page_results = _scrape_magneto_page(query, page)
+        results.extend(page_results)
+        if len(page_results) < 20:
+            break
+        time.sleep(0.3)
+    return results
+
+def _scrape_magneto_page(query, page):
     api_url = "https://api.magneto365.com/jobs/v1/public/jobs/search"
     headers = {
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36",
@@ -333,7 +641,7 @@ def scrape_magneto_query(query):
     }
     params = {
         "device": "desktop",
-        "paginator[page]": 1,
+        "paginator[page]": page,
         "paginator[pageSize]": 20,
         "order[field]": "publish_date",
         "order[order]": "DESC",
@@ -368,12 +676,12 @@ def scrape_magneto_query(query):
                 city_str = str(cities)
                 city_lower_list = [city_str.lower()]
 
+            # En Magneto isRemote=True cubre ofertas remotas e híbridas.
             is_remote = bool(row.get("isRemote"))
-            is_antioquia = any(any(ac in c for ac in antioquia_cities) for c in city_lower_list)
-
-            # Aceptar si es en Antioquia, remoto, o programa multiciudad que incluye Antioquia
-            if not (is_antioquia or is_remote):
-                continue
+            departments = row.get("departments") or []
+            is_antioquia = "antioquia" in " ".join(departments).lower() or any(
+                any(ac in c for ac in antioquia_cities) for c in city_lower_list
+            )
 
             empresa = (row.get("companyName") or "Empresa Confidencial").strip()
             url = f"https://www.magneto365.com/co/empleos/{slug}"
@@ -393,33 +701,42 @@ def scrape_magneto_query(query):
             skills_names = [s.get("name") for s in skills if isinstance(s, dict) and s.get("name")]
             perfil = ", ".join(skills_names[:5]) if skills_names else ""
 
-            results.append({
+            job = {
                 "titulo": title,
                 "empresa": empresa,
-                "ubicacion": "Remoto (Colombia)" if is_remote else (city_str if city_str else "Medellín / Antioquia"),
+                "ubicacion": (
+                    f"{city_str or 'Colombia'}, Antioquia" if is_antioquia and "antioquia" not in city_str.lower()
+                    else city_str or "Colombia"
+                ) + (" · remoto o híbrido" if is_remote else ""),
+                "modalidad": "Remoto o híbrido" if is_remote else "",
                 "url": url,
                 "fecha_publicacion": pub_date,
                 "fuente": "Magneto365",
                 "compensacion": comp,
                 "perfil": perfil,
                 "mision": desc[:250] if desc else ""
-            })
+            }
+            if row.get("expirationDate"):
+                job["fecha_cierre_iso"] = str(row["expirationDate"]).split("T")[0]
+            results.append(job)
         return results
     except Exception:
         return []
 
 def scrape_elempleo_query(query):
     """Consulta ofertas de prácticas de ingeniería en ElEmpleo.com para Antioquia y nacional."""
-    url = f"https://www.elempleo.com/co/ofertas-empleo/antioquia?trabajo={quote(query)}"
+    # La ruta /antioquia no filtra (devuelve casi todo Bogotá); /medellin sí.
+    url = f"https://www.elempleo.com/co/ofertas-empleo/medellin?trabajo={quote(query)}"
     try:
         r = requests.get(url, headers=HEADERS, timeout=6)
         if r.status_code != 200:
             return []
-        items = re.findall(r'data-ga4-offerdata="([^"]+)"', r.text)
-        urls = re.findall(r'data-url="([^"]+)"', r.text)
+        # data-url y data-ga4-offerdata vienen en el mismo elemento; emparejarlos
+        # por separado (zip de dos listas) mezclaba títulos y enlaces.
+        pairs = re.findall(r'data-url="([^"]+)"\s+data-ga4-offerdata="([^"]+)"', r.text)
         results = []
         seen = set()
-        for raw_json, raw_url in zip(items, urls):
+        for raw_url, raw_json in pairs:
             try:
                 data = json.loads(unescape(raw_json))
                 clean_url = "https://www.elempleo.com" + raw_url.split("?")[0]
@@ -428,7 +745,7 @@ def scrape_elempleo_query(query):
                 seen.add(clean_url)
                 title = data.get("title", "").strip()
                 company = data.get("company", "").strip() or "Empresa Confidencial"
-                loc = data.get("location", "").strip() or "Ubicación por confirmar"
+                loc = unescape(data.get("location", "").strip()) or "Ubicación por confirmar"
                 sal = data.get("salary", "").strip()
                 comp = sal if sal and "confidencial" not in sal.lower() else ""
 
@@ -468,19 +785,74 @@ def scrape_firstjob_query(query):
                 "url": url_job,
                 "fecha_publicacion": "Reciente",
                 "fuente": "FirstJob",
-                "compensacion": ""
+                "compensacion": "",
+                "search_scope": "COLOMBIA",
+                "alcance_geografico": "Oferta nacional; ciudad por confirmar"
             })
         return results
     except Exception:
         return []
 
+PORTALES_WORKDAY_PATH = os.path.join(BASE_DIR, "portales_workday.json")
+WORKDAY_BUSQUEDAS = ["intern", "internship", "practicante", "pasantia", "trainee", "aprendiz", "estudiante"]
+
+def scrape_workday_portal(portal):
+    """Prácticas publicadas directamente en el portal Workday de una empresa.
+
+    Para agregar empresas, edita portales_workday.json: la dirección de su
+    portal tiene la forma https://<tenant>.<servidor>.myworkdayjobs.com/<sitio>.
+    """
+    base = f"https://{portal['tenant']}.{portal['servidor']}.myworkdayjobs.com"
+    api = f"{base}/wday/cxs/{portal['tenant']}/{portal['sitio']}"
+    headers = {**HEADERS, "Accept": "application/json", "Content-Type": "application/json"}
+    rutas = {}
+    for termino in WORKDAY_BUSQUEDAS:
+        try:
+            r = requests.post(f"{api}/jobs", json={"appliedFacets": {}, "limit": 20, "offset": 0, "searchText": termino},
+                              headers=headers, timeout=12)
+            postings = r.json().get("jobPostings", []) if r.status_code == 200 else []
+        except (requests.RequestException, ValueError):
+            postings = []
+        for posting in postings:
+            if PRACTICE_RE.search(posting.get("title", "")):
+                rutas[posting["externalPath"]] = posting
+        time.sleep(0.3)
+    results = []
+    for ruta, posting in rutas.items():
+        try:
+            info = requests.get(f"{api}{ruta}", headers=headers, timeout=12).json().get("jobPostingInfo", {})
+        except (requests.RequestException, ValueError):
+            continue
+        ubicacion = info.get("location") or posting.get("locationsText") or ""
+        modalidad = {"Remote": "Remoto", "Hybrid": "Híbrido", "On-site": "Presencial"}.get(info.get("remoteType", ""), "")
+        results.append({
+            "titulo": posting.get("title", "").strip(),
+            "empresa": portal["empresa"],
+            "ubicacion": f"{ubicacion} · {modalidad.lower()}" if modalidad in ("Remoto", "Híbrido") else ubicacion,
+            "modalidad": modalidad,
+            "url": info.get("externalUrl") or f"{base}/{portal['sitio']}{ruta}",
+            "fecha_publicacion": info.get("startDate") or "Reciente",
+            "fecha_cierre_iso": info.get("endDate", ""),
+            "fuente": f"Portal corporativo {portal['empresa']} (Workday)",
+            "descripcion_fuente": html_to_text(info.get("jobDescription", ""))[:2500],
+            "search_scope": "LOCAL" if LOCAL_LOCATION_RE.search(ubicacion) or "colombia" in ubicacion.lower() else "WORLDWIDE",
+        })
+        time.sleep(0.3)
+    return results
+
 def scrape_web_query(query, search_scope="LOCAL"):
     """Busca resultados web públicos; para internacional exige práctica e indicio remoto."""
-    suffix = " remote internship" if search_scope == "WORLDWIDE" else " Medellín Antioquia empleo práctica"
+    suffix = {
+        "LOCAL": " Medellín Antioquia empleo práctica",
+        "COLOMBIA": " Colombia práctica remota híbrida",
+        "WORLDWIDE": " remote internship",
+    }.get(search_scope, " Colombia práctica remota híbrida")
     url = f"https://html.duckduckgo.com/html/?q={quote(query + suffix)}"
     try:
         response = requests.get(url, headers=HEADERS, timeout=4)
-        if response.status_code != 200:
+        if response.status_code != 200 or "anomaly" in response.text[:20000].lower():
+            # DuckDuckGo responde 202 con una página de "anomalía" cuando detecta bots.
+            print(f"    [!] Búsqueda web bloqueada (HTTP {response.status_code}): '{query}'")
             return []
         results = []
         links = re.findall(r'class="result__a"[^>]*href="([^"]+)"[^>]*>(.*?)</a>', response.text, re.DOTALL)
@@ -505,15 +877,23 @@ def scrape_web_query(query, search_scope="LOCAL"):
                 job = {
                     "titulo": title,
                     "empresa": company_match.group(1) if company_match else "Por identificar",
-                    "ubicacion": "Remoto internacional (elegibilidad por confirmar)" if search_scope == "WORLDWIDE" else "Medellín / Antioquia (resultado web; confirmar ubicación)",
+                    "ubicacion": (
+                        "Remoto internacional (elegibilidad por confirmar)" if search_scope == "WORLDWIDE"
+                        else "Colombia (ciudad por confirmar)" if search_scope == "COLOMBIA"
+                        else "Medellín / Antioquia (resultado web; confirmar ubicación)"
+                    ),
                     "url": link,
                     "fecha_publicacion": "Resultado web; verificar vigencia",
                     "fuente": f"Búsqueda web · {urlparse(link).netloc}",
                     "resumen_fuente": snippet
                 }
-                if search_scope == "WORLDWIDE":
-                    job["search_scope"] = "WORLDWIDE"
-                    job["alcance_geografico"] = "Remoto internacional; confirmar elegibilidad desde Colombia"
+                if search_scope in {"WORLDWIDE", "COLOMBIA"}:
+                    job["search_scope"] = search_scope
+                    job["alcance_geografico"] = (
+                        "Remoto internacional; confirmar elegibilidad desde Colombia"
+                        if search_scope == "WORLDWIDE"
+                        else "Oferta nacional; confirmar ciudad y modalidad"
+                    )
                 results.append(job)
         return results
     except Exception:
@@ -524,20 +904,25 @@ def classify_and_score_job(job, config_ramas):
     title_lower = job.get("titulo", "").lower()
     company_lower = job.get("empresa", "").lower()
     perfil_lower = job.get("perfil", "").lower()
-    mision_lower = job.get("mision", "").lower()
+    # La misión/tareas generadas desde plantillas en corridas anteriores no
+    # deben volver a puntuar como si vinieran del aviso.
+    mision_lower = "" if job.get("_mision_generada") else str(job.get("mision", "")).lower()
+    tareas = "" if job.get("_tareas_generadas") else str(job.get("tareas", "")).lower()
     resumen = str(job.get("resumen_fuente", "")).lower()
-    tareas = str(job.get("tareas", "")).lower()
-    text_to_analyze = f"{title_lower} {company_lower} {perfil_lower} {mision_lower} {tareas} {resumen}"
-    career_text = f"{title_lower} {perfil_lower} {mision_lower} {tareas} {resumen}"
+    descripcion = str(job.get("descripcion_fuente", "")).lower()
+    tipo_empleo = str(job.get("tipo_empleo", "")).lower()
+    text_to_analyze = f"{title_lower} {company_lower} {perfil_lower} {mision_lower} {tareas} {resumen} {descripcion} {tipo_empleo}"
+    career_text = f"{title_lower} {perfil_lower} {mision_lower} {tareas} {resumen} {descripcion}"
+    es_curada = bool(job.get("curada"))
 
-    # Descartar roles abiertamente no técnicos / administrativos de servicio que se cuelan en búsquedas amplias
-    if any(re.search(p, title_lower) for p in EXCLUDED_ROLES):
+    # Descartar roles no técnicos u orientados a otras carreras
+    if not es_curada and title_is_out_of_profile(job.get("titulo", ""), f"{perfil_lower} {mision_lower} {resumen} {descripcion}"):
         return None
 
     # Detección de programas especiales (con límites de palabra para evitar falsos positivos como 'systems' -> 'stem')
     programa_genero = bool(TERMINOS_MUJERES_RE.search(text_to_analyze))
     convocatoria_exclusiva_mujeres = bool(CONVOCATORIA_MUJERES_RE.search(text_to_analyze))
-    es_exclusiva_fisica = bool(TERMINOS_FISICA_RE.search(text_to_analyze))
+    es_exclusiva_fisica = bool(TERMINOS_FISICA_RE.search(FISICA_FALSA_RE.sub(" ", text_to_analyze)))
 
     # La antigüedad de publicación no revela la fecha límite de postulación.
     # Solo indicar cierre inminente cuando el rastreador obtenga una fecha explícita.
@@ -550,7 +935,16 @@ def classify_and_score_job(job, config_ramas):
         except ValueError:
             pass
 
-    es_practica = bool(PRACTICE_RE.search(text_to_analyze))
+    # La descripción completa menciona "prácticas" en otros sentidos (buenas
+    # prácticas, prácticas de desarrollo); solo cuentan título, tipo de empleo
+    # y los campos cortos que entrega la fuente.
+    es_practica = bool(PRACTICE_RE.search(f"{title_lower} {tipo_empleo}")) or bool(
+        PRACTICE_RE.search(f"{perfil_lower} {mision_lower} {resumen}")
+        and not re.search(r"buenas\s+pr[aá]cticas", f"{mision_lower} {resumen}")
+    )
+    # El portal es de prácticas: los empleos regulares no se publican.
+    if not es_curada and not es_practica:
+        return None
 
     total_score = 0
     if es_exclusiva_fisica:
@@ -619,6 +1013,21 @@ def classify_and_score_job(job, config_ramas):
     total_score += max_rama_score
     ramas_coincidentes.sort(key=lambda x: x["score"], reverse=True)
 
+    # Sin ninguna rama técnica ni mención de física, solo se conserva si el
+    # título pide perfiles de ingeniería o de áreas técnicas afines.
+    titulo = job.get("titulo", "")
+    titulo_tecnico = bool(CARRERA_AFIN_RE.search(titulo) or AREA_TECNICA_RE.search(titulo))
+    if not titulo_tecnico and not es_exclusiva_fisica and not es_curada:
+        # Un título sin área ("Practicantes 2027 Medellín") vale si la
+        # descripción encaja en una rama; uno con área ajena ("Practicante de
+        # Eventos") no.
+        if not ramas_coincidentes or not title_is_generic_program(titulo):
+            return None
+
+    es_empresa_objetivo = company_is_target(job.get("empresa", ""))
+    if es_empresa_objetivo:
+        total_score += 15
+
     if not ramas_coincidentes:
         ramas_coincidentes.append({
             "clave": "general",
@@ -651,44 +1060,70 @@ def classify_and_score_job(job, config_ramas):
     job["es_cierre_inminente"] = es_cierre_inminente
     job["es_practica"] = es_practica
     job["score_pensum"] = total_score
-    job["mision"] = job.get("mision") or job.get("resumen_fuente") or mision_especifica or f"Desarrollo de proyectos técnicos y operativos en {job.get('empresa', 'la empresa')}."
-    job["tareas"] = job.get("tareas") or (tareas_especificas if tareas_especificas else "Apoyo en mediciones, modelado técnico, análisis de datos y reporte de resultados.")
+    job["empresa_objetivo"] = es_empresa_objetivo
+    mision_fuente = "" if job.get("_mision_generada") else job.get("mision")
+    descripcion_corta = str(job.get("descripcion_fuente", ""))[:400]
+    if mision_fuente or job.get("resumen_fuente") or descripcion_corta:
+        job["mision"] = mision_fuente or job.get("resumen_fuente") or descripcion_corta
+        job.pop("_mision_generada", None)
+    else:
+        job["mision"] = mision_especifica or f"Desarrollo de proyectos técnicos y operativos en {job.get('empresa', 'la empresa')}."
+        job["_mision_generada"] = True
+    if not job.get("tareas") or job.get("_tareas_generadas"):
+        job["tareas"] = tareas_especificas if tareas_especificas else "Apoyo en mediciones, modelado técnico, análisis de datos y reporte de resultados."
+        job["_tareas_generadas"] = True
     if job.get("resumen_fuente") and not job.get("tareas"):
         job["tareas"] = "Resumen de búsqueda web. Abre la publicación original para confirmar funciones, requisitos y vigencia."
 
     return job
 
+DESCRIPTION_ANCHOR_RE = re.compile(
+    r"Descripci[oó]n de la oferta|Descripci[oó]n del cargo|Descripci[oó]n general|Job description|"
+    r"Acerca del empleo|Funciones del cargo|Responsabilidades",
+    re.IGNORECASE,
+)
+
+def extract_page_description(page_html):
+    """Texto del aviso: JSON-LD JobPosting o el bloque tras 'Descripción de la oferta'."""
+    for block in re.findall(r'<script[^>]*application/ld\+json[^>]*>(.*?)</script>', page_html, re.DOTALL):
+        try:
+            data = json.loads(block)
+        except ValueError:
+            continue
+        for item in data if isinstance(data, list) else [data]:
+            if isinstance(item, dict) and item.get("@type") == "JobPosting" and item.get("description"):
+                return html_to_text(str(item["description"]))[:2500]
+    anchor = DESCRIPTION_ANCHOR_RE.search(page_html)
+    if anchor:
+        return html_to_text(page_html[anchor.start():anchor.start() + 6000])[:2500]
+    return ""
+
 def verify_job_url(job):
-    """Verifica estrictamente que la URL de postulación sea pública, válida y responda HTTP 200 sin muros de login ni expiración."""
+    """Confirma que el aviso sigue abierto (HTTP 200, sin login ni 'oferta finalizada') y lee su descripción."""
     url = job.get("url", "")
     if not url or not url.startswith("http"):
         return False
-    # Las publicaciones mundiales de LinkedIn se conservan como pistas remotas recientes;
-    # la vigencia y la elegibilidad desde Colombia deben confirmarse en la fuente.
     if "linkedin.com" in url.lower():
-        if job.get("search_scope") == "WORLDWIDE" and REMOTE_MODALITY_RE.search(
-            f"{job.get('titulo', '')} {job.get('ubicacion', '')}"
-        ):
-            job["estado_vigencia"] = "Anuncio remoto reciente; confirmar vigencia y elegibilidad desde Colombia"
-            return True
-        return False
+        return enrich_linkedin_job(job)
     try:
-        r = requests.get(url, headers=HEADERS, timeout=4.5, allow_redirects=True)
+        r = requests.get(url, headers=HEADERS, timeout=8, allow_redirects=True)
         if r.status_code >= 400:
             return False
         txt = r.text.lower()
         if "esta oferta ya no está disponible" in txt or "la oferta que buscas ya no está disponible" in txt or "página no encontrada" in txt or "la vacante ha finalizado" in txt:
             return False
+        if not job.get("curada") and not job.get("descripcion_fuente"):
+            descripcion = extract_page_description(r.text)
+            if descripcion:
+                job["descripcion_fuente"] = descripcion
         return True
     except Exception:
         return False
 
 def is_in_target_location(job):
-    """Acepta Antioquia/Medellín o modalidad remota / 100 % híbrida explícita."""
+    """Antioquia con cualquier modalidad; fuera de Antioquia solo remoto o híbrido explícito."""
     location = str(job.get("ubicacion", ""))
-    if job.get("search_scope") == "WORLDWIDE":
-        return bool(REMOTE_MODALITY_RE.search(f"{job.get('titulo', '')} {location} {job.get('modalidad', '')}"))
-    if LOCAL_LOCATION_RE.search(location):
+    if job.get("search_scope") != "WORLDWIDE" and LOCAL_LOCATION_RE.search(location):
         return True
 
     # FirstJob no proporciona modalidad en la tarjeta rastreada; no confiar en el
@@ -697,726 +1132,50 @@ def is_in_target_location(job):
         return False
 
     details = " ".join(str(job.get(key, "")) for key in (
-        "titulo", "ubicacion", "modalidad", "perfil", "mision", "tareas", "resumen_fuente"
+        "titulo", "ubicacion", "modalidad", "perfil", "resumen_fuente", "descripcion_fuente"
     ))
-    return bool(REMOTE_MODALITY_RE.search(details))
+    if not job.get("_mision_generada"):
+        details += " " + str(job.get("mision", ""))
+    if job.get("search_scope") == "WORLDWIDE":
+        # En el exterior lo híbrido no sirve: se exige remoto en el título o la
+        # ubicación, o una frase inequívoca en la descripción.
+        head = f"{job.get('titulo', '')} {location} {job.get('modalidad', '')}"
+        if not (REMOTE_ONLY_RE.search(head) or REMOTE_WORLDWIDE_DESC_RE.search(details)):
+            return False
+        if REMOTE_NEGATION_RE.search(details):
+            return False
+    elif not REMOTE_MODALITY_RE.search(details):
+        return False
+    if job.get("search_scope") == "WORLDWIDE":
+        job["alcance_geografico"] = "Remoto internacional; confirmar elegibilidad desde Colombia"
+        if "remoto internacional" not in location:
+            job["ubicacion"] = f"{location} · remoto internacional (elegibilidad por confirmar)"
+    else:
+        job["alcance_geografico"] = "Fuera de Antioquia; remoto o híbrido según el aviso"
+        if not re.search(r"remoto|h[ií]brid", location, re.IGNORECASE):
+            job["ubicacion"] = f"{location} · remoto o híbrido (confirmar en el aviso)"
+    return True
+
+def needs_detail_before_location(job):
+    """Avisos de LinkedIn fuera de Antioquia: la modalidad solo aparece en la descripción."""
+    return "linkedin.com" in job.get("url", "").lower() and not LOCAL_LOCATION_RE.search(str(job.get("ubicacion", "")))
 
 def filter_verified_jobs(jobs, max_workers=25):
-    """Filtra una lista de vacantes en paralelo conservando únicamente aquellas con enlaces 100% garantizados."""
-    in_scope = [job for job in jobs if is_in_target_location(job)]
-    print(f"[*] Cobertura geográfica/modalidad: {len(in_scope)} de {len(jobs)} ofertas en Antioquia o remotas (descartadas {len(jobs) - len(in_scope)})")
-    print(f"[*] Verificando enlaces reales en vivo para {len(in_scope)} vacantes candidatas...")
+    """Verifica enlaces en paralelo y conserva solo avisos abiertos dentro del alcance geográfico."""
+    in_profile = [job for job in jobs if job.get("curada") or not title_is_out_of_profile(job.get("titulo", ""))]
+    print(f"[*] Perfil: {len(in_profile)} de {len(jobs)} ofertas con título afín (descartadas {len(jobs) - len(in_profile)})")
+    candidates = [job for job in in_profile if needs_detail_before_location(job) or is_in_target_location(job)]
+    print(f"[*] Cobertura geográfica preliminar: {len(candidates)} candidatas (descartadas {len(in_profile) - len(candidates)})")
+    print(f"[*] Verificando enlaces y leyendo descripciones de {len(candidates)} vacantes...")
     with concurrent.futures.ThreadPoolExecutor(max_workers=max_workers) as executor:
-        results = list(executor.map(verify_job_url, in_scope))
-    verified = [j for j, ok in zip(in_scope, results) if ok]
-    print(f" [✓] Enlaces públicos válidos (HTTP 200 sin login): {len(verified)} (descartadas {len(in_scope) - len(verified)})")
+        results = list(executor.map(verify_job_url, candidates))
+    opened = [j for j, ok in zip(candidates, results) if ok]
+    verified = [j for j in opened if is_in_target_location(j)]
+    print(f" [✓] Enlaces abiertos: {len(opened)} (descartadas {len(candidates) - len(opened)}); "
+          f"en Antioquia o remotas/híbridas: {len(verified)}")
+    if LINKEDIN_STATS:
+        print(f"     LinkedIn: {dict(LINKEDIN_STATS)}")
     return verified
-
-def build_full_html(vacantes, config_ramas):
-    """Genera el HTML semántico con diseño de laboratorio, sin emojis en la interfaz, telemetría y filtros STEM"""
-    vacantes_json_str = json.dumps(vacantes, ensure_ascii=False)
-    
-    convenios_path = os.path.join(BASE_DIR, "convenios_internacionales.json")
-    becas_path = os.path.join(BASE_DIR, "becas_internacionales.json")
-    convenios_data = load_json(convenios_path) if os.path.exists(convenios_path) else []
-    becas_data = load_json(becas_path) if os.path.exists(becas_path) else []
-    
-    convenios_json_str = json.dumps(convenios_data, ensure_ascii=False)
-    becas_json_str = json.dumps(becas_data, ensure_ascii=False)
-
-    total_exclusivas = sum(1 for v in vacantes if v.get("es_exclusiva_fisica"))
-    total_practicas = sum(1 for v in vacantes if v.get("es_practica"))
-    total_convenios = len(convenios_data)
-    total_becas = len(becas_data)
-
-    html = f"""<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Prácticas de Ingeniería Física • UNAL Medellín | Jimmy Rosero</title>
-  <meta name="description" content="Portal inteligente de convocatorias de prácticas profesionales, pasantías y becas internacionales para estudiantes de Ingeniería Física de la Universidad Nacional de Colombia Sede Medellín. Desarrollado por Jimmy Stebym Rosero Barrera.">
-  <meta name="author" content="Jimmy Stebym Rosero Barrera">
-  <meta name="color-scheme" content="light dark">
-  <meta name="referrer" content="strict-origin-when-cross-origin">
-  <meta http-equiv="X-Content-Type-Options" content="nosniff">
-  
-  <!-- OpenGraph y Metadatos para compartir en Redes y WhatsApp -->
-  <meta property="og:title" content="Prácticas de Ingeniería Física • UNAL Medellín | Jimmy Rosero">
-  <meta property="og:description" content="Radar inteligente de convocatorias de prácticas clasificadas por materias del pénsum y más de 1.150 convenios internacionales de la UNAL.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://stebym.github.io/practicas-ingenieria-fisica/">
-
-  <!-- Favicon cuántico en formato SVG puro (sin emojis) -->
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='42' fill='%23080c14' stroke='%2300e5ff' stroke-width='6'/><circle cx='50' cy='50' r='14' fill='%2300e5ff'/><ellipse cx='50' cy='50' rx='36' ry='14' fill='none' stroke='%2300e5ff' stroke-width='3' transform='rotate(30 50 50)'/><ellipse cx='50' cy='50' rx='36' ry='14' fill='none' stroke='%2300e5ff' stroke-width='3' transform='rotate(-30 50 50)'/></svg>">
-
-  <script>
-    try {{
-      const storedTheme = localStorage.getItem('ipf-theme');
-      const savedTheme = storedTheme === 'dark' || storedTheme === 'light' ? storedTheme : null;
-      const preferredTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-      document.documentElement.dataset.theme = savedTheme || preferredTheme;
-    }} catch {{ document.documentElement.dataset.theme = 'light'; }}
-  </script>
-  <link rel="stylesheet" href="estilos.css">
-  <script src="estrellas.js" defer></script>
-</head>
-<body>
-  <canvas id="constellationCanvas" aria-hidden="true"></canvas>
-
-  <!-- HEADER SEMÁNTICO CON TELEMETRÍA Y BRANDING -->
-  <header class="site-header">
-    <div class="header-container">
-      <div class="branding">
-        <div class="brand-symbol" title="Ingeniería Física UNAL">⚛</div>
-        <div class="brand-text">
-          <h1>Prácticas de Ingeniería Física</h1>
-          <p class="subtitle">Medellín y Antioquia • Convocatorias Industriales & Directorio de I+D</p>
-          <div class="creator-tag">
-            Creado por <strong>Jimmy Stebym Rosero Barrera</strong> • UNAL Sede Medellín
-          </div>
-        </div>
-      </div>
-      <div class="header-meta">
-        <div class="status-beacon" title="Estado del bot y sincronización diaria">
-          <span class="beacon-dot"></span>
-          <span>SISTEMA ACTIVO</span>
-        </div>
-        <div class="live-online-chip" id="liveOnlineBadge" title="Usuarios y estudiantes conectados en simultáneo">
-          <span class="live-pulse-dot"></span>
-          <span id="liveOnlineCount">14 en línea</span>
-        </div>
-        <div class="kpi-chip" onclick="switchMainTab('todas', document.querySelector('.tab-link:nth-child(1)'))" title="Ver todas las vacantes">
-          Vacantes: <strong style="color: var(--accent-cyan);">{len(vacantes)}</strong>
-        </div>
-        <div class="kpi-chip" onclick="switchMainTab('exclusivas', document.querySelector('.tab-link.exclusive'))" title="Ver vacantes afines a Física">
-          Afinidad con Física: <strong style="color: var(--accent-amber);">{total_exclusivas}</strong>
-        </div>
-        <div class="kpi-chip" onclick="switchMainTab('practicas', document.querySelector('.tab-link.urgent'))" title="Ver prácticas y pasantías identificadas">
-          Prácticas: <strong style="color: var(--accent-emerald);">{total_practicas}</strong>
-        </div>
-        <div class="kpi-chip" onclick="switchMainTab('becas', document.querySelector('.tab-link:nth-child(5)'))" title="Ver catálogo internacional y convenios">
-          Internacional: <strong style="color: var(--accent-emerald);">{total_convenios + total_becas}</strong>
-        </div>
-        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Cambiar a modo oscuro" aria-pressed="false">
-          <span class="theme-toggle-icon" aria-hidden="true">◐</span><span class="theme-toggle-label">Modo oscuro</span>
-        </button>
-      </div>
-    </div>
-  </header>
-
-  <main class="main-content">
-
-    <section class="manifesto-box">
-      <h2>Radar de Oportunidades & Pasantías • Ingeniería Física (UNAL Medellín)</h2>
-      <p>
-        Plataforma automatizada desarrollada por <strong>Jimmy Stebym Rosero Barrera</strong>. El motor cruza las materias clave de nuestro pénsum oficial (<strong>Análisis de Datos & IA, Electrónica Digital / IoT / I2C, Electrónica Análoga, Metrología e Instrumentación, Simulación Numérica, Cuántica, Radiaciones y Diseño CAD</strong>) con las convocatorias del sector industrial, biomédico y tecnológico.
-      </p>
-      <p><strong>Cobertura:</strong> Medellín y Antioquia, más prácticas remotas internacionales. Confirma en el aviso original si aceptan postulantes desde Colombia.</p>
-    </section>
-
-    <!-- NAVEGACIÓN POR PESTAÑAS (TABS) -->
-    <nav class="tabs-nav" aria-label="Secciones de prácticas">
-      <button class="tab-link active" onclick="switchMainTab('todas', this)">
-        Todas las Vacantes ({len(vacantes)})
-      </button>
-      <button class="tab-link exclusive" onclick="switchMainTab('exclusivas', this)">
-        Afinidad con Física ({total_exclusivas})
-      </button>
-      <button class="tab-link urgent" onclick="switchMainTab('practicas', this)">
-        Prácticas / pasantías ({total_practicas})
-      </button>
-      <button class="tab-link" onclick="switchMainTab('canales', this)">
-        Ecosistema Nacional & Retos
-      </button>
-      <button class="tab-link" onclick="switchMainTab('becas', this)">
-        Becas & Pasantías Internacionales ({total_becas})
-      </button>
-    </nav>
-
-    <!-- CONTENEDOR DE FILTROS Y BÚSQUEDA -->
-    <div id="filterControls">
-      <input type="text" id="searchInput" class="search-bar" placeholder="Buscar por materia, software o tecnología (ej. I2C, Python, Taller V, CAD, PLC, Cuántica, Radiaciones)..." onkeyup="handleFilter()">
-      
-      <div class="application-tracker">
-        <label for="applicationFilter">Mis postulaciones <span>· se guarda en tu navegador</span></label>
-        <select id="applicationFilter" onchange="handleFilter()">
-          <option value="all">Todas las convocatorias</option>
-          <option value="pending">Pendientes de postularme</option>
-          <option value="applied">Ya me postulé</option>
-        </select>
-        <span id="applicationSummary" aria-live="polite"></span>
-      </div>
-
-      <div class="branch-pills" id="pillsContainer">
-        <button class="branch-pill active" onclick="handlePill('TODOS', this)">Todas las ramas</button>
-        <button class="branch-pill" onclick="handlePill('Análisis de Datos, IA y Simulaciones', this)">Datos, IA & Simulaciones</button>
-        <button class="branch-pill" onclick="handlePill('Electrónica Digital, Microcontroladores e IoT', this)">Electrónica Digital & IoT (I2C)</button>
-        <button class="branch-pill" onclick="handlePill('Electrónica Análoga y Circuitos', this)">Electrónica Análoga</button>
-        <button class="branch-pill" onclick="handlePill('Instrumentación y Metrología Industrial', this)">Instrumentación & Metrología</button>
-        <button class="branch-pill" onclick="handlePill('Diseño Mecánico y Dibujo Técnico', this)">Diseño Mecánico & CAD</button>
-        <button class="branch-pill" onclick="handlePill('Cuántica, Estado Sólido y Nuevas Tecnologías', this)">Cuántica & Estado Sólido</button>
-        <button class="branch-pill" onclick="handlePill('Física de Radiaciones y Física Médica', this)">Radiaciones & Física Médica</button>
-        <button class="branch-pill" onclick="handlePill('Óptica, Fotónica y Visión Artificial', this)">Óptica & Visión Artificial</button>
-        <button class="branch-pill" onclick="handlePill('Ciencia de Materiales y Nanotecnología', this)">Materiales & Nanotecnología</button>
-        <button class="branch-pill" onclick="handlePill('Energía, Potencia y Renovables', this)">Energía & Potencia</button>
-      </div>
-    </div>
-
-    <!-- GRILLA PRINCIPAL DE VACANTES (HTML SEMÁNTICO) -->
-    <section class="jobs-grid" id="jobsContainer" aria-live="polite">
-      <!-- Inyectado dinámicamente con etiquetas article sanitizadas -->
-    </section>
-
-    <!-- PESTAÑA: BECAS & PASANTÍAS INTERNACIONALES -->
-    <section id="becasContainer" style="display: none;">
-      <article class="editorial-card">
-        <h3>Becas, Pasantías Internacionales y Convenios Oficiales UNAL</h3>
-        <p>Oportunidades globales de alto impacto para estudiantes y egresados de <strong>Ingeniería Física</strong>: becas completas de posgrado (India, China, Europa), pasantías técnicas remuneradas (IAESTE, DAAD, CERN, Mitacs) y el catálogo oficial de más de <strong>{total_convenios} convenios vigentes suscritos por la Universidad Nacional de Colombia</strong> en más de 60 países.</p>
-
-        <!-- SUBSECCIÓN 1: BECAS Y CONVOCATORIAS GLOBALES -->
-        <h4 style="color: var(--accent-cyan); margin: 26px 0 14px; font-family: var(--font-display); font-size: 1.18rem; border-bottom: 1px solid var(--border-technical); padding-bottom: 8px;">
-          Convocatorias Globales Activas (Europa, Asia y América)
-        </h4>
-        <div id="becasGrid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 16px;">
-          <!-- Inyectado dinámicamente -->
-        </div>
-
-        <!-- SUBSECCIÓN 2: BUSCADOR DE CONVENIOS UNAL DRE -->
-        <h4 style="color: var(--accent-amber); margin: 38px 0 10px; font-family: var(--font-display); font-size: 1.18rem; border-bottom: 1px solid var(--border-technical); padding-bottom: 8px;">
-          Directorio de Convenios Internacionales Oficiales de la UNAL (DRE)
-        </h4>
-        <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 16px;">
-          Convenios vigentes suscritos por la UNAL para <strong>movilidad académica, prácticas, investigación y doble titulación</strong> en facultades de ciencias e ingeniería. Usa el filtro de afinidad STEM para descartar áreas no relacionadas y abre el documento oficial suscrito en Google Drive.
-        </p>
-
-        <div class="convenios-controls">
-          <button id="conveniosStemFilterBtn" type="button" class="convenios-stem-btn active" onclick="toggleConveniosStemFilter()">
-            [✓] Solo afines a Ingeniería Física y Ciencias (STEM)
-          </button>
-          <input type="text" id="conveniosSearch" class="search-bar" style="flex: 1 1 240px; margin: 0; padding: 10px 14px;" placeholder="Buscar universidad o palabra clave (ej. RWTH Aachen, Munich, Sao Paulo, Toronto)..." onkeyup="handleConveniosFilter()">
-          <select id="conveniosCountryFilter" onchange="handleConveniosFilter()">
-            <option value="ALL">Todos los países ({total_convenios} convenios)</option>
-          </select>
-          <select id="conveniosTypeFilter" onchange="handleConveniosFilter()">
-            <option value="ALL">Todos los tipos de convenio</option>
-          </select>
-        </div>
-        <div id="conveniosCounter" style="font-family: var(--font-mono); font-size: 0.84rem; color: var(--accent-cyan); margin-bottom: 14px; font-weight: 600;"></div>
-        <div id="conveniosList" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 14px; max-height: 700px; overflow-y: auto; padding-right: 6px;">
-          <!-- Inyectado dinámicamente -->
-        </div>
-      </article>
-    </section>
-
-    <!-- PESTAÑA: ECOSISTEMA & CANALES ESTRATÉGICOS -->
-    <section id="canalesContainer" style="display: none;">
-      <article class="editorial-card">
-        <h3>Ecosistema de Plataformas & Canales Estratégicos en Colombia</h3>
-        <p>Además de las convocatorias rastreadas en vivo por este portal, como estudiante de <strong>Ingeniería Física de la UNAL</strong> cuentas con plataformas clave donde las empresas reclutan directamente o plantean retos de ingeniería aplicada:</p>
-        
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; margin-top: 18px;">
-          <div style="background: rgba(0, 229, 255, 0.05); border: 1px solid rgba(0, 229, 255, 0.2); border-radius: 12px; padding: 18px;">
-            <h4 style="color: var(--accent-cyan); margin-bottom: 6px; font-family: var(--font-display);">1. Interacpedia (Retos Empresariales)</h4>
-            <p style="font-size: 0.88rem; line-height: 1.45; color: var(--text-muted); margin-bottom: 12px;">
-              Plataforma de innovación abierta nacida en Medellín. Empresas como <strong>Grupo Éxito, Haceb, ISA, Argos y Corona</strong> publican desafíos de ingeniería (visión artificial, optimización energética, sensores, IA). Quien plantea la mejor solución técnica es vinculado directamente como practicante.
-            </p>
-            <a href="https://interacpedia.com/" target="_blank" rel="noopener noreferrer" class="apply-link" style="display: inline-block; font-size: 0.8rem; padding: 6px 14px;">Explorar Retos en Interacpedia ↗</a>
-          </div>
-
-          <div style="background: rgba(16, 185, 129, 0.05); border: 1px solid rgba(16, 185, 129, 0.2); border-radius: 12px; padding: 18px;">
-            <h4 style="color: var(--accent-emerald); margin-bottom: 6px; font-family: var(--font-display);">2. Estado Joven (MinTrabajo)</h4>
-            <p style="font-size: 0.88rem; line-height: 1.45; color: var(--text-muted); margin-bottom: 12px;">
-              Programa oficial del Estado colombiano que financia prácticas universitarias (5 meses) en entidades públicas: <strong>IDEAM, MinCiencias, Secretarías de Medio Ambiente y Gobernación de Antioquia</strong>. Ofrecen <strong>1 SMMLV mensual pagado por el Estado</strong> y convalidación de experiencia laboral.
-            </p>
-            <a href="https://www.mintrabajo.gov.co/empleo-y-pensiones/movilidad-y-formacion/estado-joven" target="_blank" rel="noopener noreferrer" class="apply-link" style="display: inline-block; font-size: 0.8rem; padding: 6px 14px;">Ver Convocatoria Estado Joven ↗</a>
-          </div>
-
-          <div style="background: rgba(245, 158, 11, 0.05); border: 1px solid rgba(245, 158, 11, 0.2); border-radius: 12px; padding: 18px;">
-            <h4 style="color: var(--accent-amber); margin-bottom: 6px; font-family: var(--font-display);">3. SENA SGVA (Contrato de Aprendizaje)</h4>
-            <p style="font-size: 0.88rem; line-height: 1.45; color: var(--text-muted); margin-bottom: 12px;">
-              Portal obligatorio de ley para contratos de aprendizaje. Solicita a la <strong>Oficina de Prácticas de la Facultad de Minas</strong> tu habilitación en el SGVA. Una vez activo, las empresas industriales de Antioquia te asignan cartas de presentación para vacantes obligatorias con 100% SMMLV + EPS + ARL.
-            </p>
-            <a href="https://caprendizaje.sena.edu.co/" target="_blank" rel="noopener noreferrer" class="apply-link" style="display: inline-block; font-size: 0.8rem; padding: 6px 14px;">Acceder al SGVA SENA ↗</a>
-          </div>
-
-          <div style="background: rgba(139, 92, 246, 0.05); border: 1px solid rgba(139, 92, 246, 0.2); border-radius: 12px; padding: 18px;">
-            <h4 style="color: #a78bfa; margin-bottom: 6px; font-family: var(--font-display);">4. Torre.ai (Data Science & Física Computacional)</h4>
-            <p style="font-size: 0.88rem; line-height: 1.45; color: var(--text-muted); margin-bottom: 12px;">
-              Red especializada en talento tecnológico fundada por Alexander Torrenegra. Es el canal ideal para pasantías y roles remotos en <strong>Python, Machine Learning, Visión Artificial, Deep Learning y Modelado Numérico</strong> en startups tecnológicas.
-            </p>
-            <a href="https://torre.ai/" target="_blank" rel="noopener noreferrer" class="apply-link" style="display: inline-block; font-size: 0.8rem; padding: 6px 14px;">Buscar en Torre.ai ↗</a>
-          </div>
-
-          <div style="background: rgba(239, 68, 68, 0.05); border: 1px solid rgba(239, 68, 68, 0.2); border-radius: 12px; padding: 18px;">
-            <h4 style="color: #f87171; margin-bottom: 6px; font-family: var(--font-display);">5. FirstJob Colombia (Semilleros Multinacionales)</h4>
-            <p style="font-size: 0.88rem; line-height: 1.45; color: var(--text-muted); margin-bottom: 12px;">
-              Portal especializado en programas de <em>Early Careers</em> y pasantías en multinacionales como <strong>Schneider Electric, Schlumberger/SLB, Unilever, Nestlé y Galderma</strong>, con evaluación y ranking BIE de empresas para practicantes.
-            </p>
-            <a href="https://firstjob.me/ofertas?country[]=47" target="_blank" rel="noopener noreferrer" class="apply-link" style="display: inline-block; font-size: 0.8rem; padding: 6px 14px;">Ver Prácticas FirstJob ↗</a>
-          </div>
-
-          <div style="background: rgba(59, 130, 246, 0.05); border: 1px solid rgba(59, 130, 246, 0.2); border-radius: 12px; padding: 18px;">
-            <h4 style="color: #60a5fa; margin-bottom: 6px; font-family: var(--font-display);">6. Bolsa de Prácticas Facultad de Minas UNAL</h4>
-            <p style="font-size: 0.88rem; line-height: 1.45; color: var(--text-muted); margin-bottom: 12px;">
-              Convenios exclusivos gestionados directamente por la <strong>Dirección Académica y la Unidad de Prácticas de la Facultad de Minas Sede Medellín</strong>. Revisa periódicamente los boletines de correo institucional y el sistema interno universitario.
-            </p>
-            <a href="https://minas.medellin.unal.edu.co/" target="_blank" rel="noopener noreferrer" class="apply-link" style="display: inline-block; font-size: 0.8rem; padding: 6px 14px;">Portal Facultad de Minas ↗</a>
-          </div>
-        </div>
-      </article>
-    </section>
-
-  </main>
-
-  <!-- BOTÓN FLOTANTE VOLVER ARRIBA -->
-  <button id="backToTop" class="back-to-top" aria-label="Volver arriba">↑</button>
-
-  <!-- FOOTER SEMÁNTICO -->
-  <footer class="site-footer">
-    <p class="institution">Herramienta desarrollada para estudiantes de Ingeniería Física • UNAL Medellín, Colombia</p>
-    <p class="schedule-note">Vacantes: inicio 19:30, publicación al terminar • Becas y Convenios (07:00)</p>
-    
-    <div class="footer-meta-bar">
-      <span>Portal Académico Independiente • Facultad de Ciencias & Facultad de Minas</span>
-      <div class="footer-views-counter" id="totalViewsCounter" title="Visualizaciones totales registradas en este portal">
-        <span>Visitas registradas:</span>
-        <strong id="totalViewsText">5.142</strong>
-      </div>
-    </div>
-  </footer>
-
-  <script>
-    /* ==========================================================================
-       SEGURIDAD Y SANITIZACIÓN CLIENTE (Prevención XSS y Enlaces Maliciosos)
-       ========================================================================== */
-    function escapeHtml(str) {{
-      if (str === null || str === undefined) return '';
-      return String(str)
-        .replace(/[\\u{{1F300}}-\\u{{1FAFF}}\\u{{2600}}-\\u{{26FF}}\\u{{2700}}-\\u{{27BF}}]/gu, '')
-        .replace(/&/g, '&amp;')
-        .replace(/</g, '&lt;')
-        .replace(/>/g, '&gt;')
-        .replace(/"/g, '&quot;')
-        .replace(/'/g, '&#39;');
-    }}
-
-    function sanitizeUrl(url) {{
-      if (!url) return '#';
-      const trimmed = String(url).trim();
-      if (/^(https?:\\/\\/|mailto:)/i.test(trimmed)) {{
-        return trimmed;
-      }}
-      return '#';
-    }}
-
-    const allJobs = {vacantes_json_str};
-    const allBecas = {becas_json_str};
-    const allConvenios = {convenios_json_str};
-    let currentTab = 'todas';
-    let currentBranch = 'TODOS';
-    let conveniosStemOnly = true; // Filtro STEM activo por defecto
-    const appliedStorageKey = 'ipf-applied-jobs-v1';
-    let appliedJobs = new Set();
-    try {{ appliedJobs = new Set(JSON.parse(localStorage.getItem(appliedStorageKey) || '[]')); }} catch {{}}
-
-    // Validación de afinidad STEM para convenios
-    const STEM_EXCLUSIONS = ['sociales', 'humanas', 'derecho', 'políticas', 'politicas', 'salud', 'odontología', 'enfermería', 'artes', 'música', 'filosofía'];
-    function isStemArea(area) {{
-      if (!area) return true;
-      const a = area.toLowerCase();
-      for (let i = 0; i < STEM_EXCLUSIONS.length; i++) {{
-        if (a.includes(STEM_EXCLUSIONS[i])) return false;
-      }}
-      return true;
-    }}
-
-    function toggleConveniosStemFilter() {{
-      conveniosStemOnly = !conveniosStemOnly;
-      const btn = document.getElementById('conveniosStemFilterBtn');
-      if (btn) {{
-        btn.classList.toggle('active', conveniosStemOnly);
-        btn.textContent = conveniosStemOnly 
-          ? '[✓] Solo afines a Ingeniería Física y Ciencias (STEM)' 
-          : '[ Todos los convenios disponibles ]';
-      }}
-      handleConveniosFilter();
-    }}
-
-    function renderBecas() {{
-      const grid = document.getElementById('becasGrid');
-      if (!grid || grid.children.length > 0) return;
-      allBecas.forEach(b => {{
-        const card = document.createElement('div');
-        card.className = 'beca-card';
-        const badgeColor = b.destacada ? 'var(--accent-amber)' : 'var(--accent-cyan)';
-        card.innerHTML = `
-          <div>
-            <div class="beca-header">
-              <span class="beca-type-tag" style="background: ${{badgeColor}}22; color: ${{badgeColor}}; border: 1px solid ${{badgeColor}}44;">${{escapeHtml(b.tipo || 'Beca Global')}}</span>
-              <span class="beca-country-tag">[ ${{escapeHtml(b.pais.toUpperCase())}} ]</span>
-            </div>
-            <h4 class="beca-title">${{escapeHtml(b.titulo)}}</h4>
-            <div class="beca-entity">${{escapeHtml(b.entidad)}}</div>
-            ${{b.cobertura ? `<div class="beca-coverage"><strong>Cobertura:</strong> ${{escapeHtml(b.cobertura)}}</div>` : ''}}
-            <p class="beca-desc">${{escapeHtml(b.descripcion || '')}}</p>
-          </div>
-          <a href="${{sanitizeUrl(b.url)}}" target="_blank" rel="noopener noreferrer" class="apply-link" style="text-align: center; font-size: 0.82rem; padding: 9px 14px;">
-            <span>Ver Convocatoria Oficial</span> <span>↗</span>
-          </a>
-        `;
-        grid.appendChild(card);
-      }});
-    }}
-
-    let conveniosPopulated = false;
-    function initConveniosFilters() {{
-      if (conveniosPopulated) return;
-      const countrySel = document.getElementById('conveniosCountryFilter');
-      const typeSel = document.getElementById('conveniosTypeFilter');
-      if (!countrySel || !typeSel) return;
-
-      const countryCounts = {{}};
-      allConvenios.forEach(c => {{
-        if (c.pais) {{
-          countryCounts[c.pais] = (countryCounts[c.pais] || 0) + 1;
-        }}
-      }});
-
-      const countries = Object.keys(countryCounts).sort();
-      countries.forEach(p => {{
-        const opt = document.createElement('option');
-        opt.value = p;
-        opt.textContent = `${{p}} (${{countryCounts[p]}})`;
-        countrySel.appendChild(opt);
-      }});
-
-      const types = [...new Set(allConvenios.map(c => c.tipo).filter(Boolean))].sort();
-      types.forEach(t => {{
-        const opt = document.createElement('option');
-        opt.value = t;
-        opt.textContent = t;
-        typeSel.appendChild(opt);
-      }});
-
-      conveniosPopulated = true;
-    }}
-
-    function handleConveniosFilter() {{
-      initConveniosFilters();
-      const q = (document.getElementById('conveniosSearch')?.value || '').toLowerCase();
-      const country = document.getElementById('conveniosCountryFilter')?.value || 'ALL';
-      const type = document.getElementById('conveniosTypeFilter')?.value || 'ALL';
-      const list = document.getElementById('conveniosList');
-      const counter = document.getElementById('conveniosCounter');
-      if (!list) return;
-
-      const filtered = allConvenios.filter(c => {{
-        if (conveniosStemOnly && !isStemArea(c.area)) return false;
-        if (country !== 'ALL' && c.pais !== country) return false;
-        if (type !== 'ALL' && c.tipo !== type) return false;
-        if (q && !c.institucion.toLowerCase().includes(q) && !c.pais.toLowerCase().includes(q) && !c.tipo.toLowerCase().includes(q) && !c.nombre.toLowerCase().includes(q)) return false;
-        return true;
-      }});
-
-      const stemNotice = conveniosStemOnly ? ' (Filtrado para Ing. Física & STEM)' : '';
-      if (counter) counter.textContent = `Mostrando ${{filtered.length}} de ${{allConvenios.length}} convenios vigentes${{stemNotice}}`;
-      list.innerHTML = '';
-
-      if (filtered.length === 0) {{
-        list.innerHTML = '<div style="grid-column: 1/-1; text-align: center; padding: 30px; color: var(--text-muted); font-family: var(--font-mono);">No se encontraron convenios bajo este criterio de búsqueda.</div>';
-        return;
-      }}
-
-      filtered.slice(0, 120).forEach(c => {{
-        const card = document.createElement('div');
-        card.className = 'convenio-card';
-        card.innerHTML = `
-          <div>
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
-              <span style="font-size: 0.72rem; font-family: var(--font-mono); font-weight: 700; padding: 2px 8px; border-radius: 4px; background: rgba(0,240,160,0.12); color: var(--accent-emerald);">[ ${{escapeHtml(c.pais.toUpperCase())}} ]</span>
-              <span style="font-size: 0.72rem; font-family: var(--font-mono); color: var(--text-dim);">Suscrito: ${{escapeHtml(c.ano)}}</span>
-            </div>
-            <h5 style="font-family: var(--font-display); font-size: 0.96rem; color: var(--text-main); margin-bottom: 6px; line-height: 1.35;">${{escapeHtml(c.institucion)}}</h5>
-            <div style="font-size: 0.78rem; color: var(--accent-cyan); margin-bottom: 6px; font-weight: 500;">${{escapeHtml(c.tipo)}}</div>
-            <div style="font-size: 0.76rem; color: var(--text-muted); line-height: 1.35; margin-bottom: 12px;">${{escapeHtml(c.area)}}</div>
-          </div>
-          ${{c.link ? `<a href="${{sanitizeUrl(c.link)}}" target="_blank" rel="noopener noreferrer" class="apply-link" style="text-align: center; font-size: 0.76rem; padding: 6px 12px; border-radius: 8px;"><span>Ver Convenio Oficial (Drive)</span> <span>↗</span></a>` : ''}}
-        `;
-        list.appendChild(card);
-      }});
-      if (filtered.length > 120) {{
-        const notice = document.createElement('div');
-        notice.style.cssText = 'grid-column: 1/-1; text-align: center; padding: 12px; font-family: var(--font-mono); font-size: 0.78rem; color: var(--text-muted);';
-        notice.textContent = `Mostrando los primeros 120 resultados de ${{filtered.length}}. Usa el buscador o filtro de país para afinar.`;
-        list.appendChild(notice);
-      }}
-    }}
-
-    function renderJobs(list) {{
-      const container = document.getElementById('jobsContainer');
-      container.innerHTML = '';
-
-      if (list.length === 0) {{
-        container.innerHTML = '<div style="grid-column: 1/-1; text-align: center; padding: 50px; color: var(--text-muted); font-family: var(--font-mono);">No se encontraron vacantes bajo este criterio. Prueba con otra palabra clave o rama.</div>';
-        return;
-      }}
-
-      list.forEach(j => {{
-        const card = document.createElement('article');
-        card.className = 'job-card';
-        if (j.es_cierre_inminente) card.classList.add('urgent');
-        if (j.es_exclusiva_fisica) card.classList.add('exclusive');
-
-        const tagsHtml = j.ramas.map(r => `<span class="job-tag" style="border-left: 2px solid ${{r.color}}">${{escapeHtml(r.nombre)}}</span>`).join('');
-
-        let badgeColor = j.color_principal;
-        let badgeText = j.afinidad.toUpperCase();
-        if (j.es_cierre_inminente) {{
-          badgeText = 'CIERRE: ' + new Date(j.fecha_cierre_iso + 'T00:00:00').toLocaleDateString('es-CO');
-          badgeColor = 'var(--accent-crimson)';
-        }} else if (j.es_exclusiva_fisica) {{
-          badgeText = 'AFINIDAD CON FÍSICA';
-          badgeColor = 'var(--accent-amber)';
-        }}
-
-        const isApplied = appliedJobs.has(j.url);
-        card.innerHTML = `
-          <div>
-            <header class="job-card-header">
-              <span class="affinity-badge" style="background: ${{badgeColor}}22; color: ${{badgeColor}}; border: 1px solid ${{badgeColor}}55;">
-                ${{escapeHtml(badgeText)}}
-              </span>
-              <div class="header-right">
-                <time class="job-date">${{escapeHtml(j.fecha_publicacion)}}</time>
-                <div class="info-trigger" tabindex="0">
-                  <span class="info-icon" title="Pasa el cursor o haz clic para ver el reto técnico y tareas">[i]</span>
-                  <div class="floating-cloud">
-                    <div class="cloud-title">Reto Técnico & Misión</div>
-                    <div class="cloud-body">${{escapeHtml(j.mision)}}</div>
-                    ${{j.perfil ? `<div style="margin-top: 8px; font-size: 0.80rem; color: var(--accent-cyan); line-height: 1.35;"><strong>Perfil sugerido:</strong> ${{escapeHtml(j.perfil)}}</div>` : ''}}
-                    <div class="cloud-tasks-section">
-                      <strong>¿Qué te tocará hacer?</strong>
-                      <p>${{escapeHtml(j.tareas)}}</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </header>
-            <h3 class="job-title">${{escapeHtml(j.titulo)}}</h3>
-            <div class="job-company">Empresa: ${{escapeHtml(j.empresa)}}</div>
-            <div class="job-specs">
-              <span>Ubicación: ${{escapeHtml(j.ubicacion)}}</span>
-              <span>Fuente: ${{escapeHtml(j.fuente)}}</span>
-              <span>Vigencia: confirmar en la publicación original</span>
-              ${{j.programa_inclusion_genero ? `<span>Programa STEM / inclusión de género · revisar requisitos de elegibilidad</span>` : ''}}
-              ${{j.convocatoria_exclusiva_mujeres ? `<span>Convocatoria dirigida exclusivamente a mujeres según el aviso</span>` : ''}}
-            </div>
-            ${{j.compensacion ? `<div class="salary-highlight">Compensación: ${{escapeHtml(j.compensacion)}}</div>` : ''}}
-            <div class="job-tags">${{tagsHtml}}</div>
-          </div>
-          <footer class="job-card-footer">
-            <a href="${{sanitizeUrl(j.url)}}" target="_blank" class="apply-link" rel="noopener noreferrer">
-              <span>Postularme a la Oferta</span> <span aria-hidden="true">↗</span>
-            </a>
-            <button type="button" class="application-toggle${{isApplied ? ' is-applied' : ''}}" aria-pressed="${{isApplied}}">${{isApplied ? '[✓ Ya me postulé]' : '[ Marcar como postulada ]'}}</button>
-          </footer>
-        `;
-
-        // Soporte de clic para abrir/cerrar la ventana de ayuda en móviles o escritorio
-        const infoTrigger = card.querySelector('.info-trigger');
-        if (infoTrigger) {{
-          infoTrigger.addEventListener('click', (e) => {{
-            e.stopPropagation();
-            infoTrigger.classList.toggle('active');
-          }});
-        }}
-
-        card.querySelector('.application-toggle').addEventListener('click', () => toggleApplied(j.url));
-        container.appendChild(card);
-      }});
-    }}
-
-    function handleFilter() {{
-      const query = (document.getElementById('searchInput')?.value || '').toLowerCase();
-      const applicationFilter = document.getElementById('applicationFilter')?.value || 'all';
-      const appliedCount = allJobs.filter(j => appliedJobs.has(j.url)).length;
-      const pendingCount = allJobs.length - appliedCount;
-      const summaryEl = document.getElementById('applicationSummary');
-      if (summaryEl) summaryEl.textContent = `${{appliedCount}} postuladas · ${{pendingCount}} pendientes`;
-
-      const filtered = allJobs.filter(j => {{
-        if (currentTab === 'exclusivas' && !j.es_exclusiva_fisica) return false;
-        if (currentTab === 'practicas' && !j.es_practica) return false;
-        if (applicationFilter === 'pending' && appliedJobs.has(j.url)) return false;
-        if (applicationFilter === 'applied' && !appliedJobs.has(j.url)) return false;
-
-        const matchesBranch = (currentBranch === 'TODOS') || j.ramas.some(r => r.nombre === currentBranch);
-        if (!matchesBranch) return false;
-
-        const matchesText = j.titulo.toLowerCase().includes(query) ||
-                            j.empresa.toLowerCase().includes(query) ||
-                            j.ubicacion.toLowerCase().includes(query) ||
-                            j.mision.toLowerCase().includes(query) ||
-                            j.tareas.toLowerCase().includes(query) ||
-                            (j.perfil && j.perfil.toLowerCase().includes(query)) ||
-                            (j.compensacion && j.compensacion.toLowerCase().includes(query)) ||
-                            j.ramas.some(r => r.nombre.toLowerCase().includes(query));
-        return matchesText;
-      }});
-
-      renderJobs(filtered);
-    }}
-
-    function toggleApplied(url) {{
-      if (appliedJobs.has(url)) appliedJobs.delete(url);
-      else appliedJobs.add(url);
-      try {{ localStorage.setItem(appliedStorageKey, JSON.stringify([...appliedJobs])); }} catch {{}}
-      handleFilter();
-    }}
-
-    function handlePill(branchName, btn) {{
-      currentBranch = branchName;
-      document.querySelectorAll('.branch-pill').forEach(p => p.classList.remove('active'));
-      btn.classList.add('active');
-      handleFilter();
-    }}
-
-    function switchMainTab(tabId, btn) {{
-      document.querySelectorAll('.tab-link').forEach(b => b.classList.remove('active'));
-      if (btn) btn.classList.add('active');
-
-      currentTab = tabId;
-      const filterBox = document.getElementById('filterControls');
-      const jobsBox = document.getElementById('jobsContainer');
-      const canalesBox = document.getElementById('canalesContainer');
-      const becasBox = document.getElementById('becasContainer');
-
-      if (tabId === 'canales') {{
-        filterBox.style.display = 'none';
-        jobsBox.style.display = 'none';
-        if (canalesBox) canalesBox.style.display = 'block';
-        if (becasBox) becasBox.style.display = 'none';
-      }} else if (tabId === 'becas') {{
-        filterBox.style.display = 'none';
-        jobsBox.style.display = 'none';
-        if (canalesBox) canalesBox.style.display = 'none';
-        if (becasBox) {{
-          becasBox.style.display = 'block';
-          renderBecas();
-          handleConveniosFilter();
-        }}
-      }} else {{
-        filterBox.style.display = 'block';
-        jobsBox.style.display = 'grid';
-        if (canalesBox) canalesBox.style.display = 'none';
-        if (becasBox) becasBox.style.display = 'none';
-        handleFilter();
-      }}
-    }}
-
-    function setTheme(theme) {{
-      document.documentElement.dataset.theme = theme;
-      try {{ localStorage.setItem('ipf-theme', theme); }} catch {{}}
-      const toggle = document.getElementById('themeToggle');
-      const isDark = theme === 'dark';
-      toggle.setAttribute('aria-pressed', String(isDark));
-      toggle.setAttribute('aria-label', isDark ? 'Cambiar a modo claro' : 'Cambiar a modo oscuro');
-      toggle.querySelector('.theme-toggle-label').textContent = isDark ? 'Modo claro' : 'Modo oscuro';
-      toggle.querySelector('.theme-toggle-icon').textContent = isDark ? '☼' : '◐';
-    }}
-
-    document.getElementById('themeToggle')?.addEventListener('click', () => {{
-      setTheme(document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark');
-    }});
-
-    // --- TELEMETRÍA EN TIEMPO REAL: CONTADOR EN LÍNEA ---
-    function initLiveOnlineCounter() {{
-      const countEl = document.getElementById('liveOnlineCount');
-      if (!countEl) return;
-      let current = 14;
-      try {{
-        const saved = parseInt(sessionStorage.getItem('ipf_live_online'), 10);
-        if (saved >= 9 && saved <= 24) current = saved;
-      }} catch {{}}
-
-      function updateOnline() {{
-        const change = Math.floor(Math.random() * 5) - 2;
-        current = Math.max(9, Math.min(22, current + change));
-        countEl.textContent = `${{current}} en línea`;
-        try {{ sessionStorage.setItem('ipf_live_online', current); }} catch {{}}
-        setTimeout(updateOnline, 12000 + Math.random() * 12000);
-      }}
-      countEl.textContent = `${{current}} en línea`;
-      setTimeout(updateOnline, 9000);
-    }}
-
-    // --- TELEMETRÍA EN TIEMPO REAL: CONTADOR TOTAL DE VISITAS ---
-    function initTotalViewsCounter() {{
-      const viewsEl = document.getElementById('totalViewsText');
-      if (!viewsEl) return;
-      const STORAGE_KEY = 'ipf_total_views_v2';
-      const SESSION_KEY = 'ipf_view_session';
-      const baseViews = 5142;
-
-      let stored = 0;
-      try {{
-        stored = parseInt(localStorage.getItem(STORAGE_KEY), 10) || 0;
-        if (!sessionStorage.getItem(SESSION_KEY)) {{
-          stored += 1;
-          sessionStorage.setItem(SESSION_KEY, '1');
-          localStorage.setItem(STORAGE_KEY, stored);
-        }}
-      }} catch {{}}
-
-      const total = baseViews + stored;
-      viewsEl.textContent = total.toLocaleString('es-CO');
-
-      // Intento de sincronización asíncrona con API de contador público
-      try {{
-        fetch('https://api.counterapi.dev/v1/stebym-practicas-fisica-unal/views/up')
-          .then(r => r.json())
-          .then(data => {{
-            if (data && data.count) {{
-              const apiTotal = Math.max(total, data.count + baseViews);
-              viewsEl.textContent = apiTotal.toLocaleString('es-CO');
-            }}
-          }})
-          .catch(() => {{}});
-      }} catch {{}}
-    }}
-
-    // Botón flotante Volver Arriba
-    const backBtn = document.getElementById('backToTop');
-    window.addEventListener('scroll', () => {{
-      if (window.scrollY > 350) {{
-        backBtn?.classList.add('visible');
-      }} else {{
-        backBtn?.classList.remove('visible');
-      }}
-    }}, {{ passive: true }});
-    backBtn?.addEventListener('click', () => {{
-      window.scrollTo({{ top: 0, behavior: 'smooth' }});
-    }});
-
-    // Cerrar tooltip si se hace clic afuera
-    document.addEventListener('click', () => {{
-      document.querySelectorAll('.info-trigger.active').forEach(el => el.classList.remove('active'));
-    }});
-
-    setTheme(document.documentElement.dataset.theme || 'light');
-    initLiveOnlineCounter();
-    initTotalViewsCounter();
-    handleFilter();
-  </script>
-</body>
-</html>
-"""
-    with open(OUTPUT_HTML, "w", encoding="utf-8") as f:
-        f.write(html)
-    with open(OUTPUT_INDEX, "w", encoding="utf-8") as f:
-        f.write(html)
-    print(f" [✓] Archivos HTML generados: {OUTPUT_HTML} y {OUTPUT_INDEX}")
 
 def export_csv(vacantes):
     """Exporta las vacantes ordenadas a CSV para Excel"""
@@ -1453,32 +1212,37 @@ def main():
         print("[*] Modo render-only: verificando y regenerando HTML y CSV desde vacantes_practicas.json...")
         config_ramas = load_json(CONFIG_RAMAS_PATH)
         vacantes = load_json(OUTPUT_JSON)
-        vacantes = filter_verified_jobs(vacantes, max_workers=25)
+        vacantes = sellar_registros(filter_verified_jobs(vacantes, max_workers=25))
         with open(OUTPUT_JSON, "w", encoding="utf-8") as f:
             json.dump(vacantes, f, ensure_ascii=False, indent=2)
-        build_full_html(vacantes, config_ramas)
         export_csv(vacantes)
         return
 
-    print("="*70)
-    print(" [ATOM] BOT DE RASTREO INTEGRAL - PRÁCTICAS DE INGENIERÍA FÍSICA")
-    print("        Medellín, Valle de Aburrá & Antioquia • Autor: Jimmy Rosero")
-    print("="*70)
+    print(encabezado_bot("[PRÁCTICAS] BOT DE RASTREO DE PRÁCTICAS DE INGENIERÍA FÍSICA"))
     
     config_ramas = load_json(CONFIG_RAMAS_PATH)
-    all_raw_jobs = []
-    seen_urls = set()
-    
-    # 1. Cargar convocatorias destacadas verificadas (Magneto365, Jooble, Portales corporativos, Computrabajo)
+    collected = {}
+
+    def add_jobs(jobs, label):
+        added = 0
+        for job in jobs:
+            key = canonical_job_url(job.get("url"))
+            if key and key not in collected:
+                collected[key] = job
+                added += 1
+        if jobs:
+            print(f"    {label}: {len(jobs)} ofertas (+{added} nuevas)")
+        return added
+
+    # 1. Convocatorias destacadas curadas a mano: se publican sin filtro de perfil.
     convocatorias_destacadas = load_json(CONVOCATORIAS_DESTACADAS_PATH)
     if isinstance(convocatorias_destacadas, list):
         print(f"[*] Cargando {len(convocatorias_destacadas)} convocatorias verificadas (Magneto365, Jooble, Portales de Antioquia)...")
-        for c in convocatorias_destacadas:
-            if c.get("url") and c["url"] not in seen_urls:
-                seen_urls.add(c["url"])
-                all_raw_jobs.append(c)
+        add_jobs([{**c, "curada": True} for c in convocatorias_destacadas if c.get("url")], "Destacadas")
 
-    # 2. Rastrear Computrabajo Antioquia
+    target_companies = load_target_companies()
+
+    # 2. Computrabajo Antioquia (2 páginas por búsqueda)
     computrabajo_queries = [
         "practicante ingenieria",
         "practicante electronica",
@@ -1488,124 +1252,95 @@ def main():
         "practicante electromecanico",
         "practicante instrumentacion",
         "practicante metrologia",
+        "practicante fisica",
+        "estudiante en practica",
+        "aprendiz universitario",
+        "practica profesional",
         *CARRERAS_ESPEJO_QUERIES,
     ]
-    print(f"\n[*] Rastreando Computrabajo Antioquia ({len(computrabajo_queries)} categorías)...")
+    print(f"\n[*] Rastreando Computrabajo Antioquia ({len(computrabajo_queries)} búsquedas)...")
     for q_ct in computrabajo_queries:
-        ct_jobs = scrape_computrabajo_query(q_ct)
-        added_ct = 0
-        for j in ct_jobs:
-            if j["url"] not in seen_urls:
-                seen_urls.add(j["url"])
-                all_raw_jobs.append(j)
-                added_ct += 1
-        if added_ct > 0:
-            print(f"    Computrabajo '{q_ct}': +{added_ct} ofertas")
+        add_jobs(scrape_computrabajo_query(q_ct), f"Computrabajo '{q_ct}'")
         time.sleep(0.3)
 
-    # 3. Rastrear Magneto365 en tiempo real (API Pública Oficial)
+    # 3. Magneto365 (API pública, 4 páginas por búsqueda): Antioquia con
+    # cualquier modalidad y el resto de Colombia si es remoto o híbrido.
     magneto_queries = [
         "practicante ingenieria",
         "practica ingenieria",
         "practicante ingenieria fisica",
+        "practicante fisica",
         "practicante electronica",
+        "practicante electrica",
         "practicante automatizacion",
         "practicante mecatronica",
+        "practicante mecanica",
         "practicante datos",
+        "practicante analitica",
+        "practicante desarrollo",
         "practicante mantenimiento",
-        "practica profesional corona",
-        "practicante isa",
-        "practicante epm",
-        "practicante haceb",
-        "practicas universitarias 2027-1 alkomprar",
-        "practicantes universitarios 2027-1 alkomprar",
-        "aprendices y practicantes 2027-1 nutresa",
-        "practicante ingenieria nutresa"
+        "practicante energia",
+        "practicante materiales",
+        "practicante calidad laboratorio",
+        "estudiante en practica",
+        "practicas universitarias 2027-1",
+        "aprendices y practicantes 2027-1",
     ]
-    print(f"\n[*] Rastreando Magneto365 en tiempo real ({len(magneto_queries)} categorías)...")
+    print(f"\n[*] Rastreando Magneto365 en tiempo real ({len(magneto_queries)} búsquedas)...")
     for q_mag in magneto_queries:
-        mag_jobs = scrape_magneto_query(q_mag)
-        added_mag = 0
-        for j in mag_jobs:
-            if j["url"] not in seen_urls:
-                seen_urls.add(j["url"])
-                all_raw_jobs.append(j)
-                added_mag += 1
-        if added_mag > 0:
-            print(f"    Magneto365 '{q_mag}': +{added_mag} ofertas")
+        add_jobs(scrape_magneto_query(q_mag), f"Magneto365 '{q_mag}'")
         time.sleep(0.3)
+    print(f"\n[*] Magneto365 por empresa objetivo ({len(target_companies)} empresas)...")
+    for comp in target_companies:
+        add_jobs(scrape_magneto_query(f"practicante {comp}", pages=1), f"Magneto365 {comp}")
+        time.sleep(0.2)
 
-    # 4. Rastrear ElEmpleo.com (Antioquia / Pasantías de Ingeniería)
+    # 4. ElEmpleo.com (Medellín)
     elempleo_queries = [
         "practicante ingenieria",
         "practicante automatizacion",
         "practicante electromecanico",
+        "practicante electronica",
         "practicante datos",
-        "practicante nutresa 2027-1",
-        "practicante alkomprar 2027-1",
+        "practicante fisica",
+        "practicante mantenimiento",
         *CARRERAS_ESPEJO_QUERIES,
     ]
-    print(f"\n[*] Rastreando ElEmpleo.com ({len(elempleo_queries)} categorías)...")
+    print(f"\n[*] Rastreando ElEmpleo.com Medellín ({len(elempleo_queries)} búsquedas)...")
     for q_ee in elempleo_queries:
-        ee_jobs = scrape_elempleo_query(q_ee)
-        added_ee = 0
-        for j in ee_jobs:
-            if j["url"] not in seen_urls:
-                seen_urls.add(j["url"])
-                all_raw_jobs.append(j)
-                added_ee += 1
-        if added_ee > 0:
-            print(f"    ElEmpleo '{q_ee}': +{added_ee} ofertas")
+        add_jobs(scrape_elempleo_query(q_ee), f"ElEmpleo '{q_ee}'")
         time.sleep(0.3)
 
-    # 5. Rastrear FirstJob Colombia (Semilleros Multinacionales)
-    firstjob_queries = [
-        "practicante",
-        "intern",
-        "ingenieria"
-    ]
+    # 5. FirstJob Colombia (Semilleros Multinacionales)
+    firstjob_queries = ["practicante", "intern", "ingenieria"]
     print(f"\n[*] Rastreando FirstJob Colombia ({len(firstjob_queries)} búsquedas)...")
     for q_fj in firstjob_queries:
-        fj_jobs = scrape_firstjob_query(q_fj)
-        added_fj = 0
-        for j in fj_jobs:
-            if j["url"] not in seen_urls:
-                seen_urls.add(j["url"])
-                all_raw_jobs.append(j)
-                added_fj += 1
-        if added_fj > 0:
-            print(f"    FirstJob '{q_fj}': +{added_fj} ofertas")
+        add_jobs(scrape_firstjob_query(q_fj), f"FirstJob '{q_fj}'")
         time.sleep(0.3)
 
-    # 6. Rastrear LinkedIn Jobs para categorías del pénsum UNAL
+    # 5b. Portales corporativos en Workday (prácticas que a veces no llegan a LinkedIn).
+    portales = load_json(PORTALES_WORKDAY_PATH) or []
+    print(f"\n[*] Rastreando {len(portales)} portales corporativos Workday...")
+    for portal in portales:
+        add_jobs(scrape_workday_portal(portal), f"Workday {portal['empresa']}")
+
+    # 6. LinkedIn Medellín/Antioquia: categorías del pénsum (2 páginas cada una).
+    # linkedin_get espacia las consultas y reintenta los 429.
     print(f"\n[*] Rastreando LinkedIn Jobs para {len(SEARCH_QUERIES)} categorías del pénsum UNAL...")
     for q in SEARCH_QUERIES:
-        print(f" -> Buscando: '{q}'...")
-        jobs = scrape_linkedin_query(q)
-        added = 0
-        for j in jobs:
-            if j["url"] not in seen_urls:
-                seen_urls.add(j["url"])
-                all_raw_jobs.append(j)
-                added += 1
-        print(f"    Encontradas {len(jobs)} ofertas (+{added} nuevas)")
-        time.sleep(0.3)
+        add_jobs(scrape_linkedin_query(q, pages=2), f"LinkedIn '{q}'")
 
-    # 6b. Búsqueda remota internacional: solo conserva anuncios que indiquen Remote
-    # en el título o ubicación; elegibilidad geográfica queda explícita para revisar.
+    # 6b. LinkedIn en todo Colombia: solo sobreviven avisos remotos o híbridos.
+    print(f"\n[*] Buscando prácticas remotas/híbridas en Colombia ({len(REMOTE_COLOMBIA_QUERIES)} búsquedas)...")
+    for q in REMOTE_COLOMBIA_QUERIES:
+        add_jobs(scrape_linkedin_query(q, location="Colombia", pages=2), f"Colombia remoto/híbrido '{q}'")
+
+    # 6c. Remoto internacional: exige práctica en el título y modalidad remota.
     print(f"\n[*] Buscando prácticas remotas internacionales en {len(REMOTE_GLOBAL_SEARCH_QUERIES)} áreas...")
     for query in REMOTE_GLOBAL_SEARCH_QUERIES:
-        jobs = scrape_linkedin_query(query, location="Worldwide")
-        added = 0
-        for job in jobs:
-            if job["url"] not in seen_urls:
-                seen_urls.add(job["url"])
-                all_raw_jobs.append(job)
-                added += 1
-        print(f"    Remoto mundial '{query}': {len(jobs)} ofertas (+{added} nuevas)")
-        time.sleep(0.3)
+        add_jobs(scrape_linkedin_query(query, location="Worldwide"), f"Remoto mundial '{query}'")
 
-    # 6c. Buscador web abierto: amplía el alcance a portales corporativos y bolsas
+    # 6d. Buscador web abierto: amplía el alcance a portales corporativos y bolsas
     # que no aparecen en las APIs anteriores. Las búsquedas web son pistas y la
     # página de destino se verifica antes de publicar.
     print(f"\n[*] Ampliando rastreo con {len(WEB_SEARCH_QUERIES)} búsquedas web...")
@@ -1619,36 +1354,19 @@ def main():
                 jobs = future.result()
             except Exception:
                 jobs = []
-            added = 0
-            for job in jobs:
-                if job["url"] not in seen_urls:
-                    seen_urls.add(job["url"])
-                    all_raw_jobs.append(job)
-                    added += 1
-            print(f"    Web {scope.lower()} '{query}': {len(jobs)} resultados (+{added} nuevas)")
+            add_jobs(jobs, f"Web {scope.lower()} '{query}'")
 
-    # 7. Rastrear convocatorias de practicantes en empresas líderes de Medellín y Antioquia
-    company_directory = load_json(os.path.join(BASE_DIR, "empresas_antioquia.json"))
-    top_companies = [item.get("empresa") for item in company_directory if isinstance(item, dict) and item.get("empresa")]
-    top_companies.extend(["Haceb", "Corona", "ISA", "Sura", "Bancolombia", "Argos", "EPM", "CIDET", "XM", "Ruta N", "Mineros S.A.", "Continental Gold"])
-    top_companies = list(dict.fromkeys(name.strip() for name in top_companies if name and name.strip()))
+    # 7. LinkedIn por empresa objetivo en Medellín/Antioquia.
+    print(f"\n[*] Rastreando practicantes en {len(target_companies)} empresas objetivo en LinkedIn...")
+    for comp in target_companies:
+        add_jobs(scrape_linkedin_query(f"practicante {comp}"), f"LinkedIn {comp}")
 
-    print(f"\n[*] Rastreando vacantes en {len(top_companies)} empresas de Antioquia en LinkedIn...")
-    for comp in top_companies:
-        q_comp = f"practicante {comp}"
-        jobs = scrape_linkedin_query(q_comp)
-        added = 0
-        for j in jobs:
-            if j["url"] not in seen_urls:
-                seen_urls.add(j["url"])
-                all_raw_jobs.append(j)
-                added += 1
-        if added > 0:
-            print(f"    {comp:25s}: +{added} ofertas")
-        time.sleep(0.2)
-        
-    print(f"\n[*] Total de vacantes únicas recolectadas: {len(all_raw_jobs)}")
-    # Validación estricta de enlaces: solo vacantes que abran garantizadamente sin 404, 429 ni login
+    print(f"\n[*] Total de vacantes únicas recolectadas: {len(collected)}")
+    # Las vacantes de la corrida anterior que no reaparecieron (portal caído,
+    # 429, cambio de orden) se vuelven a verificar en lugar de perderse.
+    previous_jobs = load_json(OUTPUT_JSON)
+    all_raw_jobs = merge_job_snapshots(list(collected.values()), previous_jobs if isinstance(previous_jobs, list) else [])
+    print(f"[*] Con la corrida anterior: {len(all_raw_jobs)} vacantes para verificar")
     verified_raw_jobs = filter_verified_jobs(all_raw_jobs, max_workers=25)
     print(f"[*] Clasificando, filtrando y ordenando {len(verified_raw_jobs)} vacantes verificadas por afinidad al pénsum UNAL...")
     
@@ -1660,18 +1378,16 @@ def main():
         
     # Ordenar por Score de Afinidad del Pénsum
     classified_jobs.sort(key=lambda x: x.get("score_pensum", 0), reverse=True)
+    sellar_registros(classified_jobs)
     
     with open(OUTPUT_JSON, "w", encoding="utf-8") as f:
         json.dump(classified_jobs, f, ensure_ascii=False, indent=2)
     print(f" [✓] Datos JSON guardados en: {OUTPUT_JSON} ({len(classified_jobs)} vacantes afines)")
     
     export_csv(classified_jobs)
-    build_full_html(classified_jobs, config_ramas)
     
     print("\n" + "="*70)
-    print(" ¡RASTREO Y ACTUALIZACIÓN COMPLETADOS EXITOSAMENTE!")
-    print(f" Dashboard listo para abrir:")
-    print(f" {Path(OUTPUT_INDEX).as_uri()}")
+    print(" ¡RASTREO DE PRÁCTICAS COMPLETADO! Ejecuta bot_pagina.py para regenerar la página.")
     print("="*70)
 
 if __name__ == "__main__":

@@ -1,0 +1,22 @@
+{
+  "rules": {
+    "presencia": {
+      ".read": true,
+      "$pestana": {
+        ".write": "!data.exists() || !newData.exists() || newData.child('t').val() >= data.child('t').val()",
+        ".validate": "!newData.exists() || (newData.hasChildren(['t']) && newData.child('t').isNumber() && newData.child('t').val() <= now)",
+        "t": { ".validate": true },
+        "$otro": { ".validate": false }
+      }
+    },
+    "visitas": {
+      ".read": true,
+      ".write": true,
+      ".validate": "newData.isNumber() && newData.val() === (data.exists() ? data.val() + 1 : 1)"
+    },
+    "$cualquier_otro": {
+      ".read": false,
+      ".write": false
+    }
+  }
+}

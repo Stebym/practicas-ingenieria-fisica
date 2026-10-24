@@ -1,53 +1,81 @@
-# Simple workflow for deploying static content to GitHub Pages
-name: Deploy static content to Pages
+# Portal IPF · Jimmy Stebym Rosero Barrera · Licencia MIT (ver LICENSE)
+# Bot de la página: junta los datos de los cuatro bots, arma index.html con
+# bot_pagina.py y lo publica en GitHub Pages.
+name: Construir y publicar pagina
 
 on:
-  # Runs on pushes targeting the default branch
   push:
     branches: ["main"]
-
-  # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
-
-  # Dispara el despliegue a Pages automáticamente cuando termina cualquiera de los bots diarios
+  # Se dispara cuando termina cualquiera de los bots de datos.
   workflow_run:
-    workflows: ["Actualizacion Automatica de Vacantes", "Actualizacion Automatica de Becas y Convenios Internacionales"]
+    workflows: ["Bot de Practicas", "Bot de Retos y Hackatones", "Bot de Becas", "Bot de Convenios UNAL"]
     types:
       - completed
 
-# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
-# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
+# Una sola publicación a la vez; las que llegan mientras tanto esperan.
 concurrency:
   group: "pages"
   cancel-in-progress: false
 
 jobs:
-  # Single deploy job since we're just deploying
-  deploy:
+  construir-y-publicar:
     if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Descargar repositorio (última versión de main)
         uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Construir la página con los datos de los cuatro bots
+        run: python bot_pagina.py
+
+      - name: Verificar firma del proyecto
+        run: python verificar_firma.py index.html vacantes_practicas.json retos_hackatones.json
+
+      - name: Guardar la página generada en el repositorio
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add index.html dashboard_practicas.html
+          if git diff --staged --quiet; then
+            exit 0
+          fi
+          git commit -m "Página regenerada [$(date '+%Y-%m-%d %H:%M')]"
+          for intento in 1 2 3 4 5; do
+            git pull --rebase origin main && git push origin main && exit 0
+            sleep $((intento * 10))
+          done
+          echo "No se pudo guardar index.html en el repositorio; se publica igual."
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
-      - name: Prepare static site
+
+      - name: Preparar sitio estático
         run: |
           mkdir -p _site
-          cp index.html estilos.css estrellas.js fondo_fisica.svg fondo_fisica_movil.svg _site/
-          cp -f vacantes_practicas.json vacantes_practicas.csv convenios_internacionales.json becas_internacionales.json _site/ 2>/dev/null || true
+          cp index.html estilos.css estrellas.js presencia.js fondo_fisica.svg fondo_fisica_movil.svg _site/
+          cp -f vacantes_practicas.json vacantes_practicas.csv convenios_internacionales.json becas_internacionales.json retos_hackatones.json _site/ 2>/dev/null || true
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: _site
+
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v5

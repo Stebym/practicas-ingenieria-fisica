@@ -1,0 +1,858 @@
+[
+ {
+  "empresa": "EPM",
+  "sector": "Energía, infraestructura y servicios públicos"
+ },
+ {
+  "empresa": "ISAGEN",
+  "sector": "Energía, infraestructura y servicios públicos"
+ },
+ {
+  "empresa": "ISA",
+  "sector": "Energía, infraestructura y servicios públicos"
+ },
+ {
+  "empresa": "XM",
+  "sector": "Energía, infraestructura y servicios públicos"
+ },
+ {
+  "empresa": "Celsia",
+  "sector": "Energía, infraestructura y servicios públicos"
+ },
+ {
+  "empresa": "Ecopetrol",
+  "sector": "Energía, infraestructura y servicios públicos"
+ },
+ {
+  "empresa": "Cenit",
+  "sector": "Energía, infraestructura y servicios públicos"
+ },
+ {
+  "empresa": "Hocol",
+  "sector": "Energía, infraestructura y servicios públicos"
+ },
+ {
+  "empresa": "TGI",
+  "sector": "Energía, infraestructura y servicios públicos"
+ },
+ {
+  "empresa": "HMV Ingenieros",
+  "sector": "Energía, infraestructura y servicios públicos"
+ },
+ {
+  "empresa": "AES Colombia",
+  "sector": "Energía, infraestructura y servicios públicos"
+ },
+ {
+  "empresa": "GreenYellow",
+  "sector": "Energía, infraestructura y servicios públicos"
+ },
+ {
+  "empresa": "EDP Renewables",
+  "sector": "Energía, infraestructura y servicios públicos"
+ },
+ {
+  "empresa": "Gensa",
+  "sector": "Energía, infraestructura y servicios públicos"
+ },
+ {
+  "empresa": "Enel",
+  "sector": "Energía, infraestructura y servicios públicos"
+ },
+ {
+  "empresa": "Ingetec",
+  "sector": "Energía, infraestructura y servicios públicos"
+ },
+ {
+  "empresa": "Grupo Energía Bogotá",
+  "sector": "Energía, infraestructura y servicios públicos"
+ },
+ {
+  "empresa": "Promigas",
+  "sector": "Energía, infraestructura y servicios públicos"
+ },
+ {
+  "empresa": "Erco Energía",
+  "sector": "Energía, infraestructura y servicios públicos"
+ },
+ {
+  "empresa": "Statkraft",
+  "sector": "Energía, infraestructura y servicios públicos"
+ },
+ {
+  "empresa": "Atlas Renewable Energy",
+  "sector": "Energía, infraestructura y servicios públicos"
+ },
+ {
+  "empresa": "Integral S.A.",
+  "sector": "Energía, infraestructura y servicios públicos"
+ },
+ {
+  "empresa": "Conconcreto",
+  "sector": "Energía, infraestructura y servicios públicos"
+ },
+ {
+  "empresa": "Odinsa",
+  "sector": "Energía, infraestructura y servicios públicos"
+ },
+ {
+  "empresa": "Gómez Cajiao",
+  "sector": "Energía, infraestructura y servicios públicos"
+ },
+ {
+  "empresa": "Mincivil",
+  "sector": "Energía, infraestructura y servicios públicos"
+ },
+ {
+  "empresa": "Termotécnica Coindustrial",
+  "sector": "Energía, infraestructura y servicios públicos"
+ },
+ {
+  "empresa": "Schneider Electric",
+  "sector": "Automatización, electrónica e instrumentación"
+ },
+ {
+  "empresa": "Rockwell Automation",
+  "sector": "Automatización, electrónica e instrumentación"
+ },
+ {
+  "empresa": "Siemens",
+  "sector": "Automatización, electrónica e instrumentación"
+ },
+ {
+  "empresa": "Siemens Energy",
+  "sector": "Automatización, electrónica e instrumentación"
+ },
+ {
+  "empresa": "ABB",
+  "sector": "Automatización, electrónica e instrumentación"
+ },
+ {
+  "empresa": "Epiroc",
+  "sector": "Automatización, electrónica e instrumentación"
+ },
+ {
+  "empresa": "Tronex",
+  "sector": "Automatización, electrónica e instrumentación"
+ },
+ {
+  "empresa": "Gecolsa",
+  "sector": "Automatización, electrónica e instrumentación"
+ },
+ {
+  "empresa": "Bosch",
+  "sector": "Automatización, electrónica e instrumentación"
+ },
+ {
+  "empresa": "Emerson",
+  "sector": "Automatización, electrónica e instrumentación"
+ },
+ {
+  "empresa": "Festo",
+  "sector": "Automatización, electrónica e instrumentación"
+ },
+ {
+  "empresa": "Omron",
+  "sector": "Automatización, electrónica e instrumentación"
+ },
+ {
+  "empresa": "Keyence",
+  "sector": "Automatización, electrónica e instrumentación"
+ },
+ {
+  "empresa": "SMC",
+  "sector": "Automatización, electrónica e instrumentación"
+ },
+ {
+  "empresa": "Endress+Hauser",
+  "sector": "Automatización, electrónica e instrumentación"
+ },
+ {
+  "empresa": "Yokogawa",
+  "sector": "Automatización, electrónica e instrumentación"
+ },
+ {
+  "empresa": "Honeywell",
+  "sector": "Automatización, electrónica e instrumentación"
+ },
+ {
+  "empresa": "Danfoss",
+  "sector": "Automatización, electrónica e instrumentación"
+ },
+ {
+  "empresa": "Parker Hannifin",
+  "sector": "Automatización, electrónica e instrumentación"
+ },
+ {
+  "empresa": "Spirax Sarco",
+  "sector": "Automatización, electrónica e instrumentación"
+ },
+ {
+  "empresa": "Hexagon",
+  "sector": "Automatización, electrónica e instrumentación"
+ },
+ {
+  "empresa": "Hitachi Energy",
+  "sector": "Automatización, electrónica e instrumentación"
+ },
+ {
+  "empresa": "GE Vernova",
+  "sector": "Automatización, electrónica e instrumentación"
+ },
+ {
+  "empresa": "Schweitzer Engineering Laboratories",
+  "sector": "Automatización, electrónica e instrumentación"
+ },
+ {
+  "empresa": "Rymel",
+  "sector": "Automatización, electrónica e instrumentación"
+ },
+ {
+  "empresa": "Imocom",
+  "sector": "Automatización, electrónica e instrumentación"
+ },
+ {
+  "empresa": "Otis",
+  "sector": "Automatización, electrónica e instrumentación"
+ },
+ {
+  "empresa": "Schindler",
+  "sector": "Automatización, electrónica e instrumentación"
+ },
+ {
+  "empresa": "Daikin",
+  "sector": "Automatización, electrónica e instrumentación"
+ },
+ {
+  "empresa": "Trane",
+  "sector": "Automatización, electrónica e instrumentación"
+ },
+ {
+  "empresa": "Carrier",
+  "sector": "Automatización, electrónica e instrumentación"
+ },
+ {
+  "empresa": "Corona",
+  "sector": "Materiales, química y manufactura avanzada"
+ },
+ {
+  "empresa": "Sumicol",
+  "sector": "Materiales, química y manufactura avanzada"
+ },
+ {
+  "empresa": "Enka",
+  "sector": "Materiales, química y manufactura avanzada"
+ },
+ {
+  "empresa": "Nutresa",
+  "sector": "Materiales, química y manufactura avanzada"
+ },
+ {
+  "empresa": "Noel",
+  "sector": "Materiales, química y manufactura avanzada"
+ },
+ {
+  "empresa": "Colcafé",
+  "sector": "Materiales, química y manufactura avanzada"
+ },
+ {
+  "empresa": "Zenú",
+  "sector": "Materiales, química y manufactura avanzada"
+ },
+ {
+  "empresa": "Compañía Nacional de Chocolates",
+  "sector": "Materiales, química y manufactura avanzada"
+ },
+ {
+  "empresa": "Renault Sofasa",
+  "sector": "Materiales, química y manufactura avanzada"
+ },
+ {
+  "empresa": "Familia",
+  "sector": "Materiales, química y manufactura avanzada"
+ },
+ {
+  "empresa": "Essity",
+  "sector": "Materiales, química y manufactura avanzada"
+ },
+ {
+  "empresa": "Argos",
+  "sector": "Materiales, química y manufactura avanzada"
+ },
+ {
+  "empresa": "Pintuco",
+  "sector": "Materiales, química y manufactura avanzada"
+ },
+ {
+  "empresa": "O-I Peldar",
+  "sector": "Materiales, química y manufactura avanzada"
+ },
+ {
+  "empresa": "Simes",
+  "sector": "Materiales, química y manufactura avanzada"
+ },
+ {
+  "empresa": "Prebel",
+  "sector": "Materiales, química y manufactura avanzada"
+ },
+ {
+  "empresa": "Cueros Vélez",
+  "sector": "Materiales, química y manufactura avanzada"
+ },
+ {
+  "empresa": "Bimbo",
+  "sector": "Materiales, química y manufactura avanzada"
+ },
+ {
+  "empresa": "Quala",
+  "sector": "Materiales, química y manufactura avanzada"
+ },
+ {
+  "empresa": "Postobón",
+  "sector": "Materiales, química y manufactura avanzada"
+ },
+ {
+  "empresa": "Alpina",
+  "sector": "Materiales, química y manufactura avanzada"
+ },
+ {
+  "empresa": "Bavaria",
+  "sector": "Materiales, química y manufactura avanzada"
+ },
+ {
+  "empresa": "Coca-Cola FEMSA",
+  "sector": "Materiales, química y manufactura avanzada"
+ },
+ {
+  "empresa": "Alquería",
+  "sector": "Materiales, química y manufactura avanzada"
+ },
+ {
+  "empresa": "Colanta",
+  "sector": "Materiales, química y manufactura avanzada"
+ },
+ {
+  "empresa": "Meals de Colombia",
+  "sector": "Materiales, química y manufactura avanzada"
+ },
+ {
+  "empresa": "Team Foods",
+  "sector": "Materiales, química y manufactura avanzada"
+ },
+ {
+  "empresa": "Ingredion",
+  "sector": "Materiales, química y manufactura avanzada"
+ },
+ {
+  "empresa": "Andercol",
+  "sector": "Materiales, química y manufactura avanzada"
+ },
+ {
+  "empresa": "Invesa",
+  "sector": "Materiales, química y manufactura avanzada"
+ },
+ {
+  "empresa": "Sika",
+  "sector": "Materiales, química y manufactura avanzada"
+ },
+ {
+  "empresa": "Cemex",
+  "sector": "Materiales, química y manufactura avanzada"
+ },
+ {
+  "empresa": "Holcim",
+  "sector": "Materiales, química y manufactura avanzada"
+ },
+ {
+  "empresa": "Gerdau Diaco",
+  "sector": "Materiales, química y manufactura avanzada"
+ },
+ {
+  "empresa": "Ternium",
+  "sector": "Materiales, química y manufactura avanzada"
+ },
+ {
+  "empresa": "Esenttia",
+  "sector": "Materiales, química y manufactura avanzada"
+ },
+ {
+  "empresa": "Smurfit Westrock",
+  "sector": "Materiales, química y manufactura avanzada"
+ },
+ {
+  "empresa": "Amcor",
+  "sector": "Materiales, química y manufactura avanzada"
+ },
+ {
+  "empresa": "Carvajal Empaques",
+  "sector": "Materiales, química y manufactura avanzada"
+ },
+ {
+  "empresa": "Ajover Darnel",
+  "sector": "Materiales, química y manufactura avanzada"
+ },
+ {
+  "empresa": "Alico",
+  "sector": "Materiales, química y manufactura avanzada"
+ },
+ {
+  "empresa": "Truher",
+  "sector": "Materiales, química y manufactura avanzada"
+ },
+ {
+  "empresa": "Haceb",
+  "sector": "Materiales, química y manufactura avanzada"
+ },
+ {
+  "empresa": "Challenger",
+  "sector": "Materiales, química y manufactura avanzada"
+ },
+ {
+  "empresa": "Imusa",
+  "sector": "Materiales, química y manufactura avanzada"
+ },
+ {
+  "empresa": "UMO",
+  "sector": "Materiales, química y manufactura avanzada"
+ },
+ {
+  "empresa": "Coltejer",
+  "sector": "Materiales, química y manufactura avanzada"
+ },
+ {
+  "empresa": "Fabricato",
+  "sector": "Materiales, química y manufactura avanzada"
+ },
+ {
+  "empresa": "Crystal",
+  "sector": "Materiales, química y manufactura avanzada"
+ },
+ {
+  "empresa": "Lafayette",
+  "sector": "Materiales, química y manufactura avanzada"
+ },
+ {
+  "empresa": "Proquinal",
+  "sector": "Materiales, química y manufactura avanzada"
+ },
+ {
+  "empresa": "Eternit",
+  "sector": "Materiales, química y manufactura avanzada"
+ },
+ {
+  "empresa": "Saint-Gobain",
+  "sector": "Materiales, química y manufactura avanzada"
+ },
+ {
+  "empresa": "BASF",
+  "sector": "Materiales, química y manufactura avanzada"
+ },
+ {
+  "empresa": "Dow",
+  "sector": "Materiales, química y manufactura avanzada"
+ },
+ {
+  "empresa": "Clariant",
+  "sector": "Materiales, química y manufactura avanzada"
+ },
+ {
+  "empresa": "Syngenta",
+  "sector": "Materiales, química y manufactura avanzada"
+ },
+ {
+  "empresa": "Henkel",
+  "sector": "Materiales, química y manufactura avanzada"
+ },
+ {
+  "empresa": "Belcorp",
+  "sector": "Materiales, química y manufactura avanzada"
+ },
+ {
+  "empresa": "Yanbal",
+  "sector": "Materiales, química y manufactura avanzada"
+ },
+ {
+  "empresa": "Indumil",
+  "sector": "Materiales, química y manufactura avanzada"
+ },
+ {
+  "empresa": "CIAC",
+  "sector": "Materiales, química y manufactura avanzada"
+ },
+ {
+  "empresa": "Codaltec",
+  "sector": "Materiales, química y manufactura avanzada"
+ },
+ {
+  "empresa": "Linde",
+  "sector": "Materiales, química y manufactura avanzada"
+ },
+ {
+  "empresa": "Messer",
+  "sector": "Materiales, química y manufactura avanzada"
+ },
+ {
+  "empresa": "Air Products",
+  "sector": "Materiales, química y manufactura avanzada"
+ },
+ {
+  "empresa": "Aris Mining",
+  "sector": "Materiales, química y manufactura avanzada"
+ },
+ {
+  "empresa": "AngloGold Ashanti",
+  "sector": "Materiales, química y manufactura avanzada"
+ },
+ {
+  "empresa": "South32",
+  "sector": "Materiales, química y manufactura avanzada"
+ },
+ {
+  "empresa": "Drummond",
+  "sector": "Materiales, química y manufactura avanzada"
+ },
+ {
+  "empresa": "GeoPark",
+  "sector": "Materiales, química y manufactura avanzada"
+ },
+ {
+  "empresa": "Ruta N",
+  "sector": "Analítica de datos, software y TI"
+ },
+ {
+  "empresa": "Corbeta",
+  "sector": "Analítica de datos, software y TI"
+ },
+ {
+  "empresa": "Kalley",
+  "sector": "Analítica de datos, software y TI"
+ },
+ {
+  "empresa": "AKT",
+  "sector": "Analítica de datos, software y TI"
+ },
+ {
+  "empresa": "Sura",
+  "sector": "Analítica de datos, software y TI"
+ },
+ {
+  "empresa": "Bancolombia",
+  "sector": "Analítica de datos, software y TI"
+ },
+ {
+  "empresa": "Globant",
+  "sector": "Analítica de datos, software y TI"
+ },
+ {
+  "empresa": "Pragma",
+  "sector": "Analítica de datos, software y TI"
+ },
+ {
+  "empresa": "Choucair",
+  "sector": "Analítica de datos, software y TI"
+ },
+ {
+  "empresa": "Intergrupo",
+  "sector": "Analítica de datos, software y TI"
+ },
+ {
+  "empresa": "NTT DATA",
+  "sector": "Analítica de datos, software y TI"
+ },
+ {
+  "empresa": "Ceiba Software",
+  "sector": "Analítica de datos, software y TI"
+ },
+ {
+  "empresa": "Endava",
+  "sector": "Analítica de datos, software y TI"
+ },
+ {
+  "empresa": "Perficient",
+  "sector": "Analítica de datos, software y TI"
+ },
+ {
+  "empresa": "Fluid Attacks",
+  "sector": "Analítica de datos, software y TI"
+ },
+ {
+  "empresa": "Gorilla Logic",
+  "sector": "Analítica de datos, software y TI"
+ },
+ {
+  "empresa": "Accenture",
+  "sector": "Analítica de datos, software y TI"
+ },
+ {
+  "empresa": "Tata Consultancy Services",
+  "sector": "Analítica de datos, software y TI"
+ },
+ {
+  "empresa": "Capgemini",
+  "sector": "Analítica de datos, software y TI"
+ },
+ {
+  "empresa": "Indra",
+  "sector": "Analítica de datos, software y TI"
+ },
+ {
+  "empresa": "Sonda",
+  "sector": "Analítica de datos, software y TI"
+ },
+ {
+  "empresa": "Cognizant",
+  "sector": "Analítica de datos, software y TI"
+ },
+ {
+  "empresa": "EPAM",
+  "sector": "Analítica de datos, software y TI"
+ },
+ {
+  "empresa": "BairesDev",
+  "sector": "Analítica de datos, software y TI"
+ },
+ {
+  "empresa": "Sophos Solutions",
+  "sector": "Analítica de datos, software y TI"
+ },
+ {
+  "empresa": "Grupo Éxito",
+  "sector": "Analítica de datos, software y TI"
+ },
+ {
+  "empresa": "Mercado Libre",
+  "sector": "Analítica de datos, software y TI"
+ },
+ {
+  "empresa": "Rappi",
+  "sector": "Analítica de datos, software y TI"
+ },
+ {
+  "empresa": "Solvo",
+  "sector": "Analítica de datos, software y TI"
+ },
+ {
+  "empresa": "Concentrix",
+  "sector": "Analítica de datos, software y TI"
+ },
+ {
+  "empresa": "Emtelco",
+  "sector": "Analítica de datos, software y TI"
+ },
+ {
+  "empresa": "Makro",
+  "sector": "Analítica de datos, software y TI"
+ },
+ {
+  "empresa": "Arus",
+  "sector": "Analítica de datos, software y TI"
+ },
+ {
+  "empresa": "Zemoga",
+  "sector": "Analítica de datos, software y TI"
+ },
+ {
+  "empresa": "Heinsohn",
+  "sector": "Analítica de datos, software y TI"
+ },
+ {
+  "empresa": "Asesoftware",
+  "sector": "Analítica de datos, software y TI"
+ },
+ {
+  "empresa": "Digital Ware",
+  "sector": "Analítica de datos, software y TI"
+ },
+ {
+  "empresa": "Kuehne+Nagel",
+  "sector": "Analítica de datos, software y TI"
+ },
+ {
+  "empresa": "DHL",
+  "sector": "Analítica de datos, software y TI"
+ },
+ {
+  "empresa": "TCC",
+  "sector": "Analítica de datos, software y TI"
+ },
+ {
+  "empresa": "Coordinadora",
+  "sector": "Analítica de datos, software y TI"
+ },
+ {
+  "empresa": "Falabella",
+  "sector": "Analítica de datos, software y TI"
+ },
+ {
+  "empresa": "Avianca",
+  "sector": "Analítica de datos, software y TI"
+ },
+ {
+  "empresa": "Esri",
+  "sector": "Analítica de datos, software y TI"
+ },
+ {
+  "empresa": "Claro",
+  "sector": "Telecomunicaciones"
+ },
+ {
+  "empresa": "Tigo",
+  "sector": "Telecomunicaciones"
+ },
+ {
+  "empresa": "Movistar",
+  "sector": "Telecomunicaciones"
+ },
+ {
+  "empresa": "Nokia",
+  "sector": "Telecomunicaciones"
+ },
+ {
+  "empresa": "Ericsson",
+  "sector": "Telecomunicaciones"
+ },
+ {
+  "empresa": "Huawei",
+  "sector": "Telecomunicaciones"
+ },
+ {
+  "empresa": "ETB",
+  "sector": "Telecomunicaciones"
+ },
+ {
+  "empresa": "Somos Internet",
+  "sector": "Telecomunicaciones"
+ },
+ {
+  "empresa": "Sievert",
+  "sector": "Física aplicada, metrología, ensayos y salud"
+ },
+ {
+  "empresa": "SYNLAB",
+  "sector": "Física aplicada, metrología, ensayos y salud"
+ },
+ {
+  "empresa": "Procaps",
+  "sector": "Física aplicada, metrología, ensayos y salud"
+ },
+ {
+  "empresa": "Tecnoquímicas",
+  "sector": "Física aplicada, metrología, ensayos y salud"
+ },
+ {
+  "empresa": "IPS Universitaria",
+  "sector": "Física aplicada, metrología, ensayos y salud"
+ },
+ {
+  "empresa": "Hospital Pablo Tobón Uribe",
+  "sector": "Física aplicada, metrología, ensayos y salud"
+ },
+ {
+  "empresa": "Clínica Las Américas",
+  "sector": "Física aplicada, metrología, ensayos y salud"
+ },
+ {
+  "empresa": "CIDET",
+  "sector": "Física aplicada, metrología, ensayos y salud"
+ },
+ {
+  "empresa": "Hospital General de Medellín",
+  "sector": "Física aplicada, metrología, ensayos y salud"
+ },
+ {
+  "empresa": "Clínica Universitaria Bolivariana",
+  "sector": "Física aplicada, metrología, ensayos y salud"
+ },
+ {
+  "empresa": "Hospital San Vicente",
+  "sector": "Física aplicada, metrología, ensayos y salud"
+ },
+ {
+  "empresa": "Philips",
+  "sector": "Física aplicada, metrología, ensayos y salud"
+ },
+ {
+  "empresa": "GE HealthCare",
+  "sector": "Física aplicada, metrología, ensayos y salud"
+ },
+ {
+  "empresa": "Siemens Healthineers",
+  "sector": "Física aplicada, metrología, ensayos y salud"
+ },
+ {
+  "empresa": "Medtronic",
+  "sector": "Física aplicada, metrología, ensayos y salud"
+ },
+ {
+  "empresa": "Abbott",
+  "sector": "Física aplicada, metrología, ensayos y salud"
+ },
+ {
+  "empresa": "Boston Scientific",
+  "sector": "Física aplicada, metrología, ensayos y salud"
+ },
+ {
+  "empresa": "Baxter",
+  "sector": "Física aplicada, metrología, ensayos y salud"
+ },
+ {
+  "empresa": "B. Braun",
+  "sector": "Física aplicada, metrología, ensayos y salud"
+ },
+ {
+  "empresa": "Stryker",
+  "sector": "Física aplicada, metrología, ensayos y salud"
+ },
+ {
+  "empresa": "Roche",
+  "sector": "Física aplicada, metrología, ensayos y salud"
+ },
+ {
+  "empresa": "Humax",
+  "sector": "Física aplicada, metrología, ensayos y salud"
+ },
+ {
+  "empresa": "Sanofi",
+  "sector": "Física aplicada, metrología, ensayos y salud"
+ },
+ {
+  "empresa": "SGS",
+  "sector": "Física aplicada, metrología, ensayos y salud"
+ },
+ {
+  "empresa": "Bureau Veritas",
+  "sector": "Física aplicada, metrología, ensayos y salud"
+ },
+ {
+  "empresa": "Applus",
+  "sector": "Física aplicada, metrología, ensayos y salud"
+ },
+ {
+  "empresa": "Intertek",
+  "sector": "Física aplicada, metrología, ensayos y salud"
+ },
+ {
+  "empresa": "CTA Centro de Ciencia y Tecnología de Antioquia",
+  "sector": "Física aplicada, metrología, ensayos y salud"
+ },
+ {
+  "empresa": "Cenicafé",
+  "sector": "Física aplicada, metrología, ensayos y salud"
+ },
+ {
+  "empresa": "Cenipalma",
+  "sector": "Física aplicada, metrología, ensayos y salud"
+ },
+ {
+  "empresa": "Cenicaña",
+  "sector": "Física aplicada, metrología, ensayos y salud"
+ },
+ {
+  "empresa": "Tecnova",
+  "sector": "Física aplicada, metrología, ensayos y salud"
+ },
+ {
+  "empresa": "Servicio Geológico Colombiano",
+  "sector": "Física aplicada, metrología, ensayos y salud"
+ }
+]

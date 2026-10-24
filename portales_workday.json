@@ -1,0 +1,6 @@
+[
+ {"empresa": "Rockwell Automation", "tenant": "rockwellautomation", "servidor": "wd1", "sitio": "External_Rockwell_Automation"},
+ {"empresa": "3M", "tenant": "3m", "servidor": "wd1", "sitio": "Search"},
+ {"empresa": "Medtronic", "tenant": "medtronic", "servidor": "wd1", "sitio": "MedtronicCareers"},
+ {"empresa": "Hitachi", "tenant": "hitachi", "servidor": "wd1", "sitio": "hitachi"}
+]

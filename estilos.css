@@ -1207,3 +1207,26 @@ footer.site-footer p.schedule-note {
     transition-duration: 0.01ms !important;
   }
 }
+
+/* ==========================================================================
+   AVISO LEGAL, FIRMA Y CONTADORES REALES (Portal IPF · Jimmy Stebym Rosero Barrera)
+   ========================================================================== */
+:root {
+  --ipf-firma: '7c9aa49595688885';
+}
+[hidden] {
+  display: none !important;
+}
+.legal-note,
+.signature-note {
+  max-width: 920px;
+  margin: 10px auto 0;
+  font-size: 0.74rem;
+  line-height: 1.5;
+  color: var(--text-muted);
+  text-align: center;
+}
+.signature-note a {
+  color: inherit;
+  text-decoration: underline;
+}

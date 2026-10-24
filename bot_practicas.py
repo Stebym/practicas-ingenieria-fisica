@@ -1249,7 +1249,7 @@ def build_full_html(vacantes, config_ramas):
   <!-- FOOTER SEMÁNTICO -->
   <footer class="site-footer">
     <p class="institution">Herramienta desarrollada para estudiantes de Ingeniería Física • UNAL Medellín, Colombia</p>
-    <p class="schedule-note">Actualización diaria: Vacantes (20:00) • Becas y Convenios (07:00)</p>
+    <p class="schedule-note">Vacantes: inicio 19:30, publicación al terminar • Becas y Convenios (07:00)</p>
     
     <div class="footer-meta-bar">
       <span>Portal Académico Independiente • Facultad de Ciencias & Facultad de Minas</span>

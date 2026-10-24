@@ -3,7 +3,7 @@
 **Autor:** Jimmy Stebym Rosero Barrera  
 **Institución:** Universidad Nacional de Colombia (Sede Medellín)  
 **Carrera:** Ingeniería Física  
-**Actualización Automática:** Todos los días a las 20:00 horas (8:00 PM)
+**Rastreo de vacantes:** inicia todos los días a las 19:30 (7:30 PM, hora Colombia); GitHub Pages publica al terminar el bot, con objetivo de quedar actualizado antes de las 20:00.
 
 ---
 
@@ -53,7 +53,7 @@ Este proyecto fue construido aplicando estándares profesionales de **Desarrollo
   * **⏳ Próximas a Finalizar (< 5 Días)**
   * **🚀 Ecosistema Nacional & Retos (Interacpedia, Estado Joven, Torre.ai, SENA SGVA)**
   * **🌍 Becas & Pasantías Internacionales (ICETEX, IAESTE, DAAD, CERN, Mitacs y Convenios UNAL)**
-* `.github/workflows/auto_update.yml`: Flujo nocturno que rastrea las vacantes laborales a las 20:00 (hora Colombia).
+* `.github/workflows/auto_update.yml`: Flujo nocturno que inicia el rastreo de vacantes a las 19:30 (hora Colombia), espera a que el bot termine y luego dispara el despliegue de Pages.
 * `.github/workflows/becas_update.yml`: Flujo matutino que rastrea becas y convenios internacionales a las 07:00 AM (hora Colombia).
 * `.github/workflows/static.yml`: Despliega automáticamente `index.html`, `estilos.css`, `estrellas.js`, `fondo_fisica.svg`, `fondo_fisica_movil.svg`, `vacantes_practicas.json`, `convenios_internacionales.json` y `becas_internacionales.json` a GitHub Pages cada vez que se actualiza `main` o al concluir cualquiera de los bots diarios.
 

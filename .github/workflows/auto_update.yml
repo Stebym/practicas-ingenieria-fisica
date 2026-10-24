@@ -2,8 +2,9 @@ name: Actualizacion Automatica de Vacantes
 
 on:
   schedule:
-    # Se ejecuta todos los días a las 01:00 UTC (20:00 / 8:00 PM hora Colombia)
-    - cron: '0 1 * * *'
+    # Inicia todos los días a las 00:30 UTC (19:30 / 7:30 PM hora Colombia).
+    # El despliegue de Pages espera a que termine este flujo.
+    - cron: '30 0 * * *'
   workflow_dispatch: # Permite ejecutarlo manualmente con un botón en GitHub
 
 permissions:
@@ -12,6 +13,7 @@ permissions:
 jobs:
   update-jobs:
     runs-on: ubuntu-latest
+    timeout-minutes: 360
     steps:
       - name: Descargar repositorio
         uses: actions/checkout@v4

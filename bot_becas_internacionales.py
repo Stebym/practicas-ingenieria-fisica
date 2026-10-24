@@ -174,30 +174,6 @@ def compile_global_opportunities(icetex_live):
             "destacada": True
         },
         {
-            "titulo": "DAAD EPOS — Posgrados relacionados con desarrollo e ingeniería sostenible",
-            "entidad": "Servicio Alemán de Intercambio Académico (DAAD)",
-            "pais": "Alemania",
-            "tipo": "Beca de Maestría / Doctorado",
-            "cobertura": "Manutención mensual, seguro médico y apoyo de viaje; otros apoyos dependen del programa",
-            "area": "Ingeniería, energía sostenible, materiales y ciencias aplicadas",
-            "descripcion": "Becas para cursos de posgrado seleccionados. Dirigidas a egresados con al menos dos años de experiencia profesional; cada universidad publica su propia fecha límite y requisitos.",
-            "estado_convocatoria": "Fechas y elegibilidad varían según el programa; revisar la lista oficial de cursos y cierres.",
-            "url": "https://www.daad.co/es/becas/becas-de-posgrado/maestria-2/",
-            "destacada": True
-        },
-        {
-            "titulo": "Fundación Carolina — Becas de posgrado y doctorado",
-            "entidad": "Fundación Carolina",
-            "pais": "España",
-            "tipo": "Becas de Maestría, Doctorado y estancias",
-            "cobertura": "Parcial o completa según programa; revisar ficha y condiciones de cada beca",
-            "area": "Ingeniería, tecnología, energía y ciencias aplicadas",
-            "descripcion": "Convocatoria anual para estudios de posgrado en España. La edición 2026–2027 abrió el 12 de enero y cerró el 2 de marzo de 2026; las fechas de la próxima edición deben confirmarse en el portal oficial.",
-            "estado_convocatoria": "Ciclo 2026–2027 cerrado; próxima convocatoria por anunciar.",
-            "url": "https://www.fundacioncarolina.es/convocatoria-de-becas-2026-2027/",
-            "destacada": True
-        },
-        {
             "titulo": "CERN Summer Student Programme (Ginebra, Suiza)",
             "entidad": "Organización Europea para la Investigación Nuclear (CERN)",
             "pais": "Suiza",
@@ -242,16 +218,9 @@ def compile_global_opportunities(icetex_live):
             "cobertura": ic.get("cobertura", "Ver términos en convocatoria"),
             "area": ic.get("area", "Ingeniería y Ciencias"),
             "descripcion": "Convocatoria oficial activa a través de la Dirección de Cooperación Internacional del ICETEX.",
-            "estado_convocatoria": "Aparece en el catálogo oficial de convocatorias vigentes; confirmar la fecha límite en la ficha.",
             "url": ic["url"],
             "destacada": False
         })
-
-    for beca in becas_fijas:
-        beca.setdefault(
-            "estado_convocatoria",
-            "Programa periódico o de referencia; consulta fechas, elegibilidad y estado en el portal oficial."
-        )
 
     with open(BECAS_JSON_PATH, "w", encoding="utf-8") as f:
         json.dump(becas_fijas, f, ensure_ascii=False, indent=2)

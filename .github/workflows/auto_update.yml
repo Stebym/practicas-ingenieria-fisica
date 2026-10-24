@@ -2,9 +2,8 @@ name: Actualizacion Automatica de Vacantes
 
 on:
   schedule:
-    # Inicia todos los días a las 00:30 UTC (19:30 / 7:30 PM hora Colombia).
-    # El despliegue de Pages espera a que termine este flujo.
-    - cron: '30 0 * * *'
+    # Se ejecuta todos los días a las 01:00 UTC (20:00 / 8:00 PM hora Colombia)
+    - cron: '0 1 * * *'
   workflow_dispatch: # Permite ejecutarlo manualmente con un botón en GitHub
 
 permissions:
@@ -13,7 +12,6 @@ permissions:
 jobs:
   update-jobs:
     runs-on: ubuntu-latest
-    timeout-minutes: 360
     steps:
       - name: Descargar repositorio
         uses: actions/checkout@v4
@@ -41,7 +39,7 @@ jobs:
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add index.html dashboard_practicas.html vacantes_practicas.json vacantes_practicas.csv feed.xml
+          git add index.html dashboard_practicas.html vacantes_practicas.json vacantes_practicas.csv
           if ! git diff --staged --quiet; then
             git commit -m "Auto-update: Vacantes de Ingeniería Física [$(date '+%Y-%m-%d')]"
             git push origin main

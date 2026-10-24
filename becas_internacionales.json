@@ -8,8 +8,7 @@
     "area": "Ciencia de Datos, Inteligencia Artificial y Modelado Cuantitativo",
     "descripcion": "Programa de alta especialización presencial para ingenieros y científicos en el International Statistical Education Centre (ISEC). Formación intensiva en analítica avanzada, series de tiempo y modelos predictivos.",
     "url": "https://web.icetex.gov.co/es/-/2026-data-analytics-for-decision-making-india",
-    "destacada": true,
-    "estado_convocatoria": "Programa periódico o de referencia; consulta fechas, elegibilidad y estado en el portal oficial."
+    "destacada": true
   },
   {
     "titulo": "Maestrías en Ciencias e Ingeniería (China Scholarship Council - CSC)",
@@ -20,8 +19,7 @@
     "area": "Ciencia de Materiales, Nanotecnología, Óptica, IA y Energías Renovables",
     "descripcion": "Convocatoria para cursar maestrías en las mejores universidades tecnológicas chinas (Tsinghua, Zhejiang, Harbin Institute of Technology). Especialmente afín a líneas de investigación en semiconductores, caracterización de materiales y fotónica.",
     "url": "https://web.icetex.gov.co/es/becas/becas-para-estudios-en-el-exterior/becas-vigentes",
-    "destacada": true,
-    "estado_convocatoria": "Programa periódico o de referencia; consulta fechas, elegibilidad y estado en el portal oficial."
+    "destacada": true
   },
   {
     "titulo": "Pasantías Técnicas Internacionales STEM (IAESTE)",
@@ -32,8 +30,7 @@
     "area": "Ingeniería Física, Electrónica, Mecatrónica, Control y Automatización",
     "descripcion": "Prácticas remuneradas de 6 semanas a 1 año en industrias y laboratorios de investigación internacionales. Los estudiantes colombianos compiten en cupos reservados por reciprocidad institucional.",
     "url": "https://iaeste.org.co/",
-    "destacada": true,
-    "estado_convocatoria": "Programa periódico o de referencia; consulta fechas, elegibilidad y estado en el portal oficial."
+    "destacada": true
   },
   {
     "titulo": "Becas DAAD RISE & WISE (Alemania)",
@@ -44,31 +41,6 @@
     "area": "Física, Óptica, Cuántica, Materiales y Sistemas de Potencia",
     "descripcion": "Estancias de 3 meses trabajando mano a mano con investigadores doctorales en universidades de élite alemanas (TU Munich, RWTH Aachen, Heidelberg, KIT) o centros Helmholtz y Fraunhofer.",
     "url": "https://www.daad.co/es/becas/buscador-de-becas/",
-    "destacada": true,
-    "estado_convocatoria": "Programa periódico o de referencia; consulta fechas, elegibilidad y estado en el portal oficial."
-  },
-  {
-    "titulo": "DAAD EPOS — Posgrados relacionados con desarrollo e ingeniería sostenible",
-    "entidad": "Servicio Alemán de Intercambio Académico (DAAD)",
-    "pais": "Alemania",
-    "tipo": "Beca de Maestría / Doctorado",
-    "cobertura": "Manutención mensual, seguro médico y apoyo de viaje; otros apoyos dependen del programa",
-    "area": "Ingeniería, energía sostenible, materiales y ciencias aplicadas",
-    "descripcion": "Becas para cursos de posgrado seleccionados. Dirigidas a egresados con al menos dos años de experiencia profesional; cada universidad publica su propia fecha límite y requisitos.",
-    "estado_convocatoria": "Fechas y elegibilidad varían según el programa; revisar la lista oficial de cursos y cierres.",
-    "url": "https://www.daad.co/es/becas/becas-de-posgrado/maestria-2/",
-    "destacada": true
-  },
-  {
-    "titulo": "Fundación Carolina — Becas de posgrado y doctorado",
-    "entidad": "Fundación Carolina",
-    "pais": "España",
-    "tipo": "Becas de Maestría, Doctorado y estancias",
-    "cobertura": "Parcial o completa según programa; revisar ficha y condiciones de cada beca",
-    "area": "Ingeniería, tecnología, energía y ciencias aplicadas",
-    "descripcion": "Convocatoria anual para estudios de posgrado en España. La edición 2026–2027 abrió el 12 de enero y cerró el 2 de marzo de 2026; las fechas de la próxima edición deben confirmarse en el portal oficial.",
-    "estado_convocatoria": "Ciclo 2026–2027 cerrado; próxima convocatoria por anunciar.",
-    "url": "https://www.fundacioncarolina.es/convocatoria-de-becas-2026-2027/",
     "destacada": true
   },
   {
@@ -80,8 +52,7 @@
     "area": "Física Experimental, Partículas, Aceleradores, Instrumentación y Detectores",
     "descripcion": "Una de las pasantías más prestigiosas del mundo para estudiantes de física e ingeniería. Trabaja directamente en experimentos del Gran Colisionador de Hadrones (LHC), desarrollo de sensores criogénicos y computación científica.",
     "url": "https://careers.cern/summer",
-    "destacada": true,
-    "estado_convocatoria": "Programa periódico o de referencia; consulta fechas, elegibilidad y estado en el portal oficial."
+    "destacada": true
   },
   {
     "titulo": "Mitacs Globalink Research Internship (Canadá)",
@@ -92,8 +63,7 @@
     "area": "Física Aplicada, Computación Cuántica, Nanotecnología e IA",
     "descripcion": "Pasantía de investigación en universidades canadienses de primer orden (McGill, Toronto, UBC, Waterloo). Estudiantes de pregrado colaboran directamente con profesores líderes en proyectos de vanguardia.",
     "url": "https://www.mitacs.ca/our-programs/globalink-research-internship-students/",
-    "destacada": true,
-    "estado_convocatoria": "Programa periódico o de referencia; consulta fechas, elegibilidad y estado en el portal oficial."
+    "destacada": true
   },
   {
     "titulo": "Becas de Maestría Erasmus Mundus (Europhotonics / Quantum)",
@@ -104,8 +74,7 @@
     "area": "Óptica, Fotónica, Nanotecnología, Láseres y Tecnologías Cuánticas",
     "descripcion": "Programas como Europhotonics o Quantum Technologies donde estudias cada semestre en un país europeo distinto y obtienes doble o múltiple titulación de posgrado.",
     "url": "https://erasmus-plus.ec.europa.eu/opportunities/opportunities-for-individuals/students/erasmus-mundus-joint-masters",
-    "destacada": true,
-    "estado_convocatoria": "Programa periódico o de referencia; consulta fechas, elegibilidad y estado en el portal oficial."
+    "destacada": true
   },
   {
     "titulo": "Academia-Industry Training (AIT) Colombia 5",
@@ -115,7 +84,6 @@
     "cobertura": "Ver requisitos en convocatoria",
     "area": "Ingeniería, Tecnología y Ciencias",
     "descripcion": "Convocatoria oficial activa a través de la Dirección de Cooperación Internacional del ICETEX.",
-    "estado_convocatoria": "Aparece en el catálogo oficial de convocatorias vigentes; confirmar la fecha límite en la ficha.",
     "url": "https://web.icetex.gov.co/es/-/academia-industry-training-ait-colombia-5",
     "destacada": false
   },
@@ -127,7 +95,6 @@
     "cobertura": "Ver requisitos en convocatoria",
     "area": "Ingeniería, Tecnología y Ciencias",
     "descripcion": "Convocatoria oficial activa a través de la Dirección de Cooperación Internacional del ICETEX.",
-    "estado_convocatoria": "Aparece en el catálogo oficial de convocatorias vigentes; confirmar la fecha límite en la ficha.",
     "url": "https://web.icetex.gov.co/es/-/2026-data-analytics-for-decision-making-india",
     "destacada": false
   },
@@ -139,7 +106,6 @@
     "cobertura": "Ver requisitos en convocatoria",
     "area": "Ingeniería, Tecnología y Ciencias",
     "descripcion": "Convocatoria oficial activa a través de la Dirección de Cooperación Internacional del ICETEX.",
-    "estado_convocatoria": "Aparece en el catálogo oficial de convocatorias vigentes; confirmar la fecha límite en la ficha.",
     "url": "https://web.icetex.gov.co/es/-/becas-50-whitecliffe-2027",
     "destacada": false
   },
@@ -151,7 +117,6 @@
     "cobertura": "Ver requisitos en convocatoria",
     "area": "Ingeniería, Tecnología y Ciencias",
     "descripcion": "Convocatoria oficial activa a través de la Dirección de Cooperación Internacional del ICETEX.",
-    "estado_convocatoria": "Aparece en el catálogo oficial de convocatorias vigentes; confirmar la fecha límite en la ficha.",
     "url": "https://web.icetex.gov.co/es/-/2026-beca-del-100-servidores-publicos-singapur-inclusivity-in-multicultural-societies",
     "destacada": false
   },
@@ -163,7 +128,6 @@
     "cobertura": "Ver requisitos en convocatoria",
     "area": "Ingeniería, Tecnología y Ciencias",
     "descripcion": "Convocatoria oficial activa a través de la Dirección de Cooperación Internacional del ICETEX.",
-    "estado_convocatoria": "Aparece en el catálogo oficial de convocatorias vigentes; confirmar la fecha límite en la ficha.",
     "url": "https://web.icetex.gov.co/es/-/beca-100-matricula-curso-corto-servidores-publicos-singapur",
     "destacada": false
   },
@@ -175,7 +139,6 @@
     "cobertura": "Ver requisitos en convocatoria",
     "area": "Ingeniería, Tecnología y Ciencias",
     "descripcion": "Convocatoria oficial activa a través de la Dirección de Cooperación Internacional del ICETEX.",
-    "estado_convocatoria": "Aparece en el catálogo oficial de convocatorias vigentes; confirmar la fecha límite en la ficha.",
     "url": "https://web.icetex.gov.co/es/-/descuentos-maestrias-university-salford",
     "destacada": false
   },
@@ -187,7 +150,6 @@
     "cobertura": "Ver requisitos en convocatoria",
     "area": "Ingeniería, Tecnología y Ciencias",
     "descripcion": "Convocatoria oficial activa a través de la Dirección de Cooperación Internacional del ICETEX.",
-    "estado_convocatoria": "Aparece en el catálogo oficial de convocatorias vigentes; confirmar la fecha límite en la ficha.",
     "url": "https://web.icetex.gov.co/es/-/beca-100-por-ciento-matricula-curso-corto-presencial-servidores-publicos-singapur-food-security-and-resilience",
     "destacada": false
   }

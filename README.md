@@ -10,14 +10,16 @@
 ## 🎯 Propósito del Proyecto
 Plataforma web automatizada diseñada para resolver la brecha entre la **Ingeniería Física** y las ofertas laborales de prácticas en Medellín y el Valle de Aburrá. 
 
-Rastrea en tiempo real vacantes en empresas industriales, centros de I+D, hospitales y startups de Deep Tech, clasificándolas automáticamente en las 7 ramas formativas de la carrera:
+Consulta fuentes activas de empleo y clasifica vacantes para Medellín, Antioquia y roles remotos. El clasificador cruza el nombre del perfil con carreras espejo y competencias del pénsum; marca alta afinidad técnica cuando detecta una carrera afín y al menos dos competencias técnicas. Las vacantes que mencionan explícitamente Física se identifican por separado.
+
+La cobertura se organiza en estas áreas formativas:
 1. ⚡ **Energía, Potencia y Renovables** (Sistemas fotovoltaicos, BESS, subestaciones, transformadores).
 2. 🎛️ **Automatización, Instrumentación y Control** (PLC, sensores, SCADA, metrología, adquisición de datos).
 3. 🔬 **Materiales, Nanotecnología y Ensayos** (Caracterización, difracción de rayos X, microscopía, polímeros).
 4. 👁️ **Óptica, Fotónica y Visión Artificial** (Láser, fibra óptica, procesamiento digital de imágenes).
 5. 📊 **Simulación, Datos, IA y Cuántica** (Modelado numérico, algoritmos, analítica avanzada, computación cuántica).
 6. 🏥 **Física Médica y Bioingeniería** (Radioterapia, dosimetría, resonancia magnética, medicina nuclear).
-7. 💡 **I+D, Innovación y Deep Tech** (Centros de investigación, prototipado y transferencia tecnológica).
+7. 💡 **I+D, Innovación y Procesos Industriales** (Centros de investigación, prototipado y transferencia tecnológica).
 
 ---
 
@@ -41,7 +43,7 @@ Este proyecto fue construido aplicando estándares profesionales de **Desarrollo
 * `bot_becas_internacionales.py`: Bot de rastreo matutino para oportunidades globales y sincronización del catálogo oficial de convenios UNAL DRE (Google Sheets, ICETEX, IAESTE, DAAD, CERN, Mitacs).
 * `convenios_internacionales.json`: Base de datos de más de 1.150 convenios oficiales vigentes suscritos por la UNAL para ingeniería y ciencias en 63 países con enlaces a los documentos oficiales en Google Drive.
 * `becas_internacionales.json`: Convocatorias internacionales de becas completas y pasantías técnicas remuneradas.
-* `convocatorias_destacadas.json`: Catálogo de convocatorias de alto impacto para Ingeniería Física y carreras afines (Corona, Argos, Haceb, ISA, EPM, Enel, ERCO, Sievert, Gobernación de Antioquia, AKT, Protección, etc.).
+* `convocatorias_destacadas.json`: Referencias de empleadores y convocatorias; el bot no las agrega como vigentes por sí solas. Una vacante entra al portal cuando aparece en una búsqueda ejecutada y su enlace responde.
 * `empresas_antioquia.json`: Directorio de empresas y sectores para ampliar la búsqueda a empleadores locales.
 * `estilos.css`: Sistema de diseño visual y responsivo (laboratorio técnico / blueprint).
 * `fondo_fisica.svg` y `fondo_fisica_movil.svg`: Fondos vectoriales adaptados a escritorio y móvil con planetas, estrellas y ecuaciones.
@@ -61,6 +63,6 @@ Rastreo activo multi-plataforma:
 2. **ElEmpleo.com**: Rastreo en tiempo real de pasantías de ingeniería, automatización, datos y mantenimiento.
 3. **FirstJob Colombia**: Programas de prácticas y semilleros en multinacionales (Schneider Electric, Dialectica, Galderma, Alsea).
 4. **Computrabajo Antioquia**: Barrido dinámico de convocatorias técnicas, electromecánicas, instrumentación y metrología.
-5. **LinkedIn Jobs Guest API**: Búsqueda en tiempo real de vacantes y pasantías para las 35 áreas del pénsum UNAL y 35 empresas líderes de Medellín y Antioquia.
+5. **LinkedIn Jobs Guest API**: Búsqueda por áreas del pénsum, carreras espejo y empresas de Medellín y Antioquia. Los resultados que requieren acceso o no permiten verificar su página se descartan.
 6. **Portales Corporativos y Estatales Directos**: EPM, Grupo Argos, Enel, ABB, Gobernación de Antioquia y Sievert Radiaciones.
 7. **Ecosistema Complementario**: Accesos y guías directas para Interacpedia (retos empresariales), Estado Joven (MinTrabajo), Torre.ai y SENA SGVA.

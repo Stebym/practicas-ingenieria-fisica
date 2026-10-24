@@ -43,7 +43,7 @@ jobs:
         run: |
           mkdir -p _site
           cp index.html estilos.css estrellas.js fondo_fisica.svg fondo_fisica_movil.svg _site/
-          cp -f vacantes_practicas.json vacantes_practicas.csv convenios_internacionales.json becas_internacionales.json _site/ 2>/dev/null || true
+          cp -f vacantes_practicas.json vacantes_practicas.csv convenios_internacionales.json becas_internacionales.json feed.xml _site/ 2>/dev/null || true
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

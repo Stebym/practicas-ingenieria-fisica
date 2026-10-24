@@ -992,7 +992,8 @@ def build_full_html(vacantes, config_ramas):
             },
             "employmentType": "INTERN"
         })
-    json_ld_script = f'<script type="application/ld+json">{json.dumps(json_ld_jobs, ensure_ascii=False).replace("</", "<\\/")}</script>' if json_ld_jobs else ""
+    json_ld_payload = json.dumps(json_ld_jobs, ensure_ascii=False).replace("</", "<\\/")
+    json_ld_script = f'<script type="application/ld+json">{json_ld_payload}</script>' if json_ld_jobs else ""
 
     html = f"""<!DOCTYPE html>
 <html lang="es">

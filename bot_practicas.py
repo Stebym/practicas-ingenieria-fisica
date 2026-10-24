@@ -86,6 +86,9 @@ WEB_SEARCH_QUERIES = [
     ("práctica profesional ingeniería carreras afines Medellín", "LOCAL"),
     ("practicante instrumentación automatización metrología Antioquia", "LOCAL"),
     ("practicante datos simulación ingeniería Antioquia afines", "LOCAL"),
+    ("Nutresa aprendices practicantes 2027-1 Colombia", "LOCAL"),
+    ("Alkomprar prácticas universitarias 2027-1 Medellín", "LOCAL"),
+    ("convocatoria prácticas Distrito Medellín 2027-1", "LOCAL"),
     ("internship engineering physics remote worldwide", "WORLDWIDE"),
     ("remote engineering internship Latin America", "WORLDWIDE"),
     ("remote internship Python data science international", "WORLDWIDE"),
@@ -1513,7 +1516,11 @@ def main():
         "practica profesional corona",
         "practicante isa",
         "practicante epm",
-        "practicante haceb"
+        "practicante haceb",
+        "practicas universitarias 2027-1 alkomprar",
+        "practicantes universitarios 2027-1 alkomprar",
+        "aprendices y practicantes 2027-1 nutresa",
+        "practicante ingenieria nutresa"
     ]
     print(f"\n[*] Rastreando Magneto365 en tiempo real ({len(magneto_queries)} categorías)...")
     for q_mag in magneto_queries:
@@ -1534,6 +1541,8 @@ def main():
         "practicante automatizacion",
         "practicante electromecanico",
         "practicante datos",
+        "practicante nutresa 2027-1",
+        "practicante alkomprar 2027-1",
         *CARRERAS_ESPEJO_QUERIES,
     ]
     print(f"\n[*] Rastreando ElEmpleo.com ({len(elempleo_queries)} categorías)...")

@@ -1,1 +1,9 @@
-{}
+{
+  "apiKey": "AIzaSyDX6TpighY3crGrYBa7xgXtMxpajWLgho0",
+  "authDomain": "portal-ipf.firebaseapp.com",
+  "databaseURL": "https://portal-ipf-default-rtdb.firebaseio.com",
+  "projectId": "portal-ipf",
+  "storageBucket": "portal-ipf.firebasestorage.app",
+  "messagingSenderId": "984574561821",
+  "appId": "1:984574561821:web:f946eedadde3a35ca040f4"
+}

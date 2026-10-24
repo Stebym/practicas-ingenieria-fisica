@@ -79,6 +79,19 @@ CARRERAS_ESPEJO_QUERIES = [
     "practicante telecomunicaciones optica afines",
 ]
 
+# Búsquedas web abiertas para encontrar convocatorias fuera de los portales
+# que exponen APIs o páginas de resultados fáciles de rastrear.
+WEB_SEARCH_QUERIES = [
+    ("practicante ingeniería física Medellín", "LOCAL"),
+    ("práctica profesional ingeniería carreras afines Medellín", "LOCAL"),
+    ("practicante instrumentación automatización metrología Antioquia", "LOCAL"),
+    ("practicante datos simulación ingeniería Antioquia afines", "LOCAL"),
+    ("internship engineering physics remote worldwide", "WORLDWIDE"),
+    ("remote engineering internship Latin America", "WORLDWIDE"),
+    ("remote internship Python data science international", "WORLDWIDE"),
+    ("remote internship materials optics applied physics", "WORLDWIDE"),
+]
+
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 CONFIG_RAMAS_PATH = os.path.join(BASE_DIR, "config_ramas.json")
 CONVOCATORIAS_DESTACADAS_PATH = os.path.join(BASE_DIR, "convocatorias_destacadas.json")
@@ -134,7 +147,16 @@ SEARCH_QUERIES = [
     "practicante potencia transformadores",
     # Mujeres en STEM
     "practicante mujeres stem",
-    "programa mujer stem"
+    "programa mujer stem",
+    # Convocatorias académicas con distintas etiquetas en Colombia y fuera.
+    "practica profesional ingenieria",
+    "practica academica ingenieria",
+    "estudiante etapa practica ingenieria",
+    "pasantia ingenieria",
+    "engineering intern Colombia",
+    "engineering internship student",
+    "engineering co-op student",
+    *CARRERAS_ESPEJO_QUERIES,
 ]
 
 EXCLUDED_ROLES = [
@@ -161,6 +183,17 @@ EXCLUDED_ROLES = [
 ]
 
 TERMINOS_MUJERES_RE = re.compile(r'\b(mujer|mujeres|women|women in tech|femenin[ao]?|stem)\b', re.IGNORECASE)
+CONVOCATORIA_MUJERES_RE = re.compile(
+    r"\b(?:solo|exclusiv[oa]mente|dirigid[oa]s?\s+(?:a|para)|women\s+only|for\s+women)\b.{0,60}\b(?:mujeres|women|femenin[ao]?)\b|"
+    r"\b(?:mujeres|women|femenin[ao]?)\b.{0,60}\b(?:solo|exclusiv[oa]mente|only)\b",
+    re.IGNORECASE,
+)
+PRACTICE_RE = re.compile(
+    r"\b(?:practicante|pr[aá]ctica(?:s)?(?:\s+(?:profesional(?:es)?|acad[eé]mica(?:s)?|universitaria(?:s)?))?|"
+    r"estudiante\s+en\s+(?:etapa\s+)?pr[aá]ctica|etapa\s+productiva|pasant[ií]a(?:s)?|"
+    r"intern(?:ship)?s?|trainee|co[\s-]?op|industrial\s+placement|aprendiz(?:\s+universitari[oa])?)\b",
+    re.IGNORECASE,
+)
 TERMINOS_FISICA_RE = re.compile(r'\b(f[ií]sic[ao]s?|metrolog[ií]a|cu[aá]ntic[ao]s?|espectroscop[ií]a|difracci[oó]n|radiaci[oó]n|dosimetr[ií]a|nanotecnolog[ií]a)\b', re.IGNORECASE)
 
 def matches_keyword(keyword, text):
@@ -438,9 +471,10 @@ def scrape_firstjob_query(query):
     except Exception:
         return []
 
-def scrape_web_query(query):
-    """Busca resultados web públicos con timeout corto para no congelar la ejecución."""
-    url = f"https://html.duckduckgo.com/html/?q={quote(query + ' Medellín Antioquia empleo práctica')}"
+def scrape_web_query(query, search_scope="LOCAL"):
+    """Busca resultados web públicos; para internacional exige práctica e indicio remoto."""
+    suffix = " remote internship" if search_scope == "WORLDWIDE" else " Medellín Antioquia empleo práctica"
+    url = f"https://html.duckduckgo.com/html/?q={quote(query + suffix)}"
     try:
         response = requests.get(url, headers=HEADERS, timeout=4)
         if response.status_code != 200:
@@ -458,19 +492,26 @@ def scrape_web_query(query):
             raw_snippet = snippets[index] if index < len(snippets) else ""
             snippet = re.sub(r'<[^>]+>', ' ', unescape(raw_snippet))
             snippet = re.sub(r'\s+', ' ', snippet).strip()
-            if not re.search(r'practic|práctic|estudian|ingenier|vacante|empleo|aprendiz|talento|convocatoria', f"{title} {snippet}", re.IGNORECASE):
+            evidence = f"{title} {snippet}"
+            if not PRACTICE_RE.search(evidence):
+                continue
+            if search_scope == "WORLDWIDE" and not REMOTE_MODALITY_RE.search(evidence):
                 continue
             if title and link.startswith("http"):
                 company_match = re.search(r'"([^"]+)"', query)
-                results.append({
+                job = {
                     "titulo": title,
                     "empresa": company_match.group(1) if company_match else "Por identificar",
-                    "ubicacion": "Ubicación por confirmar",
+                    "ubicacion": "Remoto internacional (elegibilidad por confirmar)" if search_scope == "WORLDWIDE" else "Medellín / Antioquia (resultado web; confirmar ubicación)",
                     "url": link,
                     "fecha_publicacion": "Resultado web; verificar vigencia",
                     "fuente": f"Búsqueda web · {urlparse(link).netloc}",
                     "resumen_fuente": snippet
-                })
+                }
+                if search_scope == "WORLDWIDE":
+                    job["search_scope"] = "WORLDWIDE"
+                    job["alcance_geografico"] = "Remoto internacional; confirmar elegibilidad desde Colombia"
+                results.append(job)
         return results
     except Exception:
         return []
@@ -481,15 +522,18 @@ def classify_and_score_job(job, config_ramas):
     company_lower = job.get("empresa", "").lower()
     perfil_lower = job.get("perfil", "").lower()
     mision_lower = job.get("mision", "").lower()
-    text_to_analyze = f"{title_lower} {company_lower} {perfil_lower} {mision_lower}"
-    career_text = f"{title_lower} {perfil_lower} {mision_lower} {job.get('resumen_fuente', '').lower()}"
+    resumen = str(job.get("resumen_fuente", "")).lower()
+    tareas = str(job.get("tareas", "")).lower()
+    text_to_analyze = f"{title_lower} {company_lower} {perfil_lower} {mision_lower} {tareas} {resumen}"
+    career_text = f"{title_lower} {perfil_lower} {mision_lower} {tareas} {resumen}"
 
     # Descartar roles abiertamente no técnicos / administrativos de servicio que se cuelan en búsquedas amplias
     if any(re.search(p, title_lower) for p in EXCLUDED_ROLES):
         return None
 
     # Detección de programas especiales (con límites de palabra para evitar falsos positivos como 'systems' -> 'stem')
-    es_impulso_liderazgo = bool(TERMINOS_MUJERES_RE.search(text_to_analyze))
+    programa_genero = bool(TERMINOS_MUJERES_RE.search(text_to_analyze))
+    convocatoria_exclusiva_mujeres = bool(CONVOCATORIA_MUJERES_RE.search(text_to_analyze))
     es_exclusiva_fisica = bool(TERMINOS_FISICA_RE.search(text_to_analyze))
 
     # La antigüedad de publicación no revela la fecha límite de postulación.
@@ -503,14 +547,9 @@ def classify_and_score_job(job, config_ramas):
         except ValueError:
             pass
 
-    es_practica = bool(re.search(
-        r"\b(practicante|práctica|practica|intern(ship)?|trainee|estudiante en práctica|pasantía|pasantia)\b",
-        text_to_analyze,
-    ))
+    es_practica = bool(PRACTICE_RE.search(text_to_analyze))
 
     total_score = 0
-    if es_impulso_liderazgo:
-        total_score += 160
     if es_exclusiva_fisica:
         total_score += 85
 
@@ -589,7 +628,7 @@ def classify_and_score_job(job, config_ramas):
         tareas_especificas = "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos."
     elif es_exclusiva_fisica:
         afinidad = "Afinidad con Física"
-    elif max_rama_score >= 50 or es_impulso_liderazgo:
+    elif max_rama_score >= 50:
         afinidad = "Alta Afinidad Pénsum"
     else:
         afinidad = "Afinidad Media"
@@ -604,6 +643,8 @@ def classify_and_score_job(job, config_ramas):
     job["clave_principal"] = ramas_coincidentes[0]["clave"]
     job["afinidad"] = afinidad
     job["es_exclusiva_fisica"] = es_exclusiva_fisica
+    job["programa_inclusion_genero"] = programa_genero
+    job["convocatoria_exclusiva_mujeres"] = convocatoria_exclusiva_mujeres
     job["es_cierre_inminente"] = es_cierre_inminente
     job["es_practica"] = es_practica
     job["score_pensum"] = total_score
@@ -1165,6 +1206,8 @@ def build_full_html(vacantes, config_ramas):
               <span>Ubicación: ${{escapeHtml(j.ubicacion)}}</span>
               <span>Fuente: ${{escapeHtml(j.fuente)}}</span>
               <span>Vigencia: confirmar en la publicación original</span>
+              ${{j.programa_inclusion_genero ? `<span>Programa STEM / inclusión de género · revisar requisitos de elegibilidad</span>` : ''}}
+              ${{j.convocatoria_exclusiva_mujeres ? `<span>Convocatoria dirigida exclusivamente a mujeres según el aviso</span>` : ''}}
             </div>
             ${{j.compensacion ? `<div class="salary-highlight">Compensación: ${{escapeHtml(j.compensacion)}}</div>` : ''}}
             <div class="job-tags">${{tagsHtml}}</div>
@@ -1374,7 +1417,7 @@ def build_full_html(vacantes, config_ramas):
 
 def export_csv(vacantes):
     """Exporta las vacantes ordenadas a CSV para Excel"""
-    fieldnames = ["titulo", "empresa", "ubicacion", "rama_principal", "afinidad", "score_pensum", "es_exclusiva_fisica", "es_cierre_inminente", "es_practica", "compensacion", "perfil", "mision", "tareas", "fecha_publicacion", "fuente", "url"]
+    fieldnames = ["titulo", "empresa", "ubicacion", "rama_principal", "afinidad", "score_pensum", "es_exclusiva_fisica", "programa_inclusion_genero", "convocatoria_exclusiva_mujeres", "es_cierre_inminente", "es_practica", "compensacion", "perfil", "mision", "tareas", "fecha_publicacion", "fuente", "url"]
     with open(OUTPUT_CSV, "w", newline="", encoding="utf-8-sig") as f:
         writer = csv.DictWriter(f, fieldnames=fieldnames, lineterminator="\n")
         writer.writeheader()
@@ -1387,6 +1430,8 @@ def export_csv(vacantes):
                 "afinidad": v["afinidad"],
                 "score_pensum": v.get("score_pensum", 0),
                 "es_exclusiva_fisica": v.get("es_exclusiva_fisica", False),
+                "programa_inclusion_genero": v.get("programa_inclusion_genero", False),
+                "convocatoria_exclusiva_mujeres": v.get("convocatoria_exclusiva_mujeres", False),
                 "es_cierre_inminente": v.get("es_cierre_inminente", False),
                 "es_practica": v.get("es_practica", False),
                 "compensacion": v.get("compensacion", ""),
@@ -1550,6 +1595,28 @@ def main():
                 added += 1
         print(f"    Remoto mundial '{query}': {len(jobs)} ofertas (+{added} nuevas)")
         time.sleep(0.3)
+
+    # 6c. Buscador web abierto: amplía el alcance a portales corporativos y bolsas
+    # que no aparecen en las APIs anteriores. Las búsquedas web son pistas y la
+    # página de destino se verifica antes de publicar.
+    print(f"\n[*] Ampliando rastreo con {len(WEB_SEARCH_QUERIES)} búsquedas web...")
+    with concurrent.futures.ThreadPoolExecutor(max_workers=4) as executor:
+        web_futures = [
+            executor.submit(scrape_web_query, query, scope)
+            for query, scope in WEB_SEARCH_QUERIES
+        ]
+        for (query, scope), future in zip(WEB_SEARCH_QUERIES, web_futures):
+            try:
+                jobs = future.result()
+            except Exception:
+                jobs = []
+            added = 0
+            for job in jobs:
+                if job["url"] not in seen_urls:
+                    seen_urls.add(job["url"])
+                    all_raw_jobs.append(job)
+                    added += 1
+            print(f"    Web {scope.lower()} '{query}': {len(jobs)} resultados (+{added} nuevas)")
 
     # 7. Rastrear convocatorias de practicantes en empresas líderes de Medellín y Antioquia
     company_directory = load_json(os.path.join(BASE_DIR, "empresas_antioquia.json"))

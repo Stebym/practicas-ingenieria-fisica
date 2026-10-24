@@ -1,4 +1,4 @@
-# ⚛️ Portal de Prácticas para Ingeniería Física — Medellín y Antioquia
+# ⚛️ Portal de Prácticas para Ingeniería Física — Colombia y remoto internacional
 
 **Autor:** Jimmy Stebym Rosero Barrera  
 **Institución:** Universidad Nacional de Colombia (Sede Medellín)  
@@ -8,9 +8,9 @@
 ---
 
 ## 🎯 Propósito del Proyecto
-Plataforma web automatizada diseñada para resolver la brecha entre la **Ingeniería Física** y las ofertas laborales de prácticas en Medellín y el Valle de Aburrá. 
+Plataforma web automatizada diseñada para conectar estudiantes de **Ingeniería Física** con prácticas en Antioquia, el resto de Colombia y oportunidades remotas internacionales.
 
-Consulta fuentes activas de empleo y clasifica vacantes para Medellín, Antioquia y roles remotos. El clasificador cruza el nombre del perfil con carreras espejo y competencias del pénsum; marca alta afinidad técnica cuando detecta una carrera afín y al menos dos competencias técnicas. Las vacantes que mencionan explícitamente Física se identifican por separado.
+Consulta fuentes de empleo y clasifica convocatorias de práctica para todo Colombia, Antioquia y roles remotos internacionales. El clasificador cruza las carreras espejo con competencias del pénsum: marca alta afinidad cuando encuentra una carrera afín y al menos dos competencias técnicas; reserva “Física explícita” para convocatorias que nombran Física como carrera o perfil. Las áreas técnicas (metrología, radiaciones, óptica, materiales, etc.) cuentan como competencias, no como mención de la carrera. Los anuncios internacionales que solo muestran “Remote” se incluyen como pistas y se etiquetan con elegibilidad desde Colombia por confirmar.
 
 La cobertura se organiza en estas áreas formativas:
 1. ⚡ **Energía, Potencia y Renovables** (Sistemas fotovoltaicos, BESS, subestaciones, transformadores).
@@ -39,11 +39,11 @@ Este proyecto fue construido aplicando estándares profesionales de **Desarrollo
 ---
 
 ## 🚀 Arquitectura y Automatización
-* `bot_practicas.py`: Motor de rastreo y clasificación de prácticas y empleo industrial en Python (Computrabajo, LinkedIn, Magneto365, ElEmpleo, FirstJob).
+* `bot_practicas.py`: Motor de rastreo y clasificación de prácticas y empleo industrial en Python. Busca en Antioquia, todo Colombia y LinkedIn Worldwide para posiciones remotas en áreas espejo (Computrabajo, LinkedIn, Magneto365, ElEmpleo, FirstJob).
 * `bot_becas_internacionales.py`: Bot de rastreo matutino para oportunidades globales y sincronización del catálogo oficial de convenios UNAL DRE (Google Sheets, ICETEX, IAESTE, DAAD, CERN, Mitacs).
 * `convenios_internacionales.json`: Base de datos de más de 1.150 convenios oficiales vigentes suscritos por la UNAL para ingeniería y ciencias en 63 países con enlaces a los documentos oficiales en Google Drive.
 * `becas_internacionales.json`: Convocatorias internacionales de becas completas y pasantías técnicas remuneradas.
-* `convocatorias_destacadas.json`: Referencias de empleadores y convocatorias; el bot no las agrega como vigentes por sí solas. Una vacante entra al portal cuando aparece en una búsqueda ejecutada y su enlace responde.
+* `convocatorias_destacadas.json`: Referencias de empleadores y convocatorias; el bot no las agrega como vigentes por sí solas. Una vacante entra al portal cuando aparece en una búsqueda ejecutada. El tablero separa enlaces accesibles de publicaciones recientes de LinkedIn cuya vigencia el servidor no puede confirmar.
 * `empresas_antioquia.json`: Directorio de empresas y sectores para ampliar la búsqueda a empleadores locales.
 * `estilos.css`: Sistema de diseño visual y responsivo (laboratorio técnico / blueprint).
 * `fondo_fisica.svg` y `fondo_fisica_movil.svg`: Fondos vectoriales adaptados a escritorio y móvil con planetas, estrellas y ecuaciones.
@@ -62,7 +62,8 @@ Rastreo activo multi-plataforma:
 1. **Magneto365 (API Pública Oficial)**: Rastreo dinámico en vivo de ofertas con compensación verificada (Corona Industrial, Haceb, Kalley, Crystal, ERCO Energía, Protección, Comfama).
 2. **ElEmpleo.com**: Rastreo en tiempo real de pasantías de ingeniería, automatización, datos y mantenimiento.
 3. **FirstJob Colombia**: Programas de prácticas y semilleros en multinacionales (Schneider Electric, Dialectica, Galderma, Alsea).
-4. **Computrabajo Antioquia**: Barrido dinámico de convocatorias técnicas, electromecánicas, instrumentación y metrología.
-5. **LinkedIn Jobs Guest API**: Búsqueda por áreas del pénsum, carreras espejo y empresas de Medellín y Antioquia. Los resultados que requieren acceso o no permiten verificar su página se descartan.
-6. **Portales Corporativos y Estatales Directos**: EPM, Grupo Argos, Enel, ABB, Gobernación de Antioquia y Sievert Radiaciones.
-7. **Ecosistema Complementario**: Accesos y guías directas para Interacpedia (retos empresariales), Estado Joven (MinTrabajo), Torre.ai y SENA SGVA.
+4. **Computrabajo**: Barrido en Antioquia y en el país completo con consultas técnicas, electromecánicas, de datos, instrumentación y metrología.
+5. **LinkedIn Jobs Guest API**: Búsqueda por áreas del pénsum y carreras espejo en Antioquia, Colombia y Worldwide (prácticas remotas). Las ofertas remotas genéricas quedan marcadas con elegibilidad geográfica pendiente. LinkedIn limita las comprobaciones automatizadas; estas publicaciones se etiquetan como recientes, con vigencia pendiente de confirmar en el portal de origen.
+6. **ElEmpleo, Magneto365 y FirstJob**: búsquedas nacionales; Magneto365 y FirstJob usan ámbito Colombia y ElEmpleo consulta resultados nacionales.
+7. **Búsquedas por empleador**: consultas de LinkedIn para empresas del directorio regional y empleadores nacionales priorizados; no se presentan como rastreo directo de los portales corporativos.
+8. **Ecosistema Complementario**: Accesos y guías directas para Interacpedia (retos empresariales), Estado Joven (MinTrabajo), Torre.ai y SENA SGVA.

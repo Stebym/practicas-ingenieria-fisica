@@ -531,7 +531,9 @@
         "ingenieria de materiales",
         "quimica",
         "ingenieria quimica",
-        "ingenieria metalurgica"
+        "ingenieria metalurgica",
+        "ingenieria mecanica",
+        "ingenieria industrial"
       ],
       "empresas_referencia": [
         "Sumicol / Corona",
@@ -592,6 +594,7 @@
         "ingenieria fisica",
         "ingenieria de energia",
         "ingenieria energetica",
+        "ingenieria mecanica",
         "ingenieria de control",
         "ingenieria electromecanica"
       ],

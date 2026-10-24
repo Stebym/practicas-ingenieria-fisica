@@ -46,6 +46,15 @@ REMOTE_MODALITY_RE = re.compile(
     r"\b(remoto|remota|remote|teletrabajo)\b|100\s*%\s*h[ií]brid[oa]",
     re.IGNORECASE,
 )
+REMOTE_GLOBAL_SCOPE_RE = re.compile(
+    r"\b(worldwide|world\s*wide|anywhere|any\s+country|all\s+countries|global(?:ly)?|"
+    r"latin\s+america|latam|south\s+america|americas|colombia|remote\s+from\s+anywhere)\b",
+    re.IGNORECASE,
+)
+REMOTE_GENERIC_LOCATION_RE = re.compile(
+    r"^\s*(?:fully\s+)?remote\s*$|^\s*worldwide\s*$|^\s*remote\s*[-(]\s*(?:global|worldwide|anywhere)\s*\)?\s*$",
+    re.IGNORECASE,
+)
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 CONFIG_RAMAS_PATH = os.path.join(BASE_DIR, "config_ramas.json")
@@ -123,7 +132,49 @@ SEARCH_QUERIES = [
         "practicante estadistica riesgos cuantitativos",
         "practicante telecomunicaciones fibra optica",
         "practicante ingenieria biomedica",
-        "practicante ingenieria industrial proyectos"
+        "practicante ingenieria industrial proyectos",
+        "practicante eficacia machine learning datos",
+        "practicante general motors ingeniería 2027",
+        "practicante globant technology 2027",
+        "practicante outsourcing transformación digital rpa",
+        "practicante prosegur analítica datos",
+        "practicante schneider ingeniería automatización",
+        "practicante procuraduria estadistica ciencia datos"
+]
+
+# Consultas nacionales y remotas: ampliadas desde las búsquedas manuales y los cargos espejo.
+NATIONAL_SEARCH_QUERIES = [
+    "practicante ingeniería física",
+    "practicante ciencias físicas",
+    "practicante ciencia de datos machine learning",
+    "practicante analítica estadística matemáticas",
+    "practicante Python SQL automatización",
+    "practicante ingeniería electrónica mecatrónica",
+    "practicante ingeniería control PLC SCADA",
+    "practicante metrología instrumentación calibración",
+    "practicante ingeniería mecánica mantenimiento",
+    "practicante materiales laboratorio caracterización",
+    "practicante ingeniería eléctrica energía solar",
+    "practicante innovación investigación desarrollo",
+    "practicante telecomunicaciones visión artificial",
+    "prácticas universitarias ingeniería 2027",
+    "practicante remote Colombia engineering data"
+]
+
+GLOBAL_REMOTE_SEARCH_QUERIES = [
+    "physics engineering internship remote worldwide",
+    "applied physics research intern remote",
+    "data science machine learning intern remote worldwide",
+    "python data analytics internship remote global",
+    "quantitative research intern remote worldwide",
+    "electronics embedded systems internship remote",
+    "automation control engineering internship remote",
+    "materials science laboratory intern remote",
+    "optics photonics research internship remote",
+    "energy renewable engineering intern remote",
+    "computer vision image processing internship remote",
+    "engineering intern remote Latin America",
+    "remote internship anywhere engineering physics"
 ]
 
 EXCLUDED_ROLES = [
@@ -153,13 +204,14 @@ EXCLUDED_ROLES = [
     r"\bcentro\s+comercial\b", r"\bcontrol\s+corporativo\b"
 ]
 
-# Exige contexto real de Física/Ingeniería y excluye "infraestructura física", "toma física" o "educación física"
+# Nivel 1 significa que la convocatoria pide explícitamente Física como carrera.
+# Las áreas técnicas (metrología, óptica, radiaciones, etc.) cuentan como competencias,
+# nunca como prueba de que la vacante esté dirigida a físicos.
 TERMINOS_FISICA_RE = re.compile(
-    r'(?<!infraestructura\s)(?<!educaci[oó]n\s)(?<!educacion\s)(?<!toma\s)(?<!actividad\s)(?<!salud\s)(?<!condici[oó]n\s)(?<!condicion\s)(?<!seguridad\s)(?<!planta\s)'
     r'\b(ingenier[ií]a\s+f[ií]sica|ingenier[oa]\s+f[ií]sic[oa]|f[ií]sica\s+m[eé]dica|f[ií]sica\s+aplicada|'
-    r'profesional\s+en\s+f[ií]sica|estudiante\s+de\s+f[ií]sica|pregrado\s+en\s+f[ií]sica|carrera\s+de\s+f[ií]sica|'
-    r'physics|metrolog[ií]a|cu[aá]ntic[ao]s?|espectroscop[ií]a|difracci[oó]n|protecci[oó]n\s+radiol[oó]gica|'
-    r'dosimetr[ií]a|nanotecnolog[ií]a|fot[oó]nica|estado\s+s[oó]lido|biof[ií]sica)\b',
+    r'profesional\s+(?:en\s+)?f[ií]sica|estudiante\s+(?:de|en)\s+f[ií]sica|pregrado\s+(?:en|de)\s+f[ií]sica|'
+    r'carrera\s+(?:de|en)\s+f[ií]sica|f[ií]sic[oa]s?\s+(?:m[eé]dic[oa]s?|aplicad[oa]s?)|'
+    r'(?:student|graduate|degree|background)\s+(?:in\s+)?physics|physics\s+(?:student|graduate|degree|background))\b',
     re.IGNORECASE
 )
 
@@ -177,12 +229,22 @@ SOLO_TECNICO_RE = re.compile(
     r'\b(t[eé]cnico|tecn[oó]logo|tecnolog[ií]a|t[eé]cnica)\b(?!.*(?:profesional|universitari[ao]|ingenier[ií]a|pregrado))',
     re.IGNORECASE
 )
+ESTUDIANTE_TECNICO_RE = re.compile(
+    r"\bestudiante\s+(?:activo\s+)?(?:de\s+)?(?:un\s+)?(?:t[eé]cnico|tecn[oó]logo|tecnolog[ií]a\s+t[eé]cnica)\b",
+    re.IGNORECASE,
+)
+NIVEL_UNIVERSITARIO_RE = re.compile(
+    r"\b(estudiante\s+universitari[oa]|pregrado|carrera\s+profesional|profesional\s+universitari[oa])\b",
+    re.IGNORECASE,
+)
 
 COMPETENCIAS_GENERICAS_RE = {
     "programacion", "desarrollo", "digital", "optimizacion", "sistemas",
     "mecanica", "electromecanica", "electromecanico", "electronica",
     "quimica", "ingenieria mecanica", "ingenieria electronica",
-    "ingenieria electrica", "ingenieria de sistemas", "ingenieria industrial"
+    "ingenieria electrica", "ingenieria de sistemas", "ingenieria industrial",
+    "fuente", "software", "developer", "control", "materiales", "riesgos",
+    "cuantitativo", "digitalizacion", "mantenimiento", "innovacion", "investigacion y desarrollo"
 }
 
 TERMINOS_MUJERES_RE = re.compile(r'\b(mujer|mujeres|women|women in tech|femenin[ao]?|stem)\b', re.IGNORECASE)
@@ -193,17 +255,12 @@ def normalize_search_text(value):
     return "".join(char for char in normalized if not unicodedata.combining(char))
 
 def matches_keyword(keyword, text):
-    """Busca términos sin distinguir tildes y limita acrónimos/palabras cortas."""
+    """Busca términos completos sin distinguir tildes para evitar aciertos por subcadenas."""
     kw_clean = normalize_search_text(keyword).strip()
     normalized_text = normalize_search_text(text)
-    short_terms = {
-        "stem", "data", "cad", "ia", "ai", "pcb", "daq", "plc", "gum", "iot",
-        "spi", "i2c", "sql", "sem", "drx", "rpa", "ftth", "otdr", "ndt", "end",
-        "etl", "pid", "fem", "fea", "cfd", "tld", "atp", "emtp", "hvac", "mqtt"
-    }
-    if len(kw_clean) <= 4 or kw_clean in short_terms:
-        return bool(re.search(r"(?<![a-z0-9])" + re.escape(kw_clean) + r"(?![a-z0-9])", normalized_text))
-    return kw_clean in normalized_text
+    if not kw_clean:
+        return False
+    return bool(re.search(r"(?<![a-z0-9])" + re.escape(kw_clean) + r"(?![a-z0-9])", normalized_text))
 
 def load_json(filepath):
     if os.path.exists(filepath):
@@ -212,7 +269,7 @@ def load_json(filepath):
     return {}
 
 def scrape_linkedin_query(query, location="Medellin, Antioquia, Colombia"):
-    """Consulta la API pública guest de LinkedIn Jobs para Medellín y Antioquia"""
+    """Consulta vacantes públicas de LinkedIn en el ámbito indicado."""
     url = f"https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords={quote(query)}&location={quote(location)}"
     try:
         r = requests.get(url, headers=HEADERS, timeout=12)
@@ -246,21 +303,32 @@ def scrape_linkedin_query(query, location="Medellin, Antioquia, Colombia"):
                     pass
             
             if title and link:
-                results.append({
+                job = {
                     "titulo": title,
                     "empresa": company,
                     "ubicacion": loc,
                     "url": link,
                     "fecha_publicacion": iso_date or pub_date,
                     "fuente": "LinkedIn Jobs"
-                })
+                }
+                if location == "Colombia":
+                    job["country_scope"] = "CO"
+                elif location == "Worldwide":
+                    job["search_scope"] = "WORLDWIDE"
+                else:
+                    job["search_scope"] = "ANTIOQUIA"
+                results.append(job)
         return results
     except Exception:
         return []
 
-def scrape_computrabajo_query(query):
-    """Consulta convocatorias de prácticas en Computrabajo Antioquia"""
-    url = f"https://co.computrabajo.com/empleos-en-antioquia?q={quote(query)}"
+def scrape_computrabajo_query(query, nationwide=False):
+    """Consulta convocatorias en Computrabajo para Antioquia o todo Colombia."""
+    query_slug = re.sub(r"[^a-z0-9]+", "-", normalize_search_text(query)).strip("-")
+    url = (
+        f"https://co.computrabajo.com/trabajo-de-{query_slug}-en-colombia?q={quote(query)}"
+        if nationwide else f"https://co.computrabajo.com/empleos-en-antioquia?q={quote(query)}"
+    )
     try:
         r = requests.get(url, headers=HEADERS, timeout=6)
         if r.status_code != 200:
@@ -277,20 +345,23 @@ def scrape_computrabajo_query(query):
             comp = unescape(c_m.group(1).strip()) if c_m else "Empresa Confidencial"
             loc_m = re.search(r'<p class="fs16 fc_base mt5">\s*<span[^>]*>\s*([^<]+)\s*</span>', content)
             loc = unescape(loc_m.group(1).strip()) if loc_m else "Medellín, Antioquia"
-            results.append({
+            job = {
                 "titulo": title,
                 "empresa": comp,
                 "ubicacion": loc,
                 "url": href,
                 "fecha_publicacion": "Reciente",
                 "fuente": "Computrabajo"
-            })
+            }
+            if nationwide:
+                job["country_scope"] = "CO"
+            results.append(job)
         return results
     except Exception:
         return []
 
 def scrape_magneto_query(query):
-    """Consulta convocatorias de prácticas en la API pública de Magneto365 en Antioquia/Remoto."""
+    """Consulta convocatorias de prácticas en Colombia en la API pública de Magneto365."""
     api_url = "https://api.magneto365.com/jobs/v1/public/jobs/search"
     headers = {
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36",
@@ -308,12 +379,6 @@ def scrape_magneto_query(query):
         "queries[0][term]": query,
         "country": "co"
     }
-    antioquia_cities = {
-        "medellín", "medellin", "envigado", "itagüí", "itagui", "bello", "sabaneta",
-        "la estrella", "copacabana", "girardota", "caldas", "barbosa", "rionegro",
-        "guarne", "marinilla", "apartadó", "apartado", "cisneros", "antioquia",
-        "retiro", "el retiro", "el carmen de viboral", "carmen de viboral", "puerto berrío"
-    }
     try:
         r = requests.get(api_url, params=params, headers=headers, timeout=6)
         if r.status_code != 200:
@@ -330,17 +395,10 @@ def scrape_magneto_query(query):
             cities = row.get("cities") or []
             if isinstance(cities, list):
                 city_str = ", ".join(cities)
-                city_lower_list = [c.lower() for c in cities]
             else:
                 city_str = str(cities)
-                city_lower_list = [city_str.lower()]
 
-            is_remote = bool(row.get("isRemote"))
-            is_antioquia = any(any(ac in c for ac in antioquia_cities) for c in city_lower_list)
-
-            # Aceptar si es en Antioquia, remoto, o programa multiciudad que incluye Antioquia
-            if not (is_antioquia or is_remote):
-                continue
+            # La API se consulta con country=co; conservar todas las ciudades colombianas.
 
             empresa = (row.get("companyName") or "Empresa Confidencial").strip()
             url = f"https://www.magneto365.com/co/empleos/{slug}"
@@ -360,24 +418,26 @@ def scrape_magneto_query(query):
             skills_names = [s.get("name") for s in skills if isinstance(s, dict) and s.get("name")]
             perfil = ", ".join(skills_names[:5]) if skills_names else ""
 
-            results.append({
+            job = {
                 "titulo": title,
                 "empresa": empresa,
-                "ubicacion": "Remoto (Colombia)" if is_remote else (city_str if city_str else "Medellín / Antioquia"),
+                "ubicacion": "Remoto (Colombia)" if is_remote else (city_str if city_str else "Colombia"),
                 "url": url,
                 "fecha_publicacion": pub_date,
                 "fuente": "Magneto365",
+                "country_scope": "CO",
                 "compensacion": comp,
                 "perfil": perfil,
                 "mision": desc[:1800] if desc else ""
-            })
+            }
+            results.append(job)
         return results
     except Exception:
         return []
 
 def scrape_elempleo_query(query):
-    """Consulta ofertas de prácticas de ingeniería en ElEmpleo.com para Medellín y Antioquia."""
-    url = f"https://www.elempleo.com/co/ofertas-empleo/medellin?trabajo={quote(query)}"
+    """Consulta ofertas de prácticas de ingeniería en ElEmpleo.com para Colombia."""
+    url = f"https://www.elempleo.com/co/ofertas-empleo?trabajo={quote(query)}"
     try:
         r = requests.get(url, headers=HEADERS, timeout=6)
         if r.status_code != 200:
@@ -407,6 +467,7 @@ def scrape_elempleo_query(query):
                         "url": clean_url,
                         "fecha_publicacion": "Reciente",
                         "fuente": "ElEmpleo.com",
+                        "country_scope": "CO",
                         "compensacion": comp
                     })
             except Exception:
@@ -451,6 +512,7 @@ def scrape_firstjob_query(query):
                 "url": url_job,
                 "fecha_publicacion": "Reciente",
                 "fuente": "FirstJob",
+                "country_scope": "CO",
                 "compensacion": ""
             })
         return results
@@ -472,11 +534,16 @@ def classify_and_score_job(job, config_ramas):
         return None
     if SOLO_TECNICO_RE.search(f"{title_lower} {perfil_lower}"):
         return None
+    if ESTUDIANTE_TECNICO_RE.search(text_to_analyze) and not NIVEL_UNIVERSITARIO_RE.search(text_to_analyze):
+        return None
 
     # 2. Detección de programas especiales y afinidad real con Física (evitando "infraestructura física", "toma física", etc.)
     es_impulso_liderazgo = bool(TERMINOS_MUJERES_RE.search(text_to_analyze))
     clean_for_physics = FALSE_FISICA_PHRASES_RE.sub(" ", f"{title_lower} {perfil_lower} {mision_lower}")
-    es_exclusiva_fisica = bool(TERMINOS_FISICA_RE.search(clean_for_physics))
+    es_exclusiva_fisica = bool(
+        TERMINOS_FISICA_RE.search(clean_for_physics)
+        or re.search(r"\b(?:f[ií]sic[oa]s?|physics)\b", title_lower)
+    )
 
     # 3. Cierre inminente cuando hay fecha explícita
     es_cierre_inminente = False
@@ -515,6 +582,11 @@ def classify_and_score_job(job, config_ramas):
     max_rama_score = 0
     competencias_detectadas = set()
     carreras_espejo_detectadas = set()
+    carreras_catalogo = {
+        normalize_search_text(carrera).strip()
+        for data in config_ramas.get("ramas", {}).values()
+        for carrera in data.get("carreras_mencionadas", [])
+    }
 
     for rama_key, data in config_ramas.get("ramas", {}).items():
         if rama_key == "mujeres_stem":
@@ -522,6 +594,7 @@ def classify_and_score_job(job, config_ramas):
         competencias_detectadas.update(
             keyword for keyword in data.get("palabras_clave", [])
             if normalize_search_text(keyword).strip() not in COMPETENCIAS_GENERICAS_RE
+            and normalize_search_text(keyword).strip() not in carreras_catalogo
             and matches_keyword(keyword, text_to_analyze)
         )
 
@@ -549,6 +622,14 @@ def classify_and_score_job(job, config_ramas):
             if career_match:
                 carreras_espejo_detectadas.add(carrera)
 
+    carreras_normalizadas = {
+        normalize_search_text(carrera): carrera for carrera in carreras_espejo_detectadas
+    }
+    carreras_espejo_detectadas = {
+        carrera for normalized, carrera in carreras_normalizadas.items()
+        if not any(normalized != other and normalized in other for other in carreras_normalizadas)
+    }
+
     # Evitar contar una frase y su subcadena como dos competencias distintas
     normalizadas = {normalize_search_text(item): item for item in competencias_detectadas}
     competencias_detectadas = {
@@ -562,8 +643,7 @@ def classify_and_score_job(job, config_ramas):
     es_alta_afinidad_tecnica = (
         not es_exclusiva_fisica
         and (
-            (bool(carreras_espejo_detectadas) and len(competencias_detectadas) >= 1)
-            or len(competencias_detectadas) >= 2
+            bool(carreras_espejo_detectadas) and len(competencias_detectadas) >= 2
         )
     )
 
@@ -673,19 +753,89 @@ def deduplicate_classified_jobs(jobs):
             unique[identity] = job
     return list(unique.values())
 
+def extract_jobposting_details(html):
+    """Extrae la descripción y los requisitos de JobPosting cuando la fuente los publica en JSON-LD."""
+    for raw in re.findall(
+        r'<script[^>]*type=["\']application/ld\+json["\'][^>]*>(.*?)</script>',
+        html or "", re.IGNORECASE | re.DOTALL
+    ):
+        try:
+            payload = json.loads(unescape(raw).strip())
+        except (json.JSONDecodeError, TypeError):
+            continue
+
+        stack = payload if isinstance(payload, list) else [payload]
+        while stack:
+            item = stack.pop()
+            if not isinstance(item, dict):
+                continue
+            graph = item.get("@graph")
+            if isinstance(graph, list):
+                stack.extend(graph)
+            types = item.get("@type", [])
+            if isinstance(types, str):
+                types = [types]
+            if not any(str(kind).casefold() == "jobposting" for kind in types):
+                continue
+
+            def clean(value):
+                if isinstance(value, dict):
+                    value = value.get("name") or value.get("value") or ""
+                if isinstance(value, list):
+                    value = ", ".join(str(part) for part in value if part)
+                return unescape(re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", str(value or "")))).strip()
+
+            description = clean(item.get("description"))
+            profile_fields = (
+                "qualifications", "educationRequirements", "experienceRequirements",
+                "skills", "responsibilities"
+            )
+            profile = " ".join(
+                f"{field}: {clean(item.get(field))}"
+                for field in profile_fields if clean(item.get(field))
+            )
+            return {
+                "mision": description[:3000],
+                "perfil": profile[:2000],
+                "fecha_cierre_iso": clean(item.get("validThrough")),
+            }
+    return {}
+
+def parse_source_date(value):
+    """Convierte las fechas de publicación habituales de los portales a date; ignora etiquetas como "Reciente"."""
+    value = str(value or "").strip()
+    if not value:
+        return None
+    try:
+        return datetime.fromisoformat(value.replace("Z", "+00:00")).date()
+    except ValueError:
+        pass
+    for date_format in ("%d/%m/%Y", "%d-%m-%Y", "%Y/%m/%d"):
+        try:
+            return datetime.strptime(value[:10], date_format).date()
+        except ValueError:
+            continue
+    return None
+
 def verify_job_url(job):
     """Verifica que la URL de postulación sea válida. Permite URLs públicas de LinkedIn Guest API sin bloquearlas por rate-limit del servidor."""
     url = job.get("url", "")
     if not url or not url.startswith("http"):
         return False
-    # Las ofertas de LinkedIn provienen de la API Guest en tiempo real; su sitio bloquea peticiones masivas
-    # desde servidores (HTTP 429/999) aunque abren perfectamente en el navegador del estudiante.
+    # LinkedIn bloquea la verificación automatizada; la consulta guest solo confirma que
+    # la publicación apareció recientemente, no que siga aceptando postulaciones.
     if "linkedin.com/jobs/view/" in url.lower() or "linkedin.com" in url.lower():
+        job["estado_vigencia"] = "Publicada recientemente; vigencia sin confirmar"
         return True
     try:
         r = requests.get(url, headers=HEADERS, timeout=4.5, allow_redirects=True)
         if r.status_code >= 400:
             return False
+        structured = extract_jobposting_details(r.text)
+        if structured:
+            job["mision"] = job.get("mision") or structured.get("mision", "")
+            job["perfil"] = job.get("perfil") or structured.get("perfil", "")
+            job["fecha_cierre_iso"] = job.get("fecha_cierre_iso") or structured.get("fecha_cierre_iso", "")
         txt = r.text.lower()
         closed_signals = (
             "esta oferta ya no está disponible", "la oferta que buscas ya no está disponible",
@@ -695,6 +845,7 @@ def verify_job_url(job):
         )
         if any(signal in txt for signal in closed_signals):
             return False
+        has_future_deadline = False
         for valid_through in re.findall(r'"validThrough"\s*:\s*"([^"]+)"', r.text, re.IGNORECASE):
             try:
                 vt_clean = valid_through.replace("Z", "+00:00")
@@ -703,8 +854,16 @@ def verify_job_url(job):
                     vt_dt = vt_dt.replace(tzinfo=timezone.utc)
                 if vt_dt < datetime.now(timezone.utc):
                     return False
+                has_future_deadline = True
             except Exception:
                 continue
+        publication_date = parse_source_date(job.get("fecha_publicacion"))
+        if (
+            publication_date
+            and (datetime.now(timezone.utc).date() - publication_date).days > 60
+            and not has_future_deadline
+        ):
+            return False
         visible_text = normalize_search_text(unescape(re.sub(r"<[^>]+>", " ", r.text)))
         deadline = re.search(
             r"fecha\s+limite\s+(?:de\s+)?(?:solicitud|postulacion|inscripcion)?\s*[:\-]?\s*"
@@ -728,32 +887,63 @@ def verify_job_url(job):
                 clean_desc = unescape(re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", desc_m.group(1))).strip())
                 if len(clean_desc) > 40:
                     job["mision"] = clean_desc[:1800]
+        job["estado_vigencia"] = "Enlace accesible en la última consulta"
         return True
     except Exception:
         return False
 
 def is_in_target_location(job):
-    """Acepta Antioquia/Medellín o modalidad remota / 100 % híbrida explícita."""
-    details = " ".join(str(job.get(key, "")) for key in (
-        "titulo", "ubicacion", "modalidad", "perfil", "mision", "tareas", "resumen_fuente"
-    ))
-    if LOCAL_LOCATION_RE.search(details):
+    """Incluye Antioquia, Colombia y remoto internacional con elegibilidad rastreable."""
+    location = str(job.get("ubicacion", ""))
+    modality = str(job.get("modalidad", ""))
+    explicit_eligibility = " ".join(str(job.get(key, "")) for key in ("alcance_elegibilidad", "pais_elegibilidad"))
+
+    # Estas fuentes consultan Colombia de forma explícita (API country=co, país=Colombia, etc.).
+    if job.get("country_scope") == "CO":
         return True
-    return bool(REMOTE_MODALITY_RE.search(details))
+    if LOCAL_LOCATION_RE.search(location):
+        return True
+
+    title = str(job.get("titulo", ""))
+    location_is_remote = bool(
+        REMOTE_MODALITY_RE.search(location)
+        or REMOTE_MODALITY_RE.search(modality)
+        or (job.get("search_scope") == "WORLDWIDE" and REMOTE_MODALITY_RE.search(title))
+    )
+    if not location_is_remote:
+        return False
+
+    # Aceptación explícita de Colombia/Latinoamérica/global en los datos de elegibilidad.
+    if REMOTE_GLOBAL_SCOPE_RE.search(f"{location} {modality} {explicit_eligibility}"):
+        return True
+
+    # LinkedIn suele publicar solo "Remote". Se conserva como pista para revisar,
+    # sin afirmar que la empresa acepte postulantes desde Colombia.
+    if job.get("search_scope") == "WORLDWIDE" and REMOTE_GENERIC_LOCATION_RE.match(location):
+        job["alcance_geografico"] = "Remoto internacional: elegibilidad desde Colombia por confirmar"
+        return True
+    if job.get("search_scope") == "WORLDWIDE" and REMOTE_MODALITY_RE.search(title):
+        job["alcance_geografico"] = "Remoto internacional: restricciones y elegibilidad desde Colombia por confirmar"
+        job["ubicacion"] = f"{location} · remoto (elegibilidad desde Colombia por confirmar)"
+        return True
+    if job.get("search_scope") == "ANTIOQUIA" and REMOTE_GENERIC_LOCATION_RE.match(location):
+        job["alcance_geografico"] = "Remoto: cobertura desde Colombia por confirmar"
+        return True
+    return False
 
 def filter_verified_jobs(jobs, max_workers=25):
-    """Filtra una lista de vacantes en paralelo conservando únicamente aquellas con enlaces 100% garantizados."""
+    """Filtra vacantes por ubicación y respuesta de URL, registrando los límites de validación."""
     in_scope = [job for job in jobs if is_in_target_location(job)]
-    print(f"[*] Cobertura geográfica/modalidad: {len(in_scope)} de {len(jobs)} ofertas en Antioquia o remotas (descartadas {len(jobs) - len(in_scope)})")
-    print(f"[*] Verificando enlaces reales en vivo para {len(in_scope)} vacantes candidatas...")
+    print(f"[*] Cobertura geográfica/modalidad: {len(in_scope)} de {len(jobs)} ofertas en Antioquia, Colombia o remoto internacional (descartadas {len(jobs) - len(in_scope)})")
+    print(f"[*] Comprobando URLs y señales de cierre para {len(in_scope)} vacantes candidatas...")
     with concurrent.futures.ThreadPoolExecutor(max_workers=max_workers) as executor:
         results = list(executor.map(verify_job_url, in_scope))
     verified = [j for j, ok in zip(in_scope, results) if ok]
     verified_at = datetime.now(timezone.utc).isoformat(timespec="seconds")
     for job in verified:
-        job["estado_vigencia"] = "Detectada en búsqueda activa"
+        job.setdefault("estado_vigencia", "Enlace accesible en la última consulta")
         job["fecha_verificacion"] = verified_at
-    print(f" [✓] Enlaces públicos válidos (HTTP 200 sin login): {len(verified)} (descartadas {len(in_scope) - len(verified)})")
+    print(f" [✓] Publicaciones con URL aceptada y fecha de consulta registrada: {len(verified)} (descartadas {len(in_scope) - len(verified)})")
     return verified
 
 def build_full_html(vacantes, config_ramas):
@@ -850,7 +1040,7 @@ def build_full_html(vacantes, config_ramas):
         <div class="brand-symbol" title="Ingeniería Física UNAL">⚛</div>
         <div class="brand-text">
           <h1>Prácticas de Ingeniería Física</h1>
-          <p class="subtitle">Medellín y Antioquia • Convocatorias Industriales & Directorio de I+D</p>
+          <p class="subtitle">Colombia y oportunidades remotas internacionales • Ingeniería Física</p>
           <div class="creator-tag">
             Creado por <strong>Jimmy Stebym Rosero Barrera</strong> • UNAL Sede Medellín
           </div>
@@ -859,7 +1049,7 @@ def build_full_html(vacantes, config_ramas):
       <div class="header-meta">
         <div class="live-online-chip" id="liveOnlineBadge" title="Personas conectadas en tiempo real viendo el portal ahora mismo">
           <span class="live-pulse-dot"></span>
-          <span id="liveOnlineCount">1 en línea</span>
+          <span id="liveOnlineCount">Conectando…</span>
         </div>
         <div class="status-beacon" title="El portal está disponible; cada vacante muestra la fecha de verificación de su enlace">
           <span class="beacon-dot"></span>
@@ -894,7 +1084,7 @@ def build_full_html(vacantes, config_ramas):
       <p>
         Plataforma automatizada desarrollada por <strong>Jimmy Stebym Rosero Barrera</strong>. El motor cruza las materias clave de nuestro pénsum oficial (<strong>Análisis de Datos & IA, Electrónica Digital / IoT / I2C, Electrónica Análoga, Metrología e Instrumentación, Simulación Numérica, Cuántica, Radiaciones y Diseño CAD</strong>) con las convocatorias del sector industrial, biomédico y tecnológico.
       </p>
-      <p><strong>Cobertura:</strong> Medellín y Antioquia. Fuera de la región solo se incluyen ofertas que indiquen modalidad remota o 100 % híbrida.</p>
+      <p><strong>Cobertura:</strong> Antioquia y vacantes presenciales en cualquier ciudad de Colombia, más prácticas remotas internacionales. Los anuncios que solo dicen “Remote” se marcan con elegibilidad desde Colombia por confirmar.</p>
       <p><strong>Cómo se calcula:</strong> nivel 1 cuando la oferta menciona Física o Ingeniería Física; nivel 2 cuando solicita una carrera afín y se detectan al menos dos competencias técnicas del pénsum. La publicación y la fecha de verificación se muestran en cada resultado.</p>
     </section>
 
@@ -1295,7 +1485,7 @@ def build_full_html(vacantes, config_ramas):
             <div class="job-specs">
               <span>Ubicación: ${{escapeHtml(j.ubicacion)}}</span>
               <span>Fuente: ${{escapeHtml(j.fuente)}}</span>
-              <span>${{j.estado_vigencia === 'Detectada en búsqueda activa' ? 'Detectada en búsqueda activa' : 'Vigencia por confirmar'}}</span>
+              <span>${{escapeHtml(j.estado_vigencia || 'Vigencia por confirmar')}}</span>
               ${{j.fecha_verificacion ? `<span>Verificada: ${{escapeHtml(new Date(j.fecha_verificacion).toLocaleString('es-CO'))}}</span>` : ''}}
             </div>
             ${{j.es_alta_afinidad_tecnica ? `<div class="job-specs"><span>Carreras afines: ${{escapeHtml((j.carreras_espejo_detectadas || []).join(', '))}}</span><span>Competencias: ${{escapeHtml((j.competencias_detectadas || []).slice(0, 5).join(', '))}}</span></div>` : ''}}
@@ -1711,14 +1901,14 @@ def main():
 
     print("="*70)
     print(" [ATOM] BOT DE RASTREO INTEGRAL - PRÁCTICAS DE INGENIERÍA FÍSICA")
-    print("        Medellín, Valle de Aburrá & Antioquia • Autor: Jimmy Rosero")
+    print("        Colombia + remoto internacional • Autor: Jimmy Rosero")
     print("="*70)
     
     config_ramas = load_json(CONFIG_RAMAS_PATH)
     all_raw_jobs = []
     seen_urls = set()
     
-    # 1. Rastrear Computrabajo Antioquia y Carreras Espejo
+    # 1. Rastrear Computrabajo Antioquia y carreras espejo
     computrabajo_queries = [
         "practicante ingenieria fisica",
         "practicante ingenieria control",
@@ -1744,7 +1934,7 @@ def main():
         "practicante electromecanico",
         "practicante electromecanica"
     ]
-    print(f"\n[*] Rastreando Computrabajo Antioquia y Remoto ({len(computrabajo_queries)} categorías)...")
+    print(f"\n[*] Rastreando Computrabajo Antioquia ({len(computrabajo_queries)} categorías)...")
     for q_ct in computrabajo_queries:
         ct_jobs = scrape_computrabajo_query(q_ct)
         added_ct = 0
@@ -1755,6 +1945,15 @@ def main():
                 added_ct += 1
         if added_ct > 0:
             print(f"    Computrabajo '{q_ct}': +{added_ct} ofertas")
+        time.sleep(0.25)
+
+    national_ct_queries = list(dict.fromkeys(NATIONAL_SEARCH_QUERIES))
+    print(f"\n[*] Ampliando Computrabajo al país completo ({len(national_ct_queries)} búsquedas)...")
+    for q_ct in national_ct_queries:
+        for j in scrape_computrabajo_query(q_ct, nationwide=True):
+            if j["url"] not in seen_urls:
+                seen_urls.add(j["url"])
+                all_raw_jobs.append(j)
         time.sleep(0.25)
 
     # 2. Rastrear Magneto365 en tiempo real (API Pública Oficial)
@@ -1804,7 +2003,7 @@ def main():
             print(f"    Magneto365 '{q_mag}': +{added_mag} ofertas")
         time.sleep(0.25)
 
-    # 3. Rastrear ElEmpleo.com (Antioquia / Pasantías de Ingeniería y Carreras Espejo)
+    # 3. Rastrear ElEmpleo.com en todo Colombia (pasantías de Ingeniería y carreras espejo)
     elempleo_queries = [
         "practicante ingenieria fisica",
         "practicante ingenieria control",
@@ -1839,6 +2038,13 @@ def main():
             print(f"    ElEmpleo '{q_ee}': +{added_ee} ofertas")
         time.sleep(0.25)
 
+    for q_ee in NATIONAL_SEARCH_QUERIES:
+        for j in scrape_elempleo_query(q_ee):
+            if j["url"] not in seen_urls:
+                seen_urls.add(j["url"])
+                all_raw_jobs.append(j)
+        time.sleep(0.25)
+
     # 4. Rastrear FirstJob Colombia (Semilleros Multinacionales)
     firstjob_queries = [
         "",
@@ -1859,7 +2065,7 @@ def main():
             print(f"    FirstJob '{q_fj or 'Colombia general'}': +{added_fj} ofertas")
         time.sleep(0.25)
 
-    # 6. Rastrear LinkedIn Jobs para categorías del pénsum UNAL
+    # 6. Rastrear LinkedIn Jobs para categorías del pénsum UNAL en Antioquia
     print(f"\n[*] Rastreando LinkedIn Jobs para {len(SEARCH_QUERIES)} categorías del pénsum UNAL...")
     for q in SEARCH_QUERIES:
         print(f" -> Buscando: '{q}'...")
@@ -1873,16 +2079,40 @@ def main():
         print(f"    Encontradas {len(jobs)} ofertas (+{added} nuevas)")
         time.sleep(0.3)
 
-    # Rastrear convocatorias de practicantes en empresas líderes de Medellín y Antioquia
+    print(f"\n[*] Rastreando LinkedIn Colombia para {len(NATIONAL_SEARCH_QUERIES)} consultas nacionales...")
+    for query in NATIONAL_SEARCH_QUERIES:
+        jobs = scrape_linkedin_query(query, location="Colombia")
+        added = 0
+        for job in jobs:
+            if job["url"] not in seen_urls:
+                seen_urls.add(job["url"])
+                all_raw_jobs.append(job)
+                added += 1
+        print(f"    Colombia '{query}': {len(jobs)} ofertas (+{added} nuevas)")
+        time.sleep(0.3)
+
+    print(f"\n[*] Buscando prácticas remotas internacionales en {len(GLOBAL_REMOTE_SEARCH_QUERIES)} áreas...")
+    for query in GLOBAL_REMOTE_SEARCH_QUERIES:
+        jobs = scrape_linkedin_query(query, location="Worldwide")
+        added = 0
+        for job in jobs:
+            if job["url"] not in seen_urls:
+                seen_urls.add(job["url"])
+                all_raw_jobs.append(job)
+                added += 1
+        print(f"    Remoto mundial '{query}': {len(jobs)} ofertas (+{added} nuevas)")
+        time.sleep(0.3)
+
+    # Rastrear convocatorias en empresas locales y nacionales priorizadas
     company_directory = load_json(os.path.join(BASE_DIR, "empresas_antioquia.json"))
     top_companies = [item.get("empresa") for item in company_directory if isinstance(item, dict) and item.get("empresa")]
-    top_companies.extend(["Haceb", "Corona", "ISA", "Sura", "Bancolombia", "Argos", "EPM", "CIDET", "XM", "Ruta N", "Mineros S.A.", "Continental Gold", "Pintuco", "Schneider Electric", "Alkomprar", "Sievert"])
+    top_companies.extend(["Haceb", "Corona", "ISA", "Sura", "Bancolombia", "Argos", "EPM", "CIDET", "XM", "Ruta N", "Mineros S.A.", "Continental Gold", "Pintuco", "Schneider Electric", "Alkomprar", "Sievert", "Eficacia", "General Motors", "Globant", "Outsourcing", "Prosegur", "Accenture", "Bosch", "Keyrus"])
     top_companies = list(dict.fromkeys(name.strip() for name in top_companies if name and name.strip()))
 
-    print(f"\n[*] Rastreando vacantes en {len(top_companies)} empresas de Antioquia en LinkedIn...")
+    print(f"\n[*] Rastreando empresas destacadas en LinkedIn (ámbito Colombia)...")
     for comp in top_companies:
         q_comp = f"practicante {comp}"
-        jobs = scrape_linkedin_query(q_comp)
+        jobs = scrape_linkedin_query(q_comp, location="Colombia")
         added = 0
         for j in jobs:
             if j["url"] not in seen_urls:
@@ -1894,7 +2124,7 @@ def main():
         time.sleep(0.2)
         
     print(f"\n[*] Total de vacantes únicas recolectadas: {len(all_raw_jobs)}")
-    # Validación estricta de enlaces: solo vacantes que abran garantizadamente sin 404, 429 ni login
+    # Comprueba respuestas y señales de cierre; LinkedIn se marca aparte porque bloquea la validación automatizada.
     verified_raw_jobs = filter_verified_jobs(all_raw_jobs, max_workers=25)
     if not verified_raw_jobs:
         raise RuntimeError("Ninguna vacante pasó los filtros de ubicación y enlace. Se conservaron los archivos publicados; revisa conectividad y fuentes antes de actualizar.")

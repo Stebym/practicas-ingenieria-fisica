@@ -15,6 +15,7 @@ import json
 import csv
 import re
 import time
+import unicodedata
 from html import unescape
 from datetime import datetime
 from pathlib import Path
@@ -45,6 +46,38 @@ REMOTE_MODALITY_RE = re.compile(
     r"\b(remoto|remota|remote|teletrabajo)\b|100\s*%\s*h[ií]brid[oa]",
     re.IGNORECASE,
 )
+REMOTE_GLOBAL_SEARCH_QUERIES = [
+    "physics engineering internship remote worldwide",
+    "applied physics research intern remote",
+    "data science machine learning intern remote worldwide",
+    "python data analytics internship remote global",
+    "quantitative research intern remote worldwide",
+    "electronics embedded systems internship remote",
+    "automation control engineering internship remote",
+    "materials science laboratory intern remote",
+    "optics photonics research internship remote",
+    "energy renewable engineering intern remote",
+    "computer vision image processing internship remote",
+    "engineering intern remote Latin America",
+    "remote internship anywhere engineering physics",
+]
+
+CARRERAS_ESPEJO_QUERIES = [
+    "practicante ingenieria de control afines",
+    "practicante ingenieria electronica afines",
+    "practicante ingenieria mecatronica afines",
+    "practicante ingenieria electrica afines",
+    "practicante ingenieria mecanica afines",
+    "practicante ingenieria materiales afines",
+    "practicante ciencia de datos afines",
+    "practicante analitica estadistica matematicas afines",
+    "practicante automatizacion control afines",
+    "practicante instrumentacion metrologia afines",
+    "practicante ingenieria biomedica bioingenieria afines",
+    "practicante simulacion modelado cuantitativo afines",
+    "practicante ingenieria quimica materiales afines",
+    "practicante telecomunicaciones optica afines",
+]
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 CONFIG_RAMAS_PATH = os.path.join(BASE_DIR, "config_ramas.json")
@@ -137,6 +170,29 @@ def matches_keyword(keyword, text):
         return bool(re.search(r'(?:\b|_)' + re.escape(kw_clean) + r'(?:\b|_)', text, re.IGNORECASE))
     return kw_clean in text.lower()
 
+def normalize_match_text(value):
+    normalized = unicodedata.normalize("NFKD", str(value or "").casefold())
+    return "".join(char for char in normalized if not unicodedata.combining(char))
+
+def career_is_requested_as_related(career, text):
+    """Solo habilita una carrera espejo cuando el aviso la vincula con afines/relacionadas."""
+    normalized_career = normalize_match_text(career).strip()
+    normalized_text = normalize_match_text(text)
+    if not normalized_career or normalized_career in {"fisica", "ingenieria fisica", "todas las ingenierias"}:
+        return False
+    career_pattern = re.compile(
+        r"(?<![a-z0-9])" + re.escape(normalized_career) + r"(?![a-z0-9])"
+    )
+    related_pattern = re.compile(
+        r"\b(?:afines?|relacionad[oa]s?|similares?|related\s+(?:field|fields|discipline|disciplines|major|majors)|or\s+equivalent)\b"
+    )
+    for match in career_pattern.finditer(normalized_text):
+        start = max(0, match.start() - 90)
+        end = min(len(normalized_text), match.end() + 110)
+        if related_pattern.search(normalized_text[start:end]):
+            return True
+    return False
+
 def load_json(filepath):
     if os.path.exists(filepath):
         with open(filepath, "r", encoding="utf-8") as f:
@@ -166,17 +222,35 @@ def scrape_linkedin_query(query, location="Medellin, Antioquia, Colombia"):
             company = comp_m.group(1).strip() if comp_m else "Empresa Confidencial"
             loc = loc_m.group(1).strip() if loc_m else "Medellín, Antioquia"
             link = link_m.group(1).split("?")[0] if link_m else ""
+            iso_date = date_m.group(1).strip() if date_m else ""
             pub_date = date_m.group(2).strip() if date_m else "Reciente"
+
+            if location == "Worldwide":
+                if not REMOTE_MODALITY_RE.search(f"{title} {loc}"):
+                    continue
+                if not re.search(r"\b(intern(?:ship)?|trainee|practicante|pasant[ií]a|pr[aá]ctica|student)\b", title, re.IGNORECASE):
+                    continue
+                if iso_date:
+                    try:
+                        if (datetime.now().date() - datetime.fromisoformat(iso_date).date()).days > 45:
+                            continue
+                    except ValueError:
+                        pass
             
             if title and link:
-                results.append({
+                job = {
                     "titulo": title,
                     "empresa": company,
                     "ubicacion": loc,
                     "url": link,
-                    "fecha_publicacion": pub_date,
+                    "fecha_publicacion": (iso_date or pub_date) if location == "Worldwide" else pub_date,
                     "fuente": "LinkedIn Jobs"
-                })
+                }
+                if location == "Worldwide":
+                    job["search_scope"] = "WORLDWIDE"
+                    job["alcance_geografico"] = "Remoto internacional; confirmar elegibilidad desde Colombia"
+                    job["ubicacion"] = f"{loc} · remoto internacional (elegibilidad por confirmar)"
+                results.append(job)
         return results
     except Exception as e:
         return []
@@ -408,6 +482,7 @@ def classify_and_score_job(job, config_ramas):
     perfil_lower = job.get("perfil", "").lower()
     mision_lower = job.get("mision", "").lower()
     text_to_analyze = f"{title_lower} {company_lower} {perfil_lower} {mision_lower}"
+    career_text = f"{title_lower} {perfil_lower} {mision_lower} {job.get('resumen_fuente', '').lower()}"
 
     # Descartar roles abiertamente no técnicos / administrativos de servicio que se cuelan en búsquedas amplias
     if any(re.search(p, title_lower) for p in EXCLUDED_ROLES):
@@ -450,11 +525,35 @@ def classify_and_score_job(job, config_ramas):
 
         kw_hits = 0
         palabras = data.get("palabras_clave", [])
+        carreras = data.get("carreras_mencionadas", [])
+        carreras_afines_candidatas = [
+            carrera for carrera in carreras
+            if career_is_requested_as_related(carrera, career_text)
+        ]
+        carreras_afines_unicas = {
+            normalize_match_text(carrera): carrera for carrera in carreras_afines_candidatas
+        }
+        carreras_afines = [
+            carrera for normalized, carrera in carreras_afines_unicas.items()
+            if not any(
+                normalized != otra and normalized in otra
+                for otra in carreras_afines_unicas
+            )
+        ]
+        palabras_carrera_afines = {
+            normalize_match_text(palabra)
+            for palabra in data.get("palabras_clave_carreras_afines", [])
+        }
         for p in palabras:
+            palabra_normalizada = normalize_match_text(p)
+            # Las menciones de una carrera se puntúan solo mediante la regla explícita de "afines".
+            if palabra_normalizada in palabras_carrera_afines and not carreras_afines:
+                continue
             if matches_keyword(p, text_to_analyze):
                 kw_hits += 1
+        kw_hits += len(carreras_afines)
 
-        # Solo se considera rama afín si coincide al menos una palabra clave técnica real
+        # Una coincidencia técnica o una carrera espejo con "afines" activa la rama.
         if kw_hits > 0:
             score = kw_hits * 3
             empresas_ref = [e.lower() for e in data.get("empresas_referencia", [])]
@@ -520,8 +619,14 @@ def verify_job_url(job):
     url = job.get("url", "")
     if not url or not url.startswith("http"):
         return False
-    # Excluir LinkedIn porque requiere inicio de sesión obligatorio o bloquea con HTTP 429
+    # Las publicaciones mundiales de LinkedIn se conservan como pistas remotas recientes;
+    # la vigencia y la elegibilidad desde Colombia deben confirmarse en la fuente.
     if "linkedin.com" in url.lower():
+        if job.get("search_scope") == "WORLDWIDE" and REMOTE_MODALITY_RE.search(
+            f"{job.get('titulo', '')} {job.get('ubicacion', '')}"
+        ):
+            job["estado_vigencia"] = "Anuncio remoto reciente; confirmar vigencia y elegibilidad desde Colombia"
+            return True
         return False
     try:
         r = requests.get(url, headers=HEADERS, timeout=4.5, allow_redirects=True)
@@ -537,6 +642,8 @@ def verify_job_url(job):
 def is_in_target_location(job):
     """Acepta Antioquia/Medellín o modalidad remota / 100 % híbrida explícita."""
     location = str(job.get("ubicacion", ""))
+    if job.get("search_scope") == "WORLDWIDE":
+        return bool(REMOTE_MODALITY_RE.search(f"{job.get('titulo', '')} {location} {job.get('modalidad', '')}"))
     if LOCAL_LOCATION_RE.search(location):
         return True
 
@@ -661,7 +768,7 @@ def build_full_html(vacantes, config_ramas):
       <p>
         Plataforma automatizada desarrollada por <strong>Jimmy Stebym Rosero Barrera</strong>. El motor cruza las materias clave de nuestro pénsum oficial (<strong>Análisis de Datos & IA, Electrónica Digital / IoT / I2C, Electrónica Análoga, Metrología e Instrumentación, Simulación Numérica, Cuántica, Radiaciones y Diseño CAD</strong>) con las convocatorias del sector industrial, biomédico y tecnológico.
       </p>
-      <p><strong>Cobertura:</strong> Medellín y Antioquia. Fuera de la región solo se incluyen ofertas que indiquen modalidad remota o 100 % híbrida.</p>
+      <p><strong>Cobertura:</strong> Medellín y Antioquia, más prácticas remotas internacionales. Confirma en el aviso original si aceptan postulantes desde Colombia.</p>
     </section>
 
     <!-- NAVEGACIÓN POR PESTAÑAS (TABS) -->
@@ -824,7 +931,7 @@ def build_full_html(vacantes, config_ramas):
   <!-- FOOTER SEMÁNTICO -->
   <footer class="site-footer">
     <p class="institution">Herramienta desarrollada para estudiantes de Ingeniería Física • UNAL Medellín, Colombia</p>
-    <p class="schedule-note">Actualización diaria: Vacantes (20:00) • Becas y Convenios (07:00)</p>
+    <p class="schedule-note">Vacantes: inicio 19:30, publicación al terminar • Becas y Convenios (07:00)</p>
     
     <div class="footer-meta-bar">
       <span>Portal Académico Independiente • Facultad de Ciencias & Facultad de Minas</span>
@@ -1332,7 +1439,8 @@ def main():
         "practicante datos",
         "practicante electromecanico",
         "practicante instrumentacion",
-        "practicante metrologia"
+        "practicante metrologia",
+        *CARRERAS_ESPEJO_QUERIES,
     ]
     print(f"\n[*] Rastreando Computrabajo Antioquia ({len(computrabajo_queries)} categorías)...")
     for q_ct in computrabajo_queries:
@@ -1380,7 +1488,8 @@ def main():
         "practicante ingenieria",
         "practicante automatizacion",
         "practicante electromecanico",
-        "practicante datos"
+        "practicante datos",
+        *CARRERAS_ESPEJO_QUERIES,
     ]
     print(f"\n[*] Rastreando ElEmpleo.com ({len(elempleo_queries)} categorías)...")
     for q_ee in elempleo_queries:
@@ -1426,6 +1535,20 @@ def main():
                 all_raw_jobs.append(j)
                 added += 1
         print(f"    Encontradas {len(jobs)} ofertas (+{added} nuevas)")
+        time.sleep(0.3)
+
+    # 6b. Búsqueda remota internacional: solo conserva anuncios que indiquen Remote
+    # en el título o ubicación; elegibilidad geográfica queda explícita para revisar.
+    print(f"\n[*] Buscando prácticas remotas internacionales en {len(REMOTE_GLOBAL_SEARCH_QUERIES)} áreas...")
+    for query in REMOTE_GLOBAL_SEARCH_QUERIES:
+        jobs = scrape_linkedin_query(query, location="Worldwide")
+        added = 0
+        for job in jobs:
+            if job["url"] not in seen_urls:
+                seen_urls.add(job["url"])
+                all_raw_jobs.append(job)
+                added += 1
+        print(f"    Remoto mundial '{query}': {len(jobs)} ofertas (+{added} nuevas)")
         time.sleep(0.3)
 
     # 7. Rastrear convocatorias de practicantes en empresas líderes de Medellín y Antioquia

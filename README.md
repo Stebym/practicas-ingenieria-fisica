@@ -3,7 +3,7 @@
 **Autor:** Jimmy Stebym Rosero Barrera  
 **Institución:** Universidad Nacional de Colombia (Sede Medellín)  
 **Carrera:** Ingeniería Física  
-**Actualización Automática:** Todos los días a las 20:00 horas (8:00 PM)
+**Búsqueda de vacantes:** inicia todos los días a las 19:30 (7:30 PM, hora Colombia); la página se actualiza al terminar el bot.
 
 ---
 
@@ -51,7 +51,7 @@ Este proyecto fue construido aplicando estándares profesionales de **Desarrollo
   * **⏳ Próximas a Finalizar (< 5 Días)**
   * **🚀 Ecosistema Nacional & Retos (Interacpedia, Estado Joven, Torre.ai, SENA SGVA)**
   * **🌍 Becas & Pasantías Internacionales (ICETEX, IAESTE, DAAD, CERN, Mitacs y Convenios UNAL)**
-* `.github/workflows/auto_update.yml`: Flujo nocturno que rastrea las vacantes laborales a las 20:00 (hora Colombia).
+* `.github/workflows/auto_update.yml`: Flujo nocturno que inicia el rastreo a las 19:30 (hora Colombia) y publica la página al terminar.
 * `.github/workflows/becas_update.yml`: Flujo matutino que rastrea becas y convenios internacionales a las 07:00 AM (hora Colombia).
 * `.github/workflows/static.yml`: Despliega automáticamente `index.html`, `estilos.css`, `estrellas.js`, `fondo_fisica.svg`, `fondo_fisica_movil.svg`, `vacantes_practicas.json`, `convenios_internacionales.json` y `becas_internacionales.json` a GitHub Pages cada vez que se actualiza `main` o al concluir cualquiera de los bots diarios.
 
@@ -60,7 +60,7 @@ Rastreo activo multi-plataforma:
 1. **Magneto365 (API Pública Oficial)**: Rastreo dinámico en vivo de ofertas con compensación verificada (Corona Industrial, Haceb, Kalley, Crystal, ERCO Energía, Protección, Comfama).
 2. **ElEmpleo.com**: Rastreo en tiempo real de pasantías de ingeniería, automatización, datos y mantenimiento.
 3. **FirstJob Colombia**: Programas de prácticas y semilleros en multinacionales (Schneider Electric, Dialectica, Galderma, Alsea).
-4. **Computrabajo Antioquia**: Barrido dinámico de convocatorias técnicas, electromecánicas, instrumentación y metrología.
-5. **LinkedIn Jobs Guest API**: Búsqueda en tiempo real de vacantes y pasantías para las 35 áreas del pénsum UNAL y 35 empresas líderes de Medellín y Antioquia.
+4. **Computrabajo Antioquia**: Búsqueda de Ingeniería Física y carreras espejo en áreas técnicas; las consultas espejo se enfocan en avisos que mencionan carreras afines.
+5. **LinkedIn Jobs Guest API**: Búsqueda en Medellín y Antioquia, más consultas Worldwide para prácticas remotas. Los avisos internacionales quedan marcados para confirmar elegibilidad desde Colombia.
 6. **Portales Corporativos y Estatales Directos**: EPM, Grupo Argos, Enel, ABB, Gobernación de Antioquia y Sievert Radiaciones.
 7. **Ecosistema Complementario**: Accesos y guías directas para Interacpedia (retos empresariales), Estado Joven (MinTrabajo), Torre.ai y SENA SGVA.

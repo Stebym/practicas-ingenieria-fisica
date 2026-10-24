@@ -25,9 +25,13 @@
         "python", "simulacion", "simulaciones", "modelado", "metodos numericos",
         "computacional", "prompt engineering", "inteligencia artificial", "algoritmos",
         "estadistica", "investigacion de operaciones", "sql", "power bi", "matlab",
-        "business intelligence", "cientifico de datos", "analista de datos"
+        "business intelligence", "cientifico de datos", "analista de datos",
+        "matematicas", "ingenieria de sistemas", "ciencia de datos", "data science", "etl", "big data",
+        "riesgos", "cuantitativo", "optimizacion", "rpa", "power automate",
+        "series de tiempo", "deep learning", "redes neuronales"
       ],
-      "carreras_mencionadas": ["ingenieria fisica", "matematicas", "sistemas", "estadistica", "fisica"],
+      "palabras_clave_carreras_afines": ["matematicas", "ingenieria de sistemas", "ciencia de datos", "data science"],
+      "carreras_mencionadas": ["ingenieria fisica", "matematicas", "sistemas", "estadistica", "fisica", "ingenieria de sistemas", "ciencia de datos", "data science"],
       "empresas_referencia": ["Bancolombia", "Sura", "Proteccion", "XM", "Ruta N", "Mercado Libre", "Globant", "Tuya"],
       "mision_tipica": "Modelamiento matemático, pipelines de datos, simulación numérica de procesos y entrenamiento de algoritmos predictivos e IA.",
       "actividades_clave": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables."
@@ -40,8 +44,10 @@
       "palabras_clave": [
         "digital", "microcontrolador", "microcontroladores", "iot", "i2c", "spi",
         "uart", "embebido", "embedded", "firmware", "fpga", "arduino", "esp32",
-        "stm32", "taller v", "redes de sensores", "hardware", "c++", "c language"
+        "stm32", "taller v", "redes de sensores", "hardware", "c++", "c language", "ingenieria electronica", "ingenieria mecatronica",
+        "lorawan", "mqtt", "sistemas embebidos", "vhdl", "verilog", "raspberry", "vision por computador"
       ],
+      "palabras_clave_carreras_afines": ["ingenieria electronica", "ingenieria mecatronica"],
       "carreras_mencionadas": ["ingenieria fisica", "ingenieria electronica", "ingenieria mecatronica"],
       "empresas_referencia": ["Rockwell Automation", "Haceb", "Sofasa", "Ruta N", "Startups IoT", "Schneider Electric"],
       "mision_tipica": "Desarrollo de sistemas embebidos, firmware en C/C++, comunicación por buses I2C/SPI y redes de sensores industriales IoT.",
@@ -55,8 +61,9 @@
       "palabras_clave": [
         "analoga", "análoga", "circuitos", "taller iv", "taller iii", "electromagnetico",
         "amplificador", "amplificadores", "filtro", "opamp", "fuente", "pcb",
-        "dispositivos electromagneticos", "semiconductores", "proteus", "orcad", "kicad"
+        "dispositivos electromagneticos", "semiconductores", "proteus", "orcad", "kicad", "ingenieria electronica"
       ],
+      "palabras_clave_carreras_afines": ["ingenieria electronica"],
       "carreras_mencionadas": ["ingenieria fisica", "ingenieria electronica"],
       "empresas_referencia": ["Haceb", "Corona", "Schneider", "Siemens", "Laboratorios de Electronica"],
       "mision_tipica": "Diseño, simulación y montaje de etapas de acondicionamiento de señal, circuitos magnéticos y placas de circuito impreso (PCB).",
@@ -71,9 +78,13 @@
         "instrumentacion", "instrumentación", "metrologia", "metrología", "calibracion",
         "calibración", "automatizacion", "automatización", "control", "sensores", "transductores", "daq", "labview", "instrumentacion virtual",
         "incertidumbre", "medicion", "medición", "gum", "iso 17025", "onac", "plc", "scada",
-        "electromecanica", "electromecánica", "electromecanico", "electromecánico", "mecatronica", "mecatrónica"
+        "electromecanica", "electromecánica", "electromecanico", "electromecánico", "mecatronica", "mecatrónica", "ingenieria de control",
+        "ingenieria electronica", "ingenieria mecatronica", "ingenieria electromecanica",
+        "control automatico", "variables fisicas", "pid", "hart", "modbus", "profibus", "instrumentista",
+        "lazos de control", "telemetria", "mantenimiento predictivo", "vibraciones", "termografia"
       ],
-      "carreras_mencionadas": ["ingenieria fisica", "ingenieria electronica", "ingenieria de control"],
+      "palabras_clave_carreras_afines": ["ingenieria de control", "ingenieria electronica", "ingenieria mecatronica", "ingenieria electromecanica"],
+      "carreras_mencionadas": ["ingenieria fisica", "ingenieria electronica", "ingenieria de control", "ingenieria mecatronica", "ingenieria electromecanica"],
       "empresas_referencia": ["CIDET", "Haceb", "Corona", "Grupo Argos", "Laboratorios de Calibracion", "Sofasa"],
       "mision_tipica": "Calibración de instrumentos de medición de variables físicas, cálculo de incertidumbre y programación de sistemas DAQ/LabVIEW.",
       "actividades_clave": "Levantamiento de curvas de calibración, programación en LabVIEW, enlace con autómatas PLC y aseguramiento metrológico ISO 17025."
@@ -85,9 +96,12 @@
       "palabras_clave": [
         "diseno mecanico", "diseño mecanico", "dibujo tecnico", "dibujo para ingenieria",
         "taller ii", "taller i", "cad", "solidworks", "inventor", "autocad",
-        "tolerancias", "mecanismos", "resistencia de materiales", "elementos finitos", "ansys"
+        "tolerancias", "mecanismos", "resistencia de materiales", "elementos finitos", "ansys", "ingenieria mecanica", "ingenieria electromecanica",
+        "fem", "fea", "cfd", "comsol", "fluent", "termodinamica", "transferencia de calor",
+        "fluidos", "hvac", "aires acondicionados"
       ],
-      "carreras_mencionadas": ["ingenieria fisica", "ingenieria mecanica", "ingenieria de diseno"],
+      "palabras_clave_carreras_afines": ["ingenieria mecanica", "ingenieria electromecanica"],
+      "carreras_mencionadas": ["ingenieria fisica", "ingenieria mecanica", "ingenieria de diseno", "ingenieria electromecanica"],
       "empresas_referencia": ["Sofasa", "Haceb", "Industrias Metalmecanicas", "Talleres de Prototipado"],
       "mision_tipica": "Modelado CAD 3D de piezas y componentes mecánicos para montajes de laboratorio e instrumentación industrial.",
       "actividades_clave": "Planos técnicos con tolerancias dimensionales y geométricas (GD&T), simulación de esfuerzos por elementos finitos y prototipado 3D."
@@ -114,10 +128,13 @@
       "prioridad_bonus": 55,
       "palabras_clave": [
         "radiaciones", "radiacion", "radiación", "fisica medica", "física médica",
-        "nuclear", "dosimetria", "dosimetría", "radioterapia", "rayos x",
-        "blindaje", "proteccion radiologica", "aceleradores", "medicina nuclear", "resonancia"
+        "nuclear", "dosimetria", "dosimetría", "radioterapia", "rayos x", "ingenieria biomedica", "bioingenieria",
+        "blindaje", "proteccion radiologica", "aceleradores", "medicina nuclear", "resonancia",
+        "equipos biomedicos", "tomografia", "mamografia", "acelerador lineal", "camara de ionizacion",
+        "tld", "radioproteccion", "tecnovigilancia", "ingenieria clinica"
       ],
-      "carreras_mencionadas": ["ingenieria fisica", "fisica", "bioingenieria", "biomedica"],
+      "palabras_clave_carreras_afines": ["ingenieria biomedica", "bioingenieria", "ingenieria clinica"],
+      "carreras_mencionadas": ["ingenieria fisica", "fisica", "bioingenieria", "biomedica", "ingenieria biomedica", "ingenieria clinica"],
       "empresas_referencia": ["Hospital San Vicente", "Instituto de Cancerologia", "Clinica Las Americas", "Servicios de Radiodiagnostico"],
       "mision_tipica": "Dosimetría clínica, control de calidad radiológico, calibración de detectores y cálculo de blindajes para fuentes ionizantes.",
       "actividades_clave": "Medición con cámaras de ionización, verificación de dosis en fantomas, protocolos de seguridad radiológica y metrología nuclear."
@@ -130,9 +147,11 @@
       "palabras_clave": [
         "optica", "óptica", "fotonica", "fotónica", "laser", "láser", "fibra optica",
         "vision artificial", "visión artificial", "opencv", "espectroscopia",
-        "interferometria", "sensores opticos", "ondas", "camaras industriales"
+        "interferometria", "sensores opticos", "ondas", "camaras industriales",
+        "telecomunicaciones", "procesamiento de imagenes", "computer vision", "ingenieria en telecomunicaciones"
       ],
-      "carreras_mencionadas": ["ingenieria fisica", "ingenieria electronica", "sistemas"],
+      "palabras_clave_carreras_afines": ["ingenieria en telecomunicaciones"],
+      "carreras_mencionadas": ["ingenieria fisica", "ingenieria electronica", "sistemas", "ingenieria en telecomunicaciones"],
       "empresas_referencia": ["Sofasa", "Ruta N", "Laboratorios de Optica", "Empresas de Inspeccion Automatica"],
       "mision_tipica": "Desarrollo de algoritmos de inspección óptica por visión artificial y caracterización de sistemas fotónicos y láser.",
       "actividades_clave": "Procesamiento de imágenes en Python/OpenCV, calibración de lentes y sensores CMOS/CCD y pruebas espectrofotométricas."
@@ -143,11 +162,14 @@
       "color": "#14b8a6",
       "prioridad_bonus": 50,
       "palabras_clave": [
-        "materiales", "nanotecnologia", "nanotecnología", "caracterizacion", "difraccion",
+        "materiales", "nanotecnologia", "nanotecnología", "caracterizacion", "difraccion", "ingenieria de materiales", "ingenieria quimica", "ingenieria mecanica",
         "drx", "microscopia", "sem", "ensayos mecanicos", "polimeros", "ceramicos",
-        "corrosion", "metalurgia", "traccion", "dureza"
+        "corrosion", "metalurgia", "traccion", "dureza", "cemento",
+        "concreto", "metalografia", "ensayos no destructivos", "end", "ultrasonido", "reologia",
+        "recubrimientos", "laboratorio de calidad"
       ],
-      "carreras_mencionadas": ["ingenieria fisica", "ingenieria de materiales", "quimica", "mecanica"],
+      "palabras_clave_carreras_afines": ["ingenieria de materiales", "ingenieria quimica", "ingenieria mecanica"],
+      "carreras_mencionadas": ["ingenieria fisica", "ingenieria de materiales", "quimica", "mecanica", "ingenieria quimica", "ingenieria mecanica"],
       "empresas_referencia": ["Sumicol / Corona", "Cementos Argos", "Enka", "Invesa", "Andercol"],
       "mision_tipica": "Ensayos de caracterización físico-química y microestructural para control de calidad y desarrollo de nuevos materiales.",
       "actividades_clave": "Operación de difractómetro de rayos X (DRX), microscopio electrónico (SEM), ensayos de tensión/impacto y análisis térmico (DSC/TGA)."
@@ -158,11 +180,15 @@
       "color": "#eab308",
       "prioridad_bonus": 45,
       "palabras_clave": [
-        "energia solar", "fotovoltaic", "solar", "subestacion", "transformador",
+        "energia solar", "fotovoltaic", "solar", "subestacion", "transformador", "ingenieria electrica", "ingenieria energetica",
         "redes electricas", "potencia", "bess", "bateria", "almacenamiento de energia",
-        "transmision", "distribucion electrica", "calidad de la energia", "flujos de potencia"
+        "transmision", "distribucion electrica", "calidad de la energia", "flujos de potencia",
+        "alta tension", "media tension", "baja tension", "protecciones electricas", "sincrofasores",
+        "atp", "emtp", "powerfactory", "digsilent", "etap", "movilidad electrica",
+        "eficiencia energetica", "hidroelectrica"
       ],
-      "carreras_mencionadas": ["ingenieria electrica", "ingenieria fisica", "ingenieria de energia"],
+      "palabras_clave_carreras_afines": ["ingenieria electrica", "ingenieria energetica"],
+      "carreras_mencionadas": ["ingenieria electrica", "ingenieria fisica", "ingenieria de energia", "ingenieria energetica"],
       "empresas_referencia": ["ISA", "XM", "EPM", "Celsia", "Intercolombia", "Erco Energia", "Sunita", "CIDET"],
       "mision_tipica": "Estudios eléctricos de redes de potencia, dimensionamiento fotovoltaico y monitoreo térmico de transformadores y subestaciones.",
       "actividades_clave": "Simulación de flujos de carga, curvas de envejecimiento de aislamiento según norma IEEE, telemetría y calidad de onda."

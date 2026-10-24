@@ -2,8 +2,8 @@ name: Actualizacion Automatica de Vacantes
 
 on:
   schedule:
-    # Se ejecuta todos los días a las 01:00 UTC (20:00 / 8:00 PM hora Colombia)
-    - cron: '0 1 * * *'
+    # Inicia todos los días a las 00:30 UTC (19:30 / 7:30 PM hora Colombia).
+    - cron: '30 0 * * *'
   workflow_dispatch: # Permite ejecutarlo manualmente con un botón en GitHub
 
 permissions:

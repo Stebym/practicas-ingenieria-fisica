@@ -247,12 +247,17 @@ PRACTICE_RE = re.compile(
 # Carreras o áreas que no corresponden a un ingeniero físico cuando el título
 # las nombra sin mencionar ninguna carrera afín.
 CARRERA_NO_AFIN_RE = re.compile(
-    r"\b(?:administrativ|administraci[oó]n\s+de\s+empresas|adm\s+empresas|psicolog|contab|contadur|mercade|marketing|trade\b|dise[ñn]o\s+gr[aá]fico|"
+    r"\b(?:administrativ|administraci[oó]n\s+de\s+empresas|adm\s+empresas|psicolog|contab|contadur|mercade|marketing|trade\b|"
+    r"dise[ñn]o\s+(?:gr[aá]fico|visual|audiovisual|industrial|de\s+modas|textil|editorial)|audiovisual|"
     r"comunicaci[oó]n|periodis|deport|archivo|documental|compensaci[oó]n|vigilan|escolta|jur[ií]dic|derecho|recepci[oó]n|reservas|gesti[oó]n\s+documental|"
     r"contrataci[oó]n|servicio\s+al\s+cliente|cumplimiento|comercial|ventas|selecci[oó]n|n[oó]mina|"
-    r"cocina|barismo|hotel|finanz|negocios\s+internacionales|auditor|tributari|riesgos|cr[eé]dito|seguros|bienestar|sst\b|"
-    r"seguridad\s+y\s+salud|salud\s+ocupacional|talento|gesti[oó]n\s+humana|"
-    r"corporativ|eventos|m[eé]dic[oa]s?\s+(?:general|especialista)|visitador|"
+    r"cocina|barismo|hotel|finanz|negocios\s+internacionales|comercio\s+(?:exterior|internacional)|aduanas|auditor|tributari|riesgos|cr[eé]dito|seguros|bienestar|sst\b|"
+    r"seguridad\s+y\s+salud|salud\s+ocupacional|seguridad\s+vial|talento|gesti[oó]n\s+humana|"
+    r"desarrollo\s+(?:social|humano|organizacional|comunitario|empresarial)|"
+    r"corporativ|eventos|m[eé]dic[oa]s?\s+(?:general|especialista)|visitador|qu[ií]mic[oa]\s+farmac[eé]utic[oa]|regencia|farmacia|"
+    r"criminal[ií]stica|forense|geolog[ií]a|ge[oó]log[oa]|investigaciones\s+econ[oó]micas|cartera|tesorer[ií]a|facturaci[oó]n|"
+    r"calceter[ií]a|confecci[oó]n|empaques?\b|bodega|almac[eé]n|inventarios?\b|gesti[oó]n\s+integral\s+del\s+transporte|"
+    r"aires\s+acondicionados|mantenimiento\s+de\s+(?:equipos\s+de\s+)?c[oó]mputo|mantenimiento\s+de\s+computadores|soporte\s+t[eé]cnico|mesa\s+de\s+ayuda|help\s*desk|"
     r"sales|business\s+development|finance|accounting|legal\b|human\s+resources|\bhr\b|recruit|talent|"
     r"communications|customer|fraud|disputes|risk\b|conservation|events?\b|social\s+media|content\b|"
     r"partnerships|operations\s+intern|real\s+estate)",
@@ -261,17 +266,28 @@ CARRERA_NO_AFIN_RE = re.compile(
 CARRERA_AFIN_RE = re.compile(
     r"\b(?:f[ií]sic|electr[oó]nic|el[eé]ctric|electricidad|mecatr[oó]nic|mec[aá]nic|electromec[aá]nic|automatizaci|"
     r"instrumentaci|control\s+(?:autom|de\s+procesos|industrial|el[eé]ctric|electr[oó]nic)|ingenier[ií]a\s+de\s+control|materiales|metal[uú]rg|metrolog|datos|data\b|anal[ií]tic|estad[ií]stic|matem[aá]tic|"
-    r"biom[eé]dic|bioingenier|telecomunicaci|energ[ií]a|renovable|solar|ciencias|stem\b|"
-    r"todas\s+las\s+ingenier[ií]as|cualquier\s+ingenier[ií]a|python|programaci|software|desarroll|sistemas|"
+    r"biom[eé]dic|bioingenier|telecomunicaci|energ[ií]a|renovable|solar|ciencias\s+(?:exactas|naturales|de\s+datos|computacionales|de\s+materiales|f[ií]sicas)|stem\b|"
+    r"todas\s+las\s+ingenier[ií]as|cualquier\s+ingenier[ií]a|python|programaci|software|desarrollador|desarrollo\s+(?:de\s+)?(?:software|web|tecnol[oó]gico|algoritmos|producto|i\+d|aplicaciones)|"
+    r"ingenier[ií]a\s+de\s+sistemas|ingenier[ií]a\s+inform[aá]tica|ciberseguridad|"
     r"inteligencia\s+artificial|machine\s+learning|\bia\b|\bai\b|iot\b|embebid|rob[oó]tic|[oó]ptic|"
-    r"l[aá]ser|qu[ií]mic|nanotecnolog|simulaci|investigaci|i\+d|innovaci|laboratorio|mantenimiento|"
-    r"engineer|physics|scien|developer|software\s+development|infraestructura|infrastructure|hardware|research|electrical|mechanical|"
-    r"r&d|tecnolog[ií]a|technolog|automation|robotics|optics|photonics|semiconductor|quantum|cu[aá]ntic)",
+    r"l[aá]ser|ingenier[ií]a\s+qu[ií]mica|fisicoqu[ií]mica|nanotecnolog|simulaci|investigaci|i\+d|innovaci|laboratorio|mantenimiento|"
+    r"engineer|physics|data\s+scien|computer\s+scien|materials\s+scien|developer|software\s+development|hardware|research|electrical|mechanical|"
+    r"r&d|automation|robotics|optics|photonics|semiconductor|quantum|cu[aá]ntic|radiation)",
     re.IGNORECASE,
 )
 # Áreas técnicas genéricas: no rescatan un título de otra carrera, pero sí
-# permiten conservar un aviso técnico sin rama específica.
-AREA_TECNICA_RE = re.compile(r"\b(?:ingenier|calidad|procesos|producci|proyectos|planta|t[eé]cnic)", re.IGNORECASE)
+# permiten conservar un aviso universitario de ingeniería sin rama específica.
+AREA_TECNICA_RE = re.compile(r"\b(?:ingenier|calidad|procesos|producci[oó]n|proyectos|planta)\b", re.IGNORECASE)
+
+# Avisos exclusivos para nivel técnico o tecnólogo (SENA) que no incluyen nivel profesional/universitario ni ingeniería.
+SOLO_TECNICO_TECNOLOGO_RE = re.compile(
+    r"\b(?:t[eé]cnic[oa]s?|tecn[oó]log[oa]s?|t[eé]cnica\s+o\s+tecnolog[ií]a|t[eé]cnicas?\s+o\s+tecnolog[ií]as?|tecnolog[ií]a\s+en)\b",
+    re.IGNORECASE,
+)
+NIVEL_UNIVERSITARIO_RE = re.compile(
+    r"\b(?:profesional(?:es)?|universitari[oa]s?|ingenier[ií]a|ingenier[oa]s?|pregrado|undergraduate|graduate)\b",
+    re.IGNORECASE,
+)
 
 # Otras carreras técnicas: el aviso entra si, además, nombra una carrera afín
 # ("Practicante de ingeniería industrial, mecatrónica o electrónica").
@@ -284,35 +300,40 @@ CARRERA_OTRA_RE = re.compile(
 CARRERA_AFIN_EXPLICITA_RE = re.compile(
     r"\b(?:ingenier[ií]a\s+(?:f[ií]sica|electr[oó]nica|el[eé]ctrica|mecatr[oó]nica|mec[aá]nica|electromec[aá]nica|"
     r"de\s+control|de\s+materiales|biom[eé]dica|de\s+telecomunicaciones|de\s+sistemas|qu[ií]mica)|"
-    r"f[ií]sica|f[ií]sicos?|electr[oó]nica|mecatr[oó]nica|electromec[aá]nica|el[eé]ctrica|automatizaci[oó]n|"
+    r"f[ií]sica\s+aplicada|pregrado\s+en\s+f[ií]sica|profesional\s+en\s+f[ií]sica|electr[oó]nica|mecatr[oó]nica|electromec[aá]nica|el[eé]ctrica|automatizaci[oó]n|"
     r"instrumentaci[oó]n|todas\s+las\s+ingenier[ií]as|cualquier\s+ingenier[ií]a|physics|electrical|"
     r"mechanical|mechatronics|electronics)\b",
     re.IGNORECASE,
 )
 
-# "Física" que no es la ciencia: seguridad física (vigilancia), educación física...
+# "Física" que no es la ciencia (inventarios físicos, toma física, estado físico, prototipos físicos, seguridad física...).
 FISICA_FALSA_RE = re.compile(
-    r"\b(?:seguridad|educaci[oó]n|actividad|terapia|preparaci[oó]n|condici[oó]n|cultura|persona)\s+f[ií]sica\b|"
-    r"\bf[ií]sico\s+(?:deportiv|culturista)|\bentrenamiento\s+f[ií]sico\b",
+    r"\b(?:seguridad|educaci[oó]n|actividad|terapia|preparaci[oó]n|condici[oó]n|condiciones|cultura|persona|"
+    r"toma|existencias?|inventarios?|conteo|verificaci[oó]n|inspecci[oó]n|recepci[oó]n|entrega|distribuci[oó]n|"
+    r"almacenamiento|bodega|planta|infraestructura|instalaci[oó]n|instalaciones|espacio|archivo|documentaci[oó]n|"
+    r"integridad|presencia|carga|fuerza|esfuerzo|resistencia|apariencia|estructura|caracter[ií]sticas?|propiedades?)\s+f[ií]sic[ao]s?\b|"
+    r"\b(?:inventarios?|activos?|movimientos?|archivos?|documentos?|espacios?|prototipos?|medios?|controles?|recursos?|bienes|equipos?|materiales?)\s+(?:digitales?\s+y\s+)?f[ií]sicos?\b|"
+    r"\bestado\s+f[ií]sico\b|\bf[ií]sico\s+(?:deportiv|culturista)|\bentrenamiento\s+f[ií]sico\b",
     re.IGNORECASE,
 )
 
 def title_is_out_of_profile(title, descripcion=None):
-    """True si el aviso es ajeno al perfil.
+    """True si el aviso es ajeno al perfil de Ingeniería Física UNAL.
 
-    Roles no técnicos (administrativo, ventas, psicología...) se descartan por
-    el título. Si el título nombra otra carrera técnica (industrial,
-    ambiental...), el aviso entra cuando él mismo o su descripción mencionan una
-    carrera afín; con `descripcion=None` (aún sin leer) se deja pasar.
+    Roles no técnicos (administrativo, ventas, comercio exterior, logística de almacén,
+    soporte técnico PC) o exclusivos para técnicos/tecnólogos SENA se descartan desde el título.
     """
     if any(re.search(p, title, re.IGNORECASE) for p in EXCLUDED_ROLES):
         return True
     if FISICA_FALSA_RE.search(title):
         return True
-    if CARRERA_AFIN_RE.search(title):
-        return False
+    # Descartar vacantes exclusivas de nivel técnico/tecnólogo SENA que no incluyen universitarios/profesionales.
+    if SOLO_TECNICO_TECNOLOGO_RE.search(title) and not NIVEL_UNIVERSITARIO_RE.search(title):
+        return True
     if CARRERA_NO_AFIN_RE.search(title):
         return True
+    if CARRERA_AFIN_RE.search(title):
+        return False
     if CARRERA_OTRA_RE.search(title):
         return descripcion is not None and not CARRERA_AFIN_EXPLICITA_RE.search(descripcion)
     return False
@@ -332,7 +353,18 @@ def title_is_generic_program(title):
     rest = GENERIC_TITLE_FILLER_RE.sub(" ", rest)
     return not rest.strip()
 
-TERMINOS_FISICA_RE = re.compile(r'\b(f[ií]sic[ao]s?|metrolog[ií]a|cu[aá]ntic[ao]s?|espectroscop[ií]a|difracci[oó]n|radiaci[oó]n|dosimetr[ií]a|nanotecnolog[ií]a)\b', re.IGNORECASE)
+TERMINOS_FISICA_RE = re.compile(
+    r"\b(?:"
+    r"ingenier[ií]a\s+f[ií]sica|ingenier[oa]s?\s+f[ií]sic[oa]s?|"
+    r"f[ií]sica\s+(?:aplicada|m[eé]dica|de\s+radiaciones|nuclear|de\s+materiales|del\s+estado\s+s[oó]lido|cu[aá]ntica|[oó]ptica|experimental|computacional|te[oó]rica|estad[ií]stica|radiol[oó]gica)|"
+    r"(?:pregrado|carrera|profesional|estudiante|grado|programa)\s+en\s+f[ií]sica|"
+    r"f[ií]sica\s+(?:o|y)\s+(?:carreras?\s+)?afines|"
+    r"engineering\s+physics|applied\s+physics|medical\s+physics|radiation\s+effects|nuclear\s+physics|solid[\s-]state\s+physics|"
+    r"metrolog[ií]a|metrology|cu[aá]ntic[ao]s?|quantum|espectroscop[ií]a|spectroscopy|difracci[oó]n|"
+    r"dosimetr[ií]a|dosimetry|protecci[oó]n\s+radiol[oó]gica|radiaciones\s+ionizantes|nanotecnolog[ií]a|nanotechnology|fot[oó]nica|photonics"
+    r")\b",
+    re.IGNORECASE,
+)
 
 def matches_keyword(keyword, text):
     """Verifica si una palabra clave coincide respetando límites de palabra para términos cortos."""
@@ -1282,10 +1314,17 @@ def export_csv(vacantes):
 
 def main():
     if "--render-only" in sys.argv:
-        print("[*] Modo render-only: verificando y regenerando HTML y CSV desde vacantes_practicas.json...")
+        print("[*] Modo render-only: reclasificando, verificando y regenerando CSV/JSON desde vacantes_practicas.json...")
         config_ramas = load_json(CONFIG_RAMAS_PATH)
         vacantes = load_json(OUTPUT_JSON)
-        vacantes = sellar_registros(filter_verified_jobs(vacantes, max_workers=25))
+        verified = filter_verified_jobs(vacantes, max_workers=25)
+        classified = []
+        for j in verified:
+            c = classify_and_score_job(j, config_ramas)
+            if c:
+                classified.append(c)
+        classified.sort(key=lambda x: x.get("score_pensum", 0), reverse=True)
+        vacantes = sellar_registros(classified)
         with open(OUTPUT_JSON, "w", encoding="utf-8") as f:
             json.dump(vacantes, f, ensure_ascii=False, indent=2)
         export_csv(vacantes)

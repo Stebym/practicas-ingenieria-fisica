@@ -389,7 +389,11 @@ def merge_job_snapshots(current_jobs, previous_jobs):
     """Conserva vacantes previas si el portal no las devolvió en esta corrida."""
     today = datetime.now().date()
     merged = {}
-    detail_fields = ("perfil", "compensacion", "resumen_fuente", "descripcion_fuente", "fecha_publicacion", "fecha_cierre_iso")
+    detail_fields = (
+        "perfil", "compensacion", "resumen_fuente", "descripcion_fuente",
+        "fecha_publicacion", "fecha_cierre_iso", "tipo_empleo", "modalidad",
+        "alcance_geografico", "estado_vigencia",
+    )
     for source in current_jobs:
         key = canonical_job_url(source.get("url"))
         if not key:
@@ -452,25 +456,37 @@ def company_is_target(company):
         _target_company_re = re.compile(rf"(?<![a-z0-9])(?:{pattern})(?![a-z0-9])") if pattern else re.compile(r"(?!x)x")
     return bool(_target_company_re.search(normalize_match_text(company)))
 
+# Presupuesto global de tiempo (50 min) para guardar siempre antes del límite de GitHub Actions.
+BOT_START_TIME = time.time()
+MAX_RUNTIME_SECONDS = 50 * 60
+
+def time_budget_exceeded(margin_seconds=0):
+    return (time.time() - BOT_START_TIME) >= (MAX_RUNTIME_SECONDS - margin_seconds)
+
 # LinkedIn responde 429 si recibe más de ~10 consultas seguidas. Antes el bot
 # tomaba ese 429 como "cero resultados" y perdía casi todas sus búsquedas.
-LINKEDIN_MIN_INTERVAL = 3.0
+LINKEDIN_MIN_INTERVAL = 2.2
 LINKEDIN_STATS = Counter()
 _linkedin_lock = threading.Lock()
-_linkedin_last_request = [0.0]
+_linkedin_next_allowed = [0.0]
 LINKEDIN_CLOSED_RE = re.compile(
     r"no longer accepting applications|ya no se aceptan solicitudes|ya no acepta solicitudes",
     re.IGNORECASE,
 )
 
 def linkedin_get(url, retries=3):
-    """GET a LinkedIn respetando el intervalo mínimo y reintentando tras un 429."""
+    """GET a LinkedIn respetando el intervalo mínimo sin apilar esperas entre hilos."""
     for attempt in range(retries):
+        if time_budget_exceeded():
+            LINKEDIN_STATS["omitida por presupuesto de tiempo"] += 1
+            return None
         with _linkedin_lock:
-            wait = _linkedin_last_request[0] + LINKEDIN_MIN_INTERVAL - time.time()
-            if wait > 0:
-                time.sleep(wait)
-            _linkedin_last_request[0] = time.time()
+            now = time.time()
+            slot = max(now, _linkedin_next_allowed[0])
+            _linkedin_next_allowed[0] = slot + LINKEDIN_MIN_INTERVAL
+            wait = slot - now
+        if wait > 0:
+            time.sleep(wait)
         try:
             response = requests.get(url, headers=HEADERS, timeout=12)
         except requests.RequestException:
@@ -478,8 +494,9 @@ def linkedin_get(url, retries=3):
             continue
         if response.status_code == 429:
             LINKEDIN_STATS["429 (reintento)"] += 1
+            backoff = 15 * (attempt + 1)
             with _linkedin_lock:
-                time.sleep(30 * (attempt + 1))
+                _linkedin_next_allowed[0] = max(_linkedin_next_allowed[0], time.time() + backoff)
             continue
         LINKEDIN_STATS[f"HTTP {response.status_code}"] += 1
         return response
@@ -492,15 +509,30 @@ def html_to_text(raw_html):
     text = re.sub(r"<[^>]+>", " ", text)
     return re.sub(r"\s+", " ", unescape(text)).strip()
 
-def scrape_linkedin_query(query, location="Medellin, Antioquia, Colombia", pages=1):
+def _company_matches_query(card_company, card_title, required_company):
+    """Verifica que una búsqueda por empresa en LinkedIn corresponda realmente a esa empresa."""
+    if not required_company:
+        return True
+    req_norm = normalize_match_text(required_company).strip()
+    if not req_norm:
+        return True
+    haystack = f"{normalize_match_text(card_company)} {normalize_match_text(card_title)}"
+    if req_norm in haystack:
+        return True
+    tokens = [t for t in re.split(r"\s+", req_norm) if len(t) >= 4 and t not in {"colombia", "grupo", "empresas", "compania", "corporacion", "antioquia", "medellin"}]
+    return bool(tokens) and all(t in haystack for t in tokens[:2])
+
+def scrape_linkedin_query(query, location="Medellin, Antioquia, Colombia", pages=1, required_company=None):
     """Consulta la API pública guest de LinkedIn Jobs (10 avisos por página)."""
     results = []
     for start in range(0, pages * 10, 10):
+        if time_budget_exceeded(margin_seconds=300):
+            break
         url = (
             "https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search"
             f"?keywords={quote(query)}&location={quote(location)}&start={start}"
         )
-        r = linkedin_get(url)
+        r = linkedin_get(url, retries=2)
         if r is None or r.status_code != 200:
             break
         cards = re.findall(r'<div class="base-card[^"]*"[^>]*>(.*?)</li>', r.text, re.DOTALL)
@@ -522,6 +554,8 @@ def scrape_linkedin_query(query, location="Medellin, Antioquia, Colombia", pages
             iso_date = date_m.group(1).strip() if date_m else ""
             pub_date = date_m.group(2).strip() if date_m else "Reciente"
             if not title or not link:
+                continue
+            if required_company and not _company_matches_query(company, title, required_company):
                 continue
             # Se descartan desde el título los roles ajenos para no gastar
             # consultas de detalle en ellos.
@@ -554,15 +588,40 @@ def scrape_linkedin_query(query, location="Medellin, Antioquia, Colombia", pages
             elif location == "Colombia":
                 job["search_scope"] = "COLOMBIA"
             results.append(job)
+        # Si LinkedIn devolvió menos de 10 tarjetas, no existen más páginas para esta consulta.
+        if len(cards) < 10:
+            break
     return results
 
 def enrich_linkedin_job(job):
-    """Lee el detalle público del aviso: confirma que sigue abierto y trae la descripción."""
+    """Lee el detalle público del aviso: confirma que sigue abierto y trae la descripción.
+
+    Si el aviso acaba de aparecer en las búsquedas de esta corrida y ya cuenta con
+    descripción de una corrida previa, se conserva sin gastar otra petición a LinkedIn.
+    Si LinkedIn limita la tasa (HTTP 429) o hay falla temporal de red, nunca se descarta
+    una vacante activa: se conserva con los datos disponibles para no perder ninguna oferta.
+    """
     job_id = job.get("linkedin_id") or (re.search(r"(\d{8,})", job.get("url", "")) or [None, None])[1]
     if not job_id:
         return False
-    r = linkedin_get(f"https://www.linkedin.com/jobs-guest/jobs/api/jobPosting/{job_id}")
+    if job.get("encontrada_ultima_corrida") and job.get("descripcion_fuente"):
+        job["estado_vigencia"] = "Aviso abierto en LinkedIn al momento del rastreo"
+        LINKEDIN_STATS["detalle en caché (activo)"] += 1
+        return True
+    if time_budget_exceeded():
+        if job.get("encontrada_ultima_corrida") or job.get("descripcion_fuente") or job.get("curada"):
+            job.setdefault("estado_vigencia", "Aviso detectado en LinkedIn (verificación diferida por tiempo)")
+            return True
+        return False
+    r = linkedin_get(f"https://www.linkedin.com/jobs-guest/jobs/api/jobPosting/{job_id}", retries=2)
+    if r is not None and r.status_code in (404, 410):
+        return False
     if r is None or r.status_code != 200:
+        # Ante bloqueo 429 o error transitorio de red, no perder la vacante.
+        if job.get("encontrada_ultima_corrida") or job.get("descripcion_fuente") or job.get("curada"):
+            job.setdefault("estado_vigencia", "Aviso detectado en LinkedIn (detalle pendiente por límite de tasa)")
+            LINKEDIN_STATS["conservada ante 429/red"] += 1
+            return True
         return False
     page = r.text
     if LINKEDIN_CLOSED_RE.search(page):
@@ -715,7 +774,8 @@ def _scrape_magneto_page(query, page):
                 "fuente": "Magneto365",
                 "compensacion": comp,
                 "perfil": perfil,
-                "mision": desc[:250] if desc else ""
+                "mision": desc[:250] if desc else "",
+                "descripcion_fuente": desc[:2500] if desc else "",
             }
             if row.get("expirationDate"):
                 job["fecha_cierre_iso"] = str(row["expirationDate"]).split("T")[0]
@@ -1087,14 +1147,30 @@ def verify_job_url(job):
     url = job.get("url", "")
     if not url or not url.startswith("http"):
         return False
-    if "linkedin.com" in url.lower():
+    url_lower = url.lower()
+    if "linkedin.com" in url_lower:
         return enrich_linkedin_job(job)
+    # Si la oferta proviene de la API en vivo de Magneto365 o Workday en esta misma corrida
+    # y ya tiene su descripción completa, no requiere descargar el HTML otra vez.
+    if (
+        job.get("encontrada_ultima_corrida")
+        and job.get("descripcion_fuente")
+        and ("magneto365.com" in url_lower or "myworkdayjobs.com" in url_lower)
+    ):
+        return True
     try:
         r = requests.get(url, headers=HEADERS, timeout=8, allow_redirects=True)
-        if r.status_code >= 400:
+        if r.status_code in (404, 410):
             return False
+        if r.status_code >= 400:
+            return bool(job.get("encontrada_ultima_corrida") or job.get("curada") or job.get("descripcion_fuente"))
         txt = r.text.lower()
-        if "esta oferta ya no está disponible" in txt or "la oferta que buscas ya no está disponible" in txt or "página no encontrada" in txt or "la vacante ha finalizado" in txt:
+        if (
+            "esta oferta ya no está disponible" in txt
+            or "la oferta que buscas ya no está disponible" in txt
+            or "página no encontrada" in txt
+            or "la vacante ha finalizado" in txt
+        ):
             return False
         if not job.get("curada") and not job.get("descripcion_fuente"):
             descripcion = extract_page_description(r.text)
@@ -1102,7 +1178,7 @@ def verify_job_url(job):
                 job["descripcion_fuente"] = descripcion
         return True
     except Exception:
-        return False
+        return bool(job.get("encontrada_ultima_corrida") or job.get("curada") or job.get("descripcion_fuente"))
 
 def is_in_target_location(job):
     """Antioquia con cualquier modalidad; fuera de Antioquia solo remoto o híbrido explícito."""
@@ -1145,15 +1221,27 @@ def needs_detail_before_location(job):
     return "linkedin.com" in job.get("url", "").lower() and not LOCAL_LOCATION_RE.search(str(job.get("ubicacion", "")))
 
 def filter_verified_jobs(jobs, max_workers=25):
-    """Verifica enlaces en paralelo y conserva solo avisos abiertos dentro del alcance geográfico."""
+    """Verifica enlaces en paralelo separando LinkedIn de los demás portales para no bloquear hilos."""
     in_profile = [job for job in jobs if job.get("curada") or not title_is_out_of_profile(job.get("titulo", ""))]
     print(f"[*] Perfil: {len(in_profile)} de {len(jobs)} ofertas con título afín (descartadas {len(jobs) - len(in_profile)})")
     candidates = [job for job in in_profile if needs_detail_before_location(job) or is_in_target_location(job)]
     print(f"[*] Cobertura geográfica preliminar: {len(candidates)} candidatas (descartadas {len(in_profile) - len(candidates)})")
     print(f"[*] Verificando enlaces y leyendo descripciones de {len(candidates)} vacantes...")
-    with concurrent.futures.ThreadPoolExecutor(max_workers=max_workers) as executor:
-        results = list(executor.map(verify_job_url, candidates))
-    opened = [j for j, ok in zip(candidates, results) if ok]
+
+    linkedin_candidates = [j for j in candidates if "linkedin.com" in j.get("url", "").lower()]
+    other_candidates = [j for j in candidates if "linkedin.com" not in j.get("url", "").lower()]
+
+    opened = []
+    if other_candidates:
+        with concurrent.futures.ThreadPoolExecutor(max_workers=max_workers) as executor:
+            other_results = list(executor.map(verify_job_url, other_candidates))
+        opened.extend(j for j, ok in zip(other_candidates, other_results) if ok)
+
+    if linkedin_candidates:
+        with concurrent.futures.ThreadPoolExecutor(max_workers=2) as executor:
+            li_results = list(executor.map(verify_job_url, linkedin_candidates))
+        opened.extend(j for j, ok in zip(linkedin_candidates, li_results) if ok)
+
     verified = [j for j in opened if is_in_target_location(j)]
     print(f" [✓] Enlaces abiertos: {len(opened)} (descartadas {len(candidates) - len(opened)}); "
           f"en Antioquia o remotas/híbridas: {len(verified)}")
@@ -1226,8 +1314,9 @@ def main():
 
     target_companies = load_target_companies()
 
-    # 2. Computrabajo Antioquia (2 páginas por búsqueda)
+    # 2. Computrabajo Antioquia (2 páginas por búsqueda, en paralelo)
     computrabajo_queries = [
+        "practicante",
         "practicante ingenieria",
         "practicante electronica",
         "practicante mantenimiento",
@@ -1237,19 +1326,27 @@ def main():
         "practicante instrumentacion",
         "practicante metrologia",
         "practicante fisica",
+        "practicante mecatronica",
+        "practicante electrica",
+        "practicante mecanica",
+        "practicante laboratorio",
+        "practicante calidad",
+        "practicante produccion",
+        "practicante proyectos",
         "estudiante en practica",
         "aprendiz universitario",
         "practica profesional",
         *CARRERAS_ESPEJO_QUERIES,
     ]
     print(f"\n[*] Rastreando Computrabajo Antioquia ({len(computrabajo_queries)} búsquedas)...")
-    for q_ct in computrabajo_queries:
-        add_jobs(scrape_computrabajo_query(q_ct), f"Computrabajo '{q_ct}'")
-        time.sleep(0.3)
+    with concurrent.futures.ThreadPoolExecutor(max_workers=6) as executor:
+        for q_ct, jobs in zip(computrabajo_queries, executor.map(scrape_computrabajo_query, computrabajo_queries)):
+            add_jobs(jobs, f"Computrabajo '{q_ct}'")
 
     # 3. Magneto365 (API pública, 4 páginas por búsqueda): Antioquia con
     # cualquier modalidad y el resto de Colombia si es remoto o híbrido.
     magneto_queries = [
+        "practicante",
         "practicante ingenieria",
         "practica ingenieria",
         "practicante ingenieria fisica",
@@ -1266,21 +1363,42 @@ def main():
         "practicante energia",
         "practicante materiales",
         "practicante calidad laboratorio",
+        "practicante proyectos",
+        "practicante procesos",
+        "practicante planta",
+        "practicante investigacion",
+        "practicante biomedica",
+        "practicante telecomunicaciones",
+        "practicante quimica",
+        "practicante simulacion",
         "estudiante en practica",
+        "aprendiz universitario",
+        "semillero",
+        "trainee ingenieria",
+        "pasantia ingenieria",
+        "practicas universitarias",
+        "practicas 2026",
+        "practicas 2027",
         "practicas universitarias 2027-1",
         "aprendices y practicantes 2027-1",
     ]
     print(f"\n[*] Rastreando Magneto365 en tiempo real ({len(magneto_queries)} búsquedas)...")
-    for q_mag in magneto_queries:
-        add_jobs(scrape_magneto_query(q_mag), f"Magneto365 '{q_mag}'")
-        time.sleep(0.3)
+    with concurrent.futures.ThreadPoolExecutor(max_workers=8) as executor:
+        for q_mag, jobs in zip(magneto_queries, executor.map(scrape_magneto_query, magneto_queries)):
+            add_jobs(jobs, f"Magneto365 '{q_mag}'")
+
     print(f"\n[*] Magneto365 por empresa objetivo ({len(target_companies)} empresas)...")
-    for comp in target_companies:
-        add_jobs(scrape_magneto_query(f"practicante {comp}", pages=1), f"Magneto365 {comp}")
-        time.sleep(0.2)
+    with concurrent.futures.ThreadPoolExecutor(max_workers=8) as executor:
+        mag_comp_futures = [executor.submit(scrape_magneto_query, f"practicante {comp}", 1) for comp in target_companies]
+        for comp, fut in zip(target_companies, mag_comp_futures):
+            try:
+                add_jobs(fut.result(), f"Magneto365 {comp}")
+            except Exception:
+                pass
 
     # 4. ElEmpleo.com (Medellín)
     elempleo_queries = [
+        "practicante",
         "practicante ingenieria",
         "practicante automatizacion",
         "practicante electromecanico",
@@ -1288,40 +1406,88 @@ def main():
         "practicante datos",
         "practicante fisica",
         "practicante mantenimiento",
+        "practicante mecatronica",
+        "practicante electrica",
+        "practicante mecanica",
+        "aprendiz universitario",
         *CARRERAS_ESPEJO_QUERIES,
     ]
     print(f"\n[*] Rastreando ElEmpleo.com Medellín ({len(elempleo_queries)} búsquedas)...")
-    for q_ee in elempleo_queries:
-        add_jobs(scrape_elempleo_query(q_ee), f"ElEmpleo '{q_ee}'")
-        time.sleep(0.3)
+    with concurrent.futures.ThreadPoolExecutor(max_workers=6) as executor:
+        for q_ee, jobs in zip(elempleo_queries, executor.map(scrape_elempleo_query, elempleo_queries)):
+            add_jobs(jobs, f"ElEmpleo '{q_ee}'")
 
     # 5. FirstJob Colombia (Semilleros Multinacionales)
-    firstjob_queries = ["practicante", "intern", "ingenieria"]
+    firstjob_queries = ["practicante", "intern", "ingenieria", "trainee"]
     print(f"\n[*] Rastreando FirstJob Colombia ({len(firstjob_queries)} búsquedas)...")
     for q_fj in firstjob_queries:
         add_jobs(scrape_firstjob_query(q_fj), f"FirstJob '{q_fj}'")
-        time.sleep(0.3)
 
     # 5b. Portales corporativos en Workday (prácticas que a veces no llegan a LinkedIn).
     portales = load_json(PORTALES_WORKDAY_PATH) or []
     print(f"\n[*] Rastreando {len(portales)} portales corporativos Workday...")
-    for portal in portales:
-        add_jobs(scrape_workday_portal(portal), f"Workday {portal['empresa']}")
+    with concurrent.futures.ThreadPoolExecutor(max_workers=6) as executor:
+        for portal, jobs in zip(portales, executor.map(scrape_workday_portal, portales)):
+            add_jobs(jobs, f"Workday {portal['empresa']}")
 
-    # 6. LinkedIn Medellín/Antioquia: categorías del pénsum (2 páginas cada una).
-    # linkedin_get espacia las consultas y reintenta los 429.
+    # 6. LinkedIn Medellín: consultas paraguas de alta cobertura (4 páginas) + categorías del pénsum.
+    umbrella_medellin_queries = [
+        "practicante",
+        "practicantes",
+        "practicante ingenieria",
+        "estudiante en practica",
+        "aprendiz universitario",
+        "semillero practicantes",
+        "intern",
+        "trainee",
+    ]
+    print(f"\n[*] Rastreando LinkedIn Medellín (consultas paraguas de cobertura total)...")
+    for q_umb in umbrella_medellin_queries:
+        add_jobs(scrape_linkedin_query(q_umb, location="Medellin, Antioquia, Colombia", pages=4), f"LinkedIn Medellín paraguas '{q_umb}'")
+
+    # 6a-bis. LinkedIn Antioquia general: captura municipios como Bello, Rionegro, Itagüí,
+    # Envigado, Sabaneta, La Estrella, Guarne, Girardota, Apartadó y Oriente Antioqueño.
+    antioquia_queries = [
+        "practicante",
+        "practicante ingenieria",
+        "practicante electronica",
+        "practicante mecatronica",
+        "practicante mecanica",
+        "practicante electrica",
+        "practicante datos",
+        "practicante automatizacion",
+        "practicante mantenimiento",
+        "practicante calidad",
+        "practicante laboratorio",
+        "practicante produccion",
+        "practicante proyectos",
+        "estudiante en practica",
+        "aprendiz universitario",
+        "intern engineering",
+    ]
+    print(f"\n[*] Rastreando LinkedIn Antioquia general ({len(antioquia_queries)} búsquedas para cubrir todos los municipios)...")
+    for q_ant in antioquia_queries:
+        add_jobs(scrape_linkedin_query(q_ant, location="Antioquia, Colombia", pages=3), f"LinkedIn Antioquia '{q_ant}'")
+
     print(f"\n[*] Rastreando LinkedIn Jobs para {len(SEARCH_QUERIES)} categorías del pénsum UNAL...")
     for q in SEARCH_QUERIES:
+        if time_budget_exceeded(margin_seconds=600):
+            print("    [!] Presupuesto de tiempo alcanzado en categorías LinkedIn; pasando a verificación.")
+            break
         add_jobs(scrape_linkedin_query(q, pages=2), f"LinkedIn '{q}'")
 
     # 6b. LinkedIn en todo Colombia: solo sobreviven avisos remotos o híbridos.
     print(f"\n[*] Buscando prácticas remotas/híbridas en Colombia ({len(REMOTE_COLOMBIA_QUERIES)} búsquedas)...")
     for q in REMOTE_COLOMBIA_QUERIES:
+        if time_budget_exceeded(margin_seconds=480):
+            break
         add_jobs(scrape_linkedin_query(q, location="Colombia", pages=2), f"Colombia remoto/híbrido '{q}'")
 
     # 6c. Remoto internacional: exige práctica en el título y modalidad remota.
     print(f"\n[*] Buscando prácticas remotas internacionales en {len(REMOTE_GLOBAL_SEARCH_QUERIES)} áreas...")
     for query in REMOTE_GLOBAL_SEARCH_QUERIES:
+        if time_budget_exceeded(margin_seconds=360):
+            break
         add_jobs(scrape_linkedin_query(query, location="Worldwide"), f"Remoto mundial '{query}'")
 
     # 6d. Buscador web abierto: amplía el alcance a portales corporativos y bolsas
@@ -1340,10 +1506,21 @@ def main():
                 jobs = []
             add_jobs(jobs, f"Web {scope.lower()} '{query}'")
 
-    # 7. LinkedIn por empresa objetivo en Medellín/Antioquia.
-    print(f"\n[*] Rastreando practicantes en {len(target_companies)} empresas objetivo en LinkedIn...")
-    for comp in target_companies:
-        add_jobs(scrape_linkedin_query(f"practicante {comp}"), f"LinkedIn {comp}")
+    # 7. LinkedIn por empresa objetivo prioritaria en Antioquia (filtrando coincidencias reales de empresa).
+    priority_companies = [
+        item.get("empresa", "").strip()
+        for item in (load_json(EMPRESAS_OBJETIVO_PATH) or [])
+        if isinstance(item, dict) and item.get("empresa")
+    ]
+    print(f"\n[*] Rastreando practicantes en {len(priority_companies)} empresas objetivo prioritarias en LinkedIn...")
+    for comp in priority_companies:
+        if time_budget_exceeded(margin_seconds=300):
+            print("    [!] Presupuesto de tiempo alcanzado en empresas LinkedIn; pasando a verificación.")
+            break
+        add_jobs(
+            scrape_linkedin_query(f"practicante {comp}", location="Antioquia, Colombia", pages=1, required_company=comp),
+            f"LinkedIn {comp}",
+        )
 
     print(f"\n[*] Total de vacantes únicas recolectadas: {len(collected)}")
     # Las vacantes de la corrida anterior que no reaparecieron (portal caído,

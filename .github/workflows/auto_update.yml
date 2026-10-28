@@ -3,8 +3,9 @@ name: Bot de Practicas
 
 on:
   schedule:
-    # Todos los días a las 00:30 UTC (19:30 hora Colombia).
-    - cron: '30 0 * * *'
+    # Dos veces al día en minutos fuera de hora pico UTC (07:17 y 19:17 hora Colombia).
+    - cron: '17 0 * * *'
+    - cron: '17 12 * * *'
   workflow_dispatch: # Permite ejecutarlo manualmente con un botón en GitHub
 
 permissions:

@@ -155,10 +155,15 @@ OUTPUT_CSV = os.path.join(BASE_DIR, "vacantes_practicas.csv")
 OUTPUT_JSON = os.path.join(BASE_DIR, "vacantes_practicas.json")
 
 SEARCH_QUERIES = [
-    # Tronco común y perfil UNAL Ingeniería Física
+    # Tronco común y perfil UNAL Ingeniería Física (todas las variantes posibles)
     "practicante ingenieria fisica",
     "practicante fisica",
     "estudiante ingenieria fisica pasantia",
+    "investigador fisico",
+    "investigacion fisica",
+    "fisico matematico",
+    "laboratorio fisica",
+    "modelado fisico",
     "intern engineering medellin",
     "practicante investigacion i+d",
     # Análisis de Datos, IA y Simulaciones
@@ -270,12 +275,15 @@ CARRERA_NO_AFIN_RE = re.compile(
 CARRERA_AFIN_RE = re.compile(
     r"\b(?:f[ií]sic|electr[oó]nic|el[eé]ctric|electricidad|mecatr[oó]nic|mec[aá]nic|electromec[aá]nic|automatizaci|"
     r"instrumentaci|control\s+(?:autom|de\s+procesos|industrial|el[eé]ctric|electr[oó]nic)|ingenier[ií]a\s+de\s+control|materiales|metal[uú]rg|metrolog|datos|data\b|anal[ií]tic|estad[ií]stic|matem[aá]tic|"
-    r"biom[eé]dic|bioingenier|telecomunicaci|energ[ií]a|renovable|solar|ciencias\s+(?:exactas|naturales|de\s+datos|computacionales|de\s+materiales|f[ií]sicas)|stem\b|"
-    r"todas\s+las\s+ingenier[ií]as|cualquier\s+ingenier[ií]a|python|programaci|software|desarrollador|desarrollo\s+(?:de\s+)?(?:software|web|tecnol[oó]gico|algoritmos|producto|i\+d|aplicaciones)|"
-    r"ingenier[ií]a\s+de\s+sistemas|ingenier[ií]a\s+inform[aá]tica|ciberseguridad|"
+    r"biom[eé]dic|bioingenier|telecomunicaci|energ[ií]a|renovable|solar|"
+    r"ciencias(?!\s+(?:agropecuarias|forenses|sociales|pol[ií]ticas|de\s+la\s+salud|econ[oó]micas|del\s+deporte|de\s+la\s+educaci[oó]n))|stem\b|"
+    r"todas\s+las\s+ingenier[ií]as|cualquier\s+ingenier[ií]a|python|programaci|software|sotfware|"
+    r"desarroll(?:o(?!\s+(?:social|humano|organizacional|comunitario|empresarial|de\s+mercados|para\s+el\s+talento|de\s+medios))|ador)|"
+    r"sistemas(?!\s+(?:integrados\s+de\s+gesti[oó]n|de\s+gesti[oó]n))|inform[aá]tica|ciberseguridad|ciberseguirdad|\bti\b|\bit\b|"
+    r"tecnolog[ií]as?\s+de\s+(?:la\s+)?informaci[oó]n|digital\s+tecnolog[ií]a|"
     r"inteligencia\s+artificial|machine\s+learning|\bia\b|\bai\b|iot\b|embebid|rob[oó]tic|[oó]ptic|"
-    r"l[aá]ser|ingenier[ií]a\s+qu[ií]mica|fisicoqu[ií]mica|nanotecnolog|simulaci|investigaci|i\+d|innovaci|laboratorio|mantenimiento|"
-    r"engineer|physics|data\s+scien|computer\s+scien|materials\s+scien|developer|software\s+development|hardware|research|electrical|mechanical|"
+    r"l[aá]ser|ingenier[ií]a\s+qu[ií]mica|fisicoqu[ií]mica|nanotecnolog|simulaci|investigaci[oó]n(?!\s+de\s+mercados)|i\+d|innovaci|laboratorio|mantenimiento|"
+    r"engineer|physics|scien(?!ces?\s+(?:forensic|social))|developer|software\s+development|infraestructura|infrastructure|hardware|research|electrical|mechanical|"
     r"r&d|automation|robotics|optics|photonics|semiconductor|quantum|cu[aá]ntic|radiation)",
     re.IGNORECASE,
 )
@@ -296,15 +304,15 @@ NIVEL_UNIVERSITARIO_RE = re.compile(
 # Otras carreras técnicas: el aviso entra si, además, nombra una carrera afín
 # ("Practicante de ingeniería industrial, mecatrónica o electrónica").
 CARRERA_OTRA_RE = re.compile(
-    r"\b(?:ambiental|alimentos|agr[ií]col|agron[oó]m|agroindustri|civil(?:es)?\b|obras\s+civiles|arquitect|"
+    r"\b(?:ambiental|alimentos|agr[ií]col|agron[oó]m|agroindustri|agropecuari|civil(?:es)?\b|obras\s+civiles|arquitect|"
     r"industrial\b|log[ií]stic|costos|abastecimiento|compras|zootecn|veterinari|nutrici|odontolog|"
-    r"fisioterap|farmac|econom)",
+    r"fisioterap|farmac|econom|minas\b|petr[oó]leos)",
     re.IGNORECASE,
 )
 CARRERA_AFIN_EXPLICITA_RE = re.compile(
     r"\b(?:ingenier[ií]a\s+(?:f[ií]sica|electr[oó]nica|el[eé]ctrica|mecatr[oó]nica|mec[aá]nica|electromec[aá]nica|"
     r"de\s+control|de\s+materiales|biom[eé]dica|de\s+telecomunicaciones|de\s+sistemas|qu[ií]mica)|"
-    r"f[ií]sica\s+aplicada|pregrado\s+en\s+f[ií]sica|profesional\s+en\s+f[ií]sica|electr[oó]nica|mecatr[oó]nica|electromec[aá]nica|el[eé]ctrica|automatizaci[oó]n|"
+    r"f[ií]sica|f[ií]sicos?|electr[oó]nica|mecatr[oó]nica|electromec[aá]nica|el[eé]ctrica|automatizaci[oó]n|"
     r"instrumentaci[oó]n|todas\s+las\s+ingenier[ií]as|cualquier\s+ingenier[ií]a|physics|electrical|"
     r"mechanical|mechatronics|electronics)\b",
     re.IGNORECASE,
@@ -312,11 +320,14 @@ CARRERA_AFIN_EXPLICITA_RE = re.compile(
 
 # "Física" que no es la ciencia (inventarios físicos, toma física, estado físico, prototipos físicos, seguridad física...).
 FISICA_FALSA_RE = re.compile(
-    r"\b(?:seguridad|educaci[oó]n|actividad|terapia|preparaci[oó]n|condici[oó]n|condiciones|cultura|persona|"
-    r"toma|existencias?|inventarios?|conteo|verificaci[oó]n|inspecci[oó]n|recepci[oó]n|entrega|distribuci[oó]n|"
-    r"almacenamiento|bodega|planta|infraestructura|instalaci[oó]n|instalaciones|espacio|archivo|documentaci[oó]n|"
-    r"integridad|presencia|carga|fuerza|esfuerzo|resistencia|apariencia|estructura|caracter[ií]sticas?|propiedades?)\s+f[ií]sic[ao]s?\b|"
-    r"\b(?:inventarios?|activos?|movimientos?|archivos?|documentos?|espacios?|prototipos?|medios?|controles?|recursos?|bienes|equipos?|materiales?)\s+(?:digitales?\s+y\s+)?f[ií]sicos?\b|"
+    r"\b(?:seguridad|educaci[oó]n|actividad|terapia|rehabilitaci[oó]n|preparaci[oó]n|condici[oó]n|condiciones|cultura|persona|"
+    r"toma|existencias?|inventarios?|conteos?|verificaci[oó]n|inspecci[oó]n|recepci[oó]n|entrega|distribuci[oó]n|alistamiento|"
+    r"almacenamiento|bodega|planta|sede|tienda|punto|infraestructura|instalaci[oó]n|instalaciones|espacio|archivo|documentaci[oó]n|"
+    r"integridad|presencia|carga|fuerza|esfuerzo|resistencia|apariencia|estructura|salud|discapacidad|capacidad|geograf[ií]a|acceso|ubicaci[oó]n|"
+    r"caracter[ií]sticas?|propiedades?)\s+f[ií]sic[ao]s?\b|"
+    r"\b(?:inventarios?|activos?|movimientos?|archivos?|documentos?|espacios?|prototipos?|medios?|controles?|recursos?|bienes|equipos?|materiales?|instalaciones|tiendas?|puntos?|sedes?|entregas?)\s+(?:digitales?\s+y\s+|virtuales?\s+y\s+|electr[oó]nicos?\s+y\s+)?f[ií]sicos?\b|"
+    r"\bf[ií]sic[ao]s?\s+y\s+(?:digital(?:es)?|documental(?:es)?|mental(?:es)?|emocional(?:es)?|verbal(?:es)?|virtual(?:es)?|t[eé]cnic[oa]s?)\b|"
+    r"\b(?:digital(?:es)?|documental(?:es)?|mental(?:es)?|emocional(?:es)?|virtual(?:es)?)\s+y\s+f[ií]sic[ao]s?\b|"
     r"\bestado\s+f[ií]sico\b|\bf[ií]sico\s+(?:deportiv|culturista)|\bentrenamiento\s+f[ií]sico\b",
     re.IGNORECASE,
 )
@@ -326,6 +337,8 @@ def title_is_out_of_profile(title, descripcion=None):
 
     Roles no técnicos (administrativo, ventas, comercio exterior, logística de almacén,
     soporte técnico PC) o exclusivos para técnicos/tecnólogos SENA se descartan desde el título.
+    Si el título menciona una carrera o área afín (ej. 'Gestión Humana y Analítica' o
+    'Ingeniería Industrial, Ciencias de Datos o afines'), se conserva.
     """
     if any(re.search(p, title, re.IGNORECASE) for p in EXCLUDED_ROLES):
         return True
@@ -334,16 +347,18 @@ def title_is_out_of_profile(title, descripcion=None):
     # Descartar vacantes exclusivas de nivel técnico/tecnólogo SENA que no incluyen universitarios/profesionales.
     if SOLO_TECNICO_TECNOLOGO_RE.search(title) and not NIVEL_UNIVERSITARIO_RE.search(title):
         return True
-    if CARRERA_NO_AFIN_RE.search(title):
+    if re.search(r"mantenimiento\s+de\s+(?:equipos\s+de\s+)?c[oó]mputo|mantenimiento\s+de\s+computadores|ensamble\s+y\s+mantenimiento", title, re.IGNORECASE):
         return True
     if CARRERA_AFIN_RE.search(title):
         return False
+    if CARRERA_NO_AFIN_RE.search(title):
+        return True
     if CARRERA_OTRA_RE.search(title):
         return descripcion is not None and not CARRERA_AFIN_EXPLICITA_RE.search(descripcion)
     return False
 
 GENERIC_TITLE_FILLER_RE = re.compile(
-    r"\b(?:universitari[oa]s?|profesional(?:es)?|programa|convocatoria|semillero|talento\s+joven|"
+    r"\b(?:universitari[oa]s?|profesional(?:es)?|t[eé]cnic[oa]s?|tecn[oó]log[oa]s?|programa|convocatoria|semillero|talento\s+joven|"
     r"de|del|en|para|y|o|la|el|los|las|a|e|intern(?:ship)?s?|student|summer|fall|spring|fy\d+|"
     r"20\d\d(?:-[12i]+)?|i{1,2})\b|[\d\W_]+",
     re.IGNORECASE,
@@ -359,46 +374,21 @@ def title_is_generic_program(title):
 
 TERMINOS_FISICA_RE = re.compile(
     r"\b(?:"
-    r"ingenier[ií]a\s+f[ií]sica|ingenier[oa]s?\s+f[ií]sic[oa]s?|"
-    r"f[ií]sica\s+(?:aplicada|m[eé]dica|de\s+radiaciones|nuclear|de\s+materiales|del\s+estado\s+s[oó]lido|cu[aá]ntica|[oó]ptica|experimental|computacional|te[oó]rica|estad[ií]stica|radiol[oó]gica)|"
-    r"(?:pregrado|carrera|profesional|estudiante|grado|programa)\s+en\s+f[ií]sica|"
-    r"f[ií]sica\s+(?:o|y)\s+(?:carreras?\s+)?afines|"
-    r"engineering\s+physics|applied\s+physics|medical\s+physics|radiation\s+effects|nuclear\s+physics|solid[\s-]state\s+physics|\bphysicist\b|"
-    r"metrolog[ií]a|metrology|cu[aá]ntic[ao]s?|quantum|espectroscop[ií]a|spectroscopy|difracci[oó]n|"
-    r"dosimetr[ií]a|dosimetry|protecci[oó]n\s+radiol[oó]gica|radiaciones\s+ionizantes|nanotecnolog[ií]a|nanotechnology|fot[oó]nica|photonics"
+    r"f[ií]sic[oa]s?|fisicoqu[ií]mic[oa]s?|biof[ií]sic[oa]s?|geof[ií]sic[oa]s?|astrof[ií]sic[oa]s?|"
+    r"physics|physicists?|physical\s+(?:sciences?|modeling|chemistry|optics|phenomena|processes|measurements?)|"
+    r"metrolog[ií]a|metrology|metr[oó]log[oa]s?|cu[aá]ntic[ao]s?|quantum|espectroscop[ií]a|spectroscopy|difracci[oó]n|"
+    r"dosimetr[ií]a|dosimetry|protecci[oó]n\s+radiol[oó]gica|radiaciones\s+ionizantes|radiation\s+effects|"
+    r"nanotecnolog[ií]a|nanotechnology|fot[oó]nica|photonics"
     r")\b",
     re.IGNORECASE,
 )
 
-# Contexto de lista de carreras/profesiones donde "física" o "físico" sí se refiere a la carrera
-# (ej. "matemáticas, física, química" o "mecánico, químico, de control, físico").
-CONTEXTO_CARRERA_FISICA_RE = re.compile(
-    r"\b(?:ingenier[ií]a|ingenier[oa]s?|matem[aá]tic[ao]s?|estad[ií]stic[ao]s?|qu[ií]mic[ao]s?|"
-    r"mec[aá]nic[ao]s?|electr[oó]nic[ao]s?|el[eé]ctric[ao]s?|electricistas?|mecatr[oó]nic[ao]s?|electromec[aá]nic[ao]s?|"
-    r"de\s+control|ciencia\s+de\s+datos|ciencias\s+(?:exactas|naturales|b[aá]sicas|computacionales)|"
-    r"biolog[ií]a|bi[oó]log[oa]s?|geof[ií]sic[ao]s?|astron[oó]m|actuar[ií]a|"
-    r"carreras?|pregrados?|profesional(?:es)?\s+en|estudiantes?\s+de|practicantes?\s+de|aprendiz\s+de|"
-    r"formaci[oó]n\s+acad[eé]mica|afines|relacionad[oa]s?)\b",
-    re.IGNORECASE,
-)
-
 def mentions_physics_science(title, full_text):
-    """Detecta si el aviso pide Física / Ingeniería Física (incluyendo listas como 'matemáticas, física, química' o 'mecánico, químico, control, físico')."""
-    clean_title = FISICA_FALSA_RE.sub(" ", str(title or ""))
-    clean_text = FISICA_FALSA_RE.sub(" ", str(full_text or ""))
-    if TERMINOS_FISICA_RE.search(clean_text):
-        return True
-    if re.search(r"\b(?:f[ií]sic[ao]s?|physics|physicist)\b", clean_title, re.IGNORECASE):
-        return True
-    for m in re.finditer(r"\b(?:f[ií]sic[ao]|physics)\b", clean_text, re.IGNORECASE):
-        # Revisar la misma oración/cláusula alrededor de "física"/"físico" (sin cruzar punto seguido).
-        left_window = clean_text[max(0, m.start() - 85):m.start()]
-        right_window = clean_text[m.end():min(len(clean_text), m.end() + 85)]
-        left_clause = left_window.rsplit(".", 1)[-1]
-        right_clause = right_window.split(".", 1)[0]
-        if CONTEXTO_CARRERA_FISICA_RE.search(f"{left_clause} {right_clause}"):
-            return True
-    return False
+    """Detecta cualquier mención real a Física, Físico(a), Investigador Físico, Fisicoquímica, Metrología, etc.
+    después de filtrar las expresiones no científicas ('inventario físico', 'toma física', 'estado físico', etc.).
+    """
+    clean_text = FISICA_FALSA_RE.sub(" ", f"{title or ''} {full_text or ''}")
+    return bool(TERMINOS_FISICA_RE.search(clean_text))
 
 def matches_keyword(keyword, text):
     """Verifica si una palabra clave coincide respetando límites de palabra para términos cortos."""

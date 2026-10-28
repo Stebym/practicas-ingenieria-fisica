@@ -107,6 +107,10 @@ CARRERAS_ESPEJO_QUERIES = [
     "practicante simulacion modelado cuantitativo afines",
     "practicante ingenieria quimica materiales afines",
     "practicante telecomunicaciones optica afines",
+    "practicante matematicas fisica",
+    "practicante fisica matematicas estadistica",
+    "practicante fisica quimica matematicas",
+    "practicante mecanico electronico control",
 ]
 
 # Búsquedas en todo Colombia: solo se publican si el aviso dice remoto o
@@ -359,12 +363,42 @@ TERMINOS_FISICA_RE = re.compile(
     r"f[ií]sica\s+(?:aplicada|m[eé]dica|de\s+radiaciones|nuclear|de\s+materiales|del\s+estado\s+s[oó]lido|cu[aá]ntica|[oó]ptica|experimental|computacional|te[oó]rica|estad[ií]stica|radiol[oó]gica)|"
     r"(?:pregrado|carrera|profesional|estudiante|grado|programa)\s+en\s+f[ií]sica|"
     r"f[ií]sica\s+(?:o|y)\s+(?:carreras?\s+)?afines|"
-    r"engineering\s+physics|applied\s+physics|medical\s+physics|radiation\s+effects|nuclear\s+physics|solid[\s-]state\s+physics|"
+    r"engineering\s+physics|applied\s+physics|medical\s+physics|radiation\s+effects|nuclear\s+physics|solid[\s-]state\s+physics|\bphysicist\b|"
     r"metrolog[ií]a|metrology|cu[aá]ntic[ao]s?|quantum|espectroscop[ií]a|spectroscopy|difracci[oó]n|"
     r"dosimetr[ií]a|dosimetry|protecci[oó]n\s+radiol[oó]gica|radiaciones\s+ionizantes|nanotecnolog[ií]a|nanotechnology|fot[oó]nica|photonics"
     r")\b",
     re.IGNORECASE,
 )
+
+# Contexto de lista de carreras/profesiones donde "física" o "físico" sí se refiere a la carrera
+# (ej. "matemáticas, física, química" o "mecánico, químico, de control, físico").
+CONTEXTO_CARRERA_FISICA_RE = re.compile(
+    r"\b(?:ingenier[ií]a|ingenier[oa]s?|matem[aá]tic[ao]s?|estad[ií]stic[ao]s?|qu[ií]mic[ao]s?|"
+    r"mec[aá]nic[ao]s?|electr[oó]nic[ao]s?|el[eé]ctric[ao]s?|electricistas?|mecatr[oó]nic[ao]s?|electromec[aá]nic[ao]s?|"
+    r"de\s+control|ciencia\s+de\s+datos|ciencias\s+(?:exactas|naturales|b[aá]sicas|computacionales)|"
+    r"biolog[ií]a|bi[oó]log[oa]s?|geof[ií]sic[ao]s?|astron[oó]m|actuar[ií]a|"
+    r"carreras?|pregrados?|profesional(?:es)?\s+en|estudiantes?\s+de|practicantes?\s+de|aprendiz\s+de|"
+    r"formaci[oó]n\s+acad[eé]mica|afines|relacionad[oa]s?)\b",
+    re.IGNORECASE,
+)
+
+def mentions_physics_science(title, full_text):
+    """Detecta si el aviso pide Física / Ingeniería Física (incluyendo listas como 'matemáticas, física, química' o 'mecánico, químico, control, físico')."""
+    clean_title = FISICA_FALSA_RE.sub(" ", str(title or ""))
+    clean_text = FISICA_FALSA_RE.sub(" ", str(full_text or ""))
+    if TERMINOS_FISICA_RE.search(clean_text):
+        return True
+    if re.search(r"\b(?:f[ií]sic[ao]s?|physics|physicist)\b", clean_title, re.IGNORECASE):
+        return True
+    for m in re.finditer(r"\b(?:f[ií]sic[ao]|physics)\b", clean_text, re.IGNORECASE):
+        # Revisar la misma oración/cláusula alrededor de "física"/"físico" (sin cruzar punto seguido).
+        left_window = clean_text[max(0, m.start() - 85):m.start()]
+        right_window = clean_text[m.end():min(len(clean_text), m.end() + 85)]
+        left_clause = left_window.rsplit(".", 1)[-1]
+        right_clause = right_window.split(".", 1)[0]
+        if CONTEXTO_CARRERA_FISICA_RE.search(f"{left_clause} {right_clause}"):
+            return True
+    return False
 
 def matches_keyword(keyword, text):
     """Verifica si una palabra clave coincide respetando límites de palabra para términos cortos."""
@@ -377,23 +411,58 @@ def normalize_match_text(value):
     normalized = unicodedata.normalize("NFKD", str(value or "").casefold())
     return "".join(char for char in normalized if not unicodedata.combining(char))
 
+# Sinónimos cortos o de profesión en listas de carreras ("mecánico, químico, control, electrónico...")
+CAREER_ALIASES = {
+    "ingenieria electronica": ["ingenieria electronica", "ingeniero electronico", "electronica", "electronico"],
+    "ingenieria mecatronica": ["ingenieria mecatronica", "ingeniero mecatronico", "mecatronica", "mecatronico"],
+    "ingenieria electromecanica": ["ingenieria electromecanica", "ingeniero electromecanico", "electromecanica", "electromecanico"],
+    "ingenieria de control": ["ingenieria de control", "ingeniero de control", "control y automatizacion", "control"],
+    "ingenieria mecanica": ["ingenieria mecanica", "ingeniero mecanico", "mecanica", "mecanico"],
+    "ingenieria electrica": ["ingenieria electrica", "ingeniero electrico", "ingeniero electricista", "electrica", "electricista"],
+    "ingenieria quimica": ["ingenieria quimica", "ingeniero quimico", "quimica", "quimico"],
+    "ingenieria de materiales": ["ingenieria de materiales", "ingeniero de materiales", "ciencia de materiales"],
+    "ingenieria de sistemas": ["ingenieria de sistemas", "ingeniero de sistemas", "ciencias de la computacion"],
+    "ingenieria biomedica": ["ingenieria biomedica", "ingeniero biomedico", "bioingenieria", "biomedica"],
+    "ingenieria en telecomunicaciones": ["ingenieria en telecomunicaciones", "ingenieria de telecomunicaciones", "telecomunicaciones"],
+    "matematicas": ["matematicas", "matematica", "matematico"],
+    "estadistica": ["estadistica", "estadistico"],
+}
+
+MULTI_CAREER_NEIGHBOR_RE = re.compile(
+    r"\b(?:ingenier[ií]a|ingenier[oa]s?|matem[aá]tic[ao]s?|estad[ií]stic[ao]s?|f[ií]sic[ao]s?|"
+    r"mec[aá]nic[ao]s?|electr[oó]nic[ao]s?|el[eé]ctric[ao]s?|electricistas?|mecatr[oó]nic[ao]s?|electromec[aá]nic[ao]s?|"
+    r"qu[ií]mic[ao]s?|de\s+control|materiales|sistemas|ciencia\s+de\s+datos|telecomunicaciones|biom[eé]dic[ao]s?)\b"
+)
+
 def career_is_requested_as_related(career, text):
-    """Solo habilita una carrera espejo cuando el aviso la vincula con afines/relacionadas."""
+    """Habilita una carrera espejo cuando se vincula con 'afines/relacionadas' o aparece en una lista multidisciplinaria de carreras."""
     normalized_career = normalize_match_text(career).strip()
     normalized_text = normalize_match_text(text)
     if not normalized_career or normalized_career in {"fisica", "ingenieria fisica", "todas las ingenierias"}:
         return False
-    career_pattern = re.compile(
-        r"(?<![a-z0-9])" + re.escape(normalized_career) + r"(?![a-z0-9])"
-    )
+    variants = CAREER_ALIASES.get(normalized_career, [normalized_career])
     related_pattern = re.compile(
         r"\b(?:afines?|relacionad[oa]s?|similares?|related\s+(?:field|fields|discipline|disciplines|major|majors)|or\s+equivalent)\b"
     )
-    for match in career_pattern.finditer(normalized_text):
-        start = max(0, match.start() - 90)
-        end = min(len(normalized_text), match.end() + 110)
-        if related_pattern.search(normalized_text[start:end]):
-            return True
+    list_context_pattern = re.compile(
+        r"\b(?:carreras?|estudiantes?|profesional(?:es)?|formaci[oó]n|pregrado|perfil|ingenier[ií]as?|ingenier[oa]s?|practicantes?|aprendiz)\b"
+    )
+    for variant in variants:
+        career_pattern = re.compile(r"(?<![a-z0-9])" + re.escape(variant) + r"(?![a-z0-9])")
+        for match in career_pattern.finditer(normalized_text):
+            start = max(0, match.start() - 120)
+            end = min(len(normalized_text), match.end() + 180)
+            window = normalized_text[start:end]
+            if related_pattern.search(window):
+                return True
+            # Si es una lista enumerada de varias disciplinas ("matemáticas, física, química" o "mecánico, químico, control, electrónico")
+            clause_left = normalized_text[max(0, match.start() - 80):match.start()].rsplit(".", 1)[-1]
+            clause_right = normalized_text[match.end():min(len(normalized_text), match.end() + 80)].split(".", 1)[0]
+            clause = f"{clause_left} {clause_right}"
+            if list_context_pattern.search(window):
+                neighbors = {m.group(0) for m in MULTI_CAREER_NEIGHBOR_RE.finditer(clause) if m.group(0) not in variant}
+                if len(neighbors) >= 2:
+                    return True
     return False
 
 def load_json(filepath):
@@ -999,7 +1068,7 @@ def classify_and_score_job(job, config_ramas):
     # Detección de programas especiales (con límites de palabra para evitar falsos positivos como 'systems' -> 'stem')
     programa_genero = bool(TERMINOS_MUJERES_RE.search(text_to_analyze))
     convocatoria_exclusiva_mujeres = bool(CONVOCATORIA_MUJERES_RE.search(text_to_analyze))
-    es_exclusiva_fisica = bool(TERMINOS_FISICA_RE.search(FISICA_FALSA_RE.sub(" ", text_to_analyze)))
+    es_exclusiva_fisica = mentions_physics_science(job.get("titulo", ""), text_to_analyze)
 
     # La antigüedad de publicación no revela la fecha límite de postulación.
     # Solo indicar cierre inminente cuando el rastreador obtenga una fecha explícita.

@@ -470,6 +470,9 @@ def canonical_job_url(url):
     linkedin_id = re.search(r"(\d{8,})$", path) if host.endswith("linkedin.com") else None
     if linkedin_id:
         return f"linkedin.com/jobs/view/{linkedin_id.group(1)}"
+    id_param = re.search(r"(?:^|&)(gh_jid|jobid|job_id|id)=([^&]+)", parsed.query, re.IGNORECASE)
+    if id_param:
+        return f"{host}{path}?{id_param.group(1).lower()}={id_param.group(2)}".lower()
     return f"{host}{path}".lower()
 
 # Días que se conserva una vacante que dejó de aparecer en las búsquedas
@@ -876,10 +879,12 @@ def _scrape_magneto_page(query, page):
     except Exception:
         return []
 
-def scrape_elempleo_query(query):
-    """Consulta ofertas de prácticas de ingeniería en ElEmpleo.com para Antioquia y nacional."""
-    # La ruta /antioquia no filtra (devuelve casi todo Bogotá); /medellin sí.
-    url = f"https://www.elempleo.com/co/ofertas-empleo/medellin?trabajo={quote(query)}"
+def scrape_elempleo_query(query, scope="medellin"):
+    """Consulta ofertas de prácticas de ingeniería en ElEmpleo.com para Medellín o nivel nacional."""
+    if scope == "nacional":
+        url = f"https://www.elempleo.com/co/ofertas-empleo/?trabajo={quote(query)}"
+    else:
+        url = f"https://www.elempleo.com/co/ofertas-empleo/medellin?trabajo={quote(query)}"
     try:
         r = requests.get(url, headers=HEADERS, timeout=6)
         if r.status_code != 200:
@@ -903,20 +908,198 @@ def scrape_elempleo_query(query):
                 comp = sal if sal and "confidencial" not in sal.lower() else ""
 
                 if title and clean_url:
-                    results.append({
+                    job = {
                         "titulo": title,
                         "empresa": company,
                         "ubicacion": loc,
                         "url": clean_url,
                         "fecha_publicacion": "Reciente",
                         "fuente": "ElEmpleo.com",
-                        "compensacion": comp
-                    })
+                        "compensacion": comp,
+                    }
+                    if scope == "nacional" and not LOCAL_LOCATION_RE.search(loc):
+                        job["search_scope"] = "COLOMBIA"
+                    results.append(job)
             except Exception:
                 continue
         return results
     except Exception:
         return []
+
+def scrape_getonboard_query(query):
+    """Consulta la API pública de GetOnBoard (prácticas de Datos, IA, IoT y Software en Colombia y Remoto LatAm)."""
+    url = f"https://www.getonbrd.com/api/v0/search/jobs?query={quote(query)}&per_page=30&page=1&expand=[\"company\"]"
+    try:
+        r = requests.get(url, headers=HEADERS, timeout=8)
+        if r.status_code != 200:
+            return []
+        items = r.json().get("data", [])
+        results = []
+        for item in items:
+            attr = item.get("attributes", {})
+            title = (attr.get("title") or "").strip()
+            link = (item.get("links") or {}).get("public_url") or ""
+            if not title or not link or not PRACTICE_RE.search(title):
+                continue
+            countries = [str(c) for c in (attr.get("countries") or [])]
+            cities = [str(c) for c in (attr.get("location_cities") or [])]
+            is_remote = bool(attr.get("remote"))
+            is_colombia = any("colombia" in c.lower() for c in countries) or any(LOCAL_LOCATION_RE.search(c) for c in cities)
+            if not is_remote and not is_colombia:
+                continue
+            comp_data = ((attr.get("company") or {}).get("data") or {}).get("attributes") or {}
+            empresa = (comp_data.get("name") or "Empresa en GetOnBoard").strip()
+            desc_raw = f"{attr.get('description') or ''} {attr.get('functions') or ''} {attr.get('desirable') or ''}"
+            desc = html_to_text(desc_raw)[:2500]
+            min_sal = attr.get("min_salary") or 0
+            max_sal = attr.get("max_salary") or 0
+            compensacion = f"${min_sal:,} - ${max_sal:,} USD/mes" if min_sal and max_sal else (f"${min_sal:,} USD/mes" if min_sal else "")
+            loc_str = ", ".join(cities or countries) or ("Remoto" if is_remote else "Colombia")
+            if is_remote and "remot" not in loc_str.lower():
+                loc_str = f"{loc_str} · remoto"
+            pub_ts = attr.get("published_at")
+            pub_date = datetime.fromtimestamp(pub_ts).date().isoformat() if isinstance(pub_ts, (int, float)) else "Reciente"
+            job = {
+                "titulo": title,
+                "empresa": empresa,
+                "ubicacion": loc_str,
+                "modalidad": "Remoto" if is_remote else "",
+                "url": link,
+                "fecha_publicacion": pub_date,
+                "fuente": "GetOnBoard",
+                "compensacion": compensacion,
+                "descripcion_fuente": desc,
+                "mision": desc[:250] if desc else "",
+            }
+            if not is_colombia and is_remote:
+                job["search_scope"] = "WORLDWIDE"
+            elif is_colombia and not LOCAL_LOCATION_RE.search(loc_str):
+                job["search_scope"] = "COLOMBIA"
+            results.append(job)
+        return results
+    except Exception:
+        return []
+
+GREENHOUSE_BOARDS = [
+    ("psiquantum", "PsiQuantum"),
+    ("ionq", "IonQ"),
+    ("anyscale", "Anyscale"),
+    ("weightsandbiases", "Weights & Biases"),
+    ("anthropic", "Anthropic"),
+    ("databricks", "Databricks"),
+    ("stripe", "Stripe"),
+    ("cloudflare", "Cloudflare"),
+    ("gitlab", "GitLab"),
+    ("canonical", "Canonical"),
+    ("vercel", "Vercel"),
+    ("scaleai", "Scale AI"),
+]
+
+def scrape_greenhouse_board(board_tuple):
+    """Consulta portales corporativos en Greenhouse (Cuántica, Fotónica, IA, Ciencia de Datos)."""
+    slug, company_name = board_tuple
+    url = f"https://boards-api.greenhouse.io/v1/boards/{slug}/jobs?content=true"
+    try:
+        r = requests.get(url, headers=HEADERS, timeout=10)
+        if r.status_code != 200:
+            return []
+        jobs = r.json().get("jobs", [])
+        results = []
+        for j in jobs:
+            title = (j.get("title") or "").strip()
+            link = (j.get("absolute_url") or "").strip()
+            if not title or not link or not PRACTICE_RE.search(title):
+                continue
+            loc = ((j.get("location") or {}).get("name") or "").strip()
+            desc = html_to_text(j.get("content") or "")[:2500]
+            is_local_or_col = bool(LOCAL_LOCATION_RE.search(loc) or "colombia" in loc.lower() or "latin america" in loc.lower() or "latam" in loc.lower())
+            is_remote = bool(REMOTE_ONLY_RE.search(f"{title} {loc}") or REMOTE_WORLDWIDE_DESC_RE.search(desc))
+            if not is_local_or_col and not is_remote:
+                continue
+            updated = (j.get("updated_at") or "").split("T")[0] or "Reciente"
+            results.append({
+                "titulo": title,
+                "empresa": company_name,
+                "ubicacion": f"{loc} · remoto" if is_remote and "remote" not in loc.lower() else (loc or "Remoto"),
+                "modalidad": "Remoto" if is_remote else "",
+                "url": link,
+                "fecha_publicacion": updated,
+                "fuente": f"Portal corporativo {company_name} (Greenhouse)",
+                "descripcion_fuente": desc,
+                "mision": desc[:250] if desc else "",
+                "search_scope": "LOCAL" if LOCAL_LOCATION_RE.search(loc) else ("COLOMBIA" if "colombia" in loc.lower() else "WORLDWIDE"),
+            })
+        return results
+    except Exception:
+        return []
+
+SMARTRECRUITERS_COMPANIES = [
+    ("CERN", "CERN"),
+    ("SGS", "SGS"),
+    ("BoschGroup", "Bosch Group"),
+    ("Eurofins", "Eurofins"),
+    ("AveryDennison", "Avery Dennison"),
+]
+
+def scrape_smartrecruiters_company(comp_tuple):
+    """Consulta la API pública de SmartRecruiters (CERN, SGS, Bosch, Eurofins, Avery Dennison)."""
+    comp_id, comp_name = comp_tuple
+    results = []
+    seen = set()
+    for term in ("practicante", "intern", "student", "aprendiz"):
+        url = f"https://api.smartrecruiters.com/v1/companies/{comp_id}/postings?q={quote(term)}&limit=25"
+        try:
+            r = requests.get(url, headers=HEADERS, timeout=8)
+            if r.status_code != 200:
+                continue
+            for p in r.json().get("content", []):
+                pid = p.get("id")
+                title = (p.get("name") or "").strip()
+                if not pid or pid in seen or not title or not PRACTICE_RE.search(title):
+                    continue
+                loc_obj = p.get("location") or {}
+                city = (loc_obj.get("city") or "").strip()
+                country = (loc_obj.get("country") or "").strip().lower()
+                is_remote = bool(loc_obj.get("remote"))
+                is_colombia = country in ("co", "col", "colombia") or bool(LOCAL_LOCATION_RE.search(city))
+                if not is_colombia and not is_remote:
+                    continue
+                seen.add(pid)
+                detail_url = f"https://api.smartrecruiters.com/v1/companies/{comp_id}/postings/{pid}"
+                desc = ""
+                apply_url = f"https://jobs.smartrecruiters.com/{comp_id}/{pid}"
+                try:
+                    dr = requests.get(detail_url, headers=HEADERS, timeout=8)
+                    if dr.status_code == 200:
+                        djson = dr.json()
+                        apply_url = djson.get("postingUrl") or apply_url
+                        sections = ((djson.get("jobAd") or {}).get("sections") or {})
+                        raw_parts = [
+                            (sections.get(k) or {}).get("text") or ""
+                            for k in ("jobDescription", "qualifications", "additionalInformation")
+                        ]
+                        desc = html_to_text(" ".join(raw_parts))[:2500]
+                except Exception:
+                    pass
+                loc_label = f"{city}, Colombia" if is_colombia and city else (city or country.upper() or "Remoto")
+                if is_remote and "remot" not in loc_label.lower():
+                    loc_label = f"{loc_label} · remoto"
+                pub_date = (p.get("releasedDate") or "").split("T")[0] or "Reciente"
+                results.append({
+                    "titulo": title,
+                    "empresa": comp_name,
+                    "ubicacion": loc_label,
+                    "modalidad": "Remoto" if is_remote else "",
+                    "url": apply_url,
+                    "fecha_publicacion": pub_date,
+                    "fuente": f"Portal corporativo {comp_name} (SmartRecruiters)",
+                    "descripcion_fuente": desc,
+                    "mision": desc[:250] if desc else "",
+                    "search_scope": "LOCAL" if LOCAL_LOCATION_RE.search(loc_label) else ("COLOMBIA" if is_colombia else "WORLDWIDE"),
+                })
+        except Exception:
+            continue
+    return results
 
 def scrape_firstjob_query(query):
     """Consulta convocatorias de prácticas y semilleros en FirstJob Colombia."""
@@ -1242,12 +1425,12 @@ def verify_job_url(job):
     url_lower = url.lower()
     if "linkedin.com" in url_lower:
         return enrich_linkedin_job(job)
-    # Si la oferta proviene de la API en vivo de Magneto365 o Workday en esta misma corrida
-    # y ya tiene su descripción completa, no requiere descargar el HTML otra vez.
+    # Si la oferta proviene de una API en vivo en esta misma corrida y ya tiene su descripción completa,
+    # no requiere descargar el HTML otra vez.
     if (
         job.get("encontrada_ultima_corrida")
         and job.get("descripcion_fuente")
-        and ("magneto365.com" in url_lower or "myworkdayjobs.com" in url_lower)
+        and any(dom in url_lower for dom in ("magneto365.com", "myworkdayjobs.com", "getonbrd.com", "psiquantum.com", "greenhouse.io", "smartrecruiters.com"))
     ):
         return True
     try:
@@ -1516,6 +1699,23 @@ def main():
         for q_ee, jobs in zip(elempleo_queries, executor.map(scrape_elempleo_query, elempleo_queries)):
             add_jobs(jobs, f"ElEmpleo '{q_ee}'")
 
+    elempleo_nacional_queries = [
+        "practicante ingenieria fisica",
+        "practicante fisica",
+        "practicante remoto",
+        "practicante hibrido",
+        "practicante datos remoto",
+        "practicante metrologia",
+        "practicante automatizacion",
+        "practicante electronica",
+        "practicante mecatronica",
+    ]
+    print(f"\n[*] Rastreando ElEmpleo.com Nacional ({len(elempleo_nacional_queries)} búsquedas)...")
+    with concurrent.futures.ThreadPoolExecutor(max_workers=6) as executor:
+        ee_nac_futs = [executor.submit(scrape_elempleo_query, q, "nacional") for q in elempleo_nacional_queries]
+        for q_ee, fut in zip(elempleo_nacional_queries, ee_nac_futs):
+            add_jobs(fut.result(), f"ElEmpleo Nacional '{q_ee}'")
+
     # 5. FirstJob Colombia (Semilleros Multinacionales)
     firstjob_queries = ["practicante", "intern", "ingenieria", "trainee"]
     print(f"\n[*] Rastreando FirstJob Colombia ({len(firstjob_queries)} búsquedas)...")
@@ -1528,6 +1728,25 @@ def main():
     with concurrent.futures.ThreadPoolExecutor(max_workers=6) as executor:
         for portal, jobs in zip(portales, executor.map(scrape_workday_portal, portales)):
             add_jobs(jobs, f"Workday {portal['empresa']}")
+
+    # 5c. GetOnBoard (Datos, IA, IoT y Software en Colombia y Remoto LatAm).
+    getonboard_queries = ["practicante", "pasantia", "aprendiz", "intern", "internship", "trainee", "estudiante"]
+    print(f"\n[*] Rastreando GetOnBoard ({len(getonboard_queries)} búsquedas)...")
+    with concurrent.futures.ThreadPoolExecutor(max_workers=4) as executor:
+        for q_gob, jobs in zip(getonboard_queries, executor.map(scrape_getonboard_query, getonboard_queries)):
+            add_jobs(jobs, f"GetOnBoard '{q_gob}'")
+
+    # 5d. Portales corporativos en Greenhouse (Cuántica, Fotónica, IA, Datos).
+    print(f"\n[*] Rastreando {len(GREENHOUSE_BOARDS)} portales corporativos Greenhouse (PsiQuantum, IonQ, Anthropic, Databricks...)...")
+    with concurrent.futures.ThreadPoolExecutor(max_workers=6) as executor:
+        for (_, cname), jobs in zip(GREENHOUSE_BOARDS, executor.map(scrape_greenhouse_board, GREENHOUSE_BOARDS)):
+            add_jobs(jobs, f"Greenhouse {cname}")
+
+    # 5e. Portales corporativos en SmartRecruiters (CERN, SGS, Bosch, Eurofins...).
+    print(f"\n[*] Rastreando {len(SMARTRECRUITERS_COMPANIES)} portales corporativos SmartRecruiters (CERN, SGS, Bosch...)...")
+    with concurrent.futures.ThreadPoolExecutor(max_workers=5) as executor:
+        for (_, cname), jobs in zip(SMARTRECRUITERS_COMPANIES, executor.map(scrape_smartrecruiters_company, SMARTRECRUITERS_COMPANIES)):
+            add_jobs(jobs, f"SmartRecruiters {cname}")
 
     # 6. LinkedIn Medellín: consultas paraguas de alta cobertura (4 páginas) + categorías del pénsum.
     umbrella_medellin_queries = [

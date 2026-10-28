@@ -29,6 +29,7 @@ import requests
 import concurrent.futures
 
 from busqueda_web import buscar_web
+from convocatorias_institucionales import FUENTES_PATH, scrape_convocatorias_institucionales
 from firma import encabezado_bot, sellar_registros
 
 # Asegurar codificación UTF-8 en terminal de Windows
@@ -1250,6 +1251,8 @@ def classify_and_score_job(job, config_ramas):
     if fecha_cierre:
         try:
             dias_para_cierre = (datetime.fromisoformat(fecha_cierre).date() - datetime.now().date()).days
+            if dias_para_cierre < 0:
+                return None
             es_cierre_inminente = 0 <= dias_para_cierre <= 5
         except ValueError:
             pass
@@ -1445,6 +1448,7 @@ def verify_job_url(job):
             or "la oferta que buscas ya no está disponible" in txt
             or "página no encontrada" in txt
             or "la vacante ha finalizado" in txt
+            or "esta vacante no recibe más aplicaciones" in txt
         ):
             return False
         if not job.get("curada") and not job.get("descripcion_fuente"):
@@ -1593,6 +1597,12 @@ def main():
     if isinstance(convocatorias_destacadas, list):
         print(f"[*] Cargando {len(convocatorias_destacadas)} convocatorias verificadas (Magneto365, Jooble, Portales de Antioquia)...")
         add_jobs([{**c, "curada": True} for c in convocatorias_destacadas if c.get("url")], "Destacadas")
+
+    # 1b. Convocatorias institucionales (Alcaldía, EPM, Bancolombia...) que las
+    # universidades publican en sus páginas de prácticas y no llegan a los portales.
+    fuentes_convocatorias = load_json(FUENTES_PATH)
+    print(f"\n[*] Leyendo convocatorias institucionales en {len(fuentes_convocatorias or [])} páginas de prácticas...")
+    add_jobs(scrape_convocatorias_institucionales(fuentes_convocatorias), "Convocatorias institucionales")
 
     target_companies = load_target_companies()
 

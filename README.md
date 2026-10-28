@@ -56,6 +56,7 @@ Otros archivos:
 * `firma.py` / `verificar_firma.py`: autoría, aviso legal y firma interna del proyecto (ver abajo).
 * `presencia.js`, `firebase_config.json`, `database.rules.json`: contador real de personas en línea y visitas.
 * `empresas_objetivo.json`, `empresas_antioquia.json`, `convocatorias_destacadas.json`, `config_ramas.json`: catálogos que usa el bot de prácticas.
+* `convocatorias_institucionales.py` / `fuentes_convocatorias.json`: lee los feeds RSS de páginas de prácticas de universidades (UdeA, Pascual Bravo) para captar convocatorias institucionales (Alcaldía, EPM, Bancolombia...) que no salen en los portales de empleo. Solo publica las que piden una carrera afín y siguen abiertas; para sumar otra página basta agregar su feed.
 * `portales_workday.json`: portales de empleo Workday de empresas (Rockwell, 3M, Medtronic, Hitachi…). Para agregar una empresa basta copiar de su portal `https://<tenant>.<servidor>.myworkdayjobs.com/<sitio>` esos tres datos.
 * `estilos.css`, `estrellas.js`, `fondo_fisica*.svg`: diseño visual.
 

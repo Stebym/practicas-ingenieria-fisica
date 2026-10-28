@@ -1,0 +1,15 @@
+[
+  {
+    "nombre": "Prácticas UdeA (Sistemas y Telecomunicaciones)",
+    "feed": "https://udeasytes.wordpress.com/feed/",
+    "paginas": 4,
+    "ignorar": [
+      "desde el punto de vista de la ingenier[ií]a electr[oó]nica\\s*/\\s*telecomunicaciones"
+    ]
+  },
+  {
+    "nombre": "Pascual Bravo",
+    "feed": "https://pascualbravo.edu.co/feed/",
+    "paginas": 4
+  }
+]

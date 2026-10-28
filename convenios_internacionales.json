@@ -911,6 +911,16 @@
   },
   {
     "ano": "2026",
+    "pais": "Francia",
+    "institucion": "Institut De Recherche Pour Le Développement",
+    "nombre": "CONVENIO DE COLABORACIÓN CIENTÍFICA ENTRE EL IRD Y LA UNAL",
+    "tipo": "Investigación",
+    "link": "https://drive.google.com/file/d/1u--QRoC6bE7elfLsy-9fXxFUKjMMQHds/view?usp=sharing",
+    "area": "Interdisciplinar",
+    "_sello": "b0b66caf743e"
+  },
+  {
+    "ano": "2026",
     "pais": "Hungría",
     "institucion": "Ministerio De Relaciones Exteriores Y Comercio De Hungría",
     "nombre": "ACUERDO NO. FCH-007-23 ENTRE LA UNIVERSIDAD NACIONAL DE COLOMBIA Y EL MINISTERIO DE RELACIONES EXTERIORES Y COMERCIO DE HUNGRÍA SOBRE LA ENSEÑANZA DE LA LENGUA Y LA CULTURA HÚNGARAS",
@@ -991,6 +1001,16 @@
   },
   {
     "ano": "2026",
+    "pais": "México",
+    "institucion": "Universidad Autónoma De Nuevo León (Uanl)",
+    "nombre": "CONVENIO DE CO-TUTELA (CODIRECCIÓN) PARA TESIS DOCTORAL ENTRE LA UNIVERSIDAD AUTÓNOMA DE NUEVO LEÓN Y LA UNIVERSIDAD NACIONAL DE COLOMBIA",
+    "tipo": "Cotutela",
+    "link": "https://drive.google.com/file/d/1snuCqFGC6jip13e90DNElm3VE5sQy7cK/view?usp=sharing",
+    "area": "Ingeniería",
+    "_sello": "a45e364d1e7a"
+  },
+  {
+    "ano": "2026",
     "pais": "Países Bajos",
     "institucion": "University Of Groningen",
     "nombre": "MEMORANDO DE ENTENDIMIENTO ENTRE LA UNIVERSIDAD NACIONAL DE COLOMBIA (COLOMBIA) Y LA UNIVERSIDAD DE GRONINGEN (PAÍSES BAJOS)",
@@ -1028,6 +1048,16 @@
     "link": "https://drive.google.com/file/d/13sgAHyOjO9-_f6IFguUITZ48b_geo8hS/view?usp=drive_link",
     "area": "Interdisciplinar",
     "_sello": "be212c9edcc2"
+  },
+  {
+    "ano": "2026",
+    "pais": "Polonia",
+    "institucion": "Akademia Wsb",
+    "nombre": "ERAMUS + PROGRAMME INTER-INSTITUTIONAL AGREEMENT 2021-2027 BETWEEN PARTNER COUNTRIES",
+    "tipo": "Erasmus",
+    "link": "https://drive.google.com/file/d/1zudiqvBneCL-AM2OO2OSeCFi83jGkDnA/view?usp=sharing",
+    "area": "Interdisciplinar",
+    "_sello": "d7a61fae1572"
   },
   {
     "ano": "2026",
@@ -2525,9 +2555,9 @@
     "institucion": "Agencia Estatal Consejo Superior De Investigaciones Científicas",
     "nombre": "CONVENIO ENTRE LA UNIVERSIDAD NACIONAL DE COLOMBIA Y LA AGENCIA ESTATAL CONSEJO SUPERIOR DE INVESTIGACIONES CIENTÍFICAS",
     "tipo": "Cooperación Académica",
-    "link": "https://drive.google.com/file/d/1SveoFoJw6tTmjdgAzrnEgNyZXDhxsf94/view?usp=sharing",
+    "link": "https://drive.google.com/file/d/1C_LdnNYRkZ0SB1FV8DL1q_1ecgzwTQsB/view?usp=sharing",
     "area": "Ingeniería, Arquitectura, Urbanismo Y Afines",
-    "_sello": "94368c2c6dd2"
+    "_sello": "c22b10dc424d"
   },
   {
     "ano": "2025",
@@ -10581,6 +10611,16 @@
   },
   {
     "ano": "2011",
+    "pais": "Brasil",
+    "institucion": "Pontificia Universidade Católica Do Rio De Janeiro",
+    "nombre": "ACUERDO DE COOPERACIÓN CULTURAL, EDUCACIONAL Y CIENTÍFICA ENTRE LAS FACULTADES CATÓLICAS, ASOCIACIÓN MANTENEDORA DE LA PONTIFICIA UNIVERSIDADE CATÓLICA DO RIO DE JANEIRO Y LA UNIVERSIDAD NACIONAL DE COLOMBIA",
+    "tipo": "Manifestación De Intereses Comunes",
+    "link": "http://www.dre.unal.edu.co/uploads/tx_unalori/CI_2011_universidad_catolica_do_rio_do_janeiro.pdf",
+    "area": "Todas Las Áreas",
+    "_sello": "a70d5567bd5e"
+  },
+  {
+    "ano": "2011",
     "pais": "España",
     "institucion": "Universidad De Málaga",
     "nombre": "ACUERDO DE COOPERACIÓN ENTRE LA UNIVERSIDAD DE MÁLAGA, ESPAÑA Y LA UNIVERSIDAD NACIONAL DE COLOMBIA",
@@ -10618,6 +10658,16 @@
     "link": "https://drive.google.com/file/d/1k0z4gK07d9tR6ewNnAXlI28Cok1_VQoQ/view?usp=sharing",
     "area": "Todas Las Áreas",
     "_sello": "0d7790117ab3"
+  },
+  {
+    "ano": "2011",
+    "pais": "Italia",
+    "institucion": "Politecnico Di Torino",
+    "nombre": "ACUERDO DE COOPERACIÓN ENTRE EL POLITECNICO DI TORINO Y LA UNIVERSIDAD NACIONAL DE COLOMBIA",
+    "tipo": "Manifestación De Intereses Comunes",
+    "link": "http://www.dre.unal.edu.co/uploads/tx_unalori/CI_2011_el_politecnico_di_torino.pdf",
+    "area": "Todas Las Áreas",
+    "_sello": "7d9adbe03679"
   },
   {
     "ano": "2011",

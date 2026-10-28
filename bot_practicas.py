@@ -509,6 +509,10 @@ def merge_job_snapshots(current_jobs, previous_jobs):
         if not key:
             continue
         if key not in merged:
+            # Las curadas (destacadas y convocatorias institucionales) siempre
+            # pasan la verificación; si salieron de su lista, ya no van.
+            if source.get("curada"):
+                continue
             try:
                 last_seen = datetime.fromisoformat(source.get("ultima_deteccion", "")).date()
             except ValueError:

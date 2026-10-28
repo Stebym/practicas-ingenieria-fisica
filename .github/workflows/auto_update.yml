@@ -14,9 +14,8 @@ permissions:
 jobs:
   rastrear:
     runs-on: ubuntu-latest
-    # LinkedIn se consulta con pausas de 3 s para evitar el bloqueo 429:
-    # la corrida completa tarda unos 40-60 minutos.
-    timeout-minutes: 120
+    # Margen amplio de hasta 5 horas (300 min) para rastrear todas las fuentes y empresas sin prisa.
+    timeout-minutes: 300
     steps:
       - name: Descargar repositorio
         uses: actions/checkout@v4

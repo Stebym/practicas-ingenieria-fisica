@@ -456,9 +456,10 @@ def company_is_target(company):
         _target_company_re = re.compile(rf"(?<![a-z0-9])(?:{pattern})(?![a-z0-9])") if pattern else re.compile(r"(?!x)x")
     return bool(_target_company_re.search(normalize_match_text(company)))
 
-# Presupuesto global de tiempo (50 min) para guardar siempre antes del límite de GitHub Actions.
+# Presupuesto global de tiempo (4 h 45 min, dentro del límite de 5 h de GitHub Actions)
+# para recorrer absolutamente todas las búsquedas y empresas sin recortar nada.
 BOT_START_TIME = time.time()
-MAX_RUNTIME_SECONDS = 50 * 60
+MAX_RUNTIME_SECONDS = 285 * 60
 
 def time_budget_exceeded(margin_seconds=0):
     return (time.time() - BOT_START_TIME) >= (MAX_RUNTIME_SECONDS - margin_seconds)
@@ -1506,14 +1507,9 @@ def main():
                 jobs = []
             add_jobs(jobs, f"Web {scope.lower()} '{query}'")
 
-    # 7. LinkedIn por empresa objetivo prioritaria en Antioquia (filtrando coincidencias reales de empresa).
-    priority_companies = [
-        item.get("empresa", "").strip()
-        for item in (load_json(EMPRESAS_OBJETIVO_PATH) or [])
-        if isinstance(item, dict) and item.get("empresa")
-    ]
-    print(f"\n[*] Rastreando practicantes en {len(priority_companies)} empresas objetivo prioritarias en LinkedIn...")
-    for comp in priority_companies:
+    # 7. LinkedIn por todas las empresas objetivo en Antioquia (filtrando coincidencias reales de empresa).
+    print(f"\n[*] Rastreando practicantes en las {len(target_companies)} empresas objetivo en LinkedIn...")
+    for comp in target_companies:
         if time_budget_exceeded(margin_seconds=300):
             print("    [!] Presupuesto de tiempo alcanzado en empresas LinkedIn; pasando a verificación.")
             break

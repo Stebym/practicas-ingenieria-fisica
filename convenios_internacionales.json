@@ -921,6 +921,16 @@
   },
   {
     "ano": "2026",
+    "pais": "Francia",
+    "institucion": "École Nationale Supérieure De Techniques Avancées (Ensta)",
+    "nombre": "CONVENIO DE DOBLE TITULACIÓN entre LA ÉCOLE NATIONALE SUPÉRIEURE DE TECHNIQUES AVANCÉES (ENSTA) (Francia) y LA UNIVERSIDAD NACIONAL DE COLOMBIA (Colombia)",
+    "tipo": "Doble Titulación",
+    "link": "https://drive.google.com/file/d/1_YUJS-qytUHDotmGNW7cFDbi7XA-zueN/view?usp=sharing",
+    "area": "Ingeniería",
+    "_sello": "046d97a1b0ef"
+  },
+  {
+    "ano": "2026",
     "pais": "Hungría",
     "institucion": "Ministerio De Relaciones Exteriores Y Comercio De Hungría",
     "nombre": "ACUERDO NO. FCH-007-23 ENTRE LA UNIVERSIDAD NACIONAL DE COLOMBIA Y EL MINISTERIO DE RELACIONES EXTERIORES Y COMERCIO DE HUNGRÍA SOBRE LA ENSEÑANZA DE LA LENGUA Y LA CULTURA HÚNGARAS",
@@ -6132,16 +6142,6 @@
   {
     "ano": "2023",
     "pais": "Estados Unidos",
-    "institucion": "Anthology Inc",
-    "nombre": "CONVENIO MARCO DE COOPERACIÓN ANTHOLOGY INC Y LA UNIVERSIDAD NACIONAL DE COLOMBIA",
-    "tipo": "Manifestación De Intereses Comunes",
-    "link": "https://drive.google.com/file/d/16UgSD1pknYbVM6-Zd83h1haYKeTmclSS/view?usp=sharing",
-    "area": "Todas Las Áreas",
-    "_sello": "131afbdf065f"
-  },
-  {
-    "ano": "2023",
-    "pais": "Estados Unidos",
     "institucion": "University Of Washington",
     "nombre": "MEMORÁNDUM DE ACUERDO REFERENTE A COOPERACIÓN EDUCATIVA, CIENTÍFICA Y CULTURAL ENTRE LA UNIVERSIDAD DE WASHINGTON Y LA UNIVERSIDAD NACIONAL DE COLOMBIA",
     "tipo": "Manifestación De Intereses Comunes",
@@ -6565,9 +6565,9 @@
     "institucion": "Universidade De Coimbra",
     "nombre": "ACUERDO DE COOPERACIÓN E INTERCAMBIO ACADÈMICO N.º FCH-034-23 ENTRE LA UNIVERSIDAD NACIONAL DE COLOMBIA Y LA UNIVERSIDAD DE COIMBRA",
     "tipo": "Cooperación E Intercambio Académico",
-    "link": "https://drive.google.com/file/d/1lqYxx3_H2kFhV1NQkRjREg1mdXhJxyt5/view?usp=sharing",
+    "link": "https://drive.google.com/file/d/1feIOZvZnwTqjyKWysjgjOSXUV3CbnKst/view?usp=sharing",
     "area": "Todas Las Áreas",
-    "_sello": "bbf76e2b40dd"
+    "_sello": "128394d6d205"
   },
   {
     "ano": "2023",
@@ -10648,16 +10648,6 @@
     "link": "http://www.dre.unal.edu.co/uploads/tx_unalori/CI_2011_institut_dexcellence_pour_les_energies_decarbonnes.pdf",
     "area": "Todas Las Áreas",
     "_sello": "8f73379efe7d"
-  },
-  {
-    "ano": "2011",
-    "pais": "Honduras",
-    "institucion": "Universidad Nacional De Agricultura",
-    "nombre": "CONVENIO MARCO DE COOPERACIÓN ENTRE LA UNIVERSIDAD NACIONAL DE COLOMBIA Y LA UNIVERSIDAD NACIONAL DE AGRICULTURA - CATACAMAS, HONDURAS",
-    "tipo": "Manifestación De Intereses Comunes",
-    "link": "https://drive.google.com/file/d/1k0z4gK07d9tR6ewNnAXlI28Cok1_VQoQ/view?usp=sharing",
-    "area": "Todas Las Áreas",
-    "_sello": "0d7790117ab3"
   },
   {
     "ano": "2011",

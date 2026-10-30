@@ -31,7 +31,7 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Ejecutar bot_practicas.py
-        run: python bot_practicas.py
+        run: python -u bot_practicas.py
 
       - name: Guardar datos actualizados
         # Solo se suben los datos de este bot; la página la arma

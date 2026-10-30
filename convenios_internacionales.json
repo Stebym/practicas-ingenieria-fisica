@@ -161,6 +161,16 @@
   },
   {
     "ano": "2026",
+    "pais": "Bélgica",
+    "institucion": "Universidad De Namur",
+    "nombre": "ACUERDO INTERINSTITUCIONAL BILATERAL ENTRE LA UNIVERSIDAD DE NAMUY Y LA UNIVERSIDAD NACIONAL DE COLOMBIA",
+    "tipo": "Erasmus",
+    "link": "https://drive.google.com/file/d/1kdLGHVm8-PvhWgiOBTdKZXBmR_c5myzV/view?usp=sharing",
+    "area": "Interdisciplinar",
+    "_sello": "04c3765f9fbb"
+  },
+  {
+    "ano": "2026",
     "pais": "Canadá",
     "institucion": "Institut National De La Recherche Scientifique",
     "nombre": "CONVENIO MARCO DE COOPERACIÓN ENTRE LA UNIVERSIDAD NACIONAL DE COLOMBIA Y EL INSTITUTO NACIONAL DE INVESTIGACIÓN CIENTÍFICA",
@@ -2898,16 +2908,6 @@
     "link": "https://drive.google.com/file/d/1Dipu5xg31coI2C4o7sLGcIoG8HdXFhNJ/view?usp=sharing",
     "area": "Matemáticas Y Ciencias Naturales",
     "_sello": "26efe6efdc61"
-  },
-  {
-    "ano": "2025",
-    "pais": "Italia",
-    "institucion": "Università Degli Studi Di Salerno",
-    "nombre": "CONVENIO DE COTUTELA DE TESIS DOCTORAL ENTRE LA UNIVERSIDAD DE SALERNO (ITALIA) Y LA UNIVERSIDAD NACIONAL DE COLOMBIA PARA LA TESIS DE LA ESTUDIANTE NATALIA ANDREA HERNÁNDEZ FAJARDO",
-    "tipo": "Cotutela",
-    "link": "https://drive.google.com/file/d/11XcJvNwvOAp8hio1pN-arRdif7LMepRs/view?usp=sharing",
-    "area": "Ciencias Sociales Y Humanas",
-    "_sello": "547b6725d449"
   },
   {
     "ano": "2025",
@@ -6138,6 +6138,16 @@
     "link": "https://drive.google.com/file/d/1wz7nixYv_Ie3TJKgvRLXvJkkhuSls4qR/view?usp=sharing",
     "area": "Todas Las Áreas",
     "_sello": "a6f2a664a8b1"
+  },
+  {
+    "ano": "2023",
+    "pais": "Estados Unidos",
+    "institucion": "Anthology Inc",
+    "nombre": "CONVENIO MARCO DE COOPERACIÓN ANTHOLOGY INC Y LA UNIVERSIDAD NACIONAL DE COLOMBIA",
+    "tipo": "Manifestación De Intereses Comunes",
+    "link": "https://drive.google.com/file/d/16UgSD1pknYbVM6-Zd83h1haYKeTmclSS/view?usp=sharing",
+    "area": "Todas Las Áreas",
+    "_sello": "131afbdf065f"
   },
   {
     "ano": "2023",

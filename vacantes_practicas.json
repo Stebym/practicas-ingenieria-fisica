@@ -134,6 +134,104 @@
     "_sello": "8b899bd5eb5d"
   },
   {
+    "titulo": "PhD Research Intern, Physics-based Model Predictive Control for Thermal Systems",
+    "empresa": "Phaidra",
+    "ubicacion": "Reino Unido · remoto internacional (elegibilidad por confirmar)",
+    "url": "https://uk.linkedin.com/jobs/view/phd-research-intern-physics-based-model-predictive-control-for-thermal-systems-at-phaidra-4485144960",
+    "fecha_publicacion": "2026-10-27",
+    "fuente": "LinkedIn Jobs",
+    "linkedin_id": "4485144960",
+    "search_scope": "WORLDWIDE",
+    "encontrada_ultima_corrida": true,
+    "ultima_deteccion": "2026-10-31",
+    "primera_deteccion": "2026-10-31",
+    "descripcion_fuente": "About Phaidra Phaidra builds AI agents for AI factories. As demand for AI grows, data centers need to get more out of the power and infrastructure they already have. Power, cooling, and compute are closely connected, and making them work efficiently is one of the biggest challenges in scaling AI. Phaidra builds AI agents that help data center operators understand their infrastructure, troubleshoot issues, and optimize how their facilities run. Our agents connect data across IT and OT systems, helping teams find problems faster and use existing resources more effectively. Operators use Phaidra to optimize performance, reliability, and efficiency. From helping technicians get to the root cause of an issue to optimize cooling and power allocation, our work helps data centers maximize tokens per watt. Phaidra was founded in 2019 by former Google, DeepMind, and Trane engineers. Our team brings deep experience in AI, cybersecurity, mission-critical cooling, data centers, and industrial controls. We believe deploying AI in production demands deep domain expertise. We work closely with our partners to tackle challenges around real-world infrastructure at gigawatt-scale. Our team has a track record of applying AI to the toughest problems. We achieved superhuman performance with DeepMind’s AlphaGo and cut the energy needed to cool Google’s data centers by 40%. We know AI deeply, and we know how to apply it in production for massive impact. Phaidra can only achieve its mission if we work well together. Our core values define how we do that: Agency, Velocity, Craft, and Truth. We look for people who embody these values. They help our team deliver excellence consistently and build an engaging, supportive culture. Phaidra is headquartered in the USA, but we are 100% remote with no physical office. We hire internationally with support from our partner, OysterHR. Our team is spread across the USA, Canada, the UK, Sweden, Spain, Portugal, the Netherlands, Singapore, Australia, and India. Who You Are You are a 3rd or 4th year PhD student in control, mechanical or chemical engineering, applied mathematics, machine learning, or a related field. You enjoy building models of physical systems and using them to make better decisions. You are comfortable moving between first-principles thinking, numerical optimization and practical code. This is a paid 3-month research internship starting in January or February 2027, ideally based in the UK. You will work closely with a dedicated ",
+    "tipo_empleo": "Prácticas",
+    "estado_vigencia": "Aviso abierto en LinkedIn al momento del rastreo",
+    "alcance_geografico": "Remoto internacional; confirmar elegibilidad desde Colombia",
+    "ramas": [
+      {
+        "clave": "simulaciones_datos_ia",
+        "nombre": "Análisis de Datos, IA y Simulaciones",
+        "color": "#06b6d4",
+        "score": 69
+      },
+      {
+        "clave": "instrumentacion_metrologia",
+        "nombre": "Instrumentación, Automatización y Metrología",
+        "color": "#10b981",
+        "score": 61
+      }
+    ],
+    "rama_principal": "Análisis de Datos, IA y Simulaciones",
+    "color_principal": "#06b6d4",
+    "clave_principal": "simulaciones_datos_ia",
+    "afinidad": "Afinidad con Física",
+    "es_exclusiva_fisica": true,
+    "programa_inclusion_genero": false,
+    "convocatoria_exclusiva_mujeres": false,
+    "es_cierre_inminente": false,
+    "es_practica": true,
+    "score_pensum": 154,
+    "empresa_objetivo": false,
+    "mision": "About Phaidra Phaidra builds AI agents for AI factories. As demand for AI grows, data centers need to get more out of the power and infrastructure they already have. Power, cooling, and compute are closely connected, and making them work efficiently is one of the biggest challenges in scaling AI. Phaidra builds AI agents that help data center operators understand their infrastructure, troubleshoot",
+    "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables.",
+    "_tareas_generadas": true,
+    "_sello": "91fc4171ac8f"
+  },
+  {
+    "titulo": "PhD Research Intern, Scientific Library of HVAC Simulators",
+    "empresa": "Phaidra",
+    "ubicacion": "Reino Unido · remoto internacional (elegibilidad por confirmar)",
+    "url": "https://uk.linkedin.com/jobs/view/phd-research-intern-scientific-library-of-hvac-simulators-at-phaidra-4485156045",
+    "fecha_publicacion": "2026-10-30",
+    "fuente": "LinkedIn Jobs",
+    "linkedin_id": "4485156045",
+    "search_scope": "WORLDWIDE",
+    "encontrada_ultima_corrida": true,
+    "ultima_deteccion": "2026-10-31",
+    "primera_deteccion": "2026-10-31",
+    "descripcion_fuente": "About Phaidra Phaidra builds AI agents for AI factories. As demand for AI grows, data centers need to get more out of the power and infrastructure they already have. Power, cooling, and compute are closely connected, and making them work efficiently is one of the biggest challenges in scaling AI. Phaidra builds AI agents that help data center operators understand their infrastructure, troubleshoot issues, and optimize how their facilities run. Our agents connect data across IT and OT systems, helping teams find problems faster and use existing resources more effectively. Operators use Phaidra to optimize performance, reliability, and efficiency. From helping technicians get to the root cause of an issue to optimize cooling and power allocation, our work helps data centers maximize tokens per watt. Phaidra was founded in 2019 by former Google, DeepMind, and Trane engineers. Our team brings deep experience in AI, cybersecurity, mission-critical cooling, data centers, and industrial controls. We believe deploying AI in production demands deep domain expertise. We work closely with our partners to tackle challenges around real-world infrastructure at gigawatt-scale. Our team has a track record of applying AI to the toughest problems. We achieved superhuman performance with DeepMind’s AlphaGo and cut the energy needed to cool Google’s data centers by 40%. We know AI deeply, and we know how to apply it in production for massive impact. Phaidra can only achieve its mission if we work well together. Our core values define how we do that: Agency, Velocity, Craft, and Truth. We look for people who embody these values. They help our team deliver excellence consistently and build an engaging, supportive culture. Phaidra is headquartered in the USA, but we are 100% remote with no physical office. We hire internationally with support from our partner, OysterHR. Our team is spread across the USA, Canada, the UK, Sweden, Spain, Portugal, the Netherlands, Singapore, Australia, and India. Who You Are You are a 3rd or 4th year PhD student in mechanical engineering, applied mathematics, machine learning, reinforcement learning, control or a related field. You enjoy building tools that other researchers will use, and putting them to work on real problems. You are comfortable moving between physical modeling, learning-based control, numerical methods and clean library design. This is a paid 3-month research internship starting in January or February 2027, ideally based in the U",
+    "tipo_empleo": "Prácticas",
+    "estado_vigencia": "Aviso abierto en LinkedIn al momento del rastreo",
+    "alcance_geografico": "Remoto internacional; confirmar elegibilidad desde Colombia",
+    "ramas": [
+      {
+        "clave": "simulaciones_datos_ia",
+        "nombre": "Análisis de Datos, IA y Simulaciones",
+        "color": "#06b6d4",
+        "score": 69
+      },
+      {
+        "clave": "instrumentacion_metrologia",
+        "nombre": "Instrumentación, Automatización y Metrología",
+        "color": "#10b981",
+        "score": 61
+      },
+      {
+        "clave": "diseno_mecanico_cad",
+        "nombre": "Diseño Mecánico y Dibujo Técnico",
+        "color": "#f97316",
+        "score": 23
+      }
+    ],
+    "rama_principal": "Análisis de Datos, IA y Simulaciones",
+    "color_principal": "#06b6d4",
+    "clave_principal": "simulaciones_datos_ia",
+    "afinidad": "Afinidad con Física",
+    "es_exclusiva_fisica": true,
+    "programa_inclusion_genero": false,
+    "convocatoria_exclusiva_mujeres": false,
+    "es_cierre_inminente": false,
+    "es_practica": true,
+    "score_pensum": 154,
+    "empresa_objetivo": false,
+    "mision": "About Phaidra Phaidra builds AI agents for AI factories. As demand for AI grows, data centers need to get more out of the power and infrastructure they already have. Power, cooling, and compute are closely connected, and making them work efficiently is one of the biggest challenges in scaling AI. Phaidra builds AI agents that help data center operators understand their infrastructure, troubleshoot",
+    "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables.",
+    "_tareas_generadas": true,
+    "_sello": "689f59d7ae87"
+  },
+  {
     "titulo": "Intern, Quantum Algorithms and Compilation",
     "empresa": "PsiQuantum",
     "ubicacion": "Remote · remoto internacional (elegibilidad por confirmar)",
@@ -581,46 +679,6 @@
     "tareas": "Levantamiento de curvas de calibración, programación en LabVIEW, enlace con autómatas PLC y aseguramiento metrológico ISO 17025.",
     "_tareas_generadas": true,
     "_sello": "657627b473f4"
-  },
-  {
-    "titulo": "Aprendiz Datos",
-    "empresa": "Crystal",
-    "ubicacion": "Sabaneta, Antioquia",
-    "modalidad": "",
-    "url": "https://www.magneto365.com/co/empleos/aprendiz-datos-1099305",
-    "fecha_publicacion": "2026-10-15",
-    "fuente": "Magneto365",
-    "compensacion": "$1.750.905 COP",
-    "perfil": "SQL, Nube, IA, Python",
-    "mision": "Vincúlate con nuestro propósito de existir para ayudar a las personas a expresar su esencia a través de una moda consciente, sé parte de nuestro equipo de aprendices y complementa tu proceso académico con una práctica significativa. &nbsp; &nbsp;Func",
-    "descripcion_fuente": "Vincúlate con nuestro propósito de existir para ayudar a las personas a expresar su esencia a través de una moda consciente, sé parte de nuestro equipo de aprendices y complementa tu proceso académico con una práctica significativa. &nbsp; &nbsp;Funciones: 1.Dar soporte a procesos de carga actuales tales como venta, inventario, clientes. 2.Realizar desarrollo de reportes en Power BI. 3.Realizar ejecución de sentencias de SQL. 4.Hacer construcción de Notebook en Python. 5. Apoyar en realización de proyectos y requerimientos del área de datos. 6. Gestionar los requerimientos de los clientes referentes al aérea de datos. 7.Generar informes de proyectos enfocados en los datos para los diferentes clientes. 8.Reforzar constantemente conocimientos en diferentes plataformas de acuerdo a lo requerido en el área. Generar informes de proyectos enfocados en los datos para los diferentes clientes. Reforzar constantemente conocimientos en diferentes plataformas de acuerdo a lo requerido en el área.",
-    "fecha_cierre_iso": "2026-10-31",
-    "encontrada_ultima_corrida": true,
-    "ultima_deteccion": "2026-10-31",
-    "primera_deteccion": "2026-10-23",
-    "estado_vigencia": "No reapareció en esta búsqueda; revisar vigencia en la fuente",
-    "ramas": [
-      {
-        "clave": "simulaciones_datos_ia",
-        "nombre": "Análisis de Datos, IA y Simulaciones",
-        "color": "#06b6d4",
-        "score": 75
-      }
-    ],
-    "rama_principal": "Análisis de Datos, IA y Simulaciones",
-    "color_principal": "#06b6d4",
-    "clave_principal": "simulaciones_datos_ia",
-    "afinidad": "Alta Afinidad Pénsum",
-    "es_exclusiva_fisica": false,
-    "programa_inclusion_genero": false,
-    "convocatoria_exclusiva_mujeres": false,
-    "es_cierre_inminente": true,
-    "es_practica": true,
-    "score_pensum": 125,
-    "empresa_objetivo": true,
-    "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables.",
-    "_tareas_generadas": true,
-    "_sello": "bec38367cd52"
   },
   {
     "titulo": "APRENDIZ DATOS",
@@ -1918,6 +1976,127 @@
     "_sello": "144ab63df3ef"
   },
   {
+    "titulo": "Aprendiz de ingeniería mecánica para Copacabana 1625926826-99",
+    "empresa": "Servicio de Empleo Comfama",
+    "ubicacion": "Copacabana, Antioquia",
+    "modalidad": "",
+    "url": "https://www.magneto365.com/co/empleos/aprendiz-de-ingenieria-mecanica-para-copacabana-1625926826-99-1037218",
+    "fecha_publicacion": "2026-09-02",
+    "fuente": "Magneto365",
+    "compensacion": "$1.750.905 COP",
+    "perfil": "",
+    "mision": "¡Haz parte de nuestro equipo! Buscamos Aprendiz de ingeniería mecánica, sin experiencia laboral requerida. Esta es una oportunidad para fortalecer conocimientos en diseño, desarrollo de productos y soluciones de ingeniería, participando en proyectos ",
+    "descripcion_fuente": "¡Haz parte de nuestro equipo! Buscamos Aprendiz de ingeniería mecánica, sin experiencia laboral requerida. Esta es una oportunidad para fortalecer conocimientos en diseño, desarrollo de productos y soluciones de ingeniería, participando en proyectos de innovación y adquiriendo experiencia práctica en un entorno organizacional. Formación académica: estudiante de carrera profesional en Ingeniería Mecánica. Misión del cargo: Apoyar el diseño, desarrollo y validación de productos, componentes y soluciones de ingeniería, mediante la aplicación de conocimientos de diseño y análisis mecánico, contribuyendo a los procesos de innovación y desarrollo de la organización. Funciones: - Participar en el diseño y desarrollo de nuevos productos, componentes y soluciones de ingeniería. - Apoyar la investigación y evaluación de nuevas tecnologías, materiales y metodologías aplicables a los productos de la organización. - Realizar análisis y cálculos de resistencia, esfuerzos, cargas, vibraciones y comportamiento mecánico de componentes y estructuras. - Elaborar y actualizar diseños, planos y modelos 3D mediante herramientas CAD. - Participar en la construcción, evaluación y validación de prototipos. Conocimiento:&nbsp; - Diseño y modelado mecánico (CAD/3D). - Resistencia de materiales y análisis estructural. - Materiales y procesos de manufactura. Competencias laborales:&nbsp; Trabajo en equipo, atención al detalle y manejo de programas relacionados con el cargo. Salario: $1.750.905 + prestaciones legales vigentes. Tipo de contrato: Término fijo especial para aprendices, directamente con la organización. Horario: Lunes a viernes de 7:30 am a 5:00 pm. Lugar de trabajo: Copacabana, Antioquia. Proceso de Selección Tu próxima oportunidad laboral puede estar a pocos pasos. Para postularte: Haz clic en el botón \"Postularme\". Inicia sesión o crea tu cuenta en Magneto, registra tu hoja de vida y responde las preguntas del proceso. Revisa tu correo electrónico para conocer el estado de tu postulación. Si avanzas, completa las pruebas y/o entrevistas solicitadas. El equipo del Servicio de Empleo Comfama evaluará tu perfil, si se ajusta a la vacante y pasas los filtros, lo enviará a la empresa y ellos te contactarán para continuar el proceso. Recuerda que no debes pagar para participar de procesos de selección. Así dirás #MeProtejodelfraude Sobre Nosotros El Servicio de Empleo Comfama es la plataforma de intermediación que conecta el talento de las personas y las necesidades de las em",
+    "fecha_cierre_iso": "2027-02-28",
+    "encontrada_ultima_corrida": true,
+    "ultima_deteccion": "2026-10-31",
+    "primera_deteccion": "2026-10-24",
+    "estado_vigencia": "No reapareció en esta búsqueda; revisar vigencia en la fuente",
+    "ramas": [
+      {
+        "clave": "simulaciones_datos_ia",
+        "nombre": "Análisis de Datos, IA y Simulaciones",
+        "color": "#06b6d4",
+        "score": 63
+      },
+      {
+        "clave": "instrumentacion_metrologia",
+        "nombre": "Instrumentación, Automatización y Metrología",
+        "color": "#10b981",
+        "score": 58
+      },
+      {
+        "clave": "electronica_analoga_circuitos",
+        "nombre": "Electrónica Análoga y Circuitos",
+        "color": "#8b5cf6",
+        "score": 53
+      },
+      {
+        "clave": "materiales_nanotecnologia",
+        "nombre": "Ciencia de Materiales y Nanotecnología",
+        "color": "#14b8a6",
+        "score": 53
+      },
+      {
+        "clave": "diseno_mecanico_cad",
+        "nombre": "Diseño Mecánico y Dibujo Técnico",
+        "color": "#f97316",
+        "score": 26
+      }
+    ],
+    "rama_principal": "Análisis de Datos, IA y Simulaciones",
+    "color_principal": "#06b6d4",
+    "clave_principal": "simulaciones_datos_ia",
+    "afinidad": "Alta Afinidad Pénsum",
+    "es_exclusiva_fisica": false,
+    "programa_inclusion_genero": false,
+    "convocatoria_exclusiva_mujeres": false,
+    "es_cierre_inminente": false,
+    "es_practica": true,
+    "score_pensum": 98,
+    "empresa_objetivo": false,
+    "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables.",
+    "_tareas_generadas": true,
+    "_sello": "2d51e3b7cdf5"
+  },
+  {
+    "titulo": "Aprendiz de infraestructura y TI 1626500654-2",
+    "empresa": "Servicio de Empleo Comfama",
+    "ubicacion": "Medellín, Antioquia",
+    "modalidad": "",
+    "url": "https://www.magneto365.com/co/empleos/aprendiz-de-infraestructura-y-ti-1626500654-2-1037728",
+    "fecha_publicacion": "2026-08-31",
+    "fuente": "Magneto365",
+    "compensacion": "$1.750.905 COP",
+    "perfil": "",
+    "mision": "Importante empresa aliada, requiere para su equipo de trabajo tecnólogo/a en sistemas, tecnólogo/a en mantenimiento de equipos de cómputo o áreas afines. Preferiblemente cursando pregrado en Ingeniería de Sistemas. Experiencia en meses: No requiere e",
+    "descripcion_fuente": "Importante empresa aliada, requiere para su equipo de trabajo tecnólogo/a en sistemas, tecnólogo/a en mantenimiento de equipos de cómputo o áreas afines. Preferiblemente cursando pregrado en Ingeniería de Sistemas. Experiencia en meses: No requiere experiencia. Misión del cargo:&nbsp; Apoyar la atención y gestión de los requerimientos tecnológicos de los usuarios, mediante actividades de soporte técnico, instalación, configuración y mantenimiento básico de equipos, gestión de inventarios y documentación de la infraestructura tecnológica, con el fin de contribuir a la continuidad y adecuado funcionamiento de los servicios de TI. Funciones específicas: - Atender y gestionar requerimientos básicos de soporte tecnológico, realizando seguimiento a tickets y solicitudes y escalando al equipo responsable aquellos incidentes que requieran intervención especializada. - Apoyar la instalación, configuración y mantenimiento preventivo y correctivo básico de equipos de cómputo, periféricos, impresoras y demás elementos tecnológicos. - Gestionar el inventario de equipos y activos tecnológicos, manteniendo actualizados los registros y la documentación relacionada con equipos, configuraciones y actividades realizadas. - Apoyar la preparación, entrega, recepción, revisión y organización de los equipos tecnológicos asignados a los/as colaboradores/as. - Participar en actividades de revisión básica de conectividad, actualización, organización y documentación de la infraestructura tecnológica, cumpliendo los procedimientos internos de seguridad de la información. Conocimientos: - Fundamentos de soporte técnico y mantenimiento de equipos de cómputo. - Sistemas operativos, principalmente Windows. - Manejo básico de hardware y periféricos. - Conceptos básicos de redes y conectividad. - Instalación y configuración básica de software. - Manejo de herramientas ofimáticas. - Conceptos básicos de infraestructura tecnológica. - Gestión y seguimiento de requerimientos o mesas de ayuda. - Inventario y control básico de activos tecnológicos. - Conceptos básicos de seguridad de la información. - Documentación de actividades y elaboración de registros. - Buenas prácticas de servicio y atención al usuario. Competencias: - Orientación al servicio. - Comunicación efectiva. - Trabajo en equipo. - Capacidad de aprendizaje. - Organización y atención al detalle. - Responsabilidad y cumplimiento. - Iniciativa. - Capacidad para seguir instrucciones y procedimientos. - Interés por la tecnología y so",
+    "fecha_cierre_iso": "2027-02-28",
+    "encontrada_ultima_corrida": true,
+    "ultima_deteccion": "2026-10-31",
+    "primera_deteccion": "2026-10-31",
+    "ramas": [
+      {
+        "clave": "simulaciones_datos_ia",
+        "nombre": "Análisis de Datos, IA y Simulaciones",
+        "color": "#06b6d4",
+        "score": 63
+      },
+      {
+        "clave": "electronica_digital_iot",
+        "nombre": "Electrónica Digital, Microcontroladores e IoT",
+        "color": "#3b82f6",
+        "score": 58
+      },
+      {
+        "clave": "instrumentacion_metrologia",
+        "nombre": "Instrumentación, Automatización y Metrología",
+        "color": "#10b981",
+        "score": 58
+      },
+      {
+        "clave": "optica_vision_artificial",
+        "nombre": "Óptica, Fotónica y Visión Artificial",
+        "color": "#a855f7",
+        "score": 53
+      }
+    ],
+    "rama_principal": "Análisis de Datos, IA y Simulaciones",
+    "color_principal": "#06b6d4",
+    "clave_principal": "simulaciones_datos_ia",
+    "afinidad": "Alta Afinidad Pénsum",
+    "es_exclusiva_fisica": false,
+    "programa_inclusion_genero": false,
+    "convocatoria_exclusiva_mujeres": false,
+    "es_cierre_inminente": false,
+    "es_practica": true,
+    "score_pensum": 98,
+    "empresa_objetivo": false,
+    "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables.",
+    "_tareas_generadas": true,
+    "_sello": "ecf32aca0118"
+  },
+  {
     "titulo": "Practicante de mecánica 1626191161-48",
     "empresa": "Servicio de Empleo Comfama",
     "ubicacion": "Medellín, Antioquia",
@@ -1986,70 +2165,6 @@
     "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables.",
     "_tareas_generadas": true,
     "_sello": "d9d59c434ec4"
-  },
-  {
-    "titulo": "Aprendiz de ingeniería mecánica para Copacabana 1625926826-99",
-    "empresa": "Servicio de Empleo Comfama",
-    "ubicacion": "Copacabana, Antioquia",
-    "modalidad": "",
-    "url": "https://www.magneto365.com/co/empleos/aprendiz-de-ingenieria-mecanica-para-copacabana-1625926826-99-1037218",
-    "fecha_publicacion": "2026-09-02",
-    "fuente": "Magneto365",
-    "compensacion": "$1.750.905 COP",
-    "perfil": "",
-    "mision": "¡Haz parte de nuestro equipo! Buscamos Aprendiz de ingeniería mecánica, sin experiencia laboral requerida. Esta es una oportunidad para fortalecer conocimientos en diseño, desarrollo de productos y soluciones de ingeniería, participando en proyectos ",
-    "descripcion_fuente": "¡Haz parte de nuestro equipo! Buscamos Aprendiz de ingeniería mecánica, sin experiencia laboral requerida. Esta es una oportunidad para fortalecer conocimientos en diseño, desarrollo de productos y soluciones de ingeniería, participando en proyectos de innovación y adquiriendo experiencia práctica en un entorno organizacional. Formación académica: estudiante de carrera profesional en Ingeniería Mecánica. Misión del cargo: Apoyar el diseño, desarrollo y validación de productos, componentes y soluciones de ingeniería, mediante la aplicación de conocimientos de diseño y análisis mecánico, contribuyendo a los procesos de innovación y desarrollo de la organización. Funciones: - Participar en el diseño y desarrollo de nuevos productos, componentes y soluciones de ingeniería. - Apoyar la investigación y evaluación de nuevas tecnologías, materiales y metodologías aplicables a los productos de la organización. - Realizar análisis y cálculos de resistencia, esfuerzos, cargas, vibraciones y comportamiento mecánico de componentes y estructuras. - Elaborar y actualizar diseños, planos y modelos 3D mediante herramientas CAD. - Participar en la construcción, evaluación y validación de prototipos. Conocimiento:&nbsp; - Diseño y modelado mecánico (CAD/3D). - Resistencia de materiales y análisis estructural. - Materiales y procesos de manufactura. Competencias laborales:&nbsp; Trabajo en equipo, atención al detalle y manejo de programas relacionados con el cargo. Salario: $1.750.905 + prestaciones legales vigentes. Tipo de contrato: Término fijo especial para aprendices, directamente con la organización. Horario: Lunes a viernes de 7:30 am a 5:00 pm. Lugar de trabajo: Copacabana, Antioquia. Proceso de Selección Tu próxima oportunidad laboral puede estar a pocos pasos. Para postularte: Haz clic en el botón \"Postularme\". Inicia sesión o crea tu cuenta en Magneto, registra tu hoja de vida y responde las preguntas del proceso. Revisa tu correo electrónico para conocer el estado de tu postulación. Si avanzas, completa las pruebas y/o entrevistas solicitadas. El equipo del Servicio de Empleo Comfama evaluará tu perfil, si se ajusta a la vacante y pasas los filtros, lo enviará a la empresa y ellos te contactarán para continuar el proceso. Recuerda que no debes pagar para participar de procesos de selección. Así dirás #MeProtejodelfraude Sobre Nosotros El Servicio de Empleo Comfama es la plataforma de intermediación que conecta el talento de las personas y las necesidades de las em",
-    "fecha_cierre_iso": "2027-02-28",
-    "encontrada_ultima_corrida": true,
-    "ultima_deteccion": "2026-10-31",
-    "primera_deteccion": "2026-10-24",
-    "estado_vigencia": "No reapareció en esta búsqueda; revisar vigencia en la fuente",
-    "ramas": [
-      {
-        "clave": "simulaciones_datos_ia",
-        "nombre": "Análisis de Datos, IA y Simulaciones",
-        "color": "#06b6d4",
-        "score": 63
-      },
-      {
-        "clave": "instrumentacion_metrologia",
-        "nombre": "Instrumentación, Automatización y Metrología",
-        "color": "#10b981",
-        "score": 58
-      },
-      {
-        "clave": "electronica_analoga_circuitos",
-        "nombre": "Electrónica Análoga y Circuitos",
-        "color": "#8b5cf6",
-        "score": 53
-      },
-      {
-        "clave": "materiales_nanotecnologia",
-        "nombre": "Ciencia de Materiales y Nanotecnología",
-        "color": "#14b8a6",
-        "score": 53
-      },
-      {
-        "clave": "diseno_mecanico_cad",
-        "nombre": "Diseño Mecánico y Dibujo Técnico",
-        "color": "#f97316",
-        "score": 26
-      }
-    ],
-    "rama_principal": "Análisis de Datos, IA y Simulaciones",
-    "color_principal": "#06b6d4",
-    "clave_principal": "simulaciones_datos_ia",
-    "afinidad": "Alta Afinidad Pénsum",
-    "es_exclusiva_fisica": false,
-    "programa_inclusion_genero": false,
-    "convocatoria_exclusiva_mujeres": false,
-    "es_cierre_inminente": false,
-    "es_practica": true,
-    "score_pensum": 98,
-    "empresa_objetivo": false,
-    "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables.",
-    "_tareas_generadas": true,
-    "_sello": "2d51e3b7cdf5"
   },
   {
     "titulo": "Practicante Universitario De Estadística-Análisis de datos",
@@ -2302,6 +2417,46 @@
     "_sello": "109510926214"
   },
   {
+    "titulo": "Aprendiz Producción Plátano",
+    "empresa": "Confidencial",
+    "ubicacion": "Apartadó, Antioquia",
+    "modalidad": "",
+    "url": "https://www.magneto365.com/co/empleos/aprendiz-produccion-platano-1070577",
+    "fecha_publicacion": "2026-09-18",
+    "fuente": "Magneto365",
+    "compensacion": "$1.750.905 COP",
+    "perfil": "Herramientas ofimáticas",
+    "mision": "La organización requiere un Aprendiz&nbsp; Administrativo para apoyar los procesos relacionados con la atención de consultas, requerimientos y trámites de usuarios internos y externos, así como brindar soporte en la gestión de información administrat",
+    "descripcion_fuente": "La organización requiere un Aprendiz&nbsp; Administrativo para apoyar los procesos relacionados con la atención de consultas, requerimientos y trámites de usuarios internos y externos, así como brindar soporte en la gestión de información administrativa del área de Producción Plátano . Esta posición tendrá la oportunidad de participar en actividades relacionadas con el registro, procesamiento y seguimiento de información de producción, atención a usuarios y soporte administrativo, contribuyendo a la organización y disponibilidad oportuna de la información necesaria para el desarrollo de las actividades del área. Responsabilidades: Apoyar la captura, procesamiento y organización de datos relacionados con la producción de plátano. Apoyar el registro y actualización de información de producción en las herramientas definidas por el área. Brindar atención y orientación a usuarios externos frente a consultas, requerimientos y trámites. Recibir y enrutar llamadas telefónicas de acuerdo con las necesidades del área. Apoyar la revisión y gestión de correos electrónicos y correspondencia recibida. Brindar soporte administrativo a las diferentes actividades y requerimientos de información del área. Apoyar el registro, seguimiento y actualización de variables e indicadores de producción. Organizar y mantener actualizada la información y documentación requerida por el área. Apoyar la elaboración y consolidación de reportes administrativos y de producción. Proponer acciones de mejora que contribuyan a facilitar la organización y gestión de la información. Requerimientos: Estudiante de formación Tecnológica en Administración, Administración de empresas, Gestión administrativa, Asistencia gerencial&nbsp; o afines. Nivel de educación: Tecnólogo Sectores laborales: Administración y oficina Agricultura y agroindustria Producción Servicios administrativos Cargo: Aprendiz Habilidades técnicas: Herramientas ofimáticas Excel Gestión administrativa",
+    "fecha_cierre_iso": "2026-11-30",
+    "encontrada_ultima_corrida": true,
+    "ultima_deteccion": "2026-10-31",
+    "primera_deteccion": "2026-10-24",
+    "estado_vigencia": "No reapareció en esta búsqueda; revisar vigencia en la fuente",
+    "ramas": [
+      {
+        "clave": "simulaciones_datos_ia",
+        "nombre": "Análisis de Datos, IA y Simulaciones",
+        "color": "#06b6d4",
+        "score": 63
+      }
+    ],
+    "rama_principal": "Análisis de Datos, IA y Simulaciones",
+    "color_principal": "#06b6d4",
+    "clave_principal": "simulaciones_datos_ia",
+    "afinidad": "Alta Afinidad Pénsum",
+    "es_exclusiva_fisica": false,
+    "programa_inclusion_genero": false,
+    "convocatoria_exclusiva_mujeres": false,
+    "es_cierre_inminente": false,
+    "es_practica": true,
+    "score_pensum": 98,
+    "empresa_objetivo": false,
+    "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables.",
+    "_tareas_generadas": true,
+    "_sello": "2b6958f57bc1"
+  },
+  {
     "titulo": "Convocatoria practicantes 2026-2 y 2027-1",
     "empresa": "Compensar",
     "ubicacion": "Bogotá, D.C., Soacha, Funza, Mosquera, Facatativá, Chía · remoto o híbrido (confirmar en el aviso)",
@@ -2343,28 +2498,40 @@
     "_sello": "25413874e1a4"
   },
   {
-    "titulo": "Aprendiz Producción Plátano",
-    "empresa": "Confidencial",
-    "ubicacion": "Apartadó, Antioquia",
-    "modalidad": "",
-    "url": "https://www.magneto365.com/co/empleos/aprendiz-produccion-platano-1070577",
-    "fecha_publicacion": "2026-09-18",
+    "titulo": "Convocatoria Prácticas Profesionales 2027-1",
+    "empresa": "Cencosud",
+    "ubicacion": "Bogotá, D.C. · remoto o híbrido",
+    "modalidad": "Remoto o híbrido",
+    "url": "https://www.magneto365.com/co/empleos/convocatoria-practicas-profesionales-2027-1-1038187",
+    "fecha_publicacion": "2026-08-31",
     "fuente": "Magneto365",
     "compensacion": "$1.750.905 COP",
-    "perfil": "Herramientas ofimáticas",
-    "mision": "La organización requiere un Aprendiz&nbsp; Administrativo para apoyar los procesos relacionados con la atención de consultas, requerimientos y trámites de usuarios internos y externos, así como brindar soporte en la gestión de información administrat",
-    "descripcion_fuente": "La organización requiere un Aprendiz&nbsp; Administrativo para apoyar los procesos relacionados con la atención de consultas, requerimientos y trámites de usuarios internos y externos, así como brindar soporte en la gestión de información administrativa del área de Producción Plátano . Esta posición tendrá la oportunidad de participar en actividades relacionadas con el registro, procesamiento y seguimiento de información de producción, atención a usuarios y soporte administrativo, contribuyendo a la organización y disponibilidad oportuna de la información necesaria para el desarrollo de las actividades del área. Responsabilidades: Apoyar la captura, procesamiento y organización de datos relacionados con la producción de plátano. Apoyar el registro y actualización de información de producción en las herramientas definidas por el área. Brindar atención y orientación a usuarios externos frente a consultas, requerimientos y trámites. Recibir y enrutar llamadas telefónicas de acuerdo con las necesidades del área. Apoyar la revisión y gestión de correos electrónicos y correspondencia recibida. Brindar soporte administrativo a las diferentes actividades y requerimientos de información del área. Apoyar el registro, seguimiento y actualización de variables e indicadores de producción. Organizar y mantener actualizada la información y documentación requerida por el área. Apoyar la elaboración y consolidación de reportes administrativos y de producción. Proponer acciones de mejora que contribuyan a facilitar la organización y gestión de la información. Requerimientos: Estudiante de formación Tecnológica en Administración, Administración de empresas, Gestión administrativa, Asistencia gerencial&nbsp; o afines. Nivel de educación: Tecnólogo Sectores laborales: Administración y oficina Agricultura y agroindustria Producción Servicios administrativos Cargo: Aprendiz Habilidades técnicas: Herramientas ofimáticas Excel Gestión administrativa",
-    "fecha_cierre_iso": "2026-11-30",
+    "perfil": "Excel",
+    "mision": "Si estás en búsqueda de excelencia profesional y mejores oportunidades para desarrollarte ¡Llegaste al lugar indicado! Estamos en búsqueda de nuestros próximos Practicantes Profesionales 2027-1 , &nbsp;quienes&nbsp; tendrán la oportunidad de particip",
+    "descripcion_fuente": "Si estás en búsqueda de excelencia profesional y mejores oportunidades para desarrollarte ¡Llegaste al lugar indicado! Estamos en búsqueda de nuestros próximos Practicantes Profesionales 2027-1 , &nbsp;quienes&nbsp; tendrán la oportunidad de participar en proyectos de impacto, interactuar con equipos multidisciplinarios, desarrollar habilidades técnicas y fortalecer competencias que contribuirán a su crecimiento profesional y personal. Requisitos: Contar con el aval de la Universidad para realizar las prácticas profesionales No haber firmado un contrato de aprendizaje anteriormente (Convenio SENA) Condiciones: Tipo de Contrato: Contrato Laboral Especial a término fijo (convenio SENA) Salario: SMLV 2027 +Auxilio de transporte+ Prestaciones sociales de acuerdo con la reciente reforma laboral+ Afiliación Caja Compensación. Beneficios: 10% descuento en todas las compras en Jumbo, Metro o Easy + acceso a dinámicas especiales + 1 día libre el mes de cumpleaños + Beneficios adicionales Posibilidades de crecimiento en la compañía M odalidad: Híbrido (3x2 o 4x1) Dependiendo la necesidad del área Sede: Av. 9 # 125-30 Bogotá Horario Laboral: Lunes a jueves 7:00am a 5:00pm ,&nbsp; &nbsp; &nbsp; 8:00am a 6:00pm&nbsp; &nbsp; &nbsp;o&nbsp; &nbsp; &nbsp; 9:00am a 7:00pm. Viernes de 7:00am a 1:00pm ó&nbsp; de 8:00am a 2:00pm en jornada continua Carreras:&nbsp; Administración de Empresas Negocios Internacionales Ingeniería Industrial&nbsp; Mercadeo Publicidad Arquitectura Contaduría Pública Ingeniería de Sistemas Ingeniería de Alimentos&nbsp; Ingeniería Química Finanzas Economía&nbsp; Seguridad y Salud en el Trabajo&nbsp;",
+    "fecha_cierre_iso": "2026-12-31",
     "encontrada_ultima_corrida": true,
     "ultima_deteccion": "2026-10-31",
-    "primera_deteccion": "2026-10-24",
-    "estado_vigencia": "No reapareció en esta búsqueda; revisar vigencia en la fuente",
+    "primera_deteccion": "2026-10-31",
+    "alcance_geografico": "Fuera de Antioquia; remoto o híbrido según el aviso",
     "ramas": [
       {
         "clave": "simulaciones_datos_ia",
         "nombre": "Análisis de Datos, IA y Simulaciones",
         "color": "#06b6d4",
         "score": 63
+      },
+      {
+        "clave": "optica_vision_artificial",
+        "nombre": "Óptica, Fotónica y Visión Artificial",
+        "color": "#a855f7",
+        "score": 53
+      },
+      {
+        "clave": "materiales_nanotecnologia",
+        "nombre": "Ciencia de Materiales y Nanotecnología",
+        "color": "#14b8a6",
+        "score": 53
       }
     ],
     "rama_principal": "Análisis de Datos, IA y Simulaciones",
@@ -2380,7 +2547,7 @@
     "empresa_objetivo": false,
     "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables.",
     "_tareas_generadas": true,
-    "_sello": "2b6958f57bc1"
+    "_sello": "28465ec04a47"
   },
   {
     "titulo": "Aprendiz de redes o telecomunicaciones",
@@ -2786,98 +2953,6 @@
     "tareas": "Levantamiento de curvas de calibración, programación en LabVIEW, enlace con autómatas PLC y aseguramiento metrológico ISO 17025.",
     "_tareas_generadas": true,
     "_sello": "2b933b03a50e"
-  },
-  {
-    "titulo": "Practicante Gestión Calidad - Laboratorio Farmacéutico",
-    "empresa": "LABORATORIOS LAPROFF S.A.S",
-    "ubicacion": "Caldas, Envigado, Itagui, La Estrella, Medellín, Sabaneta, Antioquia",
-    "modalidad": "",
-    "url": "https://www.magneto365.com/co/empleos/practicante-gestion-calidad-laboratorio-farmaceutico-1082556",
-    "fecha_publicacion": "2026-09-28",
-    "fuente": "Magneto365",
-    "compensacion": "$1.750.905 COP",
-    "perfil": "BPD",
-    "mision": "¡TRANSFORMA LA SALUD JUNTO A NOSOTROS! En Laboratorios Laproff, trabajamos con un propósito claro, democratizar el acceso a la salud y con ello llegar a cada hogar colombiano, respaldados por más de 66 años de experiencia en el sector farmacéutico. H",
-    "descripcion_fuente": "¡TRANSFORMA LA SALUD JUNTO A NOSOTROS! En Laboratorios Laproff, trabajamos con un propósito claro, democratizar el acceso a la salud y con ello llegar a cada hogar colombiano, respaldados por más de 66 años de experiencia en el sector farmacéutico. Hoy, queremos que tú también hagas parte de esta historia. Nos encontramos en la búsqueda de un PRACTICANTE GESTIÓN CALIDAD. ¿Cuál es la misión del rol? Garantizar que los productos terminados que se envían al mercado cumplen con la&nbsp; normatividad establecida en cada uno de los procesos previos a la liberación&nbsp; atendiendo los lineamientos de la Planeación Estratégica de Laproff S.A.S y la normativa gubernamental. Algunas de las funciones: -&nbsp; Recopilar, revisar y avalar la documentación que hace parte del batch record, con el fin de garantizar lo&nbsp; solicitado. -&nbsp; Asegurar el almacenamiento, digitalización correcta y préstamo de batch record de producto y su disposición final&nbsp; luego de que se cumpla el tiempo de almacenamiento. -&nbsp; Hacer parte activa de los programas de auditorias y autoinspecciones de la compañía El perfil que buscamos: Educación: Practicante en Química Farmacéutica o afines. Conocimientos: &nbsp; Habilidad informática básica, office alto y manejo de&nbsp; herramientas de internet nivel medio; ingles básico, Buenas Prácticas de Manufactura y Buenas Prácticas de Laboratorio. Tenemos para ti: Salario: $1.750.902 + auxilio de transporte Sede trabajo: &nbsp;Sabaneta/Antioquia - Tablaza/Caldas Horario: Horario administrato - Lunes a viernes (disponibilidad algunos sábados)&nbsp; Beneficios: Fondo de empleados, para que puedas ahorrar y proyectarte, convenios con aliados, servicio de restaurante con tarifa especial. ¿Estás listo para marcar la diferencia con nosotros?&nbsp; Si cumples con el perfil postúlate ahora y haz parte de una organización que se mueve con propósito. ¡Te esperamos!",
-    "fecha_cierre_iso": "2026-10-31",
-    "encontrada_ultima_corrida": true,
-    "ultima_deteccion": "2026-10-31",
-    "primera_deteccion": "2026-10-24",
-    "estado_vigencia": "No reapareció en esta búsqueda; revisar vigencia en la fuente",
-    "ramas": [
-      {
-        "clave": "electronica_digital_iot",
-        "nombre": "Electrónica Digital, Microcontroladores e IoT",
-        "color": "#3b82f6",
-        "score": 58
-      },
-      {
-        "clave": "materiales_nanotecnologia",
-        "nombre": "Ciencia de Materiales y Nanotecnología",
-        "color": "#14b8a6",
-        "score": 53
-      }
-    ],
-    "rama_principal": "Electrónica Digital, Microcontroladores e IoT",
-    "color_principal": "#3b82f6",
-    "clave_principal": "electronica_digital_iot",
-    "afinidad": "Alta Afinidad Pénsum",
-    "es_exclusiva_fisica": false,
-    "programa_inclusion_genero": false,
-    "convocatoria_exclusiva_mujeres": false,
-    "es_cierre_inminente": true,
-    "es_practica": true,
-    "score_pensum": 93,
-    "empresa_objetivo": false,
-    "tareas": "Programación de microcontroladores, adquisición y filtrado digital de señales, depuración con analizador lógico y pruebas de hardware.",
-    "_tareas_generadas": true,
-    "_sello": "d31e67f16f85"
-  },
-  {
-    "titulo": "Practicante Gestión Calidad - Sabaneta",
-    "empresa": "LABORATORIOS LAPROFF S.A.S",
-    "ubicacion": "Caldas, Envigado, Itagui, La Estrella, Medellín, Sabaneta, Antioquia",
-    "modalidad": "",
-    "url": "https://www.magneto365.com/co/empleos/practicante-gestion-calidad-sabaneta-1054356",
-    "fecha_publicacion": "2026-09-09",
-    "fuente": "Magneto365",
-    "compensacion": "$1.750.905 COP",
-    "perfil": "BPD",
-    "mision": "¡TRANSFORMA LA SALUD JUNTO A NOSOTROS! En Laboratorios Laproff, trabajamos con un propósito claro, democratizar el acceso a la salud y con ello llegar a cada hogar colombiano, respaldados por más de 66 años de experiencia en el sector farmacéutico. H",
-    "descripcion_fuente": "¡TRANSFORMA LA SALUD JUNTO A NOSOTROS! En Laboratorios Laproff, trabajamos con un propósito claro, democratizar el acceso a la salud y con ello llegar a cada hogar colombiano, respaldados por más de 66 años de experiencia en el sector farmacéutico. Hoy, queremos que tú también hagas parte de esta historia. Nos encontramos en la búsqueda de un PRACTICANTE GESTIÓN CALIDAD. ¿Cuál es la misión del rol? Garantizar que los productos terminados que se envían al mercado cumplen con la&nbsp; normatividad establecida en cada uno de los procesos previos a la liberación&nbsp; atendiendo los lineamientos de la Planeación Estratégica de Laproff S.A.S y la normativa gubernamental. Algunas de las funciones: -&nbsp; Recopilar, revisar y avalar la documentación que hace parte del batch record, con el fin de garantizar lo&nbsp; solicitado. -&nbsp; Asegurar el almacenamiento, digitalización correcta y préstamo de batch record de producto y su disposición final&nbsp; luego de que se cumpla el tiempo de almacenamiento. -&nbsp; Hacer parte activa de los programas de auditorias y autoinspecciones de la compañía El perfil que buscamos: Educación: Practicante en Química Farmacéutica o afines. Conocimientos: &nbsp; Habilidad informática básica, office alto y manejo de&nbsp; herramientas de internet nivel medio; ingles básico, Buenas Prácticas de Manufactura y Buenas Prácticas de Laboratorio. Tenemos para ti: Salario: $1.750.902 + auxilio de transporte Sede trabajo: &nbsp;Sabaneta/Antioquia - Tablaza/Caldas Horario: Horario administrato - Lunes a viernes (disponibilidad algunos sábados)&nbsp; Beneficios: Fondo de empleados, para que puedas ahorrar y proyectarte, convenios con aliados, servicio de restaurante con tarifa especial. ¿Estás listo para marcar la diferencia con nosotros?&nbsp; Si cumples con el perfil postúlate ahora y haz parte de una organización que se mueve con propósito. ¡Te esperamos!",
-    "fecha_cierre_iso": "2026-10-31",
-    "encontrada_ultima_corrida": true,
-    "ultima_deteccion": "2026-10-31",
-    "primera_deteccion": "2026-10-24",
-    "estado_vigencia": "No reapareció en esta búsqueda; revisar vigencia en la fuente",
-    "ramas": [
-      {
-        "clave": "electronica_digital_iot",
-        "nombre": "Electrónica Digital, Microcontroladores e IoT",
-        "color": "#3b82f6",
-        "score": 58
-      },
-      {
-        "clave": "materiales_nanotecnologia",
-        "nombre": "Ciencia de Materiales y Nanotecnología",
-        "color": "#14b8a6",
-        "score": 53
-      }
-    ],
-    "rama_principal": "Electrónica Digital, Microcontroladores e IoT",
-    "color_principal": "#3b82f6",
-    "clave_principal": "electronica_digital_iot",
-    "afinidad": "Alta Afinidad Pénsum",
-    "es_exclusiva_fisica": false,
-    "programa_inclusion_genero": false,
-    "convocatoria_exclusiva_mujeres": false,
-    "es_cierre_inminente": true,
-    "es_practica": true,
-    "score_pensum": 93,
-    "empresa_objetivo": false,
-    "tareas": "Programación de microcontroladores, adquisición y filtrado digital de señales, depuración con analizador lógico y pruebas de hardware.",
-    "_tareas_generadas": true,
-    "_sello": "12d07f588f67"
   },
   {
     "titulo": "Practicante de producción (etapa productiva) 1625938312-93",
@@ -3750,7 +3825,7 @@
     "fecha_publicacion": "2026-10-27",
     "fuente": "Convocatoria institucional · Prácticas UdeA (Sistemas y Telecomunicaciones)",
     "perfil": "Carreras mencionadas: ciencia de datos",
-    "descripcion_fuente": "Desde Bancolombia nos comparten la convocatoria de Talento B 2027-1, el programa de primer empleo de Bancolombia: En esta nueva era, soñamos con conectar con jóvenes que estén finalizando su carrera o cuenten con menos de dos años de experiencia profesional y quieran crecer en ciencia de datos, tecnología, diseño de experiencias o ciberseguridad. Queremos llegar a personas curiosas, propositivas y con ganas de aprender; jóvenes que hayan explorado sus intereses a través de grupos de investigación, proyectos académicos, iniciativas estudiantiles u otras experiencias. Sabemos que desde las universidades acompañan talentos con mucho por aportar, por eso queremos hacer equipo para acercarles una oportunidad donde puedan aprender, conectar, asumir retos reales y descubrir todo su potencial. Para participar en la convocatoria, recuerde que usted debe cumplir los requisitos de tener aprobados al menos 160/140 créditos del programa – según versión de pensum (y aprobar Proyecto Integrador para Telecomunicaciones) para participar en la convocatoria. Usted puede solicitar la carta de intención de prácticas para comunicarle a la empresa que cumple con estos requisitos. NOTA: Como requisito de práctica es importante que se desarrolle un proyecto de ingeniería dentro de la empresa. Se recomienda entonces que antes de comenzar cualquier práctica, el estudiante pregunte cuál es la necesidad de la empresa ( ) que entraría a resolver. Queda a decisión del estudiante si tomar la práctica o no. __ATA = window.__ATA || {}; __ATA.cmd = window.__ATA.cmd || []; __ATA.cmd.push(function() { __ATA.initVideoSlot('atatags-370373-6ae18a7861f30', { sectionId: '370373', format: 'inread' }); }); <div id=\"jp-post-flair\"",
+    "descripcion_fuente": "Desde Bancolombia nos comparten la convocatoria de Talento B 2027-1, el programa de primer empleo de Bancolombia: En esta nueva era, soñamos con conectar con jóvenes que estén finalizando su carrera o cuenten con menos de dos años de experiencia profesional y quieran crecer en ciencia de datos, tecnología, diseño de experiencias o ciberseguridad. Queremos llegar a personas curiosas, propositivas y con ganas de aprender; jóvenes que hayan explorado sus intereses a través de grupos de investigación, proyectos académicos, iniciativas estudiantiles u otras experiencias. Sabemos que desde las universidades acompañan talentos con mucho por aportar, por eso queremos hacer equipo para acercarles una oportunidad donde puedan aprender, conectar, asumir retos reales y descubrir todo su potencial. Para participar en la convocatoria, recuerde que usted debe cumplir los requisitos de tener aprobados al menos 160/140 créditos del programa – según versión de pensum (y aprobar Proyecto Integrador para Telecomunicaciones) para participar en la convocatoria. Usted puede solicitar la carta de intención de prácticas para comunicarle a la empresa que cumple con estos requisitos. NOTA: Como requisito de práctica es importante que se desarrolle un proyecto de ingeniería dentro de la empresa. Se recomienda entonces que antes de comenzar cualquier práctica, el estudiante pregunte cuál es la necesidad de la empresa ( ) que entraría a resolver. Queda a decisión del estudiante si tomar la práctica o no. __ATA = window.__ATA || {}; __ATA.cmd = window.__ATA.cmd || []; __ATA.cmd.push(function() { __ATA.initVideoSlot('atatags-370373-6ae430aacc5ef', { sectionId: '370373', format: 'inread' }); }); <div id=\"jp-post-flair\"",
     "tipo_empleo": "Práctica",
     "curada": true,
     "encontrada_ultima_corrida": true,
@@ -3793,16 +3868,16 @@
     "_sello": "96d5028524ec"
   },
   {
-    "titulo": "Practicante Universitario Digital Tecnología",
-    "empresa": "Grupo Éxito",
+    "titulo": "Practicante de Marketing y Análisis de Datos",
+    "empresa": "SOLVO S.A.S",
     "ubicacion": "Medellín, Antioquia",
-    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-practicante-universitario-digital-tecnologia-en-medellin-0B29DA11EF8A724B61373E686DCF3405",
+    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-practicante-de-marketing-y-analisis-de-datos-medellin-en-medellin-344383DDC066B73361373E686DCF3405",
     "fecha_publicacion": "Reciente",
     "fuente": "Computrabajo",
     "encontrada_ultima_corrida": true,
     "ultima_deteccion": "2026-10-31",
     "primera_deteccion": "2026-10-23",
-    "descripcion_fuente": "Descripción de la oferta $ 1.751.000,00 (Mensual) Contrato de aprendizaje Tiempo Completo Buscamos un Practicante Universitario de Ing. Informática, Ing. Sistemas o afines a las labores relacionadas con el ciclo de vida del desarrollo de software, para unirse a nuestro equipo de Tecnología. Tendrás la oportunidad de Impulsar la operación y la transformación digital de Grupo Éxito mediante soluciones tecnológicas eficientes, seguras y escalables, que optimicen la experiencia del cliente, potencien la eficiencia operativa y fortalezcan la sostenibilidad del negocio. Responsabilidades: Diseñar casos de prueba alineados con los requisitos y funciones del producto desarrollado por el equipo, asegurando una cobertura completa de los escenarios necesarios. Desarrollar e implementar casos de prueba automatizados utilizando herramientas específicas para optimizar la eficiencia y repetibilidad del proceso de pruebas. Ejecutar los casos de prueba, tanto manuales como automatizados, registrando los resultados en la herramienta de gestión de pruebas (ALM), así como el análisis de los resultados para identificar errores, documentarlos de manera clara y colaborar con los desarrolladores en su resolución efectiva. Adicionalmente, el cargo requiere la capacidad de ejecutar pruebas mediante pipelines y contar con un entendimiento básico de las características de entornos DevOps. Habilidades técnicas: Automatización de pruebas, diseño de casos de prueba en Gherkin, familiaridad con el ciclo de vida de las pruebas (STLC), manejo de lenguajes de programación. Mín 1 (Java, Python, Typescript). Manejo de herramientas enfocadas a pruebas de API Habilidades interpersonales: Persona que debe ser curiosa y proactiva, su actitud debe ser crítica y orientada al detalle. Su actitud debe destacar por ser resolutiva y consecuentemente debe tener alta afinidad para el trabajo colaborativo y la comunicación asertiva. Requerimientos Educación mínima: Universidad / Carrera Profesional años de experiencia Palabras clave: intern, practicante, becario, pasante, online, tecnologo, tecnico, tech, technician, technology, tecnologia, technologist Hace 2 días (actualizada) Aplicar Postulado <path d=\"m471.382812 44.578125c-26.503906-28.746094-62.871093-44.578125-102.410156-44.578125-29.554687 0-56.621094 9.34375-80.449218 27.769531-12.023438 9.300781-22.917969 20.679688-32.523438 33.960938-9.601562-13.277344-20.5-24.660157-32.527344-33.960938-23.824218-18.425781-50.890625-27.769531-80.445312-27.76953",
+    "descripcion_fuente": "Descripción de la oferta A convenir Contrato de aprendizaje Tiempo Completo En SOLVO S.A.S sede Medellín, nos encontramos en búsqueda de estudiantes de marketing con énfasis e interés en el análisis de datos que estén buscando sus prácticas, y pueda firmar contrato de aprendizaje. Somos una compañía que conecta talento humano de Latinoamericana con empresas americanas. Buscamos personas con excelente actitud y deseos de encontrar con nosotros las mejores oportunidades. Funciones: 1.Reunir información desde redes sociales, encuestas y eventos virtuales. 2. Gestionar la calidad e integridad de las bases de datos, mediante la depuración, validación y actualización de la información. 3.Identificar patrones que revelen preferencias y comportamientos de los candidatos. 4. Elaborar reportes claros y útiles para los equipos de RRHH y marketing. 5. Crear gráficos y dashboards que faciliten la interpretación de resultados. 6. Analizar indicadores clave que permitan generar estrategias de mejora. 7. Proponer mejoras basadas en datos para atraer perfiles más adecuados. 8.Trabajar con áreas estratégicas para implementar decisiones basadas en análisis. Apoyo de sostenimiento 1 SMMLV + ARL + EPS. Tambien podrás estudiar inglés, ofimática y otros cursos totalmente gratis, además de otros beneficios de bienestar laboral. Ésta es tu oportunidad, ¡Postulate ya! Requerimientos Educación mínima: Universidad / Carrera técnica años de experiencia Idiomas: Inglés Palabras clave: intern, practicante, becario, pasante, mercadotecnia, marketing, mercadeo, data Ayer (actualizada) Aplicar Postulado",
     "estado_vigencia": "No reapareció en esta búsqueda; revisar vigencia en la fuente",
     "ramas": [
       {
@@ -3810,24 +3885,6 @@
         "nombre": "Análisis de Datos, IA y Simulaciones",
         "color": "#06b6d4",
         "score": 66
-      },
-      {
-        "clave": "electronica_digital_iot",
-        "nombre": "Electrónica Digital, Microcontroladores e IoT",
-        "color": "#3b82f6",
-        "score": 58
-      },
-      {
-        "clave": "instrumentacion_metrologia",
-        "nombre": "Instrumentación, Automatización y Metrología",
-        "color": "#10b981",
-        "score": 58
-      },
-      {
-        "clave": "optica_vision_artificial",
-        "nombre": "Óptica, Fotónica y Visión Artificial",
-        "color": "#a855f7",
-        "score": 53
       }
     ],
     "rama_principal": "Análisis de Datos, IA y Simulaciones",
@@ -3841,10 +3898,10 @@
     "es_practica": true,
     "score_pensum": 81,
     "empresa_objetivo": true,
-    "mision": "Descripción de la oferta $ 1.751.000,00 (Mensual) Contrato de aprendizaje Tiempo Completo Buscamos un Practicante Universitario de Ing. Informática, Ing. Sistemas o afines a las labores relacionadas con el ciclo de vida del desarrollo de software, para unirse a nuestro equipo de Tecnología. Tendrás la oportunidad de Impulsar la operación y la transformación digital de Grupo Éxito mediante solucion",
+    "mision": "Descripción de la oferta A convenir Contrato de aprendizaje Tiempo Completo En SOLVO S.A.S sede Medellín, nos encontramos en búsqueda de estudiantes de marketing con énfasis e interés en el análisis de datos que estén buscando sus prácticas, y pueda firmar contrato de aprendizaje. Somos una compañía que conecta talento humano de Latinoamericana con empresas americanas. Buscamos personas con excele",
     "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables.",
     "_tareas_generadas": true,
-    "_sello": "373f54e4afa8"
+    "_sello": "7c999453b0dc"
   },
   {
     "titulo": "Practicante de Ingeniería Mecánica",
@@ -3949,16 +4006,16 @@
     "_sello": "859779cd9227"
   },
   {
-    "titulo": "Practicante de Marketing y Análisis de Datos",
-    "empresa": "SOLVO S.A.S",
+    "titulo": "Practicante Universitario Digital Tecnología",
+    "empresa": "Grupo Éxito",
     "ubicacion": "Medellín, Antioquia",
-    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-practicante-de-marketing-y-analisis-de-datos-medellin-en-medellin-344383DDC066B73361373E686DCF3405",
+    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-practicante-universitario-digital-tecnologia-en-medellin-0B29DA11EF8A724B61373E686DCF3405",
     "fecha_publicacion": "Reciente",
     "fuente": "Computrabajo",
     "encontrada_ultima_corrida": true,
     "ultima_deteccion": "2026-10-31",
     "primera_deteccion": "2026-10-23",
-    "descripcion_fuente": "Descripción de la oferta A convenir Contrato de aprendizaje Tiempo Completo En SOLVO S.A.S sede Medellín, nos encontramos en búsqueda de estudiantes de marketing con énfasis e interés en el análisis de datos que estén buscando sus prácticas, y pueda firmar contrato de aprendizaje. Somos una compañía que conecta talento humano de Latinoamericana con empresas americanas. Buscamos personas con excelente actitud y deseos de encontrar con nosotros las mejores oportunidades. Funciones: 1.Reunir información desde redes sociales, encuestas y eventos virtuales. 2. Gestionar la calidad e integridad de las bases de datos, mediante la depuración, validación y actualización de la información. 3.Identificar patrones que revelen preferencias y comportamientos de los candidatos. 4. Elaborar reportes claros y útiles para los equipos de RRHH y marketing. 5. Crear gráficos y dashboards que faciliten la interpretación de resultados. 6. Analizar indicadores clave que permitan generar estrategias de mejora. 7. Proponer mejoras basadas en datos para atraer perfiles más adecuados. 8.Trabajar con áreas estratégicas para implementar decisiones basadas en análisis. Apoyo de sostenimiento 1 SMMLV + ARL + EPS. Tambien podrás estudiar inglés, ofimática y otros cursos totalmente gratis, además de otros beneficios de bienestar laboral. Ésta es tu oportunidad, ¡Postulate ya! Requerimientos Educación mínima: Universidad / Carrera técnica años de experiencia Idiomas: Inglés Palabras clave: intern, practicante, becario, pasante, mercadotecnia, marketing, mercadeo, data Ayer (actualizada) Aplicar Postulado",
+    "descripcion_fuente": "Descripción de la oferta $ 1.751.000,00 (Mensual) Contrato de aprendizaje Tiempo Completo Buscamos un Practicante Universitario de Ing. Informática, Ing. Sistemas o afines a las labores relacionadas con el ciclo de vida del desarrollo de software, para unirse a nuestro equipo de Tecnología. Tendrás la oportunidad de Impulsar la operación y la transformación digital de Grupo Éxito mediante soluciones tecnológicas eficientes, seguras y escalables, que optimicen la experiencia del cliente, potencien la eficiencia operativa y fortalezcan la sostenibilidad del negocio. Responsabilidades: Diseñar casos de prueba alineados con los requisitos y funciones del producto desarrollado por el equipo, asegurando una cobertura completa de los escenarios necesarios. Desarrollar e implementar casos de prueba automatizados utilizando herramientas específicas para optimizar la eficiencia y repetibilidad del proceso de pruebas. Ejecutar los casos de prueba, tanto manuales como automatizados, registrando los resultados en la herramienta de gestión de pruebas (ALM), así como el análisis de los resultados para identificar errores, documentarlos de manera clara y colaborar con los desarrolladores en su resolución efectiva. Adicionalmente, el cargo requiere la capacidad de ejecutar pruebas mediante pipelines y contar con un entendimiento básico de las características de entornos DevOps. Habilidades técnicas: Automatización de pruebas, diseño de casos de prueba en Gherkin, familiaridad con el ciclo de vida de las pruebas (STLC), manejo de lenguajes de programación. Mín 1 (Java, Python, Typescript). Manejo de herramientas enfocadas a pruebas de API Habilidades interpersonales: Persona que debe ser curiosa y proactiva, su actitud debe ser crítica y orientada al detalle. Su actitud debe destacar por ser resolutiva y consecuentemente debe tener alta afinidad para el trabajo colaborativo y la comunicación asertiva. Requerimientos Educación mínima: Universidad / Carrera Profesional años de experiencia Palabras clave: intern, practicante, becario, pasante, online, tecnologo, tecnico, tech, technician, technology, tecnologia, technologist Hace 2 días (actualizada) Aplicar Postulado <path d=\"m471.382812 44.578125c-26.503906-28.746094-62.871093-44.578125-102.410156-44.578125-29.554687 0-56.621094 9.34375-80.449218 27.769531-12.023438 9.300781-22.917969 20.679688-32.523438 33.960938-9.601562-13.277344-20.5-24.660157-32.527344-33.960938-23.824218-18.425781-50.890625-27.769531-80.445312-27.76953",
     "estado_vigencia": "No reapareció en esta búsqueda; revisar vigencia en la fuente",
     "ramas": [
       {
@@ -3966,6 +4023,24 @@
         "nombre": "Análisis de Datos, IA y Simulaciones",
         "color": "#06b6d4",
         "score": 66
+      },
+      {
+        "clave": "electronica_digital_iot",
+        "nombre": "Electrónica Digital, Microcontroladores e IoT",
+        "color": "#3b82f6",
+        "score": 58
+      },
+      {
+        "clave": "instrumentacion_metrologia",
+        "nombre": "Instrumentación, Automatización y Metrología",
+        "color": "#10b981",
+        "score": 58
+      },
+      {
+        "clave": "optica_vision_artificial",
+        "nombre": "Óptica, Fotónica y Visión Artificial",
+        "color": "#a855f7",
+        "score": 53
       }
     ],
     "rama_principal": "Análisis de Datos, IA y Simulaciones",
@@ -3979,10 +4054,10 @@
     "es_practica": true,
     "score_pensum": 81,
     "empresa_objetivo": true,
-    "mision": "Descripción de la oferta A convenir Contrato de aprendizaje Tiempo Completo En SOLVO S.A.S sede Medellín, nos encontramos en búsqueda de estudiantes de marketing con énfasis e interés en el análisis de datos que estén buscando sus prácticas, y pueda firmar contrato de aprendizaje. Somos una compañía que conecta talento humano de Latinoamericana con empresas americanas. Buscamos personas con excele",
+    "mision": "Descripción de la oferta $ 1.751.000,00 (Mensual) Contrato de aprendizaje Tiempo Completo Buscamos un Practicante Universitario de Ing. Informática, Ing. Sistemas o afines a las labores relacionadas con el ciclo de vida del desarrollo de software, para unirse a nuestro equipo de Tecnología. Tendrás la oportunidad de Impulsar la operación y la transformación digital de Grupo Éxito mediante solucion",
     "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables.",
     "_tareas_generadas": true,
-    "_sello": "7c999453b0dc"
+    "_sello": "373f54e4afa8"
   },
   {
     "titulo": "Trainee de Sistemas",
@@ -4025,77 +4100,6 @@
     "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables.",
     "_tareas_generadas": true,
     "_sello": "bed14809d9b1"
-  },
-  {
-    "titulo": "Practicante Universitario (Ingeniería Eléctrica y Electrónica)",
-    "empresa": "ERCO ENERGÍA S.A.S",
-    "ubicacion": "Bogotá, D.C. · remoto o híbrido",
-    "modalidad": "Remoto o híbrido",
-    "url": "https://www.magneto365.com/co/empleos/practicante-universitario-ingenieria-electrica-y-electronica-1081592",
-    "fecha_publicacion": "2026-09-28",
-    "fuente": "Magneto365",
-    "compensacion": "",
-    "perfil": "Sistemas solares fotovoltaicos, Análisis de datos de generación, Indicadores KPI, Configuración de strings, Inversores",
-    "mision": "Practicante Universitario (Ingeniería Eléctrica y Electrónica) Palabras clave: Practicante de Ingeniería Eléctrica Practicante de Ingeniería Electrónica Sistemas fotovoltaicos Energía solar Análisis de desempeño KPIs Inversores Reportes técnicos Inge",
-    "descripcion_fuente": "Practicante Universitario (Ingeniería Eléctrica y Electrónica) Palabras clave: Practicante de Ingeniería Eléctrica Practicante de Ingeniería Electrónica Sistemas fotovoltaicos Energía solar Análisis de desempeño KPIs Inversores Reportes técnicos Ingeniería Eléctrica Energías renovables Pasante de Ingeniería Eléctrica Pasante de Ingeniería Electrónica 🌞 Conecta tu formación con la energía del futuro. ¿Estás listo para dar tus primeros pasos en el mundo de las energías renovables y la ingeniería eléctrica ? Buscamos un practicante de ingeniería eléctrica o practicante de ingeniería electrónica apasionado por la tecnología y el medio ambiente para unirse a nuestro equipo. Tendrás la oportunidad de sumergirte en la operación de sistemas solares fotovoltaicos , apoyando el análisis de datos de generación, el seguimiento de KPIs y el desempeño de nuestros activos. Aprenderás de la mano de nuestro equipo de ingeniería y operación, ganando experiencia práctica invaluable. ¡Tu aporte será clave para optimizar la generación y tomar decisiones operativas importantes! Responsabilidades: Apoyar el análisis de datos de generación de sistemas solares fotovoltaicos. Monitorear y analizar indicadores clave de desempeño (KPIs). Colaborar en la configuración de strings e inversores. Asistir en la revisión de protecciones eléctricas y esquemas eléctricos. Elaborar reportes técnicos sobre el desempeño de los activos. Contribuir a la gestión documental de proyectos solares. Participar en la toma de decisiones operativas basadas en análisis técnicos. Aprender y aplicar conocimientos en operación y mantenimiento de activos energéticos. Requerimientos: Ser estudiante universitario habilitado para realizar prácticas en Ingeniería Eléctrica Ingeniería Electrónica o carreras afines. Conocimiento en sistemas solares fotovoltaicos. Capacidad para realizar análisis de datos de generación e indicadores KPI. Familiaridad con la configuración de strings e inversores. Comprensión de protecciones eléctricas y esquemas eléctricos. Habilidad para elaborar reportes técnicos y gestión documental. Interés en el sector de energías renovables y energía solar fotovoltaica. Disponibilidad para modalidad presencial. Nivel de educación: Profesional Sectores laborales: Ingenierías Producción Operarios y Manufactura Software informática y telecomunicaciones Cargo: Auxiliar Otras habilidades: Habilidades técnicas: Sistemas solares fotovoltaicos Análisis de datos de generación Indicadores KPI Configuración",
-    "fecha_cierre_iso": "2026-10-31",
-    "encontrada_ultima_corrida": true,
-    "ultima_deteccion": "2026-10-31",
-    "primera_deteccion": "2026-10-23",
-    "alcance_geografico": "Fuera de Antioquia; remoto o híbrido según el aviso",
-    "estado_vigencia": "No reapareció en esta búsqueda; revisar vigencia en la fuente",
-    "ramas": [
-      {
-        "clave": "simulaciones_datos_ia",
-        "nombre": "Análisis de Datos, IA y Simulaciones",
-        "color": "#06b6d4",
-        "score": 66
-      },
-      {
-        "clave": "optica_vision_artificial",
-        "nombre": "Óptica, Fotónica y Visión Artificial",
-        "color": "#a855f7",
-        "score": 59
-      },
-      {
-        "clave": "electronica_digital_iot",
-        "nombre": "Electrónica Digital, Microcontroladores e IoT",
-        "color": "#3b82f6",
-        "score": 58
-      },
-      {
-        "clave": "instrumentacion_metrologia",
-        "nombre": "Instrumentación, Automatización y Metrología",
-        "color": "#10b981",
-        "score": 58
-      },
-      {
-        "clave": "energia_potencia",
-        "nombre": "Energía, Potencia y Renovables",
-        "color": "#eab308",
-        "score": 54
-      },
-      {
-        "clave": "electronica_analoga_circuitos",
-        "nombre": "Electrónica Análoga y Circuitos",
-        "color": "#8b5cf6",
-        "score": 53
-      }
-    ],
-    "rama_principal": "Análisis de Datos, IA y Simulaciones",
-    "color_principal": "#06b6d4",
-    "clave_principal": "simulaciones_datos_ia",
-    "afinidad": "Alta Afinidad Pénsum",
-    "es_exclusiva_fisica": false,
-    "programa_inclusion_genero": false,
-    "convocatoria_exclusiva_mujeres": false,
-    "es_cierre_inminente": true,
-    "es_practica": true,
-    "score_pensum": 81,
-    "empresa_objetivo": true,
-    "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables.",
-    "_tareas_generadas": true,
-    "_sello": "ae9fc072df9e"
   },
   {
     "titulo": "[BD] IT Project Operation Assistant Intern (6-Month Internship)",
@@ -4825,6 +4829,46 @@
     "_sello": "95c06dee9ca7"
   },
   {
+    "titulo": "Summer 2027 Internship - Data Science - Remote",
+    "empresa": "Stryker",
+    "ubicacion": "Florida, Estados Unidos · remoto internacional (elegibilidad por confirmar)",
+    "url": "https://www.linkedin.com/jobs/view/summer-2027-internship-data-science-remote-at-stryker-4479986253",
+    "fecha_publicacion": "2026-10-19",
+    "fuente": "LinkedIn Jobs",
+    "linkedin_id": "4479986253",
+    "search_scope": "WORLDWIDE",
+    "encontrada_ultima_corrida": true,
+    "ultima_deteccion": "2026-10-31",
+    "primera_deteccion": "2026-10-24",
+    "descripcion_fuente": "What You Get Out of the Internship At Stryker, we believe that developing the next generation of talent is just as important as developing life-changing medical technologies. As an intern, you won’t just observe — you’ll contribute to meaningful projects, gain exposure to leaders who will mentor you, and experience a culture of innovation and teamwork that is shaping the future of healthcare. As an intern, you will: Apply classroom knowledge and gain experience in a fast-paced and growing industry setting Implement new ideas, be constantly challenged, and develop your skills Network with key/high-level stakeholders and leaders of the business Be a part of an innovative team and culture Experience documenting complex processes and presenting them in a clear format Who we want Challengers. People who seek out the hard projects and work to find just the right solutions. Teammates. Partners who listen to ideas, share thoughts and work together to move the business forward. Charismatic networkers. Relationship-savvy people who intentionally make connections with both internal partners and external contacts. Strategic thinkers. Interns who propose innovative ideas and consistently exceed their performance objectives. Customer-oriented achievers. Individuals with an unparalleled work ethic and customer-focused attitude who bring value to their partnerships. Game changers. Persistent interns who will stop at nothing to live out Stryker’s mission to make healthcare better. Develop, analyze and model operational, economic, management, accounting and other organizational data. Recommends solutions to new and complex problems, develops innovative strategies, quantifies the competitive performance of the organization's operations and/or markets, evaluates the potential impact of changes and reports on economic forecasts that affect the industry. This position requires knowledge that is acquired through experience, specialized education or training. The role has clearly defined procedures and tasks as well as defined guidelines to aid in decision making. Technical knowledge required is limited to the tasks performed in own discipline area and is considered basic. The tasks are generally routine and manual. The job is expected to follow detailed and defined rules / instructions and to make simple judgement in straightforward situations. Typically requires selecting between solutions already established. This job typically requires no experience. The data science intern w",
+    "tipo_empleo": "Jornada completa",
+    "alcance_geografico": "Remoto internacional; confirmar elegibilidad desde Colombia",
+    "estado_vigencia": "Aviso abierto en LinkedIn al momento del rastreo",
+    "ramas": [
+      {
+        "clave": "simulaciones_datos_ia",
+        "nombre": "Análisis de Datos, IA y Simulaciones",
+        "color": "#06b6d4",
+        "score": 63
+      }
+    ],
+    "rama_principal": "Análisis de Datos, IA y Simulaciones",
+    "color_principal": "#06b6d4",
+    "clave_principal": "simulaciones_datos_ia",
+    "afinidad": "Alta Afinidad Pénsum",
+    "es_exclusiva_fisica": false,
+    "programa_inclusion_genero": false,
+    "convocatoria_exclusiva_mujeres": false,
+    "es_cierre_inminente": false,
+    "es_practica": true,
+    "score_pensum": 78,
+    "empresa_objetivo": true,
+    "mision": "What You Get Out of the Internship At Stryker, we believe that developing the next generation of talent is just as important as developing life-changing medical technologies. As an intern, you won’t just observe — you’ll contribute to meaningful projects, gain exposure to leaders who will mentor you, and experience a culture of innovation and teamwork that is shaping the future of healthcare. As a",
+    "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables.",
+    "_tareas_generadas": true,
+    "_sello": "f52ae1856b2a"
+  },
+  {
     "titulo": "Aprendiz de analítica e ingeniería de datos",
     "empresa": "Bayer",
     "ubicacion": "Bogotá, Distrito Capital, Colombia · remoto o híbrido (confirmar en el aviso)",
@@ -4833,7 +4877,7 @@
     "fuente": "LinkedIn Jobs",
     "linkedin_id": "4471688793",
     "search_scope": "COLOMBIA",
-    "encontrada_ultima_corrida": true,
+    "encontrada_ultima_corrida": false,
     "ultima_deteccion": "2026-10-31",
     "primera_deteccion": "2026-10-24",
     "descripcion_fuente": "Cuando demuestras proactividad y ambición, las aprovecharemos a través de una variedad de oportunidades y desafíos en las diversas áreas de nuestro negocio, todas con un propósito sólido y significativo. ¿A donde quieres ir? ¿Qué es lo que quieres hacer? ¿Cómo quieres marcar la diferencia? La elección es suya y le ayudaremos a llegar allí. Seamos mejores juntos. Ser Bayer TUS TAREAS Y RESPONSABILIDADES Documentar el Modelo Entidad–Relación (MER) de norte de latinoamérica Identificar cambios en el modelo. Actualizar conceptos técnicos y de negocio en Word y PDF. Comparar versiones y validar la integridad de la documentación. Comunicar y distribuir las actualizaciones a los usuarios. Actualizar el catálogo de materiales Detectar materiales o códigos de producto nuevos. Ajustar la automatización desarrollada en Python y Google Cloud Functions. Validar atributos en Sell In, Sell Out e Inventarios. Gestionar los cambios mediante *pull requests* en GitHub. Desarrollar y mantener tableros de Power BI Identificar errores o información desactualizada. Modificar medidas, modelos semánticos y visualizaciones. Validar los cambios con los usuarios. Publicar y comunicar las actualizaciones. Apoyar procesos de datos Desarrollar automatizaciones en Python. Participar en procesos ETL. Trabajar con SQL, bases de datos y modelado de datos. Asegurar la disponibilidad, calidad y utilidad de la información. QUIÉN ERES Estudiante técnico o tecnólogo en etapa productiva, con posibilidad de firmar contrato de aprendizaje. Formación en sistematización de datos , desarrollo de software o afines. Disponibilidad para realizar la práctica a tiempo completo. Conocimientos básicos de Python, SQL, bases de datos y Power BI. Interés en automatización, procesos ETL y servicios en la nube. Capacidad para comprender y documentar modelos de datos. Atención al detalle y orientación a la calidad. Comunicación efectiva con usuarios técnicos y de negocio. Organización, pensamiento analítico y trabajo en equipo. LO QUE OFRECEMOS Práctica con subsidio de manutención. Amplia gama de oportunidades de aprendizaje y desarrollo. Auxilio de alimentación y transporte. Modalidad de trabajo hibrida (presencial - virtual). Buenas condiciones laborales y un ambiente de trabajo confortable. Acompañamiento de profesionales con experiencia. Prioridad para el tiempo de clases. En Bayer creemos en la diversidad, la equidad y la inclusión. Nuestro objetivo es crear un ambiente de trabajo en el que todos podamos sent",
@@ -4875,46 +4919,6 @@
     "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables.",
     "_tareas_generadas": true,
     "_sello": "5b8d3f23b2b5"
-  },
-  {
-    "titulo": "Summer 2027 Internship - Data Science - Remote",
-    "empresa": "Stryker",
-    "ubicacion": "Florida, Estados Unidos · remoto internacional (elegibilidad por confirmar)",
-    "url": "https://www.linkedin.com/jobs/view/summer-2027-internship-data-science-remote-at-stryker-4479986253",
-    "fecha_publicacion": "2026-10-19",
-    "fuente": "LinkedIn Jobs",
-    "linkedin_id": "4479986253",
-    "search_scope": "WORLDWIDE",
-    "encontrada_ultima_corrida": true,
-    "ultima_deteccion": "2026-10-31",
-    "primera_deteccion": "2026-10-24",
-    "descripcion_fuente": "What You Get Out of the Internship At Stryker, we believe that developing the next generation of talent is just as important as developing life-changing medical technologies. As an intern, you won’t just observe — you’ll contribute to meaningful projects, gain exposure to leaders who will mentor you, and experience a culture of innovation and teamwork that is shaping the future of healthcare. As an intern, you will: Apply classroom knowledge and gain experience in a fast-paced and growing industry setting Implement new ideas, be constantly challenged, and develop your skills Network with key/high-level stakeholders and leaders of the business Be a part of an innovative team and culture Experience documenting complex processes and presenting them in a clear format Who we want Challengers. People who seek out the hard projects and work to find just the right solutions. Teammates. Partners who listen to ideas, share thoughts and work together to move the business forward. Charismatic networkers. Relationship-savvy people who intentionally make connections with both internal partners and external contacts. Strategic thinkers. Interns who propose innovative ideas and consistently exceed their performance objectives. Customer-oriented achievers. Individuals with an unparalleled work ethic and customer-focused attitude who bring value to their partnerships. Game changers. Persistent interns who will stop at nothing to live out Stryker’s mission to make healthcare better. Develop, analyze and model operational, economic, management, accounting and other organizational data. Recommends solutions to new and complex problems, develops innovative strategies, quantifies the competitive performance of the organization's operations and/or markets, evaluates the potential impact of changes and reports on economic forecasts that affect the industry. This position requires knowledge that is acquired through experience, specialized education or training. The role has clearly defined procedures and tasks as well as defined guidelines to aid in decision making. Technical knowledge required is limited to the tasks performed in own discipline area and is considered basic. The tasks are generally routine and manual. The job is expected to follow detailed and defined rules / instructions and to make simple judgement in straightforward situations. Typically requires selecting between solutions already established. This job typically requires no experience. The data science intern w",
-    "tipo_empleo": "Jornada completa",
-    "alcance_geografico": "Remoto internacional; confirmar elegibilidad desde Colombia",
-    "estado_vigencia": "Aviso abierto en LinkedIn al momento del rastreo",
-    "ramas": [
-      {
-        "clave": "simulaciones_datos_ia",
-        "nombre": "Análisis de Datos, IA y Simulaciones",
-        "color": "#06b6d4",
-        "score": 63
-      }
-    ],
-    "rama_principal": "Análisis de Datos, IA y Simulaciones",
-    "color_principal": "#06b6d4",
-    "clave_principal": "simulaciones_datos_ia",
-    "afinidad": "Alta Afinidad Pénsum",
-    "es_exclusiva_fisica": false,
-    "programa_inclusion_genero": false,
-    "convocatoria_exclusiva_mujeres": false,
-    "es_cierre_inminente": false,
-    "es_practica": true,
-    "score_pensum": 78,
-    "empresa_objetivo": true,
-    "mision": "What You Get Out of the Internship At Stryker, we believe that developing the next generation of talent is just as important as developing life-changing medical technologies. As an intern, you won’t just observe — you’ll contribute to meaningful projects, gain exposure to leaders who will mentor you, and experience a culture of innovation and teamwork that is shaping the future of healthcare. As a",
-    "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables.",
-    "_tareas_generadas": true,
-    "_sello": "f52ae1856b2a"
   },
   {
     "titulo": "Data Analyst Intern",
@@ -5155,71 +5159,6 @@
     "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables.",
     "_tareas_generadas": true,
     "_sello": "3e598bb37d80"
-  },
-  {
-    "titulo": "Practicante Universitario (Programa de Prácticas 2027-I)",
-    "empresa": "Colfondos S.A",
-    "ubicacion": "Bogotá, D.C. · remoto o híbrido",
-    "modalidad": "Remoto o híbrido",
-    "url": "https://www.magneto365.com/co/empleos/practicante-universitario-programa-de-practicas-2027-i-1032279",
-    "fecha_publicacion": "2026-08-25",
-    "fuente": "Magneto365",
-    "compensacion": "",
-    "perfil": "Microsoft Excel, Programación, Visualización de datos, Diseño UX/UI, Modelamiento estadístico",
-    "mision": "Practicante Universitario (Programa de Prácticas 2027-I) Palabras clave: Practicante Universitario Programa de Prácticas 2027-I Practicante de Ingeniería Analítica de Datos Transformación Organizacional Estudiante en Práctica Ingeniería Industrial Di",
-    "descripcion_fuente": "Practicante Universitario (Programa de Prácticas 2027-I) Palabras clave: Practicante Universitario Programa de Prácticas 2027-I Practicante de Ingeniería Analítica de Datos Transformación Organizacional Estudiante en Práctica Ingeniería Industrial Diseño UX/UI Ciencia de Datos Ingeniería Electrónica Se abre la convocatoria al Programa de Prácticas 2027-I, una iniciativa diseñada para impulsar la transformación organizacional a través de la innovación y el análisis. Se requiere la participación estudiantil en proyectos de ingeniería, datos, analítica, diseño y optimización, ofreciendo una experiencia de práctica aplicada. Este programa está dirigido a estudiantes en etapa de práctica, con aval institucional, que buscan aplicar sus conocimientos académicos en un entorno profesional dinámico. Se brindará exposición a diversas áreas y colaboración interdisciplinaria, fomentando el desarrollo de competencias clave para el futuro del sector tecnológico y de analítica de datos. Responsabilidades: Participar en proyectos de ingeniería y ciencia de datos. Apoyar en tareas de analítica y transformación organizacional. Colaborar en iniciativas de diseño UX/UI. Asistir en la optimización de procesos organizacionales. Aplicar conocimientos en modelamiento estadístico y visualización de datos. Requerimientos: Ser estudiante universitario en etapa de práctica con aval institucional para realizar prácticas profesionales. Sectores laborales: Software informática y telecomunicaciones Economía estadística matemáticas y afines Ingenierías Otras habilidades: Habilidades técnicas: Microsoft Excel Programación Visualización de datos Diseño UX/UI Modelamiento estadístico Habilidades interpersonales: Trabajo en equipo Comunicación",
-    "fecha_cierre_iso": "2026-10-31",
-    "encontrada_ultima_corrida": true,
-    "ultima_deteccion": "2026-10-31",
-    "primera_deteccion": "2026-10-24",
-    "alcance_geografico": "Fuera de Antioquia; remoto o híbrido según el aviso",
-    "estado_vigencia": "No reapareció en esta búsqueda; revisar vigencia en la fuente",
-    "ramas": [
-      {
-        "clave": "simulaciones_datos_ia",
-        "nombre": "Análisis de Datos, IA y Simulaciones",
-        "color": "#06b6d4",
-        "score": 75
-      },
-      {
-        "clave": "optica_vision_artificial",
-        "nombre": "Óptica, Fotónica y Visión Artificial",
-        "color": "#a855f7",
-        "score": 59
-      },
-      {
-        "clave": "electronica_digital_iot",
-        "nombre": "Electrónica Digital, Microcontroladores e IoT",
-        "color": "#3b82f6",
-        "score": 58
-      },
-      {
-        "clave": "instrumentacion_metrologia",
-        "nombre": "Instrumentación, Automatización y Metrología",
-        "color": "#10b981",
-        "score": 58
-      },
-      {
-        "clave": "electronica_analoga_circuitos",
-        "nombre": "Electrónica Análoga y Circuitos",
-        "color": "#8b5cf6",
-        "score": 53
-      }
-    ],
-    "rama_principal": "Análisis de Datos, IA y Simulaciones",
-    "color_principal": "#06b6d4",
-    "clave_principal": "simulaciones_datos_ia",
-    "afinidad": "Alta Afinidad Pénsum",
-    "es_exclusiva_fisica": false,
-    "programa_inclusion_genero": false,
-    "convocatoria_exclusiva_mujeres": false,
-    "es_cierre_inminente": true,
-    "es_practica": true,
-    "score_pensum": 75,
-    "empresa_objetivo": false,
-    "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables.",
-    "_tareas_generadas": true,
-    "_sello": "f0e736d94c5a"
   },
   {
     "titulo": "Aprendiz de Analítica de datos",
@@ -5644,59 +5583,6 @@
     "_sello": "fbaf0dc6a8a9"
   },
   {
-    "titulo": "Practicante de Electricidad Industrial 8291",
-    "empresa": "ERCO ENERGÍA S.A.S",
-    "ubicacion": "Cali, Jamundí · remoto o híbrido",
-    "modalidad": "Remoto o híbrido",
-    "url": "https://www.magneto365.com/co/empleos/practicante-de-electricidad-industrial-1101312",
-    "fecha_publicacion": "2026-10-16",
-    "fuente": "Magneto365",
-    "compensacion": "",
-    "perfil": "Lectura de planos, Instalación eléctrica, Trabajo en equipo, Atención al detalle",
-    "mision": "Practicante de Electricidad Industrial Palabras clave: Practicante de Electricidad Industrial Practicante Electricista Instalaciones Eléctricas Paneles Solares Lectura de planos Se busca practicante de electricidad industrial para apoyar la ejecución",
-    "descripcion_fuente": "Practicante de Electricidad Industrial Palabras clave: Practicante de Electricidad Industrial Practicante Electricista Instalaciones Eléctricas Paneles Solares Lectura de planos Se busca practicante de electricidad industrial para apoyar la ejecución de proyectos fotovoltaicos mediante el alistamiento operativo y la instalación de componentes técnicos. Las funciones contribuyen al avance ordenado de instalaciones eléctricas y al cumplimiento normativo para visitas de inspección. Responsabilidades: Apoyar la recepción de materiales y realizar el inventario de bodega verificando lo recibido contra las listas de Ingeniería de Detalle. Apoyar la instalación de canalizaciones eléctricas. Apoyar la instalación de la estructura en cubierta o piso. Apoyar la instalación de paneles solares sobre la estructura. Apoyar la instalación de la acometida eléctrica en proyectos solares. Realizar el alistamiento final del proyecto para la visita RETIE incluyendo revisión de rotulación señalización orden limpieza y cierre de pendientes visibles. Requerimientos: Formación técnica o tecnológica en electricidad. Manejo de lectura de planos eléctricos. Dominio de conceptos de electricidad. Uso de herramienta manual y de medición. Conocimiento básico de RETIE. Conocimiento básico de NTC 2050. Nivel de educación: Tecnólogo Sectores laborales: Construcción e infraestructura Cargo: Auxiliar Otras habilidades: Habilidades técnicas: Lectura de planos Instalación eléctrica Habilidades interpersonales: Trabajo en equipo Atención al detalle",
-    "fecha_cierre_iso": "2026-10-31",
-    "encontrada_ultima_corrida": true,
-    "ultima_deteccion": "2026-10-31",
-    "primera_deteccion": "2026-10-24",
-    "alcance_geografico": "Fuera de Antioquia; remoto o híbrido según el aviso",
-    "estado_vigencia": "No reapareció en esta búsqueda; revisar vigencia en la fuente",
-    "ramas": [
-      {
-        "clave": "instrumentacion_metrologia",
-        "nombre": "Instrumentación, Automatización y Metrología",
-        "color": "#10b981",
-        "score": 58
-      },
-      {
-        "clave": "materiales_nanotecnologia",
-        "nombre": "Ciencia de Materiales y Nanotecnología",
-        "color": "#14b8a6",
-        "score": 53
-      },
-      {
-        "clave": "energia_potencia",
-        "nombre": "Energía, Potencia y Renovables",
-        "color": "#eab308",
-        "score": 51
-      }
-    ],
-    "rama_principal": "Instrumentación, Automatización y Metrología",
-    "color_principal": "#10b981",
-    "clave_principal": "instrumentacion_metrologia",
-    "afinidad": "Alta Afinidad Pénsum",
-    "es_exclusiva_fisica": false,
-    "programa_inclusion_genero": false,
-    "convocatoria_exclusiva_mujeres": false,
-    "es_cierre_inminente": true,
-    "es_practica": true,
-    "score_pensum": 73,
-    "empresa_objetivo": true,
-    "tareas": "Levantamiento de curvas de calibración, programación en LabVIEW, enlace con autómatas PLC y aseguramiento metrológico ISO 17025.",
-    "_tareas_generadas": true,
-    "_sello": "5ac12d7e0b2c"
-  },
-  {
     "titulo": "Intern Developer",
     "empresa": "Rockwell Automation",
     "ubicacion": "Medellin, Antioquia, Colombia · híbrido",
@@ -5915,52 +5801,6 @@
     "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables.",
     "_tareas_generadas": true,
     "_sello": "94069d1c3c95"
-  },
-  {
-    "titulo": "Practicante Profesional Equipo Inteligencia Artificial - Medellín",
-    "empresa": "Protección",
-    "ubicacion": "Medellín, Antioquia",
-    "modalidad": "",
-    "url": "https://www.magneto365.com/co/empleos/practicante-profesional-equipo-inteligencia-artificial-medellin-1049185",
-    "fecha_publicacion": "2026-09-07",
-    "fuente": "Magneto365",
-    "compensacion": "",
-    "perfil": "Inteligencia Artificial, Lenguajes de programación, Desarrollo de Software",
-    "mision": "Si te encuentras estudiando los últimos semestres de tu carrera profesional, y estás en búsqueda de una Compañía para hacer tus prácticas, ¡te estamos buscando! Si sientes pasión y ganas de aprender del área de Inteligencia Artificial, esta convocato",
-    "descripcion_fuente": "Si te encuentras estudiando los últimos semestres de tu carrera profesional, y estás en búsqueda de una Compañía para hacer tus prácticas, ¡te estamos buscando! Si sientes pasión y ganas de aprender del área de Inteligencia Artificial, esta convocatoria es para ti! Equipo Inteligencia Artificial y Automatización Inteligente 1. Realizar pruebas de concepto sobre las tecnologías emergentes identificadas, en diferentes herramientas de desarrollo, con el fin de validar su funcionalidad, usabilidad, costos, desempeño y agilidad. 2. Apoyar en la identificación de tendencias del mercado actual desde el ámbito tecnológico conociendo el estado del arte y la aplicabilidad de estas tendencias para solucionar necesidades o problemáticas. 3. Apoyo en el etiquetamiento de datos requerido para construir y entrenar modelos de machine learning 4. Desarrollar pruebas de concepto en diferentes lenguajes que permitan identificar la viabilidad de una tendencia descubierta desde la vigilancia tecnológica 5. Apoyar las actividades del modelo operativo del equipo de IA para garantizar el uso correcto de los lineamientos y políticas definidas que nos ayudan a realizar el trabajo de manera ordenada y coherente Equipo Servicios y Canalidad:&nbsp; Monitoreo y análisis de conversaciones de clientes con agentes de inteligencia artificial, para detectar problemas de calidad, alucinación de agentes, errores en integraciones técnicas, motivos de satisfacción o de desborde a asesor, fricciones en la experiencia y motivos de insatisfacción, que permitan tomar decisiones de diseño y priorización de mejoras funcionales y de experiencias en un canal que atiende más de 3 millones de clientes al año en inbound y outbound. ¿Qué estamos buscando? · &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Estudiante de últimos semestres de Ingenierías que estén habilitados para iniciar sus prácticas en el primer semestre del 2027 (Iniciamos en Enero).&nbsp; · &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Conocimientos en: Desarrollo de Software, Diferentes Lenguajes de Programación, Inteligencia Artificial · &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Personas apasionadas por el aprendizaje, proactivas y carismáticas que disfruten del trabajo en equipo. Qué te ofrecemos? Beneficios de calidad de vida como: Tiempo libre (cumpleaños, diciembre, matrimonio, entre otros). Programa de reconocimiento integral: \"Nuestra Esencia\" Apoyo de sostenimiento :&nbsp; 1 SMMLV + Beneficios Extralegales Contrato de Aprendizaje. Horario:&nbsp; Lunes a ",
-    "fecha_cierre_iso": "2026-10-31",
-    "encontrada_ultima_corrida": true,
-    "ultima_deteccion": "2026-10-31",
-    "primera_deteccion": "2026-10-24",
-    "estado_vigencia": "No reapareció en esta búsqueda; revisar vigencia en la fuente",
-    "ramas": [
-      {
-        "clave": "simulaciones_datos_ia",
-        "nombre": "Análisis de Datos, IA y Simulaciones",
-        "color": "#06b6d4",
-        "score": 72
-      },
-      {
-        "clave": "instrumentacion_metrologia",
-        "nombre": "Instrumentación, Automatización y Metrología",
-        "color": "#10b981",
-        "score": 58
-      }
-    ],
-    "rama_principal": "Análisis de Datos, IA y Simulaciones",
-    "color_principal": "#06b6d4",
-    "clave_principal": "simulaciones_datos_ia",
-    "afinidad": "Alta Afinidad Pénsum",
-    "es_exclusiva_fisica": false,
-    "programa_inclusion_genero": false,
-    "convocatoria_exclusiva_mujeres": false,
-    "es_cierre_inminente": true,
-    "es_practica": true,
-    "score_pensum": 72,
-    "empresa_objetivo": false,
-    "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables.",
-    "_tareas_generadas": true,
-    "_sello": "043da1af2fd2"
   },
   {
     "titulo": "Aprendiz de programación y desarrollo de software",
@@ -7107,42 +6947,6 @@
     "_sello": "fb4d8783d483"
   },
   {
-    "titulo": "Practicante Área de Proyectos y Desarrollo",
-    "empresa": "Empresa Confidencial",
-    "ubicacion": "Medellín, Antioquia",
-    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-practicante-area-de-proyectos-y-desarrollo-en-medellin-617093CCEBF160F061373E686DCF3405",
-    "fecha_publicacion": "Reciente",
-    "fuente": "Computrabajo",
-    "encontrada_ultima_corrida": true,
-    "ultima_deteccion": "2026-10-31",
-    "primera_deteccion": "2026-10-28",
-    "descripcion_fuente": "Descripción de la oferta A convenir Contrato de aprendizaje Tiempo Completo Importante empresa del sector transporte a nivel nacional está en búsqueda de un Practicante en Ingeniería industrial/Mecánico/procesos o a fines para realizar su etapa practica productiva en la ciudad de Medellín con un horario de lunes a viernes, el cual tiene como objetivo del cargo: Apoyar todos los procesos del área de Proyectos y Desarrollo Logístico Para participar de este proceso debes cumplir con los siguientes requisitos: Estar estudiando Ingeniería industrial/Mecánico/procesos o a fines Disponibilidad de firmar contrato de aprendizaje SENA Disponibilidad de iniciar su etapa practica productiva en el mes de noviembre Aprendiz con interés en fortalecer sus capacidades analíticas y de gestión de información, mediante el manejo y análisis de bases de datos y herramientas como Power BI para la generación de indicadores y apoyo a la toma de decisiones. Con orientación a la gestión de proyectos, seguimiento de iniciativas y mejora de procesos, desarrollando habilidades para transformar datos en información útil para la gestión y el cumplimiento de objetivos Si te requieres iniciar su etapa practica postúlate Requerimientos Educación mínima: Universidad / Carrera Profesional años de experiencia Palabras clave: intern, practicante, becario, pasante, zona, area Ayer (actualizada) Aplicar Postulado Avísame con ofertas similares <span class=\"icon i_report",
-    "estado_vigencia": "No reapareció en esta búsqueda; revisar vigencia en la fuente",
-    "ramas": [
-      {
-        "clave": "simulaciones_datos_ia",
-        "nombre": "Análisis de Datos, IA y Simulaciones",
-        "color": "#06b6d4",
-        "score": 66
-      }
-    ],
-    "rama_principal": "Análisis de Datos, IA y Simulaciones",
-    "color_principal": "#06b6d4",
-    "clave_principal": "simulaciones_datos_ia",
-    "afinidad": "Alta Afinidad Pénsum",
-    "es_exclusiva_fisica": false,
-    "programa_inclusion_genero": false,
-    "convocatoria_exclusiva_mujeres": false,
-    "es_cierre_inminente": false,
-    "es_practica": true,
-    "score_pensum": 66,
-    "empresa_objetivo": false,
-    "mision": "Descripción de la oferta A convenir Contrato de aprendizaje Tiempo Completo Importante empresa del sector transporte a nivel nacional está en búsqueda de un Practicante en Ingeniería industrial/Mecánico/procesos o a fines para realizar su etapa practica productiva en la ciudad de Medellín con un horario de lunes a viernes, el cual tiene como objetivo del cargo: Apoyar todos los procesos del área d",
-    "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables.",
-    "_tareas_generadas": true,
-    "_sello": "fa524a47c2db"
-  },
-  {
     "titulo": "Aprendiz TI",
     "empresa": "Loggro+",
     "ubicacion": "Itagüí, Antioquia",
@@ -7231,28 +7035,23 @@
     "_sello": "942a1636bcf1"
   },
   {
-    "titulo": "Aprendiz TI",
-    "empresa": "E-GLOBAL S.A.",
+    "titulo": "Practicante Área de Proyectos y Desarrollo",
+    "empresa": "Empresa Confidencial",
     "ubicacion": "Medellín, Antioquia",
-    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-aprendiz-ti-etapa-lectiva-y-practica-en-medellin-868EC944BFA6D22561373E686DCF3405",
+    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-practicante-area-de-proyectos-y-desarrollo-en-medellin-617093CCEBF160F061373E686DCF3405",
     "fecha_publicacion": "Reciente",
     "fuente": "Computrabajo",
     "encontrada_ultima_corrida": true,
     "ultima_deteccion": "2026-10-31",
-    "primera_deteccion": "2026-10-30",
-    "descripcion_fuente": "Descripción de la oferta $ 1.750.905,00 (Mensual) Contrato de aprendizaje Beca/prácticas ¡Inicia tu experiencia en el mundo TI con E-Global! En E-Global estamos en búsqueda de Aprendices TI que se encuentren habilitados para iniciar su etapa lectiva o práctica y deseen fortalecer sus conocimientos en un entorno tecnológico dinámico y de aprendizaje continuo. Requisitos: Ser estudiante de programas técnicos, tecnológicos o profesionales relacionados con: Sistemas Desarrollo de Software Infraestructura TI Soporte Técnico Redes y Telecomunicaciones Análisis y Desarrollo de Software Gestión de Bases de Datos Ciberseguridad Carreras afines al sector TI Contar con aval de la institución educativa para iniciar etapa lectiva o práctica. No haber firmado contrato de aprendizaje previamente (si aplica). Interés por desarrollar conocimientos y experiencia en el sector tecnológico. Te ofrecemos. Acompañamiento y formación continua. Participación en proyectos tecnológicos reales. Excelente ambiente de aprendizaje. Oportunidad de crecimiento profesional. Contrato de aprendizaje según normatividad vigente. Requerimientos Educación mínima: Universidad / Carrera tecnológica años de experiencia Conocimientos: Microsoft excel, Microsoft office Aptitudes asociadas a esta oferta Nuevo Microsoft excel Microsoft office Ver 0 aptitudes más Hay 0 aptitudes que faltan en tu perfil Si las tienes, añádelas a tu perfil para encajar mejor en esta vacante. Mostar competencias Se han añadido correctamente las competencias en tu perfil. Palabras clave: apprentice, internship, traine Hace 12 horas (actualizada) Aplicar Postulado <path d=\"m471.382812 44.578125c-26.503906-28.746094-62.871093-44.578125-102.410156-44.578125-29.554687 0-56.621094 9.34375-80.449218 27.769531-12.023438 9.300781-22.917969 20.679688-32.523438 33.960938-9.601562-13.277344-20.5-24.660157-32.527344-33.960938-23.824218-18.425781-50.890625-27.769531-80.445312-27.769531-39.539063 0-75.910156 15.832031-102.414063 44.578125-26.1875 28.410156-40.613281 67.222656-40.613281 109.292969 0 43.300781 16.136719 82.9375 50.78125 124.742187",
+    "primera_deteccion": "2026-10-28",
+    "descripcion_fuente": "Descripción de la oferta A convenir Contrato de aprendizaje Tiempo Completo Importante empresa del sector transporte a nivel nacional está en búsqueda de un Practicante en Ingeniería industrial/Mecánico/procesos o a fines para realizar su etapa practica productiva en la ciudad de Medellín con un horario de lunes a viernes, el cual tiene como objetivo del cargo: Apoyar todos los procesos del área de Proyectos y Desarrollo Logístico Para participar de este proceso debes cumplir con los siguientes requisitos: Estar estudiando Ingeniería industrial/Mecánico/procesos o a fines Disponibilidad de firmar contrato de aprendizaje SENA Disponibilidad de iniciar su etapa practica productiva en el mes de noviembre Aprendiz con interés en fortalecer sus capacidades analíticas y de gestión de información, mediante el manejo y análisis de bases de datos y herramientas como Power BI para la generación de indicadores y apoyo a la toma de decisiones. Con orientación a la gestión de proyectos, seguimiento de iniciativas y mejora de procesos, desarrollando habilidades para transformar datos en información útil para la gestión y el cumplimiento de objetivos Si te requieres iniciar su etapa practica postúlate Requerimientos Educación mínima: Universidad / Carrera Profesional años de experiencia Palabras clave: intern, practicante, becario, pasante, zona, area Ayer (actualizada) Aplicar Postulado Avísame con ofertas similares <span class=\"icon i_report",
+    "estado_vigencia": "No reapareció en esta búsqueda; revisar vigencia en la fuente",
     "ramas": [
       {
         "clave": "simulaciones_datos_ia",
         "nombre": "Análisis de Datos, IA y Simulaciones",
         "color": "#06b6d4",
         "score": 66
-      },
-      {
-        "clave": "optica_vision_artificial",
-        "nombre": "Óptica, Fotónica y Visión Artificial",
-        "color": "#a855f7",
-        "score": 59
       }
     ],
     "rama_principal": "Análisis de Datos, IA y Simulaciones",
@@ -7266,10 +7065,10 @@
     "es_practica": true,
     "score_pensum": 66,
     "empresa_objetivo": false,
-    "mision": "Descripción de la oferta $ 1.750.905,00 (Mensual) Contrato de aprendizaje Beca/prácticas ¡Inicia tu experiencia en el mundo TI con E-Global! En E-Global estamos en búsqueda de Aprendices TI que se encuentren habilitados para iniciar su etapa lectiva o práctica y deseen fortalecer sus conocimientos en un entorno tecnológico dinámico y de aprendizaje continuo. Requisitos: Ser estudiante de programas",
+    "mision": "Descripción de la oferta A convenir Contrato de aprendizaje Tiempo Completo Importante empresa del sector transporte a nivel nacional está en búsqueda de un Practicante en Ingeniería industrial/Mecánico/procesos o a fines para realizar su etapa practica productiva en la ciudad de Medellín con un horario de lunes a viernes, el cual tiene como objetivo del cargo: Apoyar todos los procesos del área d",
     "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables.",
     "_tareas_generadas": true,
-    "_sello": "9266168fb0dd"
+    "_sello": "fa524a47c2db"
   },
   {
     "titulo": "Aprendiz de análisis y desarrollo de software para Urabá 1626050320-70",
@@ -7324,22 +7123,16 @@
     "_sello": "f2f40c97c9e5"
   },
   {
-    "titulo": "Practicante Arquitectura Empresarial/Desarrollo de software- Medellín",
-    "empresa": "Protección",
+    "titulo": "Aprendiz TI",
+    "empresa": "E-GLOBAL S.A.",
     "ubicacion": "Medellín, Antioquia",
-    "modalidad": "",
-    "url": "https://www.magneto365.com/co/empleos/practicante-arquitectura-empresarialdesarrollo-de-software-medellin-1051621",
-    "fecha_publicacion": "2026-09-08",
-    "fuente": "Magneto365",
-    "compensacion": "",
-    "perfil": "Inteligencia Artificial, Lenguajes de Programación, Inteligencia Negocio, Bases de Datos, Analítica",
-    "mision": "Si te encuentras estudiando los últimos semestres de tu carrera profesional, y estás en búsqueda de una Compañía para hacer tus prácticas, ¡te estamos buscando! Si sientes pasión y ganas de aprender del equipo de arquitectura empresarial y estás inte",
-    "descripcion_fuente": "Si te encuentras estudiando los últimos semestres de tu carrera profesional, y estás en búsqueda de una Compañía para hacer tus prácticas, ¡te estamos buscando! Si sientes pasión y ganas de aprender del equipo de arquitectura empresarial y estás interesado en hacer tús practicas en desarrollo de software&nbsp; Proposito del cargo :&nbsp; Apoyar el desarrollo de soluciones digitales mediante la participación activa en equipos de ingeniería ágiles, contribuyendo a la construcción, mejora y mantenimiento de aplicaciones de software, con el acompañamiento de mentores técnicos y el uso de buenas prácticas de desarrollo, inteligencia artificial y herramientas modernas de ingeniería Principales responsabilidades : 1. Diseñar, desarrollar, probar, mantener e implementar aplicaciones de alta calidad. 2. Colaborar con equipos multidisciplinarios para definir los requisitos y especificaciones del proyecto 3. Diseñar, desarrollar y realizar las pruebas unitarias, garantizando ajustes oportunos a los desarrollos, con el fin de implementar y entregar soluciones óptimas dentro del marco de buenas prácticas de Protección. 4. Participar activamente en la arquitectura y diseño de soluciones técnicas. 5. Implementar y mantener prácticas de integración y entrega continua (CI/CD) utilizando herramientas y servicios DevOps. 6. Automatizar tareas de despliegue, monitoreo y escalado de aplicaciones. 7. Desde una práctica autónoma y de autoestudio, realizar continua y permanentemente la formación en temas asociados al Negocio Protección, con el fin de actualizar los conocimientos funcionales y técnicos (arquitectura, tecnologías y buenas prácticas). 8. Brindar soporte continuo a los productos entregados al cliente final, realizando revisión y ajustes al código cuando sea requerido, garantizando la calidad y la seguridad del software. &nbsp; ¿Qué estamos buscando? · &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Estudiante de últimos semestres de Ingeneria de sistemas/software/ Informatica, ciencias de la computación. de primer semestre del 2027(Iniciamos en Enero).&nbsp; · &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Conocimientos en: Bases sólidas en programación orientada a objetos (POO), Conocimientos básicos (deseable): Java,Spring Boot (backend), React o conceptos de frontend moderno, Fundamentos de: APIs REST, Estructuras de datos, Lógica de programación&nbsp; · &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Personas apasionadas por el aprendizaje, proactivas y carismáticas que disfruten del trabajo en",
-    "fecha_cierre_iso": "2026-10-31",
-    "encontrada_ultima_corrida": true,
+    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-aprendiz-ti-etapa-lectiva-y-practica-en-medellin-868EC944BFA6D22561373E686DCF3405",
+    "fecha_publicacion": "Reciente",
+    "fuente": "Computrabajo",
+    "encontrada_ultima_corrida": false,
     "ultima_deteccion": "2026-10-31",
-    "primera_deteccion": "2026-10-25",
-    "estado_vigencia": "No reapareció en esta búsqueda; revisar vigencia en la fuente",
+    "primera_deteccion": "2026-10-30",
+    "descripcion_fuente": "Descripción de la oferta $ 1.750.905,00 (Mensual) Contrato de aprendizaje Beca/prácticas ¡Inicia tu experiencia en el mundo TI con E-Global! En E-Global estamos en búsqueda de Aprendices TI que se encuentren habilitados para iniciar su etapa lectiva o práctica y deseen fortalecer sus conocimientos en un entorno tecnológico dinámico y de aprendizaje continuo. Requisitos: Ser estudiante de programas técnicos, tecnológicos o profesionales relacionados con: Sistemas Desarrollo de Software Infraestructura TI Soporte Técnico Redes y Telecomunicaciones Análisis y Desarrollo de Software Gestión de Bases de Datos Ciberseguridad Carreras afines al sector TI Contar con aval de la institución educativa para iniciar etapa lectiva o práctica. No haber firmado contrato de aprendizaje previamente (si aplica). Interés por desarrollar conocimientos y experiencia en el sector tecnológico. Te ofrecemos. Acompañamiento y formación continua. Participación en proyectos tecnológicos reales. Excelente ambiente de aprendizaje. Oportunidad de crecimiento profesional. Contrato de aprendizaje según normatividad vigente. Requerimientos Educación mínima: Universidad / Carrera tecnológica años de experiencia Conocimientos: Microsoft excel, Microsoft office Aptitudes asociadas a esta oferta Nuevo Microsoft excel Microsoft office Ver 0 aptitudes más Hay 0 aptitudes que faltan en tu perfil Si las tienes, añádelas a tu perfil para encajar mejor en esta vacante. Mostar competencias Se han añadido correctamente las competencias en tu perfil. Palabras clave: apprentice, internship, traine Hace 12 horas (actualizada) Aplicar Postulado <path d=\"m471.382812 44.578125c-26.503906-28.746094-62.871093-44.578125-102.410156-44.578125-29.554687 0-56.621094 9.34375-80.449218 27.769531-12.023438 9.300781-22.917969 20.679688-32.523438 33.960938-9.601562-13.277344-20.5-24.660157-32.527344-33.960938-23.824218-18.425781-50.890625-27.769531-80.445312-27.769531-39.539063 0-75.910156 15.832031-102.414063 44.578125-26.1875 28.410156-40.613281 67.222656-40.613281 109.292969 0 43.300781 16.136719 82.9375 50.78125 124.742187",
     "ramas": [
       {
         "clave": "simulaciones_datos_ia",
@@ -7348,10 +7141,10 @@
         "score": 66
       },
       {
-        "clave": "electronica_digital_iot",
-        "nombre": "Electrónica Digital, Microcontroladores e IoT",
-        "color": "#3b82f6",
-        "score": 58
+        "clave": "optica_vision_artificial",
+        "nombre": "Óptica, Fotónica y Visión Artificial",
+        "color": "#a855f7",
+        "score": 59
       }
     ],
     "rama_principal": "Análisis de Datos, IA y Simulaciones",
@@ -7361,13 +7154,15 @@
     "es_exclusiva_fisica": false,
     "programa_inclusion_genero": false,
     "convocatoria_exclusiva_mujeres": false,
-    "es_cierre_inminente": true,
+    "es_cierre_inminente": false,
     "es_practica": true,
     "score_pensum": 66,
     "empresa_objetivo": false,
+    "mision": "Descripción de la oferta $ 1.750.905,00 (Mensual) Contrato de aprendizaje Beca/prácticas ¡Inicia tu experiencia en el mundo TI con E-Global! En E-Global estamos en búsqueda de Aprendices TI que se encuentren habilitados para iniciar su etapa lectiva o práctica y deseen fortalecer sus conocimientos en un entorno tecnológico dinámico y de aprendizaje continuo. Requisitos: Ser estudiante de programas",
     "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables.",
     "_tareas_generadas": true,
-    "_sello": "11412288e3d8"
+    "_sello": "9266168fb0dd",
+    "estado_vigencia": "No reapareció en esta búsqueda; revisar vigencia en la fuente"
   },
   {
     "titulo": "Aprendiz TI",
@@ -7427,8 +7222,8 @@
     "primera_deteccion": "2026-10-31",
     "descripcion_fuente": "¿Eres una persona curiosa, sin miedo a explorar nuevas tendencias y con capacidad para introducirlas en una plataforma que ya usan millones de usuarios? Este reto es para ti. 👇 Sobre nosotros 🚀 Somos el ecosistema de soluciones contables y financieras en la nube que le da superpoderes a las Pymes de Latinoamérica. +500 personas trabajando 100% remoto, presentes en 8 países y creciendo. Tu misión en Alegra Como Aprendiz, serás una pieza clave en la optimización y eficiencia operativa . Tu misión es apoyar la gestión de herramientas y procesos, utilizando la automatización y la IA para que la carga operativa sea cosa del pasado. Ayudarás a que nuestros equipos se enfoquen en lo estratégico, transformando datos en decisiones inteligentes. ¿Qué harás con nosotros? Análisis y Reportes: Apoyar la creación, actualización y monitoreo de dashboards operativos para medir el pulso del negocio. Gestión de Herramientas: Dar seguimiento a issues técnicos y administrativos, asegurando que nuestras plataformas funcionen como un reloj suizo. Documentación de Procesos: Crear guías claras sobre el uso de herramientas y flujos de trabajo internos. Seguimiento de KPIs: Colaborar en el monitoreo de indicadores operativos para identificar oportunidades de mejora. Optimización con IA: Explorar, proponer e implementar soluciones de automatización (asistentes, scripts o flujos) para eliminar tareas repetitivas. Integración Digital: Brindar soporte en la conexión de herramientas que faciliten el día a día de todos los \"Alegritos\". ¿Cómo usarás IA en el día a día de este rol? Automatización de Workflows: Configurar flujos inteligentes que conecten nuestras herramientas (como HubSpot) con modelos de IA. Analítica Predictiva: Apoyarte en herramientas de procesamiento de datos para identificar tendencias antes de que ocurran. Generación de Documentación: Usar LLMs para estructurar manuales técnicos y procesos de forma rápida y precisa. ¿Qué esperamos de ti? Ser estudiante SENA de Técnico o Tecnólogo en Procesamiento de Datos para IA, Programación para Analítica de Datos, Operaciones TI o áreas afines (requisito indispensable). Estar habilitado/a para iniciar tu etapa productiva bajo contrato de aprendizaje. Habilidades interpersonales para colaborar con equipos multidisciplinarios. Capacidad de análisis, organización y un amor obsesivo por el detalle. Disposición para aprender y adaptarte a herramientas que cambian cada semana. Deseable... Tienes conocimientos básicos en HubSpot o CRMs ",
     "tipo_empleo": "Prácticas",
-    "estado_vigencia": "Aviso abierto en LinkedIn al momento del rastreo",
     "alcance_geografico": "Fuera de Antioquia; remoto o híbrido según el aviso",
+    "estado_vigencia": "Aviso abierto en LinkedIn al momento del rastreo",
     "ramas": [
       {
         "clave": "simulaciones_datos_ia",
@@ -7464,6 +7259,52 @@
     "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables.",
     "_tareas_generadas": true,
     "_sello": "a146029b6770"
+  },
+  {
+    "titulo": "AI Engineering Intern (Remote)",
+    "empresa": "M3 USA",
+    "ubicacion": "Fort Washington, Pennsylvania, Estados Unidos · remoto internacional (elegibilidad por confirmar)",
+    "url": "https://www.linkedin.com/jobs/view/ai-engineering-intern-remote-at-m3-usa-4464603834",
+    "fecha_publicacion": "2026-10-21",
+    "fuente": "LinkedIn Jobs",
+    "linkedin_id": "4464603834",
+    "search_scope": "WORLDWIDE",
+    "encontrada_ultima_corrida": true,
+    "ultima_deteccion": "2026-10-31",
+    "primera_deteccion": "2026-10-24",
+    "descripcion_fuente": "About M3: A Japanese global leader in the provision of ground-breaking and innovative technological and research solutions to the healthcare industry. The M3 Group operates in the US, Asia, and Europe with over 5.8 million physician members globally via its physician websites which include mdlinx.com, m3.com, research.m3.com, Doctors.net.uk, medigate.net, and medlive.cn. M3 Inc. is a publicly traded company on the Tokyo Stock Exchange (jp:2413, NIKKEI 225) with subsidiaries in major markets including the US, UK, Japan, South Korea, and China, and in 2020 was ranked in Forbes’ Global 2000 list. The M3 Group provides services to healthcare and the life science industry. In addition to market research, these services include medical education, ethical drug promotion, clinical development, job recruitment, and clinic appointment services. M3 has offices in Japan, UK, France, Germany, Brazil, Sweden, China, USA, and South Korea, as well as India. Due to our continued growth, we are hiring for a AI Engineering Intern to join M3 USA. Job Description Build and ship Own a project end to end: understand the problem, build a working version, get it in front of users, improve it based on what they say. Write code that other people can read and maintain. AI-generated or not, it carries your name. Demo your work regularly to the product and engineering team, as well as to the business teams who requested it. Work with the businesses Talk to the people whose jobs your tool touches. Watch how they actually work rather than taking a feature request at face value. Translate what you hear into something you can build this week, not next quarter. AI-augmented development Use agentic AI tools (such as Claude Code) as your default workflow. Develop judgment about where these tools help and where they quietly produce garbage. Bring that back to the engineering team. Try new tools as they ship and tell us what you found, including the failures. Qualifications Required Actively pursuing or recently obtained a degree in Computer Science or a related field. Hands-on use of at least one AI coding agent to build something, whether a class project, a side project, or a hackathon entry. Working knowledge of a programming language: Python, TypeScript, or similar. Comfort in a terminal. You should not need a GUI for git. Ability to pick up unfamiliar tools by reading docs and trying things. Preferred Web development experience (HTML, CSS, JavaScript, and any modern framework). Knowledge o",
+    "tipo_empleo": "Prácticas",
+    "alcance_geografico": "Remoto internacional; confirmar elegibilidad desde Colombia",
+    "estado_vigencia": "Aviso abierto en LinkedIn al momento del rastreo",
+    "ramas": [
+      {
+        "clave": "simulaciones_datos_ia",
+        "nombre": "Análisis de Datos, IA y Simulaciones",
+        "color": "#06b6d4",
+        "score": 66
+      },
+      {
+        "clave": "materiales_nanotecnologia",
+        "nombre": "Ciencia de Materiales y Nanotecnología",
+        "color": "#14b8a6",
+        "score": 53
+      }
+    ],
+    "rama_principal": "Análisis de Datos, IA y Simulaciones",
+    "color_principal": "#06b6d4",
+    "clave_principal": "simulaciones_datos_ia",
+    "afinidad": "Alta Afinidad Pénsum",
+    "es_exclusiva_fisica": false,
+    "programa_inclusion_genero": false,
+    "convocatoria_exclusiva_mujeres": false,
+    "es_cierre_inminente": false,
+    "es_practica": true,
+    "score_pensum": 66,
+    "empresa_objetivo": false,
+    "mision": "About M3: A Japanese global leader in the provision of ground-breaking and innovative technological and research solutions to the healthcare industry. The M3 Group operates in the US, Asia, and Europe with over 5.8 million physician members globally via its physician websites which include mdlinx.com, m3.com, research.m3.com, Doctors.net.uk, medigate.net, and medlive.cn. M3 Inc. is a publicly trad",
+    "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables.",
+    "_tareas_generadas": true,
+    "_sello": "8dd4d9033b41"
   },
   {
     "titulo": "Practicante de ciencia de datos",
@@ -7508,52 +7349,6 @@
     "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables.",
     "_tareas_generadas": true,
     "_sello": "f202a163dd91"
-  },
-  {
-    "titulo": "AI Engineering Intern (Remote)",
-    "empresa": "M3 USA",
-    "ubicacion": "Fort Washington, Pennsylvania, Estados Unidos · remoto internacional (elegibilidad por confirmar)",
-    "url": "https://www.linkedin.com/jobs/view/ai-engineering-intern-remote-at-m3-usa-4464603834",
-    "fecha_publicacion": "2026-10-21",
-    "fuente": "LinkedIn Jobs",
-    "linkedin_id": "4464603834",
-    "search_scope": "WORLDWIDE",
-    "encontrada_ultima_corrida": false,
-    "ultima_deteccion": "2026-10-30",
-    "primera_deteccion": "2026-10-24",
-    "descripcion_fuente": "About M3: A Japanese global leader in the provision of ground-breaking and innovative technological and research solutions to the healthcare industry. The M3 Group operates in the US, Asia, and Europe with over 5.8 million physician members globally via its physician websites which include mdlinx.com, m3.com, research.m3.com, Doctors.net.uk, medigate.net, and medlive.cn. M3 Inc. is a publicly traded company on the Tokyo Stock Exchange (jp:2413, NIKKEI 225) with subsidiaries in major markets including the US, UK, Japan, South Korea, and China, and in 2020 was ranked in Forbes’ Global 2000 list. The M3 Group provides services to healthcare and the life science industry. In addition to market research, these services include medical education, ethical drug promotion, clinical development, job recruitment, and clinic appointment services. M3 has offices in Japan, UK, France, Germany, Brazil, Sweden, China, USA, and South Korea, as well as India. Due to our continued growth, we are hiring for a AI Engineering Intern to join M3 USA. Job Description Build and ship Own a project end to end: understand the problem, build a working version, get it in front of users, improve it based on what they say. Write code that other people can read and maintain. AI-generated or not, it carries your name. Demo your work regularly to the product and engineering team, as well as to the business teams who requested it. Work with the businesses Talk to the people whose jobs your tool touches. Watch how they actually work rather than taking a feature request at face value. Translate what you hear into something you can build this week, not next quarter. AI-augmented development Use agentic AI tools (such as Claude Code) as your default workflow. Develop judgment about where these tools help and where they quietly produce garbage. Bring that back to the engineering team. Try new tools as they ship and tell us what you found, including the failures. Qualifications Required Actively pursuing or recently obtained a degree in Computer Science or a related field. Hands-on use of at least one AI coding agent to build something, whether a class project, a side project, or a hackathon entry. Working knowledge of a programming language: Python, TypeScript, or similar. Comfort in a terminal. You should not need a GUI for git. Ability to pick up unfamiliar tools by reading docs and trying things. Preferred Web development experience (HTML, CSS, JavaScript, and any modern framework). Knowledge o",
-    "tipo_empleo": "Prácticas",
-    "alcance_geografico": "Remoto internacional; confirmar elegibilidad desde Colombia",
-    "estado_vigencia": "Aviso abierto en LinkedIn al momento del rastreo",
-    "ramas": [
-      {
-        "clave": "simulaciones_datos_ia",
-        "nombre": "Análisis de Datos, IA y Simulaciones",
-        "color": "#06b6d4",
-        "score": 66
-      },
-      {
-        "clave": "materiales_nanotecnologia",
-        "nombre": "Ciencia de Materiales y Nanotecnología",
-        "color": "#14b8a6",
-        "score": 53
-      }
-    ],
-    "rama_principal": "Análisis de Datos, IA y Simulaciones",
-    "color_principal": "#06b6d4",
-    "clave_principal": "simulaciones_datos_ia",
-    "afinidad": "Alta Afinidad Pénsum",
-    "es_exclusiva_fisica": false,
-    "programa_inclusion_genero": false,
-    "convocatoria_exclusiva_mujeres": false,
-    "es_cierre_inminente": false,
-    "es_practica": true,
-    "score_pensum": 66,
-    "empresa_objetivo": false,
-    "mision": "About M3: A Japanese global leader in the provision of ground-breaking and innovative technological and research solutions to the healthcare industry. The M3 Group operates in the US, Asia, and Europe with over 5.8 million physician members globally via its physician websites which include mdlinx.com, m3.com, research.m3.com, Doctors.net.uk, medigate.net, and medlive.cn. M3 Inc. is a publicly trad",
-    "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables.",
-    "_tareas_generadas": true,
-    "_sello": "8dd4d9033b41"
   },
   {
     "titulo": "Estudiante de elecromecanica o mecanica",
@@ -7974,47 +7769,6 @@
     "_sello": "453568fc0da6"
   },
   {
-    "titulo": "Aprendiz o Practicante de Sistemas",
-    "empresa": "Supermercados Euro S.A",
-    "ubicacion": "Medellín, Antioquia",
-    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-aprendiz-o-practicante-de-sistemas-en-medellin-461D1DDEF0D410C261373E686DCF3405",
-    "fecha_publicacion": "Reciente",
-    "fuente": "Computrabajo",
-    "encontrada_ultima_corrida": true,
-    "ultima_deteccion": "2026-10-31",
-    "primera_deteccion": "2026-10-29",
-    "descripcion_fuente": "Descripción de la oferta $ 1.750.905,00 (Mensual) Contrato de aprendizaje Beca/prácticas ¿Eres estudiante de Técnica o Tecnología en Sistemas, Mantenimiento de Cómputo o áreas afines? ¡Te estamos buscando! En nuestra empresa, tenemos una vacante para que inicies tus prácticas con nosotros y pongas en práctica lo aprendido. Requisitos: Estudiantes que no hayan firmado contrato de aprendizaje o estén habilitados para contrato de aprendizaje en Técnica o Tecnología en Sistemas, Mantenimiento de Cómputo, Desarrollo de Software, Redes de Computadores, o carreras afines. Motivación para aprender y desarrollarse profesionalmente en el área de sistemas. Funciones: Apoyo en tareas operativas de seguimiento y mantenimiento de equipos y sistemas. Asistencia al área operativa en la gestión y uso de programas y sistemas internos. Colaboración en el mantenimiento preventivo y correctivo de equipos informáticos. Soporte en la administración de redes y sistemas. Horario: Lunes a Jueves de 7:00 am a 4:30 pm, V de 7:00 am a 4:00 pm Ofrecemos: 100% SMLV + Prestaciones Si estás interesado/a en formar parte de Euro Supermercados y cumples con los requisitos, ¡Aplica ahora y únete a nuestro equipo! Requerimientos Educación mínima: Bachillerato / Educación Media años de experiencia Palabras clave: apprentice, internship, traine, intern, practicante, becario, pasante, system Hace 7 horas (actualizada) Aplicar Postulado Avísame con ofertas similares",
-    "ramas": [
-      {
-        "clave": "simulaciones_datos_ia",
-        "nombre": "Análisis de Datos, IA y Simulaciones",
-        "color": "#06b6d4",
-        "score": 63
-      },
-      {
-        "clave": "optica_vision_artificial",
-        "nombre": "Óptica, Fotónica y Visión Artificial",
-        "color": "#a855f7",
-        "score": 53
-      }
-    ],
-    "rama_principal": "Análisis de Datos, IA y Simulaciones",
-    "color_principal": "#06b6d4",
-    "clave_principal": "simulaciones_datos_ia",
-    "afinidad": "Alta Afinidad Pénsum",
-    "es_exclusiva_fisica": false,
-    "programa_inclusion_genero": false,
-    "convocatoria_exclusiva_mujeres": false,
-    "es_cierre_inminente": false,
-    "es_practica": true,
-    "score_pensum": 63,
-    "empresa_objetivo": false,
-    "mision": "Descripción de la oferta $ 1.750.905,00 (Mensual) Contrato de aprendizaje Beca/prácticas ¿Eres estudiante de Técnica o Tecnología en Sistemas, Mantenimiento de Cómputo o áreas afines? ¡Te estamos buscando! En nuestra empresa, tenemos una vacante para que inicies tus prácticas con nosotros y pongas en práctica lo aprendido. Requisitos: Estudiantes que no hayan firmado contrato de aprendizaje o esté",
-    "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables.",
-    "_tareas_generadas": true,
-    "_sello": "b99c654902d8"
-  },
-  {
     "titulo": "Practicante de Innovación",
     "empresa": "C.I. FAJAS MYD COLOMBIA S.A.S.",
     "ubicacion": "Medellín, Antioquia",
@@ -8099,34 +7853,22 @@
     "_sello": "1b2c264f539b"
   },
   {
-    "titulo": "Aprendiz Calidad",
-    "empresa": "GRUPO BIOS S.A.S",
-    "ubicacion": "Caldas, Antioquia",
-    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-aprendiz-calidad-en-caldas-B23255588F45FF7561373E686DCF3405",
+    "titulo": "Aprendiz etapa productiva",
+    "empresa": "M.V.H INVERSIONES S.A.S",
+    "ubicacion": "Rionegro, Antioquia",
+    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-aprendiz-etapa-productiva-rionegro-en-rionegro-7DCA6ED3CDA6A8BB61373E686DCF3405",
     "fecha_publicacion": "Reciente",
     "fuente": "Computrabajo",
     "encontrada_ultima_corrida": true,
     "ultima_deteccion": "2026-10-31",
-    "primera_deteccion": "2026-10-30",
-    "descripcion_fuente": "Descripción de la oferta $ 1.750.905,00 (Mensual) Contrato de aprendizaje Tiempo Completo En Grupo BIOS somos una población diversa e incluyente donde el valor de nuestra gente radica en su actitud y en sus ganas de sumar, creemos en las segundas oportunidades y abrimos nuestras puertas, promoviendo procesos de selección basados en competencias y valores. En Comercial + Bios, compañía de Grupo BIOS, nos encontramos en la búsqueda de un Aprendiz quien se sumará a nuestro equipo para trabajar por el propósito de nutrir a todos desarrollando el campo colombiano. Si eres estudiante de Control y Gestión de Calidad, Sistemas de Gestión, Producción Industrial o afines, esta oportunidad es para ti. ¿Qué necesitas para aplicar? Disponibilidad para firmar contrato de aprendizaje. Tener la posibilidad de residir en Antioquia- Valle de Aburrá Nuestra compañía ofrece para ti: Poliza de vida Contrato directo con la compañía Apoyo de sostenimiento en etapa productiva del 100% smmlv Beneficios emocionales. Si compartes nuestro compromiso de nutrir a todos y desarrollar el campo colombiano, ¡Postúlate! Requerimientos Educación mínima: Universidad / Carrera técnica años de experiencia Palabras clave: apprentice, internship, traine, quality, qa Hace 7 días (actualizada) Aplicar Postulado Avísame con ofertas similares Denunciar empleo <div id=\"ok-complaint-response-container\"",
+    "primera_deteccion": "2026-10-31",
+    "descripcion_fuente": "Descripción de la oferta $ 1.750.905,00 (Mensual) Contrato de aprendizaje Tiempo Completo En PONTO SAS estamos buscando talento como tú. Si eres una persona proactiva, con muchas ganas de aprender y buscas iniciar tu trayectoria laboral en una empresa dinámica, esta oportunidad es para ti. Buscamos un(a) Aprendiz en etapa productiva que apoye los procesos del área de SST / Gestión Humana / Logística / Administración y contribuya al cumplimiento de nuestros objetivos corporativos. Formación: Estudiante técnico o tecnólogo en Asistencia Administrativa, Recursos Humanos, Logística, SST de una institución avalada (SENA o convenios) que se encuentre habilitado(a) para iniciar o desarrollar su etapa productiva de manera inmediata. No se requiere experiencia laboral previa. Buscamos personas con excelente disposición y capacidad de trabajo en equipo. Disponibilidad para laborar en modalidad en Rionegro en horario de lunes a viernes en horario de oficina (7:00 am a 4:00 pm) Responsabilidades principales: -Apoyar en la ejecución de tareas operativas y administrativas del área. -Participar activamente en los proyectos y actividades asignadas por el líder del área. Te ofrecemos: - SMMLV + prestaciones de ley - Un ambiente de trabajo dinámico, alegre y colaborativo donde podrás poner en práctica tus conocimientos. ¡Postúlate ahora y haz parte de PONTO SAS! Requerimientos Educación mínima: Universidad / Carrera técnica años de experiencia Palabras clave: apprentice, internship, traine 23 de octubre (actualizada) Aplicar Postulado <a data-",
     "ramas": [
       {
         "clave": "simulaciones_datos_ia",
         "nombre": "Análisis de Datos, IA y Simulaciones",
         "color": "#06b6d4",
         "score": 63
-      },
-      {
-        "clave": "instrumentacion_metrologia",
-        "nombre": "Instrumentación, Automatización y Metrología",
-        "color": "#10b981",
-        "score": 61
-      },
-      {
-        "clave": "optica_vision_artificial",
-        "nombre": "Óptica, Fotónica y Visión Artificial",
-        "color": "#a855f7",
-        "score": 53
       }
     ],
     "rama_principal": "Análisis de Datos, IA y Simulaciones",
@@ -8140,52 +7882,10 @@
     "es_practica": true,
     "score_pensum": 63,
     "empresa_objetivo": false,
-    "mision": "Descripción de la oferta $ 1.750.905,00 (Mensual) Contrato de aprendizaje Tiempo Completo En Grupo BIOS somos una población diversa e incluyente donde el valor de nuestra gente radica en su actitud y en sus ganas de sumar, creemos en las segundas oportunidades y abrimos nuestras puertas, promoviendo procesos de selección basados en competencias y valores. En Comercial + Bios, compañía de Grupo BIO",
+    "mision": "Descripción de la oferta $ 1.750.905,00 (Mensual) Contrato de aprendizaje Tiempo Completo En PONTO SAS estamos buscando talento como tú. Si eres una persona proactiva, con muchas ganas de aprender y buscas iniciar tu trayectoria laboral en una empresa dinámica, esta oportunidad es para ti. Buscamos un(a) Aprendiz en etapa productiva que apoye los procesos del área de SST / Gestión Humana / Logísti",
     "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables.",
     "_tareas_generadas": true,
-    "_sello": "84855a1f1ba6"
-  },
-  {
-    "titulo": "Aprendiz de Telecomunicaciones, Infraestructura, redes",
-    "empresa": "Empresa Confidencial",
-    "ubicacion": "Medellín, Antioquia",
-    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-aprendiz-de-telecomunicaciones-infraestructura-redes-tecnico-o-tecnologo-en-medellin-2EF6EFC57194570161373E686DCF3405",
-    "fecha_publicacion": "Reciente",
-    "fuente": "Computrabajo",
-    "encontrada_ultima_corrida": true,
-    "ultima_deteccion": "2026-10-31",
-    "primera_deteccion": "2026-10-29",
-    "descripcion_fuente": "Descripción de la oferta $ 1.750.905,00 (Mensual) Contrato de aprendizaje Tiempo Completo Requisitos: Estudiantes en etapa productiva del área de telecomunicaciones, redes o ingeniería de sistemas, sea de carrera profesional, técnica o tecnología Funciones: Manejo de redes Metro Ethernet Configuración de Servicios Banda ancha, IPTV, TOIP Comprensión y administración de plataformas de red. Monitorear los servicios de fibra Seguimiento Verificar e Interpretar gráficas de tráfico, codificar las diferentes configuraciones que se tienen en los servicios de Internet (BRIDGE, DMZ, PORTFORWARDING, PPPoE, habilitación de puertos Ejecutar las actividades asociadas a los procesos en los que participa el área Acompañamiento a los clientes en todo el ciclo de vida del ticket Configuración de Swicthes y Routers (Vlan, puertos, enrutamiento, entre otros) Actualizaciones de iOS Configuraciones de ACL y protocolos (snmp, BGP, mab, entre otros) Condiciones: -Horario: Lunes a Sábado horario rotativo entre las 6:00 am y 6:00 pm -Contrato: Por aprendizaje. Salario Etapa Productiva 100% Salario Mínimo Legal vigente $1.750.905 + Todas las prestaciones de ley (EPS, ARL, PENSIONES, CESANTIAS, CAJA DE COMPENSACIÓN, AUXILIO DE TRANSPORTE $249.000) Se brinda la oportunidad de vinculación de acuerdo con el desempeño durante el periodo de práctica. Requerimientos Educación mínima: Bachillerato / Educación Media años de experiencia Conocimientos: Trabajo en equipo Aptitudes asociadas a esta oferta Nuevo Trabajo en equipo Ver 0 aptitudes más Hay 0 aptitudes que faltan en tu perfil Si las tienes, añádelas a tu perfil para encajar mejor en esta vacante. Mostar competencias Se han añadido correctamente las competencias en tu perfil. Palabras clave: apprentice, internship, traine, tecnico, tech, technician, technology, tecnologia, technologist Hace 10 horas (actualizada) Aplicar Postulado <path d=\"m471.382812 44.578125c-26.503906-28.746094-62.871093-44.578125-102.410156-44.578125-29.554687 0-56.621094 9.34375-80.449218 27.769531-12.023438 9.300781-22.917969 20.679688-32.523438 33.960938-9.601562-13.277344-20.5-24.660157-32.527344-33.960938-23.824218-18.425781-50.890625-27.769531-80.445312-27",
-    "estado_vigencia": "No reapareció en esta búsqueda; revisar vigencia en la fuente",
-    "ramas": [
-      {
-        "clave": "simulaciones_datos_ia",
-        "nombre": "Análisis de Datos, IA y Simulaciones",
-        "color": "#06b6d4",
-        "score": 63
-      },
-      {
-        "clave": "optica_vision_artificial",
-        "nombre": "Óptica, Fotónica y Visión Artificial",
-        "color": "#a855f7",
-        "score": 59
-      }
-    ],
-    "rama_principal": "Análisis de Datos, IA y Simulaciones",
-    "color_principal": "#06b6d4",
-    "clave_principal": "simulaciones_datos_ia",
-    "afinidad": "Alta Afinidad Pénsum",
-    "es_exclusiva_fisica": false,
-    "programa_inclusion_genero": false,
-    "convocatoria_exclusiva_mujeres": false,
-    "es_cierre_inminente": false,
-    "es_practica": true,
-    "score_pensum": 63,
-    "empresa_objetivo": false,
-    "mision": "Descripción de la oferta $ 1.750.905,00 (Mensual) Contrato de aprendizaje Tiempo Completo Requisitos: Estudiantes en etapa productiva del área de telecomunicaciones, redes o ingeniería de sistemas, sea de carrera profesional, técnica o tecnología Funciones: Manejo de redes Metro Ethernet Configuración de Servicios Banda ancha, IPTV, TOIP Comprensión y administración de plataformas de red. Monitore",
-    "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables.",
-    "_tareas_generadas": true,
-    "_sello": "28db84cb979d"
+    "_sello": "1526c985e358"
   },
   {
     "titulo": "Practicante Ingeniero de Calidad",
@@ -8284,6 +7984,138 @@
     "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables.",
     "_tareas_generadas": true,
     "_sello": "59995af653ec"
+  },
+  {
+    "titulo": "Aprendiz o Practicante de Sistemas",
+    "empresa": "Supermercados Euro S.A",
+    "ubicacion": "Medellín, Antioquia",
+    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-aprendiz-o-practicante-de-sistemas-en-medellin-461D1DDEF0D410C261373E686DCF3405",
+    "fecha_publicacion": "Reciente",
+    "fuente": "Computrabajo",
+    "encontrada_ultima_corrida": false,
+    "ultima_deteccion": "2026-10-31",
+    "primera_deteccion": "2026-10-29",
+    "descripcion_fuente": "Descripción de la oferta $ 1.750.905,00 (Mensual) Contrato de aprendizaje Beca/prácticas ¿Eres estudiante de Técnica o Tecnología en Sistemas, Mantenimiento de Cómputo o áreas afines? ¡Te estamos buscando! En nuestra empresa, tenemos una vacante para que inicies tus prácticas con nosotros y pongas en práctica lo aprendido. Requisitos: Estudiantes que no hayan firmado contrato de aprendizaje o estén habilitados para contrato de aprendizaje en Técnica o Tecnología en Sistemas, Mantenimiento de Cómputo, Desarrollo de Software, Redes de Computadores, o carreras afines. Motivación para aprender y desarrollarse profesionalmente en el área de sistemas. Funciones: Apoyo en tareas operativas de seguimiento y mantenimiento de equipos y sistemas. Asistencia al área operativa en la gestión y uso de programas y sistemas internos. Colaboración en el mantenimiento preventivo y correctivo de equipos informáticos. Soporte en la administración de redes y sistemas. Horario: Lunes a Jueves de 7:00 am a 4:30 pm, V de 7:00 am a 4:00 pm Ofrecemos: 100% SMLV + Prestaciones Si estás interesado/a en formar parte de Euro Supermercados y cumples con los requisitos, ¡Aplica ahora y únete a nuestro equipo! Requerimientos Educación mínima: Bachillerato / Educación Media años de experiencia Palabras clave: apprentice, internship, traine, intern, practicante, becario, pasante, system Hace 7 horas (actualizada) Aplicar Postulado Avísame con ofertas similares",
+    "ramas": [
+      {
+        "clave": "simulaciones_datos_ia",
+        "nombre": "Análisis de Datos, IA y Simulaciones",
+        "color": "#06b6d4",
+        "score": 63
+      },
+      {
+        "clave": "optica_vision_artificial",
+        "nombre": "Óptica, Fotónica y Visión Artificial",
+        "color": "#a855f7",
+        "score": 53
+      }
+    ],
+    "rama_principal": "Análisis de Datos, IA y Simulaciones",
+    "color_principal": "#06b6d4",
+    "clave_principal": "simulaciones_datos_ia",
+    "afinidad": "Alta Afinidad Pénsum",
+    "es_exclusiva_fisica": false,
+    "programa_inclusion_genero": false,
+    "convocatoria_exclusiva_mujeres": false,
+    "es_cierre_inminente": false,
+    "es_practica": true,
+    "score_pensum": 63,
+    "empresa_objetivo": false,
+    "mision": "Descripción de la oferta $ 1.750.905,00 (Mensual) Contrato de aprendizaje Beca/prácticas ¿Eres estudiante de Técnica o Tecnología en Sistemas, Mantenimiento de Cómputo o áreas afines? ¡Te estamos buscando! En nuestra empresa, tenemos una vacante para que inicies tus prácticas con nosotros y pongas en práctica lo aprendido. Requisitos: Estudiantes que no hayan firmado contrato de aprendizaje o esté",
+    "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables.",
+    "_tareas_generadas": true,
+    "_sello": "b99c654902d8",
+    "estado_vigencia": "No reapareció en esta búsqueda; revisar vigencia en la fuente"
+  },
+  {
+    "titulo": "Aprendiz Calidad",
+    "empresa": "GRUPO BIOS S.A.S",
+    "ubicacion": "Caldas, Antioquia",
+    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-aprendiz-calidad-en-caldas-B23255588F45FF7561373E686DCF3405",
+    "fecha_publicacion": "Reciente",
+    "fuente": "Computrabajo",
+    "encontrada_ultima_corrida": false,
+    "ultima_deteccion": "2026-10-31",
+    "primera_deteccion": "2026-10-30",
+    "descripcion_fuente": "Descripción de la oferta $ 1.750.905,00 (Mensual) Contrato de aprendizaje Tiempo Completo En Grupo BIOS somos una población diversa e incluyente donde el valor de nuestra gente radica en su actitud y en sus ganas de sumar, creemos en las segundas oportunidades y abrimos nuestras puertas, promoviendo procesos de selección basados en competencias y valores. En Comercial + Bios, compañía de Grupo BIOS, nos encontramos en la búsqueda de un Aprendiz quien se sumará a nuestro equipo para trabajar por el propósito de nutrir a todos desarrollando el campo colombiano. Si eres estudiante de Control y Gestión de Calidad, Sistemas de Gestión, Producción Industrial o afines, esta oportunidad es para ti. ¿Qué necesitas para aplicar? Disponibilidad para firmar contrato de aprendizaje. Tener la posibilidad de residir en Antioquia- Valle de Aburrá Nuestra compañía ofrece para ti: Poliza de vida Contrato directo con la compañía Apoyo de sostenimiento en etapa productiva del 100% smmlv Beneficios emocionales. Si compartes nuestro compromiso de nutrir a todos y desarrollar el campo colombiano, ¡Postúlate! Requerimientos Educación mínima: Universidad / Carrera técnica años de experiencia Palabras clave: apprentice, internship, traine, quality, qa Hace 7 días (actualizada) Aplicar Postulado Avísame con ofertas similares Denunciar empleo <div id=\"ok-complaint-response-container\"",
+    "ramas": [
+      {
+        "clave": "simulaciones_datos_ia",
+        "nombre": "Análisis de Datos, IA y Simulaciones",
+        "color": "#06b6d4",
+        "score": 63
+      },
+      {
+        "clave": "instrumentacion_metrologia",
+        "nombre": "Instrumentación, Automatización y Metrología",
+        "color": "#10b981",
+        "score": 61
+      },
+      {
+        "clave": "optica_vision_artificial",
+        "nombre": "Óptica, Fotónica y Visión Artificial",
+        "color": "#a855f7",
+        "score": 53
+      }
+    ],
+    "rama_principal": "Análisis de Datos, IA y Simulaciones",
+    "color_principal": "#06b6d4",
+    "clave_principal": "simulaciones_datos_ia",
+    "afinidad": "Alta Afinidad Pénsum",
+    "es_exclusiva_fisica": false,
+    "programa_inclusion_genero": false,
+    "convocatoria_exclusiva_mujeres": false,
+    "es_cierre_inminente": false,
+    "es_practica": true,
+    "score_pensum": 63,
+    "empresa_objetivo": false,
+    "mision": "Descripción de la oferta $ 1.750.905,00 (Mensual) Contrato de aprendizaje Tiempo Completo En Grupo BIOS somos una población diversa e incluyente donde el valor de nuestra gente radica en su actitud y en sus ganas de sumar, creemos en las segundas oportunidades y abrimos nuestras puertas, promoviendo procesos de selección basados en competencias y valores. En Comercial + Bios, compañía de Grupo BIO",
+    "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables.",
+    "_tareas_generadas": true,
+    "_sello": "84855a1f1ba6",
+    "estado_vigencia": "No reapareció en esta búsqueda; revisar vigencia en la fuente"
+  },
+  {
+    "titulo": "Aprendiz de Telecomunicaciones, Infraestructura, redes",
+    "empresa": "Empresa Confidencial",
+    "ubicacion": "Medellín, Antioquia",
+    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-aprendiz-de-telecomunicaciones-infraestructura-redes-tecnico-o-tecnologo-en-medellin-2EF6EFC57194570161373E686DCF3405",
+    "fecha_publicacion": "Reciente",
+    "fuente": "Computrabajo",
+    "encontrada_ultima_corrida": false,
+    "ultima_deteccion": "2026-10-31",
+    "primera_deteccion": "2026-10-29",
+    "descripcion_fuente": "Descripción de la oferta $ 1.750.905,00 (Mensual) Contrato de aprendizaje Tiempo Completo Requisitos: Estudiantes en etapa productiva del área de telecomunicaciones, redes o ingeniería de sistemas, sea de carrera profesional, técnica o tecnología Funciones: Manejo de redes Metro Ethernet Configuración de Servicios Banda ancha, IPTV, TOIP Comprensión y administración de plataformas de red. Monitorear los servicios de fibra Seguimiento Verificar e Interpretar gráficas de tráfico, codificar las diferentes configuraciones que se tienen en los servicios de Internet (BRIDGE, DMZ, PORTFORWARDING, PPPoE, habilitación de puertos Ejecutar las actividades asociadas a los procesos en los que participa el área Acompañamiento a los clientes en todo el ciclo de vida del ticket Configuración de Swicthes y Routers (Vlan, puertos, enrutamiento, entre otros) Actualizaciones de iOS Configuraciones de ACL y protocolos (snmp, BGP, mab, entre otros) Condiciones: -Horario: Lunes a Sábado horario rotativo entre las 6:00 am y 6:00 pm -Contrato: Por aprendizaje. Salario Etapa Productiva 100% Salario Mínimo Legal vigente $1.750.905 + Todas las prestaciones de ley (EPS, ARL, PENSIONES, CESANTIAS, CAJA DE COMPENSACIÓN, AUXILIO DE TRANSPORTE $249.000) Se brinda la oportunidad de vinculación de acuerdo con el desempeño durante el periodo de práctica. Requerimientos Educación mínima: Bachillerato / Educación Media años de experiencia Conocimientos: Trabajo en equipo Aptitudes asociadas a esta oferta Nuevo Trabajo en equipo Ver 0 aptitudes más Hay 0 aptitudes que faltan en tu perfil Si las tienes, añádelas a tu perfil para encajar mejor en esta vacante. Mostar competencias Se han añadido correctamente las competencias en tu perfil. Palabras clave: apprentice, internship, traine, tecnico, tech, technician, technology, tecnologia, technologist Hace 10 horas (actualizada) Aplicar Postulado <path d=\"m471.382812 44.578125c-26.503906-28.746094-62.871093-44.578125-102.410156-44.578125-29.554687 0-56.621094 9.34375-80.449218 27.769531-12.023438 9.300781-22.917969 20.679688-32.523438 33.960938-9.601562-13.277344-20.5-24.660157-32.527344-33.960938-23.824218-18.425781-50.890625-27.769531-80.445312-27",
+    "estado_vigencia": "No reapareció en esta búsqueda; revisar vigencia en la fuente",
+    "ramas": [
+      {
+        "clave": "simulaciones_datos_ia",
+        "nombre": "Análisis de Datos, IA y Simulaciones",
+        "color": "#06b6d4",
+        "score": 63
+      },
+      {
+        "clave": "optica_vision_artificial",
+        "nombre": "Óptica, Fotónica y Visión Artificial",
+        "color": "#a855f7",
+        "score": 59
+      }
+    ],
+    "rama_principal": "Análisis de Datos, IA y Simulaciones",
+    "color_principal": "#06b6d4",
+    "clave_principal": "simulaciones_datos_ia",
+    "afinidad": "Alta Afinidad Pénsum",
+    "es_exclusiva_fisica": false,
+    "programa_inclusion_genero": false,
+    "convocatoria_exclusiva_mujeres": false,
+    "es_cierre_inminente": false,
+    "es_practica": true,
+    "score_pensum": 63,
+    "empresa_objetivo": false,
+    "mision": "Descripción de la oferta $ 1.750.905,00 (Mensual) Contrato de aprendizaje Tiempo Completo Requisitos: Estudiantes en etapa productiva del área de telecomunicaciones, redes o ingeniería de sistemas, sea de carrera profesional, técnica o tecnología Funciones: Manejo de redes Metro Ethernet Configuración de Servicios Banda ancha, IPTV, TOIP Comprensión y administración de plataformas de red. Monitore",
+    "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables.",
+    "_tareas_generadas": true,
+    "_sello": "28db84cb979d"
   },
   {
     "titulo": "Aprendiz Control y Gestión de Calidad",
@@ -8775,11 +8607,63 @@
     "_sello": "b9d0c79583d9"
   },
   {
+    "titulo": "Robotics intern",
+    "empresa": "Weskill",
+    "ubicacion": "Madhya Pradesh, India · remoto internacional (elegibilidad por confirmar)",
+    "url": "https://in.linkedin.com/jobs/view/robotics-intern-at-weskill-4483935545",
+    "fecha_publicacion": "2026-10-31",
+    "fuente": "LinkedIn Jobs",
+    "linkedin_id": "4483935545",
+    "search_scope": "WORLDWIDE",
+    "encontrada_ultima_corrida": true,
+    "ultima_deteccion": "2026-10-31",
+    "primera_deteccion": "2026-10-31",
+    "descripcion_fuente": "Company Description Weskill is an innovative online training platform focused on upskilling undergraduate students through practical, hands-on learning experiences. The organization designs programs that closely align with corporate expectations, helping learners bridge the gap between academic coursework and real-world industry needs. Weskill’s training prepares participants for roles in fast-growing startups and leading multinational corporations. By emphasizing job-ready skills and applied projects, Weskill supports learners in building a strong foundation for a promising career path. Role Description The Robotics Intern at Weskill will support the development, testing, and documentation of robotics and automation projects in a remote internship role. Day-to-day responsibilities may include assisting in designing and simulating robotic systems, contributing to process automation workflows, and collaborating with mentors to refine mechatronic components and control strategies. The intern will help analyze system performance, troubleshoot technical issues, and maintain clear records of experiments, prototypes, and configurations. This internship role also involves participating in online team meetings, sharing progress updates, and learning to apply robotics concepts to real-world applications aligned with Weskill’s training programs. Qualifications Candidates should possess skills in Robotics and Robot systems, including basic understanding of kinematics, sensors, and actuators. Candidates should possess skills in Automation and Process Automation, with exposure to control systems, workflows, or industrial automation concepts. Candidates should possess skills in Mechatronics, integrating mechanical, electrical, and software components in simple projects. Candidates should possess strong analytical and problem-solving skills, with the ability to learn new tools and technologies quickly. Candidates should preferably be undergraduate students in engineering, robotics, mechatronics, or related technical fields. Candidates should possess effective written and verbal communication skills and be comfortable working in a remote, collaborative environment. Familiarity with programming languages (such as Python, C/C++, or similar) and simulation tools or CAD software is beneficial. Demonstrated interest in robotics projects, competitions, or relevant coursework is a plus.",
+    "tipo_empleo": "Prácticas",
+    "estado_vigencia": "Aviso abierto en LinkedIn al momento del rastreo",
+    "alcance_geografico": "Remoto internacional; confirmar elegibilidad desde Colombia",
+    "ramas": [
+      {
+        "clave": "simulaciones_datos_ia",
+        "nombre": "Análisis de Datos, IA y Simulaciones",
+        "color": "#06b6d4",
+        "score": 63
+      },
+      {
+        "clave": "instrumentacion_metrologia",
+        "nombre": "Instrumentación, Automatización y Metrología",
+        "color": "#10b981",
+        "score": 58
+      },
+      {
+        "clave": "diseno_mecanico_cad",
+        "nombre": "Diseño Mecánico y Dibujo Técnico",
+        "color": "#f97316",
+        "score": 23
+      }
+    ],
+    "rama_principal": "Análisis de Datos, IA y Simulaciones",
+    "color_principal": "#06b6d4",
+    "clave_principal": "simulaciones_datos_ia",
+    "afinidad": "Alta Afinidad Pénsum",
+    "es_exclusiva_fisica": false,
+    "programa_inclusion_genero": false,
+    "convocatoria_exclusiva_mujeres": false,
+    "es_cierre_inminente": false,
+    "es_practica": true,
+    "score_pensum": 63,
+    "empresa_objetivo": false,
+    "mision": "Company Description Weskill is an innovative online training platform focused on upskilling undergraduate students through practical, hands-on learning experiences. The organization designs programs that closely align with corporate expectations, helping learners bridge the gap between academic coursework and real-world industry needs. Weskill’s training prepares participants for roles in fast-gro",
+    "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables.",
+    "_tareas_generadas": true,
+    "_sello": "f5d207c40049"
+  },
+  {
     "titulo": "Power Systems Engineering Intern",
     "empresa": "Electric Power Engineers",
     "ubicacion": "Austin, Texas, Estados Unidos · remoto internacional (elegibilidad por confirmar)",
     "url": "https://www.linkedin.com/jobs/view/power-systems-engineering-intern-at-electric-power-engineers-4457988633",
-    "fecha_publicacion": "2026-10-09",
+    "fecha_publicacion": "2026-10-31",
     "fuente": "LinkedIn Jobs",
     "linkedin_id": "4457988633",
     "search_scope": "WORLDWIDE",
@@ -8917,52 +8801,6 @@
     "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables.",
     "_tareas_generadas": true,
     "_sello": "350d4a749f47"
-  },
-  {
-    "titulo": "Remote Support Engineer Intern",
-    "empresa": "Hydromenta Systems",
-    "ubicacion": "Mayfield Heights, Ohio, Estados Unidos · remoto internacional (elegibilidad por confirmar)",
-    "url": "https://www.linkedin.com/jobs/view/remote-support-engineer-intern-at-hydromenta-systems-4483020822",
-    "fecha_publicacion": "2026-10-29",
-    "fuente": "LinkedIn Jobs",
-    "linkedin_id": "4483020822",
-    "search_scope": "WORLDWIDE",
-    "encontrada_ultima_corrida": false,
-    "ultima_deteccion": "2026-10-30",
-    "primera_deteccion": "2026-10-30",
-    "descripcion_fuente": "Compensation: $22–32 per hour Start Date: Summer Department: Engineering Research & Development Role Overview: The role focuses on controls and automation. Internships within Lifecycle Services (LCS) provide unique opportunities to develop your engineering, analytical, and customer-centric skills. Things You Will Do: ● Shadow the company’s engineers as they assist customers with troubleshooting issues with the company or Web-ex ● Learn the company’s technology concepts to allow you to help engineers duplicate customer issues ● Assist in responding to customer emails ● Program automation devices to simulate real work applications to enhance learning ● Wire electrical devices and learn electrical engineering concepts Candidate Requirements: ● Active enrollment in a four year or advanced engineering degree program at an accredited university ● Legal authorization to work in the U.S. We will not sponsor individuals for employment visas, now or in the future Nice to Have: ● Cumulative GPA of 3.3 or above ● Strong analytical and problem-solving skills, demonstrated through various experiences (e.g., internships, coursework, projects, or volunteer work) ● Effective organization and time management skills, with the ability to manage multiple tasks and meet deadlines ● Excellent written, verbal, presentation, and interpersonal communication skills ● Ability to communicate effectively and collaborate with diverse groups, including clients, peers, and managers ● Creativity, self-confidence, and adaptability Perks & Benefits: ● Health benefits ● 401(k) plan ● Paid time off Important: The successful application submission for the above role(s) will be conditional to your profile evaluation by our AI system. We can let you know better once you submit your resume.",
-    "tipo_empleo": "Prácticas",
-    "alcance_geografico": "Remoto internacional; confirmar elegibilidad desde Colombia",
-    "estado_vigencia": "Aviso abierto en LinkedIn al momento del rastreo",
-    "ramas": [
-      {
-        "clave": "simulaciones_datos_ia",
-        "nombre": "Análisis de Datos, IA y Simulaciones",
-        "color": "#06b6d4",
-        "score": 63
-      },
-      {
-        "clave": "instrumentacion_metrologia",
-        "nombre": "Instrumentación, Automatización y Metrología",
-        "color": "#10b981",
-        "score": 58
-      }
-    ],
-    "rama_principal": "Análisis de Datos, IA y Simulaciones",
-    "color_principal": "#06b6d4",
-    "clave_principal": "simulaciones_datos_ia",
-    "afinidad": "Alta Afinidad Pénsum",
-    "es_exclusiva_fisica": false,
-    "programa_inclusion_genero": false,
-    "convocatoria_exclusiva_mujeres": false,
-    "es_cierre_inminente": false,
-    "es_practica": true,
-    "score_pensum": 63,
-    "empresa_objetivo": false,
-    "mision": "Compensation: $22–32 per hour Start Date: Summer Department: Engineering Research & Development Role Overview: The role focuses on controls and automation. Internships within Lifecycle Services (LCS) provide unique opportunities to develop your engineering, analytical, and customer-centric skills. Things You Will Do: ● Shadow the company’s engineers as they assist customers with troubleshooting is",
-    "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables.",
-    "_tareas_generadas": true,
-    "_sello": "3b2df8c06f9f"
   },
   {
     "titulo": "Practicante Ambienta, practicante Electromecánico",
@@ -9217,6 +9055,48 @@
     "_sello": "e75451608c3f"
   },
   {
+    "titulo": "Aprendiz  Practicante Mantenimiento Etapa Productiva Medellín",
+    "empresa": "Movich Hotels",
+    "ubicacion": "Medellín, Antioquia",
+    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-aprendiz-practicante-mantenimiento-etapa-productiva-medellin-hotel-intercontinental-movich-medellin-en-medellin-73A4AE2ED82DBC3461373E686DCF3405",
+    "fecha_publicacion": "Reciente",
+    "fuente": "Computrabajo",
+    "encontrada_ultima_corrida": true,
+    "ultima_deteccion": "2026-10-31",
+    "primera_deteccion": "2026-10-23",
+    "descripcion_fuente": "Descripción de la oferta $ 1.750.905,00 (Mensual) Contrato de aprendizaje Tiempo Completo En Hotel InterContinental Movich Medellín buscamos Aprendices apasionados por el servicio, con actitud proactiva, atención al detalle y un alto compromiso por la excelencia. Si te motiva trabajar en un entorno dinámico, elegante y con estándares de clase mundial, ¡esta oportunidad es para ti! Estamos en búsqueda de Aprendices / Practicantes listos para iniciar sus prácticas en las áreas de: Mantenimiento, Alimentos y Bebidas, Comercial Ventas, Repostería Pastelería. Importante ya haber culminado la etapa lectiva y estar habilitado en etapa productiva para iniciar inmediatamente prácticas. No haber firmado contrato de aprendizaje anteriormente. Aprendiz de Mantenimiento: Técnico o Tecnólogo en electromecánica, mecánica industrial, metalmecánica, civil, mantenimiento de instalaciones. Apoyar en las actividades básicas de mantenimiento preventivo en las instalaciones del hotel. Colaborar en la revisión básica de equipos mobiliario e instalaciones Apoyar en reparaciones menores bajo la supervisión del personal de mantenimiento. mantenimiento básico de sistemas eléctricos hidráulicos o locativos. Apoyar en la organización y limpieza del taller o área de mantenimiento. traslado de herramientas equipos o materiales requeridos para las labores de mantenimiento. Electricidad plomería pintura resane mantenimiento locativo. Ofrecemos: $1.750.905 + Auxilio de transporte y todas las prestaciones de ley. contrato de aprendizaje. Horarios rotativos. Alimentación y parqueadero gratuito. Descuentos de hasta el 50% en nuestros restaurantes y bares. . Estadías gratuitas. Si cumples con los requisitos descritos, te animamos a que hagas parte de nuestro gran equipo. Requerimientos Educación mínima: Universidad / Carrera tecnológica años de experiencia Idiomas: Español ,Inglés Palabras clave: apprentice, internship, traine, intern, practicante, becario, pasante, maintenance, conservacion, conservation, mantenimiento Ayer (actualizada) Aplicar Postulado <path d=\"m471.382812 44.578125c-26.503906-28.746094-62.871093-44.578125-102.410156-44.578125-29.554687 0-56.621094 9.34375-80.449218 27.769531-12.023438 9.300781-22.917969 20.679688-32.523438 33.960938-9.601562-13.277344-20.5-24.660157-32.527344-33.960938-23.824218-18.425781-50.890625-27.769531-80.445312-27.769531-39.539063 0-75.910156 15.832031-102.414063 44.578125-26.1875 28.410156-40.613281 67.222656-40.613281 109.292969 0 43.300781 16.13",
+    "estado_vigencia": "No reapareció en esta búsqueda; revisar vigencia en la fuente",
+    "ramas": [
+      {
+        "clave": "instrumentacion_metrologia",
+        "nombre": "Instrumentación, Automatización y Metrología",
+        "color": "#10b981",
+        "score": 58
+      },
+      {
+        "clave": "materiales_nanotecnologia",
+        "nombre": "Ciencia de Materiales y Nanotecnología",
+        "color": "#14b8a6",
+        "score": 53
+      }
+    ],
+    "rama_principal": "Instrumentación, Automatización y Metrología",
+    "color_principal": "#10b981",
+    "clave_principal": "instrumentacion_metrologia",
+    "afinidad": "Alta Afinidad Pénsum",
+    "es_exclusiva_fisica": false,
+    "programa_inclusion_genero": false,
+    "convocatoria_exclusiva_mujeres": false,
+    "es_cierre_inminente": false,
+    "es_practica": true,
+    "score_pensum": 58,
+    "empresa_objetivo": false,
+    "mision": "Descripción de la oferta $ 1.750.905,00 (Mensual) Contrato de aprendizaje Tiempo Completo En Hotel InterContinental Movich Medellín buscamos Aprendices apasionados por el servicio, con actitud proactiva, atención al detalle y un alto compromiso por la excelencia. Si te motiva trabajar en un entorno dinámico, elegante y con estándares de clase mundial, ¡esta oportunidad es para ti! Estamos en búsqu",
+    "tareas": "Levantamiento de curvas de calibración, programación en LabVIEW, enlace con autómatas PLC y aseguramiento metrológico ISO 17025.",
+    "_tareas_generadas": true,
+    "_sello": "6b62b7810c93"
+  },
+  {
     "titulo": "Practicante Profesional / Automatización Industrial / Ingeniería Mecánica / Disponibilidad Inmediata",
     "empresa": "Burger King Colombia",
     "ubicacion": "Medellín, Antioquia",
@@ -9373,48 +9253,6 @@
     "_sello": "94dd96b318d3"
   },
   {
-    "titulo": "Aprendiz  Practicante Mantenimiento Etapa Productiva Medellín",
-    "empresa": "Movich Hotels",
-    "ubicacion": "Medellín, Antioquia",
-    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-aprendiz-practicante-mantenimiento-etapa-productiva-medellin-hotel-intercontinental-movich-medellin-en-medellin-73A4AE2ED82DBC3461373E686DCF3405",
-    "fecha_publicacion": "Reciente",
-    "fuente": "Computrabajo",
-    "encontrada_ultima_corrida": true,
-    "ultima_deteccion": "2026-10-31",
-    "primera_deteccion": "2026-10-23",
-    "descripcion_fuente": "Descripción de la oferta $ 1.750.905,00 (Mensual) Contrato de aprendizaje Tiempo Completo En Hotel InterContinental Movich Medellín buscamos Aprendices apasionados por el servicio, con actitud proactiva, atención al detalle y un alto compromiso por la excelencia. Si te motiva trabajar en un entorno dinámico, elegante y con estándares de clase mundial, ¡esta oportunidad es para ti! Estamos en búsqueda de Aprendices / Practicantes listos para iniciar sus prácticas en las áreas de: Mantenimiento, Alimentos y Bebidas, Comercial Ventas, Repostería Pastelería. Importante ya haber culminado la etapa lectiva y estar habilitado en etapa productiva para iniciar inmediatamente prácticas. No haber firmado contrato de aprendizaje anteriormente. Aprendiz de Mantenimiento: Técnico o Tecnólogo en electromecánica, mecánica industrial, metalmecánica, civil, mantenimiento de instalaciones. Apoyar en las actividades básicas de mantenimiento preventivo en las instalaciones del hotel. Colaborar en la revisión básica de equipos mobiliario e instalaciones Apoyar en reparaciones menores bajo la supervisión del personal de mantenimiento. mantenimiento básico de sistemas eléctricos hidráulicos o locativos. Apoyar en la organización y limpieza del taller o área de mantenimiento. traslado de herramientas equipos o materiales requeridos para las labores de mantenimiento. Electricidad plomería pintura resane mantenimiento locativo. Ofrecemos: $1.750.905 + Auxilio de transporte y todas las prestaciones de ley. contrato de aprendizaje. Horarios rotativos. Alimentación y parqueadero gratuito. Descuentos de hasta el 50% en nuestros restaurantes y bares. . Estadías gratuitas. Si cumples con los requisitos descritos, te animamos a que hagas parte de nuestro gran equipo. Requerimientos Educación mínima: Universidad / Carrera tecnológica años de experiencia Idiomas: Español ,Inglés Palabras clave: apprentice, internship, traine, intern, practicante, becario, pasante, maintenance, conservacion, conservation, mantenimiento Ayer (actualizada) Aplicar Postulado <path d=\"m471.382812 44.578125c-26.503906-28.746094-62.871093-44.578125-102.410156-44.578125-29.554687 0-56.621094 9.34375-80.449218 27.769531-12.023438 9.300781-22.917969 20.679688-32.523438 33.960938-9.601562-13.277344-20.5-24.660157-32.527344-33.960938-23.824218-18.425781-50.890625-27.769531-80.445312-27.769531-39.539063 0-75.910156 15.832031-102.414063 44.578125-26.1875 28.410156-40.613281 67.222656-40.613281 109.292969 0 43.300781 16.13",
-    "estado_vigencia": "No reapareció en esta búsqueda; revisar vigencia en la fuente",
-    "ramas": [
-      {
-        "clave": "instrumentacion_metrologia",
-        "nombre": "Instrumentación, Automatización y Metrología",
-        "color": "#10b981",
-        "score": 58
-      },
-      {
-        "clave": "materiales_nanotecnologia",
-        "nombre": "Ciencia de Materiales y Nanotecnología",
-        "color": "#14b8a6",
-        "score": 53
-      }
-    ],
-    "rama_principal": "Instrumentación, Automatización y Metrología",
-    "color_principal": "#10b981",
-    "clave_principal": "instrumentacion_metrologia",
-    "afinidad": "Alta Afinidad Pénsum",
-    "es_exclusiva_fisica": false,
-    "programa_inclusion_genero": false,
-    "convocatoria_exclusiva_mujeres": false,
-    "es_cierre_inminente": false,
-    "es_practica": true,
-    "score_pensum": 58,
-    "empresa_objetivo": false,
-    "mision": "Descripción de la oferta $ 1.750.905,00 (Mensual) Contrato de aprendizaje Tiempo Completo En Hotel InterContinental Movich Medellín buscamos Aprendices apasionados por el servicio, con actitud proactiva, atención al detalle y un alto compromiso por la excelencia. Si te motiva trabajar en un entorno dinámico, elegante y con estándares de clase mundial, ¡esta oportunidad es para ti! Estamos en búsqu",
-    "tareas": "Levantamiento de curvas de calibración, programación en LabVIEW, enlace con autómatas PLC y aseguramiento metrológico ISO 17025.",
-    "_tareas_generadas": true,
-    "_sello": "6b62b7810c93"
-  },
-  {
     "titulo": "Aprendiz de Mantenimiento",
     "empresa": "Laboratorio Maria Salome",
     "ubicacion": "Medellín, Antioquia",
@@ -9449,47 +9287,6 @@
     "tareas": "Levantamiento de curvas de calibración, programación en LabVIEW, enlace con autómatas PLC y aseguramiento metrológico ISO 17025.",
     "_tareas_generadas": true,
     "_sello": "63fd02baa0df"
-  },
-  {
-    "titulo": "Aprendiz ingeniero de proyectos",
-    "empresa": "Empresa Confidencial",
-    "ubicacion": "Salgar, Antioquia",
-    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-aprendiz-ingeniero-de-proyectos-en-salgar-C87BAB357B13A47461373E686DCF3405",
-    "fecha_publicacion": "Reciente",
-    "fuente": "Computrabajo",
-    "encontrada_ultima_corrida": true,
-    "ultima_deteccion": "2026-10-31",
-    "primera_deteccion": "2026-10-30",
-    "descripcion_fuente": "Descripción de la oferta A convenir Contrato de aprendizaje Tiempo Completo Empresa agroindustrial ubicada en Salgar, en el suroeste antioqueño, requiere aprendiz ingeniero de proyectos para acompañar la ejecución de proyectos de infraestructura y equipos, apoyar la planificación y seguimiento de actividades de ingeniería, y contribuir al control de recursos y procesos, garantizando la correcta ejecución y entrega de los proyectos de la organización. Funciones: Acompañar la organización y seguimiento de actividades relacionadas con proyectos y activos. Apoyar la ejecución de las actividades programadas por el equipo de ingeniería. Apoyar la gestión del presupuesto de ingeniería, optimizando recursos, herramientas y materiales. Supervisar y coordinar proveedores para garantizar el cumplimiento de los requerimientos de los proyectos. Evaluar el desempeño de los proyectos para contribuir al mejoramiento continuo. Apoyar la gestión y ejecución de las actividades de infraestructura de la compañía. Conocimientos: Manejo de herramientas Office. Fundamentos de gestión de proyectos. Control y seguimiento de actividades de ingeniería. Presupuestos y optimización de recursos. Gestión de proveedores. Requisitos: Nivel académico: profesional en formación en ingeniería civil, construcción o infraestructura. Experiencia: no requiere experiencia. Detalles: Salario: salario mínimo legal vigente. Tipo de contrato: aprendizaje. Horario: lunes a viernes de 8:00 a. m. a 5:00 p. m. Lugar de trabajo: Salgar, Antioquia. Beneficios: Oportunidad de adquirir experiencia práctica en proyectos de infraestructura y equipos. Acompañamiento por parte del equipo de ingeniería. Desarrollo de competencias técnicas y profesionales en el sector agroindustrial. Requerimientos Educación mínima: Universidad / Carrera Profesional años de experiencia Palabras clave: apprentice, internship, traine, engineers, ingeniera, ing, engineer Hace 7 días (actualizada) Aplicar Postulado <path d=\"m471.382812 44.578125c-26.503906-28.746094-62.871093-44.578125-102.410156-44.578125-29.554687 0-56.621094 9.34375-80.449218 27.769531-12.023438 9.300781-22.917969 20.679688-32.523438 33.960938-9.601562-13.277344-20.5-24.660157-32.527344-33.960938-23.824218-18.425781-50.890625-27.769531-80.445312-27.769531-39.539063 0-75.910156 15.832031-102.414063 44.578125-26.1875 28.410156-40.613281 67.222656-40.613281 109.292969 0 43.300781 16.136719 82.9375 50.78125 124.742187 30.992188 37.394531 75.535156 75.355469 127.117188 11",
-    "ramas": [
-      {
-        "clave": "instrumentacion_metrologia",
-        "nombre": "Instrumentación, Automatización y Metrología",
-        "color": "#10b981",
-        "score": 58
-      },
-      {
-        "clave": "materiales_nanotecnologia",
-        "nombre": "Ciencia de Materiales y Nanotecnología",
-        "color": "#14b8a6",
-        "score": 53
-      }
-    ],
-    "rama_principal": "Instrumentación, Automatización y Metrología",
-    "color_principal": "#10b981",
-    "clave_principal": "instrumentacion_metrologia",
-    "afinidad": "Alta Afinidad Pénsum",
-    "es_exclusiva_fisica": false,
-    "programa_inclusion_genero": false,
-    "convocatoria_exclusiva_mujeres": false,
-    "es_cierre_inminente": false,
-    "es_practica": true,
-    "score_pensum": 58,
-    "empresa_objetivo": false,
-    "mision": "Descripción de la oferta A convenir Contrato de aprendizaje Tiempo Completo Empresa agroindustrial ubicada en Salgar, en el suroeste antioqueño, requiere aprendiz ingeniero de proyectos para acompañar la ejecución de proyectos de infraestructura y equipos, apoyar la planificación y seguimiento de actividades de ingeniería, y contribuir al control de recursos y procesos, garantizando la correcta ej",
-    "tareas": "Levantamiento de curvas de calibración, programación en LabVIEW, enlace con autómatas PLC y aseguramiento metrológico ISO 17025.",
-    "_tareas_generadas": true,
-    "_sello": "f9266e3ce750"
   },
   {
     "titulo": "Practicante de calidad para Apartadó 349787-184",
@@ -9582,6 +9379,48 @@
     "tareas": "Levantamiento de curvas de calibración, programación en LabVIEW, enlace con autómatas PLC y aseguramiento metrológico ISO 17025.",
     "_tareas_generadas": true,
     "_sello": "3603945f000f"
+  },
+  {
+    "titulo": "Aprendiz ingeniero de proyectos",
+    "empresa": "Empresa Confidencial",
+    "ubicacion": "Salgar, Antioquia",
+    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-aprendiz-ingeniero-de-proyectos-en-salgar-C87BAB357B13A47461373E686DCF3405",
+    "fecha_publicacion": "Reciente",
+    "fuente": "Computrabajo",
+    "encontrada_ultima_corrida": false,
+    "ultima_deteccion": "2026-10-31",
+    "primera_deteccion": "2026-10-30",
+    "descripcion_fuente": "Descripción de la oferta A convenir Contrato de aprendizaje Tiempo Completo Empresa agroindustrial ubicada en Salgar, en el suroeste antioqueño, requiere aprendiz ingeniero de proyectos para acompañar la ejecución de proyectos de infraestructura y equipos, apoyar la planificación y seguimiento de actividades de ingeniería, y contribuir al control de recursos y procesos, garantizando la correcta ejecución y entrega de los proyectos de la organización. Funciones: Acompañar la organización y seguimiento de actividades relacionadas con proyectos y activos. Apoyar la ejecución de las actividades programadas por el equipo de ingeniería. Apoyar la gestión del presupuesto de ingeniería, optimizando recursos, herramientas y materiales. Supervisar y coordinar proveedores para garantizar el cumplimiento de los requerimientos de los proyectos. Evaluar el desempeño de los proyectos para contribuir al mejoramiento continuo. Apoyar la gestión y ejecución de las actividades de infraestructura de la compañía. Conocimientos: Manejo de herramientas Office. Fundamentos de gestión de proyectos. Control y seguimiento de actividades de ingeniería. Presupuestos y optimización de recursos. Gestión de proveedores. Requisitos: Nivel académico: profesional en formación en ingeniería civil, construcción o infraestructura. Experiencia: no requiere experiencia. Detalles: Salario: salario mínimo legal vigente. Tipo de contrato: aprendizaje. Horario: lunes a viernes de 8:00 a. m. a 5:00 p. m. Lugar de trabajo: Salgar, Antioquia. Beneficios: Oportunidad de adquirir experiencia práctica en proyectos de infraestructura y equipos. Acompañamiento por parte del equipo de ingeniería. Desarrollo de competencias técnicas y profesionales en el sector agroindustrial. Requerimientos Educación mínima: Universidad / Carrera Profesional años de experiencia Palabras clave: apprentice, internship, traine, engineers, ingeniera, ing, engineer Hace 7 días (actualizada) Aplicar Postulado <path d=\"m471.382812 44.578125c-26.503906-28.746094-62.871093-44.578125-102.410156-44.578125-29.554687 0-56.621094 9.34375-80.449218 27.769531-12.023438 9.300781-22.917969 20.679688-32.523438 33.960938-9.601562-13.277344-20.5-24.660157-32.527344-33.960938-23.824218-18.425781-50.890625-27.769531-80.445312-27.769531-39.539063 0-75.910156 15.832031-102.414063 44.578125-26.1875 28.410156-40.613281 67.222656-40.613281 109.292969 0 43.300781 16.136719 82.9375 50.78125 124.742187 30.992188 37.394531 75.535156 75.355469 127.117188 11",
+    "ramas": [
+      {
+        "clave": "instrumentacion_metrologia",
+        "nombre": "Instrumentación, Automatización y Metrología",
+        "color": "#10b981",
+        "score": 58
+      },
+      {
+        "clave": "materiales_nanotecnologia",
+        "nombre": "Ciencia de Materiales y Nanotecnología",
+        "color": "#14b8a6",
+        "score": 53
+      }
+    ],
+    "rama_principal": "Instrumentación, Automatización y Metrología",
+    "color_principal": "#10b981",
+    "clave_principal": "instrumentacion_metrologia",
+    "afinidad": "Alta Afinidad Pénsum",
+    "es_exclusiva_fisica": false,
+    "programa_inclusion_genero": false,
+    "convocatoria_exclusiva_mujeres": false,
+    "es_cierre_inminente": false,
+    "es_practica": true,
+    "score_pensum": 58,
+    "empresa_objetivo": false,
+    "mision": "Descripción de la oferta A convenir Contrato de aprendizaje Tiempo Completo Empresa agroindustrial ubicada en Salgar, en el suroeste antioqueño, requiere aprendiz ingeniero de proyectos para acompañar la ejecución de proyectos de infraestructura y equipos, apoyar la planificación y seguimiento de actividades de ingeniería, y contribuir al control de recursos y procesos, garantizando la correcta ej",
+    "tareas": "Levantamiento de curvas de calibración, programación en LabVIEW, enlace con autómatas PLC y aseguramiento metrológico ISO 17025.",
+    "_tareas_generadas": true,
+    "_sello": "f9266e3ce750",
+    "estado_vigencia": "No reapareció en esta búsqueda; revisar vigencia en la fuente"
   },
   {
     "titulo": "Aprendices",
@@ -10253,6 +10092,42 @@
     "_sello": "7a8eb6aae032"
   },
   {
+    "titulo": "Aprendiz profesional Ingenieria de Sotfware",
+    "empresa": "RÉDITOS EMPRESARIALES S.A",
+    "ubicacion": "Medellín, Antioquia",
+    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-aprendiz-profesional-ingenieria-de-sotfware-en-medellin-FF4FE57D8C4CEEDB61373E686DCF3405",
+    "fecha_publicacion": "Reciente",
+    "fuente": "Computrabajo",
+    "encontrada_ultima_corrida": true,
+    "ultima_deteccion": "2026-10-31",
+    "primera_deteccion": "2026-10-24",
+    "descripcion_fuente": "Descripción de la oferta $ 1.750.905,00 (Mensual) Contrato de aprendizaje Tiempo Completo ¡Únete a Grupo Réditos! En Grupo Réditos valoramos el talento humano y promovemos una cultura organizacional basada en la calidad, la transparencia y el servicio oportuno. Buscamos personas recursivas, proactivas y apasionadas por servir con excelencia. Actualmente estamos en la búsqueda de practicantes en el programa Ingenieria de Software o afines que estén habilitados para iniciar su etapa productiva. ¿Qué ofrecemos? Tipo de contrato: Contrato de aprendizaje Horario: Lunes a Viernes 7:00 a.m. 5:00 p.m. Apoyo económico: $1.750.905 Ubicación: Medellín Requisitos: Estar habilitados para iniciar la etapa productiva No haber firmado contrato de aprendizaje anteriormente Vivir en Medellín o alrededores Si cumples con estos requisitos y quieres hacer parte de una organización que apuesta por el desarrollo humano y profesional, ¡te estamos esperando! Requerimientos Educación mínima: Universidad / Carrera Profesional años de experiencia Palabras clave: apprentice, internship, traine, experto, profesional, professional, expert, engeneering, ingenieria Ayer (actualizada) Aplicar Postulado Avísame con ofertas similares Denunciar empleo Gracias por ayudarnos a mejorar Computrabajo Nos",
+    "estado_vigencia": "No reapareció en esta búsqueda; revisar vigencia en la fuente",
+    "ramas": [
+      {
+        "clave": "general",
+        "nombre": "Ingeniería General / Operaciones",
+        "color": "#64748b",
+        "score": 5
+      }
+    ],
+    "rama_principal": "Ingeniería General / Operaciones",
+    "color_principal": "#64748b",
+    "clave_principal": "general",
+    "afinidad": "General",
+    "es_exclusiva_fisica": false,
+    "programa_inclusion_genero": false,
+    "convocatoria_exclusiva_mujeres": false,
+    "es_cierre_inminente": false,
+    "es_practica": true,
+    "score_pensum": 0,
+    "empresa_objetivo": false,
+    "mision": "Descripción de la oferta $ 1.750.905,00 (Mensual) Contrato de aprendizaje Tiempo Completo ¡Únete a Grupo Réditos! En Grupo Réditos valoramos el talento humano y promovemos una cultura organizacional basada en la calidad, la transparencia y el servicio oportuno. Buscamos personas recursivas, proactivas y apasionadas por servir con excelencia. Actualmente estamos en la búsqueda de practicantes en el",
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
+    "_tareas_generadas": true,
+    "_sello": "1185e7f9189a"
+  },
+  {
     "titulo": "Aprendiz Mantenimiento",
     "empresa": "GRUPO BIOS S.A.S",
     "ubicacion": "Barbosa, Antioquia",
@@ -10322,42 +10197,6 @@
     "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
     "_tareas_generadas": true,
     "_sello": "9feac33abc4d"
-  },
-  {
-    "titulo": "Aprendiz profesional Ingenieria de Sotfware",
-    "empresa": "RÉDITOS EMPRESARIALES S.A",
-    "ubicacion": "Medellín, Antioquia",
-    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-aprendiz-profesional-ingenieria-de-sotfware-en-medellin-FF4FE57D8C4CEEDB61373E686DCF3405",
-    "fecha_publicacion": "Reciente",
-    "fuente": "Computrabajo",
-    "encontrada_ultima_corrida": true,
-    "ultima_deteccion": "2026-10-31",
-    "primera_deteccion": "2026-10-24",
-    "descripcion_fuente": "Descripción de la oferta $ 1.750.905,00 (Mensual) Contrato de aprendizaje Tiempo Completo ¡Únete a Grupo Réditos! En Grupo Réditos valoramos el talento humano y promovemos una cultura organizacional basada en la calidad, la transparencia y el servicio oportuno. Buscamos personas recursivas, proactivas y apasionadas por servir con excelencia. Actualmente estamos en la búsqueda de practicantes en el programa Ingenieria de Software o afines que estén habilitados para iniciar su etapa productiva. ¿Qué ofrecemos? Tipo de contrato: Contrato de aprendizaje Horario: Lunes a Viernes 7:00 a.m. 5:00 p.m. Apoyo económico: $1.750.905 Ubicación: Medellín Requisitos: Estar habilitados para iniciar la etapa productiva No haber firmado contrato de aprendizaje anteriormente Vivir en Medellín o alrededores Si cumples con estos requisitos y quieres hacer parte de una organización que apuesta por el desarrollo humano y profesional, ¡te estamos esperando! Requerimientos Educación mínima: Universidad / Carrera Profesional años de experiencia Palabras clave: apprentice, internship, traine, experto, profesional, professional, expert, engeneering, ingenieria Ayer (actualizada) Aplicar Postulado Avísame con ofertas similares Denunciar empleo Gracias por ayudarnos a mejorar Computrabajo Nos",
-    "estado_vigencia": "No reapareció en esta búsqueda; revisar vigencia en la fuente",
-    "ramas": [
-      {
-        "clave": "general",
-        "nombre": "Ingeniería General / Operaciones",
-        "color": "#64748b",
-        "score": 5
-      }
-    ],
-    "rama_principal": "Ingeniería General / Operaciones",
-    "color_principal": "#64748b",
-    "clave_principal": "general",
-    "afinidad": "General",
-    "es_exclusiva_fisica": false,
-    "programa_inclusion_genero": false,
-    "convocatoria_exclusiva_mujeres": false,
-    "es_cierre_inminente": false,
-    "es_practica": true,
-    "score_pensum": 0,
-    "empresa_objetivo": false,
-    "mision": "Descripción de la oferta $ 1.750.905,00 (Mensual) Contrato de aprendizaje Tiempo Completo ¡Únete a Grupo Réditos! En Grupo Réditos valoramos el talento humano y promovemos una cultura organizacional basada en la calidad, la transparencia y el servicio oportuno. Buscamos personas recursivas, proactivas y apasionadas por servir con excelencia. Actualmente estamos en la búsqueda de practicantes en el",
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
-    "_tareas_generadas": true,
-    "_sello": "1185e7f9189a"
   },
   {
     "titulo": "Estudiante en Práctica - Mejora de Procesos",

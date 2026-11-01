@@ -2728,7 +2728,7 @@
     "fuente": "LinkedIn Jobs",
     "linkedin_id": "4480350846",
     "search_scope": "COLOMBIA",
-    "encontrada_ultima_corrida": true,
+    "encontrada_ultima_corrida": false,
     "ultima_deteccion": "2026-11-01",
     "primera_deteccion": "2026-10-24",
     "descripcion_fuente": "🚀 ¡Únete a Generación Makro 2027-1 y potencia tu futuro en Analítica de Datos! ¿Estás listo para dar el primer paso en tu carrera profesional dentro del mundo del análisis de datos? En Makro creemos en el talento que transforma y queremos acompañarte en esta experiencia donde podrás convertir los datos en decisiones estratégicas reales. 📊 ¿Qué harás en esta práctica? ✔ Aprenderás de la mano de expertos en analítica. ✔ Participarás en la extracción, transformación y análisis de datos clave para el negocio. ✔ Generarás reportes e insights que impactarán directamente nuestras operaciones y procesos. ✔ Desarrollarás habilidades en herramientas de datos, visualización e indicadores operativos. ✔ Harás parte de una cultura que impulsa el aprendizaje continuo, la innovación y el pensamiento analítico. 🎯 ¿Qué necesitas para aplicar? ✅ Ser estudiante de último o penúltimo semestre de tu carrera (Ingeniería de Sistemas, Ingeniería Industrial, Estadística, Economía, Matemáticas o afines). ✅ Contar con conocimientos en SQL, Python o R y Power BI. ✅ Contar con el aval de tu universidad para realizar prácticas en el semestre 2027-1 ✅ Tener disponibilidad para realizar las prácticas en Bogotá. ✅ ¡Ganas de aprender, analizar, proponer y generar valor a través de los datos! ❌ No haber tenido contrato de aprendizaje SENA anteriormente. ✨ Lo que ofrecemos 🚀 Práctica remunerada con un modelo híbrido y horarios flexibles. 📚 Contrato de aprendizaje. 📊 Un entorno diseñado para tu desarrollo técnico y profesional en analítica. 💼 Oportunidad de continuar tu carrera con nosotros al finalizar tus prácticas. 📩 ¿Te interesa? Postúlate y da el primer paso hacia una experiencia donde los datos se convierten en oportunidades reales de crecimiento.",
@@ -3575,96 +3575,6 @@
     "_sello": "d68ce5691ef8"
   },
   {
-    "titulo": "Trainee de Sistemas",
-    "empresa": "Holcim ADC",
-    "ubicacion": "Medellín, Antioquia, Colombia",
-    "url": "https://co.linkedin.com/jobs/view/trainee-de-sistemas-at-holcim-adc-4479235552",
-    "fecha_publicacion": "2026-10-14",
-    "fuente": "LinkedIn Jobs",
-    "linkedin_id": "4479235552",
-    "encontrada_ultima_corrida": true,
-    "ultima_deteccion": "2026-11-01",
-    "primera_deteccion": "2026-10-28",
-    "descripcion_fuente": "Location: Medellín, Antioquia, CO, 050010 CO Requisition ID: 19662 About Holcim Holcim builds progress for people and the planet. As a global leader in innovative and sustainable building solutions, Holcim is enabling greener cities, smarter infrastructure and improving living standards around the world. With sustainability at the core of its strategy Holcim is becoming a net zero company, with its people and communities at the heart of its success. The company is driving the circular economy as a world leader in recycling to build more with less. Holcim is the company behind some of the world’s most trusted brands in the building sector including ACC, Aggregate Industries, Disensa, Firestone Building Products, Geocycle, Holcim and Lafarge. Holcim is 70,000 people around the world who are passionate about building progress for people and the planet through four business segments: Cement, Ready-Mix Concrete, Aggregates and Solutions & Products. Americas Digital Center (ADC) is one of Holcim’s three global hubs driving digital transformation. As a strategic ally within our Global IT organization, our team of 400+ professionals enables global operations through expertise in Data Analytics, Cloud Computing, and Global Vendor Management. We are part of Holcim, the world leader in sustainable building solutions. Together with 45,000 colleagues worldwide, we are on a mission to decarbonize construction and improve living standards through innovation. As a certified Top Employer, we offer an exceptional environment where visionary talent thrives. We look for disruptive thinkers ready to embrace new challenges and shape the future of technology in a culture of continuous growth. En Holcim buscamos un Trainee de Sistemas, apasionado por la tecnología, el análisis de datos y la resolución de problemas. En este rol brindarás soporte al área de Sistemas en la configuración funcional de la herramienta, documentación de procesos y actualización de tablas operativas para diferentes países. Es una excelente oportunidad para iniciar tu carrera profesional aprendiendo la lógica interna de una de las plataformas empresariales más importantes del mundo. Principales Responsabilidades Análisis de Incidentes: Revisar incidentes recurrentes para identificar causas comunes y proponer mejoras que ayuden a prevenirlos. Gestión de Incidentes: Apoyar en la recepción, análisis inicial y seguimiento de incidentes reportados por los usuarios. Desarrollo de Soluciones: Brindar apoyo en el ",
-    "tipo_empleo": "Jornada completa",
-    "estado_vigencia": "Aviso abierto en LinkedIn al momento del rastreo",
-    "ramas": [
-      {
-        "clave": "simulaciones_datos_ia",
-        "nombre": "Análisis de Datos, IA y Simulaciones",
-        "color": "#06b6d4",
-        "score": 69
-      },
-      {
-        "clave": "electronica_digital_iot",
-        "nombre": "Electrónica Digital, Microcontroladores e IoT",
-        "color": "#3b82f6",
-        "score": 58
-      }
-    ],
-    "rama_principal": "Análisis de Datos, IA y Simulaciones",
-    "color_principal": "#06b6d4",
-    "clave_principal": "simulaciones_datos_ia",
-    "afinidad": "Alta Afinidad Pénsum",
-    "es_exclusiva_fisica": false,
-    "programa_inclusion_genero": false,
-    "convocatoria_exclusiva_mujeres": false,
-    "es_cierre_inminente": false,
-    "es_practica": true,
-    "score_pensum": 84,
-    "empresa_objetivo": true,
-    "mision": "Location: Medellín, Antioquia, CO, 050010 CO Requisition ID: 19662 About Holcim Holcim builds progress for people and the planet. As a global leader in innovative and sustainable building solutions, Holcim is enabling greener cities, smarter infrastructure and improving living standards around the world. With sustainability at the core of its strategy Holcim is becoming a net zero company, with it",
-    "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables.",
-    "_tareas_generadas": true,
-    "_sello": "df09f6d8f10a"
-  },
-  {
-    "titulo": "Trainee",
-    "empresa": "SONDA",
-    "ubicacion": "Bogotá, Distrito Capital, Colombia · remoto o híbrido (confirmar en el aviso)",
-    "url": "https://co.linkedin.com/jobs/view/trainee-at-sonda-4431165703",
-    "fecha_publicacion": "2026-06-24",
-    "fuente": "LinkedIn Jobs",
-    "linkedin_id": "4431165703",
-    "search_scope": "COLOMBIA",
-    "encontrada_ultima_corrida": true,
-    "ultima_deteccion": "2026-11-01",
-    "primera_deteccion": "2026-10-24",
-    "descripcion_fuente": "Id de solicitud de puesto: 80134 Vive la experiencia SONDA ¡Aquí transformas tu carrera! ¿Por qué ser parte de SONDA? Porque al igual que tú, amamos lo que hacemos, tenemos pasión por la innovación y estamos convencidos de que a través del conocimiento y de la tecnología no solo vamos a transformar los negocios de nuestros clientes, sino también el futuro. En SONDA vivirás una experiencia de trabajo con diversas oportunidades de desarrollo personal y profesional. Un excelente lugar para aprender y contribuir a mejorar la calidad de vida de las personas por medio de la tecnología. Buscamos a Practicante de Ingenieria que quieran aprender y transformar su carrera. En esta función tendrás que: Realizar prácticas profesionales en áreas como ciberseguridad, desarrollo de software, gestión y operación de centros de datos (Data Center), así como en roles financieros con enfoque tecnológico y de preventa de soluciones tecnológicas. Ideal si cuentas con: Estudiantes de Ingeniería de Sistemas, Ingeniería Telemática, Ingeniería de Telecomunicaciones e Ingeniería Industrial de universidades como la Universidad Nacional de Colombia, la Universidad Distrital Francisco José de Caldas, la Universidad de La Sabana, la Universidad de los Andes, la Pontificia Universidad Javeriana, entre otras. Y mucho mejor si destacas por: Nivel B2 de ingles Horario: Lunes a Viernes de 8:00 a.m. a 5:00 p.m. Contrato: Aprendizaje tipo SENA (Termino Fijo) Modalidad: Hibrido",
-    "tipo_empleo": "Jornada completa",
-    "alcance_geografico": "Fuera de Antioquia; remoto o híbrido según el aviso",
-    "estado_vigencia": "Aviso abierto en LinkedIn al momento del rastreo",
-    "ramas": [
-      {
-        "clave": "simulaciones_datos_ia",
-        "nombre": "Análisis de Datos, IA y Simulaciones",
-        "color": "#06b6d4",
-        "score": 69
-      },
-      {
-        "clave": "optica_vision_artificial",
-        "nombre": "Óptica, Fotónica y Visión Artificial",
-        "color": "#a855f7",
-        "score": 59
-      }
-    ],
-    "rama_principal": "Análisis de Datos, IA y Simulaciones",
-    "color_principal": "#06b6d4",
-    "clave_principal": "simulaciones_datos_ia",
-    "afinidad": "Alta Afinidad Pénsum",
-    "es_exclusiva_fisica": false,
-    "programa_inclusion_genero": false,
-    "convocatoria_exclusiva_mujeres": false,
-    "es_cierre_inminente": false,
-    "es_practica": true,
-    "score_pensum": 84,
-    "empresa_objetivo": true,
-    "mision": "Id de solicitud de puesto: 80134 Vive la experiencia SONDA ¡Aquí transformas tu carrera! ¿Por qué ser parte de SONDA? Porque al igual que tú, amamos lo que hacemos, tenemos pasión por la innovación y estamos convencidos de que a través del conocimiento y de la tecnología no solo vamos a transformar los negocios de nuestros clientes, sino también el futuro. En SONDA vivirás una experiencia de traba",
-    "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables.",
-    "_tareas_generadas": true,
-    "_sello": "25f6ba6e22fe"
-  },
-  {
     "titulo": "Prácticas profesionales TI - Digital Core",
     "empresa": "Accenture Colombia",
     "ubicacion": "Bogotá, Distrito Capital, Colombia · remoto o híbrido (confirmar en el aviso)",
@@ -3775,6 +3685,96 @@
     "_sello": "dd72e8b42d72"
   },
   {
+    "titulo": "Trainee de Sistemas",
+    "empresa": "Holcim ADC",
+    "ubicacion": "Medellín, Antioquia, Colombia",
+    "url": "https://co.linkedin.com/jobs/view/trainee-de-sistemas-at-holcim-adc-4479235552",
+    "fecha_publicacion": "2026-10-14",
+    "fuente": "LinkedIn Jobs",
+    "linkedin_id": "4479235552",
+    "encontrada_ultima_corrida": false,
+    "ultima_deteccion": "2026-11-01",
+    "primera_deteccion": "2026-10-28",
+    "descripcion_fuente": "Location: Medellín, Antioquia, CO, 050010 CO Requisition ID: 19662 About Holcim Holcim builds progress for people and the planet. As a global leader in innovative and sustainable building solutions, Holcim is enabling greener cities, smarter infrastructure and improving living standards around the world. With sustainability at the core of its strategy Holcim is becoming a net zero company, with its people and communities at the heart of its success. The company is driving the circular economy as a world leader in recycling to build more with less. Holcim is the company behind some of the world’s most trusted brands in the building sector including ACC, Aggregate Industries, Disensa, Firestone Building Products, Geocycle, Holcim and Lafarge. Holcim is 70,000 people around the world who are passionate about building progress for people and the planet through four business segments: Cement, Ready-Mix Concrete, Aggregates and Solutions & Products. Americas Digital Center (ADC) is one of Holcim’s three global hubs driving digital transformation. As a strategic ally within our Global IT organization, our team of 400+ professionals enables global operations through expertise in Data Analytics, Cloud Computing, and Global Vendor Management. We are part of Holcim, the world leader in sustainable building solutions. Together with 45,000 colleagues worldwide, we are on a mission to decarbonize construction and improve living standards through innovation. As a certified Top Employer, we offer an exceptional environment where visionary talent thrives. We look for disruptive thinkers ready to embrace new challenges and shape the future of technology in a culture of continuous growth. En Holcim buscamos un Trainee de Sistemas, apasionado por la tecnología, el análisis de datos y la resolución de problemas. En este rol brindarás soporte al área de Sistemas en la configuración funcional de la herramienta, documentación de procesos y actualización de tablas operativas para diferentes países. Es una excelente oportunidad para iniciar tu carrera profesional aprendiendo la lógica interna de una de las plataformas empresariales más importantes del mundo. Principales Responsabilidades Análisis de Incidentes: Revisar incidentes recurrentes para identificar causas comunes y proponer mejoras que ayuden a prevenirlos. Gestión de Incidentes: Apoyar en la recepción, análisis inicial y seguimiento de incidentes reportados por los usuarios. Desarrollo de Soluciones: Brindar apoyo en el ",
+    "tipo_empleo": "Jornada completa",
+    "estado_vigencia": "Aviso abierto en LinkedIn al momento del rastreo",
+    "ramas": [
+      {
+        "clave": "simulaciones_datos_ia",
+        "nombre": "Análisis de Datos, IA y Simulaciones",
+        "color": "#06b6d4",
+        "score": 69
+      },
+      {
+        "clave": "electronica_digital_iot",
+        "nombre": "Electrónica Digital, Microcontroladores e IoT",
+        "color": "#3b82f6",
+        "score": 58
+      }
+    ],
+    "rama_principal": "Análisis de Datos, IA y Simulaciones",
+    "color_principal": "#06b6d4",
+    "clave_principal": "simulaciones_datos_ia",
+    "afinidad": "Alta Afinidad Pénsum",
+    "es_exclusiva_fisica": false,
+    "programa_inclusion_genero": false,
+    "convocatoria_exclusiva_mujeres": false,
+    "es_cierre_inminente": false,
+    "es_practica": true,
+    "score_pensum": 84,
+    "empresa_objetivo": true,
+    "mision": "Location: Medellín, Antioquia, CO, 050010 CO Requisition ID: 19662 About Holcim Holcim builds progress for people and the planet. As a global leader in innovative and sustainable building solutions, Holcim is enabling greener cities, smarter infrastructure and improving living standards around the world. With sustainability at the core of its strategy Holcim is becoming a net zero company, with it",
+    "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables.",
+    "_tareas_generadas": true,
+    "_sello": "df09f6d8f10a"
+  },
+  {
+    "titulo": "Trainee",
+    "empresa": "SONDA",
+    "ubicacion": "Bogotá, Distrito Capital, Colombia · remoto o híbrido (confirmar en el aviso)",
+    "url": "https://co.linkedin.com/jobs/view/trainee-at-sonda-4431165703",
+    "fecha_publicacion": "2026-06-24",
+    "fuente": "LinkedIn Jobs",
+    "linkedin_id": "4431165703",
+    "search_scope": "COLOMBIA",
+    "encontrada_ultima_corrida": false,
+    "ultima_deteccion": "2026-11-01",
+    "primera_deteccion": "2026-10-24",
+    "descripcion_fuente": "Id de solicitud de puesto: 80134 Vive la experiencia SONDA ¡Aquí transformas tu carrera! ¿Por qué ser parte de SONDA? Porque al igual que tú, amamos lo que hacemos, tenemos pasión por la innovación y estamos convencidos de que a través del conocimiento y de la tecnología no solo vamos a transformar los negocios de nuestros clientes, sino también el futuro. En SONDA vivirás una experiencia de trabajo con diversas oportunidades de desarrollo personal y profesional. Un excelente lugar para aprender y contribuir a mejorar la calidad de vida de las personas por medio de la tecnología. Buscamos a Practicante de Ingenieria que quieran aprender y transformar su carrera. En esta función tendrás que: Realizar prácticas profesionales en áreas como ciberseguridad, desarrollo de software, gestión y operación de centros de datos (Data Center), así como en roles financieros con enfoque tecnológico y de preventa de soluciones tecnológicas. Ideal si cuentas con: Estudiantes de Ingeniería de Sistemas, Ingeniería Telemática, Ingeniería de Telecomunicaciones e Ingeniería Industrial de universidades como la Universidad Nacional de Colombia, la Universidad Distrital Francisco José de Caldas, la Universidad de La Sabana, la Universidad de los Andes, la Pontificia Universidad Javeriana, entre otras. Y mucho mejor si destacas por: Nivel B2 de ingles Horario: Lunes a Viernes de 8:00 a.m. a 5:00 p.m. Contrato: Aprendizaje tipo SENA (Termino Fijo) Modalidad: Hibrido",
+    "tipo_empleo": "Jornada completa",
+    "alcance_geografico": "Fuera de Antioquia; remoto o híbrido según el aviso",
+    "estado_vigencia": "Aviso abierto en LinkedIn al momento del rastreo",
+    "ramas": [
+      {
+        "clave": "simulaciones_datos_ia",
+        "nombre": "Análisis de Datos, IA y Simulaciones",
+        "color": "#06b6d4",
+        "score": 69
+      },
+      {
+        "clave": "optica_vision_artificial",
+        "nombre": "Óptica, Fotónica y Visión Artificial",
+        "color": "#a855f7",
+        "score": 59
+      }
+    ],
+    "rama_principal": "Análisis de Datos, IA y Simulaciones",
+    "color_principal": "#06b6d4",
+    "clave_principal": "simulaciones_datos_ia",
+    "afinidad": "Alta Afinidad Pénsum",
+    "es_exclusiva_fisica": false,
+    "programa_inclusion_genero": false,
+    "convocatoria_exclusiva_mujeres": false,
+    "es_cierre_inminente": false,
+    "es_practica": true,
+    "score_pensum": 84,
+    "empresa_objetivo": true,
+    "mision": "Id de solicitud de puesto: 80134 Vive la experiencia SONDA ¡Aquí transformas tu carrera! ¿Por qué ser parte de SONDA? Porque al igual que tú, amamos lo que hacemos, tenemos pasión por la innovación y estamos convencidos de que a través del conocimiento y de la tecnología no solo vamos a transformar los negocios de nuestros clientes, sino también el futuro. En SONDA vivirás una experiencia de traba",
+    "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables.",
+    "_tareas_generadas": true,
+    "_sello": "25f6ba6e22fe"
+  },
+  {
     "titulo": "Convocatoria talento B Bancolombia 2027-1",
     "empresa": "talento B Bancolombia",
     "ubicacion": "Medellín, Antioquia (convocatoria institucional)",
@@ -3782,7 +3782,7 @@
     "fecha_publicacion": "2026-10-27",
     "fuente": "Convocatoria institucional · Prácticas UdeA (Sistemas y Telecomunicaciones)",
     "perfil": "Carreras mencionadas: ciencia de datos",
-    "descripcion_fuente": "Desde Bancolombia nos comparten la convocatoria de Talento B 2027-1, el programa de primer empleo de Bancolombia: En esta nueva era, soñamos con conectar con jóvenes que estén finalizando su carrera o cuenten con menos de dos años de experiencia profesional y quieran crecer en ciencia de datos, tecnología, diseño de experiencias o ciberseguridad. Queremos llegar a personas curiosas, propositivas y con ganas de aprender; jóvenes que hayan explorado sus intereses a través de grupos de investigación, proyectos académicos, iniciativas estudiantiles u otras experiencias. Sabemos que desde las universidades acompañan talentos con mucho por aportar, por eso queremos hacer equipo para acercarles una oportunidad donde puedan aprender, conectar, asumir retos reales y descubrir todo su potencial. Para participar en la convocatoria, recuerde que usted debe cumplir los requisitos de tener aprobados al menos 160/140 créditos del programa – según versión de pensum (y aprobar Proyecto Integrador para Telecomunicaciones) para participar en la convocatoria. Usted puede solicitar la carta de intención de prácticas para comunicarle a la empresa que cumple con estos requisitos. NOTA: Como requisito de práctica es importante que se desarrolle un proyecto de ingeniería dentro de la empresa. Se recomienda entonces que antes de comenzar cualquier práctica, el estudiante pregunte cuál es la necesidad de la empresa ( ) que entraría a resolver. Queda a decisión del estudiante si tomar la práctica o no. __ATA = window.__ATA || {}; __ATA.cmd = window.__ATA.cmd || []; __ATA.cmd.push(function() { __ATA.initVideoSlot('atatags-370373-6ae621ffe1312', { sectionId: '370373', format: 'inread' }); }); <div id=\"jp-post-flair\"",
+    "descripcion_fuente": "Desde Bancolombia nos comparten la convocatoria de Talento B 2027-1, el programa de primer empleo de Bancolombia: En esta nueva era, soñamos con conectar con jóvenes que estén finalizando su carrera o cuenten con menos de dos años de experiencia profesional y quieran crecer en ciencia de datos, tecnología, diseño de experiencias o ciberseguridad. Queremos llegar a personas curiosas, propositivas y con ganas de aprender; jóvenes que hayan explorado sus intereses a través de grupos de investigación, proyectos académicos, iniciativas estudiantiles u otras experiencias. Sabemos que desde las universidades acompañan talentos con mucho por aportar, por eso queremos hacer equipo para acercarles una oportunidad donde puedan aprender, conectar, asumir retos reales y descubrir todo su potencial. Para participar en la convocatoria, recuerde que usted debe cumplir los requisitos de tener aprobados al menos 160/140 créditos del programa – según versión de pensum (y aprobar Proyecto Integrador para Telecomunicaciones) para participar en la convocatoria. Usted puede solicitar la carta de intención de prácticas para comunicarle a la empresa que cumple con estos requisitos. NOTA: Como requisito de práctica es importante que se desarrolle un proyecto de ingeniería dentro de la empresa. Se recomienda entonces que antes de comenzar cualquier práctica, el estudiante pregunte cuál es la necesidad de la empresa ( ) que entraría a resolver. Queda a decisión del estudiante si tomar la práctica o no. __ATA = window.__ATA || {}; __ATA.cmd = window.__ATA.cmd || []; __ATA.cmd.push(function() { __ATA.initVideoSlot('atatags-370373-6ae4db208065a', { sectionId: '370373', format: 'inread' }); }); <div id=\"jp-post-flair\"",
     "tipo_empleo": "Práctica",
     "curada": true,
     "encontrada_ultima_corrida": true,
@@ -4327,7 +4327,7 @@
     "primera_deteccion": "2026-10-28",
     "descripcion_fuente": "Practicante Eléctrico/ Electrónico/Electromecánico en TRONEX INDUSTRIAL Funciones Participar en el mantenimiento y reparación de equipos eléctricos y electrónicos. Asistir en la instalación de nuevos sistemas electromecánicos. Realizar pruebas y diagnósticos de equipos en funcionamiento. Colaborar con el equipo técnico en proyectos de mejora continua.",
     "tipo_empleo": "Jornada completa",
-    "estado_vigencia": "Aviso abierto en LinkedIn al momento del rastreo",
+    "estado_vigencia": "No reapareció en esta búsqueda; revisar vigencia en la fuente",
     "ramas": [
       {
         "clave": "instrumentacion_metrologia",
@@ -4631,62 +4631,6 @@
     "titulo": "Intern",
     "empresa": "PRGX Global Inc.",
     "ubicacion": "Medellín, Antioquia, Colombia",
-    "url": "https://co.linkedin.com/jobs/view/intern-at-prgx-global-inc-4476956633",
-    "fecha_publicacion": "2026-10-07",
-    "fuente": "LinkedIn Jobs",
-    "linkedin_id": "4476956633",
-    "encontrada_ultima_corrida": true,
-    "ultima_deteccion": "2026-11-01",
-    "primera_deteccion": "2026-10-28",
-    "descripcion_fuente": "Título de la vacante Aprendiz SENA Tipo de Empleo: Tiempo Completo Requerimientos para Trabajar: La persona debe contar con autorización para trabajar en Colombia sin necesidad de patrocinio Requerimientos de Idioma Español Sobre PRGX PRGX es líder mundial en análisis de datos y software de gestión de la fuente al pago, así como en servicios tecnológicos de recuperación de beneficios. Ofrecemos software y servicios para maximizar la recuperación de ingresos e impulsar la mejora de los márgenes de nuestros clientes. Para más información sobre PRGX, visite www.prgx.com. Descripción del Rol Buscamos un estudiante con interés en la tecnología y la gestión administrativa, que desee aprender y aportar en proyectos de automatización de procesos dentro del área de Operaciones. El rol está orientado al apoyo en tareas administrativas, de análisis básico y documentación, participando en iniciativas de mejora continua que promuevan la eficiencia en el día a día del equipo. Responsabilidades Apoyar en la documentación y mapeo de procesos operativos. Colaborar en la recopilación, ordenamiento y análisis de datos básicos para identificar oportunidades de mejora. Elaborar reportes en Excel/Power BI para seguimiento de indicadores y avances de proyectos. Dar soporte administrativo en la coordinación de actividades, control de cronogramas y minutas de reuniones. Participar en la preparación de presentaciones e informes para el equipo de operaciones. Brindar apoyo en la organización de la información en las plataformas internas. Contribuir en iniciativas de automatización apoyando en pruebas, seguimiento y documentación de resultados. R equisitos Aprendiz de Tecnología de Sistemas, Análisis de Datos o áreas relacionadas. Conocimientos en Excel y nociones de herramientas de automatización o programación (Python, Power BI, SQL o similares). Familiaridad con herramientas de IA o interés en aprender sobre ellas. Habilidad analítica y pensamiento lógico. Proactividad, curiosidad tecnológica y capacidad de trabajo en equipo. Muchas ganas de aprender Inglés básico/intermedio (opcional). Nuestro compromiso con igualdad de oportunidades PRGX es un empleador que ofrece igualdad de oportunidades. Cumplimos con todas las leyes locales, nacionales e internacionales aplicables en materia de no discriminación e igualdad de oportunidades laborales. No discriminamos por ninguna característica legalmente protegida y nos comprometemos a promover un entorno laboral inclusivo, respetuoso y equi",
-    "tipo_empleo": "Prácticas",
-    "estado_vigencia": "Aviso abierto en LinkedIn al momento del rastreo",
-    "ramas": [
-      {
-        "clave": "simulaciones_datos_ia",
-        "nombre": "Análisis de Datos, IA y Simulaciones",
-        "color": "#06b6d4",
-        "score": 78
-      },
-      {
-        "clave": "instrumentacion_metrologia",
-        "nombre": "Instrumentación, Automatización y Metrología",
-        "color": "#10b981",
-        "score": 61
-      },
-      {
-        "clave": "electronica_analoga_circuitos",
-        "nombre": "Electrónica Análoga y Circuitos",
-        "color": "#8b5cf6",
-        "score": 53
-      },
-      {
-        "clave": "optica_vision_artificial",
-        "nombre": "Óptica, Fotónica y Visión Artificial",
-        "color": "#a855f7",
-        "score": 53
-      }
-    ],
-    "rama_principal": "Análisis de Datos, IA y Simulaciones",
-    "color_principal": "#06b6d4",
-    "clave_principal": "simulaciones_datos_ia",
-    "afinidad": "Alta Afinidad Pénsum",
-    "es_exclusiva_fisica": false,
-    "programa_inclusion_genero": false,
-    "convocatoria_exclusiva_mujeres": false,
-    "es_cierre_inminente": false,
-    "es_practica": true,
-    "score_pensum": 78,
-    "empresa_objetivo": false,
-    "mision": "Título de la vacante Aprendiz SENA Tipo de Empleo: Tiempo Completo Requerimientos para Trabajar: La persona debe contar con autorización para trabajar en Colombia sin necesidad de patrocinio Requerimientos de Idioma Español Sobre PRGX PRGX es líder mundial en análisis de datos y software de gestión de la fuente al pago, así como en servicios tecnológicos de recuperación de beneficios. Ofrecemos so",
-    "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables.",
-    "_tareas_generadas": true,
-    "_sello": "1a1a8189ef3e"
-  },
-  {
-    "titulo": "Intern",
-    "empresa": "PRGX Global Inc.",
-    "ubicacion": "Medellín, Antioquia, Colombia",
     "url": "https://co.linkedin.com/jobs/view/intern-at-prgx-global-inc-4477498632",
     "fecha_publicacion": "2026-10-08",
     "fuente": "LinkedIn Jobs",
@@ -4738,6 +4682,62 @@
     "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables.",
     "_tareas_generadas": true,
     "_sello": "7526d7e1fc1b"
+  },
+  {
+    "titulo": "Intern",
+    "empresa": "PRGX Global Inc.",
+    "ubicacion": "Medellín, Antioquia, Colombia",
+    "url": "https://co.linkedin.com/jobs/view/intern-at-prgx-global-inc-4476956633",
+    "fecha_publicacion": "2026-10-07",
+    "fuente": "LinkedIn Jobs",
+    "linkedin_id": "4476956633",
+    "encontrada_ultima_corrida": true,
+    "ultima_deteccion": "2026-11-01",
+    "primera_deteccion": "2026-10-28",
+    "descripcion_fuente": "Título de la vacante Aprendiz SENA Tipo de Empleo: Tiempo Completo Requerimientos para Trabajar: La persona debe contar con autorización para trabajar en Colombia sin necesidad de patrocinio Requerimientos de Idioma Español Sobre PRGX PRGX es líder mundial en análisis de datos y software de gestión de la fuente al pago, así como en servicios tecnológicos de recuperación de beneficios. Ofrecemos software y servicios para maximizar la recuperación de ingresos e impulsar la mejora de los márgenes de nuestros clientes. Para más información sobre PRGX, visite www.prgx.com. Descripción del Rol Buscamos un estudiante con interés en la tecnología y la gestión administrativa, que desee aprender y aportar en proyectos de automatización de procesos dentro del área de Operaciones. El rol está orientado al apoyo en tareas administrativas, de análisis básico y documentación, participando en iniciativas de mejora continua que promuevan la eficiencia en el día a día del equipo. Responsabilidades Apoyar en la documentación y mapeo de procesos operativos. Colaborar en la recopilación, ordenamiento y análisis de datos básicos para identificar oportunidades de mejora. Elaborar reportes en Excel/Power BI para seguimiento de indicadores y avances de proyectos. Dar soporte administrativo en la coordinación de actividades, control de cronogramas y minutas de reuniones. Participar en la preparación de presentaciones e informes para el equipo de operaciones. Brindar apoyo en la organización de la información en las plataformas internas. Contribuir en iniciativas de automatización apoyando en pruebas, seguimiento y documentación de resultados. R equisitos Aprendiz de Tecnología de Sistemas, Análisis de Datos o áreas relacionadas. Conocimientos en Excel y nociones de herramientas de automatización o programación (Python, Power BI, SQL o similares). Familiaridad con herramientas de IA o interés en aprender sobre ellas. Habilidad analítica y pensamiento lógico. Proactividad, curiosidad tecnológica y capacidad de trabajo en equipo. Muchas ganas de aprender Inglés básico/intermedio (opcional). Nuestro compromiso con igualdad de oportunidades PRGX es un empleador que ofrece igualdad de oportunidades. Cumplimos con todas las leyes locales, nacionales e internacionales aplicables en materia de no discriminación e igualdad de oportunidades laborales. No discriminamos por ninguna característica legalmente protegida y nos comprometemos a promover un entorno laboral inclusivo, respetuoso y equi",
+    "tipo_empleo": "Prácticas",
+    "estado_vigencia": "Aviso abierto en LinkedIn al momento del rastreo",
+    "ramas": [
+      {
+        "clave": "simulaciones_datos_ia",
+        "nombre": "Análisis de Datos, IA y Simulaciones",
+        "color": "#06b6d4",
+        "score": 78
+      },
+      {
+        "clave": "instrumentacion_metrologia",
+        "nombre": "Instrumentación, Automatización y Metrología",
+        "color": "#10b981",
+        "score": 61
+      },
+      {
+        "clave": "electronica_analoga_circuitos",
+        "nombre": "Electrónica Análoga y Circuitos",
+        "color": "#8b5cf6",
+        "score": 53
+      },
+      {
+        "clave": "optica_vision_artificial",
+        "nombre": "Óptica, Fotónica y Visión Artificial",
+        "color": "#a855f7",
+        "score": 53
+      }
+    ],
+    "rama_principal": "Análisis de Datos, IA y Simulaciones",
+    "color_principal": "#06b6d4",
+    "clave_principal": "simulaciones_datos_ia",
+    "afinidad": "Alta Afinidad Pénsum",
+    "es_exclusiva_fisica": false,
+    "programa_inclusion_genero": false,
+    "convocatoria_exclusiva_mujeres": false,
+    "es_cierre_inminente": false,
+    "es_practica": true,
+    "score_pensum": 78,
+    "empresa_objetivo": false,
+    "mision": "Título de la vacante Aprendiz SENA Tipo de Empleo: Tiempo Completo Requerimientos para Trabajar: La persona debe contar con autorización para trabajar en Colombia sin necesidad de patrocinio Requerimientos de Idioma Español Sobre PRGX PRGX es líder mundial en análisis de datos y software de gestión de la fuente al pago, así como en servicios tecnológicos de recuperación de beneficios. Ofrecemos so",
+    "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables.",
+    "_tareas_generadas": true,
+    "_sello": "1a1a8189ef3e"
   },
   {
     "titulo": "Python Trainee Developer - Remote Work | REF#284232",
@@ -5918,18 +5918,18 @@
     "titulo": "Data Project Analyst intern",
     "empresa": "Ededge Groups",
     "ubicacion": "Reino Unido · remoto internacional (elegibilidad por confirmar)",
-    "url": "https://uk.linkedin.com/jobs/view/data-project-analyst-intern-at-ededge-groups-4483632963",
-    "fecha_publicacion": "2026-10-27",
+    "url": "https://uk.linkedin.com/jobs/view/data-project-analyst-intern-at-ededge-groups-4485410688",
+    "fecha_publicacion": "2026-11-01",
     "fuente": "LinkedIn Jobs",
-    "linkedin_id": "4483632963",
+    "linkedin_id": "4485410688",
     "search_scope": "WORLDWIDE",
     "encontrada_ultima_corrida": true,
     "ultima_deteccion": "2026-11-01",
-    "primera_deteccion": "2026-10-28",
+    "primera_deteccion": "2026-11-01",
     "descripcion_fuente": "Company Description Ededge is a ground-breaking organization dedicated to nurturing the potential of our youth and empowering them to explore the vast world of technology and other high-growth fields. We have conducted numerous inspiring webinars that have reached an audience exceeding 100 individuals. Our upcoming initiatives will provide invaluable learning experiences by allowing audiences to gain insights from accomplished leaders, who will share not only their successes but also their journeys through failure. Despite our accomplishments, we remain dedicated to continuous growth, as our ultimate goal is to advance collectively as an organization and as a community. We elevate the industry of Ed-Tech by brining in the trainings in the specific fields along with the industry experience. Visit Our Website to know about us : www.ededgelearning.com Role Description This is a remote internship role for a Data Project Analyst Internship And Training Program. The role will involve day-to-day tasks related to data analytics, including data management, data analysis, data modeling, and developing analytical skills. The intern will have the opportunity to work on real-world data projects and gain practical experience in the field of data analytics. Resposibilities Work closely with our esteemed data science team to gather, refine, and analyze extensive datasets, refining skills in data preprocessing and visualization. Apply machine learning and data mining methods to derive insights from large datasets, including identifying Excel interface structures. Utilize Python programming for Exploratory Data Analysis (EDA) in practical business contexts, with a focus on risk analytics in banking and finance. Develop scientific tests and optimize model performance using cutting-edge modeling technologies such as no-code databases and data mining. Collaborate with a multidisciplinary team to construct machine learning pipelines for various applications in commerce, finance, and procurement. Engage with internal stakeholders to explore and comprehend business data, develop hypotheses, and evaluate strategies using techniques like T-tests. Address specific challenges and devise innovative solutions by leveraging modeling technologies such as bike share systems. Acquire and apply advanced analytical techniques using tools like Tableau. Create reports and presentations to effectively convey data analysis methodologies and findings. Qualifications Strong problem-solving and cri",
     "tipo_empleo": "Prácticas",
-    "alcance_geografico": "Remoto internacional; confirmar elegibilidad desde Colombia",
     "estado_vigencia": "Aviso abierto en LinkedIn al momento del rastreo",
+    "alcance_geografico": "Remoto internacional; confirmar elegibilidad desde Colombia",
     "ramas": [
       {
         "clave": "simulaciones_datos_ia",
@@ -5952,7 +5952,7 @@
     "mision": "Company Description Ededge is a ground-breaking organization dedicated to nurturing the potential of our youth and empowering them to explore the vast world of technology and other high-growth fields. We have conducted numerous inspiring webinars that have reached an audience exceeding 100 individuals. Our upcoming initiatives will provide invaluable learning experiences by allowing audiences to g",
     "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables.",
     "_tareas_generadas": true,
-    "_sello": "e8b8496c5fe9"
+    "_sello": "4efb180fa068"
   },
   {
     "titulo": "Data Analyst Intern",
@@ -5969,7 +5969,7 @@
     "descripcion_fuente": "Company Description Ededge Learning is a ground-breaking organization dedicated to nurturing the potential of our youth and empowering them to explore the vast world of technology and other high-growth fields. Our upcoming initiatives will provide invaluable learning experiences by allowing audiences to gain insights from accomplished leaders, who will share not only their successes but also their journeys through failure. Despite our accomplishments, we remain dedicated to continuous growth, as our ultimate goal is to advance collectively as an organization and as a community. We elevate the industry of Ed-Tech by bringing in the training in the specific fields along with the industry experience. Visit Our Website to know about us : www.ededgelearning.com Role Description This is a remote internship role for a Data Analyst Internship & Training Program. The role will involve day-to-day tasks related to data analytics, including data management, data analysis, data modelling, and developing analytical skills. The intern will have the opportunity to work on real-world data projects and gain practical experience in the field of data analytics. Responsibilities Work closely with our esteemed data science team to gather, refine, and analyse extensive datasets, refining skills in data pre-processing and visualization. Apply machine learning and data mining methods to derive insights from large datasets, including identifying Excel interface structures. Utilize Python programming for Exploratory Data Analysis (EDA) in practical business contexts, with a focus on risk analytics in banking and finance. Acquire and apply advanced analytical techniques using tools like Tableau. Create reports and presentations to effectively convey data analysis methodologies and findings. Qualifications Strong problem-solving and critical thinking abilities Currently pursuing any degree showcasing a strong commitment to continuous learning and professional growth. Excellent communication and teamwork skills Ability to work independently and remotely Location: Remote Note : This is an unpaid internship. Upon application, our team will contact you to proceed with the application details and joining process.",
     "tipo_empleo": "Prácticas",
     "alcance_geografico": "Remoto internacional; confirmar elegibilidad desde Colombia",
-    "estado_vigencia": "Aviso abierto en LinkedIn al momento del rastreo",
+    "estado_vigencia": "No reapareció en esta búsqueda; revisar vigencia en la fuente",
     "ramas": [
       {
         "clave": "simulaciones_datos_ia",
@@ -6284,76 +6284,6 @@
     "_sello": "9cf9d6fb982e"
   },
   {
-    "titulo": "Desarrollador de software junior| Recién Graduados y Estudiantes de Ingeniería",
-    "empresa": "Unisys",
-    "ubicacion": "Bogotá, Distrito Capital, Colombia · remoto o híbrido (confirmar en el aviso)",
-    "url": "https://co.linkedin.com/jobs/view/desarrollador-de-software-junior-reci%C3%A9n-graduados-y-estudiantes-de-ingenier%C3%ADa-at-unisys-4480067479",
-    "fecha_publicacion": "2026-10-22",
-    "fuente": "LinkedIn Jobs",
-    "linkedin_id": "4480067479",
-    "search_scope": "COLOMBIA",
-    "encontrada_ultima_corrida": true,
-    "ultima_deteccion": "2026-11-01",
-    "primera_deteccion": "2026-10-24",
-    "descripcion_fuente": "Developer Academy | Software Developer Trainee Descripción del rol ¿Te apasiona la tecnología, la innovación y el aprendizaje continuo? En Unisys buscamos estudiantes de últimos semestres y recién graduados que quieran acelerar su desarrollo profesional y construir una carrera en el mundo del desarrollo de software. Como Software Developer Trainee , formarás parte de nuestro programa Developer Academy , donde tendrás la oportunidad de aprender de expertos, participar en proyectos reales y desarrollar soluciones tecnológicas utilizando herramientas y tecnologías de vanguardia. Responsabilidades Participar en el diseño, desarrollo y mantenimiento de aplicaciones de software. Colaborar con equipos multidisciplinarios para crear soluciones innovadoras. Desarrollar y fortalecer conocimientos en tecnologías modernas de desarrollo. Aplicar buenas prácticas de programación, calidad y seguridad. Contribuir a iniciativas relacionadas con Inteligencia Artificial, automatización y transformación digital. Documentar desarrollos y participar en sesiones de aprendizaje y capacitación continua. Requisitos Estudiante de últimos semestres o recién graduado de Ingeniería de Sistemas, Informática, Electrónica o carreras afines. Conocimientos básicos en desarrollo de software. Familiaridad con tecnologías como Angular, .NET y Bases de Datos. Interés en Inteligencia Artificial y nuevas tecnologías. Capacidad para trabajar en equipo y comunicarse efectivamente. Actitud proactiva, orientación al aprendizaje y ganas de crecer profesionalmente. Lo que ofrecemos ✅ Contrato indefinido. ✅ Salario: $2.135.000 COP . ✅ Auxilio de internet: $140.000 COP . ✅ Medicina prepagada Colmédica. ✅ Seguro de vida 100% cubierto. ✅ Fondo de ahorro. ✅ Plataformas educativas y capacitación continua. ✅ Plan de carrera y oportunidades de crecimiento dentro de una compañía global. ✅ Modalidad remota o híbrida según tu ubicación. ¿Por qué unirte a Unisys? En Unisys creemos en el potencial del talento joven. Buscamos personas curiosas, innovadoras y comprometidas con su desarrollo profesional. Aquí encontrarás un entorno colaborativo, oportunidades de aprendizaje constante y la posibilidad de trabajar en proyectos que generan impacto real para clientes alrededor del mundo. 🚀 Tu carrera en tecnología comienza aquí. ¡Únete a Developer Academy y crece con nosotros!",
-    "tipo_empleo": "Jornada completa",
-    "alcance_geografico": "Fuera de Antioquia; remoto o híbrido según el aviso",
-    "estado_vigencia": "Aviso abierto en LinkedIn al momento del rastreo",
-    "ramas": [
-      {
-        "clave": "simulaciones_datos_ia",
-        "nombre": "Análisis de Datos, IA y Simulaciones",
-        "color": "#06b6d4",
-        "score": 69
-      },
-      {
-        "clave": "electronica_digital_iot",
-        "nombre": "Electrónica Digital, Microcontroladores e IoT",
-        "color": "#3b82f6",
-        "score": 61
-      },
-      {
-        "clave": "instrumentacion_metrologia",
-        "nombre": "Instrumentación, Automatización y Metrología",
-        "color": "#10b981",
-        "score": 61
-      },
-      {
-        "clave": "optica_vision_artificial",
-        "nombre": "Óptica, Fotónica y Visión Artificial",
-        "color": "#a855f7",
-        "score": 56
-      },
-      {
-        "clave": "electronica_analoga_circuitos",
-        "nombre": "Electrónica Análoga y Circuitos",
-        "color": "#8b5cf6",
-        "score": 53
-      },
-      {
-        "clave": "energia_potencia",
-        "nombre": "Energía, Potencia y Renovables",
-        "color": "#eab308",
-        "score": 48
-      }
-    ],
-    "rama_principal": "Análisis de Datos, IA y Simulaciones",
-    "color_principal": "#06b6d4",
-    "clave_principal": "simulaciones_datos_ia",
-    "afinidad": "Alta Afinidad Pénsum",
-    "es_exclusiva_fisica": false,
-    "programa_inclusion_genero": false,
-    "convocatoria_exclusiva_mujeres": false,
-    "es_cierre_inminente": false,
-    "es_practica": true,
-    "score_pensum": 69,
-    "empresa_objetivo": false,
-    "mision": "Developer Academy | Software Developer Trainee Descripción del rol ¿Te apasiona la tecnología, la innovación y el aprendizaje continuo? En Unisys buscamos estudiantes de últimos semestres y recién graduados que quieran acelerar su desarrollo profesional y construir una carrera en el mundo del desarrollo de software. Como Software Developer Trainee , formarás parte de nuestro programa Developer Aca",
-    "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables.",
-    "_tareas_generadas": true,
-    "_sello": "8c3b536b6d90"
-  },
-  {
     "titulo": "Software Engineer Intern",
     "empresa": "Sezzle",
     "ubicacion": "Bogotá, Distrito Capital, Colombia · remoto o híbrido (confirmar en el aviso)",
@@ -6456,6 +6386,76 @@
     "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables.",
     "_tareas_generadas": true,
     "_sello": "3f9fd33ef42e"
+  },
+  {
+    "titulo": "Desarrollador de software junior| Recién Graduados y Estudiantes de Ingeniería",
+    "empresa": "Unisys",
+    "ubicacion": "Bogotá, Distrito Capital, Colombia · remoto o híbrido (confirmar en el aviso)",
+    "url": "https://co.linkedin.com/jobs/view/desarrollador-de-software-junior-reci%C3%A9n-graduados-y-estudiantes-de-ingenier%C3%ADa-at-unisys-4480067479",
+    "fecha_publicacion": "2026-10-22",
+    "fuente": "LinkedIn Jobs",
+    "linkedin_id": "4480067479",
+    "search_scope": "COLOMBIA",
+    "encontrada_ultima_corrida": true,
+    "ultima_deteccion": "2026-11-01",
+    "primera_deteccion": "2026-10-24",
+    "descripcion_fuente": "Developer Academy | Software Developer Trainee Descripción del rol ¿Te apasiona la tecnología, la innovación y el aprendizaje continuo? En Unisys buscamos estudiantes de últimos semestres y recién graduados que quieran acelerar su desarrollo profesional y construir una carrera en el mundo del desarrollo de software. Como Software Developer Trainee , formarás parte de nuestro programa Developer Academy , donde tendrás la oportunidad de aprender de expertos, participar en proyectos reales y desarrollar soluciones tecnológicas utilizando herramientas y tecnologías de vanguardia. Responsabilidades Participar en el diseño, desarrollo y mantenimiento de aplicaciones de software. Colaborar con equipos multidisciplinarios para crear soluciones innovadoras. Desarrollar y fortalecer conocimientos en tecnologías modernas de desarrollo. Aplicar buenas prácticas de programación, calidad y seguridad. Contribuir a iniciativas relacionadas con Inteligencia Artificial, automatización y transformación digital. Documentar desarrollos y participar en sesiones de aprendizaje y capacitación continua. Requisitos Estudiante de últimos semestres o recién graduado de Ingeniería de Sistemas, Informática, Electrónica o carreras afines. Conocimientos básicos en desarrollo de software. Familiaridad con tecnologías como Angular, .NET y Bases de Datos. Interés en Inteligencia Artificial y nuevas tecnologías. Capacidad para trabajar en equipo y comunicarse efectivamente. Actitud proactiva, orientación al aprendizaje y ganas de crecer profesionalmente. Lo que ofrecemos ✅ Contrato indefinido. ✅ Salario: $2.135.000 COP . ✅ Auxilio de internet: $140.000 COP . ✅ Medicina prepagada Colmédica. ✅ Seguro de vida 100% cubierto. ✅ Fondo de ahorro. ✅ Plataformas educativas y capacitación continua. ✅ Plan de carrera y oportunidades de crecimiento dentro de una compañía global. ✅ Modalidad remota o híbrida según tu ubicación. ¿Por qué unirte a Unisys? En Unisys creemos en el potencial del talento joven. Buscamos personas curiosas, innovadoras y comprometidas con su desarrollo profesional. Aquí encontrarás un entorno colaborativo, oportunidades de aprendizaje constante y la posibilidad de trabajar en proyectos que generan impacto real para clientes alrededor del mundo. 🚀 Tu carrera en tecnología comienza aquí. ¡Únete a Developer Academy y crece con nosotros!",
+    "tipo_empleo": "Jornada completa",
+    "alcance_geografico": "Fuera de Antioquia; remoto o híbrido según el aviso",
+    "estado_vigencia": "Aviso abierto en LinkedIn al momento del rastreo",
+    "ramas": [
+      {
+        "clave": "simulaciones_datos_ia",
+        "nombre": "Análisis de Datos, IA y Simulaciones",
+        "color": "#06b6d4",
+        "score": 69
+      },
+      {
+        "clave": "electronica_digital_iot",
+        "nombre": "Electrónica Digital, Microcontroladores e IoT",
+        "color": "#3b82f6",
+        "score": 61
+      },
+      {
+        "clave": "instrumentacion_metrologia",
+        "nombre": "Instrumentación, Automatización y Metrología",
+        "color": "#10b981",
+        "score": 61
+      },
+      {
+        "clave": "optica_vision_artificial",
+        "nombre": "Óptica, Fotónica y Visión Artificial",
+        "color": "#a855f7",
+        "score": 56
+      },
+      {
+        "clave": "electronica_analoga_circuitos",
+        "nombre": "Electrónica Análoga y Circuitos",
+        "color": "#8b5cf6",
+        "score": 53
+      },
+      {
+        "clave": "energia_potencia",
+        "nombre": "Energía, Potencia y Renovables",
+        "color": "#eab308",
+        "score": 48
+      }
+    ],
+    "rama_principal": "Análisis de Datos, IA y Simulaciones",
+    "color_principal": "#06b6d4",
+    "clave_principal": "simulaciones_datos_ia",
+    "afinidad": "Alta Afinidad Pénsum",
+    "es_exclusiva_fisica": false,
+    "programa_inclusion_genero": false,
+    "convocatoria_exclusiva_mujeres": false,
+    "es_cierre_inminente": false,
+    "es_practica": true,
+    "score_pensum": 69,
+    "empresa_objetivo": false,
+    "mision": "Developer Academy | Software Developer Trainee Descripción del rol ¿Te apasiona la tecnología, la innovación y el aprendizaje continuo? En Unisys buscamos estudiantes de últimos semestres y recién graduados que quieran acelerar su desarrollo profesional y construir una carrera en el mundo del desarrollo de software. Como Software Developer Trainee , formarás parte de nuestro programa Developer Aca",
+    "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables.",
+    "_tareas_generadas": true,
+    "_sello": "8c3b536b6d90"
   },
   {
     "titulo": "Practicante Calidad",
@@ -6615,7 +6615,7 @@
     "fecha_publicacion": "2026-09-22",
     "fuente": "LinkedIn Jobs",
     "linkedin_id": "4470419444",
-    "encontrada_ultima_corrida": true,
+    "encontrada_ultima_corrida": false,
     "ultima_deteccion": "2026-11-01",
     "primera_deteccion": "2026-10-28",
     "descripcion_fuente": "Descripción de la vacante Objetivo del Cargo Apoyar al equipo de calidad en la ejecución de toma de muestras con el fin de garantizar el aseguramiento de la calidad e inocuidad a lo largo de la cadena productiva. Formación Académica Estudiantes Técnicos o Tecnólogos en Calidad, Alimentos, Química, Procesos Industriales o áreas afines. Horario y Ubicación Lugar: Postobón Medellin Horario Lunes a viernes: 07:00 a. m. a 04:00 p. m. Tipo de Contrato Contrato de Aprendizaje. Salario $1.750.905 + prestaciones de ley. Competencias Requeridas Proactividad. Capacidad de análisis. Iniciativa y deseos de aprender. Responsabilidad. Buena comunicación. Trabajo en equipo. ¿Por qué unirte a nosotros? Te ofrecemos la oportunidad de adquirir experiencia práctica en el área de calidad dentro de una empresa reconocida a nivel nacional, fortalecer tus conocimientos técnicos, participar activamente en el aseguramiento de la calidad e inocuidad y desarrollarte en un entorno dinámico y de aprendizaje continuo.",
@@ -6653,7 +6653,7 @@
     "fecha_publicacion": "2026-08-28",
     "fuente": "LinkedIn Jobs",
     "linkedin_id": "4458049133",
-    "encontrada_ultima_corrida": true,
+    "encontrada_ultima_corrida": false,
     "ultima_deteccion": "2026-11-01",
     "primera_deteccion": "2026-10-28",
     "descripcion_fuente": "SGS es un líder mundial en inspección, verificación, análisis y certificación. esta considerada como principal referente mundial en calidad e integridad. contamos con mas de 94.000 empleados y con una red de mas de 2600 oficinas y laboratorios por todo el mundo. Descripción del empleo Realiza las labores correspondientes a la preparación de elementos, espacio y ambiente requeridos para las pruebas y ensayos a los materiales; así como la manipulación de las muestras y ejecución de ensayos autorizados por el Coordinador técnico. Requisitos Formación académica: estudiantes de últimos semestres de técnica o tecnología relacionado en obras civiles o carreras afines. Información adicional Salario $ 1.750.905 Tipo de contrato: termino fijo Horario: Lunes a sabados",
@@ -7192,7 +7192,7 @@
     "descripcion_fuente": "About M3: A Japanese global leader in the provision of ground-breaking and innovative technological and research solutions to the healthcare industry. The M3 Group operates in the US, Asia, and Europe with over 5.8 million physician members globally via its physician websites which include mdlinx.com, m3.com, research.m3.com, Doctors.net.uk, medigate.net, and medlive.cn. M3 Inc. is a publicly traded company on the Tokyo Stock Exchange (jp:2413, NIKKEI 225) with subsidiaries in major markets including the US, UK, Japan, South Korea, and China, and in 2020 was ranked in Forbes’ Global 2000 list. The M3 Group provides services to healthcare and the life science industry. In addition to market research, these services include medical education, ethical drug promotion, clinical development, job recruitment, and clinic appointment services. M3 has offices in Japan, UK, France, Germany, Brazil, Sweden, China, USA, and South Korea, as well as India. Due to our continued growth, we are hiring for a AI Engineering Intern to join M3 USA. Job Description Build and ship Own a project end to end: understand the problem, build a working version, get it in front of users, improve it based on what they say. Write code that other people can read and maintain. AI-generated or not, it carries your name. Demo your work regularly to the product and engineering team, as well as to the business teams who requested it. Work with the businesses Talk to the people whose jobs your tool touches. Watch how they actually work rather than taking a feature request at face value. Translate what you hear into something you can build this week, not next quarter. AI-augmented development Use agentic AI tools (such as Claude Code) as your default workflow. Develop judgment about where these tools help and where they quietly produce garbage. Bring that back to the engineering team. Try new tools as they ship and tell us what you found, including the failures. Qualifications Required Actively pursuing or recently obtained a degree in Computer Science or a related field. Hands-on use of at least one AI coding agent to build something, whether a class project, a side project, or a hackathon entry. Working knowledge of a programming language: Python, TypeScript, or similar. Comfort in a terminal. You should not need a GUI for git. Ability to pick up unfamiliar tools by reading docs and trying things. Preferred Web development experience (HTML, CSS, JavaScript, and any modern framework). Knowledge o",
     "tipo_empleo": "Prácticas",
     "alcance_geografico": "Remoto internacional; confirmar elegibilidad desde Colombia",
-    "estado_vigencia": "Aviso abierto en LinkedIn al momento del rastreo",
+    "estado_vigencia": "No reapareció en esta búsqueda; revisar vigencia en la fuente",
     "ramas": [
       {
         "clave": "simulaciones_datos_ia",
@@ -7236,7 +7236,7 @@
     "primera_deteccion": "2026-10-28",
     "descripcion_fuente": "Descripción de la empresa Evolution es un proveedor Business-to Business (B2B) líder a nivel mundial en innovación de productos y desarrollo de software para casinos en línea. Miles de personas en todo el mundo disfrutan de nuestros servicios cada día. Actualmente, estamos en búsqueda de talento ambicioso para unirse a nuestro equipo mientras seguimos abriendo nuevos caminos en una de las industrias de más rápido crecimiento a nivel global. Con aproximadamente 2.000 colaboradores en más de 20 ubicaciones, la compañía desarrolla, produce, comercializa y licencia soluciones completamente integradas de Live Casino y Slots para operadores de juego en todo el mundo. Evolution opera estudios de transmisión en Letonia, Malta, Georgia, Canadá y Estados Unidos, y continúa expandiéndose rápidamente a nuevas ubicaciones a nivel global. En línea con nuestro valor corporativo clave ALIVE , somos emprendedores que innovan como forma de vida y que siempre buscan la próxima oportunidad. Nuestro objetivo es estar siempre a la vanguardia. Nuestra confiabilidad se basa en nuestro compromiso de DO RIGHT , actuando con integridad en todo lo que hacemos y esforzándonos constantemente por ofrecer la más alta calidad en cada entrega. Creemos que nuestra mayor fortaleza es que WORK TOGETHER , y celebramos la diversidad de nuestros orígenes como un factor clave para el éxito de nuestro negocio. Descripción del empleo Recolectar, depurar y organizar bases de datos de diferentes fuentes. Construir y mantener reportes y dashboards en Power BI. Realizar análisis de datos en Excel para apoyar procesos internos. Identificar tendencias, patrones e insights relevantes para el negocio. Apoyar la generación de informes periódicos para las áreas interesadas. Garantizar la calidad e integridad de la información utilizada en los análisis. Requisitos Capacidad para mantener una estricta confidencialidad Adaptabilidad, flexibilidad, Pensamiento analítico y orientación al detalle. Proactividad y capacidad de trabajo en equipo. Buena comunicación y organización. Capacidad de gestionar múltiples tareas y cumplir plazos. Información adicional \"Proceso inclusivo y libre de discriminación: En Evolution Development Colombia promovemos la igualdad de oportunidades. Las personas con cualquier tipo de discapacidad pueden postularse en cualquiera de las etapas del proceso, siempre que cumplan los requisitos del cargo. Si requieres ajustes razonables para participar en el proceso (por ejemplo: accesibilidad,",
     "tipo_empleo": "Prácticas",
-    "estado_vigencia": "Aviso abierto en LinkedIn al momento del rastreo",
+    "estado_vigencia": "No reapareció en esta búsqueda; revisar vigencia en la fuente",
     "ramas": [
       {
         "clave": "simulaciones_datos_ia",
@@ -7577,48 +7577,6 @@
     "_sello": "2e67431aa3bc"
   },
   {
-    "titulo": "Practicante en Soporte y Telecomunicaciones",
-    "empresa": "Empresa Confidencial",
-    "ubicacion": "Medellín, Antioquia",
-    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-practicante-en-soporte-y-telecomunicaciones-tecnico-o-tecnologo-en-medellin-C260DC7574B31C9F61373E686DCF3405",
-    "fecha_publicacion": "Reciente",
-    "fuente": "Computrabajo",
-    "encontrada_ultima_corrida": true,
-    "ultima_deteccion": "2026-11-01",
-    "primera_deteccion": "2026-10-28",
-    "descripcion_fuente": "Descripción de la oferta $ 1.750.905,00 (Mensual) Contrato de aprendizaje Tiempo Completo Requisitos: Estudiantes en etapa productiva del área de telecomunicaciones, redes o ingeniería de sistemas, sea de carrera profesional, técnica o tecnología Funciones: Manejo de redes Metro Ethernet Configuración de Servicios Banda ancha, IPTV, TOIP Comprensión y administración de plataformas de red. Monitorear los servicios de fibra Seguimiento Verificar e Interpretar gráficas de tráfico, codificar las diferentes configuraciones que se tienen en los servicios de Internet (BRIDGE, DMZ, PORTFORWARDING, PPPoE, habilitación de puertos Ejecutar las actividades asociadas a los procesos en los que participa el área Acompañamiento a los clientes en todo el ciclo de vida del ticket Configuración de Swicthes y Routers (Vlan, puertos, enrutamiento, entre otros) Actualizaciones de iOS Configuraciones de ACL y protocolos (snmp, BGP, mab, entre otros) Condiciones: -Horario: Lunes a Sábado horario rotativo entre las 6:00 am y 6:00 pm -Contrato: Por aprendizaje. Salario Etapa Productiva 100% Salario Mínimo Legal vigente $1.750.905 + Todas las prestaciones de ley (EPS, ARL, PENSIONES, CESANTIAS, CAJA DE COMPENSACIÓN, AUXILIO DE TRANSPORTE $249.000) Se brinda la oportunidad de vinculación de acuerdo con el desempeño durante el periodo de práctica. Requerimientos Educación mínima: Bachillerato / Educación Media años de experiencia Conocimientos: Trabajo en equipo Aptitudes asociadas a esta oferta Nuevo Trabajo en equipo Ver 0 aptitudes más Hay 0 aptitudes que faltan en tu perfil Si las tienes, añádelas a tu perfil para encajar mejor en esta vacante. Mostar competencias Se han añadido correctamente las competencias en tu perfil. Palabras clave: intern, practicante, becario, pasante, apoyo, support, soporte, tecnico, tech, technician, technology, tecnologia, technologist Hace 3 horas (actualizada) Aplicar Postulado <path d=\"m471.382812 44.578125c-26.503906-28.746094-62.871093-44.578125-102.410156-44.578125-29.554687 0-56.621094 9.34375-80.449218 27.769531-12.023438 9.300781-22.917969 20.679688-32.523438 33.960938-9.601562-13.277344-20.5-24.660157-32.527344-33.960938-23.824218-18.425781-5",
-    "estado_vigencia": "No reapareció en esta búsqueda; revisar vigencia en la fuente",
-    "ramas": [
-      {
-        "clave": "simulaciones_datos_ia",
-        "nombre": "Análisis de Datos, IA y Simulaciones",
-        "color": "#06b6d4",
-        "score": 63
-      },
-      {
-        "clave": "optica_vision_artificial",
-        "nombre": "Óptica, Fotónica y Visión Artificial",
-        "color": "#a855f7",
-        "score": 59
-      }
-    ],
-    "rama_principal": "Análisis de Datos, IA y Simulaciones",
-    "color_principal": "#06b6d4",
-    "clave_principal": "simulaciones_datos_ia",
-    "afinidad": "Alta Afinidad Pénsum",
-    "es_exclusiva_fisica": false,
-    "programa_inclusion_genero": false,
-    "convocatoria_exclusiva_mujeres": false,
-    "es_cierre_inminente": false,
-    "es_practica": true,
-    "score_pensum": 63,
-    "empresa_objetivo": false,
-    "mision": "Descripción de la oferta $ 1.750.905,00 (Mensual) Contrato de aprendizaje Tiempo Completo Requisitos: Estudiantes en etapa productiva del área de telecomunicaciones, redes o ingeniería de sistemas, sea de carrera profesional, técnica o tecnología Funciones: Manejo de redes Metro Ethernet Configuración de Servicios Banda ancha, IPTV, TOIP Comprensión y administración de plataformas de red. Monitore",
-    "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables.",
-    "_tareas_generadas": true,
-    "_sello": "591313207f7e"
-  },
-  {
     "titulo": "Practicante universitario de seguridad de la información, ingeniería informática o ciberseguirdad",
     "empresa": "ALMA EXPERIENCE COLOMBIA",
     "ubicacion": "Sabaneta, Antioquia",
@@ -7936,6 +7894,48 @@
     "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables.",
     "_tareas_generadas": true,
     "_sello": "59995af653ec"
+  },
+  {
+    "titulo": "Practicante en Soporte y Telecomunicaciones",
+    "empresa": "Empresa Confidencial",
+    "ubicacion": "Medellín, Antioquia",
+    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-practicante-en-soporte-y-telecomunicaciones-tecnico-o-tecnologo-en-medellin-C260DC7574B31C9F61373E686DCF3405",
+    "fecha_publicacion": "Reciente",
+    "fuente": "Computrabajo",
+    "encontrada_ultima_corrida": false,
+    "ultima_deteccion": "2026-11-01",
+    "primera_deteccion": "2026-10-28",
+    "descripcion_fuente": "Descripción de la oferta $ 1.750.905,00 (Mensual) Contrato de aprendizaje Tiempo Completo Requisitos: Estudiantes en etapa productiva del área de telecomunicaciones, redes o ingeniería de sistemas, sea de carrera profesional, técnica o tecnología Funciones: Manejo de redes Metro Ethernet Configuración de Servicios Banda ancha, IPTV, TOIP Comprensión y administración de plataformas de red. Monitorear los servicios de fibra Seguimiento Verificar e Interpretar gráficas de tráfico, codificar las diferentes configuraciones que se tienen en los servicios de Internet (BRIDGE, DMZ, PORTFORWARDING, PPPoE, habilitación de puertos Ejecutar las actividades asociadas a los procesos en los que participa el área Acompañamiento a los clientes en todo el ciclo de vida del ticket Configuración de Swicthes y Routers (Vlan, puertos, enrutamiento, entre otros) Actualizaciones de iOS Configuraciones de ACL y protocolos (snmp, BGP, mab, entre otros) Condiciones: -Horario: Lunes a Sábado horario rotativo entre las 6:00 am y 6:00 pm -Contrato: Por aprendizaje. Salario Etapa Productiva 100% Salario Mínimo Legal vigente $1.750.905 + Todas las prestaciones de ley (EPS, ARL, PENSIONES, CESANTIAS, CAJA DE COMPENSACIÓN, AUXILIO DE TRANSPORTE $249.000) Se brinda la oportunidad de vinculación de acuerdo con el desempeño durante el periodo de práctica. Requerimientos Educación mínima: Bachillerato / Educación Media años de experiencia Conocimientos: Trabajo en equipo Aptitudes asociadas a esta oferta Nuevo Trabajo en equipo Ver 0 aptitudes más Hay 0 aptitudes que faltan en tu perfil Si las tienes, añádelas a tu perfil para encajar mejor en esta vacante. Mostar competencias Se han añadido correctamente las competencias en tu perfil. Palabras clave: intern, practicante, becario, pasante, apoyo, support, soporte, tecnico, tech, technician, technology, tecnologia, technologist Hace 3 horas (actualizada) Aplicar Postulado <path d=\"m471.382812 44.578125c-26.503906-28.746094-62.871093-44.578125-102.410156-44.578125-29.554687 0-56.621094 9.34375-80.449218 27.769531-12.023438 9.300781-22.917969 20.679688-32.523438 33.960938-9.601562-13.277344-20.5-24.660157-32.527344-33.960938-23.824218-18.425781-5",
+    "estado_vigencia": "No reapareció en esta búsqueda; revisar vigencia en la fuente",
+    "ramas": [
+      {
+        "clave": "simulaciones_datos_ia",
+        "nombre": "Análisis de Datos, IA y Simulaciones",
+        "color": "#06b6d4",
+        "score": 63
+      },
+      {
+        "clave": "optica_vision_artificial",
+        "nombre": "Óptica, Fotónica y Visión Artificial",
+        "color": "#a855f7",
+        "score": 59
+      }
+    ],
+    "rama_principal": "Análisis de Datos, IA y Simulaciones",
+    "color_principal": "#06b6d4",
+    "clave_principal": "simulaciones_datos_ia",
+    "afinidad": "Alta Afinidad Pénsum",
+    "es_exclusiva_fisica": false,
+    "programa_inclusion_genero": false,
+    "convocatoria_exclusiva_mujeres": false,
+    "es_cierre_inminente": false,
+    "es_practica": true,
+    "score_pensum": 63,
+    "empresa_objetivo": false,
+    "mision": "Descripción de la oferta $ 1.750.905,00 (Mensual) Contrato de aprendizaje Tiempo Completo Requisitos: Estudiantes en etapa productiva del área de telecomunicaciones, redes o ingeniería de sistemas, sea de carrera profesional, técnica o tecnología Funciones: Manejo de redes Metro Ethernet Configuración de Servicios Banda ancha, IPTV, TOIP Comprensión y administración de plataformas de red. Monitore",
+    "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables.",
+    "_tareas_generadas": true,
+    "_sello": "591313207f7e"
   },
   {
     "titulo": "Aprendiz o Practicante de Sistemas",
@@ -8305,162 +8305,6 @@
     "estado_vigencia": "No reapareció en esta búsqueda; revisar vigencia en la fuente"
   },
   {
-    "titulo": "Aprendiz de TI",
-    "empresa": "Turia GBS",
-    "ubicacion": "Medellín, Antioquia, Colombia",
-    "url": "https://co.linkedin.com/jobs/view/aprendiz-de-ti-at-turia-gbs-4483201597",
-    "fecha_publicacion": "2026-10-26",
-    "fuente": "LinkedIn Jobs",
-    "linkedin_id": "4483201597",
-    "encontrada_ultima_corrida": true,
-    "ultima_deteccion": "2026-11-01",
-    "primera_deteccion": "2026-10-28",
-    "descripcion_fuente": "En Turia GBS estamos buscando un Aprendiz de TI para apoyar las actividades administrativas y operativas relacionadas con los procesos de IT, mientras contribuye al cumplimiento de las metas del área. Funciones: Soporte Técnico: Brindar asistencia de nivel 1 a usuarios sobre problemas de hardware, software, redes y periféricos. Mantenimiento: Realizar mantenimiento preventivo y correctivo a equipos de cómputo. Instalación: Configurar aplicaciones, sistemas operativos y equipos nuevos para los colaboradores de la empresa. Gestión de Inventario: Ayudar en el control de equipos, licencias y suministros tecnológicos. Administrativo: apoyar gestiones de compras como solicitudes de pedido, órdenes de compra y/o actividades relacionadas con los proveedores del area. Requisitos Ser estudiante de último semestre de tecnica o tecnología en sistemas, soporte técnico o áreas relacionadas. Disponibilidad para firmar contrato de aprendizaje. Nivel básico de Excel y Word. Solido conocimiento en mantenimiento de equipos de computo. Beneficios Ofrecemos el 100% del Salario Mínimo Legal Mensual Vigente (SMMLV) + ARL + EPS. Jornada laboral de lunes a viernes. Medio día libre por tu cumpleaños. Oportunidades para participar en procesos internos una vez finalices la práctica con un buen desempeño. Creemos en la inclusión En Turia GBS, nos comprometemos a fomentar un entorno laboral inclusivo y a brindar igualdad de oportunidades de empleo. Animamos a las personas cualificadas con discapacidad a postularse para este puesto. Nuestro proceso de selección está diseñado para garantizar un trato equitativo y una experiencia accesible para todos los candidatos.",
-    "tipo_empleo": "Prácticas",
-    "estado_vigencia": "Aviso abierto en LinkedIn al momento del rastreo",
-    "ramas": [
-      {
-        "clave": "simulaciones_datos_ia",
-        "nombre": "Análisis de Datos, IA y Simulaciones",
-        "color": "#06b6d4",
-        "score": 63
-      },
-      {
-        "clave": "instrumentacion_metrologia",
-        "nombre": "Instrumentación, Automatización y Metrología",
-        "color": "#10b981",
-        "score": 61
-      },
-      {
-        "clave": "electronica_digital_iot",
-        "nombre": "Electrónica Digital, Microcontroladores e IoT",
-        "color": "#3b82f6",
-        "score": 58
-      },
-      {
-        "clave": "optica_vision_artificial",
-        "nombre": "Óptica, Fotónica y Visión Artificial",
-        "color": "#a855f7",
-        "score": 53
-      }
-    ],
-    "rama_principal": "Análisis de Datos, IA y Simulaciones",
-    "color_principal": "#06b6d4",
-    "clave_principal": "simulaciones_datos_ia",
-    "afinidad": "Alta Afinidad Pénsum",
-    "es_exclusiva_fisica": false,
-    "programa_inclusion_genero": false,
-    "convocatoria_exclusiva_mujeres": false,
-    "es_cierre_inminente": false,
-    "es_practica": true,
-    "score_pensum": 63,
-    "empresa_objetivo": false,
-    "mision": "En Turia GBS estamos buscando un Aprendiz de TI para apoyar las actividades administrativas y operativas relacionadas con los procesos de IT, mientras contribuye al cumplimiento de las metas del área. Funciones: Soporte Técnico: Brindar asistencia de nivel 1 a usuarios sobre problemas de hardware, software, redes y periféricos. Mantenimiento: Realizar mantenimiento preventivo y correctivo a equipo",
-    "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables.",
-    "_tareas_generadas": true,
-    "_sello": "fb775b49f82a"
-  },
-  {
-    "titulo": "Aprendiz Control y Gestión de Calidad",
-    "empresa": "Grupo Bios",
-    "ubicacion": "Caldas, Antioquia, Colombia",
-    "url": "https://co.linkedin.com/jobs/view/aprendiz-control-y-gesti%C3%B3n-de-calidad-at-grupo-bios-4482861742",
-    "fecha_publicacion": "2026-10-23",
-    "fuente": "LinkedIn Jobs",
-    "linkedin_id": "4482861742",
-    "encontrada_ultima_corrida": true,
-    "ultima_deteccion": "2026-11-01",
-    "primera_deteccion": "2026-10-28",
-    "descripcion_fuente": "En Grupo BIOS somos una población diversa e incluyente donde el valor de nuestra gente radica en su actitud y en sus ganas de sumar, creemos en las segundas oportunidades y abrimos nuestras puertas, promoviendo procesos de selección basados en competencias y valores. En Comercial + Bios, compañía de Grupo BIOS , nos encontramos en la búsqueda de un Aprendiz quien se sumará a nuestro equipo para trabajar por el propósito de nutrir a todos desarrollando el campo colombiano. Si eres estudiante de Control y Gestión de Calidad, Sistemas de Gestión, Producción Industrial o afines, esta oportunidad es para ti. ¿Qué necesitas para aplicar? Disponibilidad para firmar contrato de aprendizaje. Tener la posibilidad de residir en Antioquia- Valle de Aburrá Nuestra Compañía Ofrece Para Ti Poliza de vida Contrato directo con la compañía Apoyo de sostenimiento en etapa productiva del 100% smmlv Beneficios emocionales. Si compartes nuestro compromiso de nutrir a todos y desarrollar el campo colombiano, ¡Postúlate !",
-    "tipo_empleo": "Jornada completa",
-    "estado_vigencia": "Aviso abierto en LinkedIn al momento del rastreo",
-    "ramas": [
-      {
-        "clave": "simulaciones_datos_ia",
-        "nombre": "Análisis de Datos, IA y Simulaciones",
-        "color": "#06b6d4",
-        "score": 63
-      },
-      {
-        "clave": "instrumentacion_metrologia",
-        "nombre": "Instrumentación, Automatización y Metrología",
-        "color": "#10b981",
-        "score": 61
-      },
-      {
-        "clave": "optica_vision_artificial",
-        "nombre": "Óptica, Fotónica y Visión Artificial",
-        "color": "#a855f7",
-        "score": 53
-      }
-    ],
-    "rama_principal": "Análisis de Datos, IA y Simulaciones",
-    "color_principal": "#06b6d4",
-    "clave_principal": "simulaciones_datos_ia",
-    "afinidad": "Alta Afinidad Pénsum",
-    "es_exclusiva_fisica": false,
-    "programa_inclusion_genero": false,
-    "convocatoria_exclusiva_mujeres": false,
-    "es_cierre_inminente": false,
-    "es_practica": true,
-    "score_pensum": 63,
-    "empresa_objetivo": false,
-    "mision": "En Grupo BIOS somos una población diversa e incluyente donde el valor de nuestra gente radica en su actitud y en sus ganas de sumar, creemos en las segundas oportunidades y abrimos nuestras puertas, promoviendo procesos de selección basados en competencias y valores. En Comercial + Bios, compañía de Grupo BIOS , nos encontramos en la búsqueda de un Aprendiz quien se sumará a nuestro equipo para tr",
-    "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables.",
-    "_tareas_generadas": true,
-    "_sello": "be9d5e435b28"
-  },
-  {
-    "titulo": "Aprendiz Calidad",
-    "empresa": "Grupo Bios",
-    "ubicacion": "Caldas, Antioquia, Colombia",
-    "url": "https://co.linkedin.com/jobs/view/aprendiz-calidad-at-grupo-bios-4482873060",
-    "fecha_publicacion": "2026-10-23",
-    "fuente": "LinkedIn Jobs",
-    "linkedin_id": "4482873060",
-    "encontrada_ultima_corrida": true,
-    "ultima_deteccion": "2026-11-01",
-    "primera_deteccion": "2026-10-28",
-    "descripcion_fuente": "En Grupo BIOS somos una población diversa e incluyente donde el valor de nuestra gente radica en su actitud y en sus ganas de sumar, creemos en las segundas oportunidades y abrimos nuestras puertas, promoviendo procesos de selección basados en competencias y valores. En Comercial + Bios, compañía de Grupo BIOS , nos encontramos en la búsqueda de un Aprendiz quien se sumará a nuestro equipo para trabajar por el propósito de nutrir a todos desarrollando el campo colombiano. Si eres estudiante de Control y Gestión de Calidad, Sistemas de Gestión, Producción Industrial o afines, esta oportunidad es para ti. ¿Qué necesitas para aplicar? Disponibilidad para firmar contrato de aprendizaje. Tener la posibilidad de residir en Antioquia- Valle de Aburrá Nuestra Compañía Ofrece Para Ti Poliza de vida Contrato directo con la compañía Apoyo de sostenimiento en etapa productiva del 100% smmlv Beneficios emocionales. Si compartes nuestro compromiso de nutrir a todos y desarrollar el campo colombiano, ¡Postúlate!",
-    "tipo_empleo": "Jornada completa",
-    "estado_vigencia": "Aviso abierto en LinkedIn al momento del rastreo",
-    "ramas": [
-      {
-        "clave": "simulaciones_datos_ia",
-        "nombre": "Análisis de Datos, IA y Simulaciones",
-        "color": "#06b6d4",
-        "score": 63
-      },
-      {
-        "clave": "instrumentacion_metrologia",
-        "nombre": "Instrumentación, Automatización y Metrología",
-        "color": "#10b981",
-        "score": 61
-      },
-      {
-        "clave": "optica_vision_artificial",
-        "nombre": "Óptica, Fotónica y Visión Artificial",
-        "color": "#a855f7",
-        "score": 53
-      }
-    ],
-    "rama_principal": "Análisis de Datos, IA y Simulaciones",
-    "color_principal": "#06b6d4",
-    "clave_principal": "simulaciones_datos_ia",
-    "afinidad": "Alta Afinidad Pénsum",
-    "es_exclusiva_fisica": false,
-    "programa_inclusion_genero": false,
-    "convocatoria_exclusiva_mujeres": false,
-    "es_cierre_inminente": false,
-    "es_practica": true,
-    "score_pensum": 63,
-    "empresa_objetivo": false,
-    "mision": "En Grupo BIOS somos una población diversa e incluyente donde el valor de nuestra gente radica en su actitud y en sus ganas de sumar, creemos en las segundas oportunidades y abrimos nuestras puertas, promoviendo procesos de selección basados en competencias y valores. En Comercial + Bios, compañía de Grupo BIOS , nos encontramos en la búsqueda de un Aprendiz quien se sumará a nuestro equipo para tr",
-    "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables.",
-    "_tareas_generadas": true,
-    "_sello": "deacf4480583"
-  },
-  {
     "titulo": "Intern",
     "empresa": "Hewlett Packard Enterprise",
     "ubicacion": "Bogotá, Distrito Capital, Colombia · remoto o híbrido (confirmar en el aviso)",
@@ -8505,58 +8349,6 @@
     "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables.",
     "_tareas_generadas": true,
     "_sello": "1abbb0e3e9b1"
-  },
-  {
-    "titulo": "Practicante en Ingeniería Industrial, Administrativa, Financiera, Ciencias de Datos, Administración con énfasis en analítica o afines",
-    "empresa": "Solenis",
-    "ubicacion": "Bogotá, Distrito Capital, Colombia · remoto o híbrido (confirmar en el aviso)",
-    "url": "https://co.linkedin.com/jobs/view/practicante-en-ingenier%C3%ADa-industrial-administrativa-financiera-ciencias-de-datos-administraci%C3%B3n-con-%C3%A9nfasis-en-anal%C3%ADtica-o-afines-at-solenis-4349461149",
-    "fecha_publicacion": "2026-01-06",
-    "fuente": "LinkedIn Jobs",
-    "linkedin_id": "4349461149",
-    "search_scope": "COLOMBIA",
-    "encontrada_ultima_corrida": true,
-    "ultima_deteccion": "2026-11-01",
-    "primera_deteccion": "2026-10-24",
-    "descripcion_fuente": "Posición: practicante en Ingeniería Industrial, Administrativa, Financiera, Ciencias de Datos, Administración con énfasis en analítica o afines Enfoque: Recursos Humanos. Lugar de trabajo: hibrido Modelo de trabajo: Contrato de aprendizaje SENA – 1 año. Principales Actividades Optimizar procesos internos del área de RH. Gestionar y depurar bases de datos de empleados. Generar reportes y dashboards para toma de decisiones. Apoyar en proyectos de automatización y mejora continua. Automatizar procesos repetitivos del área de RH. Apoyar proyectos de digitalización y eficiencia operativa. Requisitos Estudiante de pregrado de Ingeniería Industrial, Administrativa, Financiera, Ciencias de Datos, Administración con énfasis en analítica o afines Conocimientos en manejo de herramientas de automatización y análisis de datos. No haber firmado antes contrato de aprendizaje con el SENA Acerca de Solenis Somos una industria química que cada día se propone resolver retos complejos en el tratamiento del agua, la mejora de procesos y la higiene para clientes en los mercados de consumo, industrial, institucional, de alimentos y bebidas, y de agua de piscinas y spas, a través de personas, experiencia y tecnología. Somos líderes mundiales en la producción y aplicación de especialidades químicas, centrados en proporcionar soluciones sostenibles para sectores con un uso intensivo de agua, incluidos los mercados de consumo, industrial, institucional, de alimentos y bebidas, y de agua de piscinas y spas. Nuestra misión es ser un socio y aportar valor al resolver retos operativos y de sostenibilidad con las personas adecuadas, la experiencia adecuada y la tecnología adecuada, con soluciones que ayudan a preservar los recursos naturales y promueven entornos más limpios y seguros. En Solenis encontrarás un excelente ambiente de trabajo, con autonomía, retos y oportunidades de crecimiento. Valoramos la diversidad y estamos en un camino constante para convertirnos en una empresa más diversa e inclusiva cada día, lo que se refleja en nuestros procesos de selección. Reiteramos que todas las personas son bienvenidas, independientemente de su género, raza, orientación sexual, identidad de género, edad, discapacidad o cualquier otra característica. El candidato seleccionado deberá tener una ética de trabajo ejemplar y altos estándares de integridad. ¡Únase al equipo de Solenis!",
-    "tipo_empleo": "Jornada completa",
-    "alcance_geografico": "Fuera de Antioquia; remoto o híbrido según el aviso",
-    "estado_vigencia": "Aviso abierto en LinkedIn al momento del rastreo",
-    "ramas": [
-      {
-        "clave": "simulaciones_datos_ia",
-        "nombre": "Análisis de Datos, IA y Simulaciones",
-        "color": "#06b6d4",
-        "score": 63
-      },
-      {
-        "clave": "electronica_digital_iot",
-        "nombre": "Electrónica Digital, Microcontroladores e IoT",
-        "color": "#3b82f6",
-        "score": 58
-      },
-      {
-        "clave": "instrumentacion_metrologia",
-        "nombre": "Instrumentación, Automatización y Metrología",
-        "color": "#10b981",
-        "score": 58
-      }
-    ],
-    "rama_principal": "Análisis de Datos, IA y Simulaciones",
-    "color_principal": "#06b6d4",
-    "clave_principal": "simulaciones_datos_ia",
-    "afinidad": "Alta Afinidad Pénsum",
-    "es_exclusiva_fisica": false,
-    "programa_inclusion_genero": false,
-    "convocatoria_exclusiva_mujeres": false,
-    "es_cierre_inminente": false,
-    "es_practica": true,
-    "score_pensum": 63,
-    "empresa_objetivo": false,
-    "mision": "Posición: practicante en Ingeniería Industrial, Administrativa, Financiera, Ciencias de Datos, Administración con énfasis en analítica o afines Enfoque: Recursos Humanos. Lugar de trabajo: hibrido Modelo de trabajo: Contrato de aprendizaje SENA – 1 año. Principales Actividades Optimizar procesos internos del área de RH. Gestionar y depurar bases de datos de empleados. Generar reportes y dashboards",
-    "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables.",
-    "_tareas_generadas": true,
-    "_sello": "b9d0c79583d9"
   },
   {
     "titulo": "Power Systems Engineering Intern",
@@ -8655,6 +8447,260 @@
     "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables.",
     "_tareas_generadas": true,
     "_sello": "9338d1ec6590"
+  },
+  {
+    "titulo": "Software Engineering Intern (Full-Stack)",
+    "empresa": "HeraIQ",
+    "ubicacion": "Londres y alrededores, Reino Unido · remoto internacional (elegibilidad por confirmar)",
+    "url": "https://uk.linkedin.com/jobs/view/software-engineering-intern-full-stack-at-heraiq-4483998132",
+    "fecha_publicacion": "2026-11-01",
+    "fuente": "LinkedIn Jobs",
+    "linkedin_id": "4483998132",
+    "search_scope": "WORLDWIDE",
+    "encontrada_ultima_corrida": true,
+    "ultima_deteccion": "2026-11-01",
+    "primera_deteccion": "2026-11-01",
+    "descripcion_fuente": "Company Description HeraIQ is an AI-powered care intelligence platform focused on giving care teams a clearer, more complete view of the people they support. The platform connects information that is often scattered across visit notes, care plans, rotas, and medication records, helping care professionals spot important changes and avoid missed connections. HeraIQ is currently working with UK care providers and preparing initial pilots to validate and refine the product. The company’s ambition is to enable better-informed decisions and ensure every person receives the attention and quality of care they deserve. Role Description The Software Engineering Intern (Full-Stack) role is a part-time remote position supporting the design, development, and maintenance of web applications across the stack. Day-to-day tasks include implementing front-end user interfaces, building and integrating back-end APIs, writing clean and testable code, and participating in code reviews. The intern will collaborate with engineers and product stakeholders to translate user and business requirements into technical solutions, troubleshoot issues, and improve performance and reliability. The role also involves learning and applying best practices in software engineering, contributing to documentation, and supporting experiments and prototypes for new platform features. Qualifications Strong foundation in Computer Science principles and Software Development practices Experience or coursework in Programming and Object-Oriented Programming (OOP) Exposure to Back-End Web Development, including APIs, databases, or server-side frameworks Familiarity with front-end technologies (e.g., HTML, CSS, JavaScript, modern frameworks) is beneficial Ability to learn new tools and technologies quickly and apply them in a collaborative environment Effective communication skills and comfort working in a remote, distributed team Currently pursuing or recently completed a degree in Computer Science, Software Engineering, or a related field Interest in health or social care technology and using AI to improve real-world outcomes is a plus",
+    "tipo_empleo": "Media jornada",
+    "estado_vigencia": "Aviso abierto en LinkedIn al momento del rastreo",
+    "alcance_geografico": "Remoto internacional; confirmar elegibilidad desde Colombia",
+    "ramas": [
+      {
+        "clave": "simulaciones_datos_ia",
+        "nombre": "Análisis de Datos, IA y Simulaciones",
+        "color": "#06b6d4",
+        "score": 63
+      },
+      {
+        "clave": "materiales_nanotecnologia",
+        "nombre": "Ciencia de Materiales y Nanotecnología",
+        "color": "#14b8a6",
+        "score": 53
+      }
+    ],
+    "rama_principal": "Análisis de Datos, IA y Simulaciones",
+    "color_principal": "#06b6d4",
+    "clave_principal": "simulaciones_datos_ia",
+    "afinidad": "Alta Afinidad Pénsum",
+    "es_exclusiva_fisica": false,
+    "programa_inclusion_genero": false,
+    "convocatoria_exclusiva_mujeres": false,
+    "es_cierre_inminente": false,
+    "es_practica": true,
+    "score_pensum": 63,
+    "empresa_objetivo": false,
+    "mision": "Company Description HeraIQ is an AI-powered care intelligence platform focused on giving care teams a clearer, more complete view of the people they support. The platform connects information that is often scattered across visit notes, care plans, rotas, and medication records, helping care professionals spot important changes and avoid missed connections. HeraIQ is currently working with UK care ",
+    "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables.",
+    "_tareas_generadas": true,
+    "_sello": "6015f2f3a01f"
+  },
+  {
+    "titulo": "Aprendiz de TI",
+    "empresa": "Turia GBS",
+    "ubicacion": "Medellín, Antioquia, Colombia",
+    "url": "https://co.linkedin.com/jobs/view/aprendiz-de-ti-at-turia-gbs-4483201597",
+    "fecha_publicacion": "2026-10-26",
+    "fuente": "LinkedIn Jobs",
+    "linkedin_id": "4483201597",
+    "encontrada_ultima_corrida": false,
+    "ultima_deteccion": "2026-11-01",
+    "primera_deteccion": "2026-10-28",
+    "descripcion_fuente": "En Turia GBS estamos buscando un Aprendiz de TI para apoyar las actividades administrativas y operativas relacionadas con los procesos de IT, mientras contribuye al cumplimiento de las metas del área. Funciones: Soporte Técnico: Brindar asistencia de nivel 1 a usuarios sobre problemas de hardware, software, redes y periféricos. Mantenimiento: Realizar mantenimiento preventivo y correctivo a equipos de cómputo. Instalación: Configurar aplicaciones, sistemas operativos y equipos nuevos para los colaboradores de la empresa. Gestión de Inventario: Ayudar en el control de equipos, licencias y suministros tecnológicos. Administrativo: apoyar gestiones de compras como solicitudes de pedido, órdenes de compra y/o actividades relacionadas con los proveedores del area. Requisitos Ser estudiante de último semestre de tecnica o tecnología en sistemas, soporte técnico o áreas relacionadas. Disponibilidad para firmar contrato de aprendizaje. Nivel básico de Excel y Word. Solido conocimiento en mantenimiento de equipos de computo. Beneficios Ofrecemos el 100% del Salario Mínimo Legal Mensual Vigente (SMMLV) + ARL + EPS. Jornada laboral de lunes a viernes. Medio día libre por tu cumpleaños. Oportunidades para participar en procesos internos una vez finalices la práctica con un buen desempeño. Creemos en la inclusión En Turia GBS, nos comprometemos a fomentar un entorno laboral inclusivo y a brindar igualdad de oportunidades de empleo. Animamos a las personas cualificadas con discapacidad a postularse para este puesto. Nuestro proceso de selección está diseñado para garantizar un trato equitativo y una experiencia accesible para todos los candidatos.",
+    "tipo_empleo": "Prácticas",
+    "estado_vigencia": "No reapareció en esta búsqueda; revisar vigencia en la fuente",
+    "ramas": [
+      {
+        "clave": "simulaciones_datos_ia",
+        "nombre": "Análisis de Datos, IA y Simulaciones",
+        "color": "#06b6d4",
+        "score": 63
+      },
+      {
+        "clave": "instrumentacion_metrologia",
+        "nombre": "Instrumentación, Automatización y Metrología",
+        "color": "#10b981",
+        "score": 61
+      },
+      {
+        "clave": "electronica_digital_iot",
+        "nombre": "Electrónica Digital, Microcontroladores e IoT",
+        "color": "#3b82f6",
+        "score": 58
+      },
+      {
+        "clave": "optica_vision_artificial",
+        "nombre": "Óptica, Fotónica y Visión Artificial",
+        "color": "#a855f7",
+        "score": 53
+      }
+    ],
+    "rama_principal": "Análisis de Datos, IA y Simulaciones",
+    "color_principal": "#06b6d4",
+    "clave_principal": "simulaciones_datos_ia",
+    "afinidad": "Alta Afinidad Pénsum",
+    "es_exclusiva_fisica": false,
+    "programa_inclusion_genero": false,
+    "convocatoria_exclusiva_mujeres": false,
+    "es_cierre_inminente": false,
+    "es_practica": true,
+    "score_pensum": 63,
+    "empresa_objetivo": false,
+    "mision": "En Turia GBS estamos buscando un Aprendiz de TI para apoyar las actividades administrativas y operativas relacionadas con los procesos de IT, mientras contribuye al cumplimiento de las metas del área. Funciones: Soporte Técnico: Brindar asistencia de nivel 1 a usuarios sobre problemas de hardware, software, redes y periféricos. Mantenimiento: Realizar mantenimiento preventivo y correctivo a equipo",
+    "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables.",
+    "_tareas_generadas": true,
+    "_sello": "fb775b49f82a"
+  },
+  {
+    "titulo": "Aprendiz Control y Gestión de Calidad",
+    "empresa": "Grupo Bios",
+    "ubicacion": "Caldas, Antioquia, Colombia",
+    "url": "https://co.linkedin.com/jobs/view/aprendiz-control-y-gesti%C3%B3n-de-calidad-at-grupo-bios-4482861742",
+    "fecha_publicacion": "2026-10-23",
+    "fuente": "LinkedIn Jobs",
+    "linkedin_id": "4482861742",
+    "encontrada_ultima_corrida": false,
+    "ultima_deteccion": "2026-11-01",
+    "primera_deteccion": "2026-10-28",
+    "descripcion_fuente": "En Grupo BIOS somos una población diversa e incluyente donde el valor de nuestra gente radica en su actitud y en sus ganas de sumar, creemos en las segundas oportunidades y abrimos nuestras puertas, promoviendo procesos de selección basados en competencias y valores. En Comercial + Bios, compañía de Grupo BIOS , nos encontramos en la búsqueda de un Aprendiz quien se sumará a nuestro equipo para trabajar por el propósito de nutrir a todos desarrollando el campo colombiano. Si eres estudiante de Control y Gestión de Calidad, Sistemas de Gestión, Producción Industrial o afines, esta oportunidad es para ti. ¿Qué necesitas para aplicar? Disponibilidad para firmar contrato de aprendizaje. Tener la posibilidad de residir en Antioquia- Valle de Aburrá Nuestra Compañía Ofrece Para Ti Poliza de vida Contrato directo con la compañía Apoyo de sostenimiento en etapa productiva del 100% smmlv Beneficios emocionales. Si compartes nuestro compromiso de nutrir a todos y desarrollar el campo colombiano, ¡Postúlate !",
+    "tipo_empleo": "Jornada completa",
+    "estado_vigencia": "Aviso abierto en LinkedIn al momento del rastreo",
+    "ramas": [
+      {
+        "clave": "simulaciones_datos_ia",
+        "nombre": "Análisis de Datos, IA y Simulaciones",
+        "color": "#06b6d4",
+        "score": 63
+      },
+      {
+        "clave": "instrumentacion_metrologia",
+        "nombre": "Instrumentación, Automatización y Metrología",
+        "color": "#10b981",
+        "score": 61
+      },
+      {
+        "clave": "optica_vision_artificial",
+        "nombre": "Óptica, Fotónica y Visión Artificial",
+        "color": "#a855f7",
+        "score": 53
+      }
+    ],
+    "rama_principal": "Análisis de Datos, IA y Simulaciones",
+    "color_principal": "#06b6d4",
+    "clave_principal": "simulaciones_datos_ia",
+    "afinidad": "Alta Afinidad Pénsum",
+    "es_exclusiva_fisica": false,
+    "programa_inclusion_genero": false,
+    "convocatoria_exclusiva_mujeres": false,
+    "es_cierre_inminente": false,
+    "es_practica": true,
+    "score_pensum": 63,
+    "empresa_objetivo": false,
+    "mision": "En Grupo BIOS somos una población diversa e incluyente donde el valor de nuestra gente radica en su actitud y en sus ganas de sumar, creemos en las segundas oportunidades y abrimos nuestras puertas, promoviendo procesos de selección basados en competencias y valores. En Comercial + Bios, compañía de Grupo BIOS , nos encontramos en la búsqueda de un Aprendiz quien se sumará a nuestro equipo para tr",
+    "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables.",
+    "_tareas_generadas": true,
+    "_sello": "be9d5e435b28"
+  },
+  {
+    "titulo": "Aprendiz Calidad",
+    "empresa": "Grupo Bios",
+    "ubicacion": "Caldas, Antioquia, Colombia",
+    "url": "https://co.linkedin.com/jobs/view/aprendiz-calidad-at-grupo-bios-4482873060",
+    "fecha_publicacion": "2026-10-23",
+    "fuente": "LinkedIn Jobs",
+    "linkedin_id": "4482873060",
+    "encontrada_ultima_corrida": false,
+    "ultima_deteccion": "2026-11-01",
+    "primera_deteccion": "2026-10-28",
+    "descripcion_fuente": "En Grupo BIOS somos una población diversa e incluyente donde el valor de nuestra gente radica en su actitud y en sus ganas de sumar, creemos en las segundas oportunidades y abrimos nuestras puertas, promoviendo procesos de selección basados en competencias y valores. En Comercial + Bios, compañía de Grupo BIOS , nos encontramos en la búsqueda de un Aprendiz quien se sumará a nuestro equipo para trabajar por el propósito de nutrir a todos desarrollando el campo colombiano. Si eres estudiante de Control y Gestión de Calidad, Sistemas de Gestión, Producción Industrial o afines, esta oportunidad es para ti. ¿Qué necesitas para aplicar? Disponibilidad para firmar contrato de aprendizaje. Tener la posibilidad de residir en Antioquia- Valle de Aburrá Nuestra Compañía Ofrece Para Ti Poliza de vida Contrato directo con la compañía Apoyo de sostenimiento en etapa productiva del 100% smmlv Beneficios emocionales. Si compartes nuestro compromiso de nutrir a todos y desarrollar el campo colombiano, ¡Postúlate!",
+    "tipo_empleo": "Jornada completa",
+    "estado_vigencia": "No reapareció en esta búsqueda; revisar vigencia en la fuente",
+    "ramas": [
+      {
+        "clave": "simulaciones_datos_ia",
+        "nombre": "Análisis de Datos, IA y Simulaciones",
+        "color": "#06b6d4",
+        "score": 63
+      },
+      {
+        "clave": "instrumentacion_metrologia",
+        "nombre": "Instrumentación, Automatización y Metrología",
+        "color": "#10b981",
+        "score": 61
+      },
+      {
+        "clave": "optica_vision_artificial",
+        "nombre": "Óptica, Fotónica y Visión Artificial",
+        "color": "#a855f7",
+        "score": 53
+      }
+    ],
+    "rama_principal": "Análisis de Datos, IA y Simulaciones",
+    "color_principal": "#06b6d4",
+    "clave_principal": "simulaciones_datos_ia",
+    "afinidad": "Alta Afinidad Pénsum",
+    "es_exclusiva_fisica": false,
+    "programa_inclusion_genero": false,
+    "convocatoria_exclusiva_mujeres": false,
+    "es_cierre_inminente": false,
+    "es_practica": true,
+    "score_pensum": 63,
+    "empresa_objetivo": false,
+    "mision": "En Grupo BIOS somos una población diversa e incluyente donde el valor de nuestra gente radica en su actitud y en sus ganas de sumar, creemos en las segundas oportunidades y abrimos nuestras puertas, promoviendo procesos de selección basados en competencias y valores. En Comercial + Bios, compañía de Grupo BIOS , nos encontramos en la búsqueda de un Aprendiz quien se sumará a nuestro equipo para tr",
+    "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables.",
+    "_tareas_generadas": true,
+    "_sello": "deacf4480583"
+  },
+  {
+    "titulo": "Practicante en Ingeniería Industrial, Administrativa, Financiera, Ciencias de Datos, Administración con énfasis en analítica o afines",
+    "empresa": "Solenis",
+    "ubicacion": "Bogotá, Distrito Capital, Colombia · remoto o híbrido (confirmar en el aviso)",
+    "url": "https://co.linkedin.com/jobs/view/practicante-en-ingenier%C3%ADa-industrial-administrativa-financiera-ciencias-de-datos-administraci%C3%B3n-con-%C3%A9nfasis-en-anal%C3%ADtica-o-afines-at-solenis-4349461149",
+    "fecha_publicacion": "2026-01-06",
+    "fuente": "LinkedIn Jobs",
+    "linkedin_id": "4349461149",
+    "search_scope": "COLOMBIA",
+    "encontrada_ultima_corrida": false,
+    "ultima_deteccion": "2026-11-01",
+    "primera_deteccion": "2026-10-24",
+    "descripcion_fuente": "Posición: practicante en Ingeniería Industrial, Administrativa, Financiera, Ciencias de Datos, Administración con énfasis en analítica o afines Enfoque: Recursos Humanos. Lugar de trabajo: hibrido Modelo de trabajo: Contrato de aprendizaje SENA – 1 año. Principales Actividades Optimizar procesos internos del área de RH. Gestionar y depurar bases de datos de empleados. Generar reportes y dashboards para toma de decisiones. Apoyar en proyectos de automatización y mejora continua. Automatizar procesos repetitivos del área de RH. Apoyar proyectos de digitalización y eficiencia operativa. Requisitos Estudiante de pregrado de Ingeniería Industrial, Administrativa, Financiera, Ciencias de Datos, Administración con énfasis en analítica o afines Conocimientos en manejo de herramientas de automatización y análisis de datos. No haber firmado antes contrato de aprendizaje con el SENA Acerca de Solenis Somos una industria química que cada día se propone resolver retos complejos en el tratamiento del agua, la mejora de procesos y la higiene para clientes en los mercados de consumo, industrial, institucional, de alimentos y bebidas, y de agua de piscinas y spas, a través de personas, experiencia y tecnología. Somos líderes mundiales en la producción y aplicación de especialidades químicas, centrados en proporcionar soluciones sostenibles para sectores con un uso intensivo de agua, incluidos los mercados de consumo, industrial, institucional, de alimentos y bebidas, y de agua de piscinas y spas. Nuestra misión es ser un socio y aportar valor al resolver retos operativos y de sostenibilidad con las personas adecuadas, la experiencia adecuada y la tecnología adecuada, con soluciones que ayudan a preservar los recursos naturales y promueven entornos más limpios y seguros. En Solenis encontrarás un excelente ambiente de trabajo, con autonomía, retos y oportunidades de crecimiento. Valoramos la diversidad y estamos en un camino constante para convertirnos en una empresa más diversa e inclusiva cada día, lo que se refleja en nuestros procesos de selección. Reiteramos que todas las personas son bienvenidas, independientemente de su género, raza, orientación sexual, identidad de género, edad, discapacidad o cualquier otra característica. El candidato seleccionado deberá tener una ética de trabajo ejemplar y altos estándares de integridad. ¡Únase al equipo de Solenis!",
+    "tipo_empleo": "Jornada completa",
+    "alcance_geografico": "Fuera de Antioquia; remoto o híbrido según el aviso",
+    "estado_vigencia": "Aviso abierto en LinkedIn al momento del rastreo",
+    "ramas": [
+      {
+        "clave": "simulaciones_datos_ia",
+        "nombre": "Análisis de Datos, IA y Simulaciones",
+        "color": "#06b6d4",
+        "score": 63
+      },
+      {
+        "clave": "electronica_digital_iot",
+        "nombre": "Electrónica Digital, Microcontroladores e IoT",
+        "color": "#3b82f6",
+        "score": 58
+      },
+      {
+        "clave": "instrumentacion_metrologia",
+        "nombre": "Instrumentación, Automatización y Metrología",
+        "color": "#10b981",
+        "score": 58
+      }
+    ],
+    "rama_principal": "Análisis de Datos, IA y Simulaciones",
+    "color_principal": "#06b6d4",
+    "clave_principal": "simulaciones_datos_ia",
+    "afinidad": "Alta Afinidad Pénsum",
+    "es_exclusiva_fisica": false,
+    "programa_inclusion_genero": false,
+    "convocatoria_exclusiva_mujeres": false,
+    "es_cierre_inminente": false,
+    "es_practica": true,
+    "score_pensum": 63,
+    "empresa_objetivo": false,
+    "mision": "Posición: practicante en Ingeniería Industrial, Administrativa, Financiera, Ciencias de Datos, Administración con énfasis en analítica o afines Enfoque: Recursos Humanos. Lugar de trabajo: hibrido Modelo de trabajo: Contrato de aprendizaje SENA – 1 año. Principales Actividades Optimizar procesos internos del área de RH. Gestionar y depurar bases de datos de empleados. Generar reportes y dashboards",
+    "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables.",
+    "_tareas_generadas": true,
+    "_sello": "b9d0c79583d9"
   },
   {
     "titulo": "Robotics intern",
@@ -9205,42 +9251,6 @@
     "_sello": "94dd96b318d3"
   },
   {
-    "titulo": "Aprendiz de Mantenimiento",
-    "empresa": "Laboratorio Maria Salome",
-    "ubicacion": "Medellín, Antioquia",
-    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-aprendiz-de-mantenimiento-medellin-en-medellin-419FCE286F652C0961373E686DCF3405",
-    "fecha_publicacion": "Reciente",
-    "fuente": "Computrabajo",
-    "encontrada_ultima_corrida": true,
-    "ultima_deteccion": "2026-11-01",
-    "primera_deteccion": "2026-10-23",
-    "descripcion_fuente": "Descripción de la oferta A convenir Contrato de aprendizaje Tiempo Completo En Laboratorio María Salomé, empresa colombiana del sector cosmético con más de 40 años de trayectoria, buscamos para nuestro equipo un Aprendiz de Mantenimiento que desee iniciar su etapa productiva y fortalecer su desarrollo profesional. Requisitos Ser estudiante de Automatización Industrial o programas afines. No haber firmado contrato de aprendizaje y estar disponible para etapa productiva. Contar con disposición para aprender y asumir nuevos retos. Tener habilidades de trabajo en equipo y buena actitud. Formación: Técnica o tecnológica en Automatización Industrial o afines. Tipo de contrato: Contrato de aprendizaje. Sobre nosotros Somos una empresa colombiana del sector cosmético, con más de 40 años en el mercado. A través de la investigación, desarrollo, fabricación y comercialización de productos innovadores para el cuidado del cabello a base de extractos naturales, generamos bienestar a nuestros clientes, colaboradores y grupos de interés en el mercado nacional e internacional. ¡Si cumples con los requisitos y quieres crecer con nosotros, postúlate! Requerimientos Educación mínima: Universidad / Carrera técnica años de experiencia Palabras clave: apprentice, internship, traine, maintenance, conservacion, conservation, mantenimiento Hace 5 días (actualizada) Aplicar Postulado Avísame con ofertas similares </",
-    "estado_vigencia": "No reapareció en esta búsqueda; revisar vigencia en la fuente",
-    "ramas": [
-      {
-        "clave": "instrumentacion_metrologia",
-        "nombre": "Instrumentación, Automatización y Metrología",
-        "color": "#10b981",
-        "score": 58
-      }
-    ],
-    "rama_principal": "Instrumentación, Automatización y Metrología",
-    "color_principal": "#10b981",
-    "clave_principal": "instrumentacion_metrologia",
-    "afinidad": "Alta Afinidad Pénsum",
-    "es_exclusiva_fisica": false,
-    "programa_inclusion_genero": false,
-    "convocatoria_exclusiva_mujeres": false,
-    "es_cierre_inminente": false,
-    "es_practica": true,
-    "score_pensum": 58,
-    "empresa_objetivo": false,
-    "mision": "Descripción de la oferta A convenir Contrato de aprendizaje Tiempo Completo En Laboratorio María Salomé, empresa colombiana del sector cosmético con más de 40 años de trayectoria, buscamos para nuestro equipo un Aprendiz de Mantenimiento que desee iniciar su etapa productiva y fortalecer su desarrollo profesional. Requisitos Ser estudiante de Automatización Industrial o programas afines. No haber ",
-    "tareas": "Levantamiento de curvas de calibración, programación en LabVIEW, enlace con autómatas PLC y aseguramiento metrológico ISO 17025.",
-    "_tareas_generadas": true,
-    "_sello": "63fd02baa0df"
-  },
-  {
     "titulo": "Practicante de calidad para Apartadó 349787-184",
     "empresa": "Servicio de Empleo Comfama",
     "ubicacion": "Apartadó, Antioquia",
@@ -9331,6 +9341,42 @@
     "tareas": "Levantamiento de curvas de calibración, programación en LabVIEW, enlace con autómatas PLC y aseguramiento metrológico ISO 17025.",
     "_tareas_generadas": true,
     "_sello": "3603945f000f"
+  },
+  {
+    "titulo": "Aprendiz de Mantenimiento",
+    "empresa": "Laboratorio Maria Salome",
+    "ubicacion": "Medellín, Antioquia",
+    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-aprendiz-de-mantenimiento-medellin-en-medellin-419FCE286F652C0961373E686DCF3405",
+    "fecha_publicacion": "Reciente",
+    "fuente": "Computrabajo",
+    "encontrada_ultima_corrida": false,
+    "ultima_deteccion": "2026-11-01",
+    "primera_deteccion": "2026-10-23",
+    "descripcion_fuente": "Descripción de la oferta A convenir Contrato de aprendizaje Tiempo Completo En Laboratorio María Salomé, empresa colombiana del sector cosmético con más de 40 años de trayectoria, buscamos para nuestro equipo un Aprendiz de Mantenimiento que desee iniciar su etapa productiva y fortalecer su desarrollo profesional. Requisitos Ser estudiante de Automatización Industrial o programas afines. No haber firmado contrato de aprendizaje y estar disponible para etapa productiva. Contar con disposición para aprender y asumir nuevos retos. Tener habilidades de trabajo en equipo y buena actitud. Formación: Técnica o tecnológica en Automatización Industrial o afines. Tipo de contrato: Contrato de aprendizaje. Sobre nosotros Somos una empresa colombiana del sector cosmético, con más de 40 años en el mercado. A través de la investigación, desarrollo, fabricación y comercialización de productos innovadores para el cuidado del cabello a base de extractos naturales, generamos bienestar a nuestros clientes, colaboradores y grupos de interés en el mercado nacional e internacional. ¡Si cumples con los requisitos y quieres crecer con nosotros, postúlate! Requerimientos Educación mínima: Universidad / Carrera técnica años de experiencia Palabras clave: apprentice, internship, traine, maintenance, conservacion, conservation, mantenimiento Hace 5 días (actualizada) Aplicar Postulado Avísame con ofertas similares </",
+    "estado_vigencia": "No reapareció en esta búsqueda; revisar vigencia en la fuente",
+    "ramas": [
+      {
+        "clave": "instrumentacion_metrologia",
+        "nombre": "Instrumentación, Automatización y Metrología",
+        "color": "#10b981",
+        "score": 58
+      }
+    ],
+    "rama_principal": "Instrumentación, Automatización y Metrología",
+    "color_principal": "#10b981",
+    "clave_principal": "instrumentacion_metrologia",
+    "afinidad": "Alta Afinidad Pénsum",
+    "es_exclusiva_fisica": false,
+    "programa_inclusion_genero": false,
+    "convocatoria_exclusiva_mujeres": false,
+    "es_cierre_inminente": false,
+    "es_practica": true,
+    "score_pensum": 58,
+    "empresa_objetivo": false,
+    "mision": "Descripción de la oferta A convenir Contrato de aprendizaje Tiempo Completo En Laboratorio María Salomé, empresa colombiana del sector cosmético con más de 40 años de trayectoria, buscamos para nuestro equipo un Aprendiz de Mantenimiento que desee iniciar su etapa productiva y fortalecer su desarrollo profesional. Requisitos Ser estudiante de Automatización Industrial o programas afines. No haber ",
+    "tareas": "Levantamiento de curvas de calibración, programación en LabVIEW, enlace con autómatas PLC y aseguramiento metrológico ISO 17025.",
+    "_tareas_generadas": true,
+    "_sello": "63fd02baa0df"
   },
   {
     "titulo": "Aprendiz ingeniero de proyectos",
@@ -9583,7 +9629,7 @@
     "empresa": "National Laboratory of the Rockies",
     "ubicacion": "Umraniye, Estambul, Turquía · remoto internacional (elegibilidad por confirmar)",
     "url": "https://tr.linkedin.com/jobs/view/undergraduate-graduate-3-12-month-remote-intern-power-system-power-electronics-modeling-at-national-laboratory-of-the-rockies-4468009911",
-    "fecha_publicacion": "2026-10-10",
+    "fecha_publicacion": "2026-11-01",
     "fuente": "LinkedIn Jobs",
     "linkedin_id": "4468009911",
     "search_scope": "WORLDWIDE",
@@ -9901,7 +9947,7 @@
     "fecha_publicacion": "2026-10-26",
     "fuente": "LinkedIn Jobs",
     "linkedin_id": "4483712946",
-    "encontrada_ultima_corrida": true,
+    "encontrada_ultima_corrida": false,
     "ultima_deteccion": "2026-11-01",
     "primera_deteccion": "2026-10-28",
     "descripcion_fuente": "🚀 En Hogar Universal creemos que las personas son el motor de nuestra transformación. Impulsamos una cultura de aprendizaje continuo, innovación y trabajo colaborativo para construir el futuro de nuestra organización. Si te apasiona el mundo de la producción y quieres desarrollar tu experiencia en procesos productivos y de mejora continua, ¡esta oportunidad es para ti! ✨ ¡Estamos buscando nuestro próximo(a) Practicante de Producción! 🎯 Requisitos Estudiante técnico o tecnólogo en Producción Industrial, Procesos Industriales, Ingeniería Industrial o áreas afines. Disponible para iniciar prácticas en etapa productiva. Manejo básico de herramientas Office. 📌 Principales funciones Revisar y actualizar los instructivos y procedimientos de producción, con el visto bueno de jefes y coordinadores del área. Revisar y actualizar los entrenamientos del personal operativo de producción, con el visto bueno de jefes y coordinadores del área. Participar activamente en los procesos de mejora continua del área de producción. Apoyar la elaboración de documentos como vales, traslados, remisiones y registros de capacitación. Realizar la toma de tiempos para el cierre de las WO (órdenes de trabajo). Apoyar la transferencia de documentos al CAD. 💡 Conocimientos deseables Toma de tiempos. Manejo de personal operativo. Redacción de instructivos. Herramientas Office básicas. ✨ Competencias Proactividad. Trabajo en equipo. Orientación al aprendizaje. 📍 Ubicación: Medellín ¡Postúlate y crece con nosotros mientras contribuyes a optimizar los procesos que transforman el futuro de Hogar Universal!",
@@ -9968,44 +10014,6 @@
     "_sello": "1259aa2189f3"
   },
   {
-    "titulo": "Practicante producción",
-    "empresa": "POSTOBON S.A.",
-    "ubicacion": "Bello, Antioquia, Colombia",
-    "url": "https://co.linkedin.com/jobs/view/practicante-producci%C3%B3n-at-postobon-s-a-4475055428",
-    "fecha_publicacion": "2026-10-02",
-    "fuente": "LinkedIn Jobs",
-    "linkedin_id": "4475055428",
-    "encontrada_ultima_corrida": true,
-    "ultima_deteccion": "2026-11-01",
-    "primera_deteccion": "2026-10-28",
-    "descripcion_fuente": "Objetivo del Cargo Apoyar al equipo de calidad en la ejecución de toma de muestras con el fin de garantizar el aseguramiento de la calidad e inocuidad a lo largo de la cadena productiva. Formación Académica Estudiantes Técnicos o Tecnólogos en Procesos Industriales, producción o afines. Horario y Ubicación Lugar: Postobón Bello Horario Lunes a viernes: 07:00 a. m. a 04:00 p. m. Tipo de Contrato Contrato de Aprendizaje. Salario $1.750.905 + prestaciones de ley. Competencias Requeridas Proactividad. Capacidad de análisis. Iniciativa y deseos de aprender. Responsabilidad. Buena comunicación. Trabajo en equipo. ¿Por qué unirte a nosotros? Te ofrecemos la oportunidad de adquirir experiencia práctica en el área de calidad dentro de una empresa reconocida a nivel nacional, fortalecer tus conocimientos técnicos, participar activamente en el aseguramiento de la calidad e inocuidad y desarrollarte en un entorno dinámico y de aprendizaje continuo.",
-    "tipo_empleo": "Prácticas",
-    "estado_vigencia": "Aviso abierto en LinkedIn al momento del rastreo",
-    "ramas": [
-      {
-        "clave": "general",
-        "nombre": "Ingeniería General / Operaciones",
-        "color": "#64748b",
-        "score": 5
-      }
-    ],
-    "rama_principal": "Ingeniería General / Operaciones",
-    "color_principal": "#64748b",
-    "clave_principal": "general",
-    "afinidad": "General",
-    "es_exclusiva_fisica": false,
-    "programa_inclusion_genero": false,
-    "convocatoria_exclusiva_mujeres": false,
-    "es_cierre_inminente": false,
-    "es_practica": true,
-    "score_pensum": 15,
-    "empresa_objetivo": true,
-    "mision": "Objetivo del Cargo Apoyar al equipo de calidad en la ejecución de toma de muestras con el fin de garantizar el aseguramiento de la calidad e inocuidad a lo largo de la cadena productiva. Formación Académica Estudiantes Técnicos o Tecnólogos en Procesos Industriales, producción o afines. Horario y Ubicación Lugar: Postobón Bello Horario Lunes a viernes: 07:00 a. m. a 04:00 p. m. Tipo de Contrato Co",
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
-    "_tareas_generadas": true,
-    "_sello": "78db904930f6"
-  },
-  {
     "titulo": "PRACTICANTE DESARROLLO 2026 II 1",
     "empresa": "Holcim ABS",
     "ubicacion": "Medellín, Antioquia, Colombia",
@@ -10042,6 +10050,44 @@
     "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
     "_tareas_generadas": true,
     "_sello": "7a8eb6aae032"
+  },
+  {
+    "titulo": "Practicante producción",
+    "empresa": "POSTOBON S.A.",
+    "ubicacion": "Bello, Antioquia, Colombia",
+    "url": "https://co.linkedin.com/jobs/view/practicante-producci%C3%B3n-at-postobon-s-a-4475055428",
+    "fecha_publicacion": "2026-10-02",
+    "fuente": "LinkedIn Jobs",
+    "linkedin_id": "4475055428",
+    "encontrada_ultima_corrida": false,
+    "ultima_deteccion": "2026-11-01",
+    "primera_deteccion": "2026-10-28",
+    "descripcion_fuente": "Objetivo del Cargo Apoyar al equipo de calidad en la ejecución de toma de muestras con el fin de garantizar el aseguramiento de la calidad e inocuidad a lo largo de la cadena productiva. Formación Académica Estudiantes Técnicos o Tecnólogos en Procesos Industriales, producción o afines. Horario y Ubicación Lugar: Postobón Bello Horario Lunes a viernes: 07:00 a. m. a 04:00 p. m. Tipo de Contrato Contrato de Aprendizaje. Salario $1.750.905 + prestaciones de ley. Competencias Requeridas Proactividad. Capacidad de análisis. Iniciativa y deseos de aprender. Responsabilidad. Buena comunicación. Trabajo en equipo. ¿Por qué unirte a nosotros? Te ofrecemos la oportunidad de adquirir experiencia práctica en el área de calidad dentro de una empresa reconocida a nivel nacional, fortalecer tus conocimientos técnicos, participar activamente en el aseguramiento de la calidad e inocuidad y desarrollarte en un entorno dinámico y de aprendizaje continuo.",
+    "tipo_empleo": "Prácticas",
+    "estado_vigencia": "No reapareció en esta búsqueda; revisar vigencia en la fuente",
+    "ramas": [
+      {
+        "clave": "general",
+        "nombre": "Ingeniería General / Operaciones",
+        "color": "#64748b",
+        "score": 5
+      }
+    ],
+    "rama_principal": "Ingeniería General / Operaciones",
+    "color_principal": "#64748b",
+    "clave_principal": "general",
+    "afinidad": "General",
+    "es_exclusiva_fisica": false,
+    "programa_inclusion_genero": false,
+    "convocatoria_exclusiva_mujeres": false,
+    "es_cierre_inminente": false,
+    "es_practica": true,
+    "score_pensum": 15,
+    "empresa_objetivo": true,
+    "mision": "Objetivo del Cargo Apoyar al equipo de calidad en la ejecución de toma de muestras con el fin de garantizar el aseguramiento de la calidad e inocuidad a lo largo de la cadena productiva. Formación Académica Estudiantes Técnicos o Tecnólogos en Procesos Industriales, producción o afines. Horario y Ubicación Lugar: Postobón Bello Horario Lunes a viernes: 07:00 a. m. a 04:00 p. m. Tipo de Contrato Co",
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
+    "_tareas_generadas": true,
+    "_sello": "78db904930f6"
   },
   {
     "titulo": "Aprendiz profesional Ingenieria de Sotfware",
@@ -10383,44 +10429,6 @@
     "estado_vigencia": "No reapareció en esta búsqueda; revisar vigencia en la fuente"
   },
   {
-    "titulo": "Practicante de TI",
-    "empresa": "Yuxi Global powered by Veritas Automata",
-    "ubicacion": "Medellín, Antioquia, Colombia",
-    "url": "https://co.linkedin.com/jobs/view/practicante-de-ti-at-yuxi-global-powered-by-veritas-automata-4477097482",
-    "fecha_publicacion": "2026-10-15",
-    "fuente": "LinkedIn Jobs",
-    "linkedin_id": "4477097482",
-    "encontrada_ultima_corrida": true,
-    "ultima_deteccion": "2026-11-01",
-    "primera_deteccion": "2026-10-24",
-    "descripcion_fuente": "Yuxi Global is an American company with high functional teams across Latin America. We stay updated with the most modern, edge practices and technologies. Our teams are versatile, adaptable and have expertise in a wide range of programming languages, databases and frameworks. This is your invitation to someone who loves working with the newest technologies and is on top of what’s next. Do you have a keen eye for performance and are you always seeking the highest quality in code? We are looking for someone like you! Descripción del empleo El Practicante de TI desempeñará un rol operativo y de soporte en esquema híbrido (3 días presenciales en Medellín y 2 días remotos) bajo un contrato de aprendizaje SENA. Su función principal es brindar atención de primer nivel ( L1 ) a usuarios finales mediante la resolución de solicitudes básicas en Jira Service Management, mantenimiento inicial de sistemas operativos (Windows, macOS, Linux) y tareas administrativas básicas en Microsoft 365. Asimismo, actuará como el punto de contacto presencial en la oficina para garantizar la operatividad técnica cotidiana y brindar respaldo durante ausencias planificadas del equipo. Además del soporte técnico, la posición contempla la gestión integral del ciclo de vida de los activos de TI, encargándose del maquetado, configuración, entrega y recolección de equipos en procesos de onboarding y offboarding dentro de un SLA máximo de 3 días. El practicante también mantendrá actualizado el inventario, apoyará el seguimiento de contratos de leasing y realizará el monitoreo diario de consolas de seguridad y agentes en modo de solo lectura. Para este perfil se requieren conocimientos básicos en TI y habilidades blandas clave como organización, atención al detalle, sentido de urgencia, honestidad y proactividad. Responsabilidades Generales Atención y Soporte Nivel 1 (L1): Atender solicitudes básicas de usuarios finales, diagnosticar problemas cotidianos y resolver tickets bajo la orientación del Administrador de TI. Ciclo de Vida de Activos de TI: Apoyar la preparación, entrega, seguimiento, inventario y logística de devolución de equipos de cómputo bajo la supervisión del Business Manager. Monitoreo Operativo: Ejecutar rutinas de verificación y monitoreo en consolas de TI en modo de solo lectura o visor, siguiendo listas de chequeo predefinidas. Soporte Presencial en Sitio: Actuar como el punto de contacto e infraestructura física en la oficina de Medellín para atender tareas que requieran p",
-    "tipo_empleo": "Prácticas",
-    "estado_vigencia": "Aviso abierto en LinkedIn al momento del rastreo",
-    "ramas": [
-      {
-        "clave": "general",
-        "nombre": "Ingeniería General / Operaciones",
-        "color": "#64748b",
-        "score": 5
-      }
-    ],
-    "rama_principal": "Ingeniería General / Operaciones",
-    "color_principal": "#64748b",
-    "clave_principal": "general",
-    "afinidad": "General",
-    "es_exclusiva_fisica": false,
-    "programa_inclusion_genero": false,
-    "convocatoria_exclusiva_mujeres": false,
-    "es_cierre_inminente": false,
-    "es_practica": true,
-    "score_pensum": 0,
-    "empresa_objetivo": false,
-    "mision": "Yuxi Global is an American company with high functional teams across Latin America. We stay updated with the most modern, edge practices and technologies. Our teams are versatile, adaptable and have expertise in a wide range of programming languages, databases and frameworks. This is your invitation to someone who loves working with the newest technologies and is on top of what’s next. Do you have",
-    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
-    "_tareas_generadas": true,
-    "_sello": "ad0aa11e00e9"
-  },
-  {
     "titulo": "Aprendiz Mantenimiento",
     "empresa": "Grupo Bios",
     "ubicacion": "Barbosa, Antioquia, Colombia",
@@ -10459,18 +10467,18 @@
     "_sello": "8e23f2799d0d"
   },
   {
-    "titulo": "Aprendiz de Producción",
-    "empresa": "LABORATORIO MARÍA SALOMÉ",
+    "titulo": "Practicante de TI",
+    "empresa": "Yuxi Global powered by Veritas Automata",
     "ubicacion": "Medellín, Antioquia, Colombia",
-    "url": "https://co.linkedin.com/jobs/view/aprendiz-de-producci%C3%B3n-at-laboratorio-mar%C3%ADa-salom%C3%A9-4474545690",
-    "fecha_publicacion": "2026-10-01",
+    "url": "https://co.linkedin.com/jobs/view/practicante-de-ti-at-yuxi-global-powered-by-veritas-automata-4477097482",
+    "fecha_publicacion": "2026-10-15",
     "fuente": "LinkedIn Jobs",
-    "linkedin_id": "4474545690",
+    "linkedin_id": "4477097482",
     "encontrada_ultima_corrida": true,
     "ultima_deteccion": "2026-11-01",
-    "primera_deteccion": "2026-10-28",
-    "descripcion_fuente": "¡ÚNETE A NUESTRO EQUIPO EN EL LABORATORIO MARÍA SALOMÉ! ¿Te apasiona la producción? Estamos buscando un aprendiz en Técnico o Tecnología Industrial o áreas afines para fortalecer nuestro equipo en el laboratorio cosmético líder en la fabricación de productos capilares. ¿A quién buscamos? Un estudiante con enfoque práctico, motivado por aprender y crecer dentro del mundo de la producción en el sector cosmético. Requisitos Ser estudiante de Tecnología o Técnico Industrial o carreras técnicas y tecnológicas afines. Conocimientos previos en Métodos y Tiempos o Producción. No haber firmado contrato de aprendizaje SENA anteriormente y estar disponible para firmar en etapa productiva. Actitud proactiva y disposición para aprender en un ambiente de producción. Trabajo en equipo y comunicación efectiva para contribuir al éxito colectivo. Si cumples con los requisitos y deseas ser parte de nuestro equipo, ¡esperamos tu postulación!",
-    "tipo_empleo": "Jornada completa",
+    "primera_deteccion": "2026-10-24",
+    "descripcion_fuente": "Yuxi Global is an American company with high functional teams across Latin America. We stay updated with the most modern, edge practices and technologies. Our teams are versatile, adaptable and have expertise in a wide range of programming languages, databases and frameworks. This is your invitation to someone who loves working with the newest technologies and is on top of what’s next. Do you have a keen eye for performance and are you always seeking the highest quality in code? We are looking for someone like you! Descripción del empleo El Practicante de TI desempeñará un rol operativo y de soporte en esquema híbrido (3 días presenciales en Medellín y 2 días remotos) bajo un contrato de aprendizaje SENA. Su función principal es brindar atención de primer nivel ( L1 ) a usuarios finales mediante la resolución de solicitudes básicas en Jira Service Management, mantenimiento inicial de sistemas operativos (Windows, macOS, Linux) y tareas administrativas básicas en Microsoft 365. Asimismo, actuará como el punto de contacto presencial en la oficina para garantizar la operatividad técnica cotidiana y brindar respaldo durante ausencias planificadas del equipo. Además del soporte técnico, la posición contempla la gestión integral del ciclo de vida de los activos de TI, encargándose del maquetado, configuración, entrega y recolección de equipos en procesos de onboarding y offboarding dentro de un SLA máximo de 3 días. El practicante también mantendrá actualizado el inventario, apoyará el seguimiento de contratos de leasing y realizará el monitoreo diario de consolas de seguridad y agentes en modo de solo lectura. Para este perfil se requieren conocimientos básicos en TI y habilidades blandas clave como organización, atención al detalle, sentido de urgencia, honestidad y proactividad. Responsabilidades Generales Atención y Soporte Nivel 1 (L1): Atender solicitudes básicas de usuarios finales, diagnosticar problemas cotidianos y resolver tickets bajo la orientación del Administrador de TI. Ciclo de Vida de Activos de TI: Apoyar la preparación, entrega, seguimiento, inventario y logística de devolución de equipos de cómputo bajo la supervisión del Business Manager. Monitoreo Operativo: Ejecutar rutinas de verificación y monitoreo en consolas de TI en modo de solo lectura o visor, siguiendo listas de chequeo predefinidas. Soporte Presencial en Sitio: Actuar como el punto de contacto e infraestructura física en la oficina de Medellín para atender tareas que requieran p",
+    "tipo_empleo": "Prácticas",
     "estado_vigencia": "Aviso abierto en LinkedIn al momento del rastreo",
     "ramas": [
       {
@@ -10491,10 +10499,10 @@
     "es_practica": true,
     "score_pensum": 0,
     "empresa_objetivo": false,
-    "mision": "¡ÚNETE A NUESTRO EQUIPO EN EL LABORATORIO MARÍA SALOMÉ! ¿Te apasiona la producción? Estamos buscando un aprendiz en Técnico o Tecnología Industrial o áreas afines para fortalecer nuestro equipo en el laboratorio cosmético líder en la fabricación de productos capilares. ¿A quién buscamos? Un estudiante con enfoque práctico, motivado por aprender y crecer dentro del mundo de la producción en el sect",
+    "mision": "Yuxi Global is an American company with high functional teams across Latin America. We stay updated with the most modern, edge practices and technologies. Our teams are versatile, adaptable and have expertise in a wide range of programming languages, databases and frameworks. This is your invitation to someone who loves working with the newest technologies and is on top of what’s next. Do you have",
     "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
     "_tareas_generadas": true,
-    "_sello": "b09ce56d60e5"
+    "_sello": "ad0aa11e00e9"
   },
   {
     "titulo": "Practicante IT / Sistemas y Soporte de Sistemas Informáticos | Medellín y Bogotá",
@@ -10533,5 +10541,43 @@
     "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
     "_tareas_generadas": true,
     "_sello": "e0f9ff986114"
+  },
+  {
+    "titulo": "Aprendiz de Producción",
+    "empresa": "LABORATORIO MARÍA SALOMÉ",
+    "ubicacion": "Medellín, Antioquia, Colombia",
+    "url": "https://co.linkedin.com/jobs/view/aprendiz-de-producci%C3%B3n-at-laboratorio-mar%C3%ADa-salom%C3%A9-4474545690",
+    "fecha_publicacion": "2026-10-01",
+    "fuente": "LinkedIn Jobs",
+    "linkedin_id": "4474545690",
+    "encontrada_ultima_corrida": false,
+    "ultima_deteccion": "2026-11-01",
+    "primera_deteccion": "2026-10-28",
+    "descripcion_fuente": "¡ÚNETE A NUESTRO EQUIPO EN EL LABORATORIO MARÍA SALOMÉ! ¿Te apasiona la producción? Estamos buscando un aprendiz en Técnico o Tecnología Industrial o áreas afines para fortalecer nuestro equipo en el laboratorio cosmético líder en la fabricación de productos capilares. ¿A quién buscamos? Un estudiante con enfoque práctico, motivado por aprender y crecer dentro del mundo de la producción en el sector cosmético. Requisitos Ser estudiante de Tecnología o Técnico Industrial o carreras técnicas y tecnológicas afines. Conocimientos previos en Métodos y Tiempos o Producción. No haber firmado contrato de aprendizaje SENA anteriormente y estar disponible para firmar en etapa productiva. Actitud proactiva y disposición para aprender en un ambiente de producción. Trabajo en equipo y comunicación efectiva para contribuir al éxito colectivo. Si cumples con los requisitos y deseas ser parte de nuestro equipo, ¡esperamos tu postulación!",
+    "tipo_empleo": "Jornada completa",
+    "estado_vigencia": "Aviso abierto en LinkedIn al momento del rastreo",
+    "ramas": [
+      {
+        "clave": "general",
+        "nombre": "Ingeniería General / Operaciones",
+        "color": "#64748b",
+        "score": 5
+      }
+    ],
+    "rama_principal": "Ingeniería General / Operaciones",
+    "color_principal": "#64748b",
+    "clave_principal": "general",
+    "afinidad": "General",
+    "es_exclusiva_fisica": false,
+    "programa_inclusion_genero": false,
+    "convocatoria_exclusiva_mujeres": false,
+    "es_cierre_inminente": false,
+    "es_practica": true,
+    "score_pensum": 0,
+    "empresa_objetivo": false,
+    "mision": "¡ÚNETE A NUESTRO EQUIPO EN EL LABORATORIO MARÍA SALOMÉ! ¿Te apasiona la producción? Estamos buscando un aprendiz en Técnico o Tecnología Industrial o áreas afines para fortalecer nuestro equipo en el laboratorio cosmético líder en la fabricación de productos capilares. ¿A quién buscamos? Un estudiante con enfoque práctico, motivado por aprender y crecer dentro del mundo de la producción en el sect",
+    "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
+    "_tareas_generadas": true,
+    "_sello": "b09ce56d60e5"
   }
 ]

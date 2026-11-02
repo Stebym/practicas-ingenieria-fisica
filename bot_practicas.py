@@ -570,9 +570,10 @@ def company_is_target(company):
         _target_company_re = re.compile(rf"(?<![a-z0-9])(?:{pattern})(?![a-z0-9])") if pattern else re.compile(r"(?!x)x")
     return bool(_target_company_re.search(normalize_match_text(company)))
 
-# Presupuesto de hasta 5 h 50 min para recorrer las fuentes configuradas con pausas.
+# Presupuesto de 5 h 30 min: el job de GitHub muere a los 360 min y, después de
+# este límite, aún faltan búsquedas web, verificación, guardado y git push.
 BOT_START_TIME = time.time()
-MAX_RUNTIME_SECONDS = 350 * 60
+MAX_RUNTIME_SECONDS = 330 * 60
 
 def time_budget_exceeded(margin_seconds=0):
     return (time.time() - BOT_START_TIME) >= (MAX_RUNTIME_SECONDS - margin_seconds)
@@ -1873,7 +1874,7 @@ def main():
     previous_jobs = load_json(OUTPUT_JSON)
     all_raw_jobs = merge_job_snapshots(list(collected.values()), previous_jobs if isinstance(previous_jobs, list) else [])
     print(f"[*] Con la corrida anterior: {len(all_raw_jobs)} vacantes para verificar")
-    verified_raw_jobs = filter_verified_jobs(all_raw_jobs, max_workers=25)
+    verified_raw_jobs = filter_verified_jobs(all_raw_jobs)
     print(f"[*] Clasificando, filtrando y ordenando {len(verified_raw_jobs)} vacantes verificadas por afinidad al pénsum UNAL...")
     
     classified_jobs = []

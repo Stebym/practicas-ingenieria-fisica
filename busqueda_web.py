@@ -27,7 +27,8 @@ HEADERS = {
     "Accept": "text/html,application/xhtml+xml",
     "Accept-Language": "es-CO,es;q=0.9,en;q=0.8",
 }
-INTERVALO_S = 6.0
+# Espaciado conservador para dar margen a los buscadores y evitar bloqueos.
+INTERVALO_S = 10.0
 _lock = threading.Lock()
 _ultima = [0.0]
 

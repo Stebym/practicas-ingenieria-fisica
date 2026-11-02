@@ -570,17 +570,16 @@ def company_is_target(company):
         _target_company_re = re.compile(rf"(?<![a-z0-9])(?:{pattern})(?![a-z0-9])") if pattern else re.compile(r"(?!x)x")
     return bool(_target_company_re.search(normalize_match_text(company)))
 
-# Presupuesto global de tiempo (4 h 45 min, dentro del límite de 5 h de GitHub Actions)
-# para recorrer absolutamente todas las búsquedas y empresas sin recortar nada.
+# Presupuesto de hasta 5 h 50 min para recorrer las fuentes configuradas con pausas.
 BOT_START_TIME = time.time()
-MAX_RUNTIME_SECONDS = 285 * 60
+MAX_RUNTIME_SECONDS = 350 * 60
 
 def time_budget_exceeded(margin_seconds=0):
     return (time.time() - BOT_START_TIME) >= (MAX_RUNTIME_SECONDS - margin_seconds)
 
 # LinkedIn responde 429 si recibe más de ~10 consultas seguidas. Antes el bot
 # tomaba ese 429 como "cero resultados" y perdía casi todas sus búsquedas.
-LINKEDIN_MIN_INTERVAL = 2.2
+LINKEDIN_MIN_INTERVAL = 4.0
 LINKEDIN_STATS = Counter()
 _linkedin_lock = threading.Lock()
 _linkedin_next_allowed = [0.0]
@@ -763,7 +762,7 @@ def scrape_computrabajo_query(query, pages=2):
         results.extend(page_results)
         if len(page_results) < 20:
             break
-        time.sleep(0.3)
+        time.sleep(2.0)
     return results
 
 def _scrape_computrabajo_page(url):
@@ -803,7 +802,7 @@ def scrape_magneto_query(query, pages=4):
         results.extend(page_results)
         if len(page_results) < 20:
             break
-        time.sleep(0.3)
+        time.sleep(2.0)
     return results
 
 def _scrape_magneto_page(query, page):
@@ -1518,7 +1517,7 @@ def needs_detail_before_location(job):
     """Avisos de LinkedIn fuera de Antioquia: la modalidad solo aparece en la descripción."""
     return "linkedin.com" in job.get("url", "").lower() and not LOCAL_LOCATION_RE.search(str(job.get("ubicacion", "")))
 
-def filter_verified_jobs(jobs, max_workers=25):
+def filter_verified_jobs(jobs, max_workers=10):
     """Verifica enlaces en paralelo separando LinkedIn de los demás portales para no bloquear hilos."""
     in_profile = [job for job in jobs if job.get("curada") or not title_is_out_of_profile(job.get("titulo", ""))]
     print(f"[*] Perfil: {len(in_profile)} de {len(jobs)} ofertas con título afín (descartadas {len(jobs) - len(in_profile)})")
@@ -1650,7 +1649,7 @@ def main():
         *CARRERAS_ESPEJO_QUERIES,
     ]
     print(f"\n[*] Rastreando Computrabajo Antioquia ({len(computrabajo_queries)} búsquedas)...")
-    with concurrent.futures.ThreadPoolExecutor(max_workers=6) as executor:
+    with concurrent.futures.ThreadPoolExecutor(max_workers=3) as executor:
         for q_ct, jobs in zip(computrabajo_queries, executor.map(scrape_computrabajo_query, computrabajo_queries)):
             add_jobs(jobs, f"Computrabajo '{q_ct}'")
 
@@ -1698,12 +1697,12 @@ def main():
         "aprendices y practicantes 2027-1",
     ]
     print(f"\n[*] Rastreando Magneto365 en tiempo real ({len(magneto_queries)} búsquedas)...")
-    with concurrent.futures.ThreadPoolExecutor(max_workers=8) as executor:
+    with concurrent.futures.ThreadPoolExecutor(max_workers=3) as executor:
         for q_mag, jobs in zip(magneto_queries, executor.map(scrape_magneto_query, magneto_queries)):
             add_jobs(jobs, f"Magneto365 '{q_mag}'")
 
     print(f"\n[*] Magneto365 por empresa objetivo ({len(target_companies)} empresas)...")
-    with concurrent.futures.ThreadPoolExecutor(max_workers=8) as executor:
+    with concurrent.futures.ThreadPoolExecutor(max_workers=3) as executor:
         mag_comp_futures = [executor.submit(scrape_magneto_query, f"practicante {comp}", 1) for comp in target_companies]
         for comp, fut in zip(target_companies, mag_comp_futures):
             try:
@@ -1728,7 +1727,7 @@ def main():
         *CARRERAS_ESPEJO_QUERIES,
     ]
     print(f"\n[*] Rastreando ElEmpleo.com Medellín ({len(elempleo_queries)} búsquedas)...")
-    with concurrent.futures.ThreadPoolExecutor(max_workers=6) as executor:
+    with concurrent.futures.ThreadPoolExecutor(max_workers=3) as executor:
         for q_ee, jobs in zip(elempleo_queries, executor.map(scrape_elempleo_query, elempleo_queries)):
             add_jobs(jobs, f"ElEmpleo '{q_ee}'")
 
@@ -1744,7 +1743,7 @@ def main():
         "practicante mecatronica",
     ]
     print(f"\n[*] Rastreando ElEmpleo.com Nacional ({len(elempleo_nacional_queries)} búsquedas)...")
-    with concurrent.futures.ThreadPoolExecutor(max_workers=6) as executor:
+    with concurrent.futures.ThreadPoolExecutor(max_workers=3) as executor:
         ee_nac_futs = [executor.submit(scrape_elempleo_query, q, "nacional") for q in elempleo_nacional_queries]
         for q_ee, fut in zip(elempleo_nacional_queries, ee_nac_futs):
             add_jobs(fut.result(), f"ElEmpleo Nacional '{q_ee}'")
@@ -1758,7 +1757,7 @@ def main():
     # 5b. Portales corporativos en Workday (prácticas que a veces no llegan a LinkedIn).
     portales = load_json(PORTALES_WORKDAY_PATH) or []
     print(f"\n[*] Rastreando {len(portales)} portales corporativos Workday...")
-    with concurrent.futures.ThreadPoolExecutor(max_workers=6) as executor:
+    with concurrent.futures.ThreadPoolExecutor(max_workers=3) as executor:
         for portal, jobs in zip(portales, executor.map(scrape_workday_portal, portales)):
             add_jobs(jobs, f"Workday {portal['empresa']}")
 
@@ -1771,13 +1770,13 @@ def main():
 
     # 5d. Portales corporativos en Greenhouse (Cuántica, Fotónica, IA, Datos).
     print(f"\n[*] Rastreando {len(GREENHOUSE_BOARDS)} portales corporativos Greenhouse (PsiQuantum, IonQ, Anthropic, Databricks...)...")
-    with concurrent.futures.ThreadPoolExecutor(max_workers=6) as executor:
+    with concurrent.futures.ThreadPoolExecutor(max_workers=3) as executor:
         for (_, cname), jobs in zip(GREENHOUSE_BOARDS, executor.map(scrape_greenhouse_board, GREENHOUSE_BOARDS)):
             add_jobs(jobs, f"Greenhouse {cname}")
 
     # 5e. Portales corporativos en SmartRecruiters (CERN, SGS, Bosch, Eurofins...).
     print(f"\n[*] Rastreando {len(SMARTRECRUITERS_COMPANIES)} portales corporativos SmartRecruiters (CERN, SGS, Bosch...)...")
-    with concurrent.futures.ThreadPoolExecutor(max_workers=5) as executor:
+    with concurrent.futures.ThreadPoolExecutor(max_workers=3) as executor:
         for (_, cname), jobs in zip(SMARTRECRUITERS_COMPANIES, executor.map(scrape_smartrecruiters_company, SMARTRECRUITERS_COMPANIES)):
             add_jobs(jobs, f"SmartRecruiters {cname}")
 

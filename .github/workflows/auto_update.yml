@@ -3,9 +3,8 @@ name: Bot de Practicas
 
 on:
   schedule:
-    # Dos veces al día en minutos fuera de hora pico UTC (07:17 y 19:17 hora Colombia).
-    - cron: '17 0 * * *'
-    - cron: '17 12 * * *'
+    # Una búsqueda diaria a las 2:00 a. m. hora Colombia (UTC-5).
+    - cron: '0 7 * * *'
   workflow_dispatch: # Permite ejecutarlo manualmente con un botón en GitHub
 
 permissions:
@@ -14,8 +13,8 @@ permissions:
 jobs:
   rastrear:
     runs-on: ubuntu-latest
-    # Margen amplio de hasta 5 horas (300 min) para rastrear todas las fuentes y empresas sin prisa.
-    timeout-minutes: 300
+    # GitHub permite hasta 6 horas por ejecución; el bot se detiene antes para guardar datos.
+    timeout-minutes: 360
     steps:
       - name: Descargar repositorio
         uses: actions/checkout@v4

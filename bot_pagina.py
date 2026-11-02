@@ -243,6 +243,19 @@ def build_full_html(vacantes, becas_data, convenios_data, retos_data):
     <div id="filterControls">
       <input type="text" id="searchInput" class="search-bar" placeholder="Buscar por materia, software o tecnología (ej. I2C, Python, Taller V, CAD, PLC, Cuántica, Radiaciones)..." onkeyup="handleFilter()">
 
+      <div class="external-search-links" aria-label="Búsquedas directas en Indeed">
+        <div class="external-search-heading">
+          <strong>Amplía la búsqueda en Indeed</strong>
+          <span>Abre los resultados originales, revisa requisitos y activa alertas en Indeed si te sirven.</span>
+        </div>
+        <div class="external-search-actions">
+          <a class="search-source-link" href="https://co.indeed.com/jobs?q=practicante+ingenier%C3%ADa+f%C3%ADsica&amp;l=Medell%C3%ADn%2C+Antioquia" target="_blank" rel="noopener noreferrer">Ing. Física · Medellín ↗</a>
+          <a class="search-source-link" href="https://co.indeed.com/jobs?q=practicante+f%C3%ADsica&amp;l=Medell%C3%ADn%2C+Antioquia" target="_blank" rel="noopener noreferrer">Física · Medellín ↗</a>
+          <a class="search-source-link" href="https://co.indeed.com/jobs?q=practicante+ingenier%C3%ADa&amp;l=Medell%C3%ADn%2C+Antioquia" target="_blank" rel="noopener noreferrer">Ingeniería · Medellín ↗</a>
+          <a class="search-source-link" href="https://co.indeed.com/jobs?q=practicante+ingenier%C3%ADa+remoto&amp;l=Colombia" target="_blank" rel="noopener noreferrer">Remotas · Colombia ↗</a>
+        </div>
+      </div>
+
       <div class="filters-row">
         <label class="filter-field">
           <span>Ordenar por</span>

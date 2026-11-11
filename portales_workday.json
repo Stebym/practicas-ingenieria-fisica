@@ -1,6 +1,14 @@
 [
- {"empresa": "Rockwell Automation", "tenant": "rockwellautomation", "servidor": "wd1", "sitio": "External_Rockwell_Automation"},
- {"empresa": "3M", "tenant": "3m", "servidor": "wd1", "sitio": "Search"},
- {"empresa": "Medtronic", "tenant": "medtronic", "servidor": "wd1", "sitio": "MedtronicCareers"},
- {"empresa": "Hitachi", "tenant": "hitachi", "servidor": "wd1", "sitio": "hitachi"}
+  {"empresa": "Rockwell Automation", "tenant": "rockwellautomation", "servidor": "wd1", "sitio": "External_Rockwell_Automation"},
+  {"empresa": "3M", "tenant": "3m", "servidor": "wd1", "sitio": "Search"},
+  {"empresa": "Medtronic", "tenant": "medtronic", "servidor": "wd1", "sitio": "MedtronicCareers"},
+  {"empresa": "Hitachi", "tenant": "hitachi", "servidor": "wd1", "sitio": "hitachi"},
+  {"empresa": "ABB", "tenant": "abb", "servidor": "wd3", "sitio": "External_Career_Page"},
+  {"empresa": "GE HealthCare", "tenant": "gehc", "servidor": "wd5", "sitio": "GEHC_ExternalSite"},
+  {"empresa": "GE Vernova", "tenant": "gevernova", "servidor": "wd5", "sitio": "Vernova_ExternalSite"},
+  {"empresa": "Johnson & Johnson", "tenant": "jj", "servidor": "wd5", "sitio": "JJ"},
+  {"empresa": "Baker Hughes", "tenant": "bakerhughes", "servidor": "wd5", "sitio": "BakerHughes"},
+  {"empresa": "Abbott", "tenant": "abbott", "servidor": "wd5", "sitio": "abbottcareers"},
+  {"empresa": "Baxter", "tenant": "baxter", "servidor": "wd1", "sitio": "Baxter"},
+  {"empresa": "Smurfit Westrock", "tenant": "westrock", "servidor": "wd5", "sitio": "WestRock_Careers"}
 ]

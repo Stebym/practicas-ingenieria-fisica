@@ -123,6 +123,10 @@ WEB_SEARCH_QUERIES = [
     ("practicante electromecánica PLC Medellín", "LOCAL"),
     ("practicante automatización industrial PLC SCADA Antioquia", "LOCAL"),
     ("practicante datos simulación ingeniería Antioquia afines", "LOCAL"),
+    ("practicante física médica radioterapia dosimetría Medellín", "LOCAL"),
+    ("practicante ingeniería biomédica hospital clínica Medellín", "LOCAL"),
+    ("practicante laboratorio materiales ensayos metrología Medellín", "LOCAL"),
+    ("practicante energía solar fotovoltaica potencia Medellín", "LOCAL"),
     ("Nutresa aprendices practicantes 2027-1 Colombia", "LOCAL"),
     ("Alkomprar prácticas universitarias 2027-1 Medellín", "LOCAL"),
     ("convocatoria prácticas Distrito Medellín 2027-1", "LOCAL"),
@@ -1092,6 +1096,62 @@ def scrape_smartrecruiters_company(comp_tuple):
             continue
     return results
 
+def scrape_torre_opportunities():
+    """Consulta la API pública de Torre.ai para pasantías y prácticas en Colombia (Antioquia o remoto)."""
+    url = "https://search.torre.co/opportunities/_search/?size=30&offset=0"
+    headers = {**HEADERS, "Accept": "application/json", "Content-Type": "application/json"}
+    results = []
+    seen = set()
+    for term in ("practicante", "pasantia", "aprendiz", "intern Colombia"):
+        payload = {
+            "and": [
+                {"keywords": {"term": term, "locale": "es"}},
+                {"status": {"code": "open"}},
+            ]
+        }
+        try:
+            r = requests.post(url, json=payload, headers=headers, timeout=10)
+            if r.status_code != 200:
+                continue
+            for row in r.json().get("results", []):
+                oid = row.get("id")
+                title = (row.get("objective") or "").strip()
+                if not oid or oid in seen or not title or not PRACTICE_RE.search(title):
+                    continue
+                locations = [str(x) for x in (row.get("locations") or [])]
+                loc_str = ", ".join(locations)
+                is_remote = bool(row.get("remote"))
+                is_colombia = any("colombia" in l.lower() or LOCAL_LOCATION_RE.search(l) for l in locations)
+                if not is_colombia:
+                    continue
+                seen.add(oid)
+                orgs = row.get("organizations") or []
+                empresa = (orgs[0].get("name") if orgs and isinstance(orgs[0], dict) else "Empresa en Torre.ai") or "Empresa en Torre.ai"
+                comp_obj = (row.get("compensation") or {}).get("data") or {}
+                min_amt = comp_obj.get("minAmount") or 0
+                currency = comp_obj.get("currency") or "COP"
+                compensacion = f"${min_amt:,.0f} {currency}".replace(",", ".") if min_amt else ""
+                skills = [s.get("name") for s in (row.get("skills") or []) if isinstance(s, dict) and s.get("name")]
+                perfil = ", ".join(skills[:6])
+                job = {
+                    "titulo": title,
+                    "empresa": empresa.strip(),
+                    "ubicacion": f"{loc_str or 'Colombia'} · remoto" if is_remote else (loc_str or "Colombia"),
+                    "modalidad": "Remoto" if is_remote else "",
+                    "url": f"https://torre.ai/postings/{oid}",
+                    "fecha_publicacion": (str(row.get("created") or "").split("T")[0]) or "Reciente",
+                    "fuente": "Torre.ai",
+                    "compensacion": compensacion,
+                    "perfil": perfil,
+                    "descripcion_fuente": f"{title}. Habilidades: {perfil}",
+                }
+                if not LOCAL_LOCATION_RE.search(loc_str):
+                    job["search_scope"] = "COLOMBIA"
+                results.append(job)
+        except Exception:
+            continue
+    return results
+
 def scrape_firstjob_query(query):
     """Consulta convocatorias de prácticas y semilleros en FirstJob Colombia."""
     url = f"https://firstjob.me/ofertas?country[]=47&title={quote(query)}"
@@ -1811,12 +1871,15 @@ def main():
         for portal, jobs in zip(portales, executor.map(scrape_workday_portal, portales)):
             add_jobs(jobs, f"Workday {portal['empresa']}")
 
-    # 5c. GetOnBoard (Datos, IA, IoT y Software en Colombia y Remoto LatAm).
+    # 5c. GetOnBoard y Torre.ai (Datos, IA, IoT, Física Computacional y Software en Colombia).
     getonboard_queries = ["practicante", "pasantia", "aprendiz", "intern", "internship", "trainee", "estudiante"]
     print(f"\n[*] Rastreando GetOnBoard ({len(getonboard_queries)} búsquedas)...")
     with concurrent.futures.ThreadPoolExecutor(max_workers=4) as executor:
         for q_gob, jobs in zip(getonboard_queries, executor.map(scrape_getonboard_query, getonboard_queries)):
             add_jobs(jobs, f"GetOnBoard '{q_gob}'")
+
+    print("\n[*] Rastreando Torre.ai (pasantías en Colombia y Antioquia)...")
+    add_jobs(scrape_torre_opportunities(), "Torre.ai Colombia")
 
     # 5d. Portales corporativos en Greenhouse (Cuántica, Fotónica, IA, Datos).
     print(f"\n[*] Rastreando {len(GREENHOUSE_BOARDS)} portales corporativos Greenhouse (PsiQuantum, IonQ, Anthropic, Databricks...)...")

@@ -48,7 +48,7 @@ HEADERS = {
 # Antioquia se acepta con cualquier modalidad. "Caldas" solo cuenta junto a
 # Antioquia para no confundir el municipio con el departamento de Caldas.
 LOCAL_LOCATION_RE = re.compile(
-    r"medell[ií]n|antioquia|valle de aburr[aá]|envigado|itag[uüíi]|\bbello\b|sabaneta|rionegro|"
+    r"(?<!autopista\s)medell[ií]n|antioquia|valle de aburr[aá]|envigado|itag[uüíi]|\bbello\b|sabaneta|rionegro|"
     r"apartad[oó]|la estrella|copacabana|girardota|caldas,?\s*antioquia|marinilla|barbosa|cisneros|"
     r"el retiro|guarne|santo domingo|puerto berr[ií]o|la ceja|carmen de viboral|el santuario|"
     r"santa fe de antioquia|segovia|remedios|caucasia|yarumal|turbo|carepa|chigorod[oó]|"
@@ -248,7 +248,7 @@ CARRERA_NO_AFIN_RE = re.compile(
     r"contrataci[oó]n|servicio\s+al\s+cliente|cumplimiento|comercial|ventas|selecci[oó]n|n[oó]mina|"
     r"cocina|barismo|hotel|finanz|negocios\s+internacionales|comercio\s+(?:exterior|internacional)|aduanas|auditor|tributari|riesgos|cr[eé]dito|seguros|bienestar|sst\b|"
     r"seguridad\s+y\s+salud|salud\s+ocupacional|seguridad\s+vial|talento|gesti[oó]n\s+humana|"
-    r"desarrollo\s+(?:social|humano|organizacional|comunitario|empresarial)|"
+    r"desarrollo\s+(?:social|humano|organizacional|comunitario|empresarial|del?\s+talento)|"
     r"corporativ|eventos|m[eé]dic[oa]s?\s+(?:general|especialista)|visitador|qu[ií]mic[oa]\s+farmac[eé]utic[oa]|regencia|farmacia|"
     r"criminal[ií]stica|forense|geolog[ií]a|ge[oó]log[oa]|investigaciones\s+econ[oó]micas|cartera|tesorer[ií]a|facturaci[oó]n|"
     r"calceter[ií]a|confecci[oó]n|empaques?\b|bodega|almac[eé]n|inventarios?\b|gesti[oó]n\s+integral\s+del\s+transporte|"
@@ -264,7 +264,7 @@ CARRERA_AFIN_RE = re.compile(
     r"biom[eé]dic|bioingenier|telecomunicaci|energ[ií]a|renovable|solar|"
     r"ciencias(?!\s+(?:agropecuarias|forenses|sociales|pol[ií]ticas|de\s+la\s+salud|econ[oó]micas|del\s+deporte|de\s+la\s+educaci[oó]n))|stem\b|"
     r"todas\s+las\s+ingenier[ií]as|cualquier\s+ingenier[ií]a|python|programaci|software|sotfware|"
-    r"desarroll(?:o(?!\s+(?:social|humano|organizacional|comunitario|empresarial|de\s+mercados|para\s+el\s+talento|de\s+medios))|ador)|"
+    r"desarroll(?:o(?!\s+(?:social|humano|organizacional|comunitario|empresarial|de\s+mercados|para\s+el\s+talento|del?\s+talento|de\s+medios))|ador)|"
     r"sistemas(?!\s+(?:integrados\s+de\s+gesti[oó]n|de\s+gesti[oó]n))|inform[aá]tica|ciberseguridad|ciberseguirdad|\bti\b|\bit\b|"
     r"tecnolog[ií]as?\s+de\s+(?:la\s+)?informaci[oó]n|digital\s+tecnolog[ií]a|"
     r"inteligencia\s+artificial|machine\s+learning|\bia\b|\bai\b|iot\b|embebid|rob[oó]tic|[oó]ptic|"
@@ -341,6 +341,9 @@ def title_is_out_of_profile(title, descripcion=None):
         return True
     if CARRERA_OTRA_RE.search(title):
         return descripcion is not None and not CARRERA_AFIN_EXPLICITA_RE.search(descripcion)
+    if descripcion is not None and title_is_generic_program(title):
+        if CARRERA_NO_AFIN_RE.search(descripcion) and not CARRERA_AFIN_EXPLICITA_RE.search(descripcion):
+            return True
     return False
 
 GENERIC_TITLE_FILLER_RE = re.compile(

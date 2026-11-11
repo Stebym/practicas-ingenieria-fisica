@@ -8052,5 +8052,516 @@
     "tareas": "Seguimiento de indicadores técnicos, soporte en optimización de procesos y documentación técnica de proyectos.",
     "_tareas_generadas": true,
     "_sello": "c4838d219ec8"
+  },
+  {
+    "titulo": "APRENDIZ-MEDELLÍN (Laboratorio de Pruebas y Ensayos de Materiales)",
+    "empresa": "SGS Colombia",
+    "ubicacion": "Medellín, Antioquia",
+    "modalidad": "Presencial",
+    "compensacion": "75% - 100% SMLMV (Contrato de aprendizaje)",
+    "url": "https://jobs.smartrecruiters.com/SGS/744000146081501-aprendiz-medellin",
+    "fuente": "SmartRecruiters (SGS)",
+    "fecha_publicacion": "2026-11-11",
+    "descripcion_fuente": "Realiza las labores correspondientes a la preparación de elementos, espacio y ambiente requeridos para las pruebas y ensayos a los materiales; así como la manipulación de las muestras y ejecución de ensayos autorizados por el Coordinador técnico en laboratorio de materiales en Medellín.",
+    "ramas": [
+      {
+        "clave": "materiales_nanotecnologia",
+        "nombre": "Ciencia de Materiales y Nanotecnología",
+        "color": "#14b8a6",
+        "score": 89
+      }
+    ],
+    "rama_principal": "Ciencia de Materiales y Nanotecnología",
+    "color_principal": "#14b8a6",
+    "clave_principal": "materiales_nanotecnologia",
+    "afinidad": "Alta Afinidad Pénsum",
+    "es_exclusiva_fisica": false,
+    "programa_inclusion_genero": false,
+    "convocatoria_exclusiva_mujeres": false,
+    "es_cierre_inminente": false,
+    "es_practica": true,
+    "score_pensum": 139,
+    "empresa_objetivo": true,
+    "mision": "Realiza las labores correspondientes a la preparación de elementos, espacio y ambiente requeridos para las pruebas y ensayos a los materiales; así como la manipulación de las muestras y ejecución de ensayos autorizados por el Coordinador técnico en laboratorio de materiales en Medellín.",
+    "tareas": "Operación de difractómetro de rayos X (DRX), microscopio electrónico (SEM), ensayos de tensión/impacto y análisis térmico (DSC/TGA).",
+    "_tareas_generadas": true,
+    "fecha_deteccion": "2026-11-11",
+    "ultima_vez_vista": "2026-11-11",
+    "encontrada_ultima_corrida": true,
+    "estado_vigencia": "Verificada abierta hoy",
+    "_sello": "44d94733ec21"
+  },
+  {
+    "titulo": "Convocatoria Practicantes Universitarios - Rionegro 2027-1 (Ingeniería y Operaciones)",
+    "empresa": "Essity",
+    "ubicacion": "Rionegro, Antioquia, Colombia",
+    "modalidad": "Presencial / Planta Rionegro",
+    "compensacion": "Apoyo de sostenimiento competitivo",
+    "url": "https://co.linkedin.com/jobs/view/convocatoria-practicantes-universitarios-rionegro-2027-1-at-essity-4488249150",
+    "fuente": "LinkedIn Jobs",
+    "fecha_publicacion": "2026-11-11",
+    "descripcion_fuente": "Convocatoria Practicantes Universitarios - Rionegro | Primer Semestre 2027 Acerca del rol En Essity buscamos estudiantes próximos a finalizar su etapa académica y listos para iniciar sus prácticas profesionales en julio de 2026. Tendrás la oportunidad de apoyar funciones operativas o administrativas según el área de trabajo y de tu programa de formación, al tiempo que adquieres experiencia real en una compañía global líder en higiene y salud. ¿A quién buscamos? Estudiantes de últimos semestres de carreras profesionales, con disponibilidad para iniciar práctica en etapa productiva en enero de 2027. Que provengan de instituciones o universidades avaladas por el SENA. Manejo de herramientas ofimáticas con nivel intermedio–avanzado, especialmente Excel. No haber firmado previamente un contrato de aprendizaje SENA. Áreas de práctica y programas de estudio Logística: Ingeniería Industrial con interés en procesos logísticos y análisis de datos. Manufactura: Ingeniería de Producción, Mecánico, Electrónico/Eléctrico, Procesos, Automatización y Control Mantenimiento: Ingeniería Mecánica, Mecatrónica o Eléctrica. Mejora continua en procesos productivos: Ingeniería Administriativa, Industrial, Administración o afines con interés en análisis de datos. Iniciativas: Ingeniería en Nanotecnología. Planeación y Almacenamiento: Ingeniería Industrial enfocada en análisis de datos y mejora de procesos. Información adicional Jornada laboral presencial de lunes a viernes (horario según el área). Beneficio mensual de paca con productos de la compañía. Servicio de alimentación (almuerzo). Para quienes residen en Medellín, ofrecemos ruta de transporte hacia la sede. Qué te ofrece nuestra Compañía Nuestro propósito, Romper Barreras para el Bienestar, da sentido a todo lo que hacemos. Únete a nosotros para mejorar el bienestar de las personas e impulsar un cambio positivo para la sociedad y el medio ambiente. En Essity, te sentirás valorado, capacitado para crecer y desafiado a conseguir resultados empresariales en un ambiente abierto y de colaboración. Innovar para el bien | Sobresalir juntos | Sé tú con nosotros. Application End Date: Job Requisition ID: Essity264927",
+    "tipo_empleo": "Jornada completa",
+    "estado_vigencia": "Verificada abierta hoy",
+    "perfil": "Ingeniería Física, Ingenieria Electronica, Ingenieria Mecatronica, Ingenieria De Control, Ingenieria Mecanica o afines",
+    "ramas": [
+      {
+        "clave": "instrumentacion_metrologia",
+        "nombre": "Instrumentación, Automatización y Metrología",
+        "color": "#10b981",
+        "score": 73
+      },
+      {
+        "clave": "simulaciones_datos_ia",
+        "nombre": "Análisis de Datos, IA y Simulaciones",
+        "color": "#06b6d4",
+        "score": 63
+      },
+      {
+        "clave": "electronica_digital_iot",
+        "nombre": "Electrónica Digital, Microcontroladores e IoT",
+        "color": "#3b82f6",
+        "score": 61
+      },
+      {
+        "clave": "materiales_nanotecnologia",
+        "nombre": "Ciencia de Materiales y Nanotecnología",
+        "color": "#14b8a6",
+        "score": 59
+      },
+      {
+        "clave": "electronica_analoga_circuitos",
+        "nombre": "Electrónica Análoga y Circuitos",
+        "color": "#8b5cf6",
+        "score": 53
+      },
+      {
+        "clave": "optica_vision_artificial",
+        "nombre": "Óptica, Fotónica y Visión Artificial",
+        "color": "#a855f7",
+        "score": 53
+      },
+      {
+        "clave": "energia_potencia",
+        "nombre": "Energía, Potencia y Renovables",
+        "color": "#eab308",
+        "score": 48
+      },
+      {
+        "clave": "diseno_mecanico_cad",
+        "nombre": "Diseño Mecánico y Dibujo Técnico",
+        "color": "#f97316",
+        "score": 23
+      }
+    ],
+    "rama_principal": "Instrumentación, Automatización y Metrología",
+    "color_principal": "#10b981",
+    "clave_principal": "instrumentacion_metrologia",
+    "afinidad": "Afinidad con Física",
+    "es_exclusiva_fisica": true,
+    "programa_inclusion_genero": false,
+    "convocatoria_exclusiva_mujeres": false,
+    "es_cierre_inminente": false,
+    "es_practica": true,
+    "score_pensum": 208,
+    "empresa_objetivo": true,
+    "mision": "Convocatoria Practicantes Universitarios - Rionegro | Primer Semestre 2027 Acerca del rol En Essity buscamos estudiantes próximos a finalizar su etapa académica y listos para iniciar sus prácticas profesionales en julio de 2026. Tendrás la oportunidad de apoyar funciones operativas o administrativas según el área de trabajo y de tu programa de formación, al tiempo que adquieres experiencia real en",
+    "tareas": "Levantamiento de curvas de calibración, programación en LabVIEW, enlace con autómatas PLC y aseguramiento metrológico ISO 17025.",
+    "_tareas_generadas": true,
+    "fecha_deteccion": "2026-11-11",
+    "ultima_vez_vista": "2026-11-11",
+    "encontrada_ultima_corrida": true,
+    "_sello": "fe94e5d1c2eb"
+  },
+  {
+    "titulo": "PRACTICANTE MEJORA CONTINUA 2027 I (Automatización, Datos y Procesos)",
+    "empresa": "Holcim ABS",
+    "ubicacion": "Medellín, Antioquia · híbrido",
+    "modalidad": "Híbrido",
+    "compensacion": "Apoyo de sostenimiento universitario",
+    "url": "https://co.linkedin.com/jobs/view/practicante-mejora-continua-2027-i-at-holcim-abs-4489181889",
+    "fuente": "LinkedIn Jobs",
+    "fecha_publicacion": "2026-11-11",
+    "descripcion_fuente": "Ubicación: Medellín, Antioquía, CO, 050010 Número de empleo: 20070 Somos el Centro de Servicios del Grupo Holcim en latinoamérica. Desde Americas Business Services (ABS) nos encargamos de gestionar los procesos clave para nuestros negocios siendo socios estratégicos a través de la generación de valor. Tenemos como objetivo brindar soluciones de clase mundial en áreas como: compras, comercial, talento humano, finanzas, contabilidad y servicio al cliente. Hacemos parte de Holcim, líder mundial en soluciones innovadoras y sostenibles para la construcción. Tenemos la misión de descarbonizar la construcción para mejorar los estándares de vida en todo el mundo, de la mano de nuestros 45.000 colaboradores. Nos enorgullece ser una compañía Top Employer, lo cual nos certifica como un empleador de primer nivel. Estamos comprometidos con brindar un entorno de trabajo excepcional donde todos puedan crecer y prosperar, a través de sólidas prácticas en Recursos Humanos y gestión de personas. TE ESTAMOS BUSCANDO: PRACTICANTE MEJORA CONTINUA Tus principales retos serán: Revisar las necesidades de cada proceso referente a temas de mejora y encontrar soluciones para cada una de ellas identificando, planeando , ejecutando y revisando las iniciativas de mejora. Priorizar la ejecución de los proyectos y actividades vinculados a la operación. Garantizar la ejecuccion y avances de las actividades asignadas con datos y hechos. Trabajo en equipo multidisciplinar en la identificación e implementación de las iniciativas. Lugar de trabajo: Medellín/hibrido. Requisitos indispensables: No haber firmado contrato de Aprendizaje. Estudiante activo de carreras profesionales, como: Ingenieria Industrial, Ingenieria Administrativa, Ingrenieria de procesos, Ingenieria de control y calidad, Ingenieria Financiera, Administrador de Negocios. Estar habilitado para iniciar etapa práctica 2027 - I (primer semestre del 2027). Excel intermedio. Cuota de sostenimiento (salario): $1.900.000 Conoce nuestros beneficios: Trabajo hibrido. Auxilio de transporte. 6 medios días libres. Oportunidades de crecimiento. #HolcimABS ¡NO TE PIERDAS LA OPORTUNIDAD DE SER PARTE DE NUESTRO EQUIPO! ¡CONSTRUYE PROGRESO CON NOSOTROS!",
+    "tipo_empleo": "Jornada completa",
+    "estado_vigencia": "Verificada abierta hoy",
+    "ramas": [
+      {
+        "clave": "simulaciones_datos_ia",
+        "nombre": "Análisis de Datos, IA y Simulaciones",
+        "color": "#06b6d4",
+        "score": 72
+      },
+      {
+        "clave": "instrumentacion_metrologia",
+        "nombre": "Instrumentación, Automatización y Metrología",
+        "color": "#10b981",
+        "score": 70
+      }
+    ],
+    "rama_principal": "Análisis de Datos, IA y Simulaciones",
+    "color_principal": "#06b6d4",
+    "clave_principal": "simulaciones_datos_ia",
+    "afinidad": "Alta Afinidad Pénsum",
+    "es_exclusiva_fisica": false,
+    "programa_inclusion_genero": false,
+    "convocatoria_exclusiva_mujeres": false,
+    "es_cierre_inminente": false,
+    "es_practica": true,
+    "score_pensum": 122,
+    "empresa_objetivo": true,
+    "mision": "Ubicación: Medellín, Antioquía, CO, 050010 Número de empleo: 20070 Somos el Centro de Servicios del Grupo Holcim en latinoamérica. Desde Americas Business Services (ABS) nos encargamos de gestionar los procesos clave para nuestros negocios siendo socios estratégicos a través de la generación de valor. Tenemos como objetivo brindar soluciones de clase mundial en áreas como: compras, comercial, tale",
+    "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables.",
+    "_tareas_generadas": true,
+    "fecha_deteccion": "2026-11-11",
+    "ultima_vez_vista": "2026-11-11",
+    "encontrada_ultima_corrida": true,
+    "_sello": "c0bce2f3b487"
+  },
+  {
+    "titulo": "Practicante de Ingeniería de Datos y Analítica de Negocios (80% Remoto)",
+    "empresa": "Eficacia",
+    "ubicacion": "Colombia · 80% remoto",
+    "modalidad": "Remoto / Híbrido",
+    "compensacion": "$1.750.905 COP",
+    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-practicante-de-ingenieria-de-datos-y-analitica-de-negocios-estudiantes-de-ingenieria-sistemas-informatica-telematica-electronica-ciencia-de-datos-o-afines-en-cali-61EB0964C99007F861373E686DCF3405",
+    "fuente": "Computrabajo",
+    "fecha_publicacion": "2026-11-11",
+    "descripcion_fuente": "Estudiantes de Ingeniería de Sistemas, Informática, Telemática, Electrónica, Ciencia de Datos o carreras afines para práctica en Ingeniería de Datos, ETL, SQL, Python, Power BI y Analítica de Negocios. Modalidad 80% virtual.",
+    "perfil": "Ingeniería Física, Ingenieria De Sistemas, Ciencia De Datos, Ingenieria Electronica, Sistemas o afines",
+    "ramas": [
+      {
+        "clave": "simulaciones_datos_ia",
+        "nombre": "Análisis de Datos, IA y Simulaciones",
+        "color": "#06b6d4",
+        "score": 93
+      },
+      {
+        "clave": "electronica_digital_iot",
+        "nombre": "Electrónica Digital, Microcontroladores e IoT",
+        "color": "#3b82f6",
+        "score": 58
+      },
+      {
+        "clave": "instrumentacion_metrologia",
+        "nombre": "Instrumentación, Automatización y Metrología",
+        "color": "#10b981",
+        "score": 58
+      },
+      {
+        "clave": "optica_vision_artificial",
+        "nombre": "Óptica, Fotónica y Visión Artificial",
+        "color": "#a855f7",
+        "score": 56
+      },
+      {
+        "clave": "electronica_analoga_circuitos",
+        "nombre": "Electrónica Análoga y Circuitos",
+        "color": "#8b5cf6",
+        "score": 53
+      }
+    ],
+    "rama_principal": "Análisis de Datos, IA y Simulaciones",
+    "color_principal": "#06b6d4",
+    "clave_principal": "simulaciones_datos_ia",
+    "afinidad": "Alta Afinidad Pénsum",
+    "es_exclusiva_fisica": false,
+    "programa_inclusion_genero": false,
+    "convocatoria_exclusiva_mujeres": false,
+    "es_cierre_inminente": false,
+    "es_practica": true,
+    "score_pensum": 128,
+    "empresa_objetivo": false,
+    "mision": "Estudiantes de Ingeniería de Sistemas, Informática, Telemática, Electrónica, Ciencia de Datos o carreras afines para práctica en Ingeniería de Datos, ETL, SQL, Python, Power BI y Analítica de Negocios. Modalidad 80% virtual.",
+    "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables.",
+    "_tareas_generadas": true,
+    "fecha_deteccion": "2026-11-11",
+    "ultima_vez_vista": "2026-11-11",
+    "encontrada_ultima_corrida": true,
+    "estado_vigencia": "Verificada abierta hoy",
+    "_sello": "efae9963037b"
+  },
+  {
+    "titulo": "Practicante en Análisis de Datos o Desarrollo de Software (Híbrido)",
+    "empresa": "Atain",
+    "ubicacion": "Bogotá, D.C. · presencial y remoto",
+    "modalidad": "Híbrido",
+    "compensacion": "SMLMV + afiliación ARL/EPS",
+    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-practicante-en-analisis-de-datos-o-desarrollo-de-software-en-bogota-dc-1F58FC304A1F131B61373E686DCF3405",
+    "fuente": "Computrabajo",
+    "fecha_publicacion": "2026-11-11",
+    "descripcion_fuente": "Practicante universitario de ingeniería de sistemas, ciencia de datos, ingeniería física, matemáticas, estadística o afines para análisis de datos, Python, SQL y desarrollo de software en modalidad presencial y remoto.",
+    "perfil": "Ingeniería Física, Matematicas, Estadistica, Ingenieria De Sistemas, Ciencia De Datos o afines",
+    "ramas": [
+      {
+        "clave": "simulaciones_datos_ia",
+        "nombre": "Análisis de Datos, IA y Simulaciones",
+        "color": "#06b6d4",
+        "score": 93
+      },
+      {
+        "clave": "optica_vision_artificial",
+        "nombre": "Óptica, Fotónica y Visión Artificial",
+        "color": "#a855f7",
+        "score": 53
+      }
+    ],
+    "rama_principal": "Análisis de Datos, IA y Simulaciones",
+    "color_principal": "#06b6d4",
+    "clave_principal": "simulaciones_datos_ia",
+    "afinidad": "Afinidad con Física",
+    "es_exclusiva_fisica": true,
+    "programa_inclusion_genero": false,
+    "convocatoria_exclusiva_mujeres": false,
+    "es_cierre_inminente": false,
+    "es_practica": true,
+    "score_pensum": 213,
+    "empresa_objetivo": false,
+    "mision": "Practicante universitario de ingeniería de sistemas, ciencia de datos, ingeniería física, matemáticas, estadística o afines para análisis de datos, Python, SQL y desarrollo de software en modalidad presencial y remoto.",
+    "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables.",
+    "_tareas_generadas": true,
+    "fecha_deteccion": "2026-11-11",
+    "ultima_vez_vista": "2026-11-11",
+    "encontrada_ultima_corrida": true,
+    "estado_vigencia": "Verificada abierta hoy",
+    "_sello": "e660c33f82f2"
+  },
+  {
+    "titulo": "Practicante de Inteligencia Artificial y Automatización RPA (100% Remoto)",
+    "empresa": "OUTSOURCING S.A.",
+    "ubicacion": "Colombia · remoto",
+    "modalidad": "Remoto",
+    "compensacion": "$1.750.905 COP",
+    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-estudiantes-de-ingenieria-de-sistemas-o-afines-contrato-de-aprendizaje-no-egresados-en-bogota-dc-49DC8316CB63BE2B61373E686DCF3405",
+    "fuente": "Computrabajo",
+    "fecha_publicacion": "2026-11-11",
+    "descripcion_fuente": "Estudiantes de ingeniería de sistemas, electrónica, física o carreras afines con contrato de aprendizaje para construcción y entrenamiento de agentes de inteligencia artificial de voz y texto, automatización RPA y Python en modalidad 100% remoto.",
+    "perfil": "Ingeniería Física, Ingenieria De Sistemas, Ingenieria Electronica, Sistemas o afines",
+    "ramas": [
+      {
+        "clave": "simulaciones_datos_ia",
+        "nombre": "Análisis de Datos, IA y Simulaciones",
+        "color": "#06b6d4",
+        "score": 90
+      },
+      {
+        "clave": "instrumentacion_metrologia",
+        "nombre": "Instrumentación, Automatización y Metrología",
+        "color": "#10b981",
+        "score": 70
+      },
+      {
+        "clave": "electronica_digital_iot",
+        "nombre": "Electrónica Digital, Microcontroladores e IoT",
+        "color": "#3b82f6",
+        "score": 58
+      },
+      {
+        "clave": "optica_vision_artificial",
+        "nombre": "Óptica, Fotónica y Visión Artificial",
+        "color": "#a855f7",
+        "score": 56
+      },
+      {
+        "clave": "electronica_analoga_circuitos",
+        "nombre": "Electrónica Análoga y Circuitos",
+        "color": "#8b5cf6",
+        "score": 53
+      }
+    ],
+    "rama_principal": "Análisis de Datos, IA y Simulaciones",
+    "color_principal": "#06b6d4",
+    "clave_principal": "simulaciones_datos_ia",
+    "afinidad": "Afinidad con Física",
+    "es_exclusiva_fisica": true,
+    "programa_inclusion_genero": false,
+    "convocatoria_exclusiva_mujeres": false,
+    "es_cierre_inminente": false,
+    "es_practica": true,
+    "score_pensum": 210,
+    "empresa_objetivo": false,
+    "mision": "Estudiantes de ingeniería de sistemas, electrónica, física o carreras afines con contrato de aprendizaje para construcción y entrenamiento de agentes de inteligencia artificial de voz y texto, automatización RPA y Python en modalidad 100% remoto.",
+    "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables.",
+    "_tareas_generadas": true,
+    "fecha_deteccion": "2026-11-11",
+    "ultima_vez_vista": "2026-11-11",
+    "encontrada_ultima_corrida": true,
+    "estado_vigencia": "Verificada abierta hoy",
+    "_sello": "b7a6aae2d9cd"
+  },
+  {
+    "titulo": "Practicante Análisis de Datos (Híbrido)",
+    "empresa": "Arcos Dorados (McDonald's)",
+    "ubicacion": "Bogotá, D.C. · presencial y remoto",
+    "modalidad": "Híbrido",
+    "compensacion": "SMLMV",
+    "url": "https://co.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-practicante-analisis-de-datos-mcdonalds-en-bogota-dc-2E02A43CF6A027EA61373E686DCF3405",
+    "fuente": "Computrabajo",
+    "fecha_publicacion": "2026-11-11",
+    "descripcion_fuente": "Estudiante universitario de Ingeniería, Estadística, Matemáticas, Economía o carreras afines para práctica en análisis de datos, tableros de visualización, SQL y Excel avanzado en modalidad híbrida.",
+    "perfil": "Ingeniería Física, Matematicas, Estadistica o afines",
+    "ramas": [
+      {
+        "clave": "simulaciones_datos_ia",
+        "nombre": "Análisis de Datos, IA y Simulaciones",
+        "color": "#06b6d4",
+        "score": 81
+      }
+    ],
+    "rama_principal": "Análisis de Datos, IA y Simulaciones",
+    "color_principal": "#06b6d4",
+    "clave_principal": "simulaciones_datos_ia",
+    "afinidad": "Alta Afinidad Pénsum",
+    "es_exclusiva_fisica": false,
+    "programa_inclusion_genero": false,
+    "convocatoria_exclusiva_mujeres": false,
+    "es_cierre_inminente": false,
+    "es_practica": true,
+    "score_pensum": 116,
+    "empresa_objetivo": false,
+    "mision": "Estudiante universitario de Ingeniería, Estadística, Matemáticas, Economía o carreras afines para práctica en análisis de datos, tableros de visualización, SQL y Excel avanzado en modalidad híbrida.",
+    "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables.",
+    "_tareas_generadas": true,
+    "fecha_deteccion": "2026-11-11",
+    "ultima_vez_vista": "2026-11-11",
+    "encontrada_ultima_corrida": true,
+    "estado_vigencia": "Verificada abierta hoy",
+    "_sello": "a4a0e72bae11"
+  },
+  {
+    "titulo": "A.I. Engineering Intern (Colombia)",
+    "empresa": "Sezzle",
+    "ubicacion": "Colombia · remoto",
+    "modalidad": "Remoto",
+    "compensacion": "Competitiva en USD/COP",
+    "url": "https://co.linkedin.com/jobs/view/a-i-engineering-intern-at-sezzle-4487952082",
+    "fuente": "LinkedIn Jobs",
+    "fecha_publicacion": "2026-11-11",
+    "descripcion_fuente": "About Sezzle{{{{~}}}} With a mission to financially empower the next generation, Sezzle is revolutionizing the shopping experience beyond payments, blending cutting-edge tech with seamless, interest-free installment plans that make shopping smarter and more accessible. We’re not just transforming payments; we’re redefining how people discover, interact with, and purchase the things they love while driving real impact on merchant sales through increased conversions and higher order values. As we continue to shape the future of fintech and retail, we’re building an innovative, dynamic team passionate about creating more than just a transaction but a truly unique shopping journey. If you’re excited about pushing boundaries in tech and delivering a game-changing experience for consumers and merchants alike, come join us at Sezzle and help create the future of shopping! About the Role{{{{~}}}} We are seeking a talented and motivated AI Engineering Intern who is best in class with a high IQ plus a high EQ. This role presents an exciting opportunity to thrive in a dynamic, fast-paced environment within a rapidly growing team, with abundant prospects for career advancement. You will join our Data Science team and play a key role in designing and building foundational A.I. systems at Sezzle. What You'll Do{{{{~}}}} Design A.I. systems from the ground up Generate reliable and accurate training data for our A.I. systems Collaborate closely with engineers, data analysts, and business end users to build effective systems Write accurate and efficient SQL queries What We Look For{{{{~}}}} Proficiency in SQL and Python Solid understanding of data analysis and database structures Currently enrolled in a postsecondary institution studying MIS, Business Demonstrated experience working with Claude or equivalent large language model tools is required; candidates must be comfortable leveraging AI to enhance productivity, research, and communication. Analytics/Data Analytics, Computer About You{{{{~}}}} You have relentlessly high standards - many people may think your standards are unreasonably high. You are continually raising the bar and driving those around you to deliver great results. You make sure that defects do not get sent down the line and that problems are fixed so they stay fixed. You’re not bound by convention - your success—and much of the fun—lies in developing new ways to do things You need action - speed matters in business. Many decisions and actions are revers",
+    "tipo_empleo": "Prácticas",
+    "estado_vigencia": "Verificada abierta hoy",
+    "ramas": [
+      {
+        "clave": "simulaciones_datos_ia",
+        "nombre": "Análisis de Datos, IA y Simulaciones",
+        "color": "#06b6d4",
+        "score": 75
+      },
+      {
+        "clave": "materiales_nanotecnologia",
+        "nombre": "Ciencia de Materiales y Nanotecnología",
+        "color": "#14b8a6",
+        "score": 53
+      }
+    ],
+    "rama_principal": "Análisis de Datos, IA y Simulaciones",
+    "color_principal": "#06b6d4",
+    "clave_principal": "simulaciones_datos_ia",
+    "afinidad": "Alta Afinidad Pénsum",
+    "es_exclusiva_fisica": false,
+    "programa_inclusion_genero": false,
+    "convocatoria_exclusiva_mujeres": false,
+    "es_cierre_inminente": false,
+    "es_practica": true,
+    "score_pensum": 110,
+    "empresa_objetivo": false,
+    "mision": "About Sezzle{{{{~}}}} With a mission to financially empower the next generation, Sezzle is revolutionizing the shopping experience beyond payments, blending cutting-edge tech with seamless, interest-free installment plans that make shopping smarter and more accessible. We’re not just transforming payments; we’re redefining how people discover, interact with, and purchase the things they love while",
+    "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables.",
+    "_tareas_generadas": true,
+    "fecha_deteccion": "2026-11-11",
+    "ultima_vez_vista": "2026-11-11",
+    "encontrada_ultima_corrida": true,
+    "_sello": "d94ed1bd564c"
+  },
+  {
+    "titulo": "Aprendiz de Inteligencia Artificial (Data & Analytics / IA)",
+    "empresa": "Factor IT",
+    "ubicacion": "Colombia · remoto",
+    "modalidad": "Remoto",
+    "compensacion": "Contrato de aprendizaje SMLMV",
+    "url": "https://co.linkedin.com/jobs/view/aprendiz-de-inteligencia-artificial-contrato-sena-at-factorit-4478633746",
+    "fuente": "LinkedIn Jobs",
+    "fecha_publicacion": "2026-11-11",
+    "descripcion_fuente": "En FactorIT impulsamos la transformación tecnológica con soluciones de Data & Analytics, IA y automatización para grandes empresas de Latinoamérica. Buscamos un/a AI Trainee para sumarse a nuestro equipo de Inteligencia Artificial en su etapa práctica. Aprenderás de la mano de AI Engineers, arquitectos y especialistas en IA Generativa, participando en proyectos reales con modelos de lenguaje, asistentes virtuales y automatización inteligente. ¿Qué harás? Apoyar la integración de modelos de IA Generativa mediante APIs y herramientas definidas por el equipo. Participar en la construcción de pruebas de concepto (PoC) con LLMs, asistentes virtuales y automatización inteligente. Preparar, organizar y validar datos usados en soluciones de IA. Crear y mantener prompts, plantillas conversacionales y configuraciones básicas de interacción con modelos. Ejecutar pruebas funcionales sobre soluciones de IA y documentar resultados, incidencias y mejoras. Documentar arquitecturas, flujos y configuraciones técnicas de los proyectos. Participar en reuniones técnicas, sesiones de refinamiento y seguimiento de proyectos. Investigar nuevos modelos, frameworks y herramientas de IA. Apoyar el monitoreo del desempeño de las soluciones implementadas. Requisitos excluyentes Estar habilitado/a para firmar contrato de aprendizaje SENA, en una de estas dos modalidades: Tecnólogo/a en Análisis y Desarrollo de Software (ADSO) o afines, del SENA u otra institución reconocida, que esté por iniciar o cursando su etapa productiva. Estudiante universitario de Ingeniería de Sistemas, Ingeniería Informática, Ingeniería de Software, Ciencia de Datos, Ciencias de la Computación o carreras afines, que esté cursando su semestre de práctica o el último semestre de la carrera, con aval de su institución para hacer la práctica bajo contrato de aprendizaje. Fundamentos de programación, idealmente en Python. Conceptos básicos de Inteligencia Artificial y Machine Learning. Conocimientos básicos de APIs y servicios web. Manejo de Git y control de versiones. Conceptos básicos de bases de datos SQL. Inglés técnico básico a intermedio. Habilidades blandas Comunicación asertiva, trabajo en equipo, pensamiento analítico, organización, innovación y capacidad de aprendizaje. Suma puntos Conocimientos iniciales de LLMs (GPT, Claude, Gemini) y prompt engineering. LangChain o herramientas similares, y conceptos básicos de RAG. GitHub Copilot u otras herramientas de IA para desarrollo. Certificaciones introductori",
+    "tipo_empleo": "Jornada completa",
+    "estado_vigencia": "Verificada abierta hoy",
+    "perfil": "Ingeniería Física, Ingenieria De Sistemas, Ciencia De Datos, Sistemas o afines",
+    "ramas": [
+      {
+        "clave": "simulaciones_datos_ia",
+        "nombre": "Análisis de Datos, IA y Simulaciones",
+        "color": "#06b6d4",
+        "score": 135
+      },
+      {
+        "clave": "instrumentacion_metrologia",
+        "nombre": "Instrumentación, Automatización y Metrología",
+        "color": "#10b981",
+        "score": 61
+      },
+      {
+        "clave": "optica_vision_artificial",
+        "nombre": "Óptica, Fotónica y Visión Artificial",
+        "color": "#a855f7",
+        "score": 53
+      }
+    ],
+    "rama_principal": "Análisis de Datos, IA y Simulaciones",
+    "color_principal": "#06b6d4",
+    "clave_principal": "simulaciones_datos_ia",
+    "afinidad": "Alta Afinidad Pénsum",
+    "es_exclusiva_fisica": false,
+    "programa_inclusion_genero": false,
+    "convocatoria_exclusiva_mujeres": false,
+    "es_cierre_inminente": false,
+    "es_practica": true,
+    "score_pensum": 170,
+    "empresa_objetivo": false,
+    "mision": "En FactorIT impulsamos la transformación tecnológica con soluciones de Data & Analytics, IA y automatización para grandes empresas de Latinoamérica. Buscamos un/a AI Trainee para sumarse a nuestro equipo de Inteligencia Artificial en su etapa práctica. Aprenderás de la mano de AI Engineers, arquitectos y especialistas en IA Generativa, participando en proyectos reales con modelos de lenguaje, asis",
+    "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables.",
+    "_tareas_generadas": true,
+    "fecha_deteccion": "2026-11-11",
+    "ultima_vez_vista": "2026-11-11",
+    "encontrada_ultima_corrida": true,
+    "_sello": "f6102154062d"
+  },
+  {
+    "titulo": "Intern Inteligencia de Mercados y Analítica - Medellín / Bogotá / Cali",
+    "empresa": "NielsenIQ",
+    "ubicacion": "Medellín, Antioquia / Bogotá / Cali",
+    "modalidad": "Híbrido",
+    "compensacion": "Apoyo de sostenimiento universitario",
+    "url": "https://co.linkedin.com/jobs/view/intern-inteligencia-de-mercados-bogot%C3%A1-cali-o-medellin-at-nielseniq-4461991548",
+    "fuente": "LinkedIn Jobs",
+    "fecha_publicacion": "2026-11-11",
+    "descripcion_fuente": "NIQ is the world's leading consumer intelligence company, delivering the most complete understanding of consumer buying behaviour and revealing new pathways to growth. In 2023, NIQ combined with GfK, bringing together two industry leaders with unparalleled global reach. Through advanced analytics, cutting-edge technology, and the industry's most comprehensive consumer insights, NIQ helps the world's leading brands understand consumers and make better business decisions. With operations in more than 100 markets, covering over 90% of the world's population, NIQ is shaping the future of consumer intelligence. Job Description ¿Te apasiona el análisis de datos y la toma de decisiones estratégicas? ¡Entonces este es el lugar para ti! En este puesto, tendrás la oportunidad de trabajar con herramientas de vanguardia, para analizar y visualizar datos que ayudan a grandes marcas a tomar decisiones estratégicas. ¡nos encantará que te unas a nuestro equipo! - Aprende herramientas top: Manejo de software de análisis de datos (Nielsen Answers, Connect Express). - Datos que importan: Actualiza y analiza información en presentaciones y reportes reales. - Detecta insights: Apoya en la revisión de bases de datos y encuentra patrones clave. - Trabajo en equipo: Colabora con Analytics y Customer Service para resolver retos reales de clientes. - Experiencia práctica: Sé parte del día a día de proyectos globales que impactan a grandes marcas. Qualifications Acerca de ti Debe ser una persona analítica, abierta a aprender, con habilidades de comunicación, comercial y proactiva, Requerimientos Únicamente estudiantes cursando últimos semestres de Administración, Economia, Mercadeo, Ingeniería Industrial, o afines. Contar con el aval de la universidad para realizar sus prácticas 2027-1 Inglés intermedio - Avanzado Paquetería de Microsoft Office (Excel Intermedio-Avanzado) Additional Information What You'll Get Structured onboarding and comprehensive training from day one. Ongoing mentoring and coaching from experienced colleagues. Experience working with AI-enabled technologies and modern data platforms. Opportunities to contribute to global transformation initiatives. Exposure to international teams and cross-functional projects. Continuous learning and development to build future-ready skills. Career mobility across Operations and the wider NIQ organisation. Our Recruitment Process We'll keep you informed throughout the process. In the meantime, this is what you can expect: Applic",
+    "tipo_empleo": "Jornada completa",
+    "estado_vigencia": "Verificada abierta hoy",
+    "ramas": [
+      {
+        "clave": "simulaciones_datos_ia",
+        "nombre": "Análisis de Datos, IA y Simulaciones",
+        "color": "#06b6d4",
+        "score": 72
+      }
+    ],
+    "rama_principal": "Análisis de Datos, IA y Simulaciones",
+    "color_principal": "#06b6d4",
+    "clave_principal": "simulaciones_datos_ia",
+    "afinidad": "Alta Afinidad Pénsum",
+    "es_exclusiva_fisica": false,
+    "programa_inclusion_genero": false,
+    "convocatoria_exclusiva_mujeres": false,
+    "es_cierre_inminente": false,
+    "es_practica": true,
+    "score_pensum": 107,
+    "empresa_objetivo": false,
+    "mision": "NIQ is the world's leading consumer intelligence company, delivering the most complete understanding of consumer buying behaviour and revealing new pathways to growth. In 2023, NIQ combined with GfK, bringing together two industry leaders with unparalleled global reach. Through advanced analytics, cutting-edge technology, and the industry's most comprehensive consumer insights, NIQ helps the world",
+    "tareas": "Programación en Python (NumPy, SciPy, Pandas, Scikit-learn), análisis exploratorio, métodos numéricos y optimización de variables.",
+    "_tareas_generadas": true,
+    "fecha_deteccion": "2026-11-11",
+    "ultima_vez_vista": "2026-11-11",
+    "encontrada_ultima_corrida": true,
+    "_sello": "17d185a73ebf"
   }
 ]

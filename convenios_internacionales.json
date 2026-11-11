@@ -941,6 +941,16 @@
   },
   {
     "ano": "2026",
+    "pais": "Francia",
+    "institucion": "Université Lumière Lyon 2",
+    "nombre": "ACUERDO DE COLABORACIÓN Y MOVILIDAD ACADÉMICA ENTRE LA UNIVERSIDAD NACIONAL DE COLOMBIA Y LA UNIVERSITÉ LUMIÈRE LYON 2",
+    "tipo": "Cooperación E Intercambio Académico",
+    "link": "https://drive.google.com/file/d/1a7snNh_o1PSHD_b9S97B9xSIppu3Bo2q/view?usp=sharing",
+    "area": "Todas Las Áreas",
+    "_sello": "2bfd1e219ce3"
+  },
+  {
+    "ano": "2026",
     "pais": "Hungría",
     "institucion": "Ministerio De Relaciones Exteriores Y Comercio De Hungría",
     "nombre": "ACUERDO NO. FCH-007-23 ENTRE LA UNIVERSIDAD NACIONAL DE COLOMBIA Y EL MINISTERIO DE RELACIONES EXTERIORES Y COMERCIO DE HUNGRÍA SOBRE LA ENSEÑANZA DE LA LENGUA Y LA CULTURA HÚNGARAS",
@@ -1095,9 +1105,9 @@
     "institucion": "Ministerio De Educación Superior, Ciencia Y Tecnología (Mescyt) De La República Dominicana",
     "nombre": "CONVENIO MARCO DE COLABORACIÓN ENTRE EL MINISTERIO DE EDUCACIÓN SUPERIOR, CIENCIA Y TECNOLOGÍA (MESCYT) DE LA REPÚBLICA DOMINICANA Y LA UNIVERSIDAD NACIONAL DE COLOMBIA",
     "tipo": "Cooperación E Intercambio Académico",
-    "link": "https://drive.google.com/file/d/1wH1N765a6iKu4Oo_n7grr6R6D67rCh_j/view?usp=sharing",
+    "link": "https://drive.google.com/file/d/1ciDxJrDQjqApJwAP7qDnu5KhYiBkK6d9/view?usp=sharing",
     "area": "Todas Las Áreas",
-    "_sello": "265b07d19358"
+    "_sello": "31c900448580"
   },
   {
     "ano": "2026",
@@ -10618,6 +10628,16 @@
     "link": "http://www.dre.unal.edu.co/uploads/tx_unalori/CI_2011_universidad_de_malaga.pdf",
     "area": "Todas Las Áreas",
     "_sello": "872ffd257e5b"
+  },
+  {
+    "ano": "2011",
+    "pais": "Estados Unidos",
+    "institucion": "Washington University In St. Louis",
+    "nombre": "ACUERDO DE COOPERACIÓN ACADÉMICA ENTRE LA UNIVERSIDAD NACIONAL DE COLOMBIA Y LA WASHINGTON UNIVERSITY EN ST. LOUIS",
+    "tipo": "Cooperación E Intercambio Académico",
+    "link": "http://www.dre.unal.edu.co/uploads/tx_unalori/CI_2011_universidad_de_washington_escuela_de_medicina_wusm.pdf",
+    "area": "Ciencias De La Salud",
+    "_sello": "5774d81d6924"
   },
   {
     "ano": "2011",

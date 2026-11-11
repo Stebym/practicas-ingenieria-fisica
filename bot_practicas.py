@@ -7,8 +7,8 @@ Licencia: PolyForm Noncommercial 1.0.0 con descargo de responsabilidad (ver LICE
 Rastrea prácticas en LinkedIn, Magneto365, Computrabajo, ElEmpleo, FirstJob,
 portales corporativos y búsqueda web, y las prioriza según el pénsum de
 Ingeniería Física UNAL.
-Alcance: Antioquia con cualquier modalidad; fuera de Antioquia solo remoto o
-híbrido; en el exterior solo remoto.
+Alcance: Antioquia con cualquier modalidad; fuera de Antioquia (resto de
+Colombia) solo remoto o híbrido.
 Salida: vacantes_practicas.json y vacantes_practicas.csv (la página la arma
 bot_pagina.py).
 """
@@ -57,43 +57,14 @@ LOCAL_LOCATION_RE = re.compile(
     r"santa rosa de osos|san jer[oó]nimo|sopetr[aá]n|buritic[aá]|briceño|ituango",
     re.IGNORECASE,
 )
-# Fuera de Antioquia (resto de Colombia o exterior) solo sirven prácticas
+# Fuera de Antioquia (resto de Colombia) solo sirven prácticas
 # remotas o híbridas.
 REMOTE_MODALITY_RE = re.compile(
     r"\b(?:remot[oa]s?|remote|teletrabajo|trabajo\s+(?:en\s+casa|desde\s+casa)|home[\s-]?office|"
-    r"work\s+from\s+home|h[ií]brid[oa]s?|hybrid|anywhere)\b",
+    r"work\s+from\s+home|h[ií]brid[oa]s?|hybrid)\b",
     re.IGNORECASE,
 )
-REMOTE_ONLY_RE = re.compile(r"\b(?:remot[oa]s?|remote|teletrabajo|work\s+from\s+home|anywhere)\b", re.IGNORECASE)
-REMOTE_WORLDWIDE_DESC_RE = re.compile(
-    r"\b(?:fully\s+remote|100\s*%\s*remote|remote[\s-]first|remote\s+(?:position|role|internship|opportunity)|"
-    r"work\s+remotely\s+from\s+anywhere|this\s+(?:is\s+a|role\s+is|position\s+is)\s+(?:fully\s+)?remote|"
-    r"open\s+to\s+(?:candidates\s+in\s+)?latin\s+america|latam)\b",
-    re.IGNORECASE,
-)
-REMOTE_NEGATION_RE = re.compile(
-    r"\b(?:not\s+(?:a\s+)?remote|non[\s-]remote|no\s+remote|not\s+eligible\s+for\s+remote|"
-    r"must\s+(?:be\s+)?(?:located|based|reside)\s+in\s+(?:the\s+)?(?:u\.?s\.?|united\s+states|india|china|canada|europe|germany)|"
-    r"work\s+authori[sz]ation\s+in\s+the\s+(?:u\.?s|united\s+states))\b",
-    re.IGNORECASE,
-)
-REMOTE_GLOBAL_SEARCH_QUERIES = [
-    "physics engineering internship remote worldwide",
-    "applied physics research intern remote",
-    "data science machine learning intern remote worldwide",
-    "python data analytics internship remote global",
-    "quantitative research intern remote worldwide",
-    "electronics embedded systems internship remote",
-    "automation control engineering internship remote",
-    "electromechanical engineering intern remote worldwide",
-    "industrial automation plc intern remote",
-    "materials science laboratory intern remote",
-    "optics photonics research internship remote",
-    "energy renewable engineering intern remote",
-    "computer vision image processing internship remote",
-    "engineering intern remote Latin America",
-    "remote internship anywhere engineering physics",
-]
+REMOTE_ONLY_RE = re.compile(r"\b(?:remot[oa]s?|remote|teletrabajo|work\s+from\s+home)\b", re.IGNORECASE)
 
 CARRERAS_ESPEJO_QUERIES = [
     "practicante ingenieria de control afines",
@@ -157,10 +128,6 @@ WEB_SEARCH_QUERIES = [
     ("convocatoria prácticas Distrito Medellín 2027-1", "LOCAL"),
     ("practicante ingeniería física remoto Colombia", "COLOMBIA"),
     ("práctica profesional ingeniería híbrida Colombia afines", "COLOMBIA"),
-    ("internship engineering physics remote worldwide", "WORLDWIDE"),
-    ("remote engineering internship Latin America", "WORLDWIDE"),
-    ("remote internship Python data science international", "WORLDWIDE"),
-    ("remote internship materials optics applied physics", "WORLDWIDE"),
 ]
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -493,7 +460,8 @@ def canonical_job_url(url):
 
 # Días que se conserva una vacante que dejó de aparecer en las búsquedas
 # (sigue sujeta a la verificación del enlace en cada corrida).
-DIAS_RETENCION_SIN_REAPARECER = 21
+DIAS_RETENCION_SIN_REAPARECER = 5
+MAX_DIAS_PUBLICACION = 45
 
 def merge_job_snapshots(current_jobs, previous_jobs):
     """Conserva vacantes previas si el portal no las devolvió en esta corrida."""
@@ -677,15 +645,12 @@ def scrape_linkedin_query(query, location="Medellin, Antioquia, Colombia", pages
             if title_is_out_of_profile(title):
                 continue
 
-            if location == "Worldwide":
-                if not re.search(r"\b(intern(?:ship)?|trainee|practicante|pasant[ií]a|pr[aá]ctica|student|co-?op)\b", title, re.IGNORECASE):
-                    continue
-                if iso_date:
-                    try:
-                        if (datetime.now().date() - datetime.fromisoformat(iso_date).date()).days > 45:
-                            continue
-                    except ValueError:
-                        pass
+            if iso_date:
+                try:
+                    if (datetime.now().date() - datetime.fromisoformat(iso_date).date()).days > MAX_DIAS_PUBLICACION:
+                        continue
+                except ValueError:
+                    pass
 
             job = {
                 "titulo": title,
@@ -698,9 +663,7 @@ def scrape_linkedin_query(query, location="Medellin, Antioquia, Colombia", pages
             id_m = re.search(r"(\d{8,})$", link)
             if id_m:
                 job["linkedin_id"] = id_m.group(1)
-            if location == "Worldwide":
-                job["search_scope"] = "WORLDWIDE"
-            elif location == "Colombia":
+            if location == "Colombia":
                 job["search_scope"] = "COLOMBIA"
             results.append(job)
         # Si LinkedIn devolvió menos de 10 tarjetas, no existen más páginas para esta consulta.
@@ -713,8 +676,8 @@ def enrich_linkedin_job(job):
 
     Si el aviso acaba de aparecer en las búsquedas de esta corrida y ya cuenta con
     descripción de una corrida previa, se conserva sin gastar otra petición a LinkedIn.
-    Si LinkedIn limita la tasa (HTTP 429) o hay falla temporal de red, nunca se descarta
-    una vacante activa: se conserva con los datos disponibles para no perder ninguna oferta.
+    Si LinkedIn limita la tasa (HTTP 429) o hay falla temporal de red, solo se conserva
+    si la vacante apareció en la corrida actual o es curada.
     """
     job_id = job.get("linkedin_id") or (re.search(r"(\d{8,})", job.get("url", "")) or [None, None])[1]
     if not job_id:
@@ -724,7 +687,7 @@ def enrich_linkedin_job(job):
         LINKEDIN_STATS["detalle en caché (activo)"] += 1
         return True
     if time_budget_exceeded():
-        if job.get("encontrada_ultima_corrida") or job.get("descripcion_fuente") or job.get("curada"):
+        if job.get("encontrada_ultima_corrida") or job.get("curada"):
             job.setdefault("estado_vigencia", "Aviso detectado en LinkedIn (verificación diferida por tiempo)")
             return True
         return False
@@ -732,8 +695,8 @@ def enrich_linkedin_job(job):
     if r is not None and r.status_code in (404, 410):
         return False
     if r is None or r.status_code != 200:
-        # Ante bloqueo 429 o error transitorio de red, no perder la vacante.
-        if job.get("encontrada_ultima_corrida") or job.get("descripcion_fuente") or job.get("curada"):
+        # Ante bloqueo 429 o error transitorio de red, conservar solo si apareció en esta corrida o es curada.
+        if job.get("encontrada_ultima_corrida") or job.get("curada"):
             job.setdefault("estado_vigencia", "Aviso detectado en LinkedIn (detalle pendiente por límite de tasa)")
             LINKEDIN_STATS["conservada ante 429/red"] += 1
             return True
@@ -965,7 +928,7 @@ def scrape_getonboard_query(query):
             cities = [str(c) for c in (attr.get("location_cities") or [])]
             is_remote = bool(attr.get("remote"))
             is_colombia = any("colombia" in c.lower() for c in countries) or any(LOCAL_LOCATION_RE.search(c) for c in cities)
-            if not is_remote and not is_colombia:
+            if not is_colombia:
                 continue
             comp_data = ((attr.get("company") or {}).get("data") or {}).get("attributes") or {}
             empresa = (comp_data.get("name") or "Empresa en GetOnBoard").strip()
@@ -974,7 +937,7 @@ def scrape_getonboard_query(query):
             min_sal = attr.get("min_salary") or 0
             max_sal = attr.get("max_salary") or 0
             compensacion = f"${min_sal:,} - ${max_sal:,} USD/mes" if min_sal and max_sal else (f"${min_sal:,} USD/mes" if min_sal else "")
-            loc_str = ", ".join(cities or countries) or ("Remoto" if is_remote else "Colombia")
+            loc_str = ", ".join(cities or countries) or "Colombia"
             if is_remote and "remot" not in loc_str.lower():
                 loc_str = f"{loc_str} · remoto"
             pub_ts = attr.get("published_at")
@@ -991,9 +954,7 @@ def scrape_getonboard_query(query):
                 "descripcion_fuente": desc,
                 "mision": desc[:250] if desc else "",
             }
-            if not is_colombia and is_remote:
-                job["search_scope"] = "WORLDWIDE"
-            elif is_colombia and not LOCAL_LOCATION_RE.search(loc_str):
+            if not LOCAL_LOCATION_RE.search(loc_str):
                 job["search_scope"] = "COLOMBIA"
             results.append(job)
         return results
@@ -1001,22 +962,16 @@ def scrape_getonboard_query(query):
         return []
 
 GREENHOUSE_BOARDS = [
-    ("psiquantum", "PsiQuantum"),
-    ("ionq", "IonQ"),
-    ("anyscale", "Anyscale"),
-    ("weightsandbiases", "Weights & Biases"),
-    ("anthropic", "Anthropic"),
     ("databricks", "Databricks"),
     ("stripe", "Stripe"),
     ("cloudflare", "Cloudflare"),
     ("gitlab", "GitLab"),
     ("canonical", "Canonical"),
     ("vercel", "Vercel"),
-    ("scaleai", "Scale AI"),
 ]
 
 def scrape_greenhouse_board(board_tuple):
-    """Consulta portales corporativos en Greenhouse (Cuántica, Fotónica, IA, Ciencia de Datos)."""
+    """Consulta portales corporativos en Greenhouse (solo vacantes en Colombia)."""
     slug, company_name = board_tuple
     url = f"https://boards-api.greenhouse.io/v1/boards/{slug}/jobs?content=true"
     try:
@@ -1031,30 +986,29 @@ def scrape_greenhouse_board(board_tuple):
             if not title or not link or not PRACTICE_RE.search(title):
                 continue
             loc = ((j.get("location") or {}).get("name") or "").strip()
-            desc = html_to_text(j.get("content") or "")[:2500]
-            is_local_or_col = bool(LOCAL_LOCATION_RE.search(loc) or "colombia" in loc.lower() or "latin america" in loc.lower() or "latam" in loc.lower())
-            is_remote = bool(REMOTE_ONLY_RE.search(f"{title} {loc}") or REMOTE_WORLDWIDE_DESC_RE.search(desc))
-            if not is_local_or_col and not is_remote:
+            is_col = bool(LOCAL_LOCATION_RE.search(loc) or "colombia" in loc.lower())
+            if not is_col:
                 continue
+            desc = html_to_text(j.get("content") or "")[:2500]
+            is_remote = bool(REMOTE_ONLY_RE.search(f"{title} {loc}"))
             updated = (j.get("updated_at") or "").split("T")[0] or "Reciente"
             results.append({
                 "titulo": title,
                 "empresa": company_name,
-                "ubicacion": f"{loc} · remoto" if is_remote and "remote" not in loc.lower() else (loc or "Remoto"),
+                "ubicacion": f"{loc} · remoto" if is_remote and "remote" not in loc.lower() else (loc or "Colombia"),
                 "modalidad": "Remoto" if is_remote else "",
                 "url": link,
                 "fecha_publicacion": updated,
                 "fuente": f"Portal corporativo {company_name} (Greenhouse)",
                 "descripcion_fuente": desc,
                 "mision": desc[:250] if desc else "",
-                "search_scope": "LOCAL" if LOCAL_LOCATION_RE.search(loc) else ("COLOMBIA" if "colombia" in loc.lower() else "WORLDWIDE"),
+                "search_scope": "LOCAL" if LOCAL_LOCATION_RE.search(loc) else "COLOMBIA",
             })
         return results
     except Exception:
         return []
 
 SMARTRECRUITERS_COMPANIES = [
-    ("CERN", "CERN"),
     ("SGS", "SGS"),
     ("BoschGroup", "Bosch Group"),
     ("Eurofins", "Eurofins"),
@@ -1062,7 +1016,7 @@ SMARTRECRUITERS_COMPANIES = [
 ]
 
 def scrape_smartrecruiters_company(comp_tuple):
-    """Consulta la API pública de SmartRecruiters (CERN, SGS, Bosch, Eurofins, Avery Dennison)."""
+    """Consulta la API pública de SmartRecruiters (solo sedes en Colombia)."""
     comp_id, comp_name = comp_tuple
     results = []
     seen = set()
@@ -1082,7 +1036,7 @@ def scrape_smartrecruiters_company(comp_tuple):
                 country = (loc_obj.get("country") or "").strip().lower()
                 is_remote = bool(loc_obj.get("remote"))
                 is_colombia = country in ("co", "col", "colombia") or bool(LOCAL_LOCATION_RE.search(city))
-                if not is_colombia and not is_remote:
+                if not is_colombia:
                     continue
                 seen.add(pid)
                 detail_url = f"https://api.smartrecruiters.com/v1/companies/{comp_id}/postings/{pid}"
@@ -1101,7 +1055,7 @@ def scrape_smartrecruiters_company(comp_tuple):
                         desc = html_to_text(" ".join(raw_parts))[:2500]
                 except Exception:
                     pass
-                loc_label = f"{city}, Colombia" if is_colombia and city else (city or country.upper() or "Remoto")
+                loc_label = f"{city}, Colombia" if city else "Colombia"
                 if is_remote and "remot" not in loc_label.lower():
                     loc_label = f"{loc_label} · remoto"
                 pub_date = (p.get("releasedDate") or "").split("T")[0] or "Reciente"
@@ -1115,7 +1069,7 @@ def scrape_smartrecruiters_company(comp_tuple):
                     "fuente": f"Portal corporativo {comp_name} (SmartRecruiters)",
                     "descripcion_fuente": desc,
                     "mision": desc[:250] if desc else "",
-                    "search_scope": "LOCAL" if LOCAL_LOCATION_RE.search(loc_label) else ("COLOMBIA" if is_colombia else "WORLDWIDE"),
+                    "search_scope": "LOCAL" if LOCAL_LOCATION_RE.search(loc_label) else "COLOMBIA",
                 })
         except Exception:
             continue
@@ -1180,6 +1134,8 @@ def scrape_workday_portal(portal):
         except (requests.RequestException, ValueError):
             continue
         ubicacion = info.get("location") or posting.get("locationsText") or ""
+        if not (LOCAL_LOCATION_RE.search(ubicacion) or "colombia" in ubicacion.lower()):
+            continue
         modalidad = {"Remote": "Remoto", "Hybrid": "Híbrido", "On-site": "Presencial"}.get(info.get("remoteType", ""), "")
         results.append({
             "titulo": posting.get("title", "").strip(),
@@ -1191,17 +1147,18 @@ def scrape_workday_portal(portal):
             "fecha_cierre_iso": info.get("endDate", ""),
             "fuente": f"Portal corporativo {portal['empresa']} (Workday)",
             "descripcion_fuente": html_to_text(info.get("jobDescription", ""))[:2500],
-            "search_scope": "LOCAL" if LOCAL_LOCATION_RE.search(ubicacion) or "colombia" in ubicacion.lower() else "WORLDWIDE",
+            "search_scope": "LOCAL" if LOCAL_LOCATION_RE.search(ubicacion) else "COLOMBIA",
         })
         time.sleep(0.3)
     return results
 
 def scrape_web_query(query, search_scope="LOCAL"):
-    """Busca resultados web públicos; para internacional exige práctica e indicio remoto."""
+    """Busca resultados web públicos en Antioquia y Colombia."""
+    if search_scope == "WORLDWIDE":
+        return []
     suffix = {
         "LOCAL": " Medellín Antioquia empleo práctica",
         "COLOMBIA": " Colombia práctica remota híbrida",
-        "WORLDWIDE": " remote internship",
     }.get(search_scope, " Colombia práctica remota híbrida")
     try:
         results = []
@@ -1209,16 +1166,13 @@ def scrape_web_query(query, search_scope="LOCAL"):
             evidence = f"{title} {snippet}"
             if not PRACTICE_RE.search(evidence):
                 continue
-            if search_scope == "WORLDWIDE" and not REMOTE_MODALITY_RE.search(evidence):
-                continue
             if title and link.startswith("http"):
                 company_match = re.search(r'"([^"]+)"', query)
                 job = {
                     "titulo": title,
                     "empresa": company_match.group(1) if company_match else "Por identificar",
                     "ubicacion": (
-                        "Remoto internacional (elegibilidad por confirmar)" if search_scope == "WORLDWIDE"
-                        else "Colombia (ciudad por confirmar)" if search_scope == "COLOMBIA"
+                        "Colombia (ciudad por confirmar)" if search_scope == "COLOMBIA"
                         else "Medellín / Antioquia (resultado web; confirmar ubicación)"
                     ),
                     "url": link,
@@ -1226,13 +1180,9 @@ def scrape_web_query(query, search_scope="LOCAL"):
                     "fuente": f"Búsqueda web · {urlparse(link).netloc}",
                     "resumen_fuente": snippet
                 }
-                if search_scope in {"WORLDWIDE", "COLOMBIA"}:
-                    job["search_scope"] = search_scope
-                    job["alcance_geografico"] = (
-                        "Remoto internacional; confirmar elegibilidad desde Colombia"
-                        if search_scope == "WORLDWIDE"
-                        else "Oferta nacional; confirmar ciudad y modalidad"
-                    )
+                if search_scope == "COLOMBIA":
+                    job["search_scope"] = "COLOMBIA"
+                    job["alcance_geografico"] = "Oferta nacional; confirmar ciudad y modalidad"
                 results.append(job)
         return results
     except Exception:
@@ -1262,6 +1212,15 @@ def classify_and_score_job(job, config_ramas):
     programa_genero = bool(TERMINOS_MUJERES_RE.search(text_to_analyze))
     convocatoria_exclusiva_mujeres = bool(CONVOCATORIA_MUJERES_RE.search(text_to_analyze))
     es_exclusiva_fisica = mentions_physics_science(job.get("titulo", ""), text_to_analyze)
+
+    # Descartar avisos cuya fecha de publicación ISO supere el máximo de días de vigencia.
+    pub_iso = str(job.get("fecha_publicacion", "")).strip()
+    if not es_curada and re.match(r"^\d{4}-\d{2}-\d{2}$", pub_iso):
+        try:
+            if (datetime.now().date() - datetime.fromisoformat(pub_iso).date()).days > MAX_DIAS_PUBLICACION:
+                return None
+        except ValueError:
+            pass
 
     # La antigüedad de publicación no revela la fecha límite de postulación.
     # Solo indicar cierre inminente cuando el rastreador obtenga una fecha explícita.
@@ -1460,7 +1419,7 @@ def verify_job_url(job):
         if r.status_code in (404, 410):
             return False
         if r.status_code >= 400:
-            return bool(job.get("encontrada_ultima_corrida") or job.get("curada") or job.get("descripcion_fuente"))
+            return bool(job.get("encontrada_ultima_corrida") or job.get("curada"))
         txt = r.text.lower()
         if (
             "esta oferta ya no está disponible" in txt
@@ -1476,12 +1435,19 @@ def verify_job_url(job):
                 job["descripcion_fuente"] = descripcion
         return True
     except Exception:
-        return bool(job.get("encontrada_ultima_corrida") or job.get("curada") or job.get("descripcion_fuente"))
+        return bool(job.get("encontrada_ultima_corrida") or job.get("curada"))
 
 def is_in_target_location(job):
-    """Antioquia con cualquier modalidad; fuera de Antioquia solo remoto o híbrido explícito."""
+    """Antioquia con cualquier modalidad; fuera de Antioquia (solo Colombia) únicamente remoto o híbrido explícito."""
     location = str(job.get("ubicacion", ""))
-    if job.get("search_scope") != "WORLDWIDE" and LOCAL_LOCATION_RE.search(location):
+    alcance = str(job.get("alcance_geografico", ""))
+    if (
+        job.get("search_scope") == "WORLDWIDE"
+        or "remoto internacional" in location.lower()
+        or "internacional" in alcance.lower()
+    ):
+        return False
+    if LOCAL_LOCATION_RE.search(location):
         return True
 
     # FirstJob no proporciona modalidad en la tarjeta rastreada; no confiar en el
@@ -1494,24 +1460,11 @@ def is_in_target_location(job):
     ))
     if not job.get("_mision_generada"):
         details += " " + str(job.get("mision", ""))
-    if job.get("search_scope") == "WORLDWIDE":
-        # En el exterior lo híbrido no sirve: se exige remoto en el título o la
-        # ubicación, o una frase inequívoca en la descripción.
-        head = f"{job.get('titulo', '')} {location} {job.get('modalidad', '')}"
-        if not (REMOTE_ONLY_RE.search(head) or REMOTE_WORLDWIDE_DESC_RE.search(details)):
-            return False
-        if REMOTE_NEGATION_RE.search(details):
-            return False
-    elif not REMOTE_MODALITY_RE.search(details):
+    if not REMOTE_MODALITY_RE.search(details):
         return False
-    if job.get("search_scope") == "WORLDWIDE":
-        job["alcance_geografico"] = "Remoto internacional; confirmar elegibilidad desde Colombia"
-        if "remoto internacional" not in location:
-            job["ubicacion"] = f"{location} · remoto internacional (elegibilidad por confirmar)"
-    else:
-        job["alcance_geografico"] = "Fuera de Antioquia; remoto o híbrido según el aviso"
-        if not re.search(r"remoto|h[ií]brid", location, re.IGNORECASE):
-            job["ubicacion"] = f"{location} · remoto o híbrido (confirmar en el aviso)"
+    job["alcance_geografico"] = "Fuera de Antioquia; remoto o híbrido según el aviso"
+    if not re.search(r"remoto|h[ií]brid", location, re.IGNORECASE):
+        job["ubicacion"] = f"{location} · remoto o híbrido (confirmar en el aviso)"
     return True
 
 def needs_detail_before_location(job):
@@ -1581,7 +1534,17 @@ def main():
     if "--render-only" in sys.argv:
         print("[*] Modo render-only: reclasificando, verificando y regenerando CSV/JSON desde vacantes_practicas.json...")
         config_ramas = load_json(CONFIG_RAMAS_PATH)
-        vacantes = load_json(OUTPUT_JSON)
+        today = datetime.now().date()
+        vacantes = []
+        for j in load_json(OUTPUT_JSON):
+            if not j.get("curada") and not j.get("encontrada_ultima_corrida"):
+                try:
+                    last_seen = datetime.fromisoformat(j.get("ultima_deteccion", "")).date()
+                    if (today - last_seen).days > DIAS_RETENCION_SIN_REAPARECER:
+                        continue
+                except ValueError:
+                    pass
+            vacantes.append(j)
         verified = filter_verified_jobs(vacantes, max_workers=25)
         classified = []
         for j in verified:
@@ -1834,14 +1797,7 @@ def main():
             break
         add_jobs(scrape_linkedin_query(q, location="Colombia", pages=2), f"Colombia remoto/híbrido '{q}'")
 
-    # 6c. Remoto internacional: exige práctica en el título y modalidad remota.
-    print(f"\n[*] Buscando prácticas remotas internacionales en {len(REMOTE_GLOBAL_SEARCH_QUERIES)} áreas...")
-    for query in REMOTE_GLOBAL_SEARCH_QUERIES:
-        if time_budget_exceeded(margin_seconds=360):
-            break
-        add_jobs(scrape_linkedin_query(query, location="Worldwide"), f"Remoto mundial '{query}'")
-
-    # 6d. Buscador web abierto: amplía el alcance a portales corporativos y bolsas
+    # 6c. Buscador web abierto: amplía el alcance a portales corporativos y bolsas
     # que no aparecen en las APIs anteriores. Las búsquedas web son pistas y la
     # página de destino se verifica antes de publicar.
     print(f"\n[*] Ampliando rastreo con {len(WEB_SEARCH_QUERIES)} búsquedas web...")

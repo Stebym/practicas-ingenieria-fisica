@@ -63,8 +63,6 @@ def zona_y_modalidad(job):
     """Clasifica cada vacante para el filtro "Dónde" y el chip de modalidad."""
     alcance = str(job.get("alcance_geografico", ""))
     texto = f"{job.get('modalidad', '')} {job.get('ubicacion', '')}".lower()
-    if "internacional" in alcance.lower():
-        return "exterior", "Remoto · exterior"
     hibrido = re.search(r"h[ií]brid|hybrid", texto)
     remoto = re.search(r"remot|teletrabajo", texto)
     if alcance:
@@ -217,7 +215,7 @@ def build_full_html(vacantes, becas_data, convenios_data, retos_data):
           <span class="stat-label">retos y hackatones abiertos</span>
         </div>
       </div>
-      <p class="coverage-note"><strong>Cobertura:</strong> Antioquia con cualquier modalidad · resto de Colombia solo remoto o híbrido · exterior solo remoto. Clasificadas según el pénsum de Ingeniería Física de la UNAL.</p>
+      <p class="coverage-note"><strong>Cobertura:</strong> Antioquia con cualquier modalidad · resto de Colombia en modalidad remota o híbrida. Clasificadas según el pénsum de Ingeniería Física de la UNAL.</p>
     </section>
 
     <!-- NAVEGACIÓN POR PESTAÑAS (TABS) -->
@@ -260,7 +258,6 @@ def build_full_html(vacantes, becas_data, convenios_data, retos_data):
             <option value="ALL">Todas</option>
             <option value="antioquia">Antioquia (cualquier modalidad)</option>
             <option value="colombia">Remoto / híbrido en Colombia</option>
-            <option value="exterior">Remoto en el exterior</option>
           </select>
         </label>
       </div>
@@ -303,8 +300,21 @@ def build_full_html(vacantes, becas_data, convenios_data, retos_data):
 
         <!-- SUBSECCIÓN 1: BECAS Y CONVOCATORIAS GLOBALES -->
         <h4 style="color: var(--accent-cyan); margin: 26px 0 14px; font-family: var(--font-display); font-size: 1.18rem; border-bottom: 1px solid var(--border-technical); padding-bottom: 8px;">
-          Convocatorias Globales Activas (Europa, Asia y América)
+          Buscador de Becas y Pasantías de Investigación Internacionales (Pregrado & Posgrado)
         </h4>
+        <div class="convenios-controls" style="margin-bottom: 12px;">
+          <input type="text" id="becasSearch" class="search-bar" style="flex: 1 1 240px; margin: 0; padding: 10px 14px;" placeholder="Buscar beca, laboratorio, país o tema (ej. CERN, Suiza, cuántica, fotónica, sincrotrón, pregrado, maestría)..." onkeyup="renderBecas()">
+          <select id="becasNivelFilter" onchange="renderBecas()">
+            <option value="ALL">Todos los niveles</option>
+            <option value="Pregrado / Pasantía">Pregrado / Pasantías de Investigación</option>
+            <option value="Posgrado (Maestría / Doctorado)">Posgrado (Maestría / Doctorado)</option>
+            <option value="Curso / Estancia Corta">Cursos & Estancias Cortas</option>
+          </select>
+          <select id="becasPaisFilter" onchange="renderBecas()">
+            <option value="ALL">Todos los destinos</option>
+          </select>
+        </div>
+        <div id="becasCounter" style="font-family: var(--font-mono); font-size: 0.84rem; color: var(--accent-cyan); margin-bottom: 14px; font-weight: 600;"></div>
         <div id="becasGrid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 16px;">
           <!-- Inyectado dinámicamente -->
         </div>
@@ -490,22 +500,62 @@ def build_full_html(vacantes, becas_data, convenios_data, retos_data):
       handleConveniosFilter();
     }}
 
+    let becasFiltersPopulated = false;
+    function initBecasFilters() {{
+      if (becasFiltersPopulated) return;
+      const paisSel = document.getElementById('becasPaisFilter');
+      if (!paisSel) return;
+      const paises = [...new Set(allBecas.map(b => b.pais).filter(Boolean))].sort();
+      paises.forEach(p => {{
+        const opt = document.createElement('option');
+        opt.value = p;
+        opt.textContent = p;
+        paisSel.appendChild(opt);
+      }});
+      becasFiltersPopulated = true;
+    }}
+
     function renderBecas() {{
+      initBecasFilters();
       const grid = document.getElementById('becasGrid');
-      if (!grid || grid.children.length > 0) return;
-      allBecas.forEach(b => {{
+      if (!grid) return;
+      const q = (document.getElementById('becasSearch')?.value || '').toLowerCase();
+      const nivel = document.getElementById('becasNivelFilter')?.value || 'ALL';
+      const pais = document.getElementById('becasPaisFilter')?.value || 'ALL';
+
+      const visibles = allBecas.filter(b => {{
+        if (nivel !== 'ALL' && (b.nivel || '') !== nivel) return false;
+        if (pais !== 'ALL' && (b.pais || '') !== pais) return false;
+        if (!q) return true;
+        const texto = [b.titulo, b.entidad, b.pais, b.tipo, b.nivel, b.area, b.cobertura, b.descripcion, b.fechas].join(' ').toLowerCase();
+        return texto.includes(q);
+      }});
+
+      const counter = document.getElementById('becasCounter');
+      if (counter) counter.textContent = `[ Mostrando ${{visibles.length}} de ${{allBecas.length}} becas y pasantías de investigación verificadas ]`;
+      grid.innerHTML = '';
+
+      if (visibles.length === 0) {{
+        grid.innerHTML = '<div style="grid-column: 1/-1; text-align: center; padding: 30px; color: var(--text-muted); font-family: var(--font-mono);">No se encontraron becas o pasantías bajo este criterio. Prueba con otra palabra clave o nivel.</div>';
+        return;
+      }}
+
+      visibles.forEach(b => {{
         const card = document.createElement('div');
         card.className = 'beca-card';
-        const badgeColor = b.destacada ? 'var(--accent-amber)' : 'var(--accent-cyan)';
+        const isPregrado = (b.nivel || '').includes('Pregrado');
+        const badgeColor = isPregrado ? 'var(--accent-emerald)' : (b.destacada ? 'var(--accent-amber)' : 'var(--accent-cyan)');
         card.innerHTML = `
           <div>
             <div class="beca-header">
-              <span class="beca-type-tag" style="background: ${{badgeColor}}22; color: ${{badgeColor}}; border: 1px solid ${{badgeColor}}44;">${{escapeHtml(b.tipo || 'Beca Global')}}</span>
-              <span class="beca-country-tag">[ ${{escapeHtml(b.pais.toUpperCase())}} ]</span>
+              <span class="beca-type-tag" style="background: ${{badgeColor}}22; color: ${{badgeColor}}; border: 1px solid ${{badgeColor}}44;">${{escapeHtml(b.nivel || b.tipo || 'Beca Global')}}</span>
+              <span class="beca-country-tag">[ ${{escapeHtml((b.pais || 'Global').toUpperCase())}} ]</span>
             </div>
             <h4 class="beca-title">${{escapeHtml(b.titulo)}}</h4>
             <div class="beca-entity">${{escapeHtml(b.entidad)}}</div>
+            ${{b.area ? `<div class="beca-coverage" style="color: var(--accent-cyan);"><strong>Áreas afines:</strong> ${{escapeHtml(b.area)}}</div>` : ''}}
             ${{b.cobertura ? `<div class="beca-coverage"><strong>Cobertura:</strong> ${{escapeHtml(b.cobertura)}}</div>` : ''}}
+            ${{b.fechas ? `<div class="beca-coverage"><strong>Apertura / Cierre:</strong> ${{escapeHtml(b.fechas)}}</div>` : ''}}
             <p class="beca-desc">${{escapeHtml(b.descripcion || '')}}</p>
           </div>
           <a href="${{sanitizeUrl(b.url)}}" target="_blank" rel="noopener noreferrer" class="apply-link" style="text-align: center; font-size: 0.82rem; padding: 9px 14px;">

@@ -260,6 +260,22 @@ def build_full_html(vacantes, becas_data, convenios_data, retos_data):
             <option value="colombia">Remoto / híbrido en Colombia</option>
           </select>
         </label>
+        <label class="filter-field">
+          <span>Modalidad</span>
+          <select id="modalitySelect" onchange="handleFilter()">
+            <option value="ALL">Todas las modalidades</option>
+            <option value="presencial">Presencial (Antioquia)</option>
+            <option value="hibrido">Híbrido</option>
+            <option value="remoto">Remoto</option>
+          </select>
+        </label>
+        <label class="filter-field">
+          <span>Apoyo económico</span>
+          <select id="salarySelect" onchange="handleFilter()">
+            <option value="ALL">Todas las ofertas</option>
+            <option value="con_salario">Solo con salario / apoyo visible</option>
+          </select>
+        </label>
       </div>
       
       <div class="application-tracker">
@@ -759,6 +775,7 @@ def build_full_html(vacantes, becas_data, convenios_data, retos_data):
             </div>
             <div class="job-specs">
               <span>${{escapeHtml(j.ubicacion)}}</span>
+              ${{j.perfil ? `<span style="color: var(--accent-cyan);">Perfil: ${{escapeHtml(j.perfil)}}</span>` : ''}}
               <span class="job-source">Fuente: ${{escapeHtml(j.fuente)}}</span>
               ${{j.programa_inclusion_genero ? `<span>Programa STEM / inclusión de género · revisar requisitos de elegibilidad</span>` : ''}}
               ${{j.convocatoria_exclusiva_mujeres ? `<span>Convocatoria dirigida exclusivamente a mujeres según el aviso</span>` : ''}}
@@ -871,6 +888,8 @@ def build_full_html(vacantes, becas_data, convenios_data, retos_data):
       const query = (document.getElementById('searchInput')?.value || '').toLowerCase();
       const applicationFilter = document.getElementById('applicationFilter')?.value || 'all';
       const zone = document.getElementById('zoneSelect')?.value || 'ALL';
+      const modality = document.getElementById('modalitySelect')?.value || 'ALL';
+      const salaryFilter = document.getElementById('salarySelect')?.value || 'ALL';
       const sortBy = document.getElementById('sortSelect')?.value || 'afinidad';
       const appliedCount = allJobs.filter(j => appliedJobs.has(j.url)).length;
       const pendingCount = allJobs.length - appliedCount;
@@ -883,6 +902,13 @@ def build_full_html(vacantes, becas_data, convenios_data, retos_data):
         if (applicationFilter === 'pending' && appliedJobs.has(j.url)) return false;
         if (applicationFilter === 'applied' && !appliedJobs.has(j.url)) return false;
         if (zone !== 'ALL' && j._zona !== zone) return false;
+        if (salaryFilter === 'con_salario' && !j.compensacion) return false;
+        if (modality !== 'ALL') {{
+          const modTxt = String(j._modalidad || '').toLowerCase();
+          if (modality === 'presencial' && !modTxt.includes('presencial')) return false;
+          if (modality === 'hibrido' && !modTxt.includes('híbrid') && !modTxt.includes('hibrid')) return false;
+          if (modality === 'remoto' && !modTxt.includes('remoto')) return false;
+        }}
 
         const matchesBranch = (currentBranch === 'TODOS') || j.ramas.some(r => r.nombre === currentBranch);
         if (!matchesBranch) return false;

@@ -605,15 +605,15 @@ def _company_matches_query(card_company, card_title, required_company):
     tokens = [t for t in re.split(r"\s+", req_norm) if len(t) >= 4 and t not in {"colombia", "grupo", "empresas", "compania", "corporacion", "antioquia", "medellin"}]
     return bool(tokens) and all(t in haystack for t in tokens[:2])
 
-def scrape_linkedin_query(query, location="Medellin, Antioquia, Colombia", pages=1, required_company=None):
-    """Consulta la API pública guest de LinkedIn Jobs (10 avisos por página)."""
+def scrape_linkedin_query(query, location="Antioquia, Colombia", pages=1, required_company=None):
+    """Consulta la API pública guest de LinkedIn Jobs (10 avisos por página, filtrando último mes f_TPR=r2592000)."""
     results = []
     for start in range(0, pages * 10, 10):
         if time_budget_exceeded(margin_seconds=300):
             break
         url = (
             "https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search"
-            f"?keywords={quote(query)}&location={quote(location)}&start={start}"
+            f"?keywords={quote(query)}&location={quote(location)}&f_TPR=r2592000&start={start}"
         )
         r = linkedin_get(url, retries=2)
         if r is None or r.status_code != 200:
@@ -1744,58 +1744,37 @@ def main():
         for (_, cname), jobs in zip(SMARTRECRUITERS_COMPANIES, executor.map(scrape_smartrecruiters_company, SMARTRECRUITERS_COMPANIES)):
             add_jobs(jobs, f"SmartRecruiters {cname}")
 
-    # 6. LinkedIn Medellín: consultas paraguas de alta cobertura (4 páginas) + categorías del pénsum.
-    umbrella_medellin_queries = [
-        "practicante",
-        "practicantes",
-        "practicante ingenieria",
-        "estudiante en practica",
-        "aprendiz universitario",
-        "semillero practicantes",
-        "intern",
-        "trainee",
-    ]
-    print(f"\n[*] Rastreando LinkedIn Medellín (consultas paraguas de cobertura total)...")
-    for q_umb in umbrella_medellin_queries:
-        add_jobs(scrape_linkedin_query(q_umb, location="Medellin, Antioquia, Colombia", pages=4), f"LinkedIn Medellín paraguas '{q_umb}'")
-
-    # 6a-bis. LinkedIn Antioquia general: captura municipios como Bello, Rionegro, Itagüí,
-    # Envigado, Sabaneta, La Estrella, Guarne, Girardota, Apartadó y Oriente Antioqueño.
-    antioquia_queries = [
-        "practicante",
-        "practicante ingenieria",
-        "practicante electronica",
-        "practicante mecatronica",
-        "practicante mecanica",
-        "practicante electrica",
-        "practicante datos",
-        "practicante automatizacion",
-        "practicante mantenimiento",
-        "practicante calidad",
-        "practicante laboratorio",
-        "practicante produccion",
-        "practicante proyectos",
-        "estudiante en practica",
-        "aprendiz universitario",
-        "intern engineering",
-    ]
-    print(f"\n[*] Rastreando LinkedIn Antioquia general ({len(antioquia_queries)} búsquedas para cubrir todos los municipios)...")
-    for q_ant in antioquia_queries:
-        add_jobs(scrape_linkedin_query(q_ant, location="Antioquia, Colombia", pages=3), f"LinkedIn Antioquia '{q_ant}'")
-
-    print(f"\n[*] Rastreando LinkedIn Jobs para {len(SEARCH_QUERIES)} categorías del pénsum UNAL...")
+    # 6. LinkedIn Antioquia (unificando Medellín y todos los municipios de Antioquia con f_TPR=r2592000):
+    # Primero se consultan las ramas especializadas del pénsum UNAL (Física, Radiaciones, Óptica,
+    # Materiales, Energía, Instrumentación, Electrónica, Diseño Mecánico) antes de gastar cuota en paraguas.
+    print(f"\n[*] Rastreando LinkedIn Antioquia para {len(SEARCH_QUERIES)} categorías del pénsum UNAL...")
     for q in SEARCH_QUERIES:
         if time_budget_exceeded(margin_seconds=600):
             print("    [!] Presupuesto de tiempo alcanzado en categorías LinkedIn; pasando a verificación.")
             break
-        add_jobs(scrape_linkedin_query(q, pages=2), f"LinkedIn '{q}'")
+        add_jobs(scrape_linkedin_query(q, location="Antioquia, Colombia", pages=1), f"LinkedIn '{q}'")
+
+    umbrella_antioquia_queries = [
+        "practicante",
+        "practicante ingenieria",
+        "estudiante en practica",
+        "aprendiz universitario",
+        "semillero practicantes",
+        "intern engineering",
+        "trainee ingenieria",
+    ]
+    print(f"\n[*] Rastreando LinkedIn Antioquia (consultas paraguas de cobertura total)...")
+    for q_umb in umbrella_antioquia_queries:
+        if time_budget_exceeded(margin_seconds=540):
+            break
+        add_jobs(scrape_linkedin_query(q_umb, location="Antioquia, Colombia", pages=3), f"LinkedIn Antioquia paraguas '{q_umb}'")
 
     # 6b. LinkedIn en todo Colombia: solo sobreviven avisos remotos o híbridos.
     print(f"\n[*] Buscando prácticas remotas/híbridas en Colombia ({len(REMOTE_COLOMBIA_QUERIES)} búsquedas)...")
     for q in REMOTE_COLOMBIA_QUERIES:
         if time_budget_exceeded(margin_seconds=480):
             break
-        add_jobs(scrape_linkedin_query(q, location="Colombia", pages=2), f"Colombia remoto/híbrido '{q}'")
+        add_jobs(scrape_linkedin_query(q, location="Colombia", pages=1), f"Colombia remoto/híbrido '{q}'")
 
     # 6c. Buscador web abierto: amplía el alcance a portales corporativos y bolsas
     # que no aparecen en las APIs anteriores. Las búsquedas web son pistas y la

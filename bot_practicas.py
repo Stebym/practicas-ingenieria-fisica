@@ -1328,6 +1328,7 @@ def classify_and_score_job(job, config_ramas):
         total_score += 85
 
     ramas_coincidentes = []
+    carreras_detectadas = []
     max_rama_score = 0
     mision_especifica = ""
     tareas_especificas = ""
@@ -1337,6 +1338,7 @@ def classify_and_score_job(job, config_ramas):
             continue
 
         kw_hits = 0
+        title_hits = 0
         palabras = data.get("palabras_clave", [])
         carreras = data.get("carreras_mencionadas", [])
         carreras_afines_candidatas = [
@@ -1353,6 +1355,9 @@ def classify_and_score_job(job, config_ramas):
                 for otra in carreras_afines_unicas
             )
         ]
+        for c_af in carreras_afines:
+            if c_af.title() not in carreras_detectadas:
+                carreras_detectadas.append(c_af.title())
         palabras_carrera_afines = {
             normalize_match_text(palabra)
             for palabra in data.get("palabras_clave_carreras_afines", [])
@@ -1364,11 +1369,15 @@ def classify_and_score_job(job, config_ramas):
                 continue
             if matches_keyword(p, text_to_analyze):
                 kw_hits += 1
+                if matches_keyword(p, title_lower):
+                    title_hits += 1
         kw_hits += len(carreras_afines)
 
         # Una coincidencia técnica o una carrera espejo con "afines" activa la rama.
+        # Las coincidencias en el título del cargo pesan triple para que menciones
+        # secundarias de "datos/indicadores" en la descripción no desplacen la rama real.
         if kw_hits > 0:
-            score = kw_hits * 3
+            score = (kw_hits * 3) + (title_hits * 9)
             empresas_ref = [e.lower() for e in data.get("empresas_referencia", [])]
             for e in empresas_ref:
                 if e in company_lower:
@@ -1431,6 +1440,10 @@ def classify_and_score_job(job, config_ramas):
     # Bonificación especial si es convocatoria verificada de alto impacto
     if job.get("compensacion"):
         total_score += 35
+
+    # Si la fuente no entregó perfil de carreras pero se detectaron carreras afines explícitas en el texto, mostrarlas
+    if not job.get("perfil") and carreras_detectadas:
+        job["perfil"] = "Ingeniería Física, " + ", ".join(carreras_detectadas[:4]) + " o afines"
 
     job["ramas"] = ramas_coincidentes
     job["rama_principal"] = ramas_coincidentes[0]["nombre"]

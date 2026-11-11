@@ -717,19 +717,22 @@ def enrich_linkedin_job(job):
     job["estado_vigencia"] = "Aviso abierto en LinkedIn al momento del rastreo"
     return True
 
-def scrape_computrabajo_query(query, pages=2):
-    """Consulta prácticas en Computrabajo Antioquia (20 avisos por página)."""
+def scrape_computrabajo_query(query, pages=2, scope="antioquia"):
+    """Consulta prácticas en Computrabajo Antioquia o nivel nacional (20 avisos por página)."""
     results = []
     for page in range(1, pages + 1):
-        url = f"https://co.computrabajo.com/empleos-en-antioquia?q={quote(query)}&p={page}"
-        page_results = _scrape_computrabajo_page(url)
+        if scope == "nacional":
+            url = f"https://co.computrabajo.com/ofertas-de-trabajo/?q={quote(query)}&p={page}"
+        else:
+            url = f"https://co.computrabajo.com/empleos-en-antioquia?q={quote(query)}&p={page}"
+        page_results = _scrape_computrabajo_page(url, scope=scope)
         results.extend(page_results)
         if len(page_results) < 20:
             break
-        time.sleep(2.0)
+        time.sleep(1.8)
     return results
 
-def _scrape_computrabajo_page(url):
+def _scrape_computrabajo_page(url, scope="antioquia"):
     try:
         r = requests.get(url, headers=HEADERS, timeout=6)
         if r.status_code != 200:
@@ -745,15 +748,26 @@ def _scrape_computrabajo_page(url):
             c_m = re.search(r'offer-grid-article-company-url[^>]*>\s*([^<]+)\s*</a>', content)
             comp = unescape(c_m.group(1).strip()) if c_m else "Empresa Confidencial"
             loc_m = re.search(r'<p class="fs16 fc_base mt5">\s*<span[^>]*>\s*([^<]+)\s*</span>', content)
-            loc = unescape(loc_m.group(1).strip()) if loc_m else "Medellín, Antioquia"
-            results.append({
+            loc = unescape(loc_m.group(1).strip()) if loc_m else ("Colombia" if scope == "nacional" else "Medellín, Antioquia")
+            sal_m = re.search(r'icon\s+i_salary[^>]*></span>\s*([^<]+)', content)
+            sal_txt = unescape(sal_m.group(1).strip()) if sal_m else ""
+            if sal_txt:
+                sal_txt = re.sub(r",00\b|\(Mensual\)", "", sal_txt, flags=re.IGNORECASE).strip()
+            mod_m = re.search(r'icon\s+i_home(?:_office)?[^>]*></span>\s*([^<]+)', content)
+            mod_txt = unescape(mod_m.group(1).strip()) if mod_m else ""
+            job = {
                 "titulo": title,
                 "empresa": comp,
-                "ubicacion": loc,
+                "ubicacion": f"{loc} · {mod_txt.lower()}" if mod_txt and mod_txt.lower() not in loc.lower() else loc,
+                "modalidad": mod_txt,
+                "compensacion": sal_txt,
                 "url": href,
                 "fecha_publicacion": "Reciente",
                 "fuente": "Computrabajo"
-            })
+            }
+            if scope == "nacional" and not LOCAL_LOCATION_RE.search(loc):
+                job["search_scope"] = "COLOMBIA"
+            results.append(job)
         return results
     except Exception:
         return []
@@ -862,52 +876,55 @@ def _scrape_magneto_page(query, page):
     except Exception:
         return []
 
-def scrape_elempleo_query(query, scope="medellin"):
-    """Consulta ofertas de prácticas de ingeniería en ElEmpleo.com para Medellín o nivel nacional."""
-    if scope == "nacional":
-        url = f"https://www.elempleo.com/co/ofertas-empleo/?trabajo={quote(query)}"
-    else:
-        url = f"https://www.elempleo.com/co/ofertas-empleo/medellin?trabajo={quote(query)}"
-    try:
-        r = requests.get(url, headers=HEADERS, timeout=6)
-        if r.status_code != 200:
-            return []
-        # data-url y data-ga4-offerdata vienen en el mismo elemento; emparejarlos
-        # por separado (zip de dos listas) mezclaba títulos y enlaces.
-        pairs = re.findall(r'data-url="([^"]+)"\s+data-ga4-offerdata="([^"]+)"', r.text)
-        results = []
-        seen = set()
-        for raw_url, raw_json in pairs:
-            try:
-                data = json.loads(unescape(raw_json))
-                clean_url = "https://www.elempleo.com" + raw_url.split("?")[0]
-                if clean_url in seen:
-                    continue
-                seen.add(clean_url)
-                title = data.get("title", "").strip()
-                company = data.get("company", "").strip() or "Empresa Confidencial"
-                loc = unescape(data.get("location", "").strip()) or "Ubicación por confirmar"
-                sal = data.get("salary", "").strip()
-                comp = sal if sal and "confidencial" not in sal.lower() else ""
+def scrape_elempleo_query(query, scope="medellin", pages=2):
+    """Consulta ofertas de prácticas de ingeniería en ElEmpleo.com para Medellín/Antioquia o nivel nacional."""
+    results = []
+    seen = set()
+    for page in range(1, pages + 1):
+        if scope == "nacional":
+            url = f"https://www.elempleo.com/co/ofertas-empleo/?trabajo={quote(query)}&page={page}"
+        elif scope == "antioquia":
+            url = f"https://www.elempleo.com/co/ofertas-empleo/antioquia?trabajo={quote(query)}&page={page}"
+        else:
+            url = f"https://www.elempleo.com/co/ofertas-empleo/medellin?trabajo={quote(query)}&page={page}"
+        try:
+            r = requests.get(url, headers=HEADERS, timeout=6)
+            if r.status_code != 200:
+                break
+            pairs = re.findall(r'data-url="([^"]+)"\s+data-ga4-offerdata="([^"]+)"', r.text)
+            if not pairs:
+                break
+            for raw_url, raw_json in pairs:
+                try:
+                    data = json.loads(unescape(raw_json))
+                    clean_url = "https://www.elempleo.com" + raw_url.split("?")[0]
+                    if clean_url in seen:
+                        continue
+                    seen.add(clean_url)
+                    title = data.get("title", "").strip()
+                    company = data.get("company", "").strip() or "Empresa Confidencial"
+                    loc = unescape(data.get("location", "").strip()) or "Ubicación por confirmar"
+                    sal = data.get("salary", "").strip()
+                    comp = sal if sal and "confidencial" not in sal.lower() and "convenir" not in sal.lower() else ""
 
-                if title and clean_url:
-                    job = {
-                        "titulo": title,
-                        "empresa": company,
-                        "ubicacion": loc,
-                        "url": clean_url,
-                        "fecha_publicacion": "Reciente",
-                        "fuente": "ElEmpleo.com",
-                        "compensacion": comp,
-                    }
-                    if scope == "nacional" and not LOCAL_LOCATION_RE.search(loc):
-                        job["search_scope"] = "COLOMBIA"
-                    results.append(job)
-            except Exception:
-                continue
-        return results
-    except Exception:
-        return []
+                    if title and clean_url:
+                        job = {
+                            "titulo": title,
+                            "empresa": company,
+                            "ubicacion": loc,
+                            "url": clean_url,
+                            "fecha_publicacion": "Reciente",
+                            "fuente": "ElEmpleo.com",
+                            "compensacion": comp,
+                        }
+                        if scope == "nacional" and not LOCAL_LOCATION_RE.search(loc):
+                            job["search_scope"] = "COLOMBIA"
+                        results.append(job)
+                except Exception:
+                    continue
+        except Exception:
+            break
+    return results
 
 def scrape_getonboard_query(query):
     """Consulta la API pública de GetOnBoard (prácticas de Datos, IA, IoT y Software en Colombia y Remoto LatAm)."""
@@ -1345,6 +1362,12 @@ def classify_and_score_job(job, config_ramas):
     else:
         afinidad = "Afinidad Media"
 
+    # Extraer compensación desde la descripción si la fuente no la entregó en un campo separado
+    if not job.get("compensacion"):
+        sal_extracted = extract_salary_from_text(f"{job.get('descripcion_fuente', '')} {job.get('resumen_fuente', '')} {job.get('mision', '')}")
+        if sal_extracted:
+            job["compensacion"] = sal_extracted
+
     # Bonificación especial si es convocatoria verificada de alto impacto
     if job.get("compensacion"):
         total_score += 35
@@ -1383,20 +1406,66 @@ DESCRIPTION_ANCHOR_RE = re.compile(
     re.IGNORECASE,
 )
 
-def extract_page_description(page_html):
-    """Texto del aviso: JSON-LD JobPosting o el bloque tras 'Descripción de la oferta'."""
+SALARY_TEXT_RE = re.compile(
+    r"(?:\b(?:apoyo\s+de\s+sostenimiento|auxilio\s+(?:de\s+pr[aá]ctica|econ[oó]mico|salarial)|salario|remuneraci[oó]n|compensaci[oó]n)\s*(?:de|:)?\s*)?"
+    r"(\$\s*1[.,]\d{3}[.,]\d{3}|\$\s*2[.,]\d{3}[.,]\d{3}|\$\s*3[.,]\d{3}[.,]\d{3}|"
+    r"\b(?:75\s*%|100\s*%|1(?:\.\d)?)\s*(?:del\s+)?S\.?M\.?M?\.?L\.?V\.?\b)",
+    re.IGNORECASE,
+)
+
+def extract_salary_from_text(text):
+    """Extrae menciones explícitas de salario o apoyo de sostenimiento en COP / SMMLV."""
+    if not text:
+        return ""
+    m = SALARY_TEXT_RE.search(text)
+    if not m:
+        return ""
+    val = re.sub(r"\s+", " ", m.group(1)).strip()
+    if val.startswith("$") and "cop" not in val.lower():
+        return f"{val} COP"
+    return val.upper()
+
+def extract_page_description(page_html, job=None):
+    """Texto del aviso y metadatos (salario, fecha de publicación, cierre y modalidad) desde JSON-LD JobPosting."""
+    desc_found = ""
     for block in re.findall(r'<script[^>]*application/ld\+json[^>]*>(.*?)</script>', page_html, re.DOTALL):
         try:
             data = json.loads(block)
         except ValueError:
             continue
         for item in data if isinstance(data, list) else [data]:
-            if isinstance(item, dict) and item.get("@type") == "JobPosting" and item.get("description"):
-                return html_to_text(str(item["description"]))[:2500]
-    anchor = DESCRIPTION_ANCHOR_RE.search(page_html)
-    if anchor:
-        return html_to_text(page_html[anchor.start():anchor.start() + 6000])[:2500]
-    return ""
+            if isinstance(item, dict) and item.get("@type") == "JobPosting":
+                if item.get("description") and not desc_found:
+                    desc_found = html_to_text(str(item["description"]))[:2500]
+                if job is not None:
+                    date_posted = str(item.get("datePosted") or "").split("T")[0].strip()
+                    if re.match(r"^\d{4}-\d{2}-\d{2}$", date_posted) and job.get("fecha_publicacion") in (None, "", "Reciente"):
+                        job["fecha_publicacion"] = date_posted
+                    valid_through = str(item.get("validThrough") or "").split("T")[0].strip()
+                    if re.match(r"^\d{4}-\d{2}-\d{2}$", valid_through) and not job.get("fecha_cierre_iso"):
+                        job["fecha_cierre_iso"] = valid_through
+                    if not job.get("compensacion"):
+                        base_sal = item.get("baseSalary") or item.get("estimatedSalary")
+                        if isinstance(base_sal, dict):
+                            val_obj = base_sal.get("value")
+                            num = val_obj.get("value") or val_obj.get("minValue") if isinstance(val_obj, dict) else val_obj
+                            try:
+                                num_f = float(num)
+                                if 500_000 <= num_f <= 15_000_000:
+                                    job["compensacion"] = f"${num_f:,.0f} COP".replace(",", ".")
+                            except (TypeError, ValueError):
+                                pass
+                    if str(item.get("jobLocationType") or "").upper() == "TELECOMMUTE" and not job.get("modalidad"):
+                        job["modalidad"] = "Remoto"
+    if not desc_found:
+        anchor = DESCRIPTION_ANCHOR_RE.search(page_html)
+        if anchor:
+            desc_found = html_to_text(page_html[anchor.start():anchor.start() + 6000])[:2500]
+    if job is not None and not job.get("compensacion"):
+        sal_txt = extract_salary_from_text(desc_found or html_to_text(page_html[:12000]))
+        if sal_txt:
+            job["compensacion"] = sal_txt
+    return desc_found
 
 def verify_job_url(job):
     """Confirma que el aviso sigue abierto (HTTP 200, sin login ni 'oferta finalizada') y lee su descripción."""
@@ -1429,9 +1498,9 @@ def verify_job_url(job):
             or "esta vacante no recibe más aplicaciones" in txt
         ):
             return False
-        if not job.get("curada") and not job.get("descripcion_fuente"):
-            descripcion = extract_page_description(r.text)
-            if descripcion:
+        if not job.get("curada"):
+            descripcion = extract_page_description(r.text, job=job)
+            if descripcion and not job.get("descripcion_fuente"):
                 job["descripcion_fuente"] = descripcion
         return True
     except Exception:
@@ -1617,6 +1686,20 @@ def main():
         for q_ct, jobs in zip(computrabajo_queries, executor.map(scrape_computrabajo_query, computrabajo_queries)):
             add_jobs(jobs, f"Computrabajo '{q_ct}'")
 
+    computrabajo_nacional_queries = [
+        "practicante ingenieria fisica",
+        "practicante fisica",
+        "practicante remoto",
+        "practicante hibrido",
+        "practicante datos remoto",
+        "practicante automatizacion remoto",
+    ]
+    print(f"\n[*] Rastreando Computrabajo Colombia Remoto/Híbrido ({len(computrabajo_nacional_queries)} búsquedas)...")
+    with concurrent.futures.ThreadPoolExecutor(max_workers=3) as executor:
+        ct_nac_futs = [executor.submit(scrape_computrabajo_query, q, 2, "nacional") for q in computrabajo_nacional_queries]
+        for q_ct, fut in zip(computrabajo_nacional_queries, ct_nac_futs):
+            add_jobs(fut.result(), f"Computrabajo Nacional '{q_ct}'")
+
     # 3. Magneto365 (API pública, 4 páginas por búsqueda): Antioquia con
     # cualquier modalidad y el resto de Colombia si es remoto o híbrido.
     magneto_queries = [
@@ -1690,10 +1773,13 @@ def main():
         "aprendiz universitario",
         *CARRERAS_ESPEJO_QUERIES,
     ]
-    print(f"\n[*] Rastreando ElEmpleo.com Medellín ({len(elempleo_queries)} búsquedas)...")
+    print(f"\n[*] Rastreando ElEmpleo.com Medellín y Antioquia ({len(elempleo_queries)} búsquedas)...")
     with concurrent.futures.ThreadPoolExecutor(max_workers=3) as executor:
         for q_ee, jobs in zip(elempleo_queries, executor.map(scrape_elempleo_query, elempleo_queries)):
-            add_jobs(jobs, f"ElEmpleo '{q_ee}'")
+            add_jobs(jobs, f"ElEmpleo Medellín '{q_ee}'")
+        ee_ant_futs = [executor.submit(scrape_elempleo_query, q, "antioquia", 1) for q in elempleo_queries[:12]]
+        for q_ee, fut in zip(elempleo_queries[:12], ee_ant_futs):
+            add_jobs(fut.result(), f"ElEmpleo Antioquia '{q_ee}'")
 
     elempleo_nacional_queries = [
         "practicante ingenieria fisica",

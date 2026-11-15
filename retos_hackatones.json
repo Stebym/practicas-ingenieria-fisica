@@ -44,7 +44,7 @@
       "Machine Learning/AI"
     ],
     "apto_principiantes": true,
-    "inscritos": 373,
+    "inscritos": 412,
     "estado": "Abierto",
     "fuente": "Devpost API",
     "areas_perfil": [
@@ -72,7 +72,7 @@
       "Machine Learning/AI"
     ],
     "apto_principiantes": false,
-    "inscritos": 208,
+    "inscritos": 214,
     "estado": "Abierto",
     "fuente": "Devpost API",
     "areas_perfil": [
@@ -100,7 +100,7 @@
       "Open Ended"
     ],
     "apto_principiantes": false,
-    "inscritos": 1568,
+    "inscritos": 1662,
     "estado": "Abierto",
     "fuente": "Devpost API",
     "areas_perfil": [
@@ -128,7 +128,7 @@
       "Machine Learning/AI"
     ],
     "apto_principiantes": true,
-    "inscritos": 108,
+    "inscritos": 136,
     "estado": "Abierto",
     "fuente": "Devpost API",
     "areas_perfil": [
@@ -156,7 +156,7 @@
       "Robotic Process Automation"
     ],
     "apto_principiantes": false,
-    "inscritos": 433,
+    "inscritos": 437,
     "estado": "Abierto",
     "fuente": "Devpost API",
     "areas_perfil": [
@@ -284,7 +284,7 @@
       "Open Ended"
     ],
     "apto_principiantes": true,
-    "inscritos": 13840,
+    "inscritos": 14226,
     "estado": "Abierto",
     "fuente": "Devpost API",
     "areas_perfil": [
@@ -311,7 +311,7 @@
       "Machine Learning/AI"
     ],
     "apto_principiantes": true,
-    "inscritos": 228,
+    "inscritos": 261,
     "estado": "Abierto",
     "fuente": "Devpost API",
     "areas_perfil": [
@@ -338,7 +338,7 @@
       "Open Ended"
     ],
     "apto_principiantes": true,
-    "inscritos": 133,
+    "inscritos": 142,
     "estado": "Abierto",
     "fuente": "Devpost API",
     "areas_perfil": [
@@ -365,7 +365,7 @@
       "Open Ended"
     ],
     "apto_principiantes": true,
-    "inscritos": 1129,
+    "inscritos": 1164,
     "estado": "Abierto",
     "fuente": "Devpost API",
     "areas_perfil": [
@@ -392,7 +392,7 @@
       "Social Good"
     ],
     "apto_principiantes": true,
-    "inscritos": 41,
+    "inscritos": 43,
     "estado": "Abierto",
     "fuente": "Devpost API",
     "areas_perfil": [
@@ -419,7 +419,7 @@
       "DevOps"
     ],
     "apto_principiantes": true,
-    "inscritos": 225,
+    "inscritos": 224,
     "estado": "Próximamente",
     "fuente": "Devpost API",
     "areas_perfil": [
@@ -446,7 +446,7 @@
       "Social Good"
     ],
     "apto_principiantes": true,
-    "inscritos": 6,
+    "inscritos": 7,
     "estado": "Próximamente",
     "fuente": "Devpost API",
     "areas_perfil": [
@@ -473,7 +473,7 @@
       "Productivity"
     ],
     "apto_principiantes": false,
-    "inscritos": 2527,
+    "inscritos": 2666,
     "estado": "Abierto",
     "fuente": "Devpost API",
     "areas_perfil": [
@@ -500,7 +500,7 @@
       "Web"
     ],
     "apto_principiantes": false,
-    "inscritos": 6212,
+    "inscritos": 6329,
     "estado": "Abierto",
     "fuente": "Devpost API",
     "areas_perfil": [
@@ -527,7 +527,7 @@
       "Machine Learning/AI"
     ],
     "apto_principiantes": false,
-    "inscritos": 259,
+    "inscritos": 275,
     "estado": "Abierto",
     "fuente": "Devpost API",
     "areas_perfil": [
@@ -554,8 +554,8 @@
       "Productivity"
     ],
     "apto_principiantes": false,
-    "inscritos": 28,
-    "estado": "Próximamente",
+    "inscritos": 29,
+    "estado": "Abierto",
     "fuente": "Devpost API",
     "areas_perfil": [
       "Datos, IA y simulación"
@@ -581,7 +581,7 @@
       "Social Good"
     ],
     "apto_principiantes": false,
-    "inscritos": 69,
+    "inscritos": 74,
     "estado": "Próximamente",
     "fuente": "Devpost API",
     "areas_perfil": [
@@ -608,7 +608,7 @@
       "Web"
     ],
     "apto_principiantes": false,
-    "inscritos": 2178,
+    "inscritos": 2412,
     "estado": "Abierto",
     "fuente": "Devpost API",
     "areas_perfil": [
@@ -635,7 +635,7 @@
       "Low/No Code"
     ],
     "apto_principiantes": false,
-    "inscritos": 599,
+    "inscritos": 682,
     "estado": "Abierto",
     "fuente": "Devpost API",
     "areas_perfil": [
@@ -662,7 +662,7 @@
       "Machine Learning/AI"
     ],
     "apto_principiantes": false,
-    "inscritos": 201,
+    "inscritos": 226,
     "estado": "Abierto",
     "fuente": "Devpost API",
     "areas_perfil": [
@@ -689,7 +689,7 @@
       "Web"
     ],
     "apto_principiantes": false,
-    "inscritos": 374,
+    "inscritos": 388,
     "estado": "Abierto",
     "fuente": "Devpost API",
     "areas_perfil": [
@@ -715,7 +715,7 @@
       "IA"
     ],
     "apto_principiantes": false,
-    "inscritos": 506,
+    "inscritos": 522,
     "estado": "Abierto",
     "fuente": "Zindi API",
     "areas_perfil": [
@@ -741,7 +741,7 @@
       "IA"
     ],
     "apto_principiantes": false,
-    "inscritos": 1144,
+    "inscritos": 1158,
     "estado": "Abierto",
     "fuente": "Zindi API",
     "areas_perfil": [
@@ -767,7 +767,7 @@
       "IA"
     ],
     "apto_principiantes": false,
-    "inscritos": 113,
+    "inscritos": 169,
     "estado": "Abierto",
     "fuente": "Zindi API",
     "areas_perfil": [
@@ -794,7 +794,7 @@
       "Productivity"
     ],
     "apto_principiantes": false,
-    "inscritos": 376,
+    "inscritos": 404,
     "estado": "Abierto",
     "fuente": "Devpost API",
     "areas_perfil": [
@@ -821,7 +821,7 @@
       "Productivity"
     ],
     "apto_principiantes": false,
-    "inscritos": 3389,
+    "inscritos": 3564,
     "estado": "Abierto",
     "fuente": "Devpost API",
     "areas_perfil": [
@@ -874,7 +874,7 @@
       "Social Good"
     ],
     "apto_principiantes": false,
-    "inscritos": 96,
+    "inscritos": 102,
     "estado": "Próximamente",
     "fuente": "Devpost API",
     "areas_perfil": [
@@ -901,7 +901,7 @@
       "Social Good"
     ],
     "apto_principiantes": false,
-    "inscritos": 568,
+    "inscritos": 697,
     "estado": "Abierto",
     "fuente": "Devpost API",
     "areas_perfil": [
@@ -927,7 +927,7 @@
       "IA"
     ],
     "apto_principiantes": false,
-    "inscritos": 232,
+    "inscritos": 256,
     "estado": "Abierto",
     "fuente": "Zindi API",
     "areas_perfil": [
@@ -954,7 +954,7 @@
       "Web"
     ],
     "apto_principiantes": false,
-    "inscritos": 8,
+    "inscritos": 9,
     "estado": "Próximamente",
     "fuente": "Devpost API",
     "areas_perfil": [
@@ -980,7 +980,7 @@
       "IA"
     ],
     "apto_principiantes": false,
-    "inscritos": 288,
+    "inscritos": 297,
     "estado": "Abierto",
     "fuente": "Zindi API",
     "areas_perfil": [
@@ -1006,7 +1006,7 @@
       "IA"
     ],
     "apto_principiantes": false,
-    "inscritos": 108,
+    "inscritos": 118,
     "estado": "Abierto",
     "fuente": "Zindi API",
     "areas_perfil": [
@@ -1032,7 +1032,7 @@
       "IA"
     ],
     "apto_principiantes": false,
-    "inscritos": 265,
+    "inscritos": 270,
     "estado": "Abierto",
     "fuente": "Zindi API",
     "areas_perfil": [
@@ -1059,7 +1059,7 @@
       "Web"
     ],
     "apto_principiantes": false,
-    "inscritos": 91,
+    "inscritos": 90,
     "estado": "Próximamente",
     "fuente": "Devpost API",
     "areas_perfil": [
@@ -1067,33 +1067,6 @@
     ],
     "score": 30,
     "_sello": "5c120d11a573"
-  },
-  {
-    "titulo": "LPC Hacks",
-    "organizador": "LPCHacks",
-    "plataforma": "Devpost",
-    "tipo": "Hackatón",
-    "modalidad": "En línea",
-    "ubicacion": "En línea (internacional)",
-    "pais": "Internacional",
-    "url": "https://lpc-hacks.devpost.com/",
-    "fechas": "Nov 14, 2026",
-    "fecha_cierre_iso": "2026-11-14",
-    "premio": "",
-    "temas": [
-      "Beginner Friendly",
-      "Machine Learning/AI",
-      "Open Ended"
-    ],
-    "apto_principiantes": true,
-    "inscritos": 4,
-    "estado": "Próximamente",
-    "fuente": "Devpost API",
-    "areas_perfil": [
-      "Datos, IA y simulación"
-    ],
-    "score": 25,
-    "_sello": "4e08620e640f"
   },
   {
     "titulo": "DataJam 2026",
@@ -1111,7 +1084,7 @@
       "Beginner Friendly"
     ],
     "apto_principiantes": true,
-    "inscritos": 24,
+    "inscritos": 54,
     "estado": "Abierto",
     "fuente": "Devpost API",
     "areas_perfil": [
@@ -1119,60 +1092,6 @@
     ],
     "score": 25,
     "_sello": "1c406765fb30"
-  },
-  {
-    "titulo": "NorCal Hacks 27",
-    "organizador": "Lynbrook Engineering Club",
-    "plataforma": "Devpost",
-    "tipo": "Hackatón",
-    "modalidad": "En línea",
-    "ubicacion": "En línea (internacional)",
-    "pais": "Internacional",
-    "url": "https://norcal-hacks-27.devpost.com/",
-    "fechas": "Nov 12 - 15, 2026",
-    "fecha_cierre_iso": "2026-11-15",
-    "premio": "",
-    "temas": [
-      "Beginner Friendly",
-      "Machine Learning/AI",
-      "Social Good"
-    ],
-    "apto_principiantes": true,
-    "inscritos": 74,
-    "estado": "Abierto",
-    "fuente": "Devpost API",
-    "areas_perfil": [
-      "Datos, IA y simulación"
-    ],
-    "score": 25,
-    "_sello": "5c0e8588fb44"
-  },
-  {
-    "titulo": "STEM2Connect AI Hackathon",
-    "organizador": "STEM2Connect",
-    "plataforma": "Devpost",
-    "tipo": "Hackatón",
-    "modalidad": "En línea",
-    "ubicacion": "En línea (internacional)",
-    "pais": "Internacional",
-    "url": "https://stem2connect-online-hackathon.devpost.com/",
-    "fechas": "Oct 17 - Nov 21, 2026",
-    "fecha_cierre_iso": "2026-11-21",
-    "premio": "",
-    "temas": [
-      "Beginner Friendly",
-      "Education",
-      "Web"
-    ],
-    "apto_principiantes": true,
-    "inscritos": 499,
-    "estado": "Abierto",
-    "fuente": "Devpost API",
-    "areas_perfil": [
-      "Datos, IA y simulación"
-    ],
-    "score": 25,
-    "_sello": "24c3fcc68668"
   },
   {
     "titulo": "Bridge The Gap Hacks",
@@ -1192,14 +1111,41 @@
       "Social Good"
     ],
     "apto_principiantes": true,
-    "inscritos": 75,
-    "estado": "Próximamente",
+    "inscritos": 84,
+    "estado": "Abierto",
     "fuente": "Devpost API",
     "areas_perfil": [
       "Datos, IA y simulación"
     ],
     "score": 25,
     "_sello": "8ef567ad10f1"
+  },
+  {
+    "titulo": "STEM2Connect AI Hackathon",
+    "organizador": "STEM2Connect",
+    "plataforma": "Devpost",
+    "tipo": "Hackatón",
+    "modalidad": "En línea",
+    "ubicacion": "En línea (internacional)",
+    "pais": "Internacional",
+    "url": "https://stem2connect-online-hackathon.devpost.com/",
+    "fechas": "Oct 17 - Nov 21, 2026",
+    "fecha_cierre_iso": "2026-11-21",
+    "premio": "",
+    "temas": [
+      "Beginner Friendly",
+      "Education",
+      "Web"
+    ],
+    "apto_principiantes": true,
+    "inscritos": 524,
+    "estado": "Abierto",
+    "fuente": "Devpost API",
+    "areas_perfil": [
+      "Datos, IA y simulación"
+    ],
+    "score": 25,
+    "_sello": "24c3fcc68668"
   },
   {
     "titulo": "Taskforge",
@@ -1245,7 +1191,7 @@
       "Social Good"
     ],
     "apto_principiantes": true,
-    "inscritos": 139,
+    "inscritos": 148,
     "estado": "Abierto",
     "fuente": "Devpost API",
     "areas_perfil": [
@@ -1299,7 +1245,7 @@
       "Machine Learning/AI"
     ],
     "apto_principiantes": true,
-    "inscritos": 27,
+    "inscritos": 37,
     "estado": "Próximamente",
     "fuente": "Devpost API",
     "areas_perfil": [
@@ -1307,6 +1253,33 @@
     ],
     "score": 25,
     "_sello": "ab0e10fff244"
+  },
+  {
+    "titulo": "Teens in AI Global Challenge 2027",
+    "organizador": "Teens in AI",
+    "plataforma": "Devpost",
+    "tipo": "Hackatón",
+    "modalidad": "En línea",
+    "ubicacion": "En línea (internacional)",
+    "pais": "Internacional",
+    "url": "https://teens-in-ai.devpost.com/",
+    "fechas": "Nov 15, 2026 - Feb 15, 2027",
+    "fecha_cierre_iso": "2027-02-15",
+    "premio": "",
+    "temas": [
+      "Databases",
+      "Web",
+      "Beginner Friendly"
+    ],
+    "apto_principiantes": true,
+    "inscritos": 7,
+    "estado": "Abierto",
+    "fuente": "Devpost API",
+    "areas_perfil": [
+      "Datos, IA y simulación"
+    ],
+    "score": 25,
+    "_sello": "6bdbc45cf1f1"
   },
   {
     "titulo": "MEGA Hackathon 2027",
@@ -1363,58 +1336,6 @@
     "_sello": "3fdc1849a5a8"
   },
   {
-    "titulo": "Imperial AI Hackathon",
-    "organizador": "Imperial AI Society",
-    "plataforma": "Devpost",
-    "tipo": "Hackatón",
-    "modalidad": "En línea",
-    "ubicacion": "En línea (internacional)",
-    "pais": "Internacional",
-    "url": "https://imperial-ai-hackathon.devpost.com/",
-    "fechas": "Nov 14 - 15, 2026",
-    "fecha_cierre_iso": "2026-11-15",
-    "premio": "",
-    "temas": [
-      "Machine Learning/AI"
-    ],
-    "apto_principiantes": false,
-    "inscritos": 37,
-    "estado": "Abierto",
-    "fuente": "Devpost API",
-    "areas_perfil": [
-      "Datos, IA y simulación"
-    ],
-    "score": 20,
-    "_sello": "cef177cd23f7"
-  },
-  {
-    "titulo": "Mathematics for systems security",
-    "organizador": "Software Engineering Club (DEV)",
-    "plataforma": "Devpost",
-    "tipo": "Hackatón",
-    "modalidad": "En línea",
-    "ubicacion": "En línea (internacional)",
-    "pais": "Internacional",
-    "url": "https://mathematics-systems-security.devpost.com/",
-    "fechas": "Oct 16 - Nov 15, 2026",
-    "fecha_cierre_iso": "2026-11-15",
-    "premio": "",
-    "temas": [
-      "Communication",
-      "Cybersecurity",
-      "Machine Learning/AI"
-    ],
-    "apto_principiantes": false,
-    "inscritos": 240,
-    "estado": "Abierto",
-    "fuente": "Devpost API",
-    "areas_perfil": [
-      "Datos, IA y simulación"
-    ],
-    "score": 20,
-    "_sello": "3b250d03f037"
-  },
-  {
     "titulo": "STEMergent Hacks 2026",
     "organizador": "STEMergent",
     "plataforma": "Devpost",
@@ -1432,7 +1353,7 @@
       "Social Good"
     ],
     "apto_principiantes": false,
-    "inscritos": 380,
+    "inscritos": 409,
     "estado": "Abierto",
     "fuente": "Devpost API",
     "areas_perfil": [
@@ -1484,7 +1405,7 @@
       "Social Good"
     ],
     "apto_principiantes": false,
-    "inscritos": 4,
+    "inscritos": 11,
     "estado": "Próximamente",
     "fuente": "Devpost API",
     "areas_perfil": [
@@ -1511,7 +1432,7 @@
       "Web"
     ],
     "apto_principiantes": false,
-    "inscritos": 544,
+    "inscritos": 576,
     "estado": "Abierto",
     "fuente": "Devpost API",
     "areas_perfil": [
@@ -1536,7 +1457,7 @@
       "Machine Learning/AI"
     ],
     "apto_principiantes": false,
-    "inscritos": 219,
+    "inscritos": 237,
     "estado": "Próximamente",
     "fuente": "Devpost API",
     "areas_perfil": [
@@ -1563,7 +1484,7 @@
       "Productivity"
     ],
     "apto_principiantes": false,
-    "inscritos": 305,
+    "inscritos": 374,
     "estado": "Abierto",
     "fuente": "Devpost API",
     "areas_perfil": [
@@ -1588,7 +1509,7 @@
       "Machine Learning/AI"
     ],
     "apto_principiantes": false,
-    "inscritos": 9,
+    "inscritos": 16,
     "estado": "Próximamente",
     "fuente": "Devpost API",
     "areas_perfil": [
@@ -1615,7 +1536,7 @@
       "Web"
     ],
     "apto_principiantes": false,
-    "inscritos": 889,
+    "inscritos": 911,
     "estado": "Abierto",
     "fuente": "Devpost API",
     "areas_perfil": [
@@ -1717,7 +1638,7 @@
       "Open Ended"
     ],
     "apto_principiantes": true,
-    "inscritos": 686,
+    "inscritos": 734,
     "estado": "Abierto",
     "fuente": "Devpost API",
     "areas_perfil": [],
@@ -1741,7 +1662,7 @@
       "Social Good"
     ],
     "apto_principiantes": true,
-    "inscritos": 214,
+    "inscritos": 225,
     "estado": "Abierto",
     "fuente": "Devpost API",
     "areas_perfil": [],
@@ -1766,7 +1687,7 @@
       "Social Good"
     ],
     "apto_principiantes": true,
-    "inscritos": 262,
+    "inscritos": 275,
     "estado": "Abierto",
     "fuente": "Devpost API",
     "areas_perfil": [],
@@ -1791,7 +1712,7 @@
       "Social Good"
     ],
     "apto_principiantes": true,
-    "inscritos": 453,
+    "inscritos": 467,
     "estado": "Abierto",
     "fuente": "Devpost API",
     "areas_perfil": [],
@@ -1816,7 +1737,7 @@
       "Social Good"
     ],
     "apto_principiantes": true,
-    "inscritos": 26,
+    "inscritos": 37,
     "estado": "Próximamente",
     "fuente": "Devpost API",
     "areas_perfil": [],
@@ -1841,7 +1762,7 @@
       "Social Good"
     ],
     "apto_principiantes": true,
-    "inscritos": 189,
+    "inscritos": 195,
     "estado": "Abierto",
     "fuente": "Devpost API",
     "areas_perfil": [],
@@ -1866,7 +1787,7 @@
       "Social Good"
     ],
     "apto_principiantes": true,
-    "inscritos": 104,
+    "inscritos": 116,
     "estado": "Abierto",
     "fuente": "Devpost API",
     "areas_perfil": [],
@@ -1890,7 +1811,7 @@
       "Open Ended"
     ],
     "apto_principiantes": true,
-    "inscritos": 562,
+    "inscritos": 570,
     "estado": "Abierto",
     "fuente": "Devpost API",
     "areas_perfil": [],
@@ -1914,7 +1835,7 @@
       "Gaming"
     ],
     "apto_principiantes": true,
-    "inscritos": 1150,
+    "inscritos": 1272,
     "estado": "Abierto",
     "fuente": "Devpost API",
     "areas_perfil": [],
@@ -1939,7 +1860,7 @@
       "Low/No Code"
     ],
     "apto_principiantes": true,
-    "inscritos": 116,
+    "inscritos": 130,
     "estado": "Abierto",
     "fuente": "Devpost API",
     "areas_perfil": [],
@@ -1964,7 +1885,7 @@
       "Education"
     ],
     "apto_principiantes": true,
-    "inscritos": 424,
+    "inscritos": 435,
     "estado": "Próximamente",
     "fuente": "Devpost API",
     "areas_perfil": [],
@@ -1989,7 +1910,7 @@
       "Education"
     ],
     "apto_principiantes": true,
-    "inscritos": 1005,
+    "inscritos": 1033,
     "estado": "Próximamente",
     "fuente": "Devpost API",
     "areas_perfil": [],
@@ -2014,7 +1935,7 @@
       "Productivity"
     ],
     "apto_principiantes": true,
-    "inscritos": 79,
+    "inscritos": 82,
     "estado": "Próximamente",
     "fuente": "Devpost API",
     "areas_perfil": [],
@@ -2039,37 +1960,12 @@
       "Social Good"
     ],
     "apto_principiantes": true,
-    "inscritos": 44,
+    "inscritos": 48,
     "estado": "Próximamente",
     "fuente": "Devpost API",
     "areas_perfil": [],
     "score": 15,
     "_sello": "fe6935789b88"
-  },
-  {
-    "titulo": "DSH Hacks V2 ($100k+ in prizes!)",
-    "organizador": "STEMise",
-    "plataforma": "Devpost",
-    "tipo": "Hackatón",
-    "modalidad": "En línea",
-    "ubicacion": "En línea (internacional)",
-    "pais": "Internacional",
-    "url": "https://dsh-hacks-v2.devpost.com/",
-    "fechas": "Jun 24 - Nov 15, 2026",
-    "fecha_cierre_iso": "2026-11-15",
-    "premio": "",
-    "temas": [
-      "Beginner Friendly",
-      "Low/No Code",
-      "Open Ended"
-    ],
-    "apto_principiantes": true,
-    "inscritos": 1246,
-    "estado": "Abierto",
-    "fuente": "Devpost API",
-    "areas_perfil": [],
-    "score": 5,
-    "_sello": "802b1ecb1b30"
   },
   {
     "titulo": "CrossPointX 2026",
@@ -2089,7 +1985,7 @@
       "Education"
     ],
     "apto_principiantes": true,
-    "inscritos": 161,
+    "inscritos": 163,
     "estado": "Próximamente",
     "fuente": "Devpost API",
     "areas_perfil": [],
@@ -2139,7 +2035,7 @@
       "Web"
     ],
     "apto_principiantes": true,
-    "inscritos": 79,
+    "inscritos": 85,
     "estado": "Próximamente",
     "fuente": "Devpost API",
     "areas_perfil": [],
@@ -2164,7 +2060,7 @@
       "Education"
     ],
     "apto_principiantes": true,
-    "inscritos": 48,
+    "inscritos": 49,
     "estado": "Abierto",
     "fuente": "Devpost API",
     "areas_perfil": [],
@@ -2189,7 +2085,7 @@
       "Open Ended"
     ],
     "apto_principiantes": true,
-    "inscritos": 55,
+    "inscritos": 63,
     "estado": "Abierto",
     "fuente": "Devpost API",
     "areas_perfil": [],
@@ -2238,7 +2134,7 @@
       "Social Good"
     ],
     "apto_principiantes": true,
-    "inscritos": 24,
+    "inscritos": 29,
     "estado": "Abierto",
     "fuente": "Devpost API",
     "areas_perfil": [],
@@ -2288,7 +2184,7 @@
       "Web"
     ],
     "apto_principiantes": true,
-    "inscritos": 54,
+    "inscritos": 56,
     "estado": "Abierto",
     "fuente": "Devpost API",
     "areas_perfil": [],
@@ -2338,7 +2234,7 @@
       "Open Ended"
     ],
     "apto_principiantes": true,
-    "inscritos": 340,
+    "inscritos": 344,
     "estado": "Abierto",
     "fuente": "Devpost API",
     "areas_perfil": [],
@@ -2386,12 +2282,35 @@
       "Low/No Code"
     ],
     "apto_principiantes": false,
-    "inscritos": 2,
-    "estado": "Próximamente",
+    "inscritos": 5,
+    "estado": "Abierto",
     "fuente": "Devpost API",
     "areas_perfil": [],
     "score": 0,
     "_sello": "fcba48ed20ce"
+  },
+  {
+    "titulo": "Game On Night – Imagine the Impossible",
+    "organizador": "Google Student Ambassador",
+    "plataforma": "Devpost",
+    "tipo": "Hackatón",
+    "modalidad": "En línea",
+    "ubicacion": "En línea (internacional)",
+    "pais": "Internacional",
+    "url": "https://game-on-night.devpost.com/",
+    "fechas": "Nov 21, 2026",
+    "fecha_cierre_iso": "2026-11-21",
+    "premio": "",
+    "temas": [
+      "Design"
+    ],
+    "apto_principiantes": false,
+    "inscritos": 0,
+    "estado": "Próximamente",
+    "fuente": "Devpost API",
+    "areas_perfil": [],
+    "score": 0,
+    "_sello": "1e92986a5842"
   },
   {
     "titulo": "Ryze Hacks 2026",
@@ -2409,7 +2328,7 @@
       "Education"
     ],
     "apto_principiantes": false,
-    "inscritos": 19,
+    "inscritos": 23,
     "estado": "Próximamente",
     "fuente": "Devpost API",
     "areas_perfil": [],
@@ -2432,7 +2351,7 @@
       "Open Ended"
     ],
     "apto_principiantes": false,
-    "inscritos": 1,
+    "inscritos": 21,
     "estado": "Próximamente",
     "fuente": "Devpost API",
     "areas_perfil": [],

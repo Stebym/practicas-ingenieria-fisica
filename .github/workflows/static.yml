@@ -28,16 +28,16 @@ jobs:
     if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+      url: ${{ steps.deployment.outputs.page_url || steps.deployment_reintento.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
       - name: Descargar repositorio (última versión de main)
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
           ref: main
 
       - name: Configurar Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v7
         with:
           python-version: '3.11'
 
@@ -63,7 +63,7 @@ jobs:
           echo "No se pudo guardar index.html en el repositorio; se publica igual."
 
       - name: Setup Pages
-        uses: actions/configure-pages@v5
+        uses: actions/configure-pages@v6
 
       - name: Preparar sitio estático
         run: |
@@ -72,10 +72,22 @@ jobs:
           cp -f vacantes_practicas.json vacantes_practicas.csv convenios_internacionales.json becas_internacionales.json retos_hackatones.json _site/ 2>/dev/null || true
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v5
         with:
           path: _site
 
+      # A veces la API de GitHub aún no lista el artefacto recién subido
+      # ("No artifacts named github-pages were found"); se espera y se reintenta.
       - name: Deploy to GitHub Pages
         id: deployment
+        continue-on-error: true
+        uses: actions/deploy-pages@v5
+
+      - name: Esperar antes de reintentar la publicación
+        if: steps.deployment.outcome == 'failure'
+        run: sleep 45
+
+      - name: Deploy to GitHub Pages (reintento)
+        id: deployment_reintento
+        if: steps.deployment.outcome == 'failure'
         uses: actions/deploy-pages@v5

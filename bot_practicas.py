@@ -224,7 +224,13 @@ EXCLUDED_ROLES = [
     r"\bejecutiv[ao]\s+comercial\b",
     r"\bvendedor[a]?\b",
     r"\bcall\s+center\b",
-    r"\bcobranza\b"
+    r"\bcobranza\b",
+    r"\btrabajo\s+social\b",
+    r"\bmec[aá]nic[oa]\s+automotriz\b",
+    r"\bcompras\b",
+    r"\bdesarrollo\s+comercial\b",
+    r"\b(?:aprendiz|practicante|auxiliar)\s+administrativ[oa]s?\b",
+    r"\bcultura\s+y\s+desarrollo\b",
 ]
 
 TERMINOS_MUJERES_RE = re.compile(r'\b(mujer|mujeres|women|women in tech|femenin[ao]?|stem)\b', re.IGNORECASE)
@@ -310,7 +316,7 @@ FISICA_FALSA_RE = re.compile(
     r"toma|existencias?|inventarios?|conteos?|verificaci[oó]n|inspecci[oó]n|recepci[oó]n|entrega|distribuci[oó]n|alistamiento|"
     r"almacenamiento|bodega|planta|sede|tienda|punto|infraestructura|instalaci[oó]n|instalaciones|espacio|archivo|documentaci[oó]n|"
     r"integridad|presencia|carga|fuerza|esfuerzo|resistencia|apariencia|estructura|salud|discapacidad|capacidad|geograf[ií]a|acceso|ubicaci[oó]n|"
-    r"caracter[ií]sticas?|propiedades?)\s+f[ií]sic[ao]s?\b|"
+    r"caracter[ií]sticas?|propiedades?|acondicionamiento|mercanc[ií]as?|informaci[oó]n|evidencias?|unidades|productos?)\s+f[ií]sic[ao]s?\b|"
     r"\b(?:inventarios?|activos?|movimientos?|archivos?|documentos?|espacios?|prototipos?|medios?|controles?|recursos?|bienes|equipos?|materiales?|instalaciones|tiendas?|puntos?|sedes?|entregas?)\s+(?:digitales?\s+y\s+|virtuales?\s+y\s+|electr[oó]nicos?\s+y\s+)?f[ií]sicos?\b|"
     r"\bf[ií]sic[ao]s?\s+y\s+(?:digital(?:es)?|documental(?:es)?|mental(?:es)?|emocional(?:es)?|verbal(?:es)?|virtual(?:es)?|t[eé]cnic[oa]s?)\b|"
     r"\b(?:digital(?:es)?|documental(?:es)?|mental(?:es)?|emocional(?:es)?|virtual(?:es)?)\s+y\s+f[ií]sic[ao]s?\b|"
@@ -371,6 +377,8 @@ TERMINOS_FISICA_RE = re.compile(
     r")\b",
     re.IGNORECASE,
 )
+
+PERFIL_GENERADO_RE = re.compile(r"^Ingenier[ií]a F[ií]sica, .* o afines$")
 
 def mentions_physics_science(title, full_text):
     """Detecta cualquier mención real a Física, Físico(a), Investigador Físico, Fisicoquímica, Metrología, etc.
@@ -464,6 +472,63 @@ def canonical_job_url(url):
     if id_param:
         return f"{host}{path}?{id_param.group(1).lower()}={id_param.group(2)}".lower()
     return f"{host}{path}".lower()
+
+EMPRESA_RELLENO = {
+    "sas", "sa", "s", "a", "ltda", "abs", "adc", "colombia", "de", "del", "la", "el", "grupo", "cia", "y",
+    "inc", "corporativo", "co", "tiendas", "industrias", "compania", "laboratorio", "laboratorios", "latam",
+}
+EMPRESA_ANONIMA_RE = re.compile(r"confidencial|por identificar|agencia de empleo|servicio de empleo|magneto empleos")
+# Portales cuyo enlace abre sin iniciar sesión van primero al elegir el duplicado que se publica.
+PRIORIDAD_FUENTE = ("magneto", "computrabajo", "elempleo", "portal corporativo", "convocatoria")
+
+def clave_duplicado(job):
+    """Clave (título, empresa, ciudad) para reconocer el mismo aviso en varios portales."""
+    def tokens(value):
+        return [t for t in re.split(r"[^a-z0-9]+", normalize_match_text(value)) if t]
+    empresa_raw = normalize_match_text(job.get("empresa"))
+    if not empresa_raw or EMPRESA_ANONIMA_RE.search(empresa_raw):
+        return None
+    empresa = [t for t in tokens(empresa_raw) if t not in EMPRESA_RELLENO]
+    # LinkedIn agrega contadores sueltos al final ("2027 I 1"): los dígitos solos no cuentan.
+    titulo = [t for t in tokens(job.get("titulo")) if not (t.isdigit() and len(t) == 1)]
+    ciudad = tokens(str(job.get("ubicacion") or "").split(",")[0].split("·")[0])
+    if not empresa or not titulo:
+        return None
+    return (" ".join(titulo), empresa[0], " ".join(ciudad))
+
+def deduplicate_across_sources(jobs):
+    """Deja una sola tarjeta por aviso cuando varios portales publican la misma práctica."""
+    def calidad(job):
+        fuente = normalize_match_text(job.get("fuente"))
+        return (
+            bool(job.get("curada")),
+            bool(job.get("encontrada_ultima_corrida")),
+            any(p in fuente for p in PRIORIDAD_FUENTE),
+            bool(job.get("compensacion")),
+            len(str(job.get("descripcion_fuente") or "")),
+        )
+    grupos = {}
+    unicos = []
+    for job in jobs:
+        clave = clave_duplicado(job)
+        if clave is None:
+            unicos.append(job)
+        else:
+            grupos.setdefault(clave, []).append(job)
+    for grupo in grupos.values():
+        grupo.sort(key=calidad, reverse=True)
+        mejor = grupo[0]
+        if len(grupo) > 1:
+            fechas = [j.get("primera_deteccion") for j in grupo if j.get("primera_deteccion")]
+            if fechas:
+                mejor["primera_deteccion"] = min(fechas)
+            mejor["otras_fuentes"] = [
+                {"fuente": j.get("fuente", ""), "url": j.get("url", "")} for j in grupo[1:]
+            ]
+        else:
+            mejor.pop("otras_fuentes", None)
+        unicos.append(mejor)
+    return unicos
 
 # Días que se conserva una vacante que dejó de aparecer en las búsquedas
 # (sigue sujeta a la verificación del enlace en cada corrida).
@@ -1272,7 +1337,13 @@ def classify_and_score_job(job, config_ramas):
     """Calcula el Score de Afinidad con el Pénsum UNAL con priorización y filtrado de roles no técnicos."""
     title_lower = job.get("titulo", "").lower()
     company_lower = job.get("empresa", "").lower()
-    perfil_lower = job.get("perfil", "").lower()
+    # El "perfil sugerido" que arma este bot ("Ingeniería Física, ... o afines")
+    # no viene del aviso: si se volviera a leer, toda vacante quedaría marcada
+    # como afín a Física en la corrida siguiente. Se descarta y se recalcula.
+    if job.get("_perfil_generado") or PERFIL_GENERADO_RE.match(str(job.get("perfil") or "")):
+        job["perfil"] = ""
+    job.pop("_perfil_generado", None)
+    perfil_lower = str(job.get("perfil") or "").lower()
     # La misión/tareas generadas desde plantillas en corridas anteriores no
     # deben volver a puntuar como si vinieran del aviso.
     mision_lower = "" if job.get("_mision_generada") else str(job.get("mision", "")).lower()
@@ -1447,6 +1518,7 @@ def classify_and_score_job(job, config_ramas):
     # Si la fuente no entregó perfil de carreras pero se detectaron carreras afines explícitas en el texto, mostrarlas
     if not job.get("perfil") and carreras_detectadas:
         job["perfil"] = "Ingeniería Física, " + ", ".join(carreras_detectadas[:4]) + " o afines"
+        job["_perfil_generado"] = True
 
     job["ramas"] = ramas_coincidentes
     job["rama_principal"] = ramas_coincidentes[0]["nombre"]
@@ -1696,6 +1768,7 @@ def main():
             c = classify_and_score_job(j, config_ramas)
             if c:
                 classified.append(c)
+        classified = deduplicate_across_sources(classified)
         classified.sort(key=lambda x: x.get("score_pensum", 0), reverse=True)
         vacantes = sellar_registros(classified)
         with open(OUTPUT_JSON, "w", encoding="utf-8") as f:
@@ -1707,9 +1780,11 @@ def main():
     
     config_ramas = load_json(CONFIG_RAMAS_PATH)
     collected = {}
+    crudos_por_fuente = Counter()
 
     def add_jobs(jobs, label):
         added = 0
+        crudos_por_fuente[label.split(" '")[0].split(" ")[0]] += len(jobs or [])
         for job in jobs:
             key = canonical_job_url(job.get("url"))
             if key and key not in collected:
@@ -1968,6 +2043,14 @@ def main():
             f"LinkedIn {comp}",
         )
 
+    print("\n[*] Resultados crudos por fuente:")
+    for fuente_nombre in ("Destacadas", "Convocatorias", "Computrabajo", "Magneto365", "ElEmpleo", "FirstJob",
+                          "Workday", "GetOnBoard", "Torre.ai", "Greenhouse", "SmartRecruiters", "LinkedIn",
+                          "Colombia", "Web"):
+        total_fuente = crudos_por_fuente.get(fuente_nombre, 0)
+        aviso = "" if total_fuente else "   <-- [!] SIN RESULTADOS: revisar si la fuente cambió o está bloqueando"
+        print(f"    {fuente_nombre}: {total_fuente}{aviso}")
+
     print(f"\n[*] Total de vacantes únicas recolectadas: {len(collected)}")
     # Las vacantes de la corrida anterior que no reaparecieron (portal caído,
     # 429, cambio de orden) se vuelven a verificar en lugar de perderse.
@@ -1983,6 +2066,10 @@ def main():
         if classified:
             classified_jobs.append(classified)
         
+    antes_duplicados = len(classified_jobs)
+    classified_jobs = deduplicate_across_sources(classified_jobs)
+    print(f"[*] Duplicados entre portales fusionados: {antes_duplicados - len(classified_jobs)}")
+
     # Ordenar por Score de Afinidad del Pénsum
     classified_jobs.sort(key=lambda x: x.get("score_pensum", 0), reverse=True)
     sellar_registros(classified_jobs)

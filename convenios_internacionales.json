@@ -171,6 +171,16 @@
   },
   {
     "ano": "2026",
+    "pais": "Brasil",
+    "institucion": "Universidad Estatal Península De Santa Elena (Upse)",
+    "nombre": "CONVENIO ESPECÍFICO DE COOPERACIÓN ENTRE LA UNIVERSIDAD NACIONAL DE COLOMBIA Y LA UNIVERSIDAD ESTATAL PENÍNSULA DE SANTA ELENA (UPS) CONVENIO NoUPSE-P-064-09-2026-C",
+    "tipo": "Cooperación",
+    "link": "https://drive.google.com/file/d/1KlTzVAEYaNLZY7k53xL89G0rbAOn36s2/view?usp=sharing",
+    "area": "Ingeniería",
+    "_sello": "bd22729a301f"
+  },
+  {
+    "ano": "2026",
     "pais": "Bélgica",
     "institucion": "Universidad De Namur",
     "nombre": "ACUERDO INTERINSTITUCIONAL BILATERAL ENTRE LA UNIVERSIDAD DE NAMUY Y LA UNIVERSIDAD NACIONAL DE COLOMBIA",
@@ -671,6 +681,86 @@
   },
   {
     "ano": "2026",
+    "pais": "Colombia",
+    "institucion": "Asociación Colombiana De Comunicación Popular (Accop)",
+    "nombre": "CONVENIO MARCO PARA EL PROGRAMA DE PRÁCTICAS Y PASANTÍAS CELEBRADO ENTRE ASOCIACIÓN COLOMBIANA DE COMUNICACIÓN POPULAR (ACCOP) Y LA UNIVERSIDAD NACIONAL DE COLOMBIA",
+    "tipo": "Prácticas Y Pasantías",
+    "link": "https://drive.google.com/file/d/1H-ysaPSCnUlCu3vra0w4GFvYIoPJo3Ym/view?usp=sharing",
+    "area": "Interdisciplinar",
+    "_sello": "33644616bed3"
+  },
+  {
+    "ano": "2026",
+    "pais": "Colombia",
+    "institucion": "Fundación Fc Fe Y Esperanza",
+    "nombre": "CONVENIO MARCO PARA EL PROGRAMA DE PRÁCTICAS Y PASANTIAS CELEBRADO ENTRE LA FUNDACIÓN FC FE Y ESPERANZA Y LA UNIVERSIDAD NACIONAL DE COLOMBIA",
+    "tipo": "Prácticas Y Pasantías",
+    "link": "https://drive.google.com/file/d/1o0d8i63-n0BY8at40PGWFnosROmaePkC/view?usp=sharing",
+    "area": "Interdisciplinar",
+    "_sello": "c959a2281af5"
+  },
+  {
+    "ano": "2026",
+    "pais": "Colombia",
+    "institucion": "Salud Al Derecho Asociación Colombiana Para La Exigibilidad Del Derecho A La Salud Y La Seguridad Social - Asad",
+    "nombre": "CONVENIO MARCO PARA EL PROGRAMA DE PRÁCTICAS Y PASANTÍAS CELEBRADO ENTRE SALUD AL DERECHO ASOCIACIÓN COLOMBIANA PARA LA EXIGIBILIDAD DEL DERECHO A LA SALUD Y SEGURIDAD SOCIAL - ASAD Y LA UNIVERSIDAD NACIONAL DE COLOMBIA",
+    "tipo": "Prácticas Y Pasantías",
+    "link": "https://drive.google.com/file/d/1zBYoOdu3_qzOhZSqWG4vhSVJQWt5Rrfs/view?usp=sharing",
+    "area": "Interdisciplinar",
+    "_sello": "8395a0bd2131"
+  },
+  {
+    "ano": "2026",
+    "pais": "Colombia",
+    "institucion": "Corporación Ilex Acción Jurídica",
+    "nombre": "CONVENIO MARCO PARA EL PROGRAMA DE PRÁCTICAS Y PASANTÍAS CELEBRADO ENTRE CORPORACIÓN ILEX ACCIÓN JURÍDICA Y LA UNIVERSIDAD NACIONAL DE COLOMBIA",
+    "tipo": "Prácticas Y Pasantías",
+    "link": "https://drive.google.com/file/d/15Nq9jU2xRNo7e6zJLW9TgCosvJeIgaiU/view?usp=sharing",
+    "area": "Interdisciplinar",
+    "_sello": "c17ed5972765"
+  },
+  {
+    "ano": "2026",
+    "pais": "Colombia",
+    "institucion": "Temblores Ong",
+    "nombre": "CONVENIO MARCO PARA EL PROGRAMA DE PRÁCTICAS Y PASANTÍAS CELEBRADO ENTRE TEMBLORES ONG Y LA UNIVERSIDAD NACIONAL DE COLOMBIA",
+    "tipo": "Prácticas Y Pasantías",
+    "link": "https://drive.google.com/file/d/1n5zydzJjgQFz5Tw17qhiiJbm1nmJ1Xb5/view?usp=sharing",
+    "area": "Interdisciplinar",
+    "_sello": "10345de786eb"
+  },
+  {
+    "ano": "2026",
+    "pais": "Colombia",
+    "institucion": "Club De Leones Santa Fe De Bogotá Siglo Xxi",
+    "nombre": "CONVENIO MARCO PARA EL PROGRAMA DE PRÁCTICAS Y PASANTÍAS CELEBRADO ENTRE EL CLUB DE LEONES SANTA FE DE BOGOTÁ SIGLO XXI Y LA UNIVERSIDAD NACIONAL DE COLOMBIA",
+    "tipo": "Prácticas Y Pasantías",
+    "link": "https://drive.google.com/file/d/1Du3Fd3bp88sLOUbqb5UukHCyaSlS3ltG/view?usp=sharing",
+    "area": "Interdisciplinar",
+    "_sello": "cbb43599e7a4"
+  },
+  {
+    "ano": "2026",
+    "pais": "Colombia",
+    "institucion": "Centro Para La Justicia Marina",
+    "nombre": "CONVENIO ESPECÍFICO DE APOYO INTERINSTITUCIONAL PARA EL DESARROLLO DE PRÁCTICAS Y/O PASANTÍAS ENTRE EL CENTRO PARA LA JUSTICIA MARINA Y LA UNIVERSIDAD NACIONAL DE COLOMBIA - SEDE BOGOTÁ",
+    "tipo": "Prácticas Y Pasantías",
+    "link": "https://drive.google.com/file/d/14pDX6wUE88AtAOyTZrCcaPxvJdj70waT/view?usp=sharing",
+    "area": "Derecho, Ciencias Políticas Y Sociales",
+    "_sello": "e94681b659c0"
+  },
+  {
+    "ano": "2026",
+    "pais": "Colombia",
+    "institucion": "Red De Jóvenes Por Los Objetivos De Desarrollo Sostenible",
+    "nombre": "CONVENIO MARCO PARA EL PROGRAMA DE PRÁCTICAS Y PASANTÍAS CELEBRADO ENTRE LA RED DE JÓVENES POR LOS OBJETIVOS DE DESARROLLO SOSTENIBLE Y LA UNIVERSIDAD NACIONAL DE COLOMBIA",
+    "tipo": "Prácticas Y Pasantías",
+    "link": "https://drive.google.com/file/d/1DYXCR4wtAusnEh0vwrNqijJVR7ijPUlp/view?usp=sharing",
+    "area": "Interdisciplinar",
+    "_sello": "f3b38d8edf44"
+  },
+  {
+    "ano": "2026",
     "pais": "Corea Del Sur",
     "institucion": "Dongguk University",
     "nombre": "ACUERDO DE COLABORACIÓN Y MOVILIDAD ACADÉMICA ENTRE LA UNIVERSIDAD NACIONAL DE COLOMBIA Y LA DONGGUK UNIVERSITY",
@@ -808,6 +898,16 @@
     "link": "https://drive.google.com/file/d/1Vffhz1ho-CJqcHMQJWYtf4ZEf5SOrwAH/view?usp=sharing",
     "area": "Ingeniería",
     "_sello": "d6ff3424122d"
+  },
+  {
+    "ano": "2026",
+    "pais": "España",
+    "institucion": "Universidad De Cantabria",
+    "nombre": "CONVENIO MARCO ENTRE LA UNIVERSIDAD DE CANTABRIA Y LA UNIVERSIDAD NACIONAL DE COLOMBIA",
+    "tipo": "Cooperación",
+    "link": "https://drive.google.com/file/d/1pqadpmjZLGyVAn07V_RjcaGjG7FV0esX/view?usp=sharing",
+    "area": "Interdisciplinar",
+    "_sello": "02ead15548d0"
   },
   {
     "ano": "2026",
@@ -1051,6 +1151,16 @@
   },
   {
     "ano": "2026",
+    "pais": "México",
+    "institucion": "Centro De Investigación En Materiales Avanzados S.C",
+    "nombre": "ACUERDO DE COOPERACIÓN E INTERCAMBIO ACADÉMICO ENTRE LA UNIVERSIDAD NACIONAL DE COLOMBIA",
+    "tipo": "Cooperación E Intercambio Académico",
+    "link": "https://drive.google.com/file/d/1h1pfluL-HZ0YgEml7QYtUic2KpY1VgnK/view?usp=sharing",
+    "area": "Interdisciplinar",
+    "_sello": "bff81fcce3bd"
+  },
+  {
+    "ano": "2026",
     "pais": "Países Bajos",
     "institucion": "University Of Groningen",
     "nombre": "MEMORANDO DE ENTENDIMIENTO ENTRE LA UNIVERSIDAD NACIONAL DE COLOMBIA (COLOMBIA) Y LA UNIVERSIDAD DE GRONINGEN (PAÍSES BAJOS)",
@@ -1078,6 +1188,16 @@
     "link": "https://drive.google.com/file/d/1yTvgGDxnAPBv01zum56Gb3s2Cv0K3TDX/view?usp=drive_link",
     "area": "Todas Las Áreas",
     "_sello": "7ab614b0917f"
+  },
+  {
+    "ano": "2026",
+    "pais": "Perú",
+    "institucion": "Universidad Nacional De Moquegua",
+    "nombre": "CONVENIO MARCO DE COOPERACIÓN INTERINSTITUCIONAL",
+    "tipo": "Cooperación",
+    "link": "https://drive.google.com/file/d/1XIwnilzG7WxamYzWbdhKeY_EzFMBg8mi/view?usp=sharing",
+    "area": "Interdisciplinar",
+    "_sello": "d543e5cb02cc"
   },
   {
     "ano": "2026",
@@ -4658,16 +4778,6 @@
     "link": "https://drive.google.com/file/d/1K2xsGP6iWfFFHIt4AD3_9xJGsCg9cT6s/view?usp=sharing",
     "area": "Todas Las Áreas",
     "_sello": "6fd0e280ec98"
-  },
-  {
-    "ano": "2024",
-    "pais": "México",
-    "institucion": "Taller Goma",
-    "nombre": "ACUERDO ESPECÍFICO PARA EL DESARROLLO DE PRÁCTICAS O PASANTÍAS ACADÉMICAS CELEBRADO ENTRE TALLER GOMA Y LA UNIVERSIDAD NACIONAL DE COLOMBIA - ESTUDIANTE MARIA CAMILA HIGUITA LOAIZA",
-    "tipo": "Prácticas Y Pasantías",
-    "link": "https://drive.google.com/file/d/1op0IwWXuLTjv1IUO_mF1NosrKnFaV7MQ/view?usp=sharing",
-    "area": "Ingeniería, Arquitectura, Urbanismo Y Afines",
-    "_sello": "af8cb787b851"
   },
   {
     "ano": "2024",
@@ -8341,16 +8451,6 @@
   },
   {
     "ano": "2021",
-    "pais": "España",
-    "institucion": "Universidad Internacional De La Rioja (Unir)",
-    "nombre": "CONVENIO DE COOPERACIÓN EDUCATIVA ENTRE LA UNIVERSIDAD INTERNACIONAL Y LA UNIVERSIDAD NACIONAL DE COLOMBIA",
-    "tipo": "Cooperación Académica",
-    "link": "https://drive.google.com/file/d/1HGzGNWmtZcyFGYpXLF34jcm4Ow46lGUv/view?usp=sharing",
-    "area": "Todas Las Áreas",
-    "_sello": "9f4f68cdeb96"
-  },
-  {
-    "ano": "2021",
     "pais": "Francia",
     "institucion": "Groupe Des Instituts Nationaux Des Sciences Appliquees Groupe (Insa)",
     "nombre": "CONVENIO DE COOPERACIÓN ACADÉMICA ENTRE LA UNIVERSIDAD NACIONAL DE COLOMBIA 8COLOMBIA) Y EL GROUPE DES INSTITUTS NATIONAUX DES SCIENCES APPLIQUÉES (FRANCE), EN EL MARCO DE L PROGRAMA DE DOBLE TITULACIÓN",
@@ -8458,16 +8558,6 @@
     "link": "https://drive.google.com/file/d/1IukSce6YCemTz2xaTmPKC5MUlqtEYXuk/view?usp=sharing",
     "area": "Todas Las Áreas",
     "_sello": "6707e22966bb"
-  },
-  {
-    "ano": "2021",
-    "pais": "Multilateral",
-    "institucion": "Agencia Francesa De Desarrollo, Fiducoldex, La Universidad De Antioquia",
-    "nombre": "FINANCING AGREEMENT BETWEEN AGENCE FRANCAISE DE DEVELOPPEMENT , PATRIMONIO AUTONOMO COLOMBIA PRODUCTIVA, UNVERSIDAD DE ANTIOQUIA Y UNIVERSIDAD NACIONAL DE COLOMBIA",
-    "tipo": "Subvención",
-    "link": "https://drive.google.com/file/d/1nMQ9_aiQ_QZAUWh6iZkN9TGN6EJNusTR/view?usp=sharing",
-    "area": "Ingeniería, Arquitectura, Urbanismo Y Afines",
-    "_sello": "1d4ca6738e3b"
   },
   {
     "ano": "2021",

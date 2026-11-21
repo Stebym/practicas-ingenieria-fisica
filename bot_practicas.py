@@ -531,8 +531,8 @@ def deduplicate_across_sources(jobs):
     return unicos
 
 # Días que se conserva una vacante que dejó de aparecer en las búsquedas
-# (sigue sujeta a la verificación del enlace en cada corrida).
-DIAS_RETENCION_SIN_REAPARECER = 5
+# (sigue sujeta a la verificación en vivo del enlace en cada corrida).
+DIAS_RETENCION_SIN_REAPARECER = 2
 MAX_DIAS_PUBLICACION = 45
 
 def merge_job_snapshots(current_jobs, previous_jobs):
@@ -542,7 +542,7 @@ def merge_job_snapshots(current_jobs, previous_jobs):
     detail_fields = (
         "perfil", "compensacion", "resumen_fuente", "descripcion_fuente",
         "fecha_publicacion", "fecha_cierre_iso", "tipo_empleo", "modalidad",
-        "alcance_geografico", "estado_vigencia",
+        "alcance_geografico",
     )
     for source in current_jobs:
         key = canonical_job_url(source.get("url"))
@@ -558,6 +558,7 @@ def merge_job_snapshots(current_jobs, previous_jobs):
                     item[field] = value
         item["encontrada_ultima_corrida"] = True
         item["ultima_deteccion"] = today.isoformat()
+        item.pop("estado_vigencia", None)
 
     for source in previous_jobs if isinstance(previous_jobs, list) else []:
         key = canonical_job_url(source.get("url"))
@@ -625,7 +626,9 @@ LINKEDIN_STATS = Counter()
 _linkedin_lock = threading.Lock()
 _linkedin_next_allowed = [0.0]
 LINKEDIN_CLOSED_RE = re.compile(
-    r"no longer accepting applications|ya no se aceptan solicitudes|ya no acepta solicitudes",
+    r"no longer accepting applications|ya no se aceptan solicitudes|ya no acepta solicitudes|"
+    r"este empleo ya no est[aá] disponible|applications are closed|solicitudes cerradas|"
+    r"closed-job|apply-button--disabled",
     re.IGNORECASE,
 )
 
@@ -746,18 +749,14 @@ def scrape_linkedin_query(query, location="Antioquia, Colombia", pages=1, requir
 def enrich_linkedin_job(job):
     """Lee el detalle público del aviso: confirma que sigue abierto y trae la descripción.
 
-    Si el aviso acaba de aparecer en las búsquedas de esta corrida y ya cuenta con
-    descripción de una corrida previa, se conserva sin gastar otra petición a LinkedIn.
+    Siempre consulta el detalle en vivo en LinkedIn (el índice de búsqueda puede seguir
+    devolviendo avisos que ya dicen 'Ya no se aceptan solicitudes').
     Si LinkedIn limita la tasa (HTTP 429) o hay falla temporal de red, solo se conserva
     si la vacante apareció en la corrida actual o es curada.
     """
     job_id = job.get("linkedin_id") or (re.search(r"(\d{8,})", job.get("url", "")) or [None, None])[1]
     if not job_id:
         return False
-    if job.get("encontrada_ultima_corrida") and job.get("descripcion_fuente"):
-        job["estado_vigencia"] = "Aviso abierto en LinkedIn al momento del rastreo"
-        LINKEDIN_STATS["detalle en caché (activo)"] += 1
-        return True
     if time_budget_exceeded():
         if job.get("encontrada_ultima_corrida") or job.get("curada"):
             job.setdefault("estado_vigencia", "Aviso detectado en LinkedIn (verificación diferida por tiempo)")
@@ -775,6 +774,7 @@ def enrich_linkedin_job(job):
         return False
     page = r.text
     if LINKEDIN_CLOSED_RE.search(page):
+        LINKEDIN_STATS["descartada por cerrada"] += 1
         return False
     desc_m = re.search(r'show-more-less-html__markup[^>]*>(.*?)</div>', page, re.DOTALL)
     if desc_m:
@@ -885,11 +885,21 @@ def _scrape_magneto_page(query, page):
             return []
         data = r.json()
         rows = data.get("rows", [])
+        today_iso = datetime.now().date().isoformat()
         results = []
         for row in rows:
             slug = row.get("jobSlug")
             title = (row.get("title") or "").strip()
             if not slug or not title:
+                continue
+            row_status = str(row.get("status") or "").strip().lower()
+            if row_status and row_status != "published":
+                continue
+            unpub = str(row.get("unpublishDate") or "").split("T")[0].strip()
+            if re.match(r"^\d{4}-\d{2}-\d{2}$", unpub) and unpub <= today_iso:
+                continue
+            exp_iso = str(row.get("expirationDate") or "").split("T")[0].strip()
+            if re.match(r"^\d{4}-\d{2}-\d{2}$", exp_iso) and exp_iso < today_iso:
                 continue
 
             cities = row.get("cities") or []
@@ -1615,44 +1625,137 @@ def extract_page_description(page_html, job=None):
             job["compensacion"] = sal_txt
     return desc_found
 
+CLOSED_PAGE_RE = re.compile(
+    r"esta\s+oferta\s+ya\s+no\s+est[aá]\s+disponible|"
+    r"la\s+oferta\s+que\s+buscas\s+ya\s+no\s+est[aá]\s+disponible|"
+    r"oferta\s+(?:caducada|vencida|expirada|cerrada|finalizada|no\s+disponible)|"
+    r"la\s+vacante\s+ha\s+finalizado|"
+    r"esta\s+vacante\s+(?:no\s+recibe\s+m[aá]s\s+aplicaciones|ya\s+no\s+est[aá]\s+disponible|fue\s+cerrada|est[aá]\s+cerrada)|"
+    r"vacante\s+(?:cerrada|finalizada|expirada|vencida|cubierta|inactiva)|"
+    r"convocatoria\s+(?:cerrada|finalizada|vencida)|"
+    r"inscripciones\s+cerradas|"
+    r"ya\s+no\s+se\s+aceptan\s+(?:solicitudes|postulaciones|aplicaciones)|"
+    r"p[aá]gina\s+no\s+encontrada|"
+    r"no\s+longer\s+accepting\s+applications|"
+    r"this\s+(?:job|position|vacancy)\s+is\s+no\s+longer\s+available|"
+    r"position\s+has\s+been\s+filled|"
+    r"job\s+(?:has\s+expired|is\s+closed)",
+    re.IGNORECASE,
+)
+
+def _fecha_cierre_vencida(fecha_iso):
+    fecha_txt = str(fecha_iso or "").split("T")[0].strip()
+    if not re.match(r"^\d{4}-\d{2}-\d{2}$", fecha_txt):
+        return False
+    try:
+        return datetime.fromisoformat(fecha_txt).date() < datetime.now().date()
+    except ValueError:
+        return False
+
+def verify_magneto_job(job):
+    """Verifica el estado real de una vacante de Magneto365 mediante su API pública de detalle.
+
+    La página HTML de Magneto365 suele devolver HTTP 200 (o timeout) incluso cuando la vacante
+    ya cambió a status 'expired' o 'covered'. La API /jobs/v1/public/jobs/{slug} entrega el
+    estado exacto ('published' vs 'expired'/'covered'/'closed') y las fechas reales.
+    """
+    url = str(job.get("url") or "").strip()
+    slug = urlparse(url).path.rstrip("/").split("/")[-1]
+    if not slug:
+        return False
+    api_url = f"https://api.magneto365.com/jobs/v1/public/jobs/{slug}"
+    headers = {
+        "User-Agent": HEADERS["User-Agent"],
+        "Origin": "https://www.magneto365.com",
+        "Referer": "https://www.magneto365.com/",
+        "Accept": "application/json, text/plain, */*",
+    }
+    try:
+        r = requests.get(api_url, headers=headers, timeout=8)
+        if r.status_code in (404, 410):
+            return False
+        if r.status_code != 200:
+            return bool(job.get("encontrada_ultima_corrida"))
+        data = r.json()
+        status = str(data.get("status") or "").strip().lower()
+        if status != "published":
+            return False
+        unpub = str(data.get("unpublishDate") or "").split("T")[0].strip()
+        if re.match(r"^\d{4}-\d{2}-\d{2}$", unpub) and unpub <= datetime.now().date().isoformat():
+            return False
+        exp = str(data.get("expirationDate") or "").split("T")[0].strip()
+        if _fecha_cierre_vencida(exp):
+            return False
+        if re.match(r"^\d{4}-\d{2}-\d{2}$", exp):
+            job["fecha_cierre_iso"] = exp
+        pub = str(data.get("publishDate") or "").split("T")[0].strip()
+        if re.match(r"^\d{4}-\d{2}-\d{2}$", pub) and job.get("fecha_publicacion") in (None, "", "Reciente", "Ver fecha en el aviso"):
+            job["fecha_publicacion"] = pub
+        if not job.get("compensacion") and (data.get("salary") or 0) > 0:
+            job["compensacion"] = f"${data['salary']:,.0f} COP".replace(",", ".")
+        if not job.get("descripcion_fuente") and data.get("description"):
+            job["descripcion_fuente"] = html_to_text(data["description"])[:2500]
+        job["estado_vigencia"] = "Aviso abierto en Magneto365 al momento del rastreo"
+        return True
+    except Exception:
+        return bool(job.get("encontrada_ultima_corrida"))
+
 def verify_job_url(job):
-    """Confirma que el aviso sigue abierto (HTTP 200, sin login ni 'oferta finalizada') y lee su descripción."""
+    """Confirma que el aviso sigue abierto (sin cierre, redirección a listado ni fecha vencida) y lee su descripción."""
     url = job.get("url", "")
     if not url or not url.startswith("http"):
+        return False
+    if _fecha_cierre_vencida(job.get("fecha_cierre_iso")):
         return False
     url_lower = url.lower()
     if "linkedin.com" in url_lower:
         return enrich_linkedin_job(job)
-    # Si la oferta proviene de una API en vivo en esta misma corrida y ya tiene su descripción completa,
+    if "magneto365.com" in url_lower:
+        return verify_magneto_job(job)
+    # Si la oferta proviene de una API corporativa en vivo en esta misma corrida y ya tiene su descripción completa,
     # no requiere descargar el HTML otra vez.
     if (
         job.get("encontrada_ultima_corrida")
         and job.get("descripcion_fuente")
-        and any(dom in url_lower for dom in ("magneto365.com", "myworkdayjobs.com", "getonbrd.com", "psiquantum.com", "greenhouse.io", "smartrecruiters.com"))
+        and any(dom in url_lower for dom in ("myworkdayjobs.com", "getonbrd.com", "psiquantum.com", "greenhouse.io", "smartrecruiters.com"))
     ):
+        job["estado_vigencia"] = "Aviso abierto al momento del rastreo"
         return True
     try:
         r = requests.get(url, headers=HEADERS, timeout=8, allow_redirects=True)
         if r.status_code in (404, 410):
             return False
         if r.status_code >= 400:
-            return bool(job.get("encontrada_ultima_corrida") or job.get("curada"))
-        txt = r.text.lower()
-        if (
-            "esta oferta ya no está disponible" in txt
-            or "la oferta que buscas ya no está disponible" in txt
-            or "página no encontrada" in txt
-            or "la vacante ha finalizado" in txt
-            or "esta vacante no recibe más aplicaciones" in txt
-        ):
+            return bool(job.get("encontrada_ultima_corrida"))
+        final_lower = (r.url or "").lower()
+        # Computrabajo redirige ofertas cerradas con HTTP 301 -> 200 a un listado genérico (/trabajo-de-...#ID)
+        if "computrabajo.com" in url_lower and "/ofertas-de-trabajo/oferta-de-trabajo" in url_lower:
+            if "/ofertas-de-trabajo/oferta-de-trabajo" not in final_lower:
+                return False
+        # ElEmpleo redirige ofertas cerradas con HTTP 200 a /co/ofertas-empleo/?__not_found__=1
+        if "elempleo.com" in url_lower:
+            if "__not_found__" in final_lower:
+                return False
+            if "/ofertas-trabajo/" in url_lower and "/ofertas-trabajo/" not in final_lower:
+                return False
+        # FirstJob redirige ofertas cerradas fuera de /oferta/
+        if "firstjob.me" in url_lower and "/oferta/" in url_lower and "/oferta/" not in final_lower:
+            return False
+        txt_plain = html_to_text(r.text)
+        if CLOSED_PAGE_RE.search(txt_plain):
             return False
         if not job.get("curada"):
             descripcion = extract_page_description(r.text, job=job)
             if descripcion and not job.get("descripcion_fuente"):
                 job["descripcion_fuente"] = descripcion
+        else:
+            extract_page_description(r.text, job=job)
+        if _fecha_cierre_vencida(job.get("fecha_cierre_iso")):
+            return False
+        job["estado_vigencia"] = "Aviso abierto al momento del rastreo"
         return True
     except Exception:
-        return bool(job.get("encontrada_ultima_corrida") or job.get("curada"))
+        return bool(job.get("encontrada_ultima_corrida"))
 
 def is_in_target_location(job):
     """Antioquia con cualquier modalidad; fuera de Antioquia (solo Colombia) únicamente remoto o híbrido explícito."""

@@ -65,14 +65,14 @@ def _texto(raw):
 def fecha_cierre(texto, publicada):
     """La fecha de cierre más tardía que anuncie el texto, o None si no la dice."""
     fechas = []
-    for dia, mes, anio in CIERRE_RE.findall(texto):
-        anio = int(anio) if anio else publicada.year
+    for dia, mes, anio_raw in CIERRE_RE.findall(texto):
+        anio = int(anio_raw) if anio_raw else publicada.year
         try:
             f = date(anio, MESES[mes.lower()], int(dia))
         except ValueError:
             continue
         # "hasta el 15 de enero" publicado en noviembre es del año siguiente.
-        if not anio and f < publicada:
+        if not anio_raw and f < publicada:
             f = f.replace(year=f.year + 1)
         fechas.append(f)
     return max(fechas) if fechas else None

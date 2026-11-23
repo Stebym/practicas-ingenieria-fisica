@@ -44,7 +44,7 @@
       "Machine Learning/AI"
     ],
     "apto_principiantes": true,
-    "inscritos": 631,
+    "inscritos": 669,
     "estado": "Abierto",
     "fuente": "Devpost API",
     "areas_perfil": [
@@ -72,7 +72,7 @@
       "Machine Learning/AI"
     ],
     "apto_principiantes": false,
-    "inscritos": 247,
+    "inscritos": 258,
     "estado": "Abierto",
     "fuente": "Devpost API",
     "areas_perfil": [
@@ -100,7 +100,7 @@
       "Open Ended"
     ],
     "apto_principiantes": false,
-    "inscritos": 2320,
+    "inscritos": 2427,
     "estado": "Abierto",
     "fuente": "Devpost API",
     "areas_perfil": [
@@ -128,7 +128,7 @@
       "Web"
     ],
     "apto_principiantes": false,
-    "inscritos": 232,
+    "inscritos": 307,
     "estado": "Abierto",
     "fuente": "Devpost API",
     "areas_perfil": [
@@ -156,7 +156,7 @@
       "Machine Learning/AI"
     ],
     "apto_principiantes": true,
-    "inscritos": 237,
+    "inscritos": 255,
     "estado": "Abierto",
     "fuente": "Devpost API",
     "areas_perfil": [
@@ -184,7 +184,7 @@
       "Robotic Process Automation"
     ],
     "apto_principiantes": false,
-    "inscritos": 456,
+    "inscritos": 459,
     "estado": "Abierto",
     "fuente": "Devpost API",
     "areas_perfil": [
@@ -295,50 +295,6 @@
     "_sello": "e4a15bedb4a3"
   },
   {
-    "titulo": "Coogs For Energy Hackathon - University of Houston",
-    "organizador": "uh.edu",
-    "plataforma": "Búsqueda web",
-    "tipo": "Hackatón",
-    "modalidad": "Confirmar en la fuente",
-    "ubicacion": "Colombia",
-    "pais": "Colombia",
-    "url": "https://www.uh.edu/energy/eti/students/coogs_for_energy_hackathon.php",
-    "fechas": "Verificar vigencia en la fuente",
-    "fecha_cierre_iso": "",
-    "premio": "",
-    "temas": [],
-    "descripcion": "",
-    "estado": "Verificar vigencia",
-    "fuente": "Búsqueda web · www.uh.edu",
-    "areas_perfil": [
-      "Energía y clima"
-    ],
-    "score": 40,
-    "_sello": "37eb2e34fb20"
-  },
-  {
-    "titulo": "RIT students win Microsoft hackathon with AI-powered shopping...",
-    "organizador": "rit.edu",
-    "plataforma": "Búsqueda web",
-    "tipo": "Hackatón",
-    "modalidad": "Confirmar en la fuente",
-    "ubicacion": "Colombia",
-    "pais": "Colombia",
-    "url": "https://www.rit.edu/news/rit-students-win-microsoft-hackathon-ai-powered-shopping-solution",
-    "fechas": "Verificar vigencia en la fuente",
-    "fecha_cierre_iso": "",
-    "premio": "",
-    "temas": [],
-    "descripcion": "",
-    "estado": "Verificar vigencia",
-    "fuente": "Búsqueda web · www.rit.edu",
-    "areas_perfil": [
-      "Datos, IA y simulación"
-    ],
-    "score": 40,
-    "_sello": "7e305a7eb043"
-  },
-  {
     "titulo": "Kiroween 2026",
     "organizador": "Kiro",
     "plataforma": "Devpost",
@@ -356,7 +312,7 @@
       "Open Ended"
     ],
     "apto_principiantes": true,
-    "inscritos": 18398,
+    "inscritos": 18681,
     "estado": "Abierto",
     "fuente": "Devpost API",
     "areas_perfil": [
@@ -383,7 +339,7 @@
       "Machine Learning/AI"
     ],
     "apto_principiantes": true,
-    "inscritos": 547,
+    "inscritos": 611,
     "estado": "Abierto",
     "fuente": "Devpost API",
     "areas_perfil": [
@@ -410,7 +366,7 @@
       "Open Ended"
     ],
     "apto_principiantes": true,
-    "inscritos": 212,
+    "inscritos": 227,
     "estado": "Abierto",
     "fuente": "Devpost API",
     "areas_perfil": [
@@ -418,6 +374,32 @@
     ],
     "score": 35,
     "_sello": "330e4d6d6d47"
+  },
+  {
+    "titulo": "Hackstead: Winterfest",
+    "organizador": "Hackstead",
+    "plataforma": "Devpost",
+    "tipo": "Hackatón",
+    "modalidad": "En línea",
+    "ubicacion": "En línea (internacional)",
+    "pais": "Internacional",
+    "url": "https://hackstead.devpost.com/",
+    "fechas": "Dec 06 - 20, 2026",
+    "fecha_cierre_iso": "2026-12-20",
+    "premio": "$430",
+    "temas": [
+      "Beginner Friendly",
+      "Machine Learning/AI"
+    ],
+    "apto_principiantes": true,
+    "inscritos": 8,
+    "estado": "Próximamente",
+    "fuente": "Devpost API",
+    "areas_perfil": [
+      "Datos, IA y simulación"
+    ],
+    "score": 35,
+    "_sello": "6ada170ee400"
   },
   {
     "titulo": "Arbiter Hacks V1",
@@ -437,7 +419,7 @@
       "Open Ended"
     ],
     "apto_principiantes": true,
-    "inscritos": 1366,
+    "inscritos": 1413,
     "estado": "Abierto",
     "fuente": "Devpost API",
     "areas_perfil": [
@@ -464,7 +446,7 @@
       "Social Good"
     ],
     "apto_principiantes": true,
-    "inscritos": 98,
+    "inscritos": 107,
     "estado": "Abierto",
     "fuente": "Devpost API",
     "areas_perfil": [
@@ -491,7 +473,7 @@
       "DevOps"
     ],
     "apto_principiantes": true,
-    "inscritos": 244,
+    "inscritos": 250,
     "estado": "Próximamente",
     "fuente": "Devpost API",
     "areas_perfil": [
@@ -518,7 +500,7 @@
       "Social Good"
     ],
     "apto_principiantes": true,
-    "inscritos": 30,
+    "inscritos": 44,
     "estado": "Próximamente",
     "fuente": "Devpost API",
     "areas_perfil": [
@@ -563,8 +545,8 @@
     "ubicacion": "En línea (internacional)",
     "pais": "Internacional",
     "url": "https://obscura.devpost.com/",
-    "fechas": "Nov 18 - 24, 2026",
-    "fecha_cierre_iso": "2026-11-24",
+    "fechas": "Nov 18 - 30, 2026",
+    "fecha_cierre_iso": "2026-11-30",
     "premio": "$50",
     "temas": [
       "Education",
@@ -572,7 +554,7 @@
       "Social Good"
     ],
     "apto_principiantes": false,
-    "inscritos": 144,
+    "inscritos": 162,
     "estado": "Abierto",
     "fuente": "Devpost API",
     "areas_perfil": [
@@ -599,7 +581,7 @@
       "Web"
     ],
     "apto_principiantes": false,
-    "inscritos": 4244,
+    "inscritos": 4773,
     "estado": "Abierto",
     "fuente": "Devpost API",
     "areas_perfil": [
@@ -626,7 +608,7 @@
       "Low/No Code"
     ],
     "apto_principiantes": false,
-    "inscritos": 1540,
+    "inscritos": 1779,
     "estado": "Abierto",
     "fuente": "Devpost API",
     "areas_perfil": [
@@ -653,7 +635,7 @@
       "Machine Learning/AI"
     ],
     "apto_principiantes": false,
-    "inscritos": 466,
+    "inscritos": 541,
     "estado": "Abierto",
     "fuente": "Devpost API",
     "areas_perfil": [
@@ -680,7 +662,7 @@
       "Web"
     ],
     "apto_principiantes": false,
-    "inscritos": 508,
+    "inscritos": 522,
     "estado": "Abierto",
     "fuente": "Devpost API",
     "areas_perfil": [
@@ -706,7 +688,7 @@
       "IA"
     ],
     "apto_principiantes": false,
-    "inscritos": 711,
+    "inscritos": 734,
     "estado": "Abierto",
     "fuente": "Zindi API",
     "areas_perfil": [
@@ -714,32 +696,6 @@
     ],
     "score": 30,
     "_sello": "25d92bb3e917"
-  },
-  {
-    "titulo": "HOTOSM African Highway Segmentation Challenge",
-    "organizador": "Zindi",
-    "plataforma": "Zindi",
-    "tipo": "Competencia de datos / IA",
-    "modalidad": "En línea",
-    "ubicacion": "En línea (internacional)",
-    "pais": "Internacional",
-    "url": "https://zindi.africa/competitions/hotosm-african-highway-segmentation",
-    "fechas": "2026-11-17 a 2026-12-13",
-    "fecha_cierre_iso": "2026-12-13",
-    "premio": "$2 500 USD",
-    "temas": [
-      "Ciencia de datos",
-      "IA"
-    ],
-    "apto_principiantes": false,
-    "inscritos": 313,
-    "estado": "Abierto",
-    "fuente": "Zindi API",
-    "areas_perfil": [
-      "Datos, IA y simulación"
-    ],
-    "score": 30,
-    "_sello": "29288f140424"
   },
   {
     "titulo": "Underwater Vessel Noise Challenge by the French Embassy in South Africa",
@@ -758,7 +714,7 @@
       "IA"
     ],
     "apto_principiantes": false,
-    "inscritos": 1332,
+    "inscritos": 1358,
     "estado": "Abierto",
     "fuente": "Zindi API",
     "areas_perfil": [
@@ -766,6 +722,32 @@
     ],
     "score": 30,
     "_sello": "31abd1a02304"
+  },
+  {
+    "titulo": "HOTOSM African Highway Segmentation Challenge",
+    "organizador": "Zindi",
+    "plataforma": "Zindi",
+    "tipo": "Competencia de datos / IA",
+    "modalidad": "En línea",
+    "ubicacion": "En línea (internacional)",
+    "pais": "Internacional",
+    "url": "https://zindi.africa/competitions/hotosm-african-highway-segmentation",
+    "fechas": "2026-11-17 a 2026-12-13",
+    "fecha_cierre_iso": "2026-12-13",
+    "premio": "$2 500 USD",
+    "temas": [
+      "Ciencia de datos",
+      "IA"
+    ],
+    "apto_principiantes": false,
+    "inscritos": 347,
+    "estado": "Abierto",
+    "fuente": "Zindi API",
+    "areas_perfil": [
+      "Datos, IA y simulación"
+    ],
+    "score": 30,
+    "_sello": "29288f140424"
   },
   {
     "titulo": "BENIN Fongbe Tonal ASR Challenge",
@@ -784,7 +766,7 @@
       "IA"
     ],
     "apto_principiantes": false,
-    "inscritos": 323,
+    "inscritos": 420,
     "estado": "Abierto",
     "fuente": "Zindi API",
     "areas_perfil": [
@@ -810,7 +792,7 @@
       "IA"
     ],
     "apto_principiantes": false,
-    "inscritos": 398,
+    "inscritos": 431,
     "estado": "Abierto",
     "fuente": "Zindi API",
     "areas_perfil": [
@@ -837,7 +819,7 @@
       "Productivity"
     ],
     "apto_principiantes": false,
-    "inscritos": 524,
+    "inscritos": 540,
     "estado": "Abierto",
     "fuente": "Devpost API",
     "areas_perfil": [
@@ -864,7 +846,7 @@
       "Productivity"
     ],
     "apto_principiantes": false,
-    "inscritos": 4863,
+    "inscritos": 5092,
     "estado": "Abierto",
     "fuente": "Devpost API",
     "areas_perfil": [
@@ -890,7 +872,7 @@
       "Databases"
     ],
     "apto_principiantes": false,
-    "inscritos": 143,
+    "inscritos": 145,
     "estado": "Próximamente",
     "fuente": "Devpost API",
     "areas_perfil": [
@@ -917,7 +899,7 @@
       "Social Good"
     ],
     "apto_principiantes": false,
-    "inscritos": 136,
+    "inscritos": 139,
     "estado": "Próximamente",
     "fuente": "Devpost API",
     "areas_perfil": [
@@ -944,7 +926,7 @@
       "Social Good"
     ],
     "apto_principiantes": false,
-    "inscritos": 1640,
+    "inscritos": 1765,
     "estado": "Abierto",
     "fuente": "Devpost API",
     "areas_perfil": [
@@ -971,7 +953,7 @@
       "Machine Learning/AI"
     ],
     "apto_principiantes": false,
-    "inscritos": 852,
+    "inscritos": 1046,
     "estado": "Abierto",
     "fuente": "Devpost API",
     "areas_perfil": [
@@ -997,7 +979,7 @@
       "IA"
     ],
     "apto_principiantes": false,
-    "inscritos": 490,
+    "inscritos": 526,
     "estado": "Abierto",
     "fuente": "Zindi API",
     "areas_perfil": [
@@ -1024,7 +1006,7 @@
       "Web"
     ],
     "apto_principiantes": false,
-    "inscritos": 10,
+    "inscritos": 11,
     "estado": "Próximamente",
     "fuente": "Devpost API",
     "areas_perfil": [
@@ -1050,7 +1032,7 @@
       "IA"
     ],
     "apto_principiantes": false,
-    "inscritos": 255,
+    "inscritos": 279,
     "estado": "Abierto",
     "fuente": "Zindi API",
     "areas_perfil": [
@@ -1076,7 +1058,7 @@
       "IA"
     ],
     "apto_principiantes": false,
-    "inscritos": 336,
+    "inscritos": 345,
     "estado": "Abierto",
     "fuente": "Zindi API",
     "areas_perfil": [
@@ -1102,7 +1084,7 @@
       "IA"
     ],
     "apto_principiantes": false,
-    "inscritos": 506,
+    "inscritos": 526,
     "estado": "Abierto",
     "fuente": "Zindi API",
     "areas_perfil": [
@@ -1110,6 +1092,31 @@
     ],
     "score": 30,
     "_sello": "ca7939b84a63"
+  },
+  {
+    "titulo": "MACHINE AGE",
+    "organizador": "Paramam",
+    "plataforma": "Devpost",
+    "tipo": "Hackatón",
+    "modalidad": "En línea",
+    "ubicacion": "En línea (internacional)",
+    "pais": "Internacional",
+    "url": "https://machineage.devpost.com/",
+    "fechas": "Jan 01 - Mar 31, 2027",
+    "fecha_cierre_iso": "2027-03-31",
+    "premio": "$10,000",
+    "temas": [
+      "Machine Learning/AI"
+    ],
+    "apto_principiantes": false,
+    "inscritos": 11,
+    "estado": "Próximamente",
+    "fuente": "Devpost API",
+    "areas_perfil": [
+      "Datos, IA y simulación"
+    ],
+    "score": 30,
+    "_sello": "ad3bfb8e14e3"
   },
   {
     "titulo": "Brewing Codes 4.0",
@@ -1129,7 +1136,7 @@
       "Web"
     ],
     "apto_principiantes": false,
-    "inscritos": 98,
+    "inscritos": 100,
     "estado": "Próximamente",
     "fuente": "Devpost API",
     "areas_perfil": [
@@ -1155,7 +1162,7 @@
       "Quantum"
     ],
     "apto_principiantes": true,
-    "inscritos": 253,
+    "inscritos": 256,
     "estado": "Abierto",
     "fuente": "Devpost API",
     "areas_perfil": [
@@ -1182,7 +1189,7 @@
       "Web"
     ],
     "apto_principiantes": true,
-    "inscritos": 722,
+    "inscritos": 736,
     "estado": "Abierto",
     "fuente": "Devpost API",
     "areas_perfil": [
@@ -1192,7 +1199,7 @@
     "_sello": "24c3fcc68668"
   },
   {
-    "titulo": "ML Empowerment Build Challenge 4.0 - Prizes and Certificates for EVERYONE",
+    "titulo": "ML Empowerment Build Challenge 4.0 (250K IN PRIZES!)",
     "organizador": "ML Empowerment Foundation",
     "plataforma": "Devpost",
     "tipo": "Hackatón",
@@ -1209,7 +1216,7 @@
       "Social Good"
     ],
     "apto_principiantes": true,
-    "inscritos": 232,
+    "inscritos": 245,
     "estado": "Abierto",
     "fuente": "Devpost API",
     "areas_perfil": [
@@ -1236,7 +1243,7 @@
       "Low/No Code"
     ],
     "apto_principiantes": true,
-    "inscritos": 44,
+    "inscritos": 51,
     "estado": "Próximamente",
     "fuente": "Devpost API",
     "areas_perfil": [
@@ -1263,7 +1270,7 @@
       "Machine Learning/AI"
     ],
     "apto_principiantes": true,
-    "inscritos": 80,
+    "inscritos": 89,
     "estado": "Próximamente",
     "fuente": "Devpost API",
     "areas_perfil": [
@@ -1290,7 +1297,7 @@
       "Productivity"
     ],
     "apto_principiantes": true,
-    "inscritos": 12,
+    "inscritos": 33,
     "estado": "Próximamente",
     "fuente": "Devpost API",
     "areas_perfil": [
@@ -1317,7 +1324,7 @@
       "Productivity"
     ],
     "apto_principiantes": true,
-    "inscritos": 2,
+    "inscritos": 4,
     "estado": "Próximamente",
     "fuente": "Devpost API",
     "areas_perfil": [
@@ -1344,7 +1351,7 @@
       "Beginner Friendly"
     ],
     "apto_principiantes": true,
-    "inscritos": 79,
+    "inscritos": 102,
     "estado": "Abierto",
     "fuente": "Devpost API",
     "areas_perfil": [
@@ -1371,7 +1378,7 @@
       "Beginner Friendly"
     ],
     "apto_principiantes": true,
-    "inscritos": 15,
+    "inscritos": 16,
     "estado": "Próximamente",
     "fuente": "Devpost API",
     "areas_perfil": [
@@ -1398,7 +1405,7 @@
       "Open Ended"
     ],
     "apto_principiantes": true,
-    "inscritos": 24,
+    "inscritos": 25,
     "estado": "Abierto",
     "fuente": "Devpost API",
     "areas_perfil": [
@@ -1425,7 +1432,7 @@
       "Productivity"
     ],
     "apto_principiantes": false,
-    "inscritos": 66,
+    "inscritos": 78,
     "estado": "Abierto",
     "fuente": "Devpost API",
     "areas_perfil": [
@@ -1433,33 +1440,6 @@
     ],
     "score": 20,
     "_sello": "7b72ed4ace4f"
-  },
-  {
-    "titulo": "Build Your First AI App",
-    "organizador": "Yasir Insights",
-    "plataforma": "Devpost",
-    "tipo": "Hackatón",
-    "modalidad": "En línea",
-    "ubicacion": "En línea (internacional)",
-    "pais": "Internacional",
-    "url": "https://build-your-first-ai-app.devpost.com/",
-    "fechas": "Oct 27 - Nov 27, 2026",
-    "fecha_cierre_iso": "2026-11-27",
-    "premio": "",
-    "temas": [
-      "Education",
-      "Machine Learning/AI",
-      "Web"
-    ],
-    "apto_principiantes": false,
-    "inscritos": 739,
-    "estado": "Abierto",
-    "fuente": "Devpost API",
-    "areas_perfil": [
-      "Datos, IA y simulación"
-    ],
-    "score": 20,
-    "_sello": "0337132f75a8"
   },
   {
     "titulo": "Global AI Builder’s Challenge",
@@ -1477,7 +1457,7 @@
       "Machine Learning/AI"
     ],
     "apto_principiantes": false,
-    "inscritos": 436,
+    "inscritos": 460,
     "estado": "Abierto",
     "fuente": "Devpost API",
     "areas_perfil": [
@@ -1504,7 +1484,7 @@
       "Open Ended"
     ],
     "apto_principiantes": false,
-    "inscritos": 2,
+    "inscritos": 7,
     "estado": "Próximamente",
     "fuente": "Devpost API",
     "areas_perfil": [
@@ -1512,6 +1492,33 @@
     ],
     "score": 20,
     "_sello": "6c9248cf73ff"
+  },
+  {
+    "titulo": "Build Your First AI App",
+    "organizador": "Yasir Insights",
+    "plataforma": "Devpost",
+    "tipo": "Hackatón",
+    "modalidad": "En línea",
+    "ubicacion": "En línea (internacional)",
+    "pais": "Internacional",
+    "url": "https://build-your-first-ai-app.devpost.com/",
+    "fechas": "Oct 27 - Dec 09, 2026",
+    "fecha_cierre_iso": "2026-12-09",
+    "premio": "",
+    "temas": [
+      "Education",
+      "Machine Learning/AI",
+      "Web"
+    ],
+    "apto_principiantes": false,
+    "inscritos": 772,
+    "estado": "Abierto",
+    "fuente": "Devpost API",
+    "areas_perfil": [
+      "Datos, IA y simulación"
+    ],
+    "score": 20,
+    "_sello": "0337132f75a8"
   },
   {
     "titulo": "Relate by Neo4j Hackathon",
@@ -1531,7 +1538,7 @@
       "Productivity"
     ],
     "apto_principiantes": false,
-    "inscritos": 707,
+    "inscritos": 758,
     "estado": "Abierto",
     "fuente": "Devpost API",
     "areas_perfil": [
@@ -1558,7 +1565,7 @@
       "Social Good"
     ],
     "apto_principiantes": false,
-    "inscritos": 6,
+    "inscritos": 7,
     "estado": "Próximamente",
     "fuente": "Devpost API",
     "areas_perfil": [
@@ -1585,7 +1592,7 @@
       "Social Good"
     ],
     "apto_principiantes": false,
-    "inscritos": 32,
+    "inscritos": 34,
     "estado": "Próximamente",
     "fuente": "Devpost API",
     "areas_perfil": [
@@ -1612,7 +1619,7 @@
       "Web"
     ],
     "apto_principiantes": false,
-    "inscritos": 978,
+    "inscritos": 997,
     "estado": "Abierto",
     "fuente": "Devpost API",
     "areas_perfil": [
@@ -1697,271 +1704,6 @@
     "_sello": "c8432b3f4972"
   },
   {
-    "titulo": "Hackathon | Florida Atlantic University",
-    "organizador": "fau.edu",
-    "plataforma": "Búsqueda web",
-    "tipo": "Hackatón",
-    "modalidad": "Confirmar en la fuente",
-    "ubicacion": "Colombia",
-    "pais": "Colombia",
-    "url": "https://www.fau.edu/science/cmbb/hackathon/",
-    "fechas": "Verificar vigencia en la fuente",
-    "fecha_cierre_iso": "",
-    "premio": "",
-    "temas": [],
-    "descripcion": "",
-    "estado": "Verificar vigencia",
-    "fuente": "Búsqueda web · www.fau.edu",
-    "areas_perfil": [],
-    "score": 20,
-    "_sello": "bd4d529eb72b"
-  },
-  {
-    "titulo": "Hackathon - Florida Atlantic University",
-    "organizador": "fau.edu",
-    "plataforma": "Búsqueda web",
-    "tipo": "Hackatón",
-    "modalidad": "Confirmar en la fuente",
-    "ubicacion": "Colombia",
-    "pais": "Colombia",
-    "url": "https://www.fau.edu/engineering/eecs/hackathon/",
-    "fechas": "Verificar vigencia en la fuente",
-    "fecha_cierre_iso": "",
-    "premio": "",
-    "temas": [],
-    "descripcion": "",
-    "estado": "Verificar vigencia",
-    "fuente": "Búsqueda web · www.fau.edu",
-    "areas_perfil": [],
-    "score": 20,
-    "_sello": "5c2789850ef0"
-  },
-  {
-    "titulo": "What is a Hackathon ? – Reporter Magazine",
-    "organizador": "reporter.rit.edu",
-    "plataforma": "Búsqueda web",
-    "tipo": "Hackatón",
-    "modalidad": "Confirmar en la fuente",
-    "ubicacion": "Colombia",
-    "pais": "Colombia",
-    "url": "https://reporter.rit.edu/7157/campus/what-is-a-hackathon/",
-    "fechas": "Verificar vigencia en la fuente",
-    "fecha_cierre_iso": "",
-    "premio": "",
-    "temas": [],
-    "descripcion": "",
-    "estado": "Verificar vigencia",
-    "fuente": "Búsqueda web · reporter.rit.edu",
-    "areas_perfil": [],
-    "score": 20,
-    "_sello": "78f65c9eb3cf"
-  },
-  {
-    "titulo": "ReTo Eco-Solutions ( RETO ) Stock Price & Overview",
-    "organizador": "stockanalysis.com",
-    "plataforma": "Búsqueda web",
-    "tipo": "Reto / convocatoria",
-    "modalidad": "Confirmar en la fuente",
-    "ubicacion": "Colombia",
-    "pais": "Colombia",
-    "url": "https://stockanalysis.com/stocks/reto/",
-    "fechas": "Verificar vigencia en la fuente",
-    "fecha_cierre_iso": "",
-    "premio": "",
-    "temas": [],
-    "descripcion": "",
-    "estado": "Verificar vigencia",
-    "fuente": "Búsqueda web · stockanalysis.com",
-    "areas_perfil": [],
-    "score": 20,
-    "_sello": "f06c829edc84"
-  },
-  {
-    "titulo": "RETO Stock Price | ReTo Eco-Solutions Inc . Stock Quote (U.S.:...",
-    "organizador": "marketwatch.com",
-    "plataforma": "Búsqueda web",
-    "tipo": "Reto / convocatoria",
-    "modalidad": "Confirmar en la fuente",
-    "ubicacion": "Colombia",
-    "pais": "Colombia",
-    "url": "https://www.marketwatch.com/investing/stock/reto",
-    "fechas": "Verificar vigencia en la fuente",
-    "fecha_cierre_iso": "",
-    "premio": "",
-    "temas": [],
-    "descripcion": "",
-    "estado": "Verificar vigencia",
-    "fuente": "Búsqueda web · www.marketwatch.com",
-    "areas_perfil": [],
-    "score": 20,
-    "_sello": "7a3da28502c5"
-  },
-  {
-    "titulo": "reto | Definición | Diccionario de la lengua española | RAE -...",
-    "organizador": "dle.rae.es",
-    "plataforma": "Búsqueda web",
-    "tipo": "Reto / convocatoria",
-    "modalidad": "Confirmar en la fuente",
-    "ubicacion": "Colombia",
-    "pais": "Colombia",
-    "url": "https://dle.rae.es/reto",
-    "fechas": "Verificar vigencia en la fuente",
-    "fecha_cierre_iso": "",
-    "premio": "",
-    "temas": [],
-    "descripcion": "",
-    "estado": "Verificar vigencia",
-    "fuente": "Búsqueda web · dle.rae.es",
-    "areas_perfil": [],
-    "score": 20,
-    "_sello": "ee15bcf4c489"
-  },
-  {
-    "titulo": "RETO : ReTo Eco-Solutions Inc Latest Stock Price, Analysis, News...",
-    "organizador": "stocktwits.com",
-    "plataforma": "Búsqueda web",
-    "tipo": "Reto / convocatoria",
-    "modalidad": "Confirmar en la fuente",
-    "ubicacion": "Colombia",
-    "pais": "Colombia",
-    "url": "https://stocktwits.com/symbol/RETO",
-    "fechas": "Verificar vigencia en la fuente",
-    "fecha_cierre_iso": "",
-    "premio": "",
-    "temas": [],
-    "descripcion": "",
-    "estado": "Verificar vigencia",
-    "fuente": "Búsqueda web · stocktwits.com",
-    "areas_perfil": [],
-    "score": 20,
-    "_sello": "62b78b8e3787"
-  },
-  {
-    "titulo": "RETO Project",
-    "organizador": "retoproject.com",
-    "plataforma": "Búsqueda web",
-    "tipo": "Reto / convocatoria",
-    "modalidad": "Confirmar en la fuente",
-    "ubicacion": "Colombia",
-    "pais": "Colombia",
-    "url": "https://retoproject.com/",
-    "fechas": "Verificar vigencia en la fuente",
-    "fecha_cierre_iso": "",
-    "premio": "",
-    "temas": [],
-    "descripcion": "",
-    "estado": "Verificar vigencia",
-    "fuente": "Búsqueda web · retoproject.com",
-    "areas_perfil": [],
-    "score": 20,
-    "_sello": "bf16d277bb09"
-  },
-  {
-    "titulo": "Shop – RETO Project",
-    "organizador": "retoproject.com",
-    "plataforma": "Búsqueda web",
-    "tipo": "Reto / convocatoria",
-    "modalidad": "Confirmar en la fuente",
-    "ubicacion": "Colombia",
-    "pais": "Colombia",
-    "url": "https://retoproject.com/collections/shop",
-    "fechas": "Verificar vigencia en la fuente",
-    "fecha_cierre_iso": "",
-    "premio": "",
-    "temas": [],
-    "descripcion": "",
-    "estado": "Verificar vigencia",
-    "fuente": "Búsqueda web · retoproject.com",
-    "areas_perfil": [],
-    "score": 20,
-    "_sello": "8e37c472efd7"
-  },
-  {
-    "titulo": "RETO Stock Quote Price and Forecast | CNN",
-    "organizador": "cnn.com",
-    "plataforma": "Búsqueda web",
-    "tipo": "Reto / convocatoria",
-    "modalidad": "Confirmar en la fuente",
-    "ubicacion": "Colombia",
-    "pais": "Colombia",
-    "url": "https://www.cnn.com/markets/stocks/RETO",
-    "fechas": "Verificar vigencia en la fuente",
-    "fecha_cierre_iso": "",
-    "premio": "",
-    "temas": [],
-    "descripcion": "",
-    "estado": "Verificar vigencia",
-    "fuente": "Búsqueda web · www.cnn.com",
-    "areas_perfil": [],
-    "score": 20,
-    "_sello": "1a2725668e47"
-  },
-  {
-    "titulo": "ReTo Eco-Solutions ( RETO ) Stock Price, News & Analysis",
-    "organizador": "marketbeat.com",
-    "plataforma": "Búsqueda web",
-    "tipo": "Reto / convocatoria",
-    "modalidad": "Confirmar en la fuente",
-    "ubicacion": "Colombia",
-    "pais": "Colombia",
-    "url": "https://www.marketbeat.com/stocks/NASDAQ/RETO/",
-    "fechas": "Verificar vigencia en la fuente",
-    "fecha_cierre_iso": "",
-    "premio": "",
-    "temas": [],
-    "descripcion": "",
-    "estado": "Verificar vigencia",
-    "fuente": "Búsqueda web · www.marketbeat.com",
-    "areas_perfil": [],
-    "score": 20,
-    "_sello": "3068da0ba911"
-  },
-  {
-    "titulo": "Reto | Spanish to English Translation - SpanishDictionary.com",
-    "organizador": "spanishdict.com",
-    "plataforma": "Búsqueda web",
-    "tipo": "Reto / convocatoria",
-    "modalidad": "Confirmar en la fuente",
-    "ubicacion": "Colombia",
-    "pais": "Colombia",
-    "url": "https://www.spanishdict.com/translate/reto",
-    "fechas": "Verificar vigencia en la fuente",
-    "fecha_cierre_iso": "",
-    "premio": "",
-    "temas": [],
-    "descripcion": "",
-    "estado": "Verificar vigencia",
-    "fuente": "Búsqueda web · www.spanishdict.com",
-    "areas_perfil": [],
-    "score": 20,
-    "_sello": "51d8a5633822"
-  },
-  {
-    "titulo": "EvoHacks 2",
-    "organizador": "EvoHacks",
-    "plataforma": "Devpost",
-    "tipo": "Hackatón",
-    "modalidad": "En línea",
-    "ubicacion": "En línea (internacional)",
-    "pais": "Internacional",
-    "url": "https://evohacks2.devpost.com/",
-    "fechas": "Nov 21 - 22, 2026",
-    "fecha_cierre_iso": "2026-11-22",
-    "premio": "$27,629",
-    "temas": [
-      "Beginner Friendly",
-      "Low/No Code",
-      "Social Good"
-    ],
-    "apto_principiantes": true,
-    "inscritos": 282,
-    "estado": "Abierto",
-    "fuente": "Devpost API",
-    "areas_perfil": [],
-    "score": 15,
-    "_sello": "9d668e33c47e"
-  },
-  {
     "titulo": "STEM Innovation Challenge 2026",
     "organizador": "Global STEM Innovation Initiative",
     "plataforma": "Devpost",
@@ -1979,7 +1721,7 @@
       "Social Good"
     ],
     "apto_principiantes": true,
-    "inscritos": 156,
+    "inscritos": 211,
     "estado": "Próximamente",
     "fuente": "Devpost API",
     "areas_perfil": [],
@@ -2004,7 +1746,7 @@
       "Social Good"
     ],
     "apto_principiantes": true,
-    "inscritos": 277,
+    "inscritos": 297,
     "estado": "Abierto",
     "fuente": "Devpost API",
     "areas_perfil": [],
@@ -2029,12 +1771,37 @@
       "Social Good"
     ],
     "apto_principiantes": true,
-    "inscritos": 5,
-    "estado": "Próximamente",
+    "inscritos": 20,
+    "estado": "Abierto",
     "fuente": "Devpost API",
     "areas_perfil": [],
     "score": 15,
     "_sello": "8bc7b01ff6e8"
+  },
+  {
+    "titulo": "Zero-G Hacks",
+    "organizador": "Zero-G CAD",
+    "plataforma": "Devpost",
+    "tipo": "Hackatón",
+    "modalidad": "En línea",
+    "ubicacion": "En línea (internacional)",
+    "pais": "Internacional",
+    "url": "https://zero-g-hacks.devpost.com/",
+    "fechas": "Nov 27 - 30, 2026",
+    "fecha_cierre_iso": "2026-11-30",
+    "premio": "$120",
+    "temas": [
+      "Beginner Friendly",
+      "Design",
+      "Open Ended"
+    ],
+    "apto_principiantes": true,
+    "inscritos": 3,
+    "estado": "Próximamente",
+    "fuente": "Devpost API",
+    "areas_perfil": [],
+    "score": 15,
+    "_sello": "88ac147e8655"
   },
   {
     "titulo": "Code for Change",
@@ -2054,7 +1821,7 @@
       "Social Good"
     ],
     "apto_principiantes": true,
-    "inscritos": 219,
+    "inscritos": 230,
     "estado": "Abierto",
     "fuente": "Devpost API",
     "areas_perfil": [],
@@ -2078,7 +1845,7 @@
       "Open Ended"
     ],
     "apto_principiantes": true,
-    "inscritos": 692,
+    "inscritos": 712,
     "estado": "Abierto",
     "fuente": "Devpost API",
     "areas_perfil": [],
@@ -2102,7 +1869,7 @@
       "Gaming"
     ],
     "apto_principiantes": true,
-    "inscritos": 2228,
+    "inscritos": 2473,
     "estado": "Abierto",
     "fuente": "Devpost API",
     "areas_perfil": [],
@@ -2127,7 +1894,7 @@
       "Social Good"
     ],
     "apto_principiantes": true,
-    "inscritos": 528,
+    "inscritos": 538,
     "estado": "Abierto",
     "fuente": "Devpost API",
     "areas_perfil": [],
@@ -2151,7 +1918,7 @@
       "Social Good"
     ],
     "apto_principiantes": true,
-    "inscritos": 261,
+    "inscritos": 267,
     "estado": "Abierto",
     "fuente": "Devpost API",
     "areas_perfil": [],
@@ -2176,12 +1943,37 @@
       "Low/No Code"
     ],
     "apto_principiantes": true,
-    "inscritos": 226,
+    "inscritos": 237,
     "estado": "Abierto",
     "fuente": "Devpost API",
     "areas_perfil": [],
     "score": 15,
     "_sello": "4e53cc9e5931"
+  },
+  {
+    "titulo": "Global Perceive Drawing Challenge",
+    "organizador": "Perceive",
+    "plataforma": "Devpost",
+    "tipo": "Hackatón",
+    "modalidad": "En línea",
+    "ubicacion": "En línea (internacional)",
+    "pais": "Internacional",
+    "url": "https://perceive-drawing-challenge.devpost.com/",
+    "fechas": "Nov 23 - Dec 20, 2026",
+    "fecha_cierre_iso": "2026-12-20",
+    "premio": "$50",
+    "temas": [
+      "Beginner Friendly",
+      "Design",
+      "Music/Art"
+    ],
+    "apto_principiantes": true,
+    "inscritos": 5,
+    "estado": "Abierto",
+    "fuente": "Devpost API",
+    "areas_perfil": [],
+    "score": 15,
+    "_sello": "75ac8289900d"
   },
   {
     "titulo": "AccessED Hacks",
@@ -2201,36 +1993,12 @@
       "Social Good"
     ],
     "apto_principiantes": true,
-    "inscritos": 315,
+    "inscritos": 318,
     "estado": "Abierto",
     "fuente": "Devpost API",
     "areas_perfil": [],
     "score": 15,
     "_sello": "911211d65c8f"
-  },
-  {
-    "titulo": "Hackstead: Winterfest",
-    "organizador": "Hackstead",
-    "plataforma": "Devpost",
-    "tipo": "Hackatón",
-    "modalidad": "En línea",
-    "ubicacion": "En línea (internacional)",
-    "pais": "Internacional",
-    "url": "https://hackstead.devpost.com/",
-    "fechas": "Dec 06 - 20, 2026",
-    "fecha_cierre_iso": "2026-12-20",
-    "premio": "$430",
-    "temas": [
-      "Beginner Friendly",
-      "Web"
-    ],
-    "apto_principiantes": true,
-    "inscritos": 4,
-    "estado": "Próximamente",
-    "fuente": "Devpost API",
-    "areas_perfil": [],
-    "score": 15,
-    "_sello": "6ada170ee400"
   },
   {
     "titulo": "United Hacks V8",
@@ -2250,7 +2018,7 @@
       "Education"
     ],
     "apto_principiantes": true,
-    "inscritos": 533,
+    "inscritos": 556,
     "estado": "Próximamente",
     "fuente": "Devpost API",
     "areas_perfil": [],
@@ -2275,7 +2043,7 @@
       "Education"
     ],
     "apto_principiantes": true,
-    "inscritos": 1337,
+    "inscritos": 1410,
     "estado": "Próximamente",
     "fuente": "Devpost API",
     "areas_perfil": [],
@@ -2290,7 +2058,7 @@
     "modalidad": "En línea",
     "ubicacion": "En línea (internacional)",
     "pais": "Internacional",
-    "url": "https://launchlyp.devpost.com/",
+    "url": "https://launchlyapp.devpost.com/",
     "fechas": "Jan 27 - Feb 24, 2027",
     "fecha_cierre_iso": "2027-02-24",
     "premio": "$1,500",
@@ -2300,12 +2068,12 @@
       "Social Good"
     ],
     "apto_principiantes": true,
-    "inscritos": 8,
+    "inscritos": 10,
     "estado": "Próximamente",
     "fuente": "Devpost API",
     "areas_perfil": [],
     "score": 15,
-    "_sello": "83d6449404f9"
+    "_sello": "71460b276c7c"
   },
   {
     "titulo": "Build Beyond Hackathon",
@@ -2325,7 +2093,7 @@
       "Productivity"
     ],
     "apto_principiantes": true,
-    "inscritos": 94,
+    "inscritos": 96,
     "estado": "Próximamente",
     "fuente": "Devpost API",
     "areas_perfil": [],
@@ -2350,7 +2118,7 @@
       "Social Good"
     ],
     "apto_principiantes": true,
-    "inscritos": 64,
+    "inscritos": 66,
     "estado": "Próximamente",
     "fuente": "Devpost API",
     "areas_perfil": [],
@@ -2373,7 +2141,7 @@
       "Education"
     ],
     "apto_principiantes": false,
-    "inscritos": 65,
+    "inscritos": 82,
     "estado": "Próximamente",
     "fuente": "Devpost API",
     "areas_perfil": [],
@@ -2381,54 +2149,29 @@
     "_sello": "0435a71cec16"
   },
   {
-    "titulo": "Glushkov 2026 GameDev Contest",
-    "organizador": "GlushkovCompany",
+    "titulo": "GDG x CS Project Sprint",
+    "organizador": "gdg on campus OTU",
     "plataforma": "Devpost",
     "tipo": "Hackatón",
     "modalidad": "En línea",
     "ubicacion": "En línea (internacional)",
     "pais": "Internacional",
-    "url": "https://glushkov-2026-gamedev-contest.devpost.com/",
-    "fechas": "Nov 21 - 23, 2026",
-    "fecha_cierre_iso": "2026-11-23",
-    "premio": "",
-    "temas": [
-      "Beginner Friendly",
-      "COVID-19",
-      "Gaming"
-    ],
-    "apto_principiantes": true,
-    "inscritos": 6,
-    "estado": "Abierto",
-    "fuente": "Devpost API",
-    "areas_perfil": [],
-    "score": 5,
-    "_sello": "b132f41b95ec"
-  },
-  {
-    "titulo": "Engineering Without Limits",
-    "organizador": "Engineering Without Limits",
-    "plataforma": "Devpost",
-    "tipo": "Hackatón",
-    "modalidad": "En línea",
-    "ubicacion": "En línea (internacional)",
-    "pais": "Internacional",
-    "url": "https://engineering-without-limits.devpost.com/",
-    "fechas": "Nov 22 - 24, 2026",
+    "url": "https://gdg-project-sprint.devpost.com/",
+    "fechas": "Nov 23 - 24, 2026",
     "fecha_cierre_iso": "2026-11-24",
     "premio": "",
     "temas": [
       "Beginner Friendly",
-      "Education",
-      "Open Ended"
+      "Design",
+      "Education"
     ],
     "apto_principiantes": true,
-    "inscritos": 81,
+    "inscritos": 10,
     "estado": "Abierto",
     "fuente": "Devpost API",
     "areas_perfil": [],
     "score": 5,
-    "_sello": "06fa5d9d9083"
+    "_sello": "ee840042932b"
   },
   {
     "titulo": "BuildyourOwnWebsite",
@@ -2448,7 +2191,7 @@
       "Web"
     ],
     "apto_principiantes": true,
-    "inscritos": 185,
+    "inscritos": 196,
     "estado": "Abierto",
     "fuente": "Devpost API",
     "areas_perfil": [],
@@ -2473,7 +2216,7 @@
       "Open Ended"
     ],
     "apto_principiantes": true,
-    "inscritos": 36,
+    "inscritos": 41,
     "estado": "Abierto",
     "fuente": "Devpost API",
     "areas_perfil": [],
@@ -2498,7 +2241,7 @@
       "Beginner Friendly"
     ],
     "apto_principiantes": true,
-    "inscritos": 37,
+    "inscritos": 40,
     "estado": "Abierto",
     "fuente": "Devpost API",
     "areas_perfil": [],
@@ -2523,7 +2266,7 @@
       "Open Ended"
     ],
     "apto_principiantes": true,
-    "inscritos": 101,
+    "inscritos": 106,
     "estado": "Abierto",
     "fuente": "Devpost API",
     "areas_perfil": [],
@@ -2548,7 +2291,7 @@
       "Education"
     ],
     "apto_principiantes": true,
-    "inscritos": 60,
+    "inscritos": 61,
     "estado": "Abierto",
     "fuente": "Devpost API",
     "areas_perfil": [],
@@ -2572,7 +2315,7 @@
       "Open Ended"
     ],
     "apto_principiantes": true,
-    "inscritos": 24,
+    "inscritos": 25,
     "estado": "Abierto",
     "fuente": "Devpost API",
     "areas_perfil": [],
@@ -2597,7 +2340,7 @@
       "Social Good"
     ],
     "apto_principiantes": true,
-    "inscritos": 131,
+    "inscritos": 149,
     "estado": "Abierto",
     "fuente": "Devpost API",
     "areas_perfil": [],
@@ -2647,7 +2390,7 @@
       "Web"
     ],
     "apto_principiantes": true,
-    "inscritos": 72,
+    "inscritos": 74,
     "estado": "Abierto",
     "fuente": "Devpost API",
     "areas_perfil": [],
@@ -2672,7 +2415,7 @@
       "Education"
     ],
     "apto_principiantes": true,
-    "inscritos": 16,
+    "inscritos": 17,
     "estado": "Próximamente",
     "fuente": "Devpost API",
     "areas_perfil": [],
@@ -2697,7 +2440,7 @@
       "Open Ended"
     ],
     "apto_principiantes": true,
-    "inscritos": 369,
+    "inscritos": 375,
     "estado": "Abierto",
     "fuente": "Devpost API",
     "areas_perfil": [],
@@ -2722,12 +2465,37 @@
       "Social Good"
     ],
     "apto_principiantes": true,
-    "inscritos": 17,
+    "inscritos": 20,
     "estado": "Abierto",
     "fuente": "Devpost API",
     "areas_perfil": [],
     "score": 5,
     "_sello": "95a8f44fc277"
+  },
+  {
+    "titulo": "JanHacks 2027",
+    "organizador": "JanHacks",
+    "plataforma": "Devpost",
+    "tipo": "Hackatón",
+    "modalidad": "En línea",
+    "ubicacion": "En línea (internacional)",
+    "pais": "Internacional",
+    "url": "https://janhacks-2027.devpost.com/",
+    "fechas": "Jan 01 - Mar 01, 2027",
+    "fecha_cierre_iso": "2027-03-01",
+    "premio": "",
+    "temas": [
+      "Beginner Friendly",
+      "Design",
+      "Open Ended"
+    ],
+    "apto_principiantes": true,
+    "inscritos": 0,
+    "estado": "Próximamente",
+    "fuente": "Devpost API",
+    "areas_perfil": [],
+    "score": 5,
+    "_sello": "a2709f0a632c"
   },
   {
     "titulo": "WiCS Hackathon",
@@ -2770,7 +2538,7 @@
       "Open Ended"
     ],
     "apto_principiantes": false,
-    "inscritos": 39,
+    "inscritos": 44,
     "estado": "Próximamente",
     "fuente": "Devpost API",
     "areas_perfil": [],
